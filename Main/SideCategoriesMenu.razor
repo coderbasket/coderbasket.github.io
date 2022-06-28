@@ -1,4 +1,5 @@
-﻿<style>
+﻿
+<style>
     .nav-stacked li {
         display: block;
         -webkit-text-size-adjust: 100%;
@@ -44,12 +45,12 @@
         @{
             foreach (var item in Categories)
             {
-                <li>
-                    <a style="font-weight:bold;" href="/category/35">
-                        <span>@item</span>
-                        <span style="margin-left:8px; font-family:FontAwesome;">&#xf101;</span>
-                    </a>
-                </li>
+                    <li>
+                        <a  style="font-weight:bold; cursor:pointer;" @onclick="@(()=>{ NavigateToCategory(item); })">
+                            <span>@item</span>
+                            <span style="margin-left:8px; font-family:FontAwesome;">&#xf101;</span>
+                        </a>
+                    </li>
             }
         }
     </ul>
@@ -57,30 +58,20 @@
 
 
 @code {
-    public List<string> Categories = null;
+    public List<Category> Categories = null;
 
-    protected override void OnInitialized()
+    protected async override void OnInitialized()
     {
 
         base.OnInitialized();
-        Categories = new List<string>()
-        {
-            "ARTICLES",
-            "CALCULATORS",
-            "ERRORS",
-            "LAUNCHSCREEN",
-            "LOGIN",
-            "MESSAGING",
-            "NAVIGATIONS",
-            "PRODUCTS",
-            "PROFILES",
-            "SIGNUPS",
-            "SOCIALNETWORK",
-            "WALKTHROUGHS",
-            "WIDGETS",
-        };
-
-
-
+        var _snippets = await DataServiceProvider.GetItemsAsync();
+        var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
+        var groupedSorted = categories.GroupBy(n => n).OrderBy(g => g.FirstOrDefault().ToString());
+        var categoriesFinal = groupedSorted.Select(x => x.FirstOrDefault()).ToList();
+        Categories = categoriesFinal;
+    }
+    void NavigateToCategory(Category categoryParam)
+    {
+        Navigation.NavigateTo($"category/{categoryParam.ToString()}");
     }
 }

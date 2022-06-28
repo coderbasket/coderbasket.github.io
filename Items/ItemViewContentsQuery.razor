@@ -1,0 +1,45 @@
+﻿@page "/category/{categoryParam}"
+
+<div class="row">
+    @foreach (var item in Items)
+    {
+        <ItemView ProjectRepo="item"></ItemView>
+    }
+
+</div>
+
+@code {
+    string _param;
+    [Parameter]
+    public string categoryParam
+    {
+        get{ return _param; }
+        set
+        {
+            if(value != _param)
+            {
+                _param = value;
+                Render();
+            }
+        }
+    }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Render();
+    }
+    [Parameter]
+    public List<ProjectItem> Items { get; set; } = new List<ProjectItem>();
+    async void Render()
+    {
+        var items = await DataServiceProvider.GetItemsAsync();
+        var _category = RepoHelper.GetCategory(categoryParam);
+        this.Items = items.Where(x => x.Categories.Contains(_category)).Take(9).ToList();
+        foreach (var item in this.Items)
+        {
+            RepoHelper.LoadRepository(item);
+        }
+        StateHasChanged();
+    }
+
+}

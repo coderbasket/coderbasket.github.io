@@ -21,8 +21,9 @@
                                 Coder Basket lets developers and designers share code and interfaces to
                                 enable each other to
                                 quickly create great looking mobile apps for Android, iOS, Windows, Linux,
-                                Mac, Website and Web Server.
+                                Mac, Website and Web Server.  From <a href="https://www.snppts.dev/" style="color:@SiteInfo.AccentColor; font-weight:bolder;" title="https://www.snppts.dev/">https://www.snppts.dev/</a>
                             </p>
+                           
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -31,7 +32,7 @@
                             <div class="separator-2"></div>
                             <nav>
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="/about">About</a></li>
+                                    <li><a >About</a></li>
                                     <li>
                                         <a target="_blank"
                                            href="https://twitter.com/coderbasket">Twitter</a>
@@ -51,9 +52,9 @@
                             <nav>
                                 <ul class="nav nav-pills nav-stacked">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/random">Random</a></li>
+                                    <li><a >Random</a></li>
                                     <li style="visibility:collapse">
-                                        <a href="/how-to-contribute">
+                                        <a >
                                             Submit new
                                             Project
                                         </a>
@@ -69,37 +70,18 @@
 
 
                             <div class="tags-cloud">
-                                <div class="tag">
-                                    <a href="/category/13">login</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/28">signups</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/32">widgets</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/3">calculators</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/11">launchscreen</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/15">messaging</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/16">navigations</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/21">products</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/31">walkthroughs</a>
-                                </div>
-                                <div class="tag">
-                                    <a href="/category/35">articles</a>
-                                </div>
-
+                                @foreach (var item in categoriesFinal)
+                               {
+                                    <div style="cursor:pointer;" class="tag">
+                                        <style>
+                                            .tag_a:hover{
+                                                color:black;
+                                            }
+                                          
+                                        </style>
+                                        <a class="tag_a" style="color:tan;">@item.ToString().ToLower()</a>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>
@@ -116,7 +98,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="text-center">
-                            Copyright &copy; 2020-2022 Coder Basket by <a class="link-light"
+                            Copyright &copy; 2022 Coder Basket by <a class="link-light"
                                                                           href="https://coderbasket.azurewebsites.net/">coderbasket.com</a>. All
                             Rights Reserved
                         </p>
@@ -129,5 +111,14 @@
 </footer>
 
 @code {
-
+    List<Category> categoriesFinal = new List<Category>();
+    protected async override void OnInitialized()
+    {
+        base.OnInitialized();
+        var _snippets = await DataServiceProvider.GetItemsAsync();
+        var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
+        var groupedSorted = categories.GroupBy(n => n).OrderByDescending(g => g.Count());
+        categoriesFinal = groupedSorted.Take(10).Select(x => x.FirstOrDefault()).ToList();
+        StateHasChanged();
+    }
 }

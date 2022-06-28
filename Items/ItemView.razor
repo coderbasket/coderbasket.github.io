@@ -1,9 +1,9 @@
 ﻿<div class="col-lg-4 col-md-4 col-sm-6 margin-bottom-20 snppt">
 
-    <a href="/snippet/httpsgithub.combrminnickHackerNews">
-        @if (ProjectRepo.ImageUris.Count > 0)
+    <a @onclick="NavigateToDetails">
+        @if (ProjectRepo.ImageUrls.Count > 0)
         {
-            var url = this.ProjectRepo.ImageUris.FirstOrDefault();
+            var url = this.ProjectRepo.ImageUrls.FirstOrDefault();
             <img class="snippet__img"
              src="@url" />
 
@@ -11,7 +11,7 @@
     </a>
 
     <h4 class="text-center">
-        <a href="/snippet/httpsgithub.combrminnickHackerNews">@ProjectRepo.Title</a>
+        <a @onclick="NavigateToDetails">@ProjectRepo.Title</a>
     </h4>
 
     <p class="tags text-center">
@@ -46,16 +46,20 @@
     </div>
 </div>
 @code {
-    protected override async void OnInitialized()
+    protected override void OnInitialized()
     {
         base.OnInitialized();
         if (this.ProjectRepo != null)
         {
-            RepoHelper.GetRepository(this.ProjectRepo);
-            await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+            this.ProjectRepo = RepoHelper.LoadRepository(this.ProjectRepo);
+            //await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
             StateHasChanged();
         }
     }
     [Parameter]
     public ProjectItem ProjectRepo { get; set; }
+    public void NavigateToDetails()
+    {
+        Navigation.NavigateTo($"details/{ProjectRepo.Slug}");
+    }
 }

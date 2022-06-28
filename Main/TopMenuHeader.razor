@@ -28,10 +28,10 @@
                 <li>
                     <a href="/">Home</a>
                 </li>
-                <li>
+                @*<li>
                     <a href="/random">Random</a>
-                </li>
-                <li style="width:fit-content; max-width:70px;" class="dropdown">
+                </li>*@
+               @* <li style="width:fit-content; max-width:70px;" class="dropdown">
                     <a href="#"
                        role="button" aria-haspopup="true"
                        aria-expanded="false">Maui</a>
@@ -42,8 +42,8 @@
                         <li><a href="/framework/flutter">Flutter</a></li>
                     </ul>
 
-                </li>
-                <li style="width:fit-content; max-width:92px;" class="dropdown">
+                </li>*@
+               @* <li style="width:fit-content; max-width:92px;" class="dropdown">
                     <a href="#" 
                       >Sort By</a>
                     <ul class="dropdown-menu hiddenMenu">
@@ -51,23 +51,23 @@
                         <li><a href="/sort/updated">Recent</a></li>
                         <li><a href="/sort/stars">Stars</a></li>
                     </ul>
-                </li>
+                </li>*@
                 <li style="visibility:visible">
-                    <a href="/about">About</a>
+                    <a >About</a>
                 </li>
                 <li style="visibility:visible">
                     <style type="text/css">
                         .cta {
                             font-weight: 700;
-                            color: #EA3D53 !important;
+                            color: @SiteInfo.AccentColor !important;
                             cursor: pointer;
                         }
 
                             .cta:hover {
-                                color: #B12B3D !important;
+                                color: @SiteInfo.AccentColor !important;
                             }
                     </style>
-                    <a class="cta" href="/submit-form">Submit new Project!</a>
+                    <a class="cta" >Submit new Project!</a>
                 </li>
                 <li class="search_button" style="visibility:collapse">
                     <a class="fa fa-search"

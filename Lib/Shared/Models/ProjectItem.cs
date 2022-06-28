@@ -23,7 +23,11 @@ namespace Blazor_App.Shared.Models
             get { return _repo; }
             set 
             { 
-                _repo = value; 
+                _repo = value;
+                if (!string.IsNullOrEmpty(_repo))
+                {
+                    Slug = RepoHelper.ToUrlSlug(_repo);
+                }
                 
             }
         }
@@ -33,7 +37,7 @@ namespace Blazor_App.Shared.Models
         public string ExternalUrl { get; set; }
         public string YoutubeUrl { get; set; }
         public string FrameWorkName { get; set; } = SiteInfo.FrameWork.ToString();
-        public List<string> ImageUris { get; set; } = new List<string>();
+        public List<string> ImageUrls { get; set; } = new List<string>();
         public List<Category> Categories { get; set; } = new List<Category>() { Category.OTHERS };
         public string Slug { get; set; }
         public string GravatarHash { get; set; }
@@ -49,6 +53,8 @@ namespace Blazor_App.Shared.Models
         public GitHubRepoInfo GitHubRepoInfo { get; set; }
         [JsonIgnore]
         public bool IsLoaded { get; set; }
+        [JsonIgnore]
+        public ProjectOwner Owner { get; set; }
 
     }
 }
