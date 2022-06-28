@@ -1,0 +1,15 @@
+﻿{
+  "Message": "Maui",
+  "Title": "Maui",
+  "Codes": [
+    {
+      "ProjectUrl": "https://github.com/brminnick/HackerNews",
+      "Slug": "hackernews",
+      "Title": "HackerNews",
+      "Description": "A .NET MAUI app for displaying the top posts on Hacker News. \nThis app demonstrates how to use IAsyncEnumerable + C# 8.0 to improve performance. Thanks to IAsyncEnumerable, the items are added to the list as soon as they're available making the app feel faster and more responsive.",
+      "ExternalUri": "https://codetraveler.io",
+      "ImageUris": [ "https://user-images.githubusercontent.com/13558917/66956918-2873bb80-f01a-11e9-839c-6e935c0b606c.gif" ],
+      "Categories": [ 3, 11, 13, 15, 16, 21, 28, 31, 35, 36, 22 ]
+    }
+  ]
+}

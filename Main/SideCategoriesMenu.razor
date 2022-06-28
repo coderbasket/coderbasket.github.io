@@ -1,0 +1,86 @@
+﻿<style>
+    .nav-stacked li {
+        display: block;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: 'Nunito Sans', sans-serif;
+        color: #777777;
+        font-weight: 300;
+        font-size: 1.6rem;
+        list-style: none;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        float: none;
+        line-height: 2rem;
+    }
+
+    .nav-pills.nav-stacked:not(.list-style-icons) > li > a:after {
+        font-family: "FontAwesome";
+        content: "\f101";
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        margin-left: 40px;
+        top: 4px;
+        left: 40px;
+        color: #d1d1d1;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        display: none;
+    }
+
+    .nav-stacked li a {
+        display: inline-flex;
+    }
+
+    nav .nav-stacked {
+        display: block;
+    }
+</style>
+<nav>
+    <ul class="nav nav-pills nav-stacked nav-small">
+        @{
+            foreach (var item in Categories)
+            {
+                <li>
+                    <a style="font-weight:bold;" href="/category/35">
+                        <span>@item</span>
+                        <span style="margin-left:8px; font-family:FontAwesome;">&#xf101;</span>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</nav>
+
+
+@code {
+    public List<string> Categories = null;
+
+    protected override void OnInitialized()
+    {
+
+        base.OnInitialized();
+        Categories = new List<string>()
+        {
+            "ARTICLES",
+            "CALCULATORS",
+            "ERRORS",
+            "LAUNCHSCREEN",
+            "LOGIN",
+            "MESSAGING",
+            "NAVIGATIONS",
+            "PRODUCTS",
+            "PROFILES",
+            "SIGNUPS",
+            "SOCIALNETWORK",
+            "WALKTHROUGHS",
+            "WIDGETS",
+        };
+
+
+
+    }
+}

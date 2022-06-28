@@ -1,17 +1,125 @@
 ﻿@inherits LayoutComponentBase
+<div class="no-trans transparent-header">
+    <div class="ad_container">
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
+        <div class="ad_div" style="background-color:green">
+            <style type="text/css">
+                .ad_div {
+                    width: 320px;
+                    height: 100px;
+                }
+
+                @@media(min-width: 500px) {
+                    .ad_div {
+                        width: 468px;
+                        height: 60px;
+                    }
+                }
+
+                @@media(min-width: 800px) {
+                    .ad_div {
+                        width: 728px;
+                        height: 90px;
+                    }
+                }
+            </style>
+
+        </div>
     </div>
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <!-- header-container start -->
+        <div class="header-container">
+            <style type="text/css">
+                ul li a:hover+.hiddenMenu,
+                .hiddenMenu:hover {
+                    display: block;
+                }
+            </style>
+            <header class="header fixed clea.dropdown-togglefix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="header-left clearfix">
+
+                                <div id="logo" class="logo">
+                                    <a href="/">
+                                        <div>
+                                            <img width="30" height="30" src="/img/codericon.svg"
+                                                 href="~/img/codericon.svg" />
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="site-slogan">
+                                    Maui App Templates
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="header-right clearfix">
+                                <div class="main-navigation  animated">
+                                    <CoderBasket.Blazor.Main.TopMenuHeader></CoderBasket.Blazor.Main.TopMenuHeader>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+        <section class="main-container">
+            <div class="container snippet-main-container">
+
+                <div class="row">
+
+                    <aside class="col-md-2 hidden-sm hidden-xs">
+                        <div class="sidebar">
+                            <div  class="block clearfix">
+                                <h3 class="title">Categories</h3>
+                                <div class="separator-2"></div>
+                                <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="main col-md-10">
+                        <div class="row">
+                            <h3 class="title">Maui templates</h3>
+                            <div class="separator-2"></div>
+
+                            <div class="row">
+                            </div>
+                           <CoderBasket.Blazor.Items.ItemViewContents></CoderBasket.Blazor.Items.ItemViewContents>
+                        </div>
+                        <div class="row pager">
+                            <div class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x2D;&#x63;&#x6F;&#x6E;&#x74;&#x61;&#x69;&#x6E;&#x65;&#x72;">
+                                <ul class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;"></ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <aside class="col-md-2 hidden-md hidden-lg">
+                        <div class="sidebar">
+                            <div class="block clearfix">
+                                <h3 class="title">Categories</h3>
+                                <div class="separator-2"></div>
+                                <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <CoderBasket.Blazor.Main.FooterView></CoderBasket.Blazor.Main.FooterView>
+
+
+    </div>
 </div>

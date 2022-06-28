@@ -1,0 +1,84 @@
+﻿<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <style>
+                .navbar-nav li {
+                    display: inline;
+                    width: fit-content;
+                }
+
+                ul {
+                    width: fit-content;
+                }
+
+                    ul li {
+                        width: fit-content;
+                    }
+            </style>
+            <ul class="nav navbar-nav" style="display:inline;">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/random">Random</a>
+                </li>
+                <li style="width:fit-content; max-width:70px;" class="dropdown">
+                    <a href="#"
+                       role="button" aria-haspopup="true"
+                       aria-expanded="false">Maui</a>
+                    <ul class="dropdown-menu hiddenMenu">
+                        <li><a href="/framework/maui">Maui</a></li>
+                        <li><a href="/framework/blazor">Blazor</a></li>
+                        <li><a href="/framework/xamarin">Xamarin</a></li>
+                        <li><a href="/framework/flutter">Flutter</a></li>
+                    </ul>
+
+                </li>
+                <li style="width:fit-content; max-width:92px;" class="dropdown">
+                    <a href="#" 
+                      >Sort By</a>
+                    <ul class="dropdown-menu hiddenMenu">
+                        <li><a href="/">Default</a></li>
+                        <li><a href="/sort/updated">Recent</a></li>
+                        <li><a href="/sort/stars">Stars</a></li>
+                    </ul>
+                </li>
+                <li style="visibility:visible">
+                    <a href="/about">About</a>
+                </li>
+                <li style="visibility:visible">
+                    <style type="text/css">
+                        .cta {
+                            font-weight: 700;
+                            color: #EA3D53 !important;
+                            cursor: pointer;
+                        }
+
+                            .cta:hover {
+                                color: #B12B3D !important;
+                            }
+                    </style>
+                    <a class="cta" href="/submit-form">Submit new Project!</a>
+                </li>
+                <li class="search_button" style="visibility:collapse">
+                    <a class="fa fa-search"
+                       style="font-weight:bold; font-size:larger"
+                       href="/search"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+
+}

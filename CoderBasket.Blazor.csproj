@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Lib\**" />
+    <Compile Remove="Shared\bin\**" />
+    <Compile Remove="Shared\obj\**" />
+    <Content Remove="Lib\**" />
+    <Content Remove="Shared\bin\**" />
+    <Content Remove="Shared\obj\**" />
+    <EmbeddedResource Remove="Lib\**" />
+    <EmbeddedResource Remove="Shared\bin\**" />
+    <EmbeddedResource Remove="Shared\obj\**" />
+    <None Remove="Lib\**" />
+    <None Remove="Shared\bin\**" />
+    <None Remove="Shared\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.3" PrivateAssets="all" />
     <PackageReference Include="Octokit" Version="0.51.0" />
@@ -15,6 +30,44 @@
 
   <ItemGroup>
     <None Include=".github\workflows\gh-pages.yml" />
+    <None Include="Shared\MainLayout.razor" />
+    <None Include="Shared\NavMenu.razor" />
+    <None Include="Shared\SurveyPrompt.razor" />
+    <None Include="wwwroot\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\fontello\font\fontello.svg" />
+    <None Include="wwwroot\img\codericon-white.svg" />
+    <None Include="wwwroot\img\codericon.svg" />
+    <None Include="wwwroot\img\safari-pinned-tab.svg" />
+    <None Include="wwwroot\img\site.webmanifest" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\template.js" />
+    <None Include="wwwroot\plugins\bootstrap-multiselect\bootstrap-multiselect.js" />
+    <None Include="wwwroot\plugins\dropzone\dropzone.js" />
+    <None Include="wwwroot\plugins\githubRepoWidget\jquery.githubRepoWidget.js" />
+    <None Include="wwwroot\plugins\jquery.browser.js" />
+    <None Include="wwwroot\plugins\modernizr.js" />
+    <None Include="wwwroot\plugins\owl-carousel\owl.carousel.js" />
+    <None Include="wwwroot\plugins\owl-carousel\owl.carousel.min.js" />
+    <None Include="wwwroot\plugins\pagedown\Markdown.Converter.js" />
+    <None Include="wwwroot\plugins\pagedown\Markdown.Editor.js" />
+    <None Include="wwwroot\plugins\pagedown\Markdown.Initialize.js" />
+    <None Include="wwwroot\plugins\pagedown\Markdown.Sanitizer.js" />
+    <None Include="wwwroot\plugins\rs-plugin\assets\arrows.psd" />
+    <None Include="wwwroot\plugins\rs-plugin\assets\bullets.psd" />
+    <None Include="wwwroot\plugins\rs-plugin\assets\small_arrows.psd" />
+    <None Include="wwwroot\plugins\rs-plugin\font\revicons.svg" />
+    <None Include="wwwroot\plugins\rs-plugin\js\jquery.themepunch.enablelog.js" />
+    <None Include="wwwroot\plugins\rs-plugin\js\jquery.themepunch.revolution.js" />
+    <None Include="wwwroot\plugins\rs-plugin\js\jquery.themepunch.revolution.min.js" />
+    <None Include="wwwroot\plugins\rs-plugin\js\jquery.themepunch.tools.min.js" />
+    <None Include="wwwroot\plugins\SmoothScroll.js" />
+    <None Include="wwwroot\plugins\waypoints\jquery.waypoints.js" />
+    <None Include="wwwroot\plugins\waypoints\jquery.waypoints.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Lib\Shared\Blazor_App.Shared.csproj" />
   </ItemGroup>
 
   

@@ -1,0 +1,2378 @@
+﻿[
+  {
+    "Slug": "essential-ui-kit",
+    "Title": "Essential UI Kit",
+    "Description": "Free and beautiful XAML pages for Xamarin.Forms apps by <a href=\"https://www.syncfusion.com/xamarin-ui-controls\" target=\"_blank\">Syncfusion</a>",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "syncfusion/essential-ui-kit-for-xamarin.forms",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.syncfusion.com/xamarin-ui-controls",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": true,
+    "AuthorInfo": {
+      "FirstName": "Syncfusion",
+      "LastName": "",
+      "Website": "https://www.syncfusion.com/",
+      "TwitterHandle": "Syncfusion",
+      "GitHubHandle": "syncfusion",
+      "GravatarHash": "4291ef07481d300471113dbd4b4aabc2"
+    },
+    "ImageUris": [ "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Cart%20Page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Detail%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Location%20denied%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Login%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/android/Onboarding.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Cart%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Detail%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Location%20denied%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Login%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/ios/Onboarding.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Cart%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Detail.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Location%20denied%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Login%20page.jpg", "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/screenshots/uwp/Onboarding%20page.jpg" ],
+    "Categories": [ 1, 11, 13, 15, 16, 21, 28, 31, 35, 36, 22 ]
+  },
+  {
+    "Slug": "twitter-clone",
+    "Title": "Twitter Clone",
+    "Description": "A Xamarin.Forms version of the Twitter app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.Twitter",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/kickass-ui-xamarin-forms-twitter",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/29/121.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/29/122.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/29/124.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/29/125.jpg" ],
+    "Categories": [ 2, 16, 27, 34 ]
+  },
+  {
+    "Slug": "in-space",
+    "Title": "In Space",
+    "Description": "A simple but good looking Xamarin.Forms UI screen as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.InSpace",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/xamarin-forms-in-space",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/sthewissen/KickassUI.InSpace/master/ios.png", "https://raw.githubusercontent.com/sthewissen/KickassUI.InSpace/master/droid.jpg" ],
+    "Categories": [ 3, 5 ]
+  },
+  {
+    "Slug": "xam-translator",
+    "Title": "Xam Translator",
+    "Description": "This snippet was created to reproduce an Dictionary/Translator App using some Material design components.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "aimore/XamUI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://github.com/aimore/XamUI/tree/master/XFTranslator",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Aimoré",
+      "LastName": "Sá",
+      "Website": "https://aimore.github.io/",
+      "TwitterHandle": "Aimore_Sa",
+      "GitHubHandle": "aimore",
+      "GravatarHash": "0601a7c390df793c7b308ac36860fcf7"
+    },
+    "ImageUris": [ "https://i.imgur.com/o2ATjel.png", "https://i.imgur.com/E7rpRav.png" ],
+    "Categories": [ 5 ]
+  },
+  {
+    "Slug": "art-auction",
+    "Title": "Art Auction",
+    "Description": "Art Auction site, with multiple expanding popovers and interesting transitions",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kphillpotts/ArtAuction",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://kymphillpotts.com/xamarin-forms-ui-challenge-artauction.html",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kym",
+      "LastName": "Phillpotts",
+      "Website": "https://kymphillpotts.com",
+      "TwitterHandle": "kphillpotts",
+      "GitHubHandle": "kphillpotts",
+      "GravatarHash": "3218e66502c6f0836dfd0f02f210ba0b"
+    },
+    "ImageUris": [ "https://kymphillpotts.com/assets/images/posts/artauction-screen1.png", "https://kymphillpotts.com/assets/images/posts/artauction-screen3.png", "https://kymphillpotts.com/assets/images/posts/artauction-screen2.png" ],
+    "Categories": [ 5, 12, 20 ]
+  },
+  {
+    "Slug": "carousel-essentials",
+    "Title": "Carousel Essentials",
+    "Description": "A full app built only xamarin essentials features.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "alexandresanlim/App.CarouselEssentials",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/alexandresanlim/App.OnlyEssentialsFeatures/master/App.CardTools/App.CardTools/Src/Screen/gif.gif", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/connection.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/deviceinfo.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/flashlight.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/geolocation.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/magnometer.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/preference.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/texttospeak.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/unitconverter.jpg?raw=true", "https://github.com/alexandresanlim/Xamarin.Essentials.FullAppFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/Android/whats.jpg?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/connection.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/deviceinfo.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/flashlight.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/geolocation.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/magnometer.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/preference.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/texttospeak.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/unitconverter.png?raw=true", "https://github.com/alexandresanlim/App.OnlyEssentialsFeatures/raw/master/App.CardTools/App.CardTools/Src/Screen/iOS/whats.png?raw=true" ],
+    "Categories": [ 5, 40 ]
+  },
+  {
+    "Slug": "chameleon",
+    "Title": "Chameleon",
+    "Description": "A Xamarin.Forms version of the Chameleon app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.Chameleon",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/creating-an-encyclopedia-page-in-xamarin-forms",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/sthewissen/KickassUI.Chameleon/master/ios1.png", "https://raw.githubusercontent.com/sthewissen/KickassUI.Chameleon/master/ios2.png", "https://raw.githubusercontent.com/sthewissen/KickassUI.Chameleon/master/droid1.jpg", "https://raw.githubusercontent.com/sthewissen/KickassUI.Chameleon/master/droid2.jpg" ],
+    "Categories": [ 5, 18 ]
+  },
+  {
+    "Slug": "covid19-tracker-ui",
+    "Title": "Covid19 Tracker App",
+    "Description": "Covid19.Forms is a tracker app to keep updated with Covid19",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "AnthonyLatty/Covid19.Forms",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Marc-Anthony",
+      "LastName": "Latty",
+      "Website": "http://youniti-labs.herokuapp.com/",
+      "TwitterHandle": "gifted_byte",
+      "GitHubHandle": "AnthonyLatty",
+      "GravatarHash": "1073fd60fa74ba67648c8b18ed9cf9fa"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_droid_3.jpg", "https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_droid_1.jpg", "https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_droid_2.jpg", "https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_3.png", "https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_1.png", "https://raw.githubusercontent.com/AnthonyLatty/Covid19.Forms/master/Artwork/artwork_ios_2.png" ],
+    "Categories": [ 5, 10 ]
+  },
+  {
+    "Slug": "credit-card-checkout",
+    "Title": "Credit Card Checkout",
+    "Description": "A Xamarin.Forms UI Challenge based on a fantastic dribble design.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "egbakou/CreditCardCheckout",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://lioncoding.com/2019/11/05/2019-11-05-Credit-Card-checkout-CarouselView-de-Xamarin-forms-4-3-en-action/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kodjo Laurent",
+      "LastName": "Egbakou",
+      "Website": "https://lioncoding.com",
+      "TwitterHandle": "lioncoding",
+      "GitHubHandle": "egbakou",
+      "GravatarHash": "6e26a030d3b9495872b58d922bd86157"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/egbakou/CreditCardCheckout/master/design/Screenshot_20191105-112705.png", "https://raw.githubusercontent.com/egbakou/CreditCardCheckout/master/design/Screenshot_20191105-112636.png" ],
+    "Categories": [ 5, 30, 26 ]
+  },
+  {
+    "Slug": "discover-gists",
+    "Title": "Discover Gists",
+    "Description": "It's a simple discover gists from GitHub app",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "alexandresanlim/DiscoverGists",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/animation.gif?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/0.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/1.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/2.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/3.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/4.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/5.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/6.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/raw/master/DiscoverGists/DiscoverGists/Src/Screenshots/Android/7.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/blob/master/DiscoverGists/DiscoverGists/Src/Screenshots/iOS/0.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/blob/master/DiscoverGists/DiscoverGists/Src/Screenshots/iOS/1.png?raw=true", "https://github.com/alexandresanlim/DiscoverGists/blob/master/DiscoverGists/DiscoverGists/Src/Screenshots/iOS/2.png?raw=true" ],
+    "Categories": [ 5, 39, 12 ]
+  },
+  {
+    "Slug": "im-feeling-lucky",
+    "Title": "I'm Feeling Lucky",
+    "Description": "It's a feeling lucky page with animations",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "alexandresanlim/XamarinUI.ImFeelingLucky",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/gif.gif?raw=true", "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/android/1.jpg?raw=true", "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/android/2.jpg?raw=true", "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/android/3.jpg?raw=true", "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/ios/1.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/ios/2.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.ImFeelingLucky/raw/master/XamarinUI.ImFeelingLucky/XamarinUI.ImFeelingLucky/Src/Screen/ios/3.png?raw=true" ],
+    "Categories": [ 5 ]
+  },
+  {
+    "Slug": "marvel-cards",
+    "Title": "Marvel Cards",
+    "Description": "A swiping card UI with loads of animations with Skia Sharp.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kphillpotts/MarvelCards",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kym",
+      "LastName": "Phillpotts",
+      "Website": "https://kymphillpotts.com",
+      "TwitterHandle": "kphillpotts",
+      "GitHubHandle": "kphillpotts",
+      "GravatarHash": "3218e66502c6f0836dfd0f02f210ba0b"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/kphillpotts/MarvelCards/master/design/Screenshot_1565521630.png" ],
+    "Categories": [ 5, 12, 20, 16 ]
+  },
+  {
+    "Slug": "simple-listview-with-cards",
+    "Title": "Simple ListView with Cards",
+    "Description": "A very simple example demonstrating how to create Cards using Xamarin Forms with Xaml.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "WashingtonMorais/Xamarin-Forms-Cards",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Washington",
+      "LastName": "Morais",
+      "Website": null,
+      "TwitterHandle": "",
+      "GitHubHandle": "WashingtonMorais",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/123/151.jpg" ],
+    "Categories": [ 5, 12 ]
+  },
+  {
+    "Slug": "smoothies",
+    "Title": "Smoothies",
+    "Description": "Recently we've seen an increase in the amount of smoothies created at the office. Apparently they are the hype object of the month. So without further ado we bring you a sample product overview of smoothies. Yuk! This uses a simple hamburger menu (to counter the health level of these smoothies), a search bar and some custom fonts.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.Runkeeper",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/28/71.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/28/72.jpg" ],
+    "Categories": [ 5, 12, 21 ]
+  },
+  {
+    "Slug": "subscription-plan",
+    "Title": "Subscription Plan",
+    "Description": "A simple subscription plan page",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "alexandresanlim/XamarinUI.SubscriptionPlan",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://github.com/alexandresanlim/XamarinUI.SubscriptionPlan/raw/master/SubscriptionPlan.XamarinUI/SubscriptionPlan.XamarinUI/Screenshots/animation.gif?raw=true", "https://raw.githubusercontent.com/alexandresanlim/SubscriptionPlan.XamarinUI/master/SubscriptionPlan.XamarinUI/SubscriptionPlan.XamarinUI/Screenshots/android.jpg", "https://raw.githubusercontent.com/alexandresanlim/SubscriptionPlan.XamarinUI/master/SubscriptionPlan.XamarinUI/SubscriptionPlan.XamarinUI/Screenshots/ios.png" ],
+    "Categories": [ 5, 12, 40 ]
+  },
+  {
+    "Slug": "traveler",
+    "Title": "Traveler",
+    "Description": "A Xamarin.Forms version of the Traveler app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.Traveler",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/travel-broadens-the-mind",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/sthewissen/KickassUI.Traveler/master/droid.jpg", "https://raw.githubusercontent.com/sthewissen/KickassUI.Traveler/master/ios.png" ],
+    "Categories": [ 5, 12, 8 ]
+  },
+  {
+    "Slug": "xam-book-library",
+    "Title": "Awesome UI - Book Library",
+    "Description": "Neat Xamarin.Forms UI with simple animation",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "shanranm/XamBookLibrary",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Shanmukha",
+      "LastName": "Ranganath",
+      "Website": null,
+      "TwitterHandle": "IAMShanRanM",
+      "GitHubHandle": "shanranm",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/shanranm/XamBookLibrary/master/screens/recorded.gif" ],
+    "Categories": [ 5, 16 ]
+  },
+  {
+    "Slug": "loan-calculator",
+    "Title": "Loan Calculator",
+    "Description": "The Loan Calculator is an application developed using Xamarin.Forms and <a href=\"https://www.syncfusion.com/xamarin-ui-controls\" target=\"_blank\">Syncfusion</a> controls to calculate the EMI with the given details of principal amount, tenure, and interest",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "syncfusion/xamarin-showcase-emi-calculator",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.syncfusion.com/xamarin-ui-controls",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Syncfusion",
+      "LastName": "",
+      "Website": "https://www.syncfusion.com/",
+      "TwitterHandle": "Syncfusion",
+      "GitHubHandle": "syncfusion",
+      "GravatarHash": "4291ef07481d300471113dbd4b4aabc2"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/home.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/chart.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/grid.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/share.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/Android/excel.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/home.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/chart.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/grid.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/share.png", "https://raw.githubusercontent.com/syncfusion/xamarin-showcase-emi-calculator/master/images/iOS/excel.png" ],
+    "Categories": [ 6, 33, 3 ]
+  },
+  {
+    "Slug": "skia-gauge-chart",
+    "Title": "Skia Gauge Chart",
+    "Description": "Simple gauge chart created with SkiaSharp for Xamarin.Forms",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "felipebaltazar/CustomCharts",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://medium.com/@felipedasilvabaltazar/xamarin-controles-personalizados-com-skiasharp-13ffcfbaa6b6",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Felipe",
+      "LastName": "Baltazar",
+      "Website": "https://medium.com/@felipedasilvabaltazar",
+      "TwitterHandle": "FelippeBaltazar",
+      "GitHubHandle": "felipebaltazar",
+      "GravatarHash": "c4deac62305f590fbda80209628afd0e"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/19656249/68064111-40c02780-fcf6-11e9-85c8-0fdd45caf3eb.gif", "https://miro.medium.com/max/1011/1*noyssgwjdBPHXnqu7IAtqw.gif", "https://miro.medium.com/max/238/1*df_vGdlRXUmIP3UumAi_hg.png" ],
+    "Categories": [ 6, 8, 5, 32 ]
+  },
+  {
+    "Slug": "concentric-onboarding",
+    "Title": "Concentric OnBoarding",
+    "Description": "ConcentricOnboarding clone using skiasharp and xamarin forms based on SwiftUI Library exyte/ConcentricOnboarding",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "felipebaltazar/Xam-ConcentricOnboarding",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://medium.com/@felipedasilvabaltazar/xamarin-transi%C3%A7%C3%B5es-com-skiasharp-6c8ac2b09589",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Felipe",
+      "LastName": "Baltazar",
+      "Website": "https://medium.com/@felipedasilvabaltazar",
+      "TwitterHandle": "FelippeBaltazar",
+      "GitHubHandle": "felipebaltazar",
+      "GravatarHash": "c4deac62305f590fbda80209628afd0e"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/19656249/68100432-cbe01f80-fea6-11e9-9044-fc3a10e4422a.gif" ],
+    "Categories": [ 8, 32 ]
+  },
+  {
+    "Slug": "dashboard-drawer",
+    "Title": "Dashboard Drawer",
+    "Description": "Dashboard with drawer",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "AlexandreSanlim/XamarinUI.DashboardDrawer",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://github.com/alexandresanlim/XamarinUI.Dashboard/raw/master/XamarinUI.Dashboard/XamarinUI.Dashboard/Src/Img/Screen/android.gif?raw=true", "https://github.com/alexandresanlim/XamarinUI.Dashboard/raw/master/XamarinUI.Dashboard/XamarinUI.Dashboard/Src/Img/Screen/ios.png?raw=true" ],
+    "Categories": [ 8, 5 ]
+  },
+  {
+    "Slug": "duolingo-clone",
+    "Title": "Duolingo Clone",
+    "Description": "A clone of the Duolingo app made with Xamarin.Forms. At moment, this app contains the lessons, stories, profile, ranking, store, the tab bar structure and custom navigation bar for each page. Some custom renderers was created for the floating action button in Android, tab bar and circular / horizontal progress bar.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ionixjunior/XFAppDuolingoClone",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.ionixjunior.com.br/duolingo-app-clone-com-xamarin-forms/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ione",
+      "LastName": "Souza Junior",
+      "Website": "https://www.ionixjunior.com.br",
+      "TwitterHandle": "ionixjunior",
+      "GitHubHandle": "ionixjunior",
+      "GravatarHash": "ca2812c8e2e51b07c5185663d1c3f033"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_lessons_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_lessons_2.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_lessons_3.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_stories_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_stories_2.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_profile_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_profile_2.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_profile_3.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_profile_4.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_ranking_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_store_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/android_store_2.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_lessons_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_lessons_2.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_lessons_3.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_stories_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_profile_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_profile_2.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_profile_3.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_profile_4.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_ranking_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_store_1.png", "https://raw.githubusercontent.com/ionixjunior/XFAppDuolingoClone/master/art/ios_store_2.png" ],
+    "Categories": [ 8, 29, 34, 12 ]
+  },
+  {
+    "Slug": "nubank-clone",
+    "Title": "NuBank Clone",
+    "Description": "NuBank app clone made with Xamarin.Forms 4.3 and CarouselView",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "felipebaltazar/Xam-Nubank",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Felipe",
+      "LastName": "Baltazar",
+      "Website": "https://medium.com/@felipedasilvabaltazar",
+      "TwitterHandle": "FelippeBaltazar",
+      "GitHubHandle": "felipebaltazar",
+      "GravatarHash": "c4deac62305f590fbda80209628afd0e"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/19656249/59728878-68bd5b80-922b-11e9-949a-a28b086868ec.png", "https://user-images.githubusercontent.com/19656249/67351780-b2dd8300-f524-11e9-9b9d-39909880d6fe.gif", "https://user-images.githubusercontent.com/19656249/59871956-213fe800-936f-11e9-819e-de366123feb1.gif" ],
+    "Categories": [ 8, 5, 32, 34 ]
+  },
+  {
+    "Slug": "personal-finances-dashboard",
+    "Title": "Personal Finances Dashboard",
+    "Description": "Sample of a dashboard page for a personal finances app with Xamarin.Forms",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ricardoprestes/MyDimDim",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ricardo",
+      "LastName": "Prestes",
+      "Website": null,
+      "TwitterHandle": "ricardo_prestes",
+      "GitHubHandle": "ricardoprestes",
+      "GravatarHash": "9802e38d5bd2cd85db8b0720d5feed29"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ricardoprestes/MyDimDim/master/screenshot/iOS.png", "https://raw.githubusercontent.com/ricardoprestes/MyDimDim/master/screenshot/Android.jpg" ],
+    "Categories": [ 8, 6, 32 ]
+  },
+  {
+    "Slug": "smart-home-app",
+    "Title": "Smart Home App",
+    "Description": "Xamarin forms Challenge recreating Smart Home App UI by Amit kumar",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "felipebaltazar/NeomorphismSmartHomeApp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://medium.com/@felipedasilvabaltazar/xamarin-skiasharp-neomorfismo-7127b5e915d7",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Felipe",
+      "LastName": "Baltazar",
+      "Website": "https://medium.com/@felipedasilvabaltazar",
+      "TwitterHandle": "FelippeBaltazar",
+      "GitHubHandle": "felipebaltazar",
+      "GravatarHash": "c4deac62305f590fbda80209628afd0e"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/19656249/80289178-62cdbc00-8713-11ea-9333-5e13ad8bc7fc.gif" ],
+    "Categories": [ 8, 32, 38, 35 ]
+  },
+  {
+    "Slug": "weather-app-ui",
+    "Title": "Weather App UI",
+    "Description": "A Xamarin.Forms Weather App Ui.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "valentineg8/WeatherApp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Lorenzo",
+      "LastName": "Araujo",
+      "Website": null,
+      "TwitterHandle": "v_gr4y",
+      "GitHubHandle": "valentineg8",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/valentineg8/WeatherApp/master/images/ios.gif?raw=true", "https://raw.githubusercontent.com/valentineg8/WeatherApp/master/images/android.gif?raw=true" ],
+    "Categories": [ 8 ]
+  },
+  {
+    "Slug": "CovidTrack",
+    "Title": "Covid Tracker",
+    "Description": "Developed with the intuition to show the flow of Covid-19 in the world with real data from each country",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Amaro96/CovidTrack",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Amaro",
+      "LastName": "Manungu",
+      "Website": "https://www.linkedin.com/in/amaro-manungu-729837162",
+      "TwitterHandle": "amaro_manungu",
+      "GitHubHandle": "Amaro96",
+      "GravatarHash": "2f4e0baf3efd3c1d497e79f5af9c399c"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/ligthModeFirstScreen.PNG", "https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/light.PNG", "https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/darkModeFirstScreen.png", "https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/tela.PNG", "https://raw.githubusercontent.com/Amaro96/CovidTrack/master/Screenshots/mycountry.PNG" ],
+    "Categories": [ 9, 32, 11, 12 ]
+  },
+  {
+    "Slug": "introduction-page",
+    "Title": "Introduction Page",
+    "Description": "Simple and beautiful introduction Page.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "CrossGeeks/Xamarin.Samples",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://xamgirl.com/cool-introduction-page-using-xamarin-forms",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Charlin",
+      "LastName": "Agramonte",
+      "Website": "https://xamgirl.com/",
+      "TwitterHandle": "Chard003",
+      "GitHubHandle": "CrossGeeks",
+      "GravatarHash": "7db2bb2eed17e8df7e78b0d5461d90b0"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/61/108.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/61/109.jpg" ],
+    "Categories": [ 11 ]
+  },
+  {
+    "Slug": "plantish",
+    "Title": "Plantish - Manage your plants",
+    "Description": "This app was created to easily manage my plants in my house. The idea is to add your plants, provide a watering frequency and when you last gave your plant water. When the plants need water, the app will notify you and you will have to tell the app that you have watered it.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "haavamoa/Plantish",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Håvard",
+      "LastName": "Moås",
+      "Website": "https://github.com/haavamoa",
+      "TwitterHandle": "HavardMoas",
+      "GitHubHandle": "haavamoa",
+      "GravatarHash": "3b316f33b1ca5e9f6da18e01432f7afe"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/haavamoa/Plantish/master/assets/SplashScreen.png", "https://raw.githubusercontent.com/haavamoa/Plantish/master/assets/Plants.png", "https://raw.githubusercontent.com/haavamoa/Plantish/master/assets/AddPlant.png", "https://raw.githubusercontent.com/haavamoa/Plantish/master/assets/AddPlant_WithPicture.png" ],
+    "Categories": [ 11, 12, 18, 17, 8 ]
+  },
+  {
+    "Slug": "bet-app",
+    "Title": "Bet App",
+    "Description": "A Xamarin.Forms application based on Bet App design by Manoj Rajput from Dribbble.com.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "RadekVyM/Bet-App",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Radek",
+      "LastName": "Vymětalík",
+      "Website": "https://github.com/RadekVyM",
+      "TwitterHandle": "",
+      "GitHubHandle": "RadekVyM",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/RadekVyM/Bet-App/main/Images/betapp.gif", "https://raw.githubusercontent.com/RadekVyM/Bet-App/main/Images/betapp%20calendar.gif" ],
+    "Categories": [ 12, 5, 16, 4 ]
+  },
+  {
+    "Slug": "calling-app",
+    "Title": "Calling App",
+    "Description": "A Xamarin.Forms application based on majority wallet & calling design by Hampus Öhman from Dribbble.com.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "RadekVyM/Calling-App",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Radek",
+      "LastName": "Vymětalík",
+      "Website": "https://github.com/RadekVyM",
+      "TwitterHandle": "",
+      "GitHubHandle": "RadekVyM",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/RadekVyM/Calling-App/main/Images/callingapp.gif", "https://raw.githubusercontent.com/RadekVyM/Calling-App/main/Images/callingapp2.gif" ],
+    "Categories": [ 12, 5, 16 ]
+  },
+  {
+    "Slug": "Chased-Home-UI-Design",
+    "Title": "Chased Home UI Design",
+    "Description": "Xamarin Forms Chased Home UI Design",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ufukhawk/Chased-Home-UI-Design",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ufuk",
+      "LastName": "Sahin",
+      "Website": "https://codecanyon.net/user/xamdesign/portfolio",
+      "TwitterHandle": "ufukhawk",
+      "GitHubHandle": "ufukhawk",
+      "GravatarHash": "04caa6410c1627f2ed3359a1a380266f"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/68747470733a2f2f696d6775722e636f6d2f4b614c417254562e706e67.png", "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/68747470733a2f2f696d6775722e636f6d2f646c32507145572e706e67.png" ],
+    "Categories": [ 12, 18, 23, 8, 28, 22, 16, 13 ]
+  },
+  {
+    "Slug": "covid19-live",
+    "Title": "Covid-19 Live",
+    "Description": "Developed in XamarinForms with the aim of tracking Covid-19 cases with data from affected countries, including Brazil.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Altevir/xamarinforms-covid19",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Altevir",
+      "LastName": "Cardoso Neto",
+      "Website": "https://www.linkedin.com/in/altevir-cardoso-neto-178b8432/",
+      "TwitterHandle": "AltevirNeto",
+      "GitHubHandle": "Altevir",
+      "GravatarHash": "0e8c3705b97841efdda6a01416f01d40"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/11803107/79575316-f827db00-8097-11ea-826e-c94107b2ce1d.png", "https://user-images.githubusercontent.com/11803107/79575346-04ac3380-8098-11ea-817e-5b663dd33a8a.png", "https://user-images.githubusercontent.com/11803107/79575567-62d91680-8098-11ea-8655-6712af67776b.PNG", "https://user-images.githubusercontent.com/11803107/79575597-6c627e80-8098-11ea-8e3a-fc6f218853e7.PNG", "https://user-images.githubusercontent.com/11803107/79587522-0b8f7200-80a9-11ea-8830-3d293824acaa.gif" ],
+    "Categories": [ 12, 18, 23, 8, 24, 9 ]
+  },
+  {
+    "Slug": "cruise-mobile-ui",
+    "Title": "Cruise Mobile UI",
+    "Description": "A Xamarin.Forms UI Challenge based on a Behance design.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "andreas-nesheim/CruiseMobileUI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.andreasnesheim.no/xamarin-ui-challenge-cruise-mobile-ui-part-1/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Andreas",
+      "LastName": "Nesheim",
+      "Website": "https://www.andreasnesheim.no/",
+      "TwitterHandle": "AndreasNesheim",
+      "GitHubHandle": "andreas-nesheim",
+      "GravatarHash": "3f1d141d2809114debffb23277e91e3e"
+    },
+    "ImageUris": [ "https://github.com/andreas-nesheim/CruiseMobileUI/raw/master/Screenshots/screenshot1.png", "https://github.com/andreas-nesheim/CruiseMobileUI/raw/master/Screenshots/screenshot2.png" ],
+    "Categories": [ 12, 21 ]
+  },
+  {
+    "Slug": "gadgets-store-app",
+    "Title": "Gadgets Store App",
+    "Description": "A Xamarin.Forms application based on Gadgets Store App design by Sajon from Dribbble.com.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "RadekVyM/Gadgets-Store-App",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Radek",
+      "LastName": "Vymětalík",
+      "Website": "https://github.com/RadekVyM",
+      "TwitterHandle": "",
+      "GitHubHandle": "RadekVyM",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/flyout-min.gif", "https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/home.jpg", "https://raw.githubusercontent.com/RadekVyM/Gadgets-Store-App/main/Images/productdetail.jpg" ],
+    "Categories": [ 12, 5, 16, 21 ]
+  },
+  {
+    "Slug": "xf-games-chips",
+    "Title": "XF Games Chips",
+    "Description": "Example project to show how to create so-called 'Chips' (without a plugin), used for data filtering, etc.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Altevir/xamarinforms-games-chips",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Altevir",
+      "LastName": "Cardoso Neto",
+      "Website": "https://www.linkedin.com/in/altevir-cardoso-neto-178b8432/",
+      "TwitterHandle": "AltevirNeto",
+      "GitHubHandle": "Altevir",
+      "GravatarHash": "0e8c3705b97841efdda6a01416f01d40"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/11803107/80119193-c1523900-855f-11ea-864a-f44cb0c4a003.jpg", "https://user-images.githubusercontent.com/11803107/80119227-cca56480-855f-11ea-8b44-e5c031d28428.PNG", "https://user-images.githubusercontent.com/11803107/80120661-b698a380-8561-11ea-9faf-604dca45ff19.gif" ],
+    "Categories": [ 12, 18 ]
+  },
+  {
+    "Slug": "great-places",
+    "Title": "Great Places",
+    "Description": "A ListView layout that has images and overlayed profile and views indicators.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kphillpotts/XamarinFormsLayoutChallenges",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kym",
+      "LastName": "Phillpotts",
+      "Website": "https://kymphillpotts.com",
+      "TwitterHandle": "kphillpotts",
+      "GitHubHandle": "kphillpotts",
+      "GravatarHash": "3218e66502c6f0836dfd0f02f210ba0b"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/82/132.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/82/133.jpg" ],
+    "Categories": [ 12, 18 ]
+  },
+  {
+    "Slug": "Listview-Item-Template",
+    "Title": "Listview General Item Template",
+    "Description": "Listview template for displaying item image and details",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "attrib75/ListViewTemplate",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://github.com/attrib75/ListViewTemplate",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Patrick",
+      "LastName": "Goode",
+      "Website": "http://patrickgoode.com/",
+      "TwitterHandle": "PatrickGoode",
+      "GitHubHandle": "attrib75",
+      "GravatarHash": "c24f10a93ab9762963ad27206655fea2"
+    },
+    "ImageUris": [ "http://patrickgoode.com/wp-content/uploads/2019/11/screenshot-1573237095029.jpg" ],
+    "Categories": [ 12 ]
+  },
+  {
+    "Slug": "movie-app",
+    "Title": "Movie App",
+    "Description": "A Xamarin.Forms application based on Movie App - MVP design by Lukáš Straňák and Barbora Sojakova from Dribbble.com.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "RadekVyM/Movie-App",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Radek",
+      "LastName": "Vymětalík",
+      "Website": "https://github.com/RadekVyM",
+      "TwitterHandle": "",
+      "GitHubHandle": "RadekVyM",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/RadekVyM/Movie-App/main/Images/detailpageThor.gif", "https://raw.githubusercontent.com/RadekVyM/Movie-App/main/Images/mainpage.gif", "https://raw.githubusercontent.com/RadekVyM/Movie-App/main/Images/ironman.jpg", "https://raw.githubusercontent.com/RadekVyM/Movie-App/main/Images/detailpageIronman.jpg", "https://raw.githubusercontent.com/RadekVyM/Movie-App/main/Images/drstrange.jpg" ],
+    "Categories": [ 12, 5, 16, 18, 40 ]
+  },
+  {
+    "Slug": "netflix-clone",
+    "Title": "Netflix Clone",
+    "Description": "A Xamarin.Forms version of the Netflix App to prove you can create goodlooking UI with Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "jsuarezruiz/xamarin-forms-netflix-sample",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Javier",
+      "LastName": "Suárez Ruiz",
+      "Website": "https://javiersuarezruiz.wordpress.com/",
+      "TwitterHandle": "jsuarezruiz",
+      "GitHubHandle": "jsuarezruiz",
+      "GravatarHash": "dfe5d4830ab6c49995c24f8bc290437c"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/85/136.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/85/137.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/85/138.jpg" ],
+    "Categories": [ 12, 16, 32, 34 ]
+  },
+  {
+    "Slug": "picture-download-failed-animation",
+    "Title": "Picture Download Failed Animation",
+    "Description": "This is a sample uses Lottie lib to bring awesome animations to FFImageLoading images lib for Loading indicators and faulted download!! ListView that will download pictures from a URL. While downloading the pictures it will display a loading animation. If download succeeds, it will display and cache the image (FFIMageLoader). If it fails, it will display a failed download animation.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "DanielCauser/XamarinFFImageLoadingAndLottie",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Daniel John",
+      "LastName": "Causer",
+      "Website": null,
+      "TwitterHandle": "danielcauser",
+      "GitHubHandle": "DanielCauser",
+      "GravatarHash": "2666956714a2c2d48c480a6bddac4071"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/140/168.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/140/169.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/140/170.jpg" ],
+    "Categories": [ 12, 18 ]
+  },
+  {
+    "Slug": "places-app-ui",
+    "Title": "Places App UI",
+    "Description": "A Xamarin.Forms Places App Ui.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "valentineg8/PlacesApp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Lorenzo",
+      "LastName": "Araujo",
+      "Website": null,
+      "TwitterHandle": "v_gr4y",
+      "GitHubHandle": "valentineg8",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/valentineg8/PlacesApp/master/images/ios.gif?raw=true", "https://raw.githubusercontent.com/valentineg8/PlacesApp/master/images/android.gif?raw=true" ],
+    "Categories": [ 12 ]
+  },
+  {
+    "Slug": "poke-app",
+    "Title": "PokeApp",
+    "Description": "This snippet was created to demonstrate some animations and photos",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kainaalmeida/pokeapp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kainã",
+      "LastName": "Almeida",
+      "Website": null,
+      "TwitterHandle": "KainAlmeida",
+      "GitHubHandle": "kainaalmeida",
+      "GravatarHash": "4c729c28e98f4aec8d214fc0e242e937"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/splashAndroid.jpg", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/pokemonsAndroid.jpg", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/popupAndroid.jpg", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/galeriaAndroid.jpg", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/splash.png", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/pokemons.png", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/popup.png", "https://raw.githubusercontent.com/kainaalmeida/pokeapp/master/Screenshots/galeria.png" ],
+    "Categories": [ 12, 18, 5 ]
+  },
+  {
+    "Slug": "salon-mobile",
+    "Title": "Salon Mobile",
+    "Description": "This snippet was created to demonstrate some animations",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kainaalmeida/SalonMobile",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kainã",
+      "LastName": "Almeida",
+      "Website": null,
+      "TwitterHandle": "KainAlmeida",
+      "GitHubHandle": "kainaalmeida",
+      "GravatarHash": "4c729c28e98f4aec8d214fc0e242e937"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/kainaalmeida/SalonMobile/master/screenshots/iOS01.png", "https://raw.githubusercontent.com/kainaalmeida/SalonMobile/master/screenshots/iOS02.png", "https://raw.githubusercontent.com/kainaalmeida/SalonMobile/master/screenshots/droid01.jpg", "https://raw.githubusercontent.com/kainaalmeida/SalonMobile/master/screenshots/droid02.jpg" ],
+    "Categories": [ 12, 18 ]
+  },
+  {
+    "Slug": "xamarinforms-wallet-creditcard",
+    "Title": "XanarinForms Wallet Credit Card",
+    "Description": "Concept of Wallet Credit Card App developed with Xamarin Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Altevir/xamarinforms-wallet-creditcard",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Altevir",
+      "LastName": "Cardoso Neto",
+      "Website": "https://www.linkedin.com/in/altevir-cardoso-neto-178b8432/",
+      "TwitterHandle": "AltevirNeto",
+      "GitHubHandle": "Altevir",
+      "GravatarHash": "0e8c3705b97841efdda6a01416f01d40"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/11803107/80869536-8ba40300-8c77-11ea-975f-1f90b0973430.jpg", "https://user-images.githubusercontent.com/11803107/80869544-9494d480-8c77-11ea-93f6-4a1f4449ee8c.jpg", "https://user-images.githubusercontent.com/11803107/80869565-9eb6d300-8c77-11ea-9ff8-6894ba0dd743.JPG", "https://user-images.githubusercontent.com/11803107/80869572-a8403b00-8c77-11ea-88ab-cdc322b4f738.JPG", "https://user-images.githubusercontent.com/11803107/80870446-daa06700-8c7c-11ea-8d7a-2487b95b01a7.gif" ],
+    "Categories": [ 12, 18, 5, 23, 37 ]
+  },
+  {
+    "Slug": "waste-app",
+    "Title": "Waste App",
+    "Description": "A Xamarin.Forms application based on Waste App design by Sara Salehi from Dribbble.com.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "RadekVyM/Waste-App",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Radek",
+      "LastName": "Vymětalík",
+      "Website": "https://github.com/RadekVyM",
+      "TwitterHandle": "",
+      "GitHubHandle": "RadekVyM",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/RadekVyM/Waste-App/main/Images/homepage.gif", "https://raw.githubusercontent.com/RadekVyM/Waste-App/main/Images/scan.jpg", "https://raw.githubusercontent.com/RadekVyM/Waste-App/main/Images/detailpage.jpg" ],
+    "Categories": [ 12, 5, 16, 18 ]
+  },
+  {
+    "Slug": "xamarinforms-ecommerce-headphones",
+    "Title": "XamarinForms Headphones e-commerce concept",
+    "Description": "Headset e-commerce concept developed at XamarinForms",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Altevir/xamarinforms-ecommerce-headphones",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Altevir",
+      "LastName": "Cardoso Neto",
+      "Website": "https://www.linkedin.com/in/altevir-cardoso-neto-178b8432/",
+      "TwitterHandle": "AltevirNeto",
+      "GitHubHandle": "Altevir",
+      "GravatarHash": "0e8c3705b97841efdda6a01416f01d40"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/11803107/83947598-5cd8f980-a7ee-11ea-86a6-ea9567a6906b.jpg", "https://user-images.githubusercontent.com/11803107/83947601-64000780-a7ee-11ea-82cc-dfbe14322e21.jpg", "https://user-images.githubusercontent.com/11803107/83947639-9f9ad180-a7ee-11ea-840c-919acbfe681b.PNG", "https://user-images.githubusercontent.com/11803107/83947643-a6c1df80-a7ee-11ea-9922-824b9aab951e.PNG", "https://user-images.githubusercontent.com/11803107/83947779-89d9dc00-a7ef-11ea-8ac8-e212a32c106d.gif" ],
+    "Categories": [ 12, 18, 23, 5, 21 ]
+  },
+  {
+    "Slug": "XamarinForms-PhotoStock-UI-Design",
+    "Title": "Xamarin Forms PhotoStock UI Design",
+    "Description": "Xamarin Forms photo stock application design.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ufukhawk/XamarinForms-PhotoStock-UI-Design",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ufuk",
+      "LastName": "Sahin",
+      "Website": "https://codecanyon.net/user/xamdesign/portfolio",
+      "TwitterHandle": "ufukhawk",
+      "GitHubHandle": "ufukhawk",
+      "GravatarHash": "04caa6410c1627f2ed3359a1a380266f"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/PhotoStock.gif", "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/PhotoStock.png", "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/PhotoStocksc2.png" ],
+    "Categories": [ 12, 18, 23, 8, 24, 9 ]
+  },
+  {
+    "Slug": "avatar login",
+    "Title": "Avatar Login",
+    "Description": "This snippet was created to demonstrate a basic Login Page with animated avatar and some animation",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "aimore/XamQuiz",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Aimoré",
+      "LastName": "Sá",
+      "Website": "https://aimore.github.io/",
+      "TwitterHandle": "Aimore_Sa",
+      "GitHubHandle": "aimore",
+      "GravatarHash": "0601a7c390df793c7b308ac36860fcf7"
+    },
+    "ImageUris": [ "https://i.imgur.com/8hQyajs.jpg", "https://i.imgur.com/faN2yIY.png" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "carousel-intro-page",
+    "Title": "Carousel Intro Page",
+    "Description": "Simple example of an introductory page in Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "LucioMSP/Xamarin.Forms.Examples/tree/master/CarouselIntroPage",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Vicente",
+      "LastName": "Guzmán",
+      "Website": "https://vicenteguzman.mx/",
+      "TwitterHandle": "luciomsp",
+      "GitHubHandle": "luciomsp",
+      "GravatarHash": "72cce778aac0d6066a14225e90c30874"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/CarouselIntroPage.gif", "https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/ScreenShot01.png", "https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/ScreenShot02.png", "https://raw.githubusercontent.com/LucioMSP/Xamarin.Forms.Examples/master/CarouselIntroPage/ScreenShots/ScreenShot03.png" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "Enlighten",
+    "Title": "Enlighten",
+    "Description": "A Xamarin.Forms application for Students.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "devoirtechsandip/SnpptsChallenge",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://play.google.com/store/apps/details?id=com.devoirtech.enlighten",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Sandip",
+      "LastName": "Kumbhar",
+      "Website": "http://devoirtech.com/",
+      "TwitterHandle": "devoirtechIT",
+      "GitHubHandle": "devoirtechsandip",
+      "GravatarHash": "a97e280022876564d97bff2d333de8db"
+    },
+    "ImageUris": [ "https://user-images.githubusercontent.com/26998235/69323704-3f3aad00-0c6d-11ea-8195-6b5f1c64d665.jpg", "https://user-images.githubusercontent.com/26998235/69323706-3f3aad00-0c6d-11ea-92f7-939a99ea58c9.jpg", "https://user-images.githubusercontent.com/26998235/69323707-3f3aad00-0c6d-11ea-96f9-b04ccd6edd3d.jpg", "https://user-images.githubusercontent.com/26998235/69323708-3fd34380-0c6d-11ea-9825-13964fe58206.jpg", "https://user-images.githubusercontent.com/26998235/69323710-3fd34380-0c6d-11ea-9204-cc560d3050d3.jpg", "https://user-images.githubusercontent.com/26998235/69323712-3fd34380-0c6d-11ea-8d48-2dd9cf5ff990.jpg", "https://user-images.githubusercontent.com/26998235/69323714-406bda00-0c6d-11ea-9eac-f08220f21566.jpg", "https://user-images.githubusercontent.com/26998235/69323716-406bda00-0c6d-11ea-993b-4d0ab21b46bf.jpg" ],
+    "Categories": [ 13, 12, 15, 28, 35 ]
+  },
+  {
+    "Slug": "facebook-mobile-app-login-ui-clone",
+    "Title": "Facebook Mobile App Login UI Clone",
+    "Description": "Facebook Mobile App Login UI Clone in Xamarin Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "SRKYousafzaiPK/FacebookMobileAppLoginUIClone",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Shahrukh",
+      "LastName": "Yousafzai",
+      "Website": "https://github.com/ShahrukhYousafzai",
+      "TwitterHandle": "SRKYousafzaiPK",
+      "GitHubHandle": "ShahrukhYousafzai",
+      "GravatarHash": "c3517b5c29751c62ff1d2198f21c20ba"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/SRKYousafzaiPK/FacebookMobileAppLoginUIClone/master/Screenshot.PNG" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "login-with-imageentry",
+    "Title": "Login with ImageEntry",
+    "Description": "Login UI. NOTE: Check I'm using a custom renderer, the implementation is in the Android/iOS project.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "CrossGeeks/Xamarin.Forms.UI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://xamgirl.com/image-entry-in-xamarin-forms",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Charlin",
+      "LastName": "Agramonte",
+      "Website": "https://xamgirl.com/",
+      "TwitterHandle": "Chard003",
+      "GitHubHandle": "CrossGeeks",
+      "GravatarHash": "7db2bb2eed17e8df7e78b0d5461d90b0"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/68/114.jpg" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "pin-based-login",
+    "Title": "PIN-based Login",
+    "Description": "This snippet was created to demonstrate a simple PIN-based login screen. It uses buttons and images to create the numpad control. Tapping on a number adds the number to a property bound to the interface. Also contains some simple length checks (max. 6 characters) for the PIN code and uses Fresh MVVM for its page models.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "snpptsdev/Snppts.PinBasedLogin",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/18/60.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/18/61.jpg" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "simple-login",
+    "Title": "Simple Login",
+    "Description": "A simple login with option to continue as guest.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "leijae/SimpleLogin",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Eric",
+      "LastName": "Leija",
+      "Website": "https://www.mymealministry.com",
+      "TwitterHandle": "@F4UU0v2qYhCj8ds",
+      "GitHubHandle": "leijae",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/leijae/SimpleLogin/master/SimpleLogin/SimpleLogin/SimpleLogin/Screenshot/login.png" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "ui-app-login",
+    "Title": "UI App Login",
+    "Description": "Simple Login UI. Direct GitHub link: <a href=\"https://github.com/CrossGeeks/Xamarin.Forms.UI/blob/master/UISampleApp/Views/Logins/LoginPage.xaml\" target=\"_blank\">https://github.com/CrossGeeks/Xamarin.Forms.UI/blob/master/UISampleApp/Views/Logins/LoginPage.xaml</a>. NOTE: Check I'm using an effect for line border entry, the implementation is in the Android/iOS project.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "CrossGeeks/Xamarin.Forms.UI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Charlin",
+      "LastName": "Agramonte",
+      "Website": "https://xamgirl.com/",
+      "TwitterHandle": "Chard003",
+      "GitHubHandle": "CrossGeeks",
+      "GravatarHash": "7db2bb2eed17e8df7e78b0d5461d90b0"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/63/110.jpg" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "welcome-page",
+    "Title": "Welcome Page",
+    "Description": "Example of a welcome page with Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "TBertuzzi/PaginaIIntroducaoExemplo",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Thiago",
+      "LastName": "Bertuzzi",
+      "Website": null,
+      "TwitterHandle": "",
+      "GitHubHandle": "TBertuzzi",
+      "GravatarHash": "82d95125be475913cdc7a7fe319d0133"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/147/176.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/147/177.jpg" ],
+    "Categories": [ 13 ]
+  },
+  {
+    "Slug": "RunAway!",
+    "Title": "RunAway!",
+    "Description": "Something like a Xamarin.Forms Runtastic-like training sessions viewer, displaying gradient lines on top of Google Maps with SkiaSharp",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "roubachof/SkiaSharpnado",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.sharpnado.com/run-away-app/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": true,
+    "AuthorInfo": {
+      "FirstName": "Jean-Marie",
+      "LastName": "Alfonsi",
+      "Website": "https://www.sharpnado.com",
+      "TwitterHandle": "piskariov",
+      "GitHubHandle": "roubachof",
+      "GravatarHash": "793803979d0ef8d047e83c86fd2ad67f"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/activity_page_android_4dp.png", "https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/activity_header_page_ios.png", "https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/activity_page_ios_4dp.png", "https://raw.githubusercontent.com/roubachof/SkiaSharpnado/master/__Docs__/glenn_thick.png" ],
+    "Categories": [ 14, 5 ]
+  },
+  {
+    "Slug": "runkeeper-clone",
+    "Title": "Runkeeper Clone",
+    "Description": "A Xamarin.Forms version of the Runkeeper app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.Runkeeper",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/xamarin-forms-ui-runkeeper",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/49/126.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/49/127.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/49/128.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/49/129.jpg" ],
+    "Categories": [ 14, 16, 8, 34 ]
+  },
+  {
+    "Slug": "trips",
+    "Title": "Awesome UI - Trips",
+    "Description": "Xamarin Forms iOS Maps, CustomMarkers, Polylines, Clusters and CollectionView!",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "shanranm/Trips",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": false,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Shanmukha",
+      "LastName": "Ranganath",
+      "Website": null,
+      "TwitterHandle": "IAMShanRanM",
+      "GitHubHandle": "shanranm",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/shanranm/Trips/master/screens/recording.gif" ],
+    "Categories": [ 14, 16 ]
+  },
+  {
+    "Slug": "uber-clone",
+    "Title": "Uber Clone",
+    "Description": "A Xamarin.Forms version of the Uber App to prove you can create goodlooking UI with Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "CrossGeeks/xUber",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.xamboy.com/2019/07/03/introducing-xuber-uber-clone-using-xamarin-forms/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Rendy",
+      "LastName": "Del Rosario",
+      "Website": "https://xamboy.com/",
+      "TwitterHandle": "rdelrosario",
+      "GitHubHandle": "rdelrosario",
+      "GravatarHash": "4bece0ce1c33e65177110bcb95688c68"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/CrossGeeks/xUber/master/Screenshots/screenshot1.png", "https://raw.githubusercontent.com/CrossGeeks/xUber/master/Screenshots/screenshot2.png", "https://raw.githubusercontent.com/CrossGeeks/xUber/master/Screenshots/screenshot3.png", "https://raw.githubusercontent.com/CrossGeeks/xUber/master/Screenshots/screenshot4.png", "https://raw.githubusercontent.com/CrossGeeks/xUber/master/Screenshots/screenshot5.png" ],
+    "Categories": [ 14, 23, 32, 34 ]
+  },
+  {
+    "Slug": "Chat app UI",
+    "Title": "FreeChat",
+    "Description": "User interface demonstrating a pretty chat application",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "DamienDoumer/freechat",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Damien",
+      "LastName": "Doumer",
+      "Website": "https://doumer.me",
+      "TwitterHandle": "Damien_Doumer",
+      "GitHubHandle": "damiendoumer",
+      "GravatarHash": "ecdd93df62c61daa04da17967f82d08d"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/DamienDoumer/freechat/master/images/freechatAndroidDemo.gif", "https://raw.githubusercontent.com/DamienDoumer/freechat/master/images/freechatiOSDemo.gif" ],
+    "Categories": [ 15, 39, 10 ]
+  },
+  {
+    "Slug": "whatsapp-chat-list",
+    "Title": "WhatsApp Chat List",
+    "Description": "Inspired in WhatsApp, a simple chat list implementation using ListView with ViewCells. Some details about implementation: ListView was made with DataTemplateSelector for single messages and group messages. Rounded images use FFImageLoading with circle transformation. For iOS, a render for ViewCell was made for add cell accessory and make margin adjustments in separator inset. To show correct colours of the badges, was created color in resource dictionary with different values for each platform. To show correct date time information, was created a converter to parse DateTime object and transform in string.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ionixjunior/xamarin-forms-interfaces",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ione",
+      "LastName": "Souza Junior",
+      "Website": "https://www.ionixjunior.com.br",
+      "TwitterHandle": "ionixjunior",
+      "GitHubHandle": "ionixjunior",
+      "GravatarHash": "ca2812c8e2e51b07c5185663d1c3f033"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/137/164.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/137/165.jpg" ],
+    "Categories": [ 15 ]
+  },
+  {
+    "Slug": "bottomappbar-material",
+    "Title": "BottomAppBar Material",
+    "Description": "This snippet was created to reproduce the Material BottomAppBar, originally from android using custom renderers and Xamarin.Forms Visual.Material.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "aimore/XamUI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://github.com/aimore/XamUI/tree/master/XamFood",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Aimoré",
+      "LastName": "Sá",
+      "Website": "https://aimore.github.io/",
+      "TwitterHandle": "Aimore_Sa",
+      "GitHubHandle": "aimore",
+      "GravatarHash": "0601a7c390df793c7b308ac36860fcf7"
+    },
+    "ImageUris": [ "https://i.imgur.com/Q8cuoVf.png", "https://i.imgur.com/dXDg9xF.png" ],
+    "Categories": [ 16, 8 ]
+  },
+  {
+    "Slug": "pretty-face-app",
+    "Title": "Pretty Face App",
+    "Description": "This snippet was created to give you a complete starting point for your app.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "InnovoTecnologias/PrettyFaceApp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.innovotecnologias.com.ar",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Innovo",
+      "LastName": "Tecnologías",
+      "Website": "https://www.innovotecnologias.com.ar/",
+      "TwitterHandle": "",
+      "GitHubHandle": "InnovoTecnologias",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/InnovoTecnologias/PrettyFaceApp/master/Media/PrettyFaceApp.gif", "https://raw.githubusercontent.com/InnovoTecnologias/PrettyFaceApp/master/Media/Preview1.jpg", "https://raw.githubusercontent.com/InnovoTecnologias/PrettyFaceApp/master/Media/Preview2.jpg", "https://raw.githubusercontent.com/InnovoTecnologias/PrettyFaceApp/master/Media/Preview3.jpg", "https://raw.githubusercontent.com/InnovoTecnologias/PrettyFaceApp/master/Media/Preview4.jpg", "https://raw.githubusercontent.com/InnovoTecnologias/PrettyFaceApp/master/Media/Preview5.jpg" ],
+    "Categories": [ 16, 8, 11, 5, 12 ]
+  },
+  {
+    "Slug": "Dark-Store",
+    "Title": "DarkStore",
+    "Description": "Xamarin Forms Dark Store UI Design",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ufukhawk/DarkStore",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ufuk",
+      "LastName": "Sahin",
+      "Website": "https://codecanyon.net/user/xamdesign/portfolio",
+      "TwitterHandle": "ufukhawk",
+      "GitHubHandle": "ufukhawk",
+      "GravatarHash": "04caa6410c1627f2ed3359a1a380266f"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/Screen%20Shot%202020-07-25%20at%2009.38.22.png" ],
+    "Categories": [ 18, 8, 22, 16, 5, 37, 12, 18 ]
+  },
+  {
+    "Slug": "social-network",
+    "Title": "Social Network",
+    "Description": "A simple Social Network profile type page in Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kphillpotts/XamarinFormsLayoutChallenges/tree/master/SocialNetwork",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://kymphillpotts.com/social-network-app-layout-design-in-xamarin-forms",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": true,
+    "AuthorInfo": {
+      "FirstName": "Kym",
+      "LastName": "Phillpotts",
+      "Website": "https://kymphillpotts.com",
+      "TwitterHandle": "kphillpotts",
+      "GitHubHandle": "kphillpotts",
+      "GravatarHash": "3218e66502c6f0836dfd0f02f210ba0b"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/kphillpotts/XamarinFormsLayoutChallenges/master/SocialNetwork/Screenshots/iPhone6-33.png" ],
+    "Categories": [ 18, 1, 10 ]
+  },
+  {
+    "Slug": "timeline-with-images",
+    "Title": "Timeline With Images",
+    "Description": "Timeline with images in Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "egbakou/Timeline",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://lioncoding.com/2019/04/08/2019-04-08-UI-Concevoir-un-Timeline-dans-Xamarin-Forms/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kodjo Laurent",
+      "LastName": "Egbakou",
+      "Website": "https://lioncoding.com",
+      "TwitterHandle": "lioncoding",
+      "GitHubHandle": "egbakou",
+      "GravatarHash": "6e26a030d3b9495872b58d922bd86157"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/egbakou/Timeline/master/Timeline/screenshots/Screenshot_1.png", "https://raw.githubusercontent.com/egbakou/Timeline/master/Timeline/screenshots/Screenshot_2.png", "https://raw.githubusercontent.com/egbakou/Timeline/master/Timeline/screenshots/Screenshot_3.png" ],
+    "Categories": [ 18, 30, 12 ]
+  },
+  {
+    "Slug": "whatsapp-ui",
+    "Title": "WhatsApp UI Clone",
+    "Description": "WhatsApp UI Clone in Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "egbakou/WhatsAppUI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://lioncoding.com/2019/05/08/2019-05-08-whatsapp-ui-dans-xamarin-forms-partie-1/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kodjo Laurent",
+      "LastName": "Egbakou",
+      "Website": "https://lioncoding.com",
+      "TwitterHandle": "lioncoding",
+      "GitHubHandle": "egbakou",
+      "GravatarHash": "6e26a030d3b9495872b58d922bd86157"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/egbakou/WhatsAppUI/master/WhatsAppUI/screenshots/Screenshot_20190504-153320.png", "https://raw.githubusercontent.com/egbakou/WhatsAppUI/master/WhatsAppUI/screenshots/Screenshot_20190504-153321.png", "https://raw.githubusercontent.com/egbakou/WhatsAppUI/master/WhatsAppUI/screenshots/Screenshot_20190504-153403.png", "https://raw.githubusercontent.com/egbakou/WhatsAppUI/master/WhatsAppUI/screenshots/Screenshot_20190504-153435.png", "https://raw.githubusercontent.com/egbakou/WhatsAppUI/master/WhatsAppUI/screenshots/Screenshot_20190504-153734.png", "https://raw.githubusercontent.com/egbakou/WhatsAppUI/master/WhatsAppUI/screenshots/Screenshot_20190504-153830.png" ],
+    "Categories": [ 18, 15, 10, 12 ]
+  },
+  {
+    "Slug": "Xam-Call",
+    "Title": "XamCall",
+    "Description": "Xamarin Forms Call Screen UI Design",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ufukhawk/XamCall",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ufuk",
+      "LastName": "Sahin",
+      "Website": "https://codecanyon.net/user/xamdesign/portfolio",
+      "TwitterHandle": "ufukhawk",
+      "GitHubHandle": "ufukhawk",
+      "GravatarHash": "04caa6410c1627f2ed3359a1a380266f"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/xamcall.gif" ],
+    "Categories": [ 18, 8, 22, 16 ]
+  },
+  {
+    "Slug": "Xam-Login-UI-Demo",
+    "Title": "XamLogin UI Demo",
+    "Description": "Xamarin Forms Login UI",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ufukhawk/XamUIDemo",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ufuk",
+      "LastName": "Sahin",
+      "Website": "https://codecanyon.net/user/xamdesign/portfolio",
+      "TwitterHandle": "ufukhawk",
+      "GitHubHandle": "ufukhawk",
+      "GravatarHash": "04caa6410c1627f2ed3359a1a380266f"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/sc_10.png", "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/sc_13.png", "https://raw.githubusercontent.com/ufukhawk/Xamarin-Forms-UI-Library/master/Images/sc_14.png" ],
+    "Categories": [ 18, 8, 28, 22, 16, 13 ]
+  },
+  {
+    "Slug": "spotify-clone",
+    "Title": "Spotify Clone",
+    "Description": "A Xamarin.Forms version of the Spotify app to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.Spotify",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/xamarin-forms-ui-spotify",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/sthewissen/KickassUI.Spotify/master/images/spotify1.jpg", "https://raw.githubusercontent.com/sthewissen/KickassUI.Spotify/master/images/spotify2.jpg", "https://raw.githubusercontent.com/sthewissen/KickassUI.Spotify/master/images/spotify3.jpg", "https://raw.githubusercontent.com/sthewissen/KickassUI.Spotify/master/images/spotify4.jpg" ],
+    "Categories": [ 19, 12, 8, 34 ]
+  },
+  {
+    "Slug": "foodapp",
+    "Title": "foodapp",
+    "Description": "FoodApp is an application focused on good practices that should be in the Styles of Xamarin.Forms.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "danielmonettelli/XF_FoodApp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://danielmonetelli.azurewebsites.net/creating-a-clean-style-library-for-xamarin-forms-v1-0/",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": true,
+    "AuthorInfo": {
+      "FirstName": "Daniel Angel",
+      "LastName": "Monettelli L.",
+      "Website": "https://www.youtube.com/c/danielmonetelli",
+      "TwitterHandle": "DanielMonetelli",
+      "GitHubHandle": "danielmonettelli",
+      "GravatarHash": "4b3d0e60019ad8fe1e4d7cd5c8850efb"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/SplashScreen-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Discover-White-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyOrders-White-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Favourite-White-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyProfile-White-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Discover-Dark-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyOrders-Dark-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Favourite-Dark-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyProfile-Dark-iOS.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/SplashScreen-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Discover-White-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyOrders-White-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Favourite-White-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyProfile-White-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Discover-Dark-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyOrders-Dark-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/Favourite-Dark-Android.png", "https://raw.githubusercontent.com/monetelli/XF_FoodApp/master/Images/MyProfile-Dark-Android.png" ],
+    "Categories": [ 21, 5, 18, 22 ]
+  },
+  {
+    "Slug": "register-with-imageentry",
+    "Title": "Register with ImageEntry",
+    "Description": "SignUp UI. NOTE: Check I'm using a custom renderer, the implementation is in the Android/iOS project.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "CrossGeeks/Xamarin.Forms.UI",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://xamgirl.com/image-entry-in-xamarin-forms",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Charlin",
+      "LastName": "Agramonte",
+      "Website": "https://xamgirl.com/",
+      "TwitterHandle": "Chard003",
+      "GitHubHandle": "CrossGeeks",
+      "GravatarHash": "7db2bb2eed17e8df7e78b0d5461d90b0"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/69/116.jpg" ],
+    "Categories": [ 28 ]
+  },
+  {
+    "Slug": "simplest-weather",
+    "Title": "Weather--",
+    "Description": "This is an educational app showcasing a GraphQL Weather API consumed by a Xamarin Forms app. This repository can be used as a template for a modern Xamarin Forms 4.3 app with clean and testable architecture consuming a GraphQL endpoint.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Sankra/GraphQLDotNet",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://hjerpbakk.com",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Runar Ovesen",
+      "LastName": "Hjerpbakk",
+      "Website": "https://hjerpbakk.com",
+      "TwitterHandle": "hjerpbakk",
+      "GitHubHandle": "sankra",
+      "GravatarHash": "62b1d11eafee92745a51971d6cc21f85"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/locations-light.PNG", "https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/locations-dark.PNG", "https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/weather-dark.PNG", "https://raw.githubusercontent.com/Sankra/GraphQLDotNet/master/add-location-dark.PNG" ],
+    "Categories": [ 29, 34, 9, 33, 12 ]
+  },
+  {
+    "Slug": "listview-timeline",
+    "Title": "ListView TimeLine",
+    "Description": "A simple timeline implementation using ListViews with ViewCells, Headers and Footers. But the effect is nice ;-)",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kphillpotts/XamarinFormsLayoutChallenges",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://kymphillpotts.com/xamarin-forms-layout-challenges-timeline",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kym",
+      "LastName": "Phillpotts",
+      "Website": "https://kymphillpotts.com",
+      "TwitterHandle": "kphillpotts",
+      "GitHubHandle": "kphillpotts",
+      "GravatarHash": "3218e66502c6f0836dfd0f02f210ba0b"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/79/130.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/79/131.jpg" ],
+    "Categories": [ 30, 2, 12 ]
+  },
+  {
+    "Slug": "nubank-similar-timeline",
+    "Title": "NuBank Similar Timeline",
+    "Description": "Inspired in NuBank app, a simple timeline implementation using ListView with ViewCells and header.\n\nSome details about implementation:\n\nListView header was made using CarouselView.FormsPlugin to show some informations.\nFor a better aspect, the fonts was changed to Gotham-Bold and Gotham-Light.\nTo show correct date time information, was created a converter to parse DateTime object and transform in string.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ionixjunior/xamarin-forms-interfaces",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ione",
+      "LastName": "Souza Junior",
+      "Website": "https://www.ionixjunior.com.br",
+      "TwitterHandle": "ionixjunior",
+      "GitHubHandle": "ionixjunior",
+      "GravatarHash": "ca2812c8e2e51b07c5185663d1c3f033"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/138/166.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/138/167.jpg" ],
+    "Categories": [ 30 ]
+  },
+  {
+    "Slug": "fancy-tutorial",
+    "Title": "Fancy Tutorial",
+    "Description": "A simple Xamarin.Forms tutorial screen as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.FancyTutorial",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/simple-good-looking-app-tutorial",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/sthewissen/KickassUI.FancyTutorial/master/ios.png", "https://raw.githubusercontent.com/sthewissen/KickassUI.FancyTutorial/master/android.jpg" ],
+    "Categories": [ 31, 18 ]
+  },
+  {
+    "Slug": "parallax-carousel",
+    "Title": "Parallax Carousel",
+    "Description": "A Xamarin.Forms version of a parallax carousel to prove you can create goodlooking UI with Xamarin.Forms as talked about in my blogpost.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "sthewissen/KickassUI.ParallaxCarousel",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.thewissen.io/creating-a-parallax-carousel-in-xamarin-forms",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Steven",
+      "LastName": "Thewissen",
+      "Website": "https://www.thewissen.io",
+      "TwitterHandle": "devnl",
+      "GitHubHandle": "sthewissen",
+      "GravatarHash": "62ce0e69389e31fd3c42fb230f9b1637"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/sthewissen/KickassUI.ParallaxCarousel/master/ios1.png", "https://raw.githubusercontent.com/sthewissen/KickassUI.ParallaxCarousel/master/ios2.png", "https://raw.githubusercontent.com/sthewissen/KickassUI.ParallaxCarousel/master/droid1.jpg", "https://raw.githubusercontent.com/sthewissen/KickassUI.ParallaxCarousel/master/droid2.jpg" ],
+    "Categories": [ 31, 5 ]
+  },
+  {
+    "Slug": "welcome-pages",
+    "Title": "Welcome Pages",
+    "Description": "Template app with a few unused Welcome Pages. I'm also using Carousel on a few pages. And yes the text is slidable.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "leroygumede/WelcomeCarousel",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "LeRoy",
+      "LastName": "Gumede",
+      "Website": null,
+      "TwitterHandle": "",
+      "GitHubHandle": "leroygumede",
+      "GravatarHash": "f051c3f6ce05ae70d60e013be2fafeb1"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/143.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/144.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/145.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/146.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/147.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/148.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/149.jpg", "https://raw.githubusercontent.com/snpptsdev/MigratedImages/master/103/150.jpg" ],
+    "Categories": [ 31 ]
+  },
+  {
+    "Slug": "day-vs-night",
+    "Title": "Day Vs Night",
+    "Description": "Gradients, so many gradients. Skia controls. User selectable themeing.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "kphillpotts/DayVsNight",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://kymphillpotts.com/xamarin-forms-ui-challenge-dayvsnight.html",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Kym",
+      "LastName": "Phillpotts",
+      "Website": "https://kymphillpotts.com",
+      "TwitterHandle": "kphillpotts",
+      "GitHubHandle": "kphillpotts",
+      "GravatarHash": "3218e66502c6f0836dfd0f02f210ba0b"
+    },
+    "ImageUris": [ "https://kymphillpotts.com/assets/images/posts/dayvsnight/day.png", "https://kymphillpotts.com/assets/images/posts/dayvsnight/night.png" ],
+    "Categories": [ 32, 22, 8 ]
+  },
+  {
+    "Slug": "initials-view",
+    "Title": "Initials View",
+    "Description": "Custom control for Android and/or iOS showing the initials of a provided name within a colorful circle.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "tsjdev-apps/xf-initialsview",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://medium.com/@tsjdevapps/xamarin-forms-how-to-create-an-intials-view-as-custom-control-for-android-and-ios-e9b09223ed53",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Sebastian",
+      "LastName": "Jensen",
+      "Website": "https://www.tsjdev-apps.de",
+      "TwitterHandle": "tsjdevapps",
+      "GitHubHandle": "tsjdev-apps",
+      "GravatarHash": "d990a05a189c263901ca94367d3a50be"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/tsjdev-apps/xf-initialsview/master/Docs/InitialsView.gif" ],
+    "Categories": [ 32 ]
+  },
+  {
+    "Slug": "MbongoUI",
+    "Title": "MbongoUI",
+    "Description": "Developed in XamarinForms to show how we can develop beatiful screens with XamarinForms",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "Amaro96/MbongoUIApp",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": false,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Amaro",
+      "LastName": "Manungu",
+      "Website": "https://www.linkedin.com/in/amaro-manungu-729837162",
+      "TwitterHandle": "amaro_manungu",
+      "GitHubHandle": "Amaro96",
+      "GravatarHash": "2f4e0baf3efd3c1d497e79f5af9c399c"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/Amaro96/MbongoUIApp/master/ScreenShots/Mobile%20money.PNG", "https://raw.githubusercontent.com/Amaro96/MbongoUIApp/master/ScreenShots/bankTransfer.PNG" ],
+    "Categories": [ 32, 11, 12 ]
+  },
+  {
+    "Slug": "soundcloud-clone",
+    "Title": "SoundCloud Clone",
+    "Description": "A clone of the SoundCloud app made with Xamarin.Forms. At moment this app contains the albums, streamings, search and library screens, both in light and dark mode.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "ionixjunior/SoundCloudClone",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": "https://www.youtube.com/playlist?list=PL6M6J_6V_um8IzRN4lgRUEWrPWC6iQfiq",
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Ione",
+      "LastName": "Souza Junior",
+      "Website": "https://www.ionixjunior.com.br",
+      "TwitterHandle": "ionixjunior",
+      "GitHubHandle": "ionixjunior",
+      "GravatarHash": "ca2812c8e2e51b07c5185663d1c3f033"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_home_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_home_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_stream_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_stream_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_2_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_2_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_3_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_search_3_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_2_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/android_library_2_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_home_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_stream_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_stream_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_2_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_2_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_3_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_search_3_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_1_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_1_dark.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_2_light.png", "https://raw.githubusercontent.com/ionixjunior/SoundCloudClone/master/art/ios_library_2_dark.png" ],
+    "Categories": [ 34, 12, 29, 2, 23 ]
+  },
+  {
+    "Slug": "addcreditcard",
+    "Title": "Add Credit Card",
+    "Description": "Add a credit card from user",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "alexandresanlim/XamarinUI.AddCreditCard",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/alexandresanlim/XamarinUI.AddCreditCard/master/XamarinUI.AddCreditCard/XamarinUI.AddCreditCard/src/screenshot/android.gif", "https://raw.githubusercontent.com/alexandresanlim/XamarinUI.AddCreditCard/master/XamarinUI.AddCreditCard/XamarinUI.AddCreditCard/src/screenshot/iosfront.png", "https://raw.githubusercontent.com/alexandresanlim/XamarinUI.AddCreditCard/master/XamarinUI.AddCreditCard/XamarinUI.AddCreditCard/src/screenshot/iosback.png" ],
+    "Categories": [ 37, 26 ]
+  },
+  {
+    "Slug": "addtoshoppingcart",
+    "Title": "Add to Shopping Cart",
+    "Description": "Xamarin UI sample to add item to shopping cart",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "alexandresanlim/XamarinUI.AddToShoppingCart",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://github.com/alexandresanlim/XamarinUI.AddToShoppingCart/raw/master/XamarinUI.AddToShoppingCard/XamarinUI.AddToShoppingCard/Src/img/screen/gif.gif?raw=true", "https://github.com/alexandresanlim/XamarinUI.AddToShoppingCart/raw/master/XamarinUI.AddToShoppingCard/XamarinUI.AddToShoppingCard/Src/img/screen/ios/not1.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.AddToShoppingCart/raw/master/XamarinUI.AddToShoppingCard/XamarinUI.AddToShoppingCard/Src/img/screen/ios/not2.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.AddToShoppingCart/raw/master/XamarinUI.AddToShoppingCard/XamarinUI.AddToShoppingCard/Src/img/screen/ios/not3.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.AddToShoppingCart/raw/master/XamarinUI.AddToShoppingCard/XamarinUI.AddToShoppingCard/Src/img/screen/ios/not4.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.AddToShoppingCart/raw/master/XamarinUI.AddToShoppingCard/XamarinUI.AddToShoppingCard/Src/img/screen/ios/not5.png?raw=true" ],
+    "Categories": [ 37, 26 ]
+  },
+  {
+    "Slug": "fashion-store-ui",
+    "Title": "Fashion Store UI",
+    "Description": "A Xamarin.Forms Fashion Store UI.",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "valentineg8/FashionStore",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Lorenzo",
+      "LastName": "Araujo",
+      "Website": null,
+      "TwitterHandle": "v_gr4y",
+      "GitHubHandle": "valentineg8",
+      "GravatarHash": ""
+    },
+    "ImageUris": [ "https://raw.githubusercontent.com/valentineg8/FashionStore/master/images/FashionStore.gif?raw=true", "https://raw.githubusercontent.com/valentineg8/FashionStore/master/images/FasionStoreAndroid.gif?raw=true" ],
+    "Categories": [ 37, 12 ]
+  },
+  {
+    "Slug": "voucher",
+    "Title": "Voucher",
+    "Description": "It's a voucher list sample",
+    "GitHubRepoInfo": {
+      "GitHubRepoName": "AlexandreSanlim/XamarinUI.Voucher",
+      "FullName": null,
+      "Description": null,
+      "Stars": 0,
+      "Forks": 0,
+      "UpdatedAt": "0001-01-01T00:00:00"
+    },
+    "ExternalUri": null,
+    "ContainsAndroidSample": true,
+    "ContainsiOSSample": true,
+    "ContainsUWPSample": false,
+    "AuthorInfo": {
+      "FirstName": "Alexandre",
+      "LastName": "Sanlim",
+      "Website": "https://alexandresanlim.github.io/",
+      "TwitterHandle": "alexandresanlim",
+      "GitHubHandle": "alexandresanlim",
+      "GravatarHash": "201e2428b23bfe48fbb3e02e54f6652d"
+    },
+    "ImageUris": [ "https://github.com/alexandresanlim/XamarinUI.Voucher/raw/master/XamarinUI.Voucher/XamarinUI.Voucher/src/screen/demo.gif?raw=true", "https://github.com/alexandresanlim/XamarinUI.Voucher/raw/master/XamarinUI.Voucher/XamarinUI.Voucher/src/screen/android/1.jpg?raw=true", "https://github.com/alexandresanlim/XamarinUI.Voucher/raw/master/XamarinUI.Voucher/XamarinUI.Voucher/src/screen/ios/1.png?raw=true", "https://github.com/alexandresanlim/XamarinUI.Voucher/raw/master/XamarinUI.Voucher/XamarinUI.Voucher/src/screen/ios/2.png?raw=true" ],
+    "Categories": [ 37, 5 ]
+  }
+]
