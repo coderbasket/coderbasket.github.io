@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Blazor_App.Shared.Models;
 using Blazor_App.Shared.Enums;
+using Blazor_App.Shared.Extensions;
 #nullable disable
 namespace Blazor_App.Shared.Servers
 {
@@ -58,7 +59,7 @@ namespace Blazor_App.Shared.Servers
             //_currentItems[SiteInfo.FrameWork] = projectItemData.Items;
 
             var projectItemData = GetProjectItemData();
-            return projectItemData.Items;
+            return projectItemData.Items.Shuffle().ToList();
         }
 
         static string GetHostUrl(FrameWork frameWork, bool raw = true)
@@ -153,6 +154,79 @@ namespace Blazor_App.Shared.Servers
                     ImageUrls = new List<string>()
                     {
                         "https://github.com/jsuarezruiz/netmaui-chat-app-challenge/raw/main/images/chatapp-maui.png",
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title="Rachel's Recipes",
+                    ProjectUrl = "https://github.com/rachelkang/recipeSearch",
+                    Description = "This app continues to be work-in-progress and at the moment, its primary purpose is to test the accessibility of .NET MAUI.",
+                    Categories = new List<Enums.Category>() { Category.STORES, Category.LISTS, Category.PRODUCTS},
+                    YoutubeUrl = "",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://github.com/rachelkang/recipeSearch/raw/main/screenshots/screen_starting.png",
+                        "https://github.com/rachelkang/recipeSearch/raw/main/screenshots/screen_search_recipes.png",
+                        "https://github.com/rachelkang/recipeSearch/raw/main/screenshots/screen_recipe_detail.png",
+                        "https://github.com/rachelkang/recipeSearch/raw/main/screenshots/screen_recipes_carousel.png",
+                        "https://github.com/rachelkang/recipeSearch/raw/main/screenshots/screen_recipe_detail_saved.png",
+                        "https://github.com/rachelkang/recipeSearch/raw/main/screenshots/screen_recipe_detail_edit.png",
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title="Calculator Sample App",
+                    ProjectUrl = "https://github.com/dotnet/maui-samples/tree/main/6.0/Apps/Calculator",
+                    Description = "This basic calculator demonstrates using span and spacing features of a Grid layout to achieve a familiar interface.",
+                    Categories = new List<Enums.Category>() { Category.STORES, Category.LISTS, Category.PRODUCTS},
+                    YoutubeUrl = "",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/ios.png",
+                        "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/macos.png",                       
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title=".NET Podcasts - Sample Application",
+                    ProjectUrl = "https://github.com/microsoft/dotnet-podcasts",
+                    Description = "The .NET Podcast app is a sample application showcasing .NET 6, ASP.NET Core, Blazor, .NET MAUI, Azure Container Apps, Orleans, and more.",
+                    Categories = new List<Enums.Category>() { Category.POPOVERS},
+                    YoutubeUrl = "",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://github.com/microsoft/dotnet-podcasts/raw/main/docs/net-podcasts.png",
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title="MauiScientificCalculator (UPDATED TO MAUI GA RELEASE)",
+                    ProjectUrl = "https://github.com/naweed/MauiScientificCalculator",
+                    Description = "A simple scientific calculator built uisng .NET MAUI Preview 14. Based ont his Behance Concept.",
+                    Categories = new List<Enums.Category>() { Category.CALCULATORS},
+                    YoutubeUrl = "",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://github.com/naweed/MauiScientificCalculator/raw/main/Behance_Concept.png",
+                        "https://github.com/naweed/MauiScientificCalculator/raw/main/SplashScreen.png",
+                        "https://github.com/naweed/MauiScientificCalculator/raw/main/CalcScreen.png",
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title="LiveCharts2",
+                    ProjectUrl = "https://github.com/beto-rodriguez/LiveCharts2",
+                    Description = "LiveCharts2 (v2) is the evolution of LiveCharts (v0), it fixes the main design issues of its predecessor, it's focused to run everywhere, improves flexibility without losing what we already had in v0.",
+                    Categories = new List<Enums.Category>() { Category.CHARTS},
+                    YoutubeUrl = "",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://user-images.githubusercontent.com/10853349/124399763-41873900-dce3-11eb-937a-947d66d42597.gif",
                     },
 
                 },
