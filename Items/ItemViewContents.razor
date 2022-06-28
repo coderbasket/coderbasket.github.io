@@ -1,19 +1,22 @@
-﻿<div class="row">
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-
-</div>
+﻿@page "/"
 <div class="row">
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
-    <CoderBasket.Blazor.Items.ItemView></CoderBasket.Blazor.Items.ItemView>
+    @foreach(var item in ProjectItems)
+    {
+        <ItemView ProjectRepo="item"></ItemView>
+    }
 
 </div>
 
 @code {
-
+    protected override async void OnInitialized()
+    {
+        base.OnInitialized();
+        this.ProjectItems = await DataServiceProvider.GetItemsAsync();
+        foreach (var item in this.ProjectItems)
+        {
+            RepoHelper.GetRepository(item);
+        }
+    }
+    [Parameter]
+    public List<ProjectItem> ProjectItems { get; set; } = new List<ProjectItem>();
 }

@@ -24,19 +24,20 @@ namespace Blazor_App.Shared.Models
             set 
             { 
                 _repo = value; 
-                Update();
+                
             }
         }
-        public string Title { get; private set; }
+        public string Title { get; set; }
         public string Description { get; set; }
         public string[] Platform { get; set; } = new string[] { "Android", "Windows", "iOS" };
         public string ExternalUrl { get; set; }
         public string YoutubeUrl { get; set; }
         public string FrameWorkName { get; set; } = SiteInfo.FrameWork.ToString();
         public List<string> ImageUris { get; set; } = new List<string>();
-        public IList<Category> Categories { get; set; } = new List<Category>() { Category.OTHERS };
+        public List<Category> Categories { get; set; } = new List<Category>() { Category.OTHERS };
         public string Slug { get; set; }
-        void Update()
+        public string GravatarHash { get; set; }
+        public void Update()
         {
             if (string.IsNullOrEmpty(this.ProjectUrl))
                 return;
@@ -46,6 +47,8 @@ namespace Blazor_App.Shared.Models
         public GitHubRepository Repository { get; set; }
         [JsonIgnore]
         public GitHubRepoInfo GitHubRepoInfo { get; set; }
+        [JsonIgnore]
+        public bool IsLoaded { get; set; }
 
     }
 }

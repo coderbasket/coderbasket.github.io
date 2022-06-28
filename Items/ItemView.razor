@@ -1,28 +1,61 @@
 ﻿<div class="col-lg-4 col-md-4 col-sm-6 margin-bottom-20 snppt">
 
     <a href="/snippet/httpsgithub.combrminnickHackerNews">
-        <img class="snippet__img"
-             src="https://user-images.githubusercontent.com/13558917/66956918-2873bb80-f01a-11e9-839c-6e935c0b606c.gif" />
+        @if (ProjectRepo.ImageUris.Count > 0)
+        {
+            var url = this.ProjectRepo.ImageUris.FirstOrDefault();
+            <img class="snippet__img"
+             src="@url" />
+
+        }
     </a>
 
     <h4 class="text-center">
-        <a href="/snippet/httpsgithub.combrminnickHackerNews">HackerNews</a>
+        <a href="/snippet/httpsgithub.combrminnickHackerNews">@ProjectRepo.Title</a>
     </h4>
 
     <p class="tags text-center">
-        CALCULATORS, LAUNCHSCREEN, LOGIN, MESSAGING, NAVIGATIONS, PRODUCTS, SIGNUPS,
-        WALKTHROUGHS, ARTICLES, ERRORS, PROFILES
+        @string.Join(",",this.ProjectRepo.Categories);
     </p>
 
     <div class="text-center margin-bottom-20 platform-icons">
-        <i class="fa fa-apple"></i>
-        <i class="fa fa-android"></i>
-        <i class="fa fa-windows"></i>
+        @{
+            if (this.ProjectRepo.Platform.Contains("iOS"))
+            {
+                <i class="fa fa-apple"></i>
+            }
+            if (this.ProjectRepo.Platform.Contains("Android"))
+            {
+                <i class="fa fa-android"></i>
+            }
+            if (this.ProjectRepo.Platform.Contains("Windows"))
+            {
+                <i class="fa fa-windows"></i>
+            }
+        }
 
-        <i class="fa fa-star"></i>
-        <b class="text">68</b>
+        
+        @if (this.ProjectRepo.GitHubRepoInfo != null)
+        {
+            if(this.ProjectRepo.GitHubRepoInfo.Stars > 0)
+            {
+                <i class="fa fa-star"></i>
+                <b class="text">@ProjectRepo.GitHubRepoInfo.Stars</b>
+            }
+        }
     </div>
 </div>
 @code {
-
+    protected override async void OnInitialized()
+    {
+        base.OnInitialized();
+        if (this.ProjectRepo != null)
+        {
+            RepoHelper.GetRepository(this.ProjectRepo);
+            await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+            StateHasChanged();
+        }
+    }
+    [Parameter]
+    public ProjectItem ProjectRepo { get; set; }
 }

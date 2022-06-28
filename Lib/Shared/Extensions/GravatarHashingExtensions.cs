@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Web;
 using Blazor_App.Shared.Infrastructure;
+using Blazor_App.Shared.Models;
 
 namespace Blazor_App.Shared.Extensions
 {
  public static class GravatarHashingExtensions
     {
-        public static string GravatarImage(this AmAnAuthor member)
+        public static string GravatarImage(this ProjectItem member)
         {
             const int size = 200;
 

@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 using Octokit;
+using Blazor_App.Shared.Models;
 
 namespace Blazor_App.Shared.Extensions
 {
@@ -14,7 +15,7 @@ namespace Blazor_App.Shared.Extensions
     {
         public static List<GitHubRepoInfo> GitHubRepos { get; set; }
         public static SortType _sortType = SortType.stars;
-        public static async Task<IList<AmASnippet>> SortSnippets(this IList<AmASnippet> members, SortType sortType = SortType.stars, int page = 1)
+        public static async Task<IList<ProjectItem>> SortSnippets(this IList<ProjectItem> members, SortType sortType = SortType.stars, int page = 1)
         {
             _sortType = sortType;
             var api = "https://api.github.com/search/repositories?q=repo:";
@@ -24,7 +25,7 @@ namespace Blazor_App.Shared.Extensions
             foreach (var item in members)
             {
                 if (!item.Equals(last))
-                    api += item.GitHubRepoInfo.GitHubRepoName + "+repo:";
+                    api += item.GitHubRepoInfo.ProjectName + "+repo:";
 
                 else
                 {
@@ -47,7 +48,7 @@ namespace Blazor_App.Shared.Extensions
             GitHubRepos = list.Items;
 
             var allNameRepoService = GitHubRepos.Select(x => x.FullName.ToLower());
-            members = members.Where(x => allNameRepoService.Contains(x.GitHubRepoInfo.GitHubRepoName.ToLower())).ToList();
+            members = members.Where(x => allNameRepoService.Contains(x.GitHubRepoInfo.ProjectName.ToLower())).ToList();
 
             switch (sortType)
             {
@@ -63,7 +64,7 @@ namespace Blazor_App.Shared.Extensions
 
     public class SnpptsWithGitHubValues
     {
-        public AmASnippet Snippet { get; set; }
+        public ProjectItem Snippet { get; set; }
 
         public int Stars { get; set; }
 

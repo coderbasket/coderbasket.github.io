@@ -1,7 +1,7 @@
 ﻿{
   "Message": "Maui",
   "Title": "Maui",
-  "Codes": [
+  "Items": [
     {
       "ProjectUrl": "https://github.com/brminnick/HackerNews",
       "Slug": "hackernews",

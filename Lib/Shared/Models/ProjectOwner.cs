@@ -18,7 +18,7 @@ namespace Blazor_App.Shared.Models
 
         public string LastName { get; set; }
 
-        public Uri Website { get; set; }
+        public string Website { get; set; }
 
         public string TwitterHandle { get; set; }
 
@@ -34,7 +34,7 @@ namespace Blazor_App.Shared.Models
                 UserId = repoInfo.OwnerGitUrl,
                 FirstName = repoInfo.OwnerName,
                 LastName = repoInfo.OwnerName,
-                Website = new Uri(repoInfo.User.Blog),
+                Website = repoInfo.User.Blog,
                 TwitterHandle = null,
                 GitHubHandle = repoInfo.OwnerName,
                 GravatarHash = "",

@@ -20,25 +20,13 @@ namespace Blazor_App.Shared.Extensions
             Init(_gitHubRepoName);
         }
         bool _initDone = false;
-        void Init(string _gitHubRepoName)
+        void Init(string projectUrl)
         {
-            if (_gitHubRepoName.StartsWith("https://github.com/"))
-            {
-                ProjectUrl = _gitHubRepoName;
-                GitHubRepoName = _gitHubRepoName.Replace("https://github.com/", "");
-            }
-            else if (_gitHubRepoName.StartsWith("github.com/"))
-            {
-                ProjectUrl = "https://" + _gitHubRepoName;
-                GitHubRepoName = _gitHubRepoName.Replace("github.com/", "");
-            }
-            else
-            {
-                ProjectUrl = "https://github.com/" + _gitHubRepoName;
-                GitHubRepoName = _gitHubRepoName;
-            }
+            if (string.IsNullOrEmpty(projectUrl))
+                return;
+            ProjectUrl = projectUrl;
             OwnerName = ProjectUrl.Split("https://github.com/").LastOrDefault().Split("/").FirstOrDefault();
-            ProjectName = GitHubRepoName.Split("/").LastOrDefault();
+            ProjectName = ProjectUrl.Split("/").LastOrDefault();
             OwnerGitUrl = "https://github.com/" + OwnerName;
             DownloadZipUrl = ProjectUrl + "/archive/refs/heads/main.zip";
             _initDone = true;
@@ -50,11 +38,7 @@ namespace Blazor_App.Shared.Extensions
             {
                 if (!string.IsNullOrEmpty(projectUrl))
                     Init(projectUrl);
-                else
-                {
-                    if (!string.IsNullOrEmpty(GitHubRepoName))
-                        Init(GitHubRepoName);
-                }
+                
             }
             User = await GetUserAsync(this);
             var repo = await GetRepositoryAsync(this);
@@ -81,7 +65,6 @@ namespace Blazor_App.Shared.Extensions
         /// <summary>
         /// Unique info from Author the outhers properties is set from github api service
         /// </summary>
-        public string GitHubRepoName { get; set; }
 
         //[JsonProperty("name")]
         //public string Name { get; private set; }
@@ -106,12 +89,11 @@ namespace Blazor_App.Shared.Extensions
             if (repoListFromService == null || repoListFromService.Count.Equals(0))
                 return this;
 
-            var obj = repoListFromService.FirstOrDefault(x => x.FullName.ToLower().Equals(this.GitHubRepoName.ToLower()));
+            var obj = repoListFromService.FirstOrDefault(x => x.FullName.ToLower().Equals(this.ProjectName.ToLower()));
 
             if (string.IsNullOrEmpty(obj?.FullName))
                 return this;
 
-            obj.GitHubRepoName = this.GitHubRepoName;
             return obj;
         }
         public async static Task<User> GetUserAsync(GitHubRepoInfo repoInfo)

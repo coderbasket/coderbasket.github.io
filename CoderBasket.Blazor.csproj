@@ -31,7 +31,6 @@
   <ItemGroup>
     <None Include=".github\workflows\gh-pages.yml" />
     <None Include="Shared\MainLayout.razor" />
-    <None Include="Shared\NavMenu.razor" />
     <None Include="Shared\SurveyPrompt.razor" />
     <None Include="wwwroot\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
