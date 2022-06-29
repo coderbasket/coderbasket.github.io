@@ -6,7 +6,7 @@ Maui Json hosted here
 
 
 
-Submit Json  using "SUBMIT NEW PROJECT" or email your project, you can also contack us if you want your project be removed or need updates like infomations.
+Submit Json  using "SUBMIT NEW PROJECT" or email your project, you can also contact us if you want your project be removed or need updates like infomations.
 
 String format..
 ```cs
