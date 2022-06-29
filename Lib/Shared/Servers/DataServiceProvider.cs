@@ -230,6 +230,20 @@ namespace Blazor_App.Shared.Servers
                     },
 
                 },
+                new ProjectItem()
+                {
+                    Title="MAUI Beach",
+                    ProjectUrl = "https://github.com/irongut/MauiBeach",
+                    Description = "A playground for experiments with .Net MAUI, development will be documented on my blog Sailing the Sharp Sea.",
+                    Categories = new List<Enums.Category>() { Category.NAVIGATIONS},
+                    YoutubeUrl = "",
+                    ExternalUrl="https://blog.taranissoftware.com/first-steps-on-maui-beach",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://cdn.hashnode.com/res/hashnode/image/upload/v1638495664862/U7Y79glXG.png?auto=compress,format&format=webp",
+                    },
+
+                },
             };
             return projectItemData;
         }
