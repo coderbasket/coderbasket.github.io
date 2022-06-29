@@ -8,7 +8,7 @@ namespace Blazor_App.Shared
         //coderbasket
         public const string SiteName = "Coder Basket";
         public const string SiteUrlShort = "coderbasket.com";
-        public const string SiteUrl = "https://coderbasket.azurewebsites.net/";
+        public const string SiteUrl = "https://coderbasket.github.io/";
         public const string SiteFullUrl = SiteUrl;
         public const string Email = "coderbasketcontact@gmail.com";
 

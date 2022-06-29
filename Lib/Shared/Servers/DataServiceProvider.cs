@@ -111,6 +111,7 @@ namespace Blazor_App.Shared.Servers
                     ProjectUrl = "https://github.com/DevExpress-Examples/maui-editors-get-started",
                     Description = "This repository contains a demo application that allows you to get started with DevExpress Editors for .NET MAUI.",
                     Categories = new List<Enums.Category>() { Category.WIDGETS, Category.DASHBOARD, Category.NAVIGATIONS, Category.CHARTS, Category.LOGIN, Category.LISTS },
+                    ExternalUrl = "https://www.devexpress.com/maui/",
                     ImageUrls = new List<string>()
                     {
                         "https://raw.githubusercontent.com/DevExpress-Examples/maui-editors-get-started/22.1.1%2B/Images/editors-iphone12.png",
