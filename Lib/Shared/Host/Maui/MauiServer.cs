@@ -112,7 +112,7 @@ namespace Blazor_App.Shared
                     Title="Calculator Sample App",
                     ProjectUrl = "https://github.com/dotnet/maui-samples",
                     Description = "This basic calculator demonstrates using span and spacing features of a Grid layout to achieve a familiar interface.",
-                    Categories = new List<Category>() { Category.STORES, Category.LISTS, Category.PRODUCTS},
+                    Categories = new List<Category>() { Category.CALCULATORS},
                     YoutubeUrl = "",
                     ImageUrls = new List<string>()
                     {
