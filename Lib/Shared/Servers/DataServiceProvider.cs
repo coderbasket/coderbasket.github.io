@@ -94,7 +94,7 @@ namespace Blazor_App.Shared.Servers
                 if (_items != null && _items.Count > 0)
                 {
                     ItemHasLoaded = true;
-                    _currentItems[SiteInfo.FrameWork] = _items;
+                    _currentItems[SiteInfo.FrameWork] = _items.Shuffle().ToList();
                     ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
                 }
             });
