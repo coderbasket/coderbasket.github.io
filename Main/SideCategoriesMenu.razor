@@ -58,17 +58,30 @@
 
 
 @code {
-    public List<Category> Categories = null;
+    public List<Category> Categories = new List<Category>();
 
-    protected async override void OnInitialized()
+    protected override void OnInitialized()
     {
 
         base.OnInitialized();
+        DataServiceProvider.ItemsLoaded += (s, e) =>
+        {
+            RenderItems();
+        };
+        RenderItems();
+    }
+    async void RenderItems()
+    {
+        if(DataServiceProvider.ItemHasLoaded == false)
+        {
+            return;
+        }
         var _snippets = await DataServiceProvider.GetItemsAsync();
         var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
         var groupedSorted = categories.GroupBy(n => n).OrderBy(g => g.FirstOrDefault().ToString());
         var categoriesFinal = groupedSorted.Select(x => x.FirstOrDefault()).ToList();
         Categories = categoriesFinal;
+        StateHasChanged();
     }
     void NavigateToCategory(Category categoryParam)
     {

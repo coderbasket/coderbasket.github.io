@@ -70,9 +70,5 @@
     <ProjectReference Include="Lib\Shared\Blazor_App.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-  </ItemGroup>
-
   
 </Project>

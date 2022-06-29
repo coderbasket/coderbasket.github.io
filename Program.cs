@@ -1,3 +1,4 @@
+using Blazor_App.Shared.Servers;
 using Blazored.Modal;
 using CoderBasket.Blazor;
 using Microsoft.AspNetCore.Components;
@@ -9,6 +10,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddBlazoredModal();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+DataServiceProvider.LoadDataServerAsync();
 await builder.Build().RunAsync();
 
 

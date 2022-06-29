@@ -18,10 +18,12 @@ namespace Blazor_App.Shared.Servers
 
     public class DataServiceProvider
     {
+        static bool hostedJson = true;
         public static Dictionary<FrameWork, List<ProjectItem>> _currentItems = new Dictionary<FrameWork, List<ProjectItem>>();
         public static bool NeedUpdate = false;
         public static Random Random = new Random();
-
+        public static bool ItemHasLoaded = false;
+        public static event EventHandler<List<ProjectItem>> ItemsLoaded;
         public static List<ProjectItem> CheckItems()
         {
             List<ProjectItem> _items = null;
@@ -46,20 +48,81 @@ namespace Blazor_App.Shared.Servers
                     return _items;
             }
             _items = await GetFromServerAsync();
+            if (_items != null && _items.Count > 0)
+            {
+                _currentItems[SiteInfo.FrameWork] = _items;
+                ItemHasLoaded = true;
+                ItemsLoaded?.Invoke(true, _items);
+
+            }
             return _items;
         }
-
+        static bool processing = false;
+        public async static void LoadDataServerAsync(bool refresh = false)
+        {
+            List<ProjectItem> _items = null;
+            if (refresh == false)
+            {
+                _items = CheckItems();
+                if (_items != null && _items.Count > 0)
+                {
+                    ItemHasLoaded = true;
+                    _currentItems[SiteInfo.FrameWork] = _items;
+                    ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
+                    return;
+                }
+            }
+            if (processing)
+                return;
+            processing = true;
+            
+            await Task.Run(async () =>
+            {
+                if (hostedJson)
+                {
+                    var url = GetHostUrl(SiteInfo.FrameWork);
+                    var txt = await GithubServices.DownloadstringAsync(url);
+                    if (string.IsNullOrEmpty(txt) || string.IsNullOrWhiteSpace(txt))
+                        return;
+                    var projectItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItemData>(txt);
+                    _items = projectItemData.Items;
+                }
+                else
+                {
+                    _items = GetProjectItemData().Items;
+                }
+                if (_items != null && _items.Count > 0)
+                {
+                    ItemHasLoaded = true;
+                    _currentItems[SiteInfo.FrameWork] = _items;
+                    ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
+                }
+            });
+            processing = false;
+        }
         private static async Task<List<ProjectItem>> GetFromServerAsync()
         {
-            //var url = GetHostUrl(SiteInfo.FrameWork);
-            //var txt = await GithubServices.DownloadstringAsync(url);
-            //if (string.IsNullOrEmpty(txt) || string.IsNullOrWhiteSpace(txt))
-            //    return new List<ProjectItem>();
-            //var projectItemData =  Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItemData>(txt);
-            //_currentItems[SiteInfo.FrameWork] = projectItemData.Items;
-
+           
+            List<ProjectItem> _items = null;
+            if (hostedJson)
+            {
+                var url = GetHostUrl(SiteInfo.FrameWork);
+                var txt = await GithubServices.DownloadstringAsync(url);
+                if (string.IsNullOrEmpty(txt) || string.IsNullOrWhiteSpace(txt))
+                    return _items;
+                var projectItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItemData>(txt);
+                _items = projectItemData.Items;
+            }
+            else
+            {
+                _items = GetProjectItemData().Items;
+            }
+            return _items;
+        }
+        public static ProjectItemData CreateProjectItemData()
+        {
             var projectItemData = GetProjectItemData();
-            return projectItemData.Items.Shuffle().ToList();
+            return projectItemData;
         }
 
         static string GetHostUrl(FrameWork frameWork, bool raw = true)

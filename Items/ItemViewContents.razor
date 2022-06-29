@@ -1,6 +1,6 @@
 ﻿@page "/"
 <div class="row">
-    @foreach(var item in ProjectItems)
+    @foreach (var item in ProjectItems)
     {
         <ItemView ProjectRepo="item"></ItemView>
     }
@@ -8,14 +8,29 @@
 </div>
 
 @code {
-    protected override async void OnInitialized()
+    protected override void OnInitialized()
     {
         base.OnInitialized();
+
+        DataServiceProvider.ItemsLoaded += (s, e) =>
+        {
+               RenderItems();
+        };
+        RenderItems();
+    }
+
+    async void RenderItems()
+    {
+        if (DataServiceProvider.ItemHasLoaded == false)
+        {
+            return;
+        }
         this.ProjectItems = await DataServiceProvider.GetItemsAsync();
         foreach (var item in this.ProjectItems)
         {
             RepoHelper.GetRepository(item);
         }
+        StateHasChanged();
     }
     [Parameter]
     public List<ProjectItem> ProjectItems { get; set; } = new List<ProjectItem>();

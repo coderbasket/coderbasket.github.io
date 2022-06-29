@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿
+@inherits LayoutComponentBase
 <style>
 
 
@@ -902,16 +903,43 @@
                     </div>
                 </div>
             </section>
-
-            <CoderBasket.Blazor.Main.FooterView></CoderBasket.Blazor.Main.FooterView>
-
-
+            <CoderBasket.Blazor.Main.FooterView></CoderBasket.Blazor.Main.FooterView>           
         </div>
     </div>
 </Blazored.Modal.CascadingBlazoredModal>
 @code{
+    public static MainLayout Current { get; private set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Current = this;
+    }
     async void ScrollToTop()
     {
         await JS.InvokeVoidAsync("OnScrollEvent");
+    }
+    IModalReference _dialog = null;
+    public IModalReference Dialog
+    {
+        get { return _dialog; }
+        private set
+        {
+            _dialog = value;
+        }
+    }
+    public void CloseDialog(bool state = false)
+    {
+        if (Dialog == null)
+            return;
+        Dialog.Close();
+        if (state)
+        {
+            this.StateHasChanged();
+        }
+        Dialog = null;
+    }
+    public void ShowTexViewer()
+    {
+        Dialog = modal.Show<Dialogs.TextViewerDialog>("Select Books");
     }
 }
