@@ -23,5 +23,4 @@ String format..
       "GravatarHash": null
     },
 ```
-[# Contribute
-You can also fork and submit a Pull Request.](url)
+
