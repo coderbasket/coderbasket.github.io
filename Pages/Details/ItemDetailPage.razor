@@ -1,4 +1,5 @@
-﻿@page "/details/{repo}"
+﻿@page "/details"
+@page "/details/{repo}/"
 <MainContent>
     <Content>
         <div>
@@ -294,13 +295,24 @@
     protected async override void OnInitialized()
     {
         base.OnInitialized();
-        this.ProjectRepo = await DataServiceProvider.GetProjectItemAsync(repo);
-        this.ProjectRepo = RepoHelper.LoadRepository(this.ProjectRepo);
-        this.Owner = ProjectOwner.GetDefaultAuthor(this.ProjectRepo.GitHubRepoInfo);
-        jsonP = await RepoHelper.GetJsonAsync(this.ProjectRepo);
-        StateHasChanged();
+        if (!string.IsNullOrEmpty(repo))
+        {
+            this.ProjectRepo = await DataServiceProvider.GetProjectItemAsync(repo);
+            if (this.ProjectRepo != null)
+            {
+                this.ProjectRepo = RepoHelper.LoadRepository(this.ProjectRepo);
+                this.Owner = ProjectOwner.GetDefaultAuthor(this.ProjectRepo.GitHubRepoInfo);
+                jsonP = await RepoHelper.GetJsonAsync(this.ProjectRepo);
+                StateHasChanged();
+            }
+        }
     }
+    protected override async Task OnParametersSetAsync()
+    {
+        // This event will fire when the parameters change
+        // Put your code here.
 
+    }
     [Parameter]
     public ProjectItem ProjectRepo { get; set; }
     [Parameter]

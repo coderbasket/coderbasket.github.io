@@ -908,4 +908,15 @@
     {
         Navigation.NavigateTo("about");
     }
+    public void SelectFrameWork(FrameWork frameWork)
+    {
+        SiteInfo.FrameWork = frameWork;
+        DataServiceProvider.LoadDataServerAsync();
+        Navigation.NavigateTo($"framework/{frameWork.ToString()}");
+
+    }
+    public void NavigateToCount()
+    {
+        Navigation.NavigateTo($"counter/{2000}");
+    }
 }

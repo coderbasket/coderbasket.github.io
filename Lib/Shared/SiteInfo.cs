@@ -54,8 +54,8 @@ namespace Blazor_App.Shared
     {
         Maui = 1,
         Blazor = 2,
-        Xamarin = 3,
-        Flutter = 4, 
+        //Xamarin = 3,
+        //Flutter = 4, 
         
     }
 }

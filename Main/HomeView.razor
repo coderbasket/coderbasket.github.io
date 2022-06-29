@@ -1,10 +1,175 @@
 ﻿@page "/"
-
+@page "/framework/{frameworkParameter}/"
+@page "/category/{categoryParam}/"
 <MainContent>
     <Content>
-        <CoderBasket.Blazor.Items.ItemViewContents></CoderBasket.Blazor.Items.ItemViewContents>
+        <div>
+            <div class="row">
+                @if (this.ProjectItems != null)
+                {
+                    @foreach (var item in ProjectItems)
+                    {
+                        <CoderBasket.Blazor.Items.ItemView ProjectRepo="item"></CoderBasket.Blazor.Items.ItemView>
+                    }
+                }
+            </div>
+            <div class="row pager">
+                <div class="pagination-container">
+                    <ul class="pagination">
+                        <li @onclick="PreviousPage" class="PagedList-skipToPrevious">
+                            <a href="/?page=@pageNumber" rel="prev">«</a>
+                        </li>
+                        <li @onclick="NextPage" class="PagedList-skipToNext">
+                            <a href="/?page=@pageNumber" rel="next">»</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </Content>
 </MainContent>
+
 @code {
-   
+    int pageNumber = 1;
+    #region Framework
+    string _paramF;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get { return _paramF; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                if (value != _paramF)
+                {
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                        _paramF = value;
+                        RenderFramework();
+
+                    }
+
+                }
+            }
+        }
+    }
+    async void RenderFramework()
+    {
+        var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+        if (SiteInfo.FrameWork != frameWork)
+        {
+            SiteInfo.FrameWork = frameWork;
+            this.AllItems = await DataServiceProvider.GetItemsAsync();
+            StateHasChanged();
+        }
+    }
+    #endregion
+    #region Category
+    string _param;
+    [Parameter]
+    public string categoryParam
+    {
+        get { return _param; }
+        set
+        {
+            if (value != _param)
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    _param = value;
+                    RenderQuery();
+
+                }
+               
+
+
+            }
+        }
+    }
+    async void RenderQuery()
+    {
+        var items = await DataServiceProvider.GetItemsAsync();
+        var _category = RepoHelper.GetCategory(categoryParam);
+        this.AllItems = items.Where(x => x.Categories.Contains(_category)).ToList();
+        StateHasChanged();
+    }
+    #endregion
+    protected override async void OnInitialized()
+    {
+        base.OnInitialized();
+
+        DataServiceProvider.ItemsLoaded += (s, e) =>
+        {
+            AllItems = e;
+        };
+        if (PreLoaded)
+        {
+            AllItems = await DataServiceProvider.GetItemsAsync();
+        }
+    }
+
+    void RenderItems()
+    {
+        if (DataServiceProvider.ItemHasLoaded == false)
+        {
+            return;
+        }
+        if (this.AllItems != null && this.AllItems.Count > 0)
+        {
+            ChunkItems = this.AllItems.Chunk(6).ToList();
+            ProjectItems = ChunkItems[0];
+            foreach (var item in this.ProjectItems)
+            {
+                RepoHelper.GetRepository(item);
+            }
+            pageNumber = 1;
+            StateHasChanged();
+        }
+    }
+
+    private ProjectItem[] ProjectItems { get; set; }
+    List<ProjectItem[]> ChunkItems { get; set; }
+
+    List<ProjectItem> _allItems = new List<ProjectItem>();
+    [Parameter]
+    public List<ProjectItem> AllItems
+    {
+        get { return _allItems; }
+        set
+        {
+            _allItems = value;
+            if (_allItems != null)
+            {
+                RenderItems();
+            }
+        }
+    }
+    [Parameter]
+    public bool PreLoaded { get; set; } = true;
+
+
+
+
+    void NextPage()
+    {
+        this.ProjectItems = this.ChunkItems.SkipWhile(x => x != this.ProjectItems).Skip(1).DefaultIfEmpty(this.ChunkItems[0]).FirstOrDefault();
+        foreach (var item in this.ProjectItems)
+        {
+            RepoHelper.GetRepository(item);
+        }
+        pageNumber = ChunkItems.IndexOf(this.ProjectItems) + 1;
+        StateHasChanged();
+    }
+    void PreviousPage()
+    {
+        this.ProjectItems = this.ChunkItems.TakeWhile(x => x != this.ProjectItems).DefaultIfEmpty(this.ChunkItems[this.ChunkItems.Count - 1]).FirstOrDefault();
+        foreach (var item in this.ProjectItems)
+        {
+            RepoHelper.GetRepository(item);
+        }
+        pageNumber = ChunkItems.IndexOf(this.ProjectItems) + 1;
+        StateHasChanged();
+    }
+
 }

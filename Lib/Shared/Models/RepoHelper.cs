@@ -90,6 +90,19 @@ namespace Blazor_App.Shared.Models
             }
             return _category;
         }
+        public static FrameWork ConvertFramework(string framework)
+        {
+            FrameWork _framework = FrameWork.Maui;
+            foreach (var item in Enum.GetNames(typeof(FrameWork)))
+            {
+                if (framework.ToLower() == item.ToLower())
+                {
+                    _framework = (FrameWork)Enum.Parse(typeof(FrameWork), item);
+                    break;
+                }
+            }
+            return _framework;
+        }
         public static Stream GetResourceStreamAsync(Type type, string pathDot)
         {
             var assembly = type.GetTypeInfo().Assembly;

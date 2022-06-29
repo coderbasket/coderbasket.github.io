@@ -2,7 +2,8 @@
 
 <nav>
     <ul class="nav nav-pills nav-stacked nav-small">
-        @{
+        @if(Categories?.Count > 0)
+        {
             foreach (var item in Categories)
             {
                 <li>
@@ -37,11 +38,14 @@
             return;
         }
         var _snippets = await DataServiceProvider.GetItemsAsync();
-        var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
-        var groupedSorted = categories.GroupBy(n => n).OrderBy(g => g.FirstOrDefault().ToString());
-        var categoriesFinal = groupedSorted.Select(x => x.FirstOrDefault()).ToList();
-        Categories = categoriesFinal;
-        StateHasChanged();
+        if(_snippets?.Count > 0)
+        {
+            var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
+            var groupedSorted = categories.GroupBy(n => n).OrderBy(g => g.FirstOrDefault().ToString());
+            var categoriesFinal = groupedSorted.Select(x => x.FirstOrDefault()).ToList();
+            Categories = categoriesFinal;
+            StateHasChanged();
+        }
     }
     void NavigateToCategory(Category categoryParam)
     {

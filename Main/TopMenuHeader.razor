@@ -31,18 +31,18 @@
                 @*<li>
                     <a href="/random">Random</a>
                 </li>*@
-               @* <li style="width:fit-content; max-width:70px;" class="dropdown">
+                <li style="position:relative; width:fit-content; max-width:70px;" class="dropdown">
                     <a href="#"
                        role="button" aria-haspopup="true"
                        aria-expanded="false">Maui</a>
-                    <ul class="dropdown-menu hiddenMenu">
-                        <li><a href="/framework/maui">Maui</a></li>
-                        <li><a href="/framework/blazor">Blazor</a></li>
-                        <li><a href="/framework/xamarin">Xamarin</a></li>
-                        <li><a href="/framework/flutter">Flutter</a></li>
+                    <ul style="position:absolute; margin-top:-25px;" class="dropdown-menu hiddenMenu">
+                         @foreach (var item in Enum.GetNames(typeof(FrameWork)))
+                         {
+                            <li><a @onclick="@(()=>{MainLayout.Current.SelectFrameWork(RepoHelper.ConvertFramework(item));})" >@item</a></li>
+                         }                       
                     </ul>
 
-                </li>*@
+                </li>
                @* <li style="width:fit-content; max-width:92px;" class="dropdown">
                     <a href="#" 
                       >Sort By</a>

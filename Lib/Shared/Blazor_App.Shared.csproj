@@ -47,4 +47,9 @@
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Host\WinUI\" />
+    <Folder Include="Host\UWP\" />
+  </ItemGroup>
 </Project>

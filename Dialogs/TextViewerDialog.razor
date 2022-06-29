@@ -19,7 +19,7 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        var projectItemData = DataServiceProvider.CreateProjectItemData();
+        var projectItemData = DataServiceProvider.GetProjectItemData();
         content = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
         StateHasChanged();
 

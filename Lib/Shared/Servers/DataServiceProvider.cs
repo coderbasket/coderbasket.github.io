@@ -53,8 +53,6 @@ namespace Blazor_App.Shared.Servers
                 _items = _items.Shuffle().ToList();
                 _currentItems[SiteInfo.FrameWork] = _items;
                 ItemHasLoaded = true;
-                ItemsLoaded?.Invoke(true, _items);
-
             }
             return _items;
         }
@@ -95,7 +93,7 @@ namespace Blazor_App.Shared.Servers
                 }
                 else
                 {
-                    _items = MauiServer.GetProjectItemData().Items;
+                    _items = GetProjectItemData().Items;
                 }
                 if (_items != null && _items.Count > 0)
                 {
@@ -122,13 +120,21 @@ namespace Blazor_App.Shared.Servers
             }
             else
             {
-                _items = MauiServer.GetProjectItemData().Items;
+                _items = GetProjectItemData().Items;
             }
             return _items;
         }
-        public static ProjectItemData CreateProjectItemData()
+        public static ProjectItemData GetProjectItemData()
         {
-            var projectItemData = MauiServer.GetProjectItemData();
+            ProjectItemData projectItemData = null;
+            if(SiteInfo.FrameWork == FrameWork.Maui)
+            {
+                projectItemData = MauiServer.GetProjectItemData();
+            }
+            if (SiteInfo.FrameWork == FrameWork.Blazor)
+            {
+                projectItemData = BlazorServer.GetProjectItemData();
+            }
             return projectItemData;
         }
 
@@ -136,11 +142,11 @@ namespace Blazor_App.Shared.Servers
         {
             if (raw)
             {
-                return $"https://raw.githubusercontent.com/coderbasket/coderbasket.github.io/development/Host/{frameWork}/codes.json";
+                return $"https://raw.githubusercontent.com/coderbasket/coderbasket.github.io/development/Lib/Shared/Host/{frameWork}/codes.json";
             }
             else
             {
-                return $"https://github.com/coderbasket/coderbasket.github.io/blob/development/Host/{frameWork}/codes.json";
+                return $"https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/{frameWork}/codes.json";
             }
         }
         public static void PushToServer(ProjectItem snippet, bool update = false)
