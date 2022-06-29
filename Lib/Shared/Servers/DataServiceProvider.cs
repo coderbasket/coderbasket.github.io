@@ -339,6 +339,20 @@ namespace Blazor_App.Shared.Servers
                     },
 
                 },
+                new ProjectItem()
+                {
+                    Title="BirdAtlas",
+                    ProjectUrl = "https://github.com/AppCreativity/BirdAtlas",
+                    Description = "Based upon Dribbble project created by Monika Michalczyk",
+                    Categories = new List<Enums.Category>() {Category.WIDGETS},
+                    YoutubeUrl = "",
+                    ExternalUrl="",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://camo.githubusercontent.com/69a9af18e718de66d5c72581ed91e52b80a765ceab3f26cf8186bf795786d768/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f313136383533392f73637265656e73686f74732f353434323835302f6672616d655f5f325f2e706e67",
+                    },
+
+                },
             };
             return projectItemData;
         }

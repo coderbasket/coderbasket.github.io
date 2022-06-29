@@ -27,7 +27,7 @@ namespace Blazor_App.Shared.Models
         }
         public static void GetRepository(ProjectItem projectItem)
         {
-            if (projectItem.IsLoaded)
+            if (projectItem.Repository !=null)
                 return;
             projectItem.Slug = ToUrlSlug(projectItem.ProjectUrl);
             projectItem.Repository = new GitHubRepository(projectItem.ProjectUrl);
