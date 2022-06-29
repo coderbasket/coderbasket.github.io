@@ -1,11 +1,13 @@
 ﻿@page "/"
 <div>
     <div class="row">
-        @foreach (var item in ProjectItems)
+        @if (this.ProjectItems != null)
         {
-            <ItemView ProjectRepo="item"></ItemView>
+            @foreach (var item in ProjectItems)
+            {
+                <ItemView ProjectRepo="item"></ItemView>
+            }
         }
-
     </div>
     <div class="row pager">
         <div class="pagination-container">

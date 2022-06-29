@@ -64,12 +64,15 @@ namespace Blazor_App.Shared.Servers
             if (refresh == false)
             {
                 _items = CheckItems();
-                if (_items != null && _items.Count > 0)
+                if (_items != null)
                 {
                     ItemHasLoaded = true;
-                    _currentItems[SiteInfo.FrameWork] = _items;
-                    ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
-                    return;
+                    if (_items.Count > 0)
+                    {
+                        _currentItems[SiteInfo.FrameWork] = _items;
+                        ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
+                        return;
+                    }
                 }
             }
             if (processing)
