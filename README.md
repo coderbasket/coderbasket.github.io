@@ -2,11 +2,11 @@
 *[https://coderbasket.github.io/](https://coderbasket.github.io/)*
 
 Submit or email your project
-```json
-{
+```cs
+{ 
       "ProjectUrl": "https://github.com/beto-rodriguez/LiveCharts2",
       "Title": "LiveCharts2",
-      "Description": "LiveCharts2 (v2) is the evolution of LiveCharts (v0), it fixes the main design issues of its predecessor, it's focused to run everywhere, improves flexibility without losing what we already had in v0.",
+      "Description": "LiveCharts2 (v2) is the evolution of LiveCharts (v0), it fixes the main design issues of its predecessor, it's focused to run everywhere,       improves flexibility without losing what we already had in v0.",
       "Platform": [ "Android", "Windows", "iOS" ],
       "ExternalUrl": null,
       "YoutubeUrl": "",
