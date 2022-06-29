@@ -1,8 +1,8 @@
 # coderbasket.github.io
-*[https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/Maui/codes.json)*
+*[https://coderbasket.github.io/)*
 
 Maui Json hosted here
-*[https://github.com/coderbasket/coderbasket.github.io/blob/development/Host/Maui/codes.json](https://github.com/coderbasket/coderbasket.github.io/blob/development/Host/Maui/codes.json/)*
+*[https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/Maui/codes.json](https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/Maui/codes.json)*
 
 
 
