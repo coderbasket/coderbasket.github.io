@@ -1,0 +1,91 @@
+﻿<style>
+    .nav-stacked li {
+        display: block;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: 'Nunito Sans', sans-serif;
+        color: @SiteInfo.TextColor;
+        font-weight: 300;
+        font-size: 1.6rem;
+        list-style: none;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        float: none;
+        line-height: 2rem;
+    }
+
+    .nav-pills.nav-stacked:not(.list-style-icons) > li > a:after {
+        font-family: "FontAwesome";
+        content: "\f101";
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        margin-left: 40px;
+        top: 4px;
+        left: 40px;
+        color: #d1d1d1;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        display: none;
+    }
+
+    .nav-stacked li a {
+        display: inline-flex;
+    }
+
+    nav .nav-stacked {
+        display: block;
+    }
+</style>
+<section class="main-container">
+    <div class="container snippet-main-container">
+
+        <div class="row">
+
+            <aside class="col-md-2 hidden-sm hidden-xs">
+                <div class="sidebar">
+                    <div class="block clearfix">
+                        <h3 class="title">Categories</h3>
+                        <div class="separator-2"></div>
+                        <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
+                    </div>
+                </div>
+            </aside>
+            <div class="main col-md-10">
+                <div class="row">
+                    <h3 class="title">Maui templates</h3>
+                    <div class="separator-2"></div>
+
+                    <div class="row">
+                    </div>
+                    <article>
+                        @Content
+                    </article>
+
+                </div>
+                <div class="row pager">
+                    <div class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x2D;&#x63;&#x6F;&#x6E;&#x74;&#x61;&#x69;&#x6E;&#x65;&#x72;">
+                        <ul class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;"></ul>
+                    </div>
+                </div>
+
+            </div>
+            <aside class="col-md-2 hidden-md hidden-lg">
+                <div class="sidebar">
+                    <div class="block clearfix">
+                        <h3 class="title">Categories</h3>
+                        <div class="separator-2"></div>
+                        <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter]
+    public RenderFragment Content { get; set; }
+}

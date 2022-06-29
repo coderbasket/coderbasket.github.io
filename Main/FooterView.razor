@@ -1,4 +1,45 @@
-﻿<footer id="footer" class="clearfix ">
+﻿<style>
+    .nav-stacked li {
+        display: block;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: 'Nunito Sans', sans-serif;
+        color: @SiteInfo.TextColor;
+        font-weight: 300;
+        font-size: 1.6rem;
+        list-style: none;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        float: none;
+        line-height: 2rem;
+    }
+
+    .nav-pills.nav-stacked:not(.list-style-icons) > li > a:after {
+        font-family: "FontAwesome";
+        content: "\f101";
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        margin-left: 40px;
+        top: 4px;
+        left: 40px;
+        color: #d1d1d1;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        display: none;
+    }
+
+    .nav-stacked li a {
+        display: inline-flex;
+    }
+
+    nav .nav-stacked {
+        display: block;
+    }
+</style>
+<footer id="footer" class="clearfix ">
 
     <!-- .footer start -->
     <!-- ================ -->
@@ -31,8 +72,10 @@
                             <h2 class="title">Learn more</h2>
                             <div class="separator-2"></div>
                             <nav>
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li><a>About</a></li>
+                                <ul style="display:block;" class="nav nav-pills nav-stacked">
+                                    <li>
+                                        <a @onclick="(()=>{MainLayout.Current.NavigateToAbout();})">About</a>
+                                    </li>
                                     <li>
                                         <a target="_blank"
                                            href="https://twitter.com/coderbasket">Twitter</a>
@@ -40,6 +83,9 @@
                                     <li>
                                         <a target="_blank"
                                            href="mailto:coderbasketcontact@gmail.com">Contact Email</a>
+                                    </li>
+                                    <li>
+                                        <a @onclick="(()=>{MainLayout.Current.ShowPrivacy();})">Privacy</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -50,7 +96,7 @@
                             <h2 class="title">On this site</h2>
                             <div class="separator-2"></div>
                             <nav>
-                                <ul class="nav nav-pills nav-stacked">
+                                <ul style="display:block;" class="nav nav-pills nav-stacked">
                                     <li><a href="/">Home</a></li>
                                     <li><a>Random</a></li>
                                     <li style="visibility:collapse">
@@ -130,4 +176,5 @@
         categoriesFinal = groupedSorted.Take(10).Select(x => x.FirstOrDefault()).ToList();
         StateHasChanged();
     }
+    
 }

@@ -1,12 +1,16 @@
 ﻿@page "/category/{categoryParam}"
 
-<div class="row">
-    @foreach (var item in Items)
-    {
-        <ItemView ProjectRepo="item"></ItemView>
-    }
+<MainContent>
+    <Content>
+        <div class="row">
+            @foreach (var item in Items)
+            {
+                <ItemView ProjectRepo="item"></ItemView>
+            }
 
-</div>
+        </div>
+    </Content>
+</MainContent>
 
 @code {
     string _param;

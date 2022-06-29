@@ -1,84 +1,19 @@
-﻿<style>
-    .note_dialog_add_div_main {
-       
-    }
-
-        .note_dialog_add_div_main .note_dialog_add_div {
-            overflow-x: hidden;
-            overflow-y: auto;
-            max-height: 300px;
-        }
-
-        .note_dialog_add_div_main .note_dialog_add_div_inner {
-            display: inline-flex;
-            right: 0px;
-            margin-left: auto;
-            justify-content: flex-end;
-            align-items: flex-end;
-            gap: 8px;
-            float: right;
-            margin-top: 8px;
-        }
+﻿<ContentDialog>
+    <Content>
+        <div class="note_dialog_add_div_main">
+            <div contenteditable="true">
+                @content
+            </div>
+            <div class="note_dialog_add_div_inner">
+                @*<button @onclick="@Cancel" type="button" class="note_dialog_add_div_inner_btn" style="background-color:gray; color:white;">Cancel</button>*@
+                <button @onclick="@Save" type="button" class="note_dialog_add_div_inner_btn" style="background-color:@SiteInfo.AccentColor; color:white;">Close</button>
+            </div>
+        </div>
+    </Content>
+</ContentDialog>
 
 
-            .note_dialog_add_div_main .note_dialog_add_div_inner .note_dialog_add_div_inner_btn {
-                display: block;
-                margin: 0px auto;
-                overflow: hidden;
-                border-width: 0;
-                outline: none;
-                border-radius: 2px;
-                box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-                background-color: #2ecc71;
-                color: #ffffff;
-                transition: background-color .3s;
-                padding: 8px 8px 8px 8px;
-                min-width: 100px;
-            }
 
-                .note_dialog_add_div_main .note_dialog_add_div_inner .note_dialog_add_div_inner_btn:hover, .note_dialog_add_div_inner_btn:focus {
-                    background-color: #27ae60;
-                }
-
-
-    note_dialog_add_div_main .note_dialog_add_div_inner .note_dialog_add_div_inner_btn span {
-        display: block;
-        padding: 12px 24px;
-    }
-
-    note_dialog_add_div_main .note_dialog_add_div_inner .note_dialog_add_div_inner_btn:before {
-        content: "";
-        top: 50%;
-        left: 50%;
-        display: block;
-        width: 0;
-        color: #ffffff;
-        border-radius: 100%;
-        background-color: rgba(236, 240, 241, .3);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-
-    note_dialog_add_div_main .note_dialog_add_div_inner .note_dialog_add_div_inner_btn:active:before {
-        width: 120%;
-        padding-top: 120%;
-        transition: width .2s ease-out, padding-top .2s ease-out;
-    }
-
-</style>
-
-<div class="note_dialog_add_div_main">
-   <div contenteditable="true">
-        @content
-   </div>
-    <div class="note_dialog_add_div_inner">
-        @*<button @onclick="@Cancel" type="button" class="note_dialog_add_div_inner_btn" style="background-color:gray; color:white;">Cancel</button>*@
-        <button @onclick="@Save" type="button" class="note_dialog_add_div_inner_btn" style="background-color:@SiteInfo.AccentColor; color:white;">Close</button>
-    </div>
-</div>
 @code {
     string content = "";
     protected override void OnInitialized()

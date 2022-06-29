@@ -1,0 +1,76 @@
+﻿@page "/about"
+<ContentPage>
+    <Content>
+        <dib>
+            <div class="banner dark-translucent-bg" style="background-image:url('img/background.jpg'); background-position: 50% 27%;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 text-center col-md-offset-2 pv-20">
+                            <div style="width:245px;text-align:center; margin:0 auto; background-color:transparent" class="text-center animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="100">
+
+                                <div style="display:flex; height:30px; width:auto">
+
+                                    <img width="30" height="30" src="/img/codericon-white.svg" href="~/img/codericon.svg">
+                                    <h2 style="margin-left:5px" class="page-title">Coder Basket</h2>
+                                </div>
+                            </div>
+                            <div class="separator object-non-visible mt-10 animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="100"></div>
+                            <p class="text-center object-non-visible animated object-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="100">
+                                So you want to know more about us? Even get to know us? You've come to the right place!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dib>
+        <section class="main-container">
+            <div class="container">
+                <div class="row">
+                    <div class="main col-md-12">
+                        <h1 class="page-title">About Us</h1>
+                        <div class="separator-2 mb-20"></div>
+                        <div class="row mb-40">
+                            <div class="col-md-12">
+                                <p>
+                                    We take a great interest for (re)useable and good-looking UI designs and libraries for students/devs community.
+                                    Therefore, we decided to create a platform where developers and designers from all over the world can come together and share their beautiful work.
+                                    That way all of us can benefit and we can spread the message even further!
+                                </p>
+                                <p>
+                                    We hope that you will enjoy using Coder Basket and will join us in creating awesome UIs &amp; libraries for mobile apps/webs and share your knowledge with the rest of the world.
+                                    If there is anything you would like to see changed, compliment us or just want to say hi you can reach us on Twitter.
+                                </p>
+                                <p>
+                                    By Coder Basket (<a href="https://twitter.com/coderbasket" target="_blank">coderbasket.com</a>).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="separator-2 mb-40"></div>
+                            <div class="main col-md-12">
+                                <div class="row">
+                                    @foreach(var item in RandomItems)
+                                    {
+                                        <CoderBasket.Blazor.Items.ItemView ProjectRepo="item"></CoderBasket.Blazor.Items.ItemView>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </Content>
+</ContentPage>
+
+@code {
+    protected override async void OnInitialized()
+    {
+        base.OnInitialized();
+        var _snippets = await DataServiceProvider.GetItemsAsync();
+        var random = new Random();
+        RandomItems = _snippets.OrderBy(x => random.Next()).Take(3).ToList();
+
+    }
+    public List<ProjectItem> RandomItems = new List<ProjectItem>();
+}

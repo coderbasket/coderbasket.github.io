@@ -858,51 +858,9 @@
                 </header>
             </div>
 
-            <section class="main-container">
-                <div class="container snippet-main-container">
-
-                    <div class="row">
-
-                        <aside class="col-md-2 hidden-sm hidden-xs">
-                            <div class="sidebar">
-                                <div class="block clearfix">
-                                    <h3 class="title">Categories</h3>
-                                    <div class="separator-2"></div>
-                                    <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
-                                </div>
-                            </div>
-                        </aside>
-                        <div class="main col-md-10">
-                            <div class="row">
-                                <h3 class="title">Maui templates</h3>
-                                <div class="separator-2"></div>
-
-                                <div class="row">
-                                </div>
-                                <article>
-                                    @Body
-                                </article>
-
-                            </div>
-                            <div class="row pager">
-                                <div class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x2D;&#x63;&#x6F;&#x6E;&#x74;&#x61;&#x69;&#x6E;&#x65;&#x72;">
-                                    <ul class="&#x70;&#x61;&#x67;&#x69;&#x6E;&#x61;&#x74;&#x69;&#x6F;&#x6E;"></ul>
-                                </div>
-                            </div>
-
-                        </div>
-                        <aside class="col-md-2 hidden-md hidden-lg">
-                            <div class="sidebar">
-                                <div class="block clearfix">
-                                    <h3 class="title">Categories</h3>
-                                    <div class="separator-2"></div>
-                                    <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
-            </section>
+             <article>
+                @Body
+             </article>
             <CoderBasket.Blazor.Main.FooterView></CoderBasket.Blazor.Main.FooterView>           
         </div>
     </div>
@@ -941,5 +899,13 @@
     public void ShowTexViewer()
     {
         Dialog = modal.Show<Dialogs.TextViewerDialog>("Select Books");
+    }
+    public void ShowPrivacy()
+    {
+        Navigation.NavigateTo("privacy");
+    }
+    public void NavigateToAbout()
+    {
+        Navigation.NavigateTo("about");
     }
 }

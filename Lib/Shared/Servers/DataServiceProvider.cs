@@ -50,7 +50,8 @@ namespace Blazor_App.Shared.Servers
             _items = await GetFromServerAsync();
             if (_items != null && _items.Count > 0)
             {
-                _currentItems[SiteInfo.FrameWork] = _items.Shuffle().ToList();
+                _items = _items.Shuffle().ToList();
+                _currentItems[SiteInfo.FrameWork] = _items;
                 ItemHasLoaded = true;
                 ItemsLoaded?.Invoke(true, _items);
 
@@ -69,6 +70,8 @@ namespace Blazor_App.Shared.Servers
                     ItemHasLoaded = true;
                     if (_items.Count > 0)
                     {
+                        ItemHasLoaded = true;
+                        _items = _items.Shuffle().ToList();
                         _currentItems[SiteInfo.FrameWork] = _items;
                         ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
                         return;
@@ -97,7 +100,8 @@ namespace Blazor_App.Shared.Servers
                 if (_items != null && _items.Count > 0)
                 {
                     ItemHasLoaded = true;
-                    _currentItems[SiteInfo.FrameWork] = _items.Shuffle().ToList();
+                    _items = _items.Shuffle().ToList();
+                    _currentItems[SiteInfo.FrameWork] = _items;
                     ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
                 }
             });
