@@ -1,5 +1,6 @@
 ﻿@page "/details"
 @page "/details/{repo}/"
+@page "/details/{frameworkParameter}/{repo}/"
 <MainContent>
     <Content>
         <div>
@@ -288,7 +289,30 @@
 
 
 @code {
+    #region Framework
+    string _paramF;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get { return _paramF; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                if (value != _paramF)
+                {
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                        _paramF = value;
 
+
+                    }
+
+                }
+            }
+        }
+    }
+    #endregion
     string jsonP = null;
     [Parameter]
     public string repo { get; set; }
@@ -297,6 +321,14 @@
         base.OnInitialized();
         if (!string.IsNullOrEmpty(repo))
         {
+            if (!string.IsNullOrEmpty(frameworkParameter))
+            {
+                var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+                if (SiteInfo.FrameWork != frameWork)
+                {
+                    SiteInfo.FrameWork = frameWork;
+                }
+            }
             this.ProjectRepo = await DataServiceProvider.GetProjectItemAsync(repo);
             if (this.ProjectRepo != null)
             {
@@ -307,12 +339,7 @@
             }
         }
     }
-    protected override async Task OnParametersSetAsync()
-    {
-        // This event will fire when the parameters change
-        // Put your code here.
-
-    }
+    
     [Parameter]
     public ProjectItem ProjectRepo { get; set; }
     [Parameter]

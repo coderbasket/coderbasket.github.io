@@ -60,6 +60,7 @@
     public ProjectItem ProjectRepo { get; set; }
     public void NavigateToDetails()
     {
-        Navigation.NavigateTo($"details/{ProjectRepo.Slug}");
+        //Navigation.NavigateTo($"details/{ProjectRepo.Slug}");
+        Navigation.NavigateTo($"details/{SiteInfo.FrameWork}/{ProjectRepo.Slug}");
     }
 }

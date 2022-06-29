@@ -31,10 +31,10 @@
                 @*<li>
                     <a href="/random">Random</a>
                 </li>*@
-                <li style="position:relative; width:fit-content; max-width:70px;" class="dropdown">
+                <li style="position:relative; width:fit-content;" class="dropdown">
                     <a href="#"
                        role="button" aria-haspopup="true"
-                       aria-expanded="false">Maui</a>
+                       aria-expanded="false">@SiteInfo.FrameWork.ToString()</a>
                     <ul style="position:absolute; margin-top:-25px;" class="dropdown-menu hiddenMenu">
                          @foreach (var item in Enum.GetNames(typeof(FrameWork)))
                          {
