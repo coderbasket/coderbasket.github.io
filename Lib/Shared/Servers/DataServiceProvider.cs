@@ -18,7 +18,7 @@ namespace Blazor_App.Shared.Servers
 
     public class DataServiceProvider
     {
-        static bool hostedJson = true;
+        static bool hostedJson = false;
         public static Dictionary<FrameWork, List<ProjectItem>> _currentItems = new Dictionary<FrameWork, List<ProjectItem>>();
         public static bool NeedUpdate = false;
         public static Random Random = new Random();
