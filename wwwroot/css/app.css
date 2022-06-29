@@ -1,4 +1,47 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid gray;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin .5s linear infinite; /* Safari */
+    animation: spin .5s linear infinite;
+    z-index: 9999;
+    position: fixed;
+    align-self: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    zoom: 50%;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
