@@ -6,7 +6,9 @@ Maui Json hosted here
 
 
 
-Submit or email your project
+Submit Json  usng "SUBMIT NEW PROJECT" or email your project, you can also email us if you want your project be removed or need updates like infomations.
+
+String format..
 ```cs
 { 
       "ProjectUrl": "https://github.com/beto-rodriguez/LiveCharts2",
