@@ -20,7 +20,6 @@ String format..
       "FrameWorkName": "Maui",
       "ImageUrls": [ "https://user-images.githubusercontent.com/10853349/124399763-41873900-dce3-11eb-937a-947d66d42597.gif" ],
       "Categories": [ 6 ],
-      "Slug": "httpsgithub.combetorodriguezLiveCharts2",
       "GravatarHash": null
     },
 ```
