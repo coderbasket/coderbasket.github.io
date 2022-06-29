@@ -23,3 +23,5 @@ String format..
       "GravatarHash": null
     },
 ```
+# Contribute
+Submit a Pull Request to us and whenever it gets merged party 🎉! You're on Snppts now!
