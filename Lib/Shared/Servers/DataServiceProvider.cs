@@ -1,4 +1,4 @@
-﻿using Blazor_App.Shared.Infrastructure;
+using Blazor_App.Shared.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.IO;
