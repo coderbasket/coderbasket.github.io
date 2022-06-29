@@ -40,15 +40,18 @@
             return;
         }
         var items = await DataServiceProvider.GetItemsAsync();
-        AllItems = items.Chunk(6).ToList();
-
-        ProjectItems = AllItems[0];
-        foreach (var item in this.ProjectItems)
+        if (items != null)
         {
-            RepoHelper.GetRepository(item);
+            AllItems = items.Chunk(6).ToList();
+
+            ProjectItems = AllItems[0];
+            foreach (var item in this.ProjectItems)
+            {
+                RepoHelper.GetRepository(item);
+            }
+            pageNumber = 1;
+            StateHasChanged();
         }
-        pageNumber = 1;
-        StateHasChanged();
     }
     [Parameter]
     public ProjectItem[] ProjectItems { get; set; }
