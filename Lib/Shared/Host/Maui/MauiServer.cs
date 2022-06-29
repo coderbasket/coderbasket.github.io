@@ -80,7 +80,7 @@ namespace Blazor_App.Shared
                 {
                     Title="Chat App - .NET MAUI UI Challenge",
                     ProjectUrl = "https://github.com/jsuarezruiz/netmaui-chat-app-challenge",
-Description = "Chat App UI Challenge made with .NET MAUI.",
+                    Description = "Chat App UI Challenge made with .NET MAUI.",
                     Categories = new List<Category>() { Category.COMMENTS },
                     YoutubeUrl = "https://www.youtube.com/watch?v=xX5xr9JleQM",
                     ImageUrls = new List<string>()
@@ -110,7 +110,7 @@ Description = "Chat App UI Challenge made with .NET MAUI.",
                 new ProjectItem()
                 {
                     Title="Calculator Sample App",
-                    ProjectUrl = "https://github.com/dotnet/maui-samples/tree/main/6.0/Apps/Calculator",
+                    ProjectUrl = "https://github.com/dotnet/maui-samples",
                     Description = "This basic calculator demonstrates using span and spacing features of a Grid layout to achieve a familiar interface.",
                     Categories = new List<Category>() { Category.STORES, Category.LISTS, Category.PRODUCTS},
                     YoutubeUrl = "",

@@ -2,40 +2,40 @@
 <MainContent>
     <Content>
         <div>
-            @if (Owner != null)
+            @if (ProjectRepo != null && Owner != null)
             {
-            <div>
-                <div class="row">
-                    <div class="clearfix">
-                        <h3 class="title pull-left">@ProjectRepo.Title</h3>
+                <div>
+                    <div class="row">
+                        <div class="clearfix">
+                            <h3 class="title pull-left">@ProjectRepo.Title</h3>
+                        </div>
+                        <div class="separator-2"></div>
                     </div>
-                    <div class="separator-2"></div>
-                </div>
 
-                <div class="row">
+                    <div class="row">
 
 
-                    <div class="col-md-12">
-                        <div class="description__section">
-                            <div>
-                                <img src="@Owner.GravatarImage()" class="circle pull-left author__gravatar" />
-                                <div class="snppts-meta">
-                                    <span class="createdby">Created by</span>
-                                    <a href="/author/@Owner.GitHubHandle">
-                                        <span class="author">
+                        <div class="col-md-12">
+                            <div class="description__section">
+                                <div>
+                                    <img src="@Owner.GravatarImage()" class="circle pull-left author__gravatar" />
+                                    <div class="snppts-meta">
+                                        <span class="createdby">Created by</span>
+                                        <a href="/author/@Owner.GitHubHandle">
+                                            <span class="author">
                                                 @ProjectRepo.Repository.OwnerName
 
-                                        </span>
-                                    </a>
+                                            </span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="description__section" style="color:@SiteInfo.TextColor">
-                            <h5>Description</h5>
-                            <span>@ProjectRepo.Description</span>
-                        </div>
-                        <div class="description__section">
-                            <h5>Platforms</h5>
+                            <div class="description__section" style="color:@SiteInfo.TextColor">
+                                <h5>Description</h5>
+                                <span>@ProjectRepo.Description</span>
+                            </div>
+                            <div class="description__section">
+                                <h5>Platforms</h5>
                                 @if (this.ProjectRepo.Platform.Contains("Android"))
                                 {
                                     <i class="fa fa-android fa-2x"></i>
@@ -52,7 +52,7 @@
                                 {
                                     <i style="color:#1EBBEE" class="fa fa-internet-explorer fa-2x"></i>
                                 }
-                        </div>
+                            </div>
                             @if (!string.IsNullOrEmpty(ProjectRepo.YoutubeUrl))
                             {
                                 <a target="_blank" href="@ProjectRepo.YoutubeUrl" style="margin-bottom:25px;">
@@ -69,9 +69,9 @@
                                     <a href="@ProjectRepo.ExternalUrl" target="_blank">Read more about this Snippet</a>
                                 </div>
                             }
-                        <div class="description__section">
+                            <div class="description__section">
 
-                            <h5> Check out the code</h5>
+                                <h5> Check out the code</h5>
 
                                 @if (!string.IsNullOrEmpty(this.ProjectRepo.GitHubRepoInfo.ProjectName))
                                 {
@@ -86,13 +86,18 @@
                                         var results = Newtonsoft.Json.JsonConvert.DeserializeObject<GithubRepoInformation>(jsonP);
                                         if (string.IsNullOrEmpty(this.ProjectRepo.Description))
                                         {
-                                            this.ProjectRepo.Description = results.description;
+                                            if (!string.IsNullOrEmpty(results.description))
+                                            {
+                                                this.ProjectRepo.Description = results.description;
+                                            }
                                         }
 
-                                        var pushed_at = "Unknown";
-                                        DateTime date;
-                                        date = results.pushed_at;
-                                        pushed_at = date.ToString();
+                                        if (results != null)
+                                        {
+                                            var pushed_at = "Unknown";
+                                            DateTime date;
+                                            date = results.pushed_at;
+                                            pushed_at = date.ToString();
                                             <div class="github-widget" data-repo="@ProjectRepo.GitHubRepoInfo.ProjectName">
                                                 <div class="github-box repo">
                                                     <div class="github-box-title">
@@ -249,11 +254,12 @@
                                                 </div>
 
                                             </div>
+                                        }
                                     }
 
                                 }
 
-                        </div>
+                            </div>
                             @if (ProjectRepo.ImageUrls?.Count() > 0)
                             {
                                 <div class="description__section">
@@ -262,20 +268,20 @@
                                     <div class="row">
                                         @foreach (var screenshot in ProjectRepo.ImageUrls)
                                         {
-                                                <div class="col-md-3 snippet__screenshot">
-                                                    <a href="@screenshot" target="_blank">
-                                                        <img src="@screenshot" alt="">
-                                                    </a>
-                                                </div>
+                                            <div class="col-md-3 snippet__screenshot">
+                                                <a href="@screenshot" target="_blank">
+                                                    <img src="@screenshot" alt="">
+                                                </a>
+                                            </div>
                                         }
                                     </div>
                                 </div>
                             }
+                        </div>
                     </div>
                 </div>
-            </div>
             }
-</div>
+        </div>
     </Content>
 </MainContent>
 
