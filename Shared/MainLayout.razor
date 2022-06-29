@@ -810,7 +810,7 @@
         </div>*@
         <!-- scrollToTop -->
         <!-- ================ -->
-        <div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+        <div @onclick="ScrollToTop" class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
 
         <!-- page wrapper start -->
         <!-- ================ -->
@@ -909,3 +909,9 @@
         </div>
     </div>
 </Blazored.Modal.CascadingBlazoredModal>
+@code{
+    async void ScrollToTop()
+    {
+        await JS.InvokeVoidAsync("OnScrollEvent");
+    }
+}

@@ -112,7 +112,12 @@
     <!-- Custom Scripts -->
     <script type="text/javascript" src="/js/custom.js"></script>
     <script src="_content/Blazored.Modal/blazored.modal.js"></script>
-
+    <script>
+        // When the user clicks the button, the page scrolls to the top
+        function OnScrollEvent() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 
 
     <!-- Visual Studio Browser Link -->

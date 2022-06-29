@@ -137,10 +137,12 @@ namespace Blazor_App.Shared.Servers
                     Title="DevExpress Stocks App for .NET MAUI",
                     ProjectUrl = "https://github.com/DevExpress-Examples/maui-stocks-mini",
                     Description = "DevExpress Mobile UI allows you to use a .NET cross-platform UI toolkit and C# to build native apps for iOS and Android.",
-                    Categories = new List<Enums.Category>() { Category.CHARTS },
+                     Categories = new List<Enums.Category>() { Category.CHARTS, Category.LISTS, Category.TABBARS, Category.WIDGETS, Category.DASHBOARD},
+                    ExternalUrl = "https://www.devexpress.com/maui/",
                     ImageUrls = new List<string>()
                     {
                         "https://github.com/DevExpress-Examples/maui-stocks-mini/raw/22.1.1%2B/Images/stocks-data-pixel5.png",
+                        "https://github.com/DevExpress-Examples/maui-editors-get-started/raw/22.1.1%2B/Images/maui.png"
                     },
 
                 },
@@ -185,7 +187,7 @@ namespace Blazor_App.Shared.Servers
                     ImageUrls = new List<string>()
                     {
                         "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/ios.png",
-                        "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/macos.png",                       
+                        "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/macos.png",
                     },
 
                 },
@@ -199,6 +201,7 @@ namespace Blazor_App.Shared.Servers
                     ImageUrls = new List<string>()
                     {
                         "https://github.com/microsoft/dotnet-podcasts/raw/main/docs/net-podcasts.png",
+
                     },
 
                 },
@@ -241,6 +244,34 @@ namespace Blazor_App.Shared.Servers
                     ImageUrls = new List<string>()
                     {
                         "https://cdn.hashnode.com/res/hashnode/image/upload/v1638495664862/U7Y79glXG.png?auto=compress,format&format=webp",
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title="Syncfusion .NET MAUI examples",
+                    ProjectUrl = "https://github.com/syncfusion/maui-demos",
+                    Description = "This repository contains awesome demos of Syncfusion .NET MAUI controls. This is the best place to check our controls to get more insight about the usage of APIs.",
+                    Categories = new List<Enums.Category>() { Category.CHARTS, Category.LISTS, Category.TABBARS, Category.WIDGETS, Category.DASHBOARD},
+                    YoutubeUrl = "",
+                    ExternalUrl="https://www.syncfusion.com/",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/05/hero_syncfusion.png",
+                    },
+
+                },
+                new ProjectItem()
+                {
+                    Title="Telerik UI for .NET MAUI Sample Applications",
+                    ProjectUrl = "https://github.com/telerik/maui-samples",
+                    Description = "This repository contains sample applications related to Telerik UI for .NET MAUI components.",
+                    Categories = new List<Enums.Category>() { Category.CHARTS, Category.LISTS, Category.TABBARS, Category.WIDGETS, Category.DASHBOARD},
+                    YoutubeUrl = "",
+                    ExternalUrl="https://docs.telerik.com/devtools/maui/demos-and-sample-apps/",
+                    ImageUrls = new List<string>()
+                    {
+                        "https://github.com/telerik/maui-samples/raw/main/Images/Telerik-UI-For-MAUI-CryptoTracker-Image.png",
                     },
 
                 },
