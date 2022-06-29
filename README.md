@@ -5,15 +5,16 @@ Submit or email your project
 ```cs
 new ProjectItem()
 {
-    Title="Chat App - .NET MAUI UI Challenge",
-    ProjectUrl = "https://github.com/jsuarezruiz/netmaui-chat-app-challenge",
-    Description = "Chat App UI Challenge made with .NET MAUI.",
-    Categories = new List<Enums.Category>() { Category.COMMENTS },
-    YoutubeUrl = "https://www.youtube.com/watch?v=xX5xr9JleQM",
+    Title="Telerik UI for .NET MAUI Sample Applications",
+    ProjectUrl = "https://github.com/telerik/maui-samples",
+    Description = "This repository contains sample applications related to Telerik UI for .NET MAUI components.",
+    Categories = new List<Enums.Category>() { Category.CHARTS, Category.LISTS, Category.TABBARS, Category.WIDGETS, Category.DASHBOARD},
+    YoutubeUrl = "",
+    ExternalUrl="https://docs.telerik.com/devtools/maui/demos-and-sample-apps/",
     ImageUrls = new List<string>()
     {
-        "https://github.com/jsuarezruiz/netmaui-chat-app-challenge/raw/main/images/chatapp-maui.png",
+         "https://github.com/telerik/maui-samples/raw/main/Images/Telerik-UI-For-MAUI-CryptoTracker-Image.png",
     },
 
- },
+},
 ```
