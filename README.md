@@ -24,4 +24,4 @@ String format..
     },
 ```
 # Contribute
-Submit a Pull Request to us and whenever it gets merged party 🎉! You're on Snppts now!
+You can also fork and submit a Pull Request.
