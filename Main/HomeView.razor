@@ -81,7 +81,7 @@
                     RenderQuery();
 
                 }
-               
+
 
 
             }
@@ -109,11 +109,20 @@
         }
     }
 
-    void RenderItems()
+    async void RenderItems()
     {
         if (DataServiceProvider.ItemHasLoaded == false)
         {
             return;
+        }
+        if (!string.IsNullOrEmpty(frameworkParameter))
+        {
+            var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+            if (SiteInfo.FrameWork != frameWork)
+            {
+                SiteInfo.FrameWork = frameWork;
+                this.AllItems = await DataServiceProvider.GetItemsAsync();
+            }
         }
         if (this.AllItems != null && this.AllItems.Count > 0)
         {

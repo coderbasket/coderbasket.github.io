@@ -330,6 +330,7 @@
                 if (SiteInfo.FrameWork != frameWork)
                 {
                     SiteInfo.FrameWork = frameWork;
+                    await DataServiceProvider.GetItemsAsync();
                 }
             }
             this.ProjectRepo = await DataServiceProvider.GetProjectItemAsync(repo);
