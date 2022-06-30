@@ -42,13 +42,17 @@
                                 {
                                     <i class="fa fa-android fa-2x"></i>
                                 }
-                                @if (this.ProjectRepo.Platform.Contains("iOS"))
+                                @if (this.ProjectRepo.Platform.Contains("iOS") || this.ProjectRepo.Platform.Contains("Mac") || this.ProjectRepo.Platform.Contains("MacOS"))
                                 {
                                     <i class="fa fa-apple fa-2x"></i>
                                 }
                                 @if (this.ProjectRepo.Platform.Contains("Windows"))
                                 {
                                     <i class="fa fa-windows fa-2x"></i>
+                                }
+                                @if (this.ProjectRepo.Platform.Contains("Linux"))
+                                {
+                                    <i class="fa fa-linux fa-2x"></i>
                                 }
                                 @if (this.ProjectRepo.Platform.Contains("Web") || this.ProjectRepo.Platform.Contains("Browser"))
                                 {
