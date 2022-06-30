@@ -109,5 +109,26 @@ namespace Blazor_App.Shared.Models
             Stream stream = assembly.GetManifestResourceStream(pathDot);
             return stream;
         }
+        public static bool IsValidRepo(ProjectItem repo)
+        {
+            if (repo == null)
+                return false;
+            if (repo.ProjectUrl.IsValidString() == false)
+                return false;
+            if (repo.ProjectUrl.StartsWith("https://github.com/") == false)
+                return false;
+            if (repo.Title.IsValidString()
+                && repo.Description.IsValidString()
+                && repo.ImageUrls?.Count > 0
+                && repo.Categories?.Count() > 0
+                && repo.Platforms?.Length > 0
+                )
+            {
+                
+                return true;
+            }
+            return false;
+        }
+        
     }
 }

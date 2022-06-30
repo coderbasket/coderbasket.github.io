@@ -33,7 +33,7 @@ namespace Blazor_App.Shared.Models
         }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string[] Platform { get; set; } = new string[] { "Android", "Windows", "iOS" };
+        public string[] Platforms { get; set; } = new string[] {"Windows", "Mac", "Linux", "iOS", "Android", "Linux", "Browser", };
         public string ExternalUrl { get; set; }
         public string YoutubeUrl { get; set; }
         public string FrameWorkName { get; set; } = SiteInfo.FrameWork.ToString();
@@ -56,5 +56,6 @@ namespace Blazor_App.Shared.Models
         [JsonIgnore]
         public ProjectOwner Owner { get; set; }
 
+       
     }
 }

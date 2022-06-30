@@ -20,6 +20,8 @@ namespace Blazor_App.Shared
         private const string DefaultAccent = "#EA3D53"; //"#21bb9d";
         public const string AccentDarkerColor = "#B12B3D";
         public static string AccentColor = DefaultAccent;
+        public const string BacgroundColor = "white";
+        public const string BarBacgroundColor = "white";
 
         public static FrameWork FrameWork = FrameWork.Maui;
         public static string Title = SiteInfo.FrameWork.ToString() + " Templates";

@@ -169,12 +169,16 @@
        {
            RenderItems();
        };
-       RenderItems();
+        RenderItems();
     }
+    bool rendering = false;
     async void RenderItems()
     {
         if (DataServiceProvider.ItemHasLoaded == false)
             return;
+        if (rendering)
+            return;
+        rendering = true;
         var _snippets = await DataServiceProvider.GetItemsAsync();
         if(_snippets?.Count > 0)
         {
@@ -183,6 +187,7 @@
             categoriesFinal = groupedSorted.Take(10).Select(x => x.FirstOrDefault()).ToList();
             StateHasChanged();
         }
+        rendering = false;
     }
     
 }

@@ -18,6 +18,7 @@ namespace Blazor_App.Shared.Servers
 
     public class DataServiceProvider
     {
+        public static int TotalCategories = 0;
         static bool hostedJson = true;
         public static Dictionary<FrameWork, List<ProjectItem>> _currentItems = new Dictionary<FrameWork, List<ProjectItem>>();
         public static bool NeedUpdate = false;
@@ -26,6 +27,11 @@ namespace Blazor_App.Shared.Servers
         public static event EventHandler<List<ProjectItem>> ItemsLoaded;
         public static List<ProjectItem> CheckItems()
         {
+            if (TotalCategories == 0)
+                TotalCategories = Enum.GetNames(typeof(Category)).Length;
+#if DEBUG
+            //hostedJson = false;
+#endif
             List<ProjectItem> _items = null;
             if (_currentItems.ContainsKey(SiteInfo.FrameWork))
             {
@@ -139,6 +145,14 @@ namespace Blazor_App.Shared.Servers
                 projectItemData = MauiServer.GetProjectItemData();
             }
             if (SiteInfo.FrameWork == FrameWork.Blazor)
+            {
+                projectItemData = BlazorServer.GetProjectItemData();
+            }
+            if (SiteInfo.FrameWork == FrameWork.Avalonia)
+            {
+                projectItemData = AvaloniaServer.GetProjectItemData();
+            }
+            if (SiteInfo.FrameWork == FrameWork.Uno)
             {
                 projectItemData = UnoServer.GetProjectItemData();
             }

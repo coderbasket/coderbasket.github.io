@@ -1,20 +1,20 @@
-﻿@if (this.ProjectRepo.Platform.Contains("Android"))
+﻿@if (this.ProjectRepo.Platforms.Contains("Android") || this.ProjectRepo.Platforms.Contains("android"))
 {
     <i class="fa fa-android fa-2x"></i>
 }
-@if (this.ProjectRepo.Platform.Contains("iOS") || this.ProjectRepo.Platform.Contains("Mac") || this.ProjectRepo.Platform.Contains("MacOS"))
+@if (this.ProjectRepo.Platforms.Contains("iOS") || this.ProjectRepo.Platforms.Contains("ios") || this.ProjectRepo.Platforms.Contains("Mac") || this.ProjectRepo.Platforms.Contains("MacOS"))
 {
     <i class="fa fa-apple fa-2x"></i>
 }
-@if (this.ProjectRepo.Platform.Contains("Windows"))
+@if (this.ProjectRepo.Platforms.Contains("Windows") || this.ProjectRepo.Platforms.Contains("windows"))
 {
     <i class="fa fa-windows fa-2x"></i>
 }
-@if (this.ProjectRepo.Platform.Contains("Linux"))
+@if (this.ProjectRepo.Platforms.Contains("Linux") || this.ProjectRepo.Platforms.Contains("linux"))
 {
     <i class="fa fa-linux fa-2x"></i>
 }
-@if (this.ProjectRepo.Platform.Contains("Web") || this.ProjectRepo.Platform.Contains("Browser"))
+@if (this.ProjectRepo.Platforms.Contains("Web") || this.ProjectRepo.Platforms.Contains("web") || this.ProjectRepo.Platforms.Contains("Browser") || this.ProjectRepo.Platforms.Contains("browser"))
 {
 
     @*<i style="color:#1EBBEE" class="fa fa-internet-explorer fa-2x"></i>*@

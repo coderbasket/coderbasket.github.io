@@ -177,7 +177,7 @@
         }
     /*White Button*/
     .btn-white {
-        color: #777777;
+        color: @SiteInfo.TextColor;
         background-color: #ffffff;
         border-color: #ffffff;
     }
@@ -546,7 +546,7 @@
     }
 
     .transparent-header .header:not(.dark) .dropdown:not(.open):not(.active) > a:before {
-        color: #777777;
+        color: @SiteInfo.TextColor;
     }
 
     .transparent-header .header:not(.dark) .navbar-default .navbar-nav > .dropdown.open > a:before {
@@ -645,7 +645,7 @@
     }
     /*Nav arrows*/
     #offcanvas .dropdown > a:before {
-        color: #777777;
+        color: @SiteInfo.TextColor;
     }
 
     #offcanvas .dropdown.open > a:before {
@@ -908,6 +908,10 @@
     {
         Navigation.NavigateTo("about");
     }
+    public void NavigateToSubmitForm()
+    {
+        Navigation.NavigateTo("submit-form");
+    }
     public void SelectFrameWork(FrameWork frameWork)
     {
         SiteInfo.FrameWork = frameWork;
@@ -918,5 +922,10 @@
     public void NavigateToCount()
     {
         Navigation.NavigateTo($"counter/{2000}");
+    }
+
+    public async Task CopyTextToClipboard(string elementId)
+    {
+        await JS.InvokeVoidAsync("copyClipboard", elementId);
     }
 }

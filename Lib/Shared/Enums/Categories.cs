@@ -48,6 +48,7 @@ namespace Blazor_App.Shared.Enums
         NEOMORPHISM = 38,
         SOCIALNETWORK = 39,
         CAROUSEL = 40,
-        OTHERS = 41
+        OTHERS = 41,
+        TOOLs = 42
     }
 }

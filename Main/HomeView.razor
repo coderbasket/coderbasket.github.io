@@ -9,7 +9,7 @@
                 {
                     @foreach (var item in ProjectItems)
                     {
-                        <CoderBasket.Blazor.Items.ItemView ProjectRepo="item"></CoderBasket.Blazor.Items.ItemView>
+                        <CoderBasket.Blazor.Items.ItemView  ProjectRepo="item"></CoderBasket.Blazor.Items.ItemView>
                     }
                 }
             </div>
@@ -60,6 +60,11 @@
         if (SiteInfo.FrameWork != frameWork)
         {
             SiteInfo.FrameWork = frameWork;
+            this.AllItems = await DataServiceProvider.GetItemsAsync();
+            StateHasChanged();
+        }
+        else
+        {
             this.AllItems = await DataServiceProvider.GetItemsAsync();
             StateHasChanged();
         }

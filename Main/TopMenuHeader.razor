@@ -67,7 +67,7 @@
                                 color: @SiteInfo.AccentColor !important;
                             }
                     </style>
-                    <a href="mailto:coderbasketcontact@gmail.com" target="_blank" class="cta">Submit new Project!</a>
+                    <a @onclick="(()=>{MainLayout.Current.NavigateToSubmitForm();})" class="cta">Submit new Project!</a>
                 </li>
                 <li class="search_button" style="visibility:collapse">
                     <a class="fa fa-search"
