@@ -1,0 +1,28 @@
+﻿@if (this.ProjectRepo.Platform.Contains("Android"))
+{
+    <i class="fa fa-android fa-2x"></i>
+}
+@if (this.ProjectRepo.Platform.Contains("iOS") || this.ProjectRepo.Platform.Contains("Mac") || this.ProjectRepo.Platform.Contains("MacOS"))
+{
+    <i class="fa fa-apple fa-2x"></i>
+}
+@if (this.ProjectRepo.Platform.Contains("Windows"))
+{
+    <i class="fa fa-windows fa-2x"></i>
+}
+@if (this.ProjectRepo.Platform.Contains("Linux"))
+{
+    <i class="fa fa-linux fa-2x"></i>
+}
+@if (this.ProjectRepo.Platform.Contains("Web") || this.ProjectRepo.Platform.Contains("Browser"))
+{
+
+    @*<i style="color:#1EBBEE" class="fa fa-internet-explorer fa-2x"></i>*@
+
+    <i style="color:dodgerblue" class="fa  fa fa-globe fa-2x"></i>
+}
+
+@code {
+    [Parameter]
+    public ProjectItem ProjectRepo{ get; set; }
+}

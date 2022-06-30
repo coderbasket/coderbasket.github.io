@@ -19,20 +19,7 @@
     </p>
 
     <div class="text-center margin-bottom-20 platform-icons">
-        @{
-            if (this.ProjectRepo.Platform.Contains("iOS"))
-            {
-                <i class="fa fa-apple"></i>
-            }
-            if (this.ProjectRepo.Platform.Contains("Android"))
-            {
-                <i class="fa fa-android"></i>
-            }
-            if (this.ProjectRepo.Platform.Contains("Windows"))
-            {
-                <i class="fa fa-windows"></i>
-            }
-        }
+        <PlatformSupportView ProjectRepo="ProjectRepo"></PlatformSupportView>
 
         
         @if (this.ProjectRepo.GitHubRepoInfo != null)
