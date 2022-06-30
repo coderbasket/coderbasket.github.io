@@ -17,6 +17,7 @@ namespace Blazor_App.Shared
                     Title="FormsAndBindings",
                     ProjectUrl = "https://github.com/shahedc/FormsAndBindings",
                     Description = "ASP .NET Core HTML Forms and Bindings",
+                    Platform = new string[]{ "Browser" },
                     Categories = new List<Category>() {Category.LOGIN},
                     ImageUrls = new List<string>()
                     {
@@ -27,6 +28,7 @@ namespace Blazor_App.Shared
                 {
                     Title="BlazingChat",
                     ProjectUrl = "https://github.com/CuriousDrive/BlazingChat",
+                    Platform = new string[]{ "Browser" },
                     Description = "BlazingChat is a Blazor WebAssembly app developed by CuriousDrive for the community. This is a sample application for developers who are just getting started with Blazor. BlazingChat has code samples for Authentication, Logging, Virtualization ... and much more. The app is open source and running in production.",
                     Categories = new List<Category>() {Category.COMMENTS},
                     ImageUrls = new List<string>()

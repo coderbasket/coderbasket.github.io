@@ -50,7 +50,7 @@
                                 {
                                     <i class="fa fa-windows fa-2x"></i>
                                 }
-                                @if (this.ProjectRepo.Platform.Contains("Web"))
+                                @if (this.ProjectRepo.Platform.Contains("Web") || this.ProjectRepo.Platform.Contains("Browser"))
                                 {
                                     <i style="color:#1EBBEE" class="fa fa-internet-explorer fa-2x"></i>
                                 }

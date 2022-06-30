@@ -93,7 +93,7 @@
       "GravatarHash": null
     },
     {
-      "ProjectUrl": "https://github.com/dotnet/maui-samples/tree/main/6.0/Apps/Calculator",
+      "ProjectUrl": "https://github.com/dotnet/maui-samples",
       "Title": "Calculator Sample App",
       "Description": "This basic calculator demonstrates using span and spacing features of a Grid layout to achieve a familiar interface.",
       "Platform": [ "Android", "Windows", "iOS" ],
@@ -101,8 +101,8 @@
       "YoutubeUrl": "",
       "FrameWorkName": "Maui",
       "ImageUrls": [ "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/ios.png", "https://github.com/dotnet/maui-samples/raw/main/6.0/Apps/Calculator/images/macos.png" ],
-      "Categories": [ 37, 12, 21 ],
-      "Slug": "httpsgithub.comdotnetmauisamplestreemain6.0AppsCalculator",
+      "Categories": [ 3 ],
+      "Slug": "httpsgithub.comdotnetmauisamples",
       "GravatarHash": null
     },
     {
@@ -181,6 +181,19 @@
       "ImageUrls": [ "https://github.com/telerik/maui-samples/raw/main/Images/Telerik-UI-For-MAUI-CryptoTracker-Image.png" ],
       "Categories": [ 6, 12, 29, 32, 8 ],
       "Slug": "httpsgithub.comtelerikmauisamples",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/AppCreativity/BirdAtlas",
+      "Title": "BirdAtlas",
+      "Description": "Based upon Dribbble project created by Monika Michalczyk",
+      "Platform": [ "Android", "Windows", "iOS" ],
+      "ExternalUrl": "",
+      "YoutubeUrl": "",
+      "FrameWorkName": "Maui",
+      "ImageUrls": [ "https://camo.githubusercontent.com/69a9af18e718de66d5c72581ed91e52b80a765ceab3f26cf8186bf795786d768/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f313136383533392f73637265656e73686f74732f353434323835302f6672616d655f5f325f2e706e67" ],
+      "Categories": [ 32 ],
+      "Slug": "httpsgithub.comAppCreativityBirdAtlas",
       "GravatarHash": null
     }
   ]

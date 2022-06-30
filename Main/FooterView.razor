@@ -87,6 +87,13 @@
                                     <li>
                                         <a @onclick="(()=>{MainLayout.Current.ShowPrivacy();})">Privacy</a>
                                     </li>
+                                    @{
+                                        #if DEBUG
+                                         <li>
+                                           <a @onclick="(()=>{MainLayout.Current.ShowTexViewer();})">Developer Json</a>
+                                         </li>
+                                        #endif
+                                    }
                                 </ul>
                             </nav>
                         </div>
@@ -113,8 +120,6 @@
                         <div class="footer-content">
                             <h2 class="title">Popular categories</h2>
                             <div class="separator-2"></div>
-
-
                             <div class="tags-cloud">
                                 @foreach (var item in categoriesFinal)
                                 {
