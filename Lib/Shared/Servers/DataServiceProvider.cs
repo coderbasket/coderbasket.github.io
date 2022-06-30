@@ -18,7 +18,7 @@ namespace Blazor_App.Shared.Servers
 
     public class DataServiceProvider
     {
-        static bool hostedJson = false;
+        static bool hostedJson = true;
         public static Dictionary<FrameWork, List<ProjectItem>> _currentItems = new Dictionary<FrameWork, List<ProjectItem>>();
         public static bool NeedUpdate = false;
         public static Random Random = new Random();
@@ -45,15 +45,22 @@ namespace Blazor_App.Shared.Servers
             {
                 _items = CheckItems();
                 if (_items != null)
+                {
                     return _items;
+                }
             }
+            if (processing)
+                return _items;
+            processing = true;
             _items = await GetFromServerAsync();
             if (_items != null && _items.Count > 0)
             {
                 _items = _items.Shuffle().ToList();
                 _currentItems[SiteInfo.FrameWork] = _items;
                 ItemHasLoaded = true;
+                ItemsLoaded?.Invoke(SiteInfo.FrameWork, _items);
             }
+            processing = false;
             return _items;
         }
         static bool processing = false;
@@ -133,7 +140,7 @@ namespace Blazor_App.Shared.Servers
             }
             if (SiteInfo.FrameWork == FrameWork.Blazor)
             {
-                projectItemData = BlazorServer.GetProjectItemData();
+                projectItemData = UnoServer.GetProjectItemData();
             }
             return projectItemData;
         }

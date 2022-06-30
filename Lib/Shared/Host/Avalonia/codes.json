@@ -1,0 +1,35 @@
+{
+  "Title": "Avalonia",
+  "Items": [
+    {
+      "ProjectUrl": "https://github.com/mat1jaczyyy/apollo-studio",
+      "Title": "Apollo Studio",
+      "Description": "Fly your Launchpad to the moon. ☆.。.:*・°☆",
+      "Platform": [ "Windows", "Mac", "Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": "https://www.youtube.com/watch?v=a-MwTVH-wX8",
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [
+        "https://camo.githubusercontent.com/af833f440b8a962c919f17f351ac0e9479644dcc0b6209e1dab7c4fb0c30e0a0/687474703a2f2f696d672e796f75747562652e636f6d2f76692f612d4d775456482d7758382f6d7164656661756c742e6a7067",
+        "https://camo.githubusercontent.com/7634f870363836a9b6c2c4ccb758f09e30a5579168ec07610f15b316e9f65799/687474703a2f2f696d672e796f75747562652e636f6d2f76692f44444a304a5067643866772f6d7164656661756c742e6a7067",
+        "https://camo.githubusercontent.com/39c1e1d4151358d5c62bf1126b395c85c149aa26fc7c8168c6a2be0307984598/687474703a2f2f696d672e796f75747562652e636f6d2f76692f79412d62467359524734492f6d7164656661756c742e6a7067"
+      ],
+      "Categories": [ 41 ],
+      "Slug": null,
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/dan0v/AmplitudeSoundboard",
+      "Title": "Amplitude Soundboard",
+      "Description": "Play audio files from many formats",
+      "Platform": [ "Windows", "Mac", "Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/dan0v/AmplitudeSoundboard/raw/master/Branding/Banner.png" ],
+      "Categories": [ 19 ],
+      "Slug": null,
+      "GravatarHash": null
+    }
+  ]
+}

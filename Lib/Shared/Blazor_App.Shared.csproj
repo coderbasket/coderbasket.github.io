@@ -52,4 +52,6 @@
     <Folder Include="Host\WinUI\" />
     <Folder Include="Host\UWP\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>

@@ -54,8 +54,10 @@ namespace Blazor_App.Shared
     {
         Maui = 1,
         Blazor = 2,
+        Avalonia = 3,
+        Uno = 4,
         //Xamarin = 3,
         //Flutter = 4, 
-        
+
     }
 }
