@@ -1,4 +1,9 @@
-﻿@if (this.ProjectRepo.Platforms.Contains("Android") || this.ProjectRepo.Platforms.Contains("android"))
+﻿@{
+    var stringList = string.Join(",", this.ProjectRepo.Platforms);
+    var platforms = stringList.Split(',').Select(p => p.Trim()).ToArray();
+    this.ProjectRepo.Platforms = platforms;
+}
+@if (this.ProjectRepo.Platforms.Contains("Android") || this.ProjectRepo.Platforms.Contains("android"))
 {
     <i class="fa fa-android fa-2x"></i>
 }
