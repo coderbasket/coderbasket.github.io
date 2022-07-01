@@ -63,6 +63,58 @@
       "Categories": [ 42 ],
       "Slug": "httpsgithub.comVitalElementAvalonStudio",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/kekekeks/Avalonia.BattleCity",
+      "Title": "Avalonia.BattleCity",
+      "Description": "Port of https://github.com/hacklex/PekaCity to Avalonia. 2D game stub rendered completely by AvaloniaUI",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/kekekeks/Avalonia.BattleCity/raw/master/demo.gif?raw=true" ],
+      "Categories": [ 41, 42, 43 ],
+      "Slug": "httpsgithub.comkekekeksAvalonia.BattleCity",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/reactiveui/Camelotia",
+      "Title": "Compiling Avalonia app",
+      "Description": "Camelotia is a sample cross-platform application built with reactive extensions, ReactiveUI, and modern .NET UI frameworks. Camelotia is a file manager for cloud storages, it currently supports Yandex Disk, Google Drive, VK Documents, GitHub, FTP, SFTP, and local file systems. The app runs on Windows, Linux, MacOS, XBox, Surface Hub and HoloLens.",
+      "Platforms": [ "Windows", " Mac", " Linux", " Xbox" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://raw.githubusercontent.com/reactiveui/Camelotia/main/images/UiAvalonia.png", " \nhttps://github.com/reactiveui/Camelotia/raw/main/images/UiWindows.png", " \nhttps://github.com/reactiveui/Camelotia/raw/main/images/UiPresentation.png", " \nhttps://github.com/reactiveui/Camelotia/raw/main/images/UiAndroid.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comreactiveuiCamelotia",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/wieslawsoltes/Core2D",
+      "Title": "Core2D",
+      "Description": "Core2D is a multi-platform application for making data driven 2D diagrams. The application has built-in wyswig vector graphics editor where you can bind data to shapes, share data across multiple documents, edit documents using layers. It supports exporting documents to many popular file formats like pdf, bitmaps and dxf. You can automate drawing and processing by using C# scripting.",
+      "Platforms": [ "Windows", " Mac", " Linux", " iOS", " Android", " Browser" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/2297442/131457859-94a2c5c3-f85c-4ac0-a7b0-ec07e86595b7.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comwieslawsoltesCore2D",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/egramtel/egram.tel",
+      "Title": "Telegram client",
+      "Description": "This project aims to be a full featured Telegram client with different approach to UI. Also some new features might be introduced to explore what might be implemented on Telegram platform. 100% compatibility with official clients is top priority for this project - features won't be added if they break this rule.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://raw.githubusercontent.com/egramtel/egram.tel/master/screenshot.png" ],
+      "Categories": [ 41, 42, 15, 7 ],
+      "Slug": "httpsgithub.comegramtelegram.tel",
+      "GravatarHash": null
     }
   ]
 }

@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <None Remove="formatter.json" />
+    <None Remove="Host\Avalonia\codes.json" />
+    <None Remove="Host\Blazor\codes.json" />
     <None Remove="Host\Maui\codes.json" />
+    <None Remove="Host\Uno\codes.json" />
     <None Remove="Servers\sample.txt" />
   </ItemGroup>
 
@@ -18,14 +21,17 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="Host\Maui\codes.json">
+    <EmbeddedResource Include="Host\Maui\codes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Host\Avalonia\codes.json" />
+    <EmbeddedResource Include="Host\Blazor\codes.json" />
+    <EmbeddedResource Include="Host\Uno\codes.json" />
     <EmbeddedResource Include="Servers\sample.txt" />
   </ItemGroup>
 

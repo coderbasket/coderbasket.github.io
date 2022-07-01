@@ -49,6 +49,7 @@ namespace Blazor_App.Shared.Enums
         SOCIALNETWORK = 39,
         CAROUSEL = 40,
         OTHERS = 41,
-        TOOLs = 42
+        TOOLs = 42,
+        GAMES = 43,
     }
 }

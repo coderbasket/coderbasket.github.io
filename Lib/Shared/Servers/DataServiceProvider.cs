@@ -30,7 +30,7 @@ namespace Blazor_App.Shared.Servers
             if (TotalCategories == 0)
                 TotalCategories = Enum.GetNames(typeof(Category)).Length;
 #if DEBUG
-            //hostedJson = false;
+            hostedJson = false;
 #endif
             List<ProjectItem> _items = null;
             if (_currentItems.ContainsKey(SiteInfo.FrameWork))
@@ -139,22 +139,16 @@ namespace Blazor_App.Shared.Servers
         }
         public static ProjectItemData GetProjectItemData()
         {
-            ProjectItemData projectItemData = null;
-            if(SiteInfo.FrameWork == FrameWork.Maui)
+            ProjectItemData projectItemData = new ProjectItemData();
+            
+            var stream = RepoHelper.GetResourceStreamAsync(typeof(ProjectItemData), "Blazor_App.Shared.Host." + SiteInfo.FrameWork.ToString() + ".codes.json");
+            using (StreamReader reader = new StreamReader(stream))
             {
-                projectItemData = MauiServer.GetProjectItemData();
-            }
-            if (SiteInfo.FrameWork == FrameWork.Blazor)
-            {
-                projectItemData = BlazorServer.GetProjectItemData();
-            }
-            if (SiteInfo.FrameWork == FrameWork.Avalonia)
-            {
-                projectItemData = AvaloniaServer.GetProjectItemData();
-            }
-            if (SiteInfo.FrameWork == FrameWork.Uno)
-            {
-                projectItemData = UnoServer.GetProjectItemData();
+                string text = reader.ReadToEnd();
+                if (text.IsValidString())
+                {
+                    projectItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItemData>(text);
+                }
             }
             return projectItemData;
         }

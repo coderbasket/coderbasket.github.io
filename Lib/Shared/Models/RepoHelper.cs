@@ -109,6 +109,7 @@ namespace Blazor_App.Shared.Models
             Stream stream = assembly.GetManifestResourceStream(pathDot);
             return stream;
         }
+       
         public static bool IsValidRepo(ProjectItem repo)
         {
             if (repo == null)

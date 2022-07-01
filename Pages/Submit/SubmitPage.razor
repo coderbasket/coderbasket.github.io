@@ -113,7 +113,7 @@
                                 int counter = 1;
                                 @foreach (var item in Enum.GetValues(typeof(Category)))
                                 {
-                                    <span>@item (@counter), </span>
+                                    <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
                                     counter++;
                                 }
                             }
@@ -128,7 +128,7 @@
                     <div class="row" style="display:@showHide">
                         @if (RepoHelper.IsValidRepo(Repo))
                         {
-                            <CoderBasket.Blazor.Pages.Details.ItemDetailView ProjectRepo="Repo" ></CoderBasket.Blazor.Pages.Details.ItemDetailView>
+                            <CoderBasket.Blazor.Pages.Details.ItemDetailView ProjectRepo="Repo"></CoderBasket.Blazor.Pages.Details.ItemDetailView>
                         }
                     </div>
                 </div>
