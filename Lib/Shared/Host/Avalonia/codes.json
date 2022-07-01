@@ -310,6 +310,32 @@
       "Categories": [ 41, 42 ],
       "Slug": "httpsgithub.comnlogozzoNickvisionTubeConverter",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/carina-studio/PixelViewer",
+      "Title": "PixelViewer",
+      "Description": "PixelViewer is a .NET based cross-platform image viewer written by C# which supports reading raw Luminance/YUV/RGB/ARGB/Bayer pixels data from file and rendering it.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://camo.githubusercontent.com/4909eb9b0f7c1009bd0ce6b5339a9704b1f85beb90d9ca0a5b1036e6573bcf8c/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f506978656c5669657765722f53637265656e73686f74732f4d61696e57696e646f775f57696e646f77735f5468756d622e706e67", " \nhttps://camo.githubusercontent.com/99a829858f313e95a290c443c608f454150087a34c077dad5c94a5486aee6c8f/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f506978656c5669657765722f53637265656e73686f74732f4d61696e57696e646f775f57696e646f7773375f5468756d622e706e67", " \nhttps://camo.githubusercontent.com/59714268c088d866c0187c74a5364358d2489cfd151a69d69deb991446d8e40b/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f506978656c5669657765722f53637265656e73686f74732f4d61696e57696e646f775f6d61634f535f5468756d622e706e67", " \nhttps://camo.githubusercontent.com/bb82f0a072a2795b25b9c67c5ee0b2395a5a47f9dc834991c15434dd1819a16a/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f506978656c5669657765722f53637265656e73686f74732f4d61696e57696e646f775f4665646f72615f5468756d622e706e67" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comcarinastudioPixelViewer",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/alexandrehtrb/Pororocaewer",
+      "Title": "Pororoca",
+      "Description": "Pororoca is a HTTP testing tool, inspired by Postman, but with many improvements.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/alexandrehtrb/Pororoca/raw/master/docs/en-GB/imgs/example_screen.jpg" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comalexandrehtrbPororocaewer",
+      "GravatarHash": null
     }
   ]
 }
