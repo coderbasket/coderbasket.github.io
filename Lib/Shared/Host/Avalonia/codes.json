@@ -258,6 +258,58 @@
       "Categories": [ 43 ],
       "Slug": "httpsgithub.comjonthysellMzinga",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/Nethereum/Nethereum.UI.Desktop",
+      "Title": "Nethereum UI Desktop Starter Template",
+      "Description": "Functional sample of a Reactive Cross platform desktop wallet connecting to Ethereum using Nethereum, Avalonia and ReactiveUI.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/Nethereum/Nethereum.UI.Desktop/raw/master/Screenshots/simpleDemo.gif" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comNethereumNethereum.UI.Desktop",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/nlogozzo/NickvisionMoney",
+      "Title": "Nickvision Money",
+      "Description": "A personal finance manager",
+      "Platforms": [ "Windows", "Mac", "Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/17648453/149027263-edb7b0db-999f-47a7-bb0d-07053baf2d7e.png", "\nhttps://user-images.githubusercontent.com/17648453/149264323-144cdaf7-a1bf-4775-b4d0-d7f623ea14d4.png", "\nhttps://user-images.githubusercontent.com/17648453/149027274-3e4273be-c761-4495-a254-d0f5c44274cb.png", "\nhttps://user-images.githubusercontent.com/17648453/149027276-ed6ad7a1-1cb3-4597-8f22-ddd098f8d1f0.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comnlogozzoNickvisionMoney",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/nlogozzo/NickvisionTagger",
+      "Title": "Nickvision Tagger",
+      "Description": "An easy-to-use music tag (metadata) editor",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/17648453/173400558-ec011b3b-fdeb-4718-99ff-f5028c02e423.png", " \nhttps://user-images.githubusercontent.com/17648453/171565079-5287d6c1-2698-48be-b9fd-eea1be912697.png", " \nhttps://user-images.githubusercontent.com/17648453/171565097-69b1195a-4eac-4178-a809-fe0c1f4e81e5.png", " \nhttps://user-images.githubusercontent.com/17648453/171565114-e223a9f1-4785-4ec2-bc03-4e9a6976466a.png", " \nhttps://user-images.githubusercontent.com/17648453/171565137-aba8028e-40d7-473b-92f1-febfc1883fb2.png", " \nhttps://user-images.githubusercontent.com/17648453/170810816-406b65fd-7f37-4d11-b821-8e7a82ab9029.png", " \nhttps://user-images.githubusercontent.com/17648453/171565160-0d6dca47-886d-405b-8a11-58f20263cfdc.png", " \nhttps://user-images.githubusercontent.com/17648453/170810823-6fe3baf0-2826-4ecf-8d30-c75a715095aa.png", " \nhttps://user-images.githubusercontent.com/17648453/173400574-ca97ecc7-367a-4a47-8729-0f08eb523bca.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comnlogozzoNickvisionTagger",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/nlogozzo/NickvisionTubeConverter",
+      "Title": "Nickvision Tube Converter",
+      "Description": "An easy-to-use YouTube video downloader",
+      "Platforms": [ "Windows", "Mac", "Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/17648453/172919510-b99d02c5-601b-41a5-8ba6-889c8a64582c.png", "\nhttps://user-images.githubusercontent.com/17648453/172919518-f3dc89b2-b268-499d-a0da-1884f6090f5d.png", "\nhttps://user-images.githubusercontent.com/17648453/172919532-4f0c71c9-8cee-48d1-9c40-88c2e8992699.png", "\nhttps://user-images.githubusercontent.com/17648453/172919537-fef307a1-6831-410d-8483-8c66ed42fe43.png", "\nhttps://user-images.githubusercontent.com/17648453/172919549-de752856-361b-4d53-aec5-6b0b3906fc11.png", "\nhttps://user-images.githubusercontent.com/17648453/172919557-71737a17-700f-4e05-a7f3-506f91f5dfb8.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comnlogozzoNickvisionTubeConverter",
+      "GravatarHash": null
     }
   ]
 }
