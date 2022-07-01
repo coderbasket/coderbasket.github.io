@@ -25,6 +25,7 @@ namespace Blazor_App.Shared.Models
             }
             return sb.ToString();
         }
+        
         public static void GetRepository(ProjectItem projectItem)
         {
             if (projectItem.Repository !=null)

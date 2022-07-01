@@ -8,7 +8,7 @@ namespace Blazor_App.Shared.Models
 {
     public class ProjectItemData
     {
-        public string Title { get; set; }
+        public string Title { get; set; } = SiteInfo.FrameWork.ToString();
         public List<ProjectItem> Items { get; set; }
     }
 }

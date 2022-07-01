@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using Blazor_App.Shared.Models;
 using Blazor_App.Shared.Enums;
 using Blazor_App.Shared.Extensions;
-#nullable disable
+
 namespace Blazor_App.Shared.Servers
 {
 
@@ -98,7 +98,7 @@ namespace Blazor_App.Shared.Servers
                 if (hostedJson)
                 {
                     var url = GetHostUrl(SiteInfo.FrameWork);
-                    var txt = await GithubServices.DownloadstringAsync(url);
+                    var txt = await CookUpServices.DownloadstringAsync(url);
                     if (string.IsNullOrEmpty(txt) || string.IsNullOrWhiteSpace(txt))
                         return;
                     var projectItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItemData>(txt);
@@ -125,7 +125,7 @@ namespace Blazor_App.Shared.Servers
             if (hostedJson)
             {
                 var url = GetHostUrl(SiteInfo.FrameWork);
-                var txt = await GithubServices.DownloadstringAsync(url);
+                var txt = await CookUpServices.DownloadstringAsync(url);
                 if (string.IsNullOrEmpty(txt) || string.IsNullOrWhiteSpace(txt))
                     return _items;
                 var projectItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItemData>(txt);
@@ -153,7 +153,7 @@ namespace Blazor_App.Shared.Servers
             return projectItemData;
         }
 
-        static string GetHostUrl(FrameWork frameWork, bool raw = true)
+        public static string GetHostUrl(FrameWork frameWork, bool raw = true)
         {
             if (raw)
             {
@@ -164,10 +164,10 @@ namespace Blazor_App.Shared.Servers
                 return $"https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/{frameWork}/codes.json";
             }
         }
-        public static void PushToServer(ProjectItem snippet, bool update = false)
+        public static void UpdateToServer(FrameWork frameWork, string serialize)
         {
-
+            CookieManager.PuskCookies(frameWork, serialize);
         }
-       
+        
     }
 }

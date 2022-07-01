@@ -62,7 +62,9 @@
                             @*Image urls*@
                             <label class="input_header" for="psw"><b>IMAGE URLS (Separated width comma ,)</b></label>
                             <textarea @bind="ImageUrls" placeholder="Required" id="w3review" name="w3review" rows="3" style="max-width:420px; color:@SiteInfo.TextColor;" cols="50"></textarea>
-
+                            <div style="background-color:@SiteInfo.BarBacgroundColor; border-radius:8px; padding:8px;">
+                                <label style="color:red; font-weight:bolder; font-size:smaller;">We only accepts image url from safe sources like Github. Title and description also scan for unnecessary words.</label>
+                            </div>
 
                             @*Submit*@
                             @* <button style="height:55px;" type="submit">Submit</button>*@
@@ -120,9 +122,10 @@
                         </div>
 
                     </div>
-                    <div style="display:grid; grid-template-columns: 1fr auto">
+                    <div style="display:grid; grid-template-columns: 1fr auto auto auto">
                         <h1 @onclick="@HideShowPreview" style="cursor:pointer; margin-top:20px; color:@SiteInfo.AccentDarkerColor" class="page-title">Previewer <span style="margin-bottom:10px;">»</span></h1>
                         <button @onclick="@PreviewNow" style="height:55px; border-radius:10px; background-color:@SiteInfo.AccentDarkerColor;">Preview Now</button>
+                        <button @onclick="@SubmitProjects" style="height:55px; border-radius:10px; margin-left:8px; background-color:forestgreen">Submit For @SiteInfo.FrameWork</button>
                     </div>
 
                     <div class="row" style="display:@showHide">
@@ -189,17 +192,39 @@
         StateHasChanged();
 
     }
-    void SubmitProjects()
-    {
-
-    }
-    void AddToSubmitList()
+    async void SubmitProjects()
     {
         if (RepoHelper.IsValidRepo(Repo))
         {
-
+            var items = await DataServiceProvider.GetItemsAsync();
+            if (items == null)
+                return;
+            var checkItem = items.Where(p => p.ProjectUrl == Repo.ProjectUrl).FirstOrDefault();
+            bool hasChanged = false;
+            if(checkItem == null)
+            {
+                items.Add(Repo);
+                hasChanged = true;
+            }
+            else
+            {
+                bool confirmed = await JS.InvokeAsync<bool>("confirm", "This repository already exist, Do you to update this repository?");
+                if (confirmed)
+                {
+                    items.Add(Repo);
+                    hasChanged = true;
+                }
+            }
+            if (hasChanged)
+            {
+                ProjectItemData projectItemData = new ProjectItemData();
+                projectItemData.Items = items;
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
+                DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json);
+            }
         }
     }
+   
     string showHide = "block;";
     void HideShowPreview()
     {

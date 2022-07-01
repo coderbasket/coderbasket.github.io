@@ -6,12 +6,11 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-#nullable disable
-namespace Blazor_App.Shared.Servers
+namespace Blazor_App.Shared
 {
-    public class GithubServices
+    public class CookUpServices
     {
-        public async static Task<string> GetContentAsync(GithubInfo githubInfo)
+        public async static Task<string> GetContentAsync(PInfo githubInfo)
         {
             string content = null;
 
@@ -23,23 +22,27 @@ namespace Blazor_App.Shared.Servers
             var repo = githubInfo.Repo;
             var branch = githubInfo.Branch;
             var targetFile = githubInfo.Path;
-            
+
             try
             {
                 // try to get the file (and with the file the last commit sha)
                 var existingFile = await ghClient.Repository.Content.GetAllContentsByRef(owner, repo, targetFile, branch);
                 content = existingFile.FirstOrDefault().Content;
             }
-            catch (Octokit.NotFoundException)
+            catch (NotFoundException)
             {
-               
+
             }
             return content;
 
         }
-        public async static void UpdateContentAsync(GithubInfo githubInfo, string message, string content)
+        static bool updating = false;
+        public static EventHandler<bool> EventChanged;
+        public async static void UpdateContentAsync(PInfo githubInfo, string message, string content)
         {
-          
+            if (updating)
+                return;
+            updating = true;
 
             var ghClient = new GitHubClient(new ProductHeaderValue(githubInfo.Owner));
             ghClient.Credentials = new Credentials(githubInfo.Token);
@@ -49,7 +52,7 @@ namespace Blazor_App.Shared.Servers
             var repo = githubInfo.Repo;
             var branch = githubInfo.Branch;
             var targetFile = githubInfo.Path;
-          
+
             try
             {
                 // try to get the file (and with the file the last commit sha)
@@ -62,22 +65,24 @@ namespace Blazor_App.Shared.Servers
                 }
                 var updateChangeSet = await ghClient.Repository.Content.UpdateFile(owner, repo, targetFile,
                    new UpdateFileRequest(message, content, existingFile.First().Sha, branch));
+                EventChanged?.Invoke("Succes", true);
             }
-            catch (Octokit.NotFoundException)
+            catch (NotFoundException ex)
             {
                 // if file is not found, create it
                 var createChangeSet = await ghClient.Repository.Content.CreateFile(owner, repo, targetFile, new CreateFileRequest(message, content, branch));
+                EventChanged?.Invoke(ex, false);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
+                EventChanged?.Invoke(ex, false);
             }
-
+            updating = false;
         }
-       
-        public static GithubInfo GetExtractGithubInfo(string url, string token, string newFileName = null)
+
+        public static PInfo GetExtractGithubInfo(string url, string token, string newFileName = null)
         {
-            GithubInfo githubInfo = null;
+            PInfo githubInfo = null;
             try
             {
                 //https://github.com/mygithub/folderdata/blob/main/data/sample.json
@@ -106,11 +111,11 @@ namespace Blazor_App.Shared.Servers
                 //nextcodelab/data-base-server/main/SampleFolder/sample.json
                 var trim = url.Split(new string[] { "https://github.com/" }, StringSplitOptions.None).LastOrDefault();
                 trim = "https://raw.githubusercontent.com/" + trim.Replace("/blob", "");
-                githubInfo = new GithubInfo()
+                githubInfo = new PInfo()
                 {
                     Repo = repo,
                     Owner = owner,
-                    
+
                     Branch = branch,
                     Path = path,
                     FileName = fileName2,
@@ -128,7 +133,7 @@ namespace Blazor_App.Shared.Servers
             }
             catch
             {
-               
+
 
             }
             return githubInfo;
@@ -142,7 +147,7 @@ namespace Blazor_App.Shared.Servers
         private static string[] SplitAndKeep(string input, string pattern)
         {
             pattern = "(" + pattern + ")";
-            var rx = new System.Text.RegularExpressions.Regex(pattern, RegexOptions.IgnoreCase);
+            var rx = new Regex(pattern, RegexOptions.IgnoreCase);
             var substrings = rx.Split(input);
             return substrings;
         }
@@ -151,7 +156,7 @@ namespace Blazor_App.Shared.Servers
             string jsonString = null;
             try
             {
-                using (var httpClient = new System.Net.Http.HttpClient())
+                using (var httpClient = new HttpClient())
                 {
 
                     var stream = await httpClient.GetStreamAsync(txtFileUrl);
@@ -160,24 +165,24 @@ namespace Blazor_App.Shared.Servers
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
-           
+
             return jsonString;
         }
         public static async Task<string> DownloadStringAsync(string txtFileUrl)
         {
-            string jsonString = null;            
+            string jsonString = null;
             try
-            {                              
+            {
                 using (HttpClient client = new HttpClient())
                 using (HttpResponseMessage response = await client.GetAsync(txtFileUrl))
                 using (HttpContent content = response.Content)
                 {
                     jsonString = await content.ReadAsStringAsync();
-                }                        
+                }
             }
             catch (Exception ex)
             {
@@ -186,7 +191,7 @@ namespace Blazor_App.Shared.Servers
             return jsonString;
         }
     }
-    public class GithubInfo
+    public class PInfo
     {
         public string Repo { get; set; }
         public string Owner { get; set; }
