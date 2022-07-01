@@ -1,0 +1,70 @@
+﻿{
+  "Title": "WinUI",
+  "Items": [
+    {
+      "ProjectUrl": "https://github.com/microsoft/WinUI-Gallery",
+      "Title": "WinUI Gallery",
+      "Description": "Shows all of the XAML UI components in an interactive format. This app is the interactive companion to the Fluent Design Guidelines and shows the usage of the WinUI APIs.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "https://apps.microsoft.com/store/detail/neptuo-money/9N50XHGW891S",
+      "YoutubeUrl": null,
+      "FrameWorkName": "Blazor",
+      "ImageUrls": [ "https://github.com/microsoft/WinUI-Gallery/raw/main/README_Images/WinUIGalleryLanding.PNG" ],
+      "Categories": [ 41, 42, 32, 27, 33 ],
+      "Slug": "httpsgithub.commicrosoftWinUIGallery",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/files-community/Files",
+      "Title": "Files is a file manager for Windows",
+      "Description": "Files is a file manager for Windows with a powerful yet intuitive design. It has features like multiple tabs, panes, columns, shell extensions in the context menu and tags.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/files-community/Files/raw/main/src/Files.Uwp/Assets/FilesHome.png" ],
+      "Categories": [ 41,42 ],
+      "Slug": "httpsgithub.comfilescommunityFiles",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/veler/DevToys",
+      "Title": "DevToys",
+      "Description": "DevToys helps in daily tasks like formatting JSON, comparing text, testing RegExp. No need to use many untruthful websites to do simple tasks with your data. With Smart Detection, DevToys is able to detect the best tool that can treat the data you copied in the clipboard of your Windows. Compact overlay lets you keep the app in small and on top of other windows. Multiple instances of the app can be used at once.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "https://apps.microsoft.com/store/detail/devtoys/9PGCV4V3BK4W?hl=en-ph&gl=PH",
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/veler/DevToys/raw/main/assets/screenshots/1.png" ],
+      "Categories": [ 41,42 ],
+      "Slug": "httpsgithub.comvelerDevToys",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/Kinnara/ModernWpf",
+      "Title": "ModernWPF UI Library",
+      "Description": "Modern styles and controls for your WPF applications.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "",
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Light.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Dark.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ControlPalette1.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Nighttime.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/NumberBox.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ContentDialog.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/DataGrid.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ItemsRepeater.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/CustomTitleBar.Dark.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Calendar.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Menu.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Progress.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ColorRamp.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/AccentColorPalette.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/HighContrast.png" ],
+      "Categories": [ 41,42 ],
+      "Slug": "httpsgithub.comKinnaraModernWpf",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/maraf/Money",
+      "Title": "Money",
+      "Description": "Money is an outcome logging application written as UAP (UWP) to target both desktop and mobile Windows devices.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "https://apps.microsoft.com/store/detail/neptuo-money/9N50XHGW891S",
+      "YoutubeUrl": null,
+      "FrameWorkName": "UWP",
+      "ImageUrls": [ "https://github.com/maraf/Money/raw/master/assets/Preview-large.png", " \nhttps://github.com/maraf/Money/raw/master/assets/Preview-blazor.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.commarafMoney",
+      "GravatarHash": null
+    }
+  ]
+}

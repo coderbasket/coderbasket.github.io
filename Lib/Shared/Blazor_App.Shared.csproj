@@ -12,6 +12,7 @@
     <None Remove="Host\Blazor\codes.json" />
     <None Remove="Host\Maui\codes.json" />
     <None Remove="Host\Uno\codes.json" />
+    <None Remove="Host\WinUI\codes.json" />
     <None Remove="Servers\sample.txt" />
   </ItemGroup>
 
@@ -32,6 +33,7 @@
     <EmbeddedResource Include="Host\Avalonia\codes.json" />
     <EmbeddedResource Include="Host\Blazor\codes.json" />
     <EmbeddedResource Include="Host\Uno\codes.json" />
+    <EmbeddedResource Include="Host\WinUI\codes.json" />
     <EmbeddedResource Include="Servers\sample.txt" />
   </ItemGroup>
 
@@ -52,11 +54,6 @@
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Host\WinUI\" />
-    <Folder Include="Host\UWP\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>

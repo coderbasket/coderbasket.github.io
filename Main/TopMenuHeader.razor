@@ -38,6 +38,7 @@
                     <ul style="position:absolute; margin-top:-25px;" class="dropdown-menu hiddenMenu">
                          @foreach (var item in Enum.GetNames(typeof(FrameWork)))
                          {
+
                             <li><a @onclick="@(()=>{MainLayout.Current.SelectFrameWork(RepoHelper.ConvertFramework(item));})" >@item</a></li>
                          }                       
                     </ul>
