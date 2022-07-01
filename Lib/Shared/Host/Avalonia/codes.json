@@ -115,6 +115,45 @@
       "Categories": [ 41, 42, 15, 7 ],
       "Slug": "httpsgithub.comegramtelegram.tel",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/yatli/fvim",
+      "Title": "FVim",
+      "Description": "Cross platform Neovim front-end UI, built with F# + Avalonia.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/yatli/fvim/raw/master/images/screenshot.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comyatlifvim",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/reignstudios/Git-It-GUI",
+      "Title": "Git-It-GUI",
+      "Description": "Git-It-GUI",
+      "Platforms": [ "Windows", "Mac", "Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/reignstudios/Git-It-GUI/raw/master/ScreenShots/Changes.png?raw=true" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comreignstudiosGitItGUI",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/alexdillon/GroupMeClient",
+      "Title": "GroupMe Desktop Client Avalonia",
+      "Description": "GroupMe Desktop Client is a unofficial, modular, open-source, configurable client for using the GroupMe chat service on Windows. GroupMe Desktop Client offers support for unique features such as search, threaded replies, and plugins, and is compatible with Windows 7 through Windows 10.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/LightThemeMain.png", " \nhttps://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/DarkThemeMain.png", " \nhttps://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/Search.png", " \nhttps://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/Gallery.png", " \nhttps://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/Plugins.png", " \nhttps://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/MessagePlugin.png", " \nhttps://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/GMDC-Giphy.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comalexdillonGroupMeClient",
+      "GravatarHash": null
     }
   ]
 }
