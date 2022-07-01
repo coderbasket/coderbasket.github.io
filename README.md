@@ -1,7 +1,7 @@
 # coderbasket.github.io
 *[https://coderbasket.github.io](https://coderbasket.github.io)*
 
-(https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/Maui/codes.json)*
+
 
 Submit  using "SUBMIT NEW PROJECT" or email your github repo, you can also contact us if you want your project be removed or need update like informations.
 
