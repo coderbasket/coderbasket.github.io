@@ -11,6 +11,7 @@
     <None Remove="Host\Avalonia\codes.json" />
     <None Remove="Host\Blazor\codes.json" />
     <None Remove="Host\Maui\codes.json" />
+    <None Remove="Host\trash_bin.json" />
     <None Remove="Host\Uno\codes.json" />
     <None Remove="Host\WinUI\codes.json" />
     <None Remove="Servers\sample.txt" />
@@ -22,6 +23,7 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+    <EmbeddedResource Include="Host\trash_bin.json" />
     <EmbeddedResource Include="Host\Maui\codes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
