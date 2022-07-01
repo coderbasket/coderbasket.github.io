@@ -52,6 +52,19 @@
       "Categories": [ 41, 42, 12, 5, 8, 20, 16, 26, 27, 23, 21 ],
       "Slug": "httpsgithub.comantdesignblazorantdesignblazor",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/blazorhero/CleanArchitecture",
+      "Title": "BlazorHero - Clean Architecture Template",
+      "Description": "BlazorHero is a Clean Architecture Solution Template for Blazor Webassembly 5.0 built with MudBlazor Components.",
+      "Platforms": [ "iOS", " Android", " Windows", " Mac", " Linux", " Browser" ],
+      "ExternalUrl": "https://mudblazor.com/",
+      "YoutubeUrl": null,
+      "FrameWorkName": "Blazor",
+      "ImageUrls": [ "https://camo.githubusercontent.com/880ae53e13abc6d0034e39422dbfdf24c3d688cd170da47d181eab16c2d89be5/68747470733a2f2f636f6465776974686d756b6573682e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032312f30332f426c617a6f724865726f42616e6e65722d312e706e67" ],
+      "Categories": [ 41, 42, 12, 5, 8, 20, 16, 26, 27, 23, 21 ],
+      "Slug": "httpsgithub.comblazorheroCleanArchitecture",
+      "GravatarHash": null
     }
   ]
 }
