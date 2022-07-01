@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Blazor_App.Shared.Extensions;
 namespace Blazor_App.Shared
 {
     public class CookUpServices
@@ -190,6 +191,7 @@ namespace Blazor_App.Shared
             }
             return jsonString;
         }
+        
     }
     public class PInfo
     {

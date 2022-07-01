@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Cookies\CookieManager.hiddenCs" />
-    <None Remove="Cookies\dtr.dbx" />
+    <None Remove="Cookies\CookieManager.cshidden" />
     <None Remove="formatter.json" />
     <None Remove="Host\Avalonia\codes.json" />
     <None Remove="Host\Blazor\codes.json" />
@@ -20,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Cookies\CookieManager.hiddenCs" />
+    <Compile Include="Cookies\CookieManager.cshidden" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,7 +28,6 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <EmbeddedResource Include="Cookies\dtr.dbx" />
     <EmbeddedResource Include="Host\trash_bin.json" />
     <EmbeddedResource Include="Host\Maui\codes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
