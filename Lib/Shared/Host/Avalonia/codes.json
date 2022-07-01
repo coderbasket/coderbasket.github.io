@@ -180,6 +180,19 @@
       "Categories": [ 41, 42 ],
       "Slug": "httpsgithub.comlacmusfoundationlacmusapp",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/ptupitsyn/let-it-snow",
+      "Title": "Let It Snow!",
+      "Description": "Cross-platform falling snow demo on .NET Core and Avalonia UI.",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Maui",
+      "ImageUrls": [ "https://github.com/ptupitsyn/let-it-snow/raw/master/images/let-it-snow-tree.gif" ],
+      "Categories": [ 41,44 ],
+      "Slug": "httpsgithub.comptupitsynletitsnow",
+      "GravatarHash": null
     }
   ]
 }
