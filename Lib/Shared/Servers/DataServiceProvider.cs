@@ -166,7 +166,7 @@ namespace Blazor_App.Shared.Servers
         }
         public static void UpdateToServer(FrameWork frameWork, string serialize)
         {
-            CookieManager.PuskCookies(frameWork, serialize);
+            //CookieManager.PuskCookies(frameWork, serialize);
         }
         
     }

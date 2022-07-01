@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Cookies\CookieManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Cookies\dtr.dbx" />
     <None Remove="formatter.json" />
     <None Remove="Host\Avalonia\codes.json" />
