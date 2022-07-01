@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Cookies\CookieManager.cshidden" />
     <None Remove="formatter.json" />
     <None Remove="Host\Avalonia\codes.json" />
     <None Remove="Host\Blazor\codes.json" />
@@ -16,10 +15,6 @@
     <None Remove="Host\Uno\codes.json" />
     <None Remove="Host\WinUI\codes.json" />
     <None Remove="Servers\sample.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Cookies\CookieManager.cshidden" />
   </ItemGroup>
 
   <ItemGroup>
