@@ -336,6 +336,84 @@
       "Categories": [ 41, 42 ],
       "Slug": "httpsgithub.comalexandrehtrbPororocaewer",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/PowerShell/GraphicalTools",
+      "Title": "GraphicalTools",
+      "Description": "The GraphicalTools repo contains Microsoft.PowerShell.ConsoleGuiTools: a module that provides console-based GUI experiences based on Terminal.Gui (gui.cs).",
+      "Platforms": [ "Windows", " Mac", " Linux", " Browser" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/PowerShell/GraphicalTools/raw/master/docs/Microsoft.PowerShell.ConsoleGuiTools/ocgv.gif" ],
+      "Categories": [ 41 ],
+      "Slug": "httpsgithub.comPowerShellGraphicalTools",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/rbmkio/radish",
+      "Title": "Radish — cross-platform desktop client for Redis",
+      "Description": "The GraphicalTools repo contains Microsoft.PowerShell.ConsoleGuiTools: a module that provides console-based GUI experiences based on Terminal.Gui (gui.cs).",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/rbmkio/radish/raw/master/screenshot.png", " \nhttps://github.com/rbmkio/radish/raw/master/windows.jpg" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comrbmkioradish",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/roslynpad/roslynpad",
+      "Title": "RoslynPad",
+      "Description": "A cross-platform C# editor based on Roslyn and AvalonEdit",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/roslynpad/roslynpad/raw/main/docs/Completion.png", " \nhttps://github.com/roslynpad/roslynpad/raw/main/docs/SignatureHelp.png", " \nhttps://github.com/roslynpad/roslynpad/raw/main/docs/Diagnostics.png", " \nhttps://github.com/roslynpad/roslynpad/raw/main/docs/CodeFixes.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comroslynpadroslynpad",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/davidtimovski/sapphire-notes",
+      "Title": "Sapphire Notes",
+      "Description": "A cross-platform desktop application for managing notes built with Avalonia. Prettier than Notepad and snappier than Electron alternatives.",
+      "Platforms": [ "Windows", "Mac", "Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/davidtimovski/sapphire-notes/raw/dev/preview.webp" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comdavidtimovskisapphirenotes",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/davidtimovski/team-sketch",
+      "Title": "Team Sketch",
+      "Description": "A cross-platform desktop application for collaborative drawing built with Avalonia.",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/davidtimovski/team-sketch/raw/dev/preview.webp" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comdavidtimovskiteamsketch",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/VitalElement/Xune",
+      "Title": "Zune Desktop Music player ",
+      "Description": "A cross-platform resurrection of Zune Desktop Music player using AvaloniaUI.",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/4672627/154169654-87766d8a-5860-45e9-9ae9-567108a06c4f.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comVitalElementXune",
+      "GravatarHash": null
     }
   ]
 }
