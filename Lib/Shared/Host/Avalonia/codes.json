@@ -154,6 +154,32 @@
       "Categories": [ 41, 42 ],
       "Slug": "httpsgithub.comalexdillonGroupMeClient",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/waliarubal/Jaya",
+      "Title": "Jaya File Manager",
+      "Description": "is a .NET Core based cross platform file manager application which runs on Windows, Mac and Linux. Its goal is very simple, \"Allow browsing and managing of several file systems simultaneously using a single application which should work and look alike on all desktop platforms it supports.\".",
+      "Platforms": [ "Windows", " Mac", " Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/waliarubal/Jaya/raw/dev/docs/MainUI_Light.png", " \nhttps://github.com/waliarubal/Jaya/raw/dev/docs/MainUI_Dark.png", " \nhttps://github.com/waliarubal/Jaya/raw/dev/docs/Options_Light.png", " \nhttps://github.com/waliarubal/Jaya/raw/dev/docs/Options_Dark.png", " \nhttps://github.com/waliarubal/Jaya/raw/dev/docs/Plugins_Light.png", " \nhttps://github.com/waliarubal/Jaya/raw/dev/docs/Plugins_Dark.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comwaliarubalJaya",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/lacmus-foundation/lacmus-app",
+      "Title": "Lacmus Application",
+      "Description": "Cross-platform application that searches for lost people in the forest using object detection neural networks. The application runs on Linux, Windows and Mac OS X. Lacmus application written in C#, .NET Core, ReactiveUI and Avalonia and use Tensorflow / ONNX for inference deep learning Models.",
+      "Platforms": [ "Windows", "Mac", "Linux" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/lacmus-foundation/lacmus-app/raw/master/docs/main_view.png", "\nhttps://github.com/lacmus-foundation/lacmus-app/raw/master/docs/app_arch.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comlacmusfoundationlacmusapp",
+      "GravatarHash": null
     }
   ]
 }
