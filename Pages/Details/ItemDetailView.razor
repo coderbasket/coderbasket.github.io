@@ -35,15 +35,7 @@
                         <h5>Platforms</h5>
                         <CoderBasket.Blazor.Items.PlatformSupportView ProjectRepo="ProjectRepo"></CoderBasket.Blazor.Items.PlatformSupportView>
                     </div>
-                    @if (!string.IsNullOrEmpty(ProjectRepo.YoutubeUrl))
-                    {
-                        <a target="_blank" href="@ProjectRepo.YoutubeUrl" style="margin-bottom:25px;">
-                            <div style="color:@SiteInfo.AccentColor; display:inline-flex;">
-                                <i class="fa fa-youtube-play fa-2x"></i>
-                                @*<h4 >Watch On Youtube</h4>*@
-                            </div>
-                        </a>
-                    }
+                    
                     @if (ProjectRepo.ExternalUrl != null)
                     {
                         <div class="description__section">
@@ -242,6 +234,12 @@
                         }
 
                     </div>
+                    @if (ProjectRepo.YoutubeUrl.IsValidString())
+                    {
+                         <h5>Watch on Youtube</h5>
+                        <CoderBasket.Blazor.Items.PlayButton Repo="@this.ProjectRepo"></CoderBasket.Blazor.Items.PlayButton>
+                    }
+                   
                     @if (ProjectRepo.ImageUrls?.Count() > 0)
                     {
                         <div class="description__section">

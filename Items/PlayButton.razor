@@ -1,0 +1,45 @@
+﻿<style>
+    a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.vid-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.play-btn {
+	color: orangered;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+	.vid-wrapper .play-btn:hover {
+	color: red;
+}
+</style>
+<div class="vid-wrapper">
+	@{
+		var imgUrl = $"https://img.youtube.com/vi/{@GetId()}/0.jpg";
+	}
+	<a href="@this.Repo.YoutubeUrl" target="_BLANK"><img src="@imgUrl" />
+		<i class="play-btn fa fa-youtube-play fa-3x" aria-hidden="true"></i>
+		</a>
+</div>
+
+@code {
+	[Parameter]
+	public ProjectItem Repo { get; set; }
+	protected async void OnInitialized()
+	{
+		base.OnInitialized();
+
+	}
+	string GetId()
+	{
+		return this.Repo.YoutubeUrl.Split('=').LastOrDefault();
+	}
+}

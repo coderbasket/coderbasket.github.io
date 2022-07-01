@@ -100,3 +100,40 @@ function copyClipboard(containerid) {
         alert("Text has been copied")
     }
 }
+//Youtube
+function loadPlayButton (url) {
+    // Paste url here  
+    // Function to extract video id 	
+    function extractVidId(url) {
+        var link = url;
+        var ref = link.split('/');
+        var vRef = ref[ref.length - 1].split('&');
+        vRef = vRef[0].split('=');
+        if (vRef.length > 1) {
+            vRef = vRef[1];
+        } else {
+            vRef = vRef[0];
+        }
+        return vRef;
+    }
+
+    // Extracting video id fro url
+    var videoId = extractVidId(url);
+
+    // Checking if url is valid
+    if (videoId != null) {
+        // Link to youtube video
+        var vidLink = 'https://www.youtube.com/watch?v=' + videoId;
+
+        // Link to video image
+        var vidImage = 'https://img.youtube.com/vi/' + videoId + '/0.jpg';
+
+        // Set href to the vidLink
+        document.getElementById("vid-link").setAttribute("href", vidLink);
+
+        // Set img src to vidImage
+        document.getElementById("vid-img").setAttribute("src", vidImage);
+    } else {
+        console.log("The youtube url is not valid.");
+    }
+}
