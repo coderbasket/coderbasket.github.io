@@ -26,6 +26,32 @@
       "Categories": [ 7 ],
       "Slug": "httpsgithub.comCuriousDriveBlazingChat",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/MudBlazor/MudBlazor/",
+      "Title": "Material Design components for Blazor",
+      "Description": "Trusted by thousands of users, from hobby developers to large enterprises. Use MudBlazor to rapidly build amazing web applications without leaving your loved C# language and toolchain.",
+      "Platforms": [ "iOS", " Android", " Windows", " Mac", " Linux", " Browser" ],
+      "ExternalUrl": "https://mudblazor.com/",
+      "YoutubeUrl": null,
+      "FrameWorkName": "Blazor",
+      "ImageUrls": [ "https://preview.redd.it/74vc3yjlpik61.png?width=1079&format=png&auto=webp&s=470c6525ece7012ee27877bf8338ba1f706eb261" ],
+      "Categories": [ 41, 42, 12, 5, 8, 20, 16, 26, 27, 23, 21 ],
+      "Slug": "httpsgithub.comMudBlazorMudBlazor",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/ant-design-blazor/ant-design-blazor",
+      "Title": "Ant Design Blazor",
+      "Description": "A rich set of enterprise-class UI components based on Ant Design and Blazor.",
+      "Platforms": [ "iOS", "Android", "Windows", "Mac", "Linux", "Browser" ],
+      "ExternalUrl": "https://mudblazor.com/",
+      "YoutubeUrl": null,
+      "FrameWorkName": "Blazor",
+      "ImageUrls": [ "https://camo.githubusercontent.com/cfaee67ab0dbd2f189c49d3833affc6ee6129e6500e475bf79caa3aa82fa74e7/68747470733a2f2f67772e616c697061796f626a656374732e636f6d2f6d646e2f726d735f3038653337382f616674732f696d672f412a596c3833524a685545376b4141414141414141414141426b4152516e4151" ],
+      "Categories": [ 41, 42, 12, 5, 8, 20, 16, 26, 27, 23, 21 ],
+      "Slug": "httpsgithub.comantdesignblazorantdesignblazor",
+      "GravatarHash": null
     }
   ]
 }
