@@ -56,7 +56,7 @@ namespace Blazor_App.Shared
     {
         Maui = 1,
         Blazor = 2,
-        WinUI = 3,
+        //WinUI = 3,
         Avalonia = 4,
         Uno = 5,
        

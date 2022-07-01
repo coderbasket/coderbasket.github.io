@@ -104,6 +104,45 @@
       "Categories": [ 41, 42, 44 ],
       "Slug": "httpsgithub.comzhuxb711RXExplorer",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/microsoft/fluent-xaml-theme-editor",
+      "Title": "Fluent XAML Theme Editor",
+      "Description": "This repo contains the full solution and source code to the Fluent XAML Theme Editor - a tool that helps demonstrate the flexibility of the Fluent Design System as well as supports the app development process by generating XAML markup for our ResourceDictionary framework used in Universal Windows Platform (UWP) applications.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/XamlThemeEditor_screenshot.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/RegionBasePrimary_Properties.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/RegionBasePrimary_DetailColorProperties.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/ColorContrast_Good.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/ColorContrast_Bad.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/ExportTheme.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/ExportTheme_Popup.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/VisualStudio_CreateResourceDictionary.png", " \nhttps://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/VisualStudio_CreateResourceDictionary_2.png" ],
+      "Categories": [ 41, 42, 44 ],
+      "Slug": "httpsgithub.commicrosoftfluentxamlthemeeditor",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/Rise-Software/Rise-Media-Player",
+      "Title": " Rise-Media-Player",
+      "Description": "Rise Media Player brings all of your media to a whole new level. If it's videos, the music stored on your devices, discs or even your favourite streaming services; you'll love our player. One library for everything. Almost infinite customisability with settings that are second to none. Stream, browse and explore with Streaming Services - coming soon.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "https://www.microsoft.com/store/r/9PCSZTMTT55Z",
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://repository-images.githubusercontent.com/395109560/f9cefd14-5a6e-4653-aeb6-f48b71edcc3c", "\nhttps://user-images.githubusercontent.com/74561130/156649276-8dc63e37-bf76-4321-ae7a-4e77f2022c37.png" ],
+      "Categories": [ 41, 42, 44 ],
+      "Slug": "httpsgithub.comRiseSoftwareRiseMediaPlayer",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/jenius-apps/nightingale-rest-api-client",
+      "Title": "Nightingale REST Client Issues",
+      "Description": "Welcome to the official repo for Nightingale REST Client issue tracking. This is where people can report bugs, provide general feedback, and make feature requests.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "https://www.microsoft.com/en-us/p/nightingale-rest-api-client/9n2t6f9f5zdn",
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/jenius-apps/nightingale-rest-api-client/raw/master/images/nightingale-hero.png" ],
+      "Categories": [ 41, 42, 44 ],
+      "Slug": "httpsgithub.comjeniusappsnightingalerestapiclient",
+      "GravatarHash": null
     }
   ]
 }
