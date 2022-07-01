@@ -6,5 +6,5 @@ Maui Json hosted here
 
 Submit  using "SUBMIT NEW PROJECT" or email your github repo, you can also contact us if you want your project be removed or need updates like infomations.
 
-# Maui, Blazor, WinUI, Avalonia, UnoPlatforms
+# Maui, Blazor, WinUI, Avalonia, UnoPlatform
 ![https://github.com/coderbasket/coderbasket.github.io/raw/development/Screens/Screenshot.png](https://github.com/coderbasket/coderbasket.github.io/raw/development/Screens/Screenshot.png)
