@@ -65,6 +65,45 @@
       "Categories": [ 41, 42 ],
       "Slug": "httpsgithub.commarafMoney",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/Sergio0694/ComputeSharp",
+      "Title": "ComputeSharp",
+      "Description": "ComputeSharp is a .NET library to run C# code in parallel on the GPU through DX12 and dynamically generated HLSL compute shaders. The available APIs let you access GPU devices, allocate GPU buffers and textures, move data between them and the RAM, write compute shaders entirely in C# and have them run on the GPU. The goal of this project is to make GPU computing easy to use for all .NET developers!",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/10199417/108635546-3512ea00-7480-11eb-8172-99bc59f4eb6f.png" ],
+      "Categories": [ 41, 42, 44 ],
+      "Slug": "httpsgithub.comSergio0694ComputeSharp",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/jenius-apps/ambie",
+      "Title": "Ambie",
+      "Description": "Ambie is an app that plays white noise and nature sounds to help you focus, sleep, and unwind. For many people, having background noise while working on a task helps with concentration. Ambie has a good starting selection of built-in sounds such as rain and beach waves that help you. These can also be used to help you sleep, relax, and de-stress. For instance, those with tinnitus and anxiety have reached out saying Ambie has helped them. And if you download Ambie from the Microsoft Store, you'll get access to a catalogue of online sounds that you can download to expand your library.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/jenius-apps/ambie/raw/main/images/ambie_hero_v3.png" ],
+      "Categories": [ 41, 42, 44, 12 ],
+      "Slug": "httpsgithub.comjeniusappsambie",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/zhuxb711/RX-Explorer",
+      "Title": "UWP Application Privacy Policy",
+      "Description": "RX-Explorer is a powerful UWP file explorer with extensive use of acrylic effects in its UI and a colorful personalization system",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro1.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro2.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro3.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro4.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro5.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro6.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro7.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro8.png" ],
+      "Categories": [ 41, 42, 44 ],
+      "Slug": "httpsgithub.comzhuxb711RXExplorer",
+      "GravatarHash": null
     }
   ]
 }
