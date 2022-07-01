@@ -414,6 +414,97 @@
       "Categories": [ 41, 42 ],
       "Slug": "httpsgithub.comVitalElementXune",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/arklumpus/TreeViewer",
+      "Title": "TreeViewer",
+      "Description": "A cross-platform resurrection of Zune Desktop Music player using AvaloniaUI.",
+      "Platforms": [ "Windows", "Mac", "Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/arklumpus/TreeViewer/raw/main/Icons/Program/Banner.svg" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comarklumpusTreeViewer",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/carina-studio/ULogViewer",
+      "Title": "ULogViewer",
+      "Description": "ULogViewer is a .NET based cross-platform universal log viewer written by C# which supports reading and parsing various type of logs.",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://camo.githubusercontent.com/4142da459f51133bfb2e6f4f0c97bf4c0c517d4b46eea7820d901ab41471de5a/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f554c6f675669657765722f53637265656e73686f74732f53637265656e73686f745f57696e646f77735f5468756d622e706e67", " \nhttps://camo.githubusercontent.com/03b98483760c15bda919943a3cbadb451989f996da7df2fdc820f522b2f94b85/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f554c6f675669657765722f53637265656e73686f74732f53637265656e73686f745f57696e646f7773375f5468756d622e706e67", " \nhttps://camo.githubusercontent.com/33294f30db85f3e36ba1d56bc1a517c81bceb8f92022f7f0a15e5968f7766be4/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f554c6f675669657765722f53637265656e73686f74732f53637265656e73686f745f6d61634f535f5468756d622e706e67", " \nhttps://camo.githubusercontent.com/40d558e44d15933356f5a3e56c6f9b9ff89b4a27c546aa596fed5bfb0eb240d6/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f554c6f675669657765722f53637265656e73686f74732f53637265656e73686f745f4665646f72615f5468756d622e706e67" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comcarinastudioULogViewer",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/sn4k3/UVtools",
+      "Title": "UVtools",
+      "Description": "his simple tool can give you insight of supports and find some failures. Did you forget what resin or other settings you used on a project? This can also save you, check every setting that were used with or simply change them!",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://raw.githubusercontent.com/sn4k3/UVtools/master/wiki/UI1.png", " \nhttps://raw.githubusercontent.com/sn4k3/UVtools/master/wiki/UI2.png", " \nhttps://raw.githubusercontent.com/sn4k3/UVtools/master/UVtools.GUI/Images/Screenshots/SL1ToCbddlp.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comsn4k3UVtools",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/zkSNACKs/WalletWasabi",
+      "Title": "Wasabi",
+      "Description": "An open-source, non-custodial, privacy-focused Bitcoin wallet for desktop.",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/51679301/169354261-c894bac0-27f2-4a29-8470-a7519963a4b5.jpg", " \nhttps://camo.githubusercontent.com/87670baee566fcbfb0e5dcf8a03c4059b9d28abdbeb82a40771b822b6c0302bb/68747470733a2f2f692e696d6775722e636f6d2f67493735454b752e706e67" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comzkSNACKsWalletWasabi",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/dan0v/xdelta3-cross-gui",
+      "Title": "xDelta3 Cross GUI",
+      "Description": "A cross-platform GUI for creating xDelta3 patches, inspired by Moodkiller/xdelta3-gui-2.0, now available for Windows, Linux, and MacOS. Output patches can also be applied on all three major platforms without requiring the GUI.",
+      "Platforms": [ "Windows", "Mac", "Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/dan0v/xdelta3-cross-gui/raw/master/Extra%20Resources/Repository%20Cover.png", "\nhttps://github.com/dan0v/xdelta3-cross-gui/raw/master/Extra%20Resources/Progress-demo.png", "\nhttps://github.com/dan0v/xdelta3-cross-gui/raw/master/Extra%20Resources/Progress-demo.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comdan0vxdelta3crossgui",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/zxyao145/XmlyDownloader",
+      "Title": "XmlyDownloader",
+      "Description": "喜马拉雅专辑下载器，基于NET Core 3.1 和 Avalonia UI，支持Windows、MacOS、Linux~~（由于Avalonia的问题，在MacOS、Linux下中文会显示乱码AvaloniaUI/Avalonia#3522）~~ (已修复)。",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://github.com/zxyao145/XmlyDownloader/raw/master/mdfiles/start.png", " \nhttps://github.com/zxyao145/XmlyDownloader/raw/master/mdfiles/%E4%B8%93%E8%BE%91%E7%A4%BA%E4%BE%8B.png", " \nhttps://github.com/zxyao145/XmlyDownloader/raw/master/mdfiles/%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C.png", " \nhttps://github.com/zxyao145/XmlyDownloader/raw/master/mdfiles/%E4%B8%8B%E8%BD%BD%E7%BB%93%E6%9E%9C.png", " \nhttps://github.com/zxyao145/XmlyDownloader/raw/master/mdfiles/Ubuntu16.04.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comzxyao145XmlyDownloader",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/SinoAHpx/AHpx.RG",
+      "Title": "AHpx.RG",
+      "Description": "As you can see, this is a readme generator, it simply do some chores for you.",
+      "Platforms": [ "Windows", " Mac", " Linuxr" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "Avalonia",
+      "ImageUrls": [ "https://user-images.githubusercontent.com/34391004/154978742-6b836f99-57f4-4d79-9a0b-7a816f21aa6b.png", " \nhttps://user-images.githubusercontent.com/34391004/154978886-cb9f40d4-8290-4af1-9cd3-70dca7b689cd.png", " \nhttps://user-images.githubusercontent.com/34391004/154976416-cd7c5f9a-99dd-4e3b-9c19-e87f8191690a.png", " \nhttps://user-images.githubusercontent.com/34391004/154977599-65a61ff8-966d-4255-b7cf-7f5756329c0e.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comSinoAHpxAHpx.RG",
+      "GravatarHash": null
     }
   ]
 }
