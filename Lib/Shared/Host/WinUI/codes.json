@@ -143,6 +143,45 @@
       "Categories": [ 41, 42, 44 ],
       "Slug": "httpsgithub.comjeniusappsnightingalerestapiclient",
       "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/alihaider11/Social-Blade-Dashboard-C-WPF",
+      "Title": "Social-Blade-Dashboard-C-WPF",
+      "Description": "Social-Blade-Dashboard-C-WPF",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": "https://www.youtube.com/c/CCodeAcademy",
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://repository-images.githubusercontent.com/297230189/0d2d0b00-fbf0-11ea-946a-5f3604a0487b" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comalihaider11SocialBladeDashboardCWPF",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/i470/BinaryOmen-WPF-UI-Kit",
+      "Title": "BinaryOmen WPF UI Kit",
+      "Description": "BinaryOmen WPF UI Kit",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": null,
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://camo.githubusercontent.com/56b7859b08a0f5e41ad6a280cc03adb0f53a8e43509f1cf551f14876b6967cbc/68747470733a2f2f7374617469632e7769787374617469632e636f6d2f6d656469612f3130366363385f31323963303931633437653334356633383363353739663566363164666130317e6d76322e706e67" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comi470BinaryOmenWPFUIKit",
+      "GravatarHash": null
+    },
+    {
+      "ProjectUrl": "https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit",
+      "Title": "Material Design In XAML Toolkit",
+      "Description": "Comprehensive and easy to use Material Design theme and control library for the Windows desktop.",
+      "Platforms": [ "Windows" ],
+      "ExternalUrl": "http://materialdesigninxaml.net/",
+      "YoutubeUrl": null,
+      "FrameWorkName": "WinUI",
+      "ImageUrls": [ "https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-home.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-buttons.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-toggles.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-fields.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-comboboxes.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-palette.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-colortools.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-pickers.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-iconpack.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-cards.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-menutoolbar.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-progress.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-dialogs.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-lists.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-treeview.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-sliders.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-chips.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-typography.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-groupbox.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-snackbars.png", " \nhttps://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-shadows.png" ],
+      "Categories": [ 41, 42 ],
+      "Slug": "httpsgithub.comMaterialDesignInXAMLMaterialDesignInXamlToolkit",
+      "GravatarHash": null
     }
   ]
 }
