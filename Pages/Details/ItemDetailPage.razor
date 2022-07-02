@@ -21,13 +21,7 @@
             {
                 if (value != _paramF)
                 {
-                    _paramF = value;
-                    var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
-                    if (SiteInfo.FrameWork != frameWork)
-                    {
-                        SiteInfo.FrameWork = frameWork;
-                        StateHasChanged();
-                    }
+                    _paramF = value;                   
                 }
             }
         }

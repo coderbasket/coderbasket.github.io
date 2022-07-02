@@ -336,8 +336,8 @@
                 if (SiteInfo.FrameWork != frameWork)
                 {
                     SiteInfo.FrameWork = frameWork;
-                    var items = await DataServiceProvider.GetItemsAsync();
                 }
+                var items = await DataServiceProvider.GetItemsAsync();
             }
             this.ProjectRepo = await DataServiceProvider.GetProjectItemAsync(RepositorySlug);
             if (this.ProjectRepo != null)
