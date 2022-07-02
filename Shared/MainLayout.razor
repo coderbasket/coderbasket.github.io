@@ -890,12 +890,15 @@
                         items.Remove(checkItem);
                     }
                 }
-                
+
             }
         };
         Current = this;
     }
-
+    public async void ShowAlert(string message)
+    {
+        await JS.InvokeVoidAsync("alert", message);
+    }
     public async void ScrollToTop()
     {
         await JS.InvokeVoidAsync("OnScrollEvent");
@@ -934,14 +937,13 @@
     }
     public void NavigateToSubmitForm()
     {
-        Navigation.NavigateTo("submit-form");
+        Navigation.NavigateTo($"submit-form/{SiteInfo.FrameWork.ToString()}");
     }
     public void SelectFrameWork(FrameWork frameWork)
     {
         SiteInfo.FrameWork = frameWork;
-        DataServiceProvider.LoadDataServerAsync();
-        Navigation.NavigateTo($"framework/{frameWork.ToString()}");
-
+        StateHasChanged();
+        Navigation.NavigateTo($"framework/{frameWork.ToString()}");        
     }
     public void NavigateToCount()
     {

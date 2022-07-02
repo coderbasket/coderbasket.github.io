@@ -59,6 +59,7 @@ namespace Blazor_App.Shared
         WinUI = 3,
         Avalonia = 4,
         Uno = 5,
+        Others = 6,
        
 
     }

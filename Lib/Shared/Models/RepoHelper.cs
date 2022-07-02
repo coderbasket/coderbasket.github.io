@@ -115,6 +115,7 @@ namespace Blazor_App.Shared.Models
         {
             if (repo == null)
                 return false;
+           
             if (repo.ProjectUrl.IsValidString() == false)
                 return false;
             if (repo.ProjectUrl.StartsWith("https://github.com/") == false)

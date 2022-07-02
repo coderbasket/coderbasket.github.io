@@ -49,6 +49,8 @@
     }
     void NavigateToCategory(Category categoryParam)
     {
-        Navigation.NavigateTo($"category/{categoryParam.ToString()}");
+        //"/category/{frameworkParameter}/{categoryParam}/"
+        Navigation.NavigateTo($"category/{SiteInfo.FrameWork.ToString()}/{categoryParam.ToString()}");
+
     }
 }

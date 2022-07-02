@@ -56,6 +56,7 @@ namespace Blazor_App.Shared.Models
         [JsonIgnore]
         public ProjectOwner Owner { get; set; }
 
-       
+      
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿@page "/submit-form"
+@page "/submit-form/{frameworkParameter}"
 
 <div style="overflow:auto; display:flex; flex-direction:column-reverse;">
     <div >
@@ -68,34 +69,6 @@
                                     <label style="color:red; font-weight:bolder; font-size:smaller;">We only accepts image url from safe sources like Github. Title and description also scan for unnecessary words.</label>
                                 </div>
 
-                                @*Submit*@
-                                @* <button style="height:55px;" type="submit">Submit</button>*@
-
-
-                                @* <div style="display: inline-flex; gap:8px;">
-                                @foreach (var item in Enum.GetNames(typeof(FrameWork)))
-                                {
-                                <label>
-                                <input class="input_info_checkbox" type="checkbox" checked="checked" name="android"> @item
-                                </label>
-                                }
-
-                                </div>*@
-                                @*Json*@
-                                @if (RepoHelper.IsValidRepo(Repo))
-                                {
-                                    <div style="display:grid;grid-template-rows: auto auto">
-                                        <label style="color:@SiteInfo.AccentColor;" class="input_header" for="psw"><b>JSON OUTPUT</b></label>
-                                        <div>
-                                            @{
-                                                var json = Newtonsoft.Json.JsonConvert.SerializeObject(Repo);
-                                                json = "\n" + json;
-                                                <div id="jsonElement" style="max-width:420px; width:420px;">@json</div>
-                                            }
-                                        </div>
-                                    </div>
-                                }
-
                             </div>
                             <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IC4gn6XHoxFs9e5iQfvt5R7I7zzQZYE9pgSiDoZTsdEGRSb8OCskTQl5Ns61W6eK3BqGVqd6ftHzWZNfmYbh0_ZRqz38xeWKA3Aher5KRslylvmi6AiswjpymgOeuKd0wbQXgAio3mQToDfRPhnOUs">
                         </form>
@@ -143,6 +116,25 @@
     </div>
 </div>
 @code {
+    #region Framework
+    string _paramF;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get { return _paramF; }
+        set
+        {
+            if (value.IsValidString())
+            {
+                if (value != _paramF)
+                {
+                    _paramF = value;
+                    LoadFrameWorks();
+                }
+            }
+        }
+    }
+    #endregion
     static List<ProjectItem> readySubmitList = new List<ProjectItem>();
     public static ProjectItem Repo { get; set; }
     protected override void OnInitialized()
@@ -155,9 +147,18 @@
         UpdateRepo();
         ScrollToTop();
     }
+    void LoadFrameWorks()
+    {
+        var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+        if (SiteInfo.FrameWork != frameWork)
+        {
+            SiteInfo.FrameWork = frameWork;
+            StateHasChanged();
+        }        
+    }
     async void ScrollToTop()
     {
-        await Task.Delay(50);
+        await Task.Delay(30);
         await JS.InvokeVoidAsync("OnScrollEvent");
     }
     void UpdateRepo()
@@ -188,23 +189,44 @@
         Repo.FrameWorkName = SiteInfo.FrameWork.ToString();
         StateHasChanged();
     }
-    void PreviewNow()
+    async void PreviewNow()
     {
         showHide = "block;";
+
         if (RepoHelper.IsValidRepo(Repo))
         {
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(Repo);
-            Repo = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItem>(json);
-            UpdateRepo();
+            var jsonP = await RepoHelper.GetJsonAsync(Repo);
+            bool valid = true;
+            if (jsonP.Contains("Not Found"))
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Invalid repo url... 😌");
+            }
+            if (valid)
+            {
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(Repo);
+                Repo = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItem>(json);
+                UpdateRepo();
+            }
         }
         StateHasChanged();
 
     }
     async void SubmitProjects()
     {
+        
         if (RepoHelper.IsValidRepo(Repo))
         {
-            var items = await DataServiceProvider.GetItemsAsync();
+            var jsonP = await RepoHelper.GetJsonAsync(Repo);
+            bool valid = true;
+            if (jsonP.Contains("Not Found"))
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Invalid repo url... 😌");
+            }
+            if (valid)
+            {
+               var items = await DataServiceProvider.GetItemsAsync();
             if (items == null)
                 return;
             var checkItem = items.Where(p => p.ProjectUrl == Repo.ProjectUrl).FirstOrDefault();
@@ -230,6 +252,8 @@
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
                 DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json);
             }
+            }
+            
         }
     }
    
