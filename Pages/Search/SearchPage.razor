@@ -1,0 +1,125 @@
+﻿@page "/search";
+<style>
+    .form-group {
+        width: 100%; /*as you want*/
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .suggested_input {
+        width: 100%;
+    }
+
+    ul.suggestions {
+        width: 100%; /* its width according to input width */
+        border: 1px solid #ccc;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+        /* if you want style so that's why i use "li a" also */
+        ul.suggestions li,
+        ul.suggestions li a {
+            background-color: #fff;
+            color: #000;
+            font-size: 12px; /* according to your requirement */
+            font-family: arial;
+            font-weight: normal;
+            padding: 0 10px;
+            margin: 0px;
+            line-height: 25px; /* according to your requirement */
+            display: block;
+            cursor: pointer;
+        }
+
+            ul.suggestions li:hover,
+            ul.suggestions li a:hover {
+                background-color: #ccc;
+                color: #000;
+                text-decoration: normal;
+            }
+
+                ul.suggestions li:hover .suggested_input {
+                    background-color: #FAFFBD;
+                    border: 1px solid #3C8DBC;
+                }
+
+    .suggested_input:hover ul.suggestions {
+        display: block;
+    }
+</style>
+<ContentPage>
+    <Content>
+       <div>
+            <div style="display:grid; grid-template-columns:1fr auto 1fr">
+                <div></div>
+                <div style="margin-bottom:350px;">
+                    <h1 style="text-align:center;">Search @SiteInfo.FrameWork.ToString() Templates</h1>
+
+                    <input style="padding-left:8px;" placeholder="Search" @oninput="@onChange" type="text" class="text" size="60" />
+                    <p>
+                        <button id="get" class="button">
+                            Search Now
+                        </button>
+                    </p>
+                    <h4 style="margin-top:-15px;">Search results</h4>
+                    @if (resultItems.Count > 0)
+                    {
+                        <div class="form-group">
+
+                            <ul class="suggestions">
+                                @foreach (var item in resultItems)
+                                {
+                                    <li @onclick="(()=>{MainLayout.Current.NavigateToDetails(item);})">
+                                        <div style=" gap:2px; margin-top:4px; border-radius:5px; border:1px solid black; max-width:500px;text-overflow: ellipsis;  border-color:@SiteInfo.AccentColor; overflow:hidden;">
+                                            <div style="padding:8px;">
+                                                <h5>@item.Title</h5>
+                                                <h4>@item.Description</h4>
+                                                <h6 style="color:@SiteInfo.AccentColor;">@item.ProjectUrl</h6>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+                <div></div>
+            </div>
+       </div>
+    </Content>
+</ContentPage>
+
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+   
+    private string value { get; set; }
+    private void onChange(Microsoft.AspNetCore.Components.ChangeEventArgs args)
+    {
+        value = (string)args.Value;
+        InitiateQuery(value);
+    }
+    bool processing = false;
+    async void InitiateQuery(string query)
+    {
+        if(query.IsValidString() == false)
+        {
+            resultItems = new List<ProjectItem>();
+            StateHasChanged();
+            return;
+        }
+        if (processing)
+            return;
+        processing = true;
+        var items = await DataServiceProvider.GetItemsAsync();
+        resultItems = items.Where(p => p.GetQueryContent().ToLower().Contains(query.ToLower())).ToList();
+        StateHasChanged();
+        processing = false;
+    }
+    List<ProjectItem> resultItems = new List<ProjectItem>();
+}

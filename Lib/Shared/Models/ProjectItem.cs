@@ -76,7 +76,10 @@ namespace Blazor_App.Shared.Models
         [JsonIgnore]
         public ProjectOwner Owner { get; set; }
 
-      
+        public string GetQueryContent()
+        {
+            return this.Title + " " + this.Description + " " + this.ProjectUrl + " " + this.SubmittedBy;
+        }
 
     }
 }

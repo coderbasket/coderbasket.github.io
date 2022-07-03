@@ -949,9 +949,17 @@
     {
         Navigation.NavigateTo($"counter/{2000}");
     }
+    public void NavigateToSearch()
+    {
+        Navigation.NavigateTo($"search/");
+    }
 
     public async Task CopyTextToClipboard(string elementId)
     {
         await JS.InvokeVoidAsync("copyClipboard", elementId);
+    }
+    public void NavigateToDetails(ProjectItem item)
+    {
+        Navigation.NavigateTo($"details/{SiteInfo.FrameWork}/{item.Slug}");
     }
 }
