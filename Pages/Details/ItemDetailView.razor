@@ -4,28 +4,40 @@
         <div>
             <div class="row">
                 <div class="clearfix">
-                    <h3 class="title pull-left">@ProjectRepo.Title</h3>
+                    <div style="display:grid; grid-template-columns:1fr auto">
+                        <h3 class="title pull-left">@ProjectRepo.Title</h3>
+                        <div>
+                        </div>
+                    </div>
                 </div>
                 <div class="separator-2"></div>
             </div>
 
             <div class="row">
-
-
                 <div class="col-md-12">
                     <div class="description__section">
-                        <div>
-                            <img src="@Owner.GravatarImage()" class="circle pull-left author__gravatar" />
-                            <div class="snppts-meta">
-                                <span class="createdby">Created by</span>
-                                <a href="/author/@Owner.GitHubHandle">
-                                    <span class="author">
-                                        @ProjectRepo.Repository.OwnerName
+                        <div style="display:grid; grid-template-columns:1fr auto">
+                            <div>
+                                <img src="@Owner.GravatarImage()" class="circle pull-left author__gravatar" />
+                                <div class="snppts-meta">
+                                    <span class="createdby">Created by</span>
+                                    <a href="/author/@Owner.GitHubHandle">
+                                        <span class="author">
+                                            @ProjectRepo.Repository.OwnerName
 
-                                    </span>
-                                </a>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
+                            @if (IsDeleteEnabled)
+                            {
+                                <div style="top:0; position:relative; margin-bottom:auto; margin-top:-7px;margin-right:55px; display:grid; grid-template-columns:auto auto">
+                                    <CoderBasket.Blazor.Controls.ButtonSvg Clicked="EditProductNow" Style="margin-left:-60px;" IconColor="forestgreen" Path="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" ></CoderBasket.Blazor.Controls.ButtonSvg>
+                                    <CoderBasket.Blazor.Controls.ButtonSvg IconColor="red" Clicked="@DeleteItem"></CoderBasket.Blazor.Controls.ButtonSvg>
+                                </div>
+                            }
                         </div>
+
                     </div>
                     <div class="description__section" style="color:@SiteInfo.TextColor">
                         <h5>Description</h5>
@@ -35,7 +47,7 @@
                         <h5>Platforms</h5>
                         <CoderBasket.Blazor.Items.PlatformSupportView ProjectRepo="ProjectRepo"></CoderBasket.Blazor.Items.PlatformSupportView>
                     </div>
-                    
+
                     @if (ProjectRepo.ExternalUrl != null)
                     {
                         <div class="description__section">
@@ -60,10 +72,10 @@
                                 bool valid = true;
                                 if (jsonP.Contains("Not Found"))
                                 {
-                                    valid = false;                                  
+                                    valid = false;
                                 }
                                 if (valid)
-                                {                                    
+                                {
                                     var results = Newtonsoft.Json.JsonConvert.DeserializeObject<GithubRepoInformation>(jsonP);
                                     if (string.IsNullOrEmpty(this.ProjectRepo.Description))
                                     {
@@ -244,10 +256,10 @@
                     </div>
                     @if (ProjectRepo.YoutubeUrl.IsValidString())
                     {
-                         <h5>Watch on Youtube</h5>
+                        <h5>Watch on Youtube</h5>
                         <CoderBasket.Blazor.Items.PlayButton Repo="@this.ProjectRepo"></CoderBasket.Blazor.Items.PlayButton>
                     }
-                   
+
                     @if (ProjectRepo.ImageUrls?.Count() > 0)
                     {
                         <div class="description__section">
@@ -265,10 +277,16 @@
                             </div>
                         </div>
                     }
+                    @if (ProjectRepo.SubmittedBy.IsValidString())
+                    {
+                        <h5>Submitted By</h5>
+                        <h4 style="color:@SiteInfo.AccentColor;">@ProjectRepo.SubmittedBy</h4>
+                    }
                 </div>
             </div>
         </div>
     }
+    
 </div>
 
 @code {
@@ -301,7 +319,7 @@
     [Parameter]
     public string RepositorySlug
     {
-        get{ return _slug; }
+        get { return _slug; }
         set
         {
             if (value.IsValidString())
@@ -356,7 +374,7 @@
                 this.Owner = ProjectOwner.GetDefaultAuthor(this.ProjectRepo.GitHubRepoInfo);
                 jsonP = await RepoHelper.GetJsonAsync(this.ProjectRepo);
                 redererName = this.ProjectRepo.ProjectUrl;
-               
+
             }
         }
         StateHasChanged();
@@ -364,15 +382,57 @@
     }
     ProjectItem _repo;
     [Parameter]
-    public ProjectItem ProjectRepo 
-    { 
-        get{ return _repo; }
+    public ProjectItem ProjectRepo
+    {
+        get { return _repo; }
         set
         {
             _repo = value;
             RenderToUI();
         }
     }
-    
+
     public ProjectOwner Owner { get; set; }
+    [Parameter]
+    public bool IsDeleteEnabled { get; set; } = true;
+    public static int deleteCounter = 0;
+    async void DeleteItem()
+    {
+        if(deleteCounter >= 5)
+        {
+            MainLayout.Current.ShowAlert("You can only delete 5 times... 😌");
+            return;
+        }
+        if (this.ProjectRepo == null)
+            return;
+        bool confirmed = await JS.InvokeAsync<bool>("confirm", "Delete Project ❌, Do you to delete this project from server?");
+        if (confirmed)
+        {
+            var items = await DataServiceProvider.GetItemsAsync();
+            var item = items.Where(p => p.ProjectUrl == this.ProjectRepo.ProjectUrl).FirstOrDefault();
+            if (item != null)
+            {
+                items.Remove(item);
+                if(items.Count > 0)
+                {
+                    ProjectItemData projectItemData = new ProjectItemData();
+                    projectItemData.Items = items;
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
+                    DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json, "Delete update...");
+                    deleteCounter++;
+                    Navigation.NavigateTo("/");
+                    //MainLayout.Current.ShowAlert("Deleted...✅");
+
+                }
+            }
+        }
+        
+    }
+    void EditProductNow()
+    {
+        if (this.ProjectRepo == null)
+            return;
+        CoderBasket.Blazor.Pages.Submit.SubmitPage.Repo = this.ProjectRepo;
+        Navigation.NavigateTo($"submit-form/{SiteInfo.FrameWork.ToString()}");
+    }
 }

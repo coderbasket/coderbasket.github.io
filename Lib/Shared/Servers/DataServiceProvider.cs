@@ -164,13 +164,13 @@ namespace Blazor_App.Shared.Servers
                 return $"https://github.com/coderbasket/coderbasket.github.io/blob/development/Lib/Shared/Host/{frameWork}/codes.json";
             }
         }
-        public static void UpdateToServer(FrameWork frameWork, string serialize)
+        public static void UpdateToServer(FrameWork frameWork, string serialize, string message)
         {
-            CookieManager.PushCookies(frameWork, serialize);
+            CookieManager.PushCookies(frameWork, serialize, message);
         }
         public static void LoadDeveloperTools()
         {
-            //var coockie = CookieManager.InitCookie();
+           
         }
     }
 }

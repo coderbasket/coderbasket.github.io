@@ -2,7 +2,7 @@
 @page "/submit-form/{frameworkParameter}"
 
 <div style="overflow:auto; display:flex; flex-direction:column-reverse;">
-    <div >
+    <div>
         <div class="banner dark-translucent-bg" style="background-image:url('img/background.jpg'); background-position: 50% 27%;">
             <style type="text/css">
                 .platform_span:hover {
@@ -37,7 +37,7 @@
                             <div>
                                 <div class="row_div">
                                     <div class="column">
-                                        <label style="color:@SiteInfo.AccentDarkerColor;" for="uname"><b>GITHUB SOURCE REPO</b></label>
+                                        <label style="color:wheat;" for="uname"><b>GITHUB SOURCE REPO</b></label>
                                     </div>
 
                                 </div>
@@ -65,7 +65,12 @@
                                 @*Image urls*@
                                 <label class="input_header" for="psw"><b>IMAGE URLS (Separated width comma ,)</b></label>
                                 <textarea @bind="ImageUrls" placeholder="Required" id="w3review" name="w3review" rows="3" style="max-width:420px; color:@SiteInfo.TextColor;" cols="50"></textarea>
-                                <div style="background-color:@SiteInfo.BarBacgroundColor; border-radius:8px; padding:8px;">
+
+                                @*YOUTUBE*@
+                                <label style="margin-top:-10px; " class="input_header" for="psw"><b>Submitted by</b></label>
+                                <input @bind-value="Repo.SubmittedBy" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="Name (Optional)" type="text">
+                                
+                                <div style="margin-top:8px; background-color:@SiteInfo.BarBacgroundColor; border-radius:8px; padding:8px;">
                                     <label style="color:red; font-weight:bolder; font-size:smaller;">We only accepts image url from safe sources like Github. Title and description also scan for unnecessary words.</label>
                                 </div>
 
@@ -77,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <section class="main-container" style="background-color:@SiteInfo.BacgroundColor;">
+        <section class="main-container" style="background-color:@SiteInfo.BackgroundColor;">
             <div class="container">
                 <div class="row">
                     <label style="margin-left:16px; color:@SiteInfo.AccentColor;" class="input_header" for="psw"><b>CATEGORIES</b></label>
@@ -88,9 +93,9 @@
                             <div>
                                 @{
                                     int counter = 1;
-                                    @foreach (var item in Enum.GetValues(typeof(Category)))
+                                                    @foreach (var item in Enum.GetValues(typeof(Category)))
                                     {
-                                        <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
+                                                        <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
                                         counter++;
                                     }
                                 }
@@ -106,7 +111,7 @@
                         <div class="row" style="display:@showHide">
                             @if (RepoHelper.IsValidRepo(Repo))
                             {
-                                <CoderBasket.Blazor.Pages.Details.ItemDetailView ProjectRepo="Repo"></CoderBasket.Blazor.Pages.Details.ItemDetailView>
+                                <CoderBasket.Blazor.Pages.Details.ItemDetailView IsDeleteEnabled="false" ProjectRepo="Repo"></CoderBasket.Blazor.Pages.Details.ItemDetailView>
                             }
                         </div>
                     </div>
@@ -146,6 +151,7 @@
         }
         UpdateRepo();
         ScrollToTop();
+        WordsFilter.LoadFilters();
     }
     void LoadFrameWorks()
     {
@@ -154,7 +160,7 @@
         {
             SiteInfo.FrameWork = frameWork;
             StateHasChanged();
-        }        
+        }
     }
     async void ScrollToTop()
     {
@@ -214,9 +220,13 @@
     }
     async void SubmitProjects()
     {
-        
+        StateHasChanged();
         if (RepoHelper.IsValidRepo(Repo))
         {
+            if (Repo.ProjectUrl.EndsWith("/"))
+            {
+                Repo.ProjectUrl = Repo.ProjectUrl.Remove(Repo.ProjectUrl.Length - 1, 1);
+            }
             var jsonP = await RepoHelper.GetJsonAsync(Repo);
             bool valid = true;
             if (jsonP.Contains("Not Found"))
@@ -224,39 +234,66 @@
                 valid = false;
                 MainLayout.Current.ShowAlert("Invalid repo url... 😌");
             }
+            var checkTitle = WordsFilter.FilterIsSafeWords(Repo.Title);
+            if(checkTitle == false)
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Check title for unnecessary words... 😌");
+            }
+            var checkDescription = WordsFilter.FilterIsSafeWords(Repo.Description);
+            if (checkDescription == false)
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Check description for unnecessary words... 😌");
+            }
+            foreach (var url in Repo.ImageUrls)
+            {
+                var isSafe = SafeHelper.GetContainsSafeImageUrls().Any(s => url.Contains(s));
+                if (isSafe == false)
+                {
+                    valid = false;
+                    MainLayout.Current.ShowAlert("Url is not found in safe list...\n" + url);
+                    break;
+                }
+            }
             if (valid)
             {
-               var items = await DataServiceProvider.GetItemsAsync();
-            if (items == null)
-                return;
-            var checkItem = items.Where(p => p.ProjectUrl == Repo.ProjectUrl).FirstOrDefault();
-            bool hasChanged = false;
-            if(checkItem == null)
-            {
-                items.Add(Repo);
-                hasChanged = true;
-            }
-            else
-            {
-                bool confirmed = await JS.InvokeAsync<bool>("confirm", "This repository already exist, Do you to update this repository?");
-                if (confirmed)
+                var items = await DataServiceProvider.GetItemsAsync();
+                if (items == null)
+                    return;
+                var checkItem = items.Where(p => p.ProjectUrl == Repo.ProjectUrl).FirstOrDefault();
+                bool hasChanged = false;
+                if (checkItem == null)
                 {
+                    Repo.ImageUrls = Repo.ImageUrls.Distinct().ToList();
+                    Repo.Categories = Repo.Categories.Distinct().ToList();
+                    Repo.Platforms = Repo.Platforms.Distinct().ToArray();
                     items.Add(Repo);
                     hasChanged = true;
                 }
+                else
+                {
+                    bool confirmed = await JS.InvokeAsync<bool>("confirm", "This repository already exist, Do you to update this repository?");
+                    if (confirmed)
+                    {
+                        items.Add(Repo);
+                        hasChanged = true;
+                    }
+                }
+                if (hasChanged)
+                {
+                    ProjectItemData projectItemData = new ProjectItemData();
+                    projectItemData.Items = items;
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
+                    DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json, "Added Update...");
+                    Repo = new ProjectItem();
+                    StateHasChanged();
+                }
             }
-            if (hasChanged)
-            {
-                ProjectItemData projectItemData = new ProjectItemData();
-                projectItemData.Items = items;
-                var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
-                DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json);
-            }
-            }
-            
+
         }
     }
-   
+
     string showHide = "block;";
     void HideShowPreview()
     {
