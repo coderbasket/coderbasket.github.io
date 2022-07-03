@@ -10,3 +10,6 @@ Submit  using "SUBMIT NEW PROJECT", you can also contact us if you want your pro
 
  ## Submit your beautiful snippets here 😊...
 *[https://coderbasket.github.io](https://coderbasket.github.io)*
+
+Contributors and community are welcome, to make it beautiful open source .net projects gallery 😊😉.
+
