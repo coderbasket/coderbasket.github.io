@@ -6,8 +6,8 @@
         {
             foreach (var item in Categories)
             {
-                <li>
-                    <a style="font-weight:bold; cursor:pointer;" @onclick="@(()=>{ NavigateToCategory(item); })">
+                <li @onclick="@(()=>{ NavigateToCategory(item); })">
+                    <a style="font-weight:bold; cursor:pointer;" >
                         <span>@item</span>
                         <span style="margin-left:8px; font-family:FontAwesome;">&#xf101;</span>
                     </a>
@@ -49,8 +49,7 @@
     }
     void NavigateToCategory(Category categoryParam)
     {
-        //"/category/{frameworkParameter}/{categoryParam}/"
-        Navigation.NavigateTo($"category/{SiteInfo.FrameWork.ToString()}/{categoryParam.ToString()}");
+        MainLayout.Current.NavigateToCategory(categoryParam);
 
     }
 }

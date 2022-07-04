@@ -32,7 +32,7 @@
                             @if (IsDeleteEnabled)
                             {
                                 <div style="top:0; position:relative; margin-bottom:auto; margin-top:-7px;margin-right:55px; display:grid; grid-template-columns:auto auto">
-                                    <CoderBasket.Blazor.Controls.ButtonSvg Clicked="EditProductNow" Style="margin-left:-60px;" IconColor="forestgreen" Path="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" ></CoderBasket.Blazor.Controls.ButtonSvg>
+                                    <CoderBasket.Blazor.Controls.ButtonSvg Clicked="EditProductNow" Style="margin-left:-60px;" IconColor="forestgreen" Path="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"></CoderBasket.Blazor.Controls.ButtonSvg>
                                     <CoderBasket.Blazor.Controls.ButtonSvg IconColor="red" Clicked="@DeleteItem"></CoderBasket.Blazor.Controls.ButtonSvg>
                                 </div>
                             }
@@ -57,7 +57,17 @@
                     }
                     <div class="description__section">
 
-                        <h5> Check out the code</h5>
+                        <div style="display:grid; grid-template-columns: 1fr auto">
+                            <h5> Check out the code</h5>
+                            @if (this.ProjectRepo.GitHubRepoInfo != null && this.ProjectRepo.GitHubRepoInfo.Stars > 0)
+                            {
+                                <div>
+                                    <i class="fa fa-star"></i>
+                                    <b class="text">@ProjectRepo.GitHubRepoInfo.Stars</b>
+                                </div>
+
+                            }
+                        </div>
 
                         @if (!string.IsNullOrEmpty(this.ProjectRepo.GitHubRepoInfo.ProjectName))
                         {
@@ -116,8 +126,8 @@
                                                     <div class="updated" style="color:@SiteInfo.TextColor">
                                                         Latest commit to the <strong style="color:@SiteInfo.AccentColor">@results.default_branch</strong> branch on <strong style="color:@SiteInfo.AccentColor">@pushed_at</strong>
                                                     </div>
-                                                    <a class="download" target="_blank" style="color:@SiteInfo.AccentColor" href="@ProjectRepo.GitHubRepoInfo.DownloadZipUrl" title="Get an archive of this repository">Download as zip</a>
-
+                                                    @*<a class="download" target="_blank" style="color:@SiteInfo.AccentColor" href="@ProjectRepo.GitHubRepoInfo.DownloadZipUrl" title="Get an archive of this repository">Download as zip</a>*@
+                                                    <a class="download" target="_blank" style="color:@SiteInfo.AccentColor" href="@ProjectRepo.ProjectUrl" title="Goto Source">Goto Source</a>
                                                     <style type="text/css">
                                                         .github-widget {
                                                             margin-top: 20px;
@@ -286,7 +296,7 @@
             </div>
         </div>
     }
-    
+
 </div>
 
 @code {
@@ -377,6 +387,11 @@
 
             }
         }
+        if (RepoHelper.IsValidRepo(this.ProjectRepo))
+        {
+            if (ProjectRepo.GitHubRepoInfo != null)
+                await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+        }
         StateHasChanged();
         rendering = false;
     }
@@ -398,7 +413,7 @@
     public static int deleteCounter = 0;
     async void DeleteItem()
     {
-        if(deleteCounter >= 5)
+        if (deleteCounter >= 5)
         {
             MainLayout.Current.ShowAlert("You can only delete 5 times... 😌");
             return;
@@ -413,7 +428,7 @@
             if (item != null)
             {
                 items.Remove(item);
-                if(items.Count > 0)
+                if (items.Count > 0)
                 {
                     ProjectItemData projectItemData = new ProjectItemData();
                     projectItemData.Items = items;
@@ -426,7 +441,7 @@
                 }
             }
         }
-        
+
     }
     void EditProductNow()
     {

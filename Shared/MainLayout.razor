@@ -962,4 +962,9 @@
     {
         Navigation.NavigateTo($"details/{SiteInfo.FrameWork}/{item.Slug}");
     }
+    public void NavigateToCategory(Category categoryParam)
+    {
+        Navigation.NavigateTo($"category/{SiteInfo.FrameWork.ToString()}/{categoryParam.ToString()}");
+       
+    }
 }

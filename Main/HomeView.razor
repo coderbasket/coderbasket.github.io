@@ -10,7 +10,7 @@
                 {
                     @foreach (var item in ProjectItems)
                     {
-                        <CoderBasket.Blazor.Items.ItemView  ProjectRepo="item"></CoderBasket.Blazor.Items.ItemView>
+                        <CoderBasket.Blazor.Items.ItemView ProjectRepo="item"></CoderBasket.Blazor.Items.ItemView>
                     }
                 }
             </div>
@@ -40,18 +40,10 @@
         get { return _paramF; }
         set
         {
-            if (!string.IsNullOrEmpty(value))
+            if (value.IsValidString())
             {
-                if (value != _paramF)
-                {
-                    if (!string.IsNullOrEmpty(value))
-                    {
-                        _paramF = value;
-                        RenderFramework();
-
-                    }
-
-                }
+                _paramF = value;
+                RenderFramework();
             }
         }
     }
@@ -79,25 +71,21 @@
         get { return _param; }
         set
         {
-            if (value != _param)
+            if (value.IsValidString())
             {
-                if (!string.IsNullOrEmpty(value))
-                {
-                    _param = value;
-                    RenderQuery();
-
-                }
-
-
+                _param = value;
+                RenderCategory();
 
             }
+
         }
     }
-    async void RenderQuery()
+    async void RenderCategory()
     {
-        var items = await DataServiceProvider.GetItemsAsync();
         var _category = RepoHelper.GetCategory(categoryParam);
-        this.AllItems = items.Where(x => x.Categories.Contains(_category)).ToList();
+        var loadedItems = await DataServiceProvider.GetItemsAsync();
+        loadedItems = loadedItems.Where(x => x.Categories.Contains(_category)).ToList();
+        this.AllItems = loadedItems;
         StateHasChanged();
     }
     #endregion
@@ -114,22 +102,17 @@
             AllItems = await DataServiceProvider.GetItemsAsync();
         }
     }
-
+    bool rendering = false;
     async void RenderItems()
     {
         if (DataServiceProvider.ItemHasLoaded == false)
         {
             return;
         }
-        if (!string.IsNullOrEmpty(frameworkParameter))
-        {
-            var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
-            if (SiteInfo.FrameWork != frameWork)
-            {
-                SiteInfo.FrameWork = frameWork;
-                this.AllItems = await DataServiceProvider.GetItemsAsync();
-            }
-        }
+        if (rendering)
+            return;
+        rendering = true;
+
         if (this.AllItems != null && this.AllItems.Count > 0)
         {
             ChunkItems = this.AllItems.Chunk(9).ToList();
@@ -141,6 +124,28 @@
             pageNumber = 1;
             StateHasChanged();
         }
+        else
+        {
+            var loadedItems = await DataServiceProvider.GetItemsAsync();
+            if (!string.IsNullOrEmpty(frameworkParameter))
+            {
+                var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+                if (SiteInfo.FrameWork != frameWork)
+                {
+                    SiteInfo.FrameWork = frameWork;
+                    loadedItems = await DataServiceProvider.GetItemsAsync();
+                }
+
+            }
+            if (categoryParam.IsValidString())
+            {
+                var _category = RepoHelper.GetCategory(categoryParam);
+                loadedItems = loadedItems.Where(x => x.Categories.Contains(_category)).ToList();
+                ProjectItems = loadedItems.ToArray();
+            }
+            StateHasChanged();
+        }
+        rendering = false;
     }
 
     private ProjectItem[] ProjectItems { get; set; }
@@ -162,8 +167,14 @@
     }
     [Parameter]
     public bool PreLoaded { get; set; } = true;
+    async void LoadSeletedPopularCategories(Category category)
+    {
+        var _snippets = await DataServiceProvider.GetItemsAsync();
+        var items = await DataServiceProvider.GetItemsAsync();
+        var populars = items.Where(p => p.Categories.Contains(category)).ToList();
+        AllItems = populars;
 
-
+    }
 
 
     void NextPage()
