@@ -22,10 +22,12 @@
                                 <div class="snppts-meta">
                                     <span class="createdby">Created by</span>
                                     <a href="/author/@Owner.GitHubHandle">
-                                        <span class="author">
+                                        @if(this.ProjectRepo.Repository.OwnerName.IsValidString())
+                                        {
+                                            <span class="author">
                                             @ProjectRepo.Repository.OwnerName
-
-                                        </span>
+                                            </span>
+                                        }
                                     </a>
                                 </div>
                             </div>
@@ -59,7 +61,7 @@
 
                         <div style="display:grid; grid-template-columns: 1fr auto">
                             <h5> Check out the code</h5>
-                            @if (this.ProjectRepo.GitHubRepoInfo != null && this.ProjectRepo.GitHubRepoInfo.Stars > 0)
+                            @if (this.ProjectRepo.GitHubRepoInfo != null && this.ProjectRepo.GitHubRepoInfo.Stars > 0 && IsDeleteEnabled)
                             {
                                 <div>
                                     <i class="fa fa-star"></i>
@@ -69,7 +71,7 @@
                             }
                         </div>
 
-                        @if (!string.IsNullOrEmpty(this.ProjectRepo.GitHubRepoInfo.ProjectName))
+                        @if (this.ProjectRepo.GitHubRepoInfo.ProjectName.IsValidString())
                         {
                             var repo = this.ProjectRepo.GitHubRepoInfo.ProjectUrl;
                             @* var vendorName = repo.Split('/')[0];
@@ -87,9 +89,9 @@
                                 if (valid)
                                 {
                                     var results = Newtonsoft.Json.JsonConvert.DeserializeObject<GithubRepoInformation>(jsonP);
-                                    if (string.IsNullOrEmpty(this.ProjectRepo.Description))
+                                    if (this.ProjectRepo.Description.IsValidString() == false)
                                     {
-                                        if (!string.IsNullOrEmpty(results.description))
+                                        if (results.description.IsValidString())
                                         {
                                             this.ProjectRepo.Description = results.description;
                                         }
@@ -387,10 +389,13 @@
 
             }
         }
-        if (RepoHelper.IsValidRepo(this.ProjectRepo))
+        if (IsDeleteEnabled)
         {
-            if (ProjectRepo.GitHubRepoInfo != null)
-                await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+            if (RepoHelper.IsValidRepo(this.ProjectRepo))
+            {
+                if (ProjectRepo.GitHubRepoInfo != null)
+                    await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+            }
         }
         StateHasChanged();
         rendering = false;

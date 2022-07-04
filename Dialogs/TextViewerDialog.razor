@@ -16,10 +16,10 @@
 
 @code {
     string content = "";
-    protected override void OnInitialized()
+    protected async override void OnInitialized()
     {
         base.OnInitialized();
-        var projectItemData = DataServiceProvider.GetProjectItemData();
+        var projectItemData = await SafeHelper.GetContainsSafeImageUrlsAsync();
         content = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
         StateHasChanged();
 

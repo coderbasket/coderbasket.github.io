@@ -246,14 +246,18 @@
                 valid = false;
                 MainLayout.Current.ShowAlert("Check description for unnecessary words... 😌");
             }
-            foreach (var url in Repo.ImageUrls)
+            var sf = await SafeHelper.GetContainsSafeImageUrlsAsync();
+            if(sf?.Count > 0)
             {
-                var isSafe = SafeHelper.GetContainsSafeImageUrls().Any(s => url.Contains(s));
-                if (isSafe == false)
+                foreach (var url in Repo.ImageUrls)
                 {
-                    valid = false;
-                    MainLayout.Current.ShowAlert("Url is not found in safe list...\n" + url);
-                    break;
+                    var isSafe = sf.Any(s => url.Contains(s));
+                    if (isSafe == false)
+                    {
+                        valid = false;
+                        MainLayout.Current.ShowAlert("Url is not found in safe list...\n" + url);
+                        break;
+                    }
                 }
             }
             if (valid)

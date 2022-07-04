@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Cookies\CookieManager.cshidden" />
+    <None Remove="Data\safe_urls.json" />
     <None Remove="formatter.json" />
     <None Remove="Helpers\bad_words.txt" />
     <None Remove="Host\Avalonia\codes.json" />
@@ -21,16 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Cookies\CookieManager.cshidden" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="formatter.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <EmbeddedResource Include="Data\bad_words.txt" />
+    <EmbeddedResource Include="Data\safe_urls.json" />
     <EmbeddedResource Include="Host\Others\codes.json" />
     <EmbeddedResource Include="Host\trash_bin.json" />
     <EmbeddedResource Include="Host\Maui\codes.json">
