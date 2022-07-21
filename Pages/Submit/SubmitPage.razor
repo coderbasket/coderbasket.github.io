@@ -69,7 +69,7 @@
                                 @*YOUTUBE*@
                                 <label style="margin-top:-10px; " class="input_header" for="psw"><b>Submitted by</b></label>
                                 <input @bind-value="Repo.SubmittedBy" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="Name (Optional)" type="text">
-                                
+
                                 <div style="margin-top:8px; background-color:@SiteInfo.BarBacgroundColor; border-radius:8px; padding:8px;">
                                     <label style="color:red; font-weight:bolder; font-size:smaller;">We only accepts image url from safe sources like Github. Title and description also scan for unnecessary words.</label>
                                 </div>
@@ -93,9 +93,9 @@
                             <div>
                                 @{
                                     int counter = 1;
-                                                    @foreach (var item in Enum.GetValues(typeof(Category)))
+                                    @foreach (var item in Enum.GetValues(typeof(Category)))
                                     {
-                                                        <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
+                                        <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
                                         counter++;
                                     }
                                 }
@@ -208,6 +208,14 @@
                 valid = false;
                 MainLayout.Current.ShowAlert("Invalid repo url... 😌");
             }
+
+            if (Repo.YoutubeUrl.StartsWith("https://youtu.be/"))
+            {
+                var videoId = Repo.YoutubeUrl.Split("https://youtu.be/").LastOrDefault();
+                var yt = "https://www.youtube.com/watch?v=" + videoId;
+                yt = yt.Trim();
+                Repo.YoutubeUrl = yt;
+            }
             if (valid)
             {
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(Repo);
@@ -235,7 +243,7 @@
                 MainLayout.Current.ShowAlert("Invalid repo url... 😌");
             }
             var checkTitle = WordsFilter.FilterIsSafeWords(Repo.Title);
-            if(checkTitle == false)
+            if (checkTitle == false)
             {
                 valid = false;
                 MainLayout.Current.ShowAlert("Check title for unnecessary words... 😌");
@@ -247,7 +255,7 @@
                 MainLayout.Current.ShowAlert("Check description for unnecessary words... 😌");
             }
             var sf = await SafeHelper.GetContainsSafeImageUrlsAsync();
-            if(sf?.Count > 0)
+            if (sf?.Count > 0)
             {
                 foreach (var url in Repo.ImageUrls)
                 {

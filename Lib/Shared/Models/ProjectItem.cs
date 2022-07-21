@@ -54,7 +54,7 @@ namespace Blazor_App.Shared.Models
         public string Description { get; set; }
         public string[] Platforms { get; set; } = new string[] {"iOS", "Android", "Windows", "Mac", "Linux", "Browser", };
         public string ExternalUrl { get; set; }
-        public string YoutubeUrl { get; set; }
+        public string YoutubeUrl { get; set; }       
         public string FrameWorkName { get; set; } = SiteInfo.FrameWork.ToString();
         public List<string> ImageUrls { get; set; } = new List<string>();
         public List<Category> Categories { get; set; } = new List<Category>() { Category.OTHERS };
