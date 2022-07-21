@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Blazor_App.Shared.Extensions;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +10,17 @@ namespace Blazor_App.Shared.Tools
 {
     public class ToolHelper
     {
-        public async static Task<string> GetToolsItemsAsync()
+        public async static Task<ToolRoot> GetToolItemsAsync()
         {
-            string url = "";
-            string json = "";
+            ToolRoot toolRoot = null;
+            string url = "https://raw.githubusercontent.com/coderbasket/coderbasket.github.io/development/Lib/Shared/Tools/tools_data.json";
+           
             var txt = await CookUpServices.DownloadstringAsync(url);
-            return json;
+            if (txt.IsValidString())
+            {
+                toolRoot = JsonConvert.DeserializeObject<ToolRoot>(txt);
+            }
+            return toolRoot;
         }
     }
     public class ToolRoot
@@ -26,6 +33,6 @@ namespace Blazor_App.Shared.Tools
         public string Name { get; set; }
         public string Summary { get; set; }
         public string Description { get; set; }
-        public List<string> Images { get; set; }
+        public string[] Images { get; set; }
     }
 }

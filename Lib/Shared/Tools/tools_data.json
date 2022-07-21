@@ -1,18 +1,20 @@
 {
-  "Title": "Blazor",
+  "Title": "Tools",
   "Items": [
     {
-      "ProjectUrl": "https://github.com/zhuxb711/RX-Explorer",
-      "Title": "RX-Explorer",
+      "Name": "Xaml Path Icons",
+      "Summary": "",
       "Description": "RX-Explorer is a powerful UWP file explorer with extensive use of acrylic effects in its UI and a colorful personalization system",
-      "Platforms": [ "Windows" ],
-      "ExternalUrl": null,
-      "YoutubeUrl": null,
-      "FrameWorkName": "WinUI",
-      "ImageUrls": [ "https://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro1.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro2.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro3.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro4.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro5.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro6.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro7.png", "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro8.png" ],
-      "Categories": [ 41, 42, 44 ],
-      "Slug": "httpsgithub.comzhuxb711RXExplorer",
-      "GravatarHash": null
+      "ImageUrls": [
+        "https://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro1.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro2.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro3.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro4.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro5.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro6.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro7.png",
+        "\nhttps://github.com/zhuxb711/RX-Explorer/raw/master/RX_Explorer/Assets/Github-Intro8.png"
+      ]
     }
   ]
 }
