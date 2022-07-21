@@ -1,5 +1,5 @@
 ﻿<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <div style="width:fit-content; float:left; margin-right:auto; margin-left:10px;" class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
                     data-target="#navbar-collapse-1">
@@ -24,7 +24,7 @@
                         width: fit-content;
                     }
             </style>
-            <ul class="nav navbar-nav" >
+            <ul class="nav navbar-nav" style="display:inline;">
                 <li>
                     <a href="/">Home</a>
                 </li>
@@ -35,7 +35,7 @@
                     <a href="#"
                        role="button" aria-haspopup="true"
                        aria-expanded="false">@SiteInfo.FrameWork.ToString()</a>
-                    <ul style="position:absolute; margin-top:-25px;" class="dropdown-menu hiddenMenu">
+                    <ul style="position:absolute;" class="dropdown-menu hiddenMenu">
                          @foreach (var item in Enum.GetNames(typeof(FrameWork)))
                          {
 
