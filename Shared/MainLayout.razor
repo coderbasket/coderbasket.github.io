@@ -1,8 +1,11 @@
 ﻿@inherits LayoutComponentBase
 <style>
-
+    body{
+        color:@SiteInfo.TextColor;
+    }
     li a{
         font-weight: bold;
+        color: @SiteInfo.TextColor;
     }
     a {
         color: @SiteInfo.AccentColor;
@@ -16,7 +19,7 @@
     }
         a:hover {
             color: @SiteInfo.AccentDarkerColor;
-        font-weight: bold;
+            font-weight: bold;
         }
 
         a:focus,
@@ -125,11 +128,11 @@
         .btn-default[disabled],
         fieldset[disabled] .btn-default {
             background-color: @SiteInfo.AccentColor;
-            border-color: #B12B3D;
+            border-color: @SiteInfo.AccentDarkerColor;
         }
 
     .btn-default-transparent {
-        color: #777777;
+        color: @SiteInfo.TextColor;
         background-color: transparent;
         border-color: @SiteInfo.AccentColor;
     }
@@ -848,7 +851,7 @@
                                         </a>
                                     </div>
 
-                                    <div class="site-slogan">
+                                    <div class="site-slogan" style="color:@SiteInfo.TextColor;">
                                         @SiteInfo.FrameWork.ToString() App Templates
                                     </div>
                                 </div>

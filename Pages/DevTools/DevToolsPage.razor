@@ -1,10 +1,17 @@
 ﻿@page "/developer-tools"
 <ContentPage>
-   <Content>
-        <div>
+    <Content>
+        <div style="display:grid; grid-template-columns:auto 1fr auto">
+            <div style="min-width:3rem;">
+            </div>
+            <div>
+                <ArticleView></ArticleView>
+            </div>
 
+            <div style="min-width:3rem;">
+            </div>
         </div>
-   </Content>
+    </Content>
 </ContentPage>
 @code {
     public List<ToolItem> Items { get; set; }

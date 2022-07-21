@@ -33,11 +33,15 @@
 
     .nav-stacked li a {
         display: inline-flex;
+        font-weight:bold;
+        color:@SiteInfo.TextColor;
     }
 
     nav .nav-stacked {
         display: block;
+         color:@SiteInfo.TextColor;
     }
+    
 </style>
 <footer id="footer" class="clearfix ">
 
@@ -58,7 +62,7 @@
                                 </div>
 
                             </div>
-                            <p>
+                            <p >
                                 Coder Basket lets developers and designers share code and interfaces to
                                 enable each other to
                                 quickly create great looking mobile apps for Android, iOS, Windows, Linux,
@@ -69,12 +73,13 @@
                     </div>
                     <div class="col-md-3">
                         <div class="footer-content">
-                            <h2 class="title">Learn more</h2>
+                            <h2 style="color:@SiteInfo.TextColor;" class="title">Learn more</h2>
                             <div class="separator-2"></div>
                             <nav>
                                 <ul style="display:block;" class="nav nav-pills nav-stacked">
+                                  
                                     <li>
-                                        <a @onclick="(()=>{MainLayout.Current.NavigateToAbout();})">About</a>
+                                        <a class="nav_a" @onclick="(()=>{MainLayout.Current.NavigateToAbout();})">About</a>
                                     </li>
                                     <li>
                                         <a target="_blank"
@@ -89,9 +94,9 @@
                                     </li>
                                     @{
                                         #if DEBUG
-                                         <li>
-                                           <a @onclick="(()=>{MainLayout.Current.ShowTexViewer();})">Developer Json</a>
-                                         </li>
+                                                                                     <li>
+                                                                                       <a @onclick="(()=>{MainLayout.Current.ShowTexViewer();})">Developer Json</a>
+                                                                                     </li>
                                         #endif
                                     }
                                 </ul>
@@ -100,7 +105,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="footer-content">
-                            <h2 class="title">On this site</h2>
+                            <h2 style="color:@SiteInfo.TextColor;" class="title">On this site</h2>
                             <div class="separator-2"></div>
                             <nav>
                                 <ul style="display:block;" class="nav nav-pills nav-stacked">
@@ -119,7 +124,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="footer-content">
-                            <h2 class="title">Popular categories</h2>
+                            <h2 style="color:@SiteInfo.TextColor;" class="title">Popular categories</h2>
                             <div class="separator-2"></div>
                             <div class="tags-cloud">
                                 @foreach (var item in categoriesFinal)
@@ -130,7 +135,7 @@
                                                 color: black;
                                             }
                                         </style>
-                                        <a class="tag_a"   style="color:tan;">@item.ToString().ToLower()</a>
+                                        <a class="tag_a" style="color:tan;">@item.ToString().ToLower()</a>
                                     </div>
                                 }
                             </div>

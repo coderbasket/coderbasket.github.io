@@ -1,0 +1,26 @@
+﻿<div class="entry-copy" style="height: auto !important;">
+    @if (toolItem != null)
+   {
+        <div class="entry-copy__inner intxt" style="height: auto !important;">
+
+            <h1><a style="color:@SiteInfo.AccentColor;" target="_blank" href="@toolItem.Url">@toolItem.Name</a></h1>
+            <p style="color:@SiteInfo.TextColor; font-weight:600;">@toolItem.Summary</p>
+            <p data-lazy="loaded">
+                <div style="gap:8px; width:100%;">
+                    <img style="max-width:600px;" src="https://store-images.s-microsoft.com/image/apps.17411.13811465872225312.65be14b7-cb12-40ab-ade6-afa918581143.e0af67a6-d7e0-43fb-9025-090c6c9d97f7" alt="fences" srcset="" sizes="">
+                    <img style="max-width:600px; margin-top:4px;" src="https://store-images.s-microsoft.com/image/apps.17411.13811465872225312.65be14b7-cb12-40ab-ade6-afa918581143.e0af67a6-d7e0-43fb-9025-090c6c9d97f7" alt="fences" srcset="" sizes="">
+                </div>
+            </p>
+            <p style="color:@SiteInfo.TextColor; font-weight:600;">@toolItem.Description</p>
+        </div>
+   }
+</div>
+
+@code {
+    [Parameter]
+    public ToolItem toolItem { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}
