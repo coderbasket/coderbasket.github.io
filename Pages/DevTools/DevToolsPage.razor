@@ -7,8 +7,15 @@
    </Content>
 </ContentPage>
 @code {
+    public List<ToolItem> Items { get; set; }
     protected override void OnInitialized()
     {
         base.OnInitialized();
+    }
+    async void LoadItems()
+    {
+        var toolRoot = await ToolHelper.GetToolItemsAsync();
+        this.Items = toolRoot.Items;
+        StateHasChanged();
     }
 }

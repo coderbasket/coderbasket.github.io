@@ -10,15 +10,22 @@ namespace Blazor_App.Shared.Tools
 {
     public class ToolHelper
     {
+        static ToolRoot toolRoot = null;
         public async static Task<ToolRoot> GetToolItemsAsync()
         {
-            ToolRoot toolRoot = null;
+            if(toolRoot != null)
+            {
+                return toolRoot;
+            }
             string url = "https://raw.githubusercontent.com/coderbasket/coderbasket.github.io/development/Lib/Shared/Tools/tools_data.json";
-           
             var txt = await CookUpServices.DownloadstringAsync(url);
             if (txt.IsValidString())
             {
-                toolRoot = JsonConvert.DeserializeObject<ToolRoot>(txt);
+                var result = JsonConvert.DeserializeObject<ToolRoot>(txt);
+                if (result != null)
+                {
+                    toolRoot = result;
+                }
             }
             return toolRoot;
         }
