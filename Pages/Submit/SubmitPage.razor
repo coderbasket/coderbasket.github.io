@@ -209,12 +209,15 @@
                 MainLayout.Current.ShowAlert("Invalid repo url... 😌");
             }
 
-            if (Repo.YoutubeUrl.StartsWith("https://youtu.be/"))
+            if(Repo.YoutubeUrl.IsValidString())
             {
-                var videoId = Repo.YoutubeUrl.Split("https://youtu.be/").LastOrDefault();
-                var yt = "https://www.youtube.com/watch?v=" + videoId;
-                yt = yt.Trim();
-                Repo.YoutubeUrl = yt;
+                if (Repo.YoutubeUrl.StartsWith("https://youtu.be/"))
+                {
+                    var videoId = Repo.YoutubeUrl.Split("https://youtu.be/").LastOrDefault();
+                    var yt = "https://www.youtube.com/watch?v=" + videoId;
+                    yt = yt.Trim();
+                    Repo.YoutubeUrl = yt;
+                }
             }
             if (valid)
             {
