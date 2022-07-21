@@ -1,15 +1,22 @@
 ﻿@inherits LayoutComponentBase
 <style>
 
-
+    li a{
+        font-weight: bold;
+    }
     a {
         color: @SiteInfo.AccentColor;
         cursor: pointer;
-        
+        font-weight:bold;
     }
-
+    
+    i {
+         font-weight:bold;
+        color: @SiteInfo.TextColor;
+    }
         a:hover {
             color: @SiteInfo.AccentDarkerColor;
+        font-weight: bold;
         }
 
         a:focus,

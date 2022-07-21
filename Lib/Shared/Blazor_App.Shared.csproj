@@ -19,6 +19,7 @@
     <None Remove="Host\Uno\codes.json" />
     <None Remove="Host\WinUI\codes.json" />
     <None Remove="Servers\sample.txt" />
+    <None Remove="Tools\tools_data.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +49,9 @@
     <EmbeddedResource Include="Host\Uno\codes.json" />
     <EmbeddedResource Include="Host\WinUI\codes.json" />
     <EmbeddedResource Include="Servers\sample.txt" />
+    <EmbeddedResource Include="Tools\tools_data.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
