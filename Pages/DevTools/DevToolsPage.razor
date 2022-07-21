@@ -5,7 +5,13 @@
             <div style="min-width:3rem;">
             </div>
             <div>
-                <ArticleView></ArticleView>
+                @if(Items !=null)
+                {
+                    @foreach (var item in Items)
+                    {
+                        <ArticleView toolItem="item"></ArticleView>
+                    }
+                }
             </div>
 
             <div style="min-width:3rem;">
@@ -18,6 +24,7 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        LoadItems();
     }
     async void LoadItems()
     {
