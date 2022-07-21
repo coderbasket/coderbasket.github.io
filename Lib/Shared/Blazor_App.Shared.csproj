@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Cookies\CookieManager.cshidden" />
     <None Remove="Data\safe_urls.json" />
     <None Remove="formatter.json" />
     <None Remove="Helpers\bad_words.txt" />
@@ -20,10 +19,6 @@
     <None Remove="Host\WinUI\codes.json" />
     <None Remove="Servers\sample.txt" />
     <None Remove="Tools\tools_data.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Cookies\CookieManager.cshidden" />
   </ItemGroup>
 
   <ItemGroup>
