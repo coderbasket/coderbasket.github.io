@@ -10,6 +10,16 @@
         "https://store-images.s-microsoft.com/image/apps.17411.13811465872225312.65be14b7-cb12-40ab-ade6-afa918581143.e0af67a6-d7e0-43fb-9025-090c6c9d97f7",
         "https://store-images.s-microsoft.com/image/apps.33845.13811465872225312.65be14b7-cb12-40ab-ade6-afa918581143.8006f5fa-89e1-4148-a34d-40097563fecc"
       ]
+    },
+    {
+      "Name": "Multilingual App Toolkit",
+      "Summary": "Supported Resource File Types ✅ resource.resw, ✅ resource.resx, ✅ strings.xml and  json. It generate multiple translated resource files with language code folder.  ",
+      "Description": "",
+      "Url": "https://apps.microsoft.com/store/detail/multilingual-app-toolkit/9PM98T5CX376",
+      "Images": [
+        "https://store-images.s-microsoft.com/image/apps.24439.14301701709326003.188f737d-7b93-4d93-a0a4-ff80f9360de4.674b6109-cd22-46d3-82d4-85d3314671fb",
+        "https://store-images.s-microsoft.com/image/apps.60518.14301701709326003.8c71d7fb-1346-4723-9ed6-c7bcc1c50a61.8f6d0c3d-df29-44e4-9a1d-33315ac2515f"
+      ]
     }
   ]
 }
