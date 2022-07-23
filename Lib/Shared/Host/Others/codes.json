@@ -1,18 +1,1 @@
-﻿{
-  "Title": "Others",
-  "Items": [    
-    {
-      "ProjectUrl": "https://github.com/Kinnara/ModernWpf",
-      "Title": "ModernWPF UI Library",
-      "Description": "Modern styles and controls for your WPF applications.",
-      "Platforms": [ "Windows" ],
-      "ExternalUrl": "",
-      "YoutubeUrl": null,
-      "FrameWorkName": "WinUI",
-      "ImageUrls": [ "https://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Light.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Dark.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ControlPalette1.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Nighttime.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/NumberBox.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ContentDialog.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/DataGrid.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ItemsRepeater.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/CustomTitleBar.Dark.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Calendar.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Menu.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Progress.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ColorRamp.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/AccentColorPalette.png", " \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/HighContrast.png" ],
-      "Categories": [ 41,42 ],
-      "Slug": "httpsgithub.comKinnaraModernWpf",
-      "GravatarHash": null
-    }
-  ]
-}
+{"Title":"Others","Items":[{"ProjectUrl":"https://github.com/Kinnara/ModernWpf","Title":"ModernWPF UI Library","Description":"Modern styles and controls for your WPF applications.","Platforms":["Windows"],"ExternalUrl":"","YoutubeUrl":null,"FrameWorkName":"WinUI","ImageUrls":["https://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Light.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Dark.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ControlPalette1.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Nighttime.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/NumberBox.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ContentDialog.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/DataGrid.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ItemsRepeater.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/CustomTitleBar.Dark.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Calendar.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Menu.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/Progress.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/ColorRamp.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/AccentColorPalette.png"," \nhttps://github.com/Kinnara/ModernWpf/raw/master/docs/images/HighContrast.png"],"Categories":[41,41,42],"Slug":"httpsgithub.comKinnaraModernWpf","SubmittedBy":null,"GravatarHash":null},{"ProjectUrl":"https://github.com/dharmendrasingh88/UwpWork","Title":"UwpWork","Description":"Youtube Player for UWP","Platforms":["Windows"],"ExternalUrl":null,"YoutubeUrl":null,"FrameWorkName":"Others","ImageUrls":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIRBrF6YtNkBKVxTFkNyoV26jvI8x9r5jh-Q&usqp=CAU"],"Categories":[41],"Slug":"httpsgithub.comdharmendrasingh88UwpWork","SubmittedBy":null,"GravatarHash":null}]}
