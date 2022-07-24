@@ -209,7 +209,7 @@
                 MainLayout.Current.ShowAlert("Invalid repo url... 😌");
             }
 
-            if(Repo.YoutubeUrl.IsValidString())
+            if (Repo.YoutubeUrl.IsValidString())
             {
                 if (Repo.YoutubeUrl.StartsWith("https://youtu.be/"))
                 {
@@ -229,6 +229,7 @@
         StateHasChanged();
 
     }
+    public static bool isUpdate = false;
     async void SubmitProjects()
     {
         StateHasChanged();
@@ -278,6 +279,7 @@
                     return;
                 var checkItem = items.Where(p => p.ProjectUrl == Repo.ProjectUrl).FirstOrDefault();
                 bool hasChanged = false;
+
                 if (checkItem == null)
                 {
                     Repo.ImageUrls = Repo.ImageUrls.Distinct().ToList();
@@ -285,18 +287,21 @@
                     Repo.Platforms = Repo.Platforms.Distinct().ToArray();
                     items.Add(Repo);
                     hasChanged = true;
+                    isUpdate = false;
                 }
                 else
                 {
                     bool confirmed = await JS.InvokeAsync<bool>("confirm", "This repository already exist, Do you to update this repository?");
                     if (confirmed)
                     {
-                        items.Add(Repo);
+                        Repo.ApplyPropertiesTo(checkItem);
                         hasChanged = true;
+                        isUpdate = true;
                     }
                 }
                 if (hasChanged)
                 {
+                    items = items.GroupBy(p => p.ProjectUrl).Select(g => g.First()).ToList();
                     ProjectItemData projectItemData = new ProjectItemData();
                     projectItemData.Items = items;
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);

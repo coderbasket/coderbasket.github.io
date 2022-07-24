@@ -84,6 +84,20 @@ namespace Blazor_App.Shared.Models
         {
             return this.Title + " " + this.Description + " " + this.ProjectUrl + " " + this.SubmittedBy;
         }
+        public void ApplyPropertiesTo(ProjectItem item)
+        {
+            item.Title = this.Title;
+            item.Description = this.Description;
+            item.Categories = this.Categories;
+            item.ExternalUrl = this.ExternalUrl;
+            item.ProjectUrl = this.ProjectUrl;
+            item.YoutubeUrl = this.YoutubeUrl;
+            item.FrameWorkName = this.FrameWorkName;
+            item.ImageUrls = this.ImageUrls;
+            item.SubmittedBy = this.SubmittedBy;
+            item.Slug = this.Slug;
+            item.Platforms = this.Platforms;
+        }
 
     }
 }

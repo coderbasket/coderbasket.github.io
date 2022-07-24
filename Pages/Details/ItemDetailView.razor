@@ -416,14 +416,17 @@
     [Parameter]
     public bool IsDeleteEnabled { get; set; } = true;
     public static int deleteCounter = 0;
+    const int _counter = 1;
     async void DeleteItem()
     {
-        if (deleteCounter >= 5)
+        if (deleteCounter >= _counter)
         {
-            MainLayout.Current.ShowAlert("You can only delete 5 times... 😌");
+            MainLayout.Current.ShowAlert($"You can only delete {_counter} times... 😌");
             return;
         }
         if (this.ProjectRepo == null)
+            return;
+        if (RepoHelper.IsValidRepo(this.ProjectRepo) == false)
             return;
         bool confirmed = await JS.InvokeAsync<bool>("confirm", "Delete Project ❌, Do you to delete this project from server?");
         if (confirmed)
@@ -440,8 +443,9 @@
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
                     DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json, "Delete update...");
                     deleteCounter++;
+                    await Task.Delay(1000);
                     Navigation.NavigateTo("/");
-                    //MainLayout.Current.ShowAlert("Deleted...✅");
+                   
 
                 }
             }
