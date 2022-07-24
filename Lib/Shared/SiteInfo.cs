@@ -16,12 +16,12 @@ namespace Blazor_App.Shared
         public static string Twitter = "https://twitter.com/" + SiteUrlShort.Replace(".com", "");
         public static string TwitterAt = "@" + SiteUrlShort;
         public static string TextColor = "#000000";
-        public static bool IsDarkTheme = false;
+        public static bool IsDarkTheme = true;
         private const string DefaultAccent = "#EA3D53"; //"#21bb9d";
         public const string AccentDarkerColor = "#B12B3D";
         public static string AccentColor = DefaultAccent;
-        public const string BackgroundColor = "white";
-        public const string BarBacgroundColor = "white";
+        public static string BackgroundColor = "white";
+        public static string BarBacgroundColor = "white";
 
         public static FrameWork FrameWork = FrameWork.Maui;
         public static string Title = SiteInfo.FrameWork.ToString() + " Templates";
@@ -33,6 +33,8 @@ namespace Blazor_App.Shared
             if (IsDarkTheme)
             {
                 TextColor = "#FFFFFF";
+                BarBacgroundColor = "#102027";
+                BarBacgroundColor = "#37474f";
             }
             else
             {

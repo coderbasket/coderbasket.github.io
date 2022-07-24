@@ -34,6 +34,10 @@ namespace Blazor_App.Shared.Models
             {
                 this.Platforms = new string[] { "iOS", "Android", "Windows", "Mac", "Linux" };
             }
+            if (SiteInfo.FrameWork == FrameWork.Others)
+            {
+                this.Platforms = new string[] { "Windows" };
+            }
         }
         private string _repo;
 
