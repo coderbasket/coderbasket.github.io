@@ -16,7 +16,7 @@ namespace Blazor_App.Shared
         public static string Twitter = "https://twitter.com/" + SiteUrlShort.Replace(".com", "");
         public static string TwitterAt = "@" + SiteUrlShort;
         public static string TextColor = "#000000";
-        public static bool IsDarkTheme = true;
+        public static bool IsDarkTheme = false;
         private const string DefaultAccent = "#EA3D53"; //"#21bb9d";
         public const string AccentDarkerColor = "#B12B3D";
         public static string AccentColor = DefaultAccent;
