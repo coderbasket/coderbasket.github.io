@@ -52,5 +52,6 @@ namespace Blazor_App.Shared.Enums
         TOOLs = 42,
         GAMES = 43,
         ANIMATIONS = 44,
+        CONTROLS = 45,
     }
 }

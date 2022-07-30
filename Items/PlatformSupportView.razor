@@ -26,8 +26,39 @@
 
     <i style="color:dodgerblue" class="fa  fa fa-globe fa-2x"></i>
 }
-
+@if (this.ProjectRepo.Platforms.Contains("Raspberry-Pi") || this.ProjectRepo.Platforms.Contains("Raspberry") || this.ProjectRepo.Platforms.Contains("raspberry") || this.ProjectRepo.Platforms.Contains("raspberry pi"))
+{
+    <svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" style="zoom:150%; margin-top:-8px;" version="1.1" width="24" height="24"
+     viewBox="0 0 24 24">
+        <path  fill="forestgreen" d="M20,8H22V10H20V8M4,5H20A2,2 0 0,1 22,7H19V9H5V13H8V16H19V17H22A2,2 0 0,1 20,19H16V20H14V19H11V20H7V19H4A2,2 0 0,1 2,17V7A2,2 0 0,1 4,5M19,15H9V10H19V11H22V13H19V15M13,12V14H15V12H13M5,6V8H6V6H5M7,6V8H8V6H7M9,6V8H10V6H9M11,6V8H12V6H11M13,6V8H14V6H13M15,6V8H16V6H15M20,14H22V16H20V14Z" />
+    </svg>
+}
+@if (this.ProjectRepo.Platforms.Contains("ChromeOS") || this.ProjectRepo.Platforms.Contains("Chrome") || this.ProjectRepo.Platforms.Contains("chromeos") || this.ProjectRepo.Platforms.Contains("Chrome"))
+{
+    <svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" style="zoom:150%; margin-top:-8px;" version="1.1" width="24" height="24"
+     viewBox="0 0 24 24">
+        <path fill="orange" d="M12,20L15.46,14H15.45C15.79,13.4 16,12.73 16,12C16,10.8 15.46,9.73 14.62,9H19.41C19.79,9.93 20,10.94 20,12A8,8 0 0,1 12,20M4,12C4,10.54 4.39,9.18 5.07,8L8.54,14H8.55C9.24,15.19 10.5,16 12,16C12.45,16 12.88,15.91 13.29,15.77L10.89,19.91C7,19.37 4,16.04 4,12M15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9A3,3 0 0,1 15,12M12,4C14.96,4 17.54,5.61 18.92,8H12C10.06,8 8.45,9.38 8.08,11.21L5.7,7.08C7.16,5.21 9.44,4 12,4M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+    </svg>
+}
+@if (this.ProjectRepo.Platforms.Contains("Other") || this.ProjectRepo.Platforms.Contains("other"))
+{
+    <svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" style="zoom:150%; margin-top:-8px;" version="1.1" width="24" height="24"
+     viewBox="0 0 24 24">
+        <path fill="#6e9887" d="M6,2C4.89,2 4,2.89 4,4V12C4,13.11 4.89,14 6,14H18C19.11,14 20,13.11 20,12V4C20,2.89 19.11,2 18,2H6M6,4H18V12H6V4M4,15C2.89,15 2,15.89 2,17V20C2,21.11 2.89,22 4,22H20C21.11,22 22,21.11 22,20V17C22,15.89 21.11,15 20,15H4M8,17H20V20H8V17M9,17.75V19.25H13V17.75H9M15,17.75V19.25H19V17.75H15Z" />
+    </svg>
+}
+@if (this.ProjectRepo.Platforms.Contains(".Net") || this.ProjectRepo.Platforms.Contains(".net") || this.ProjectRepo.Platforms.Contains("C#") || this.ProjectRepo.Platforms.Contains("c#"))
+{
+    <svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" style="zoom:150%; margin-top:-8px;" version="1.1" width="24" height="24"
+     viewBox="0 0 24 24">
+        <path fill="#8A2BE2" d="M2,15A1,1 0 0,1 3,16A1,1 0 0,1 2,17A1,1 0 0,1 1,16A1,1 0 0,1 2,15M21,17H19V9H17V7H23V9H21V17M16,7V9H14V11H16V13H14V15H16V17H12V7H16M11,7V17H9L6,11V17H4V7H6L9,13V7H11Z" />
+    </svg>
+}
 @code {
     [Parameter]
-    public ProjectItem ProjectRepo{ get; set; }
+    public ProjectItem ProjectRepo { get; set; }
 }
