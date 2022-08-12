@@ -3,10 +3,25 @@
     <a @onclick="NavigateToDetails">
         @if (ProjectRepo.ImageUrls.Count > 0)
         {
-            var url = this.ProjectRepo.ImageUrls.FirstOrDefault();
-            <img class="snippet__img"
-             src="@url" />
+            var screenshot = this.ProjectRepo.ImageUrls.FirstOrDefault();
+            var sc = screenshot.ToLower();
+            if (sc.EndsWith(".mp4") || sc.EndsWith(".ogg") || sc.EndsWith(".webm"))
+            {
+                <div class="col-md-3 snippet__screenshot">
+                    <a href="@screenshot" target="_blank">
+                        <video width="260" controls autoplay style="max-width:250px;" poster="~/img/dotnet.png">
+                            <source src="@screenshot" type="video/mp4">
+                            <source src="@screenshot" type="video/ogg" />
+                            <source src="@screenshot" type="video/webm" />
+                        </video>
+                    </a>
+                </div>
 
+            }
+            else
+            {
+                <img  class="snippet__img" src="@screenshot" />
+            }
         }
     </a>
 
