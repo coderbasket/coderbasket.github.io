@@ -208,7 +208,26 @@
                 valid = false;
                 MainLayout.Current.ShowAlert("Invalid repo url... 😌");
             }
+            if (Repo.ImageUrls != null && Repo.ImageUrls.Count > 0)
+            {
+                var yt = Repo.ImageUrls.Where(p => p.StartsWith("https://www.youtube.com/watch?v=") | p.StartsWith("https://youtu.be/")).FirstOrDefault();
+                if (yt.IsValidString())
+                {
+                    if (Repo.YoutubeUrl.IsValidString() == false)
+                    {
+                        Repo.YoutubeUrl = yt;
+                    }
+                    var ytd = await YTHelper.GetDetailsAsync(yt);
+                    if (ytd != null && ytd.thumbnail_url.IsValidString())
+                    {
+                        var index = Repo.ImageUrls.IndexOf(yt);
+                        Repo.ImageUrls.Remove(yt);
+                        Repo.ImageUrls.Insert(index, ytd.thumbnail_url);
 
+                    }
+                }
+
+            }
             if (Repo.YoutubeUrl.IsValidString())
             {
                 if (Repo.YoutubeUrl.StartsWith("https://youtu.be/"))
@@ -219,6 +238,7 @@
                     Repo.YoutubeUrl = yt;
                 }
             }
+
             if (valid)
             {
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(Repo);
