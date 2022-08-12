@@ -14,6 +14,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<UserSettingsProvider>();
 DataServiceProvider.LoadDeveloperTools();
 var items = await DataServiceProvider.GetItemsAsync();
+
 await builder.Build().RunAsync();
 
 

@@ -919,7 +919,10 @@
             }
         };
         Current = this;
+
+       
     }
+    static bool SetAppCenter = false;
     public async void ShowAlert(string message)
     {
         await JS.InvokeVoidAsync("alert", message);
