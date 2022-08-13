@@ -1,5 +1,5 @@
-﻿<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid" >
+﻿<nav class="navbar navbar-default" role="navigation" style="background-color:@SiteInfo.BarBackgroundColor; border-color:@SiteInfo.BarBackgroundColor;">
+    <div class="container-fluid">
         <div style="width:fit-content; float:left; margin-right:auto; margin-left:10px;" class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
                     data-target="#navbar-collapse-1">
@@ -9,52 +9,71 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="navbar-collapse-1" style="color:@SiteInfo.TextColor; background-color:@SiteInfo.BarBackgroundColor;">
             <style>
                 .navbar-nav li {
                     display: inline;
                     width: fit-content;
+                    color: @SiteInfo.TextColor;
+                   
+                    padding: 0;
                 }
 
                 ul {
                     width: fit-content;
+                    color: @SiteInfo.TextColor;
+                   
+                    padding:0;
                 }
 
                     ul li {
                         width: fit-content;
+                        color: @SiteInfo.TextColor;
+                       
+                        padding: 0;
+                    }
+
+                    ul li:hover:after {
+                        width: fit-content;
+                        color: @SiteInfo.TextColor;
+                       
+                        padding: 0;
                     }
             </style>
-            <ul class="nav navbar-nav" style="display:inline;">
+            <ul class="nav navbar-nav" style="display:inline; ">
                 <li>
-                    <a href="/">Home</a>
+                    <a style="color:@SiteInfo.TextColor;" href="/">Home</a>
                 </li>
                 @*<li>
-                    <a href="/random">Random</a>
+                <a href="/random">Random</a>
                 </li>*@
-                <li style="position:relative; width:fit-content;" class="dropdown">
+                <li style="position:relative; width:fit-content; background-color:@SiteInfo.BarBackgroundColor;  padding:0;" class="dropdown">
                     <a href="#"
+                       style="color:@SiteInfo.TextColor;"
                        role="button" aria-haspopup="true"
                        aria-expanded="false">@SiteInfo.FrameWork.ToString()</a>
-                    <ul style="position:absolute;" class="dropdown-menu hiddenMenu">
-                         @foreach (var item in Enum.GetNames(typeof(FrameWork)))
-                         {
+                    <ul class="dropdown-menu hiddenMenu" style="position:absolute; background-color:@SiteInfo.BarBackgroundColor;">
+                        @foreach (var item in Enum.GetNames(typeof(FrameWork)))
+                        {
 
-                            <li><a @onclick="@(()=>{MainLayout.Current.SelectFrameWork(RepoHelper.ConvertFramework(item));})" >@item</a></li>
-                         }                       
+                            <li style="padding:0;  background-color:@SiteInfo.BarBackgroundColor;">
+                                <a style="color: @SiteInfo.TextColor;" @onclick="@(()=>{MainLayout.Current.SelectFrameWork(RepoHelper.ConvertFramework(item));})">@item</a>
+                            </li>
+                        }
                     </ul>
 
                 </li>
-               @* <li style="width:fit-content; max-width:92px;" class="dropdown">
-                    <a href="#" 
-                      >Sort By</a>
-                    <ul class="dropdown-menu hiddenMenu">
-                        <li><a href="/">Default</a></li>
-                        <li><a href="/sort/updated">Recent</a></li>
-                        <li><a href="/sort/stars">Stars</a></li>
-                    </ul>
+                @* <li style="width:fit-content; max-width:92px;" class="dropdown">
+                <a href="#"
+                >Sort By</a>
+                <ul class="dropdown-menu hiddenMenu">
+                <li><a href="/">Default</a></li>
+                <li><a href="/sort/updated">Recent</a></li>
+                <li><a href="/sort/stars">Stars</a></li>
+                </ul>
                 </li>*@
                 <li style="visibility:visible">
-                    <a @onclick="(()=>{MainLayout.Current.NavigateToAbout();})">About</a>
+                    <a style="color:@SiteInfo.TextColor;" @onclick="(()=>{MainLayout.Current.NavigateToAbout();})">About</a>
                 </li>
                 <li style="visibility:visible">
                     <style type="text/css">
@@ -71,9 +90,9 @@
                     <a @onclick="(()=>{MainLayout.Current.NavigateToSubmitForm();})" class="cta">Submit New Project</a>
                 </li>
 
-                <li class="search_button" >
+                <li class="search_button">
                     <a @onclick="(()=>{MainLayout.Current.NavigateToSearch();})" class="fa fa-search"
-                       style="font-weight:bold; font-size:larger"></a>
+                       style="font-weight:bold; font-size:larger;color:@SiteInfo.TextColor;"></a>
                 </li>
             </ul>
         </div>
@@ -81,5 +100,5 @@
 </nav>
 
 @code {
-   
+
 }

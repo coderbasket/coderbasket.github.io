@@ -2,6 +2,7 @@
 <style>
     body {
         color: @SiteInfo.TextColor;
+       
     }
 
     li a {
@@ -48,7 +49,7 @@
     .table-colored > thead > tr > th {
         border-color: @SiteInfo.AccentColor;
         background-color: @SiteInfo.AccentColor;
-        color: #fff;
+        color: @SiteInfo.TextColor;
     }
     /* 2- Layout
                                                         -------------------------------------------------
@@ -70,7 +71,7 @@
 
     .default-bg {
         background-color: @SiteInfo.AccentColor;
-        color: #ffffff;
+        color: @SiteInfo.TextColor;
     }
     /*Transparent Header*/
     .transparent-header header.header.dark.transparent-header-on {
@@ -111,7 +112,7 @@
                                                         ---------------------------------- */
     /*Default Button*/
     .btn-default {
-        color: #ffffff;
+        color: @SiteInfo.TextColor;
         background-color: @SiteInfo.AccentColor;
         border-color: @SiteInfo.AccentColor;
     }
@@ -122,7 +123,7 @@
         .btn-default:active,
         .btn-default.active,
         .open > .dropdown-toggle.btn-default {
-            color: #ffffff;
+            color: @SiteInfo.TextColor;
             background-color: @SiteInfo.AccentDarkerColor;
             border-color: @SiteInfo.AccentDarkerColor;
         }
@@ -146,7 +147,7 @@
         .btn-default-transparent:active,
         .btn-default-transparent.active,
         .open > .dropdown-toggle.btn-default-transparent {
-            color: #ffffff;
+            color: @SiteInfo.TextColor;
             background-color: @SiteInfo.AccentDarkerColor;
             border-color: #188771;
         }
@@ -184,9 +185,9 @@
         .default-translucent-bg .btn-default-transparent.active,
         .default-bg .open > .dropdown-toggle.btn-default-transparent,
         .default-translucent-bg .open > .dropdown-toggle.btn-default-transparent {
-            color: #ffffff;
+             color: @SiteInfo.TextColor;
             background-color: transparent;
-            border-color: #ffffff;
+            border-color: @SiteInfo.AccentColor;
         }
     /*White Button*/
     .btn-white {
@@ -287,14 +288,14 @@
     .overlay-top a,
     .overlay-bottom a,
     .overlay-to-top a {
-        color: #ffffff;
+        color: @SiteInfo.TextColor;
     }
     /* Pager
                                                         ---------------------------------- */
     ul.pagination li > a:hover,
     ul.pagination li > a:focus {
         background-color: transparent;
-        color: #ffffff;
+        color: @SiteInfo.AccentColor;
         background-color: @SiteInfo.AccentDarkerColor;
         border-color: @SiteInfo.AccentDarkerColor;
     }
@@ -302,7 +303,7 @@
     ul.pagination li.active a,
     .pagination > .active > a:hover,
     .pagination > .active > a:focus {
-        color: #ffffff;
+        color: @SiteInfo.AccentDarkerColor;
         background-color: @SiteInfo.AccentColor;
         border-color: @SiteInfo.AccentColor;
     }
@@ -345,7 +346,7 @@
     }
 
     .nav-pills.nav-stacked.list-style-icons > li > a > i {
-        color: #cdcdcd;
+         color: @SiteInfo.TextColor;
     }
 
     .nav-pills.nav-stacked.list-style-icons > li.active > a > i,
@@ -358,7 +359,7 @@
     .dark .footer-content .nav-pills > li.active > a,
     .dark .footer-content .nav-pills > li.active > a:focus,
     .dark .footer-content .nav-pills > li > a:focus {
-        color: #999999;
+         color: @SiteInfo.TextColor;
     }
 
         .dark .footer-content .nav-pills > li.active > a:hover,
@@ -369,7 +370,7 @@
                                                         ---------------------------------- */
     /*Style 2*/
     .collapse-style-2 .panel-heading a {
-        color: #ffffff;
+         color: @SiteInfo.TextColor;
         background-color: @SiteInfo.AccentColor;
     }
 
@@ -388,7 +389,7 @@
         border-color: @SiteInfo.AccentDarkerColor;
         -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.35);
         box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.35);
-        color: #ffffff;
+        color: @SiteInfo.TextColor;
     }
 
     .default-bg .has-success .form-control:focus,
@@ -408,7 +409,7 @@
     }
 
     .default-bg .form-control-feedback {
-        color: #ffffff;
+         color: @SiteInfo.TextColor;
     }
 
     .dark.header .form-control,
@@ -440,7 +441,7 @@
     }
 
     .modal-content .modal-title {
-        color: #ffffff;
+        color: @SiteInfo.TextColor;
     }
     /*Breadcrumb
                                                         ---------------------------------- */
@@ -513,7 +514,7 @@
     .main-navigation .navbar-nav > .open > a:hover,
     .main-navigation .navbar-nav > .open > a:focus,
     .main-navigation .navbar-nav > .dropdown > a:focus {
-        background-color: #ffffff;
+        background-color: @SiteInfo.AccentDarkerColor;
         color: @SiteInfo.AccentColor;
         border-bottom-color: #ffffff;
         border-right: 1px solid #f5f5f5;
@@ -531,7 +532,7 @@
     .dropdown-menu .menu > .active > a,
     .dropdown-menu .menu > .active > a:hover,
     .dropdown-menu .menu > .active > a:focus {
-        background-color: #fcfcfc;
+        background-color: @SiteInfo.AccentDarkerColor;
         color: @SiteInfo.AccentDarkerColor;
         border-color: #f7f7f7;
     }
@@ -546,7 +547,7 @@
     /* mega menu menu item on focus/hover*/
     .mega-menu .menu > li > a:hover,
     .mega-menu .menu > li > a:focus {
-        background-color: #fcfcfc;
+        background-color: @SiteInfo.AccentDarkerColor;
         color: @SiteInfo.AccentDarkerColor;
         border-color: #f7f7f7;
         text-decoration: none;
@@ -579,12 +580,12 @@
 
         .navbar-default .navbar-toggle:hover,
         .navbar-default .navbar-toggle:focus {
-            background-color: #fafafa;
+            background-color: @SiteInfo.AccentDarkerColor;
             border-color: @SiteInfo.AccentDarkerColor;
         }
 
         .navbar-default .navbar-toggle .icon-bar {
-            background-color: #ccc;
+            background-color: @SiteInfo.AccentDarkerColor;
         }
 
         .navbar-default .navbar-toggle:hover .icon-bar,
@@ -671,7 +672,7 @@
                                                         ------------------------------ */
     .social-links li a {
         border: 1px solid #e7e7e7;
-        color: #cdcdcd;
+        color: @SiteInfo.TextColor;
     }
 
         .social-links li a:hover {
@@ -683,11 +684,11 @@
     .dark.social-links li a {
         background-color: rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(0, 0, 0, 0.1);
-        color: #ffffff;
+         color: @SiteInfo.TextColor;
     }
 
     .social-links.animated-effect-1 li a:hover {
-        color: #ffffff !important;
+         color: @SiteInfo.TextColor; !important;
     }
 
     .social-links.animated-effect-1 li a:after {
@@ -701,8 +702,8 @@
     }
 
         .default.social-links li a:hover {
-            background-color: #ffffff;
-            color: #777777;
+            background-color: @SiteInfo.AccentDarkerColor;
+            color: @SiteInfo.TextColor;
         }
     /*Header Top Dropdowns*/
     .header-top:not(.dark) .social-links .dropdown.open > button > i:before {
@@ -711,7 +712,7 @@
 
     .header-top.colored .social-links .dropdown > button > i:before,
     .header-top.colored .social-links .dropdown.open > button > i:before {
-        color: #ffffff;
+         color: @SiteInfo.TextColor;
     }
 
     .dark.header-top .dropdown-menu {
@@ -733,13 +734,13 @@
 
         .header-dropdown-buttons .btn-group > .btn:hover {
             background-color: @SiteInfo.AccentColor;
-            color: #fff;
+            color: @SiteInfo.TextColor;
             border-color: #B12B3D;
         }
 
     .header-dropdown-buttons .btn-group.open > .btn {
         background-color: @SiteInfo.AccentColor;
-        color: #fff;
+         color: @SiteInfo.TextColor;
         border-color: #B12B3D;
     }
 
@@ -758,12 +759,12 @@
                                                         ---------------------------------- */
     .popover-title {
         background-color: @SiteInfo.AccentColor;
-        color: #ffffff;
+         color: @SiteInfo.TextColor;
     }
     /* Tags cloud block
                                                         ---------------------------------- */
     .tag a {
-        color: #ffffff;
+        color: @SiteInfo.TextColor;
         background-color: @SiteInfo.AccentColor;
         border: 1px solid #B12B3D;
     }
@@ -796,7 +797,7 @@
 </style>
 <Blazored.Modal.CascadingBlazoredModal>
     <div>
-        <div class="no-trans transparent-header">
+        <div class="no-trans transparent-header" >
             @*<div class="ad_container">
 
             <div class="ad_div" style="background-color:green">
@@ -829,18 +830,18 @@
 
             <!-- page wrapper start -->
             <!-- ================ -->
-            <div class="page-wrapper">
+            <div class="page-wrapper" style="background-color:@SiteInfo.BackgroundColor;">
 
                 <!-- header-container start -->
-                <div class="header-container">
+                <div class="header-container"  style="background-color:@SiteInfo.BarBackgroundColor; ">
                     <style type="text/css">
                         ul li a:hover + .hiddenMenu,
                         .hiddenMenu:hover {
                             display: block;
                         }
                     </style>
-                    <header class="header fixed clea.dropdown-togglefix">
-                        <div class="container">
+                    <header class="header fixed clea.dropdown-togglefix" style="background-color:@SiteInfo.BarBackgroundColor; border-width:0px;">
+                        <div class="container" style="background-color:@SiteInfo.BarBackgroundColor;">
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="header-left clearfix">
@@ -861,7 +862,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-9" style="background-color:@SiteInfo.BarBackgroundColor;">
                                     <div class="header-right clearfix">
                                         <div class="main-navigation  animated">
                                             <CoderBasket.Blazor.Main.TopMenuHeader></CoderBasket.Blazor.Main.TopMenuHeader>

@@ -1,4 +1,7 @@
 ﻿<style>
+    body{
+        background-color: @SiteInfo.BackgroundColor;
+    }
     .nav-stacked li {
         display: block;
         -webkit-text-size-adjust: 100%;
@@ -24,7 +27,7 @@
         margin-left: 40px;
         top: 4px;
         left: 40px;
-        color: #d1d1d1;
+        color: @SiteInfo.TextColor;
         -webkit-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
@@ -39,7 +42,7 @@
         display: block;
     }
 </style>
-<section class="main-container">
+<section class="main-container" style="background-color:@SiteInfo.BackgroundColor;">
     <div class="container snippet-main-container">
 
         <div class="row">
@@ -47,7 +50,7 @@
             <aside class="col-md-2 hidden-sm hidden-xs">
                 <div class="sidebar">
                     <div class="block clearfix">
-                        <h3 class="title">Categories</h3>
+                        <h3 class="title" style="color:@SiteInfo.TextColor;">Categories</h3>
                         <div class="separator-2"></div>
                         <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
                     </div>
@@ -55,7 +58,7 @@
             </aside>
             <div class="main col-md-10">
                 <div class="row">
-                    <h3 class="title">@SiteInfo.FrameWork.ToString() templates</h3>
+                    <h3 style="color:@SiteInfo.TextColor;" class="title">@SiteInfo.FrameWork.ToString() templates</h3>
                     <div class="separator-2"></div>
 
                     <div class="row">
@@ -73,8 +76,8 @@
             <aside class="col-md-2 hidden-md hidden-lg">
                 <div class="sidebar">
                     <div class="block clearfix">
-                        <h3 class="title">Categories</h3>
-                        <div class="separator-2"></div>
+                        <h3 class="title" style="color:@SiteInfo.TextColor;">Categories</h3>
+                        <div style="color:gray;" class="separator-2"></div>
                         <CoderBasket.Blazor.Main.SideCategoriesMenu></CoderBasket.Blazor.Main.SideCategoriesMenu>
                     </div>
                 </div>

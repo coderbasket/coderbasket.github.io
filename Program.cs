@@ -12,7 +12,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddBlazoredModal();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<UserSettingsProvider>();
-//SiteInfo.GetHeader();
+SiteInfo.GetHeader();
 DataServiceProvider.LoadDeveloperTools();
 var items = await DataServiceProvider.GetItemsAsync();
 

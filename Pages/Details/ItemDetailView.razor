@@ -1,11 +1,12 @@
-﻿<div>
+﻿
+<div>
     @if (ProjectRepo != null && Owner != null)
     {
         <div>
             <div class="row">
                 <div class="clearfix">
                     <div style="display:grid; grid-template-columns:1fr auto">
-                        <h3 class="title pull-left">@ProjectRepo.Title</h3>
+                        <h3 style="color:@SiteInfo.TextColor;" class="title pull-left">@ProjectRepo.Title</h3>
                         <div>
                         </div>
                     </div>
@@ -21,7 +22,7 @@
                                 <img src="@Owner.GravatarImage()" class="circle pull-left author__gravatar" />
                                 <div class="snppts-meta">
                                     <span class="createdby">Created by</span>
-                                    <a href="/author/@Owner.GitHubHandle">
+                                    <a style="color:@SiteInfo.TextColor;" href="/author/@Owner.GitHubHandle">
                                         @if (this.ProjectRepo.Repository.OwnerName.IsValidString())
                                         {
                                             <span class="author">
@@ -42,25 +43,25 @@
 
                     </div>
                     <div class="description__section" style="color:@SiteInfo.TextColor">
-                        <h5>Description</h5>
+                        <h5 style="color:@SiteInfo.TextColor;">Description</h5>
                         <span>@ProjectRepo.Description</span>
                     </div>
                     <div class="description__section">
-                        <h5>Platforms</h5>
+                        <h5 style="color:@SiteInfo.TextColor;">Platforms</h5>
                         <CoderBasket.Blazor.Items.PlatformSupportView ProjectRepo="ProjectRepo"></CoderBasket.Blazor.Items.PlatformSupportView>
                     </div>
 
                     @if (ProjectRepo.ExternalUrl != null)
                     {
                         <div class="description__section">
-                            <h5>External link</h5>
+                            <h5 style="color:@SiteInfo.TextColor;">External link</h5>
                             <a href="@ProjectRepo.ExternalUrl" target="_blank">Read more about this Snippet</a>
                         </div>
                     }
                     <div class="description__section">
 
                         <div style="display:grid; grid-template-columns: 1fr auto">
-                            <h5> Check out the code</h5>
+                            <h5 style="color:@SiteInfo.TextColor;"> Check out the code</h5>
                             @if (this.ProjectRepo.GitHubRepoInfo != null && this.ProjectRepo.GitHubRepoInfo.Stars > 0 && IsDeleteEnabled)
                             {
                                 <div>
@@ -103,19 +104,19 @@
                                         DateTime date;
                                         date = results.pushed_at;
                                         pushed_at = date.ToString();
-                                        <div class="github-widget" data-repo="@ProjectRepo.GitHubRepoInfo.ProjectName">
-                                            <div class="github-box repo">
-                                                <div class="github-box-title">
+                                        <div class="github-widget" style="color:@SiteInfo.TextColor; background-color:@SiteInfo.BarBackgroundColor;" data-repo="@ProjectRepo.GitHubRepoInfo.ProjectName">
+                                            <div class="github-box repo" style="background-color:@SiteInfo.BarBackgroundColor;">
+                                                <div class="github-box-title" style="background-color:@SiteInfo.BarBackgroundColor;">
                                                     <h3>
                                                         <a class="owner" href="@results.owner.html_url" title="@results.owner.html_url" target="_blank">@Owner.FirstName</a>
                                                         <a class="repo" href="@ProjectRepo.ProjectUrl" title="@ProjectRepo.ProjectUrl" target="_blank">@ProjectRepo.GitHubRepoInfo.ProjectName</a>
                                                     </h3>
-                                                    <div class="github-stats">
+                                                    <div class="github-stats" style="@SiteInfo.BarBackgroundColor;">
                                                         <a class="watchers" href="@ProjectRepo.ProjectUrl/watchers" title="See watchers" target="_blank">@results.watchers</a>
                                                         <a class="forks" href="@ProjectRepo.ProjectUrl/network/members" title="See forkers" target="_blank">@results.forks</a>
                                                     </div>
                                                 </div>
-                                                <div class="github-box-content">
+                                                <div class="github-box-content" style="background-color:@SiteInfo.BackgroundColor;">
                                                     <p class="description">
                                                         <span style="color:@SiteInfo.TextColor">@results.description</span> &mdash; <a href="@ProjectRepo.ProjectUrl#readme" target="_blank">
                                                             Read
@@ -129,7 +130,7 @@
                                                         Latest commit to the <strong style="color:@SiteInfo.AccentColor">@results.default_branch</strong> branch on <strong style="color:@SiteInfo.AccentColor">@pushed_at</strong>
                                                     </div>
                                                     @*<a class="download" target="_blank" style="color:@SiteInfo.AccentColor" href="@ProjectRepo.GitHubRepoInfo.DownloadZipUrl" title="Get an archive of this repository">Download as zip</a>*@
-                                                    <a class="download" target="_blank" style="color:@SiteInfo.AccentColor" href="@ProjectRepo.ProjectUrl" title="Goto Source">Goto Source</a>
+                                                    <a class="download" target="_blank"  href="@ProjectRepo.ProjectUrl" title="Goto Source">Goto Source</a>
                                                     <style type="text/css">
                                                         .github-widget {
                                                             margin-top: 20px;
@@ -139,7 +140,7 @@
                                                             font-family: helvetica, arial, sans-serif;
                                                             font-size: 13px;
                                                             line-height: 18px;
-                                                            background: #fafafa;
+                                                            background: @SiteInfo.BarBackgroundColor;
                                                             border: 1px solid #ddd;
                                                             color: #666;
                                                             border-radius: 3px;
@@ -147,11 +148,11 @@
 
                                                             .github-box .github-box-title {
                                                                 position: relative;
-                                                                border-bottom: 1px solid #ddd;
+                                                                border-bottom: 1px solid @SiteInfo.BarBackgroundColor;
                                                                 border-radius: 3px 3px 0 0;
-                                                                background: #fcfcfc;
-                                                                background: -moz-linear-gradient(#fcfcfc, #ebebeb);
-                                                                background: -webkit-linear-gradient(#fcfcfc, #ebebeb);
+                                                                background: @SiteInfo.BarBackgroundColor;
+                                                                        background: -moz-linear-gradient(@SiteInfo.BarBackgroundColor, @SiteInfo.BarBackgroundColor);
+                                                                        background: -webkit-linear-gradient(@SiteInfo.BarBackgroundColor, @SiteInfo.BarBackgroundColor);
                                                             }
 
                                                                 .github-box .github-box-title h3 {
@@ -215,8 +216,8 @@
 
                                                             .github-box .github-box-download {
                                                                 position: relative;
-                                                                border-top: 1px solid #ddd;
-                                                                background: white;
+                                                                border-top: 1px solid @SiteInfo.BarBackgroundColor;
+                                                                background: @SiteInfo.BarBackgroundColor;
                                                                 border-radius: 0 0 3px 3px;
                                                                 padding: 10px;
                                                                 height: auto;
@@ -227,7 +228,7 @@
                                                                     word-wrap: break-word;
                                                                     margin: 0;
                                                                     font-size: 11px;
-                                                                    color: #666;
+                                                                    color: @SiteInfo.TextColor;
                                                                     line-height: 24px;
                                                                     font-weight: 300;
                                                                     width: auto;
@@ -241,16 +242,16 @@
                                                                     height: 24px;
                                                                     line-height: 24px;
                                                                     font-size: 12px;
-                                                                    color: #666;
+                                                                    color: @SiteInfo.TextColor;
                                                                     font-weight: bold;
-                                                                    text-shadow: 0 1px 0 rgb(255 255 255 / 90%);
+                                                                  
                                                                     padding: 0 10px;
                                                                     border: 1px solid #ddd;
-                                                                    border-bottom-color: #bbb;
+                                                                    border-bottom-color: #ddd;
                                                                     border-radius: 3px;
-                                                                    background: #f5f5f5;
-                                                                    background: -moz-linear-gradient(#f5f5f5, #e5e5e5);
-                                                                    background: -webkit-linear-gradient(#f5f5f5, #e5e5e5);
+                                                                    background: @SiteInfo.BarBackgroundColor;
+                                                                    background: -moz-linear-gradient(@SiteInfo.AccentColor, @SiteInfo.AccentDarkerColor);
+                                                                    background: -webkit-linear-gradient(@SiteInfo.AccentDarkerColor, @SiteInfo.AccentColor);
                                                                 }
                                                     </style>
 
@@ -275,7 +276,7 @@
                     @if (ProjectRepo.ImageUrls?.Count() > 0)
                     {
                         <div class="description__section">
-                            <h5>Screenshots</h5>
+                            <h5 style="color:@SiteInfo.TextColor;">Screenshots</h5>
 
                             <div class="row">
                                 @foreach (var screenshot in ProjectRepo.ImageUrls)

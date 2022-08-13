@@ -24,7 +24,7 @@
         margin-left: 40px;
         top: 4px;
         left: 40px;
-        color: #d1d1d1;
+        color: @SiteInfo.TextColor;
         -webkit-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
@@ -43,12 +43,12 @@
     }
     
 </style>
-<footer id="footer" class="clearfix ">
+<footer id="footer" class="clearfix" style="background-color:@SiteInfo.BarFooterBackgroundColor; padding:0; border-width:0;">
 
     <!-- .footer start -->
     <!-- ================ -->
 
-    <div class="footer">
+    <div class="footer" style="background-color:@SiteInfo.BarFooterBackgroundColor;">
         <div class="container">
             <div class="footer-inner">
                 <div class="row">
@@ -62,7 +62,7 @@
                                 </div>
 
                             </div>
-                            <p >
+                            <p style=" opacity:60%;">
                                 Coder Basket lets developers and designers share code and interfaces to
                                 enable each other to
                                 quickly create great looking mobile apps for Android, iOS, Windows, Linux,
@@ -94,9 +94,9 @@
                                     </li>
                                     @{
                                         #if DEBUG
-                                                                                     <li>
-                                                                                       <a @onclick="(()=>{MainLayout.Current.ShowTexViewer();})">Developer Json</a>
-                                                                                     </li>
+                                                                                                                 <li>
+                                                                                                                   <a @onclick="(()=>{MainLayout.Current.ShowTexViewer();})">Developer Json</a>
+                                                                                                                 </li>
                                         #endif
                                     }
                                 </ul>
@@ -108,13 +108,22 @@
                             <h2 style="color:@SiteInfo.TextColor;" class="title">On this site</h2>
                             <div class="separator-2"></div>
                             <nav>
-                                <ul style="display:block;" class="nav nav-pills nav-stacked">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a target="_blank" href="https://www.snppts.dev/">Xamarin</a></li>
-                                    <li><a  href="/developer-tools">Developer Tools</a></li>
+
+                               
+                                <ul style="display:block;" class="nav nav-pills nav-stacked" >
+                                     <style>
+                                         ul li .tag_b{
+                                             color:@SiteInfo.TextColor;"
+                                        }
+                                      </style>
+                                    <li >
+                                        <a class="tag_b"  href="/">Home</a>
+                                     </li>
+                                    <li><a  target="_blank" href="https://www.snppts.dev/">Xamarin</a></li>
+                                    <li><a   href="/developer-tools">Developer Tools</a></li>
                                     <li><a href="https://www.buymeacoffee.com/nextsupportlab" target="_blank">Buy me a Coffee</a></li>
                                     <li style="visibility:collapse">
-                                        <a>
+                                        <a >
                                             Submit new
                                             Project
                                         </a>
@@ -149,7 +158,7 @@
     <!-- .footer end -->
     <!-- .subfooter start -->
     <!-- ================ -->
-    <div class="subfooter dark-bg">
+    <div class="subfooter dark-bg" style="background-color:@SiteInfo.BarBackgroundColor;">
         <div class="container">
             <div class="subfooter-inner">
                 <div class="row">
