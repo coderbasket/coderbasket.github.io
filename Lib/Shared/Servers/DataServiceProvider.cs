@@ -170,7 +170,7 @@ namespace Blazor_App.Shared.Servers
         }
         public static void LoadDeveloperTools()
         {
-           
+            
         }
     }
 }

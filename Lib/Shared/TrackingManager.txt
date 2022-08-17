@@ -1,0 +1,64 @@
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+// See the LICENSE file in the project root for more information.
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text;
+
+namespace Blazor_App.Shared
+{
+    /// <summary>
+    /// App Overview -> Analytics -> Usage - Custom Events
+    /// </summary>
+    public static class TrackingManager
+    {
+
+        static TrackingManager()
+        {
+            
+        }
+
+        public static void TrackException(Exception ex)
+        {
+            try
+            {
+                var exemp = $"Exception - {ex.ToString()} - {ex.StackTrace}";
+                Microsoft.AppCenter.Analytics.Analytics.TrackEvent(exemp);
+                
+               
+            }
+            catch
+            {
+                // Ignore error
+            }
+        }
+
+        public static void TrackEvent(string customEvent)
+        {
+            try
+            {
+                Microsoft.AppCenter.Analytics.Analytics.TrackEvent($"{customEvent}");
+              
+            }
+            catch
+            {
+                // Ignore error
+            }
+        }
+        public static void TrackCustomEvent(string customEvent)
+        {
+            try
+            {
+                Microsoft.AppCenter.Analytics.Analytics.TrackEvent(customEvent);
+               
+               
+            }
+            catch
+            {
+                // Ignore error
+            }
+        } 
+           
+    }
+}
