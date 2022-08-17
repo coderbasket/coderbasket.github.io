@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Cookies\CookieManager.cshiden" />
+    <None Remove="Cookies\CookieManager.cshidden" />
     <None Remove="Data\safe_urls.json" />
     <None Remove="formatter.json" />
     <None Remove="Helpers\bad_words.txt" />
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Cookies\CookieManager.cshiden" />
+    <Compile Include="Cookies\CookieManager.cshidden" />
   </ItemGroup>
 
   <ItemGroup>
