@@ -58,11 +58,12 @@
                     <h1 style="text-align:center; color:@SiteInfo.TextColor;">Search @SiteInfo.FrameWork.ToString() Templates</h1>
 
                     <input style="padding-left:8px; color:black;" placeholder="Search" @oninput="@onChange" type="text" class="text" size="60" />
-                    <p>
+                   @* <p style="visibility:collapse;">
                         <button id="get" class="button">
                             Search Now
                         </button>
-                    </p>
+                    </p>*@
+                    <p></p>
                     <h4 style="margin-top:-15px; color:@SiteInfo.TextColor;">Search results</h4>
                     @if (resultItems.Count > 0)
                     {

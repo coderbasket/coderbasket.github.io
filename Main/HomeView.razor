@@ -14,18 +14,22 @@
                     }
                 }
             </div>
-            <div class="row pager">
-                <div class="pagination-container">
-                    <ul class="pagination">
-                        <li @onclick="PreviousPage" class="PagedList-skipToPrevious">
-                            <a href="/?page=@pageNumber" rel="prev">«</a>
-                        </li>
-                        <li @onclick="NextPage" class="PagedList-skipToNext">
-                            <a href="/?page=@pageNumber" rel="next">»</a>
-                        </li>
-                    </ul>
+            @if(ChunkItems.Count > 1)
+            {
+                <div class="row pager">
+                    <div class="pagination-container">
+                        <ul class="pagination">
+                            <li @onclick="PreviousPage" class="PagedList-skipToPrevious">
+                                <a href="/?page=@pageNumber" rel="prev">«</a>
+                            </li>
+                            <li @onclick="NextPage" class="PagedList-skipToNext">
+                                <a href="/?page=@pageNumber" rel="next">»</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            }
+            
         </div>
     </Content>
 </MainContent>
@@ -34,6 +38,8 @@
     int pageNumber = 1;
     #region Framework
     string _paramF;
+
+    public static HomeView Current { get; private set; }
     [Parameter]
     public string frameworkParameter
     {
@@ -92,7 +98,7 @@
     protected override async void OnInitialized()
     {
         base.OnInitialized();
-
+        Current = this;
         DataServiceProvider.ItemsLoaded += (s, e) =>
         {
             AllItems = e;
@@ -103,19 +109,26 @@
         }
     }
     bool rendering = false;
-    async void RenderItems()
+    public async void RenderItems(bool reload = false)
     {
-        if (DataServiceProvider.ItemHasLoaded == false)
+        if (reload == false)
         {
-            return;
+            if (DataServiceProvider.ItemHasLoaded == false)
+            {
+                return;
+            }
         }
         if (rendering)
             return;
         rendering = true;
-
+        if (reload)
+        {
+            AllItems = await DataServiceProvider.GetItemsAsync();
+            AllItems = AllItems.Shuffle().ToList();
+        }
         if (this.AllItems != null && this.AllItems.Count > 0)
         {
-            ChunkItems = this.AllItems.Chunk(9).ToList();
+            ChunkItems = this.AllItems.Chunk(15).ToList();
             ProjectItems = ChunkItems[0];
             foreach (var item in this.ProjectItems)
             {

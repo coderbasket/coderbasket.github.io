@@ -42,7 +42,7 @@
             </style>
             <ul class="nav navbar-nav" style="display:inline; ">
                 <li>
-                    <a style="color:@SiteInfo.TextColor;" href="/">Home</a>
+                    <a style="color:@SiteInfo.TextColor;" @onclick="UpdateHomeView" href="/">Home</a>
                 </li>
                 @*<li>
                 <a href="/random">Random</a>
@@ -100,5 +100,11 @@
 </nav>
 
 @code {
-
+    void UpdateHomeView()
+    {
+        if (HomeView.Current is not null)
+        {
+            HomeView.Current.RenderItems(true);
+        }
+    }
 }
