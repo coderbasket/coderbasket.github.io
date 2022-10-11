@@ -3,7 +3,7 @@
 .loader {
     border: 10px solid #EA3D53;
     border-radius: 50%;
-    border-top: 2px solid #EA3D53;
+    border-top: 10px solid whitesmoke;
     width: 120px;
     height: 120px;
     -webkit-animation: spin .5s linear infinite; /* Safari */
