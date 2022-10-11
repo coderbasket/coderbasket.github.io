@@ -25,8 +25,9 @@
                     margin: 0;
                     padding: 0;
                 }
-                textarea{
-                    color:@SiteInfo.TextColor;
+
+                textarea {
+                    color: @SiteInfo.TextColor;
                 }
             </style>
             <div class="container">
@@ -96,9 +97,9 @@
                             <div>
                                 @{
                                     int counter = 1;
-                                            @foreach (var item in Enum.GetValues(typeof(Category)))
+                                    @foreach (var item in Enum.GetValues(typeof(Category)))
                                     {
-                                                <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
+                                        <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
                                         counter++;
                                     }
                                 }
