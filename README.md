@@ -1,15 +1,46 @@
-# coderbasket.github.io
-*[https://coderbasket.github.io](https://coderbasket.github.io)*
+# Coder Basket
 
+*https://coderbasket.github.io*
 
+Coder Basket is a curated gallery of open-source projects, libraries, templates, tools, and applications for developers.
 
-Submit  using "SUBMIT NEW PROJECT", you can also edit or delete submitted projects from *[https://coderbasket.github.io](https://coderbasket.github.io)*  and update  informations 🌐.
+Explore projects across **.NET, MAUI, Blazor, WinUI, Avalonia, Uno Platform, Flutter, AI, and other technologies**.
 
-# Maui, Blazor, WinUI, Avalonia, UnoPlatform and Other .Net Open Source Templates and Libraries.
-![https://github.com/coderbasket/coderbasket.github.io/raw/development/Screens/Screenshot.png](https://github.com/coderbasket/coderbasket.github.io/raw/development/Screens/Screenshot.png)
+## Submit a Project
 
- ## Submit your beautiful snippets here 😊...
-*[https://coderbasket.github.io](https://coderbasket.github.io)*
+Have an open-source project you'd like to share?
 
-Contributors and community are welcome, to make it beautiful open source .net projects gallery 😊😉.
+Visit **[Coder Basket](https://coderbasket.github.io)** and use **"SUBMIT NEW PROJECT"** to submit it.
 
+You can also edit or delete projects you've submitted and keep their information up to date.
+
+## Explore Open Source Projects
+
+Coder Basket helps developers discover useful and interesting open-source projects in one place, organized by technology, platform, and category.
+
+Featured areas include:
+
+* .NET
+* MAUI
+* Blazor
+* WinUI
+* Avalonia
+* Uno Platform
+* Flutter
+* AI
+* Libraries and tools
+* Templates and applications
+
+## Community
+
+Contributors and the open-source community are welcome to help make Coder Basket a useful and growing gallery of quality projects.
+
+Visit:
+
+**https://coderbasket.github.io**
+
+---
+
+## Screenshot
+
+![Coder Basket](https://github.com/coderbasket/coderbasket.github.io/raw/main/Screens/Screenshot.png)

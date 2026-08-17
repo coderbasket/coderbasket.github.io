@@ -2,3 +2,22 @@ cd "C:\Users\Robel\Documents\projects\coderbasket"
 
 git checkout environment
 git status
+
+
+git add .
+git commit -m "Update Coder Basket"
+git push origin environment
+
+
+
+
+## Discover Open Source Projects
+
+Coder Basket is a curated collection of open-source applications,
+libraries, tools, templates, and developer projects.
+
+Explore projects by platform and technology, including .NET, MAUI,
+Blazor, WinUI, Avalonia, Uno Platform, Flutter, AI, and more.
+
+Each project includes useful information such as its description,
+supported platforms, framework, repository, and related links.
