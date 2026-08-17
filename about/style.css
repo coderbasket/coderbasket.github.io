@@ -1,0 +1,331 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-hero {
+  padding: 46px 0 42px;
+}
+
+.about-hero h1 {
+  margin: 8px 0 12px;
+  color: var(--heading);
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.about-hero p {
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  color: var(--primary);
+  background: var(--primary-glow);
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   ABOUT SECTIONS
+========================================================= */
+
+.about-section {
+  padding: 50px 0;
+}
+
+.about-section-alt {
+  background: rgba(15, 23, 42, 0.35);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 24px;
+}
+
+.about-card {
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-focus);
+  background: var(--bg-card-hover);
+}
+
+.about-card-featured {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 59, 92, 0.08),
+      transparent 45%
+    ),
+    var(--bg-card);
+}
+
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+
+  border-radius: var(--radius);
+
+  background: var(--primary-glow);
+  color: var(--primary);
+
+  font-family: "Fira Code", monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.about-card h2 {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about-card p {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 1.45rem;
+  line-height: 1.7;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   ABOUT LIST
+========================================================= */
+
+.about-list {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-list li {
+  position: relative;
+  padding: 7px 0 7px 20px;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.about-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.section-heading > span {
+  color: var(--primary);
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.section-heading h2 {
+  margin: 8px 0 10px;
+  color: var(--heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-feature {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.about-feature:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow);
+}
+
+.feature-number {
+  margin-bottom: 14px;
+  color: var(--primary);
+  font-family: "Fira Code", monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.about-feature h3 {
+  margin: 0 0 8px;
+  color: var(--heading);
+  font-size: 1.7rem;
+}
+
+.about-feature p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.about-philosophy {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+
+.about-philosophy .about-icon {
+  margin-bottom: 14px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.about-cta {
+  padding: 60px 0 70px;
+}
+
+.about-cta-inner {
+  padding: 42px 24px;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at center, rgba(255, 59, 92, 0.1), transparent 65%),
+    var(--bg-card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.about-cta h2 {
+  margin: 0 0 8px;
+  color: var(--heading);
+  font-size: 2.6rem;
+}
+
+.about-cta p {
+  margin: 0 auto 22px;
+  color: var(--text);
+  font-size: 1.45rem;
+}
+
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 22px;
+
+  border-radius: var(--radius);
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-size: 1.35rem;
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.about-cta-button:hover {
+  color: var(--white);
+  background: var(--primary-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ABOUT RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+  .about-hero {
+    padding: 34px 0;
+  }
+
+  .about-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-philosophy {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 36px 0;
+  }
+
+  .about-card {
+    padding: 22px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+}

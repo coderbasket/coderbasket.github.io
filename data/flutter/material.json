@@ -1,0 +1,35 @@
+[
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/material_3_demo",
+    "title": "Material 3 Demo",
+    "description": "A Flutter sample application showcasing Material 3 features and components.",
+    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
+    "external_url": "https://docs.flutter.dev/ui/design/material",
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": "https://raw.githubusercontent.com/flutter/samples/main/material_3_demo/assets/images/material_3_demo.png",
+    "categories": [142, 148, 45]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/compass_app",
+    "title": "Compass App",
+    "description": "A Flutter sample application demonstrating an app architecture using MVVM.",
+    "platforms": ["android", "ios"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [8, 142, 170]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/veggieseasons",
+    "title": "Veggie Seasons",
+    "description": "A Flutter demo application demonstrating a complete app experience with seasonal vegetables.",
+    "platforms": ["android", "ios"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [142, 12, 21]
+  }
+]

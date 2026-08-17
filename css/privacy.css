@@ -1,0 +1,277 @@
+/* =========================================================
+   CODER BASKET — PRIVACY PAGE
+   ========================================================= */
+
+.privacy-page {
+  padding: 70px 0 100px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.privacy-hero {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.privacy-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+
+  border: 1px solid var(--primary);
+  border-radius: 50px;
+
+  color: var(--primary);
+
+  font-family: "Fira Code", monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  background: var(--primary-glow);
+}
+
+.privacy-hero h1 {
+  margin: 0 0 18px;
+
+  color: var(--heading);
+
+  font-size: clamp(3.2rem, 6vw, 5rem);
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.privacy-hero > p {
+  max-width: 680px;
+  margin: 0 auto 20px;
+
+  color: var(--text);
+
+  font-size: 1.7rem;
+  line-height: 1.7;
+}
+
+.privacy-updated {
+  color: var(--text-muted);
+
+  font-family: "Fira Code", monospace;
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.privacy-layout {
+  display: grid;
+
+  grid-template-columns: 210px minmax(0, 760px);
+
+  justify-content: center;
+
+  gap: 55px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.privacy-sidebar {
+  position: sticky;
+  top: 100px;
+
+  padding: 18px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  background: var(--bg-card);
+
+  box-shadow: var(--shadow);
+}
+
+.privacy-sidebar-title {
+  margin-bottom: 12px;
+
+  color: var(--heading);
+
+  font-family: "Fira Code", monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.privacy-sidebar a {
+  display: block;
+
+  padding: 7px 9px;
+
+  border-radius: 5px;
+
+  color: var(--text-muted);
+
+  font-size: 1.2rem;
+
+  transition: var(--transition);
+}
+
+.privacy-sidebar a:hover {
+  color: var(--heading);
+  background: var(--light);
+  padding-left: 12px;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.privacy-content {
+  min-width: 0;
+}
+
+.privacy-content section {
+  margin-bottom: 48px;
+  scroll-margin-top: 100px;
+}
+
+.privacy-content h2 {
+  margin: 0 0 18px;
+
+  color: var(--heading);
+
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.privacy-content h3 {
+  margin: 28px 0 10px;
+
+  color: var(--heading);
+
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.privacy-content p {
+  margin: 0 0 16px;
+
+  color: var(--text);
+
+  font-size: 1.45rem;
+  line-height: 1.8;
+}
+
+.privacy-content ul {
+  margin: 15px 0 20px;
+  padding-left: 25px;
+}
+
+.privacy-content li {
+  margin-bottom: 8px;
+
+  color: var(--text);
+
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.privacy-content li::marker {
+  color: var(--primary);
+}
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.privacy-notice {
+  margin-top: 60px;
+  padding: 22px 24px;
+
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius);
+
+  background: linear-gradient(90deg, var(--primary-glow), transparent);
+}
+
+.privacy-notice strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--heading);
+
+  font-size: 1.4rem;
+}
+
+.privacy-notice p {
+  margin: 0;
+
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .privacy-page {
+    padding: 45px 0 70px;
+  }
+
+  .privacy-hero {
+    margin-bottom: 40px;
+  }
+
+  .privacy-hero > p {
+    font-size: 1.5rem;
+  }
+
+  .privacy-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .privacy-sidebar {
+    position: static;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 3px;
+
+    padding: 12px;
+  }
+
+  .privacy-sidebar-title {
+    grid-column: 1 / -1;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .privacy-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-sidebar {
+    grid-template-columns: 1fr;
+  }
+}

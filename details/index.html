@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coder Basket - Project Details</title>
+
+    <meta name="description"
+        content="View project details, repository information, documentation and resources on Coder Basket.">
+
+    <link rel="icon" href="/img/codericon.png">
+
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="/" class="logo">
+                <img src="/img/codericon.png" alt="">
+                <span>Coder Basket</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav id="mainNav" class="main-nav">
+
+                <a href="/">Home</a>
+
+                <div class="nav-dropdown">
+                    <button type="button">AI</button>
+
+                    <div class="dropdown-menu">
+                        <a href="/ai/">AI & Machine Learning</a>
+                        <a href="/ai/llm/">LLM</a>
+                        <a href="/ai/agents/">AI Agents</a>
+                        <a href="/ai/vision/">Computer Vision</a>
+                        <a href="/ai/speech/">Speech & Audio</a>
+                        <a href="/ai/local-ai/">Local AI</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <button type="button">.NET</button>
+
+                    <div class="dropdown-menu">
+                        <a href="/dotnet/maui/">.NET MAUI</a>
+                        <a href="/dotnet/blazor/">Blazor</a>
+                        <a href="/dotnet/winui/">WinUI</a>
+                        <a href="/dotnet/avalonia/">Avalonia</a>
+                        <a href="/dotnet/uno/">Uno Platform</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <button type="button">Frameworks</button>
+
+                    <div class="framework-dropdown-menu">
+                        <a href="/frameworks/flutter/">Flutter</a>
+                        <a href="/frameworks/react/">React</a>
+                        <a href="/frameworks/react-native/">React Native</a>
+                        <a href="/frameworks/vue/">Vue</a>
+                        <a href="/frameworks/angular/">Angular</a>
+                        <a href="/frameworks/svelte/">Svelte</a>
+                        <a href="/frameworks/nextjs/">Next.js</a>
+                        <a href="/frameworks/nuxt/">Nuxt</a>
+                        <a href="/frameworks/electron/">Electron</a>
+                        <a href="/frameworks/tauri/">Tauri</a>
+                        <a href="/frameworks/kotlin-multiplatform/">Kotlin Multiplatform</a>
+                        <a href="/frameworks/laravel/">Laravel</a>
+                        <a href="/frameworks/django/">Django</a>
+                        <a href="/frameworks/spring/">Spring</a>
+                        <a href="/frameworks/ruby-on-rails/">Ruby on Rails</a>
+                    </div>
+                </div>
+
+                <a href="/libraries/">Libraries</a>
+                <a href="/tools/">Tools</a>
+                <a href="/projects/">Projects</a>
+                <a href="/about/">About</a>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="detail-page">
+
+        <div id="detailLoading" class="detail-loading" aria-label="Loading"></div>
+
+        <div class="container detail-layout">
+
+            <!-- LEFT SIDEBAR -->
+            <aside id="categorySidebar">
+
+                <h2>Categories</h2>
+
+                <div class="category-group">
+
+                    <h3>Platform</h3>
+
+                    <div id="sectionList"></div>
+
+                </div>
+
+                <div class="category-group">
+
+                    <h3>Category</h3>
+
+                    <div id="categoryList"></div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- PROJECT CONTENT -->
+            <div class="detail-content">
+
+                <div id="detailError" class="detail-error" hidden>
+
+                    <h1>Project Not Found</h1>
+
+                    <p>
+                        We could not load this project.
+                    </p>
+
+                    <a href="/">
+                        Return to Coder Basket
+                    </a>
+
+                </div>
+
+
+                <article id="projectDetail" class="project-detail" hidden>
+
+                    <div id="projectCategory" class="project-category">
+                    </div>
+
+
+                    <header class="project-header">
+
+                        <div class="project-header-main">
+
+                            <h1 id="projectTitle"></h1>
+
+                            <div id="projectAuthor" class="project-author">
+                            </div>
+
+                        </div>
+
+                        <div id="projectActions" class="project-actions">
+                        </div>
+
+                    </header>
+
+
+                    <section class="detail-section" id="descriptionSection">
+
+                        <h2>DESCRIPTION</h2>
+
+                        <div id="projectDescription" class="project-description">
+                        </div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="platformsSection" hidden>
+
+                        <h2>PLATFORMS</h2>
+
+                        <div id="projectPlatforms" class="project-platforms">
+                        </div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="statsSection">
+
+                        <div id="projectStats" class="project-stats">
+                        </div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="repositorySection">
+
+                        <h2>CHECK OUT THE CODE</h2>
+
+                        <div id="repositoryCard" class="repository-card">
+                        </div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="homepageSection" hidden>
+
+                        <h2>PROJECT WEBSITE</h2>
+
+                        <div id="projectHomepage"></div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="youtubeSection" hidden>
+
+                        <h2>WATCH ON YOUTUBE</h2>
+
+                        <div id="projectYoutube" class="project-video">
+                        </div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="screenshotsSection" hidden>
+
+                        <h2>SCREENSHOTS</h2>
+
+                        <div id="projectScreenshots" class="project-screenshots">
+                        </div>
+
+                    </section>
+
+
+                    <section class="detail-section" id="readmeSection" hidden>
+
+                        <h2>README</h2>
+
+                        <div id="projectReadme" class="project-readme">
+                        </div>
+
+                    </section>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+     <footer class="site-footer">
+
+        <div class="container">
+
+            <div>
+
+                <strong id="footerName">
+                    Coder Basket
+                </strong>
+
+                <p id="footerDescription">
+                    Useful software, libraries, tools, and projects.
+                </p>
+
+            </div>
+
+            <nav aria-label="Footer navigation">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/about/">
+                    About
+                </a>
+
+                <a href="/privacy/">
+                    Privacy
+                </a>
+
+                <a href="/terms/">
+                    Terms
+                </a>
+
+                <a id="footerEmail" href="#">
+                    Email
+                </a>
+
+                <a id="footerGithub" href="#" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+            </nav>
+
+            <div class="copyright">
+
+                © <span id="footerYear"></span>
+                <span id="footerCopyrightName">Coder Basket</span>.
+                All rights reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="/js/data.js" defer></script>
+    <script src="/js/app.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <script src="/js/sidebar.js" defer></script>
+     <script src="/site-config.js"></script>
+    <script src="/js/footer.js"></script>
+
+</body>
+
+</html>

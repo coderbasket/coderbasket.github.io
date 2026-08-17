@@ -1,0 +1,46 @@
+[
+  {
+    "project_url": "https://github.com/run-llama/llama_index",
+    "title": "LlamaIndex",
+    "description": "Data framework for building context-augmented LLM applications, including retrieval-augmented generation.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://www.llamaindex.ai/",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/img/hero.png",
+    "categories": [46]
+  },
+  {
+    "project_url": "https://github.com/chroma-core/chroma",
+    "title": "Chroma",
+    "description": "Open-source embedding database designed for building AI applications with retrieval and semantic search.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://www.trychroma.com/",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/docs/images/chroma.png",
+    "categories": [42, 46]
+  },
+  {
+    "project_url": "https://github.com/qdrant/qdrant",
+    "title": "Qdrant",
+    "description": "High-performance vector similarity search engine and vector database for AI applications.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://qdrant.tech/",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://qdrant.tech/images/logo_with_bg.svg",
+    "categories": [42, 46]
+  },
+  {
+    "project_url": "https://github.com/pgvector/pgvector",
+    "title": "pgvector",
+    "description": "Open-source vector similarity search extension for PostgreSQL.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://github.com/pgvector/pgvector",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/logo.png",
+    "categories": [46]
+  }
+]

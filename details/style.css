@@ -1,0 +1,1247 @@
+/* =========================================================
+   CODER BASKET - PROJECT DETAIL PAGE
+   Modern / Responsive / Lightweight
+   ========================================================= */
+
+/* =========================================================
+   1. VARIABLES
+   ========================================================= */
+
+/* =========================================================
+   CODER BASKET — PROJECT DETAIL
+   Uses the global app.css design system
+   ========================================================= */
+
+:root {
+  /* Global Coder Basket colors */
+  --detail-bg: var(--bg-main);
+  --detail-surface: var(--bg-card);
+  --detail-surface-soft: var(--bg-card-hover);
+
+  --detail-text: var(--heading);
+  --detail-text-secondary: var(--text);
+  --detail-text-muted: var(--text-muted);
+
+  --detail-primary: var(--primary);
+  --detail-primary-dark: var(--primary-dark);
+  --detail-primary-hover: var(--primary-hover);
+  --detail-primary-soft: var(--primary-glow);
+
+  --detail-border: var(--border);
+  --detail-border-hover: var(--border-focus);
+
+  /* Detail-specific shadows */
+  --detail-shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+  --detail-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  --detail-shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+
+  /* Reuse global radius */
+  --detail-radius-sm: var(--radius);
+  --detail-radius: var(--radius-lg);
+  --detail-radius-lg: 16px;
+
+  --detail-transition: var(--transition);
+}
+
+/* =========================================================
+   2. PAGE
+   ========================================================= */
+
+/* =========================================================
+   2. PAGE
+   ========================================================= */
+
+.detail-page {
+  min-height: 70vh;
+
+  padding: 30px 0 60px;
+
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(22, 160, 133, 0.07),
+      transparent 32%
+    ),
+    var(--detail-bg);
+}
+/* =========================================================
+   DETAIL LAYOUT
+   Sidebar + project content
+   ========================================================= */
+
+.detail-layout {
+  display: grid;
+
+  grid-template-columns: 210px minmax(0, 1fr);
+
+  gap: 32px;
+
+  align-items: start;
+}
+
+.detail-content {
+  min-width: 0;
+}
+
+.detail-content .project-detail {
+  max-width: none;
+  margin: 0;
+}
+
+/* =========================================================
+   3. LOADING
+   ========================================================= */
+
+/* =========================================================
+   LOADING PROGRESS BAR
+   ========================================================= */
+
+.detail-loading {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+
+  width: 100%;
+  height: 3px;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  pointer-events: none;
+}
+
+.detail-loading::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -35%;
+
+  width: 35%;
+  height: 100%;
+
+  background: var(--detail-primary);
+
+  box-shadow: 0 0 10px var(--detail-primary);
+
+  animation: detailProgress 1.2s ease-in-out infinite;
+}
+
+.detail-loading[hidden] {
+  display: none;
+}
+
+@keyframes detailProgress {
+  0% {
+    left: -35%;
+    width: 35%;
+  }
+
+  50% {
+    left: 35%;
+    width: 45%;
+  }
+
+  100% {
+    left: 100%;
+    width: 35%;
+  }
+}
+
+/* =========================================================
+   4. ERROR
+   ========================================================= */
+
+.detail-error {
+  max-width: 650px;
+
+  margin: 80px auto;
+  padding: 50px 30px;
+
+  text-align: center;
+
+  background: var(--detail-surface);
+
+  border: 1px solid var(--detail-border);
+  border-radius: var(--detail-radius-lg);
+
+  box-shadow: var(--detail-shadow);
+
+  animation: detailFadeUp 0.45s ease both;
+}
+
+.detail-error h1 {
+  margin: 0 0 12px;
+
+  color: var(--detail-text);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.detail-error p {
+  margin: 0 0 25px;
+
+  color: var(--detail-text-secondary);
+
+  font-size: 1.05rem;
+}
+
+.detail-error a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  color: #fff;
+  background: var(--detail-primary);
+
+  border-radius: 9px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition:
+    transform var(--detail-transition),
+    background var(--detail-transition),
+    box-shadow var(--detail-transition);
+}
+
+.detail-error a:hover {
+  background: var(--detail-primary-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(22, 160, 133, 0.22);
+}
+
+/* =========================================================
+   5. PROJECT DETAIL
+   ========================================================= */
+
+.project-detail {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  animation: detailFadeUp 0.55s ease both;
+}
+
+/* =========================================================
+   6. CATEGORY
+   ========================================================= */
+
+.project-category {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-bottom: 14px;
+  padding: 7px 12px;
+
+  color: var(--detail-primary-dark);
+  background: var(--detail-primary-soft);
+
+  border: 1px solid rgba(22, 160, 133, 0.15);
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  animation: detailFadeUp 0.45s 0.05s ease both;
+}
+
+/* =========================================================
+   7. PROJECT HEADER
+   ========================================================= */
+
+/* =========================================================
+   7. PROJECT HEADER
+   ========================================================= */
+
+.project-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 28px;
+
+  animation: detailFadeUp 0.5s 0.08s ease both;
+}
+
+.project-header h1 {
+  margin: 0 0 10px;
+
+  color: var(--detail-text);
+
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+.project-header-main {
+  min-width: 0;
+}
+
+.project-author {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--detail-text-secondary);
+
+  font-size: 0.95rem;
+}
+
+.project-author img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 2px solid var(--detail-surface);
+
+  box-shadow: var(--detail-shadow-sm);
+}
+
+/* =========================================================
+   8. ACTIONS
+   ========================================================= */
+
+.project-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.project-actions a,
+.project-actions button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--detail-border);
+  border-radius: 9px;
+
+  color: var(--detail-text);
+
+  background: var(--detail-surface);
+
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--detail-transition),
+    border-color var(--detail-transition),
+    background var(--detail-transition),
+    box-shadow var(--detail-transition);
+}
+
+.project-actions a:hover,
+.project-actions button:hover {
+  border-color: var(--detail-border-hover);
+
+  background: var(--detail-surface-soft);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--detail-shadow-sm);
+}
+
+/* =========================================================
+   9. DETAIL SECTION
+   ========================================================= */
+
+.detail-section {
+  margin-top: 24px;
+
+  animation: detailFadeUp 0.5s ease both;
+}
+
+.detail-section h2 {
+  margin: 0 0 10px;
+
+  color: var(--detail-text);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   10. DESCRIPTION
+   ========================================================= */
+
+.project-description {
+  max-width: 900px;
+
+  color: var(--detail-text-secondary);
+
+  font-size: clamp(1rem, 1.7vw, 1.15rem);
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   11. PLATFORMS
+   ========================================================= */
+
+.project-platforms {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.platform-item {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 8px 13px;
+
+  color: var(--detail-text);
+
+  background: var(--detail-surface);
+
+  border: 1px solid var(--detail-border);
+  border-radius: 999px;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  box-shadow: var(--detail-shadow-sm);
+
+  transition:
+    transform var(--detail-transition),
+    border-color var(--detail-transition),
+    box-shadow var(--detail-transition);
+}
+
+.platform-item:hover {
+  border-color: var(--detail-primary);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   12. STATISTICS
+   ========================================================= */
+
+/* =========================================================
+   12. STATISTICS
+   Compact repository metadata
+   ========================================================= */
+
+.project-stats {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px 24px;
+
+  padding: 4px 0;
+
+  color: var(--detail-text-muted);
+}
+
+.project-stat {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: auto;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: 0;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transition: color var(--detail-transition);
+}
+
+.project-stat:hover {
+  border: 0;
+
+  transform: none;
+
+  box-shadow: none;
+
+  color: var(--detail-text);
+}
+
+.project-stat-icon {
+  margin: 0;
+
+  color: var(--detail-primary);
+
+  font-size: 0.95rem;
+
+  line-height: 1;
+}
+
+.project-stat-value {
+  overflow: visible;
+
+  color: var(--detail-text);
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  text-overflow: clip;
+
+  white-space: nowrap;
+}
+
+.project-stat-label {
+  margin: 0;
+
+  color: var(--detail-text-muted);
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   13. REPOSITORY CARD
+   ========================================================= */
+
+/* =========================================================
+   13. REPOSITORY
+   Compact repository information
+   ========================================================= */
+
+.repository-card {
+  background: var(--detail-surface);
+
+  border: 1px solid var(--detail-border);
+  border-radius: 10px;
+
+  box-shadow: none;
+
+  transition:
+    border-color var(--detail-transition),
+    background var(--detail-transition);
+}
+
+.repository-card:hover {
+  border-color: var(--detail-border-hover);
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+.repository-card-inner {
+  padding: 16px 18px;
+}
+
+.repository-card h3 {
+  margin: 0 0 5px;
+
+  color: var(--detail-text);
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.repository-card p {
+  margin: 0;
+
+  color: var(--detail-text-secondary);
+
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.repository-information {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 5px 14px;
+
+  margin-top: 9px;
+
+  color: var(--detail-text-muted);
+
+  font-size: 0.78rem;
+}
+
+.repository-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 12px;
+}
+
+.repository-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 32px;
+
+  padding: 0 11px;
+
+  color: var(--detail-text);
+
+  background: var(--detail-surface-soft);
+
+  border: 1px solid var(--detail-border);
+
+  border-radius: 7px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.repository-actions a:first-child {
+  color: #fff;
+
+  background: var(--detail-primary);
+
+  border-color: var(--detail-primary);
+}
+
+.repository-actions a:hover {
+  transform: none;
+
+  border-color: var(--detail-primary);
+}
+
+.repository-actions a:first-child:hover {
+  background: var(--detail-primary-dark);
+}
+
+/* =========================================================
+   14. HOMEPAGE
+   ========================================================= */
+
+#projectHomepage a {
+  display: inline-flex;
+
+  max-width: 100%;
+
+  color: var(--detail-primary);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+
+  transition: color var(--detail-transition);
+}
+
+#projectHomepage a:hover {
+  color: var(--detail-primary-dark);
+
+  text-decoration: underline;
+}
+
+/* =========================================================
+   15. YOUTUBE
+   ========================================================= */
+
+.project-video {
+  max-width: 800px;
+}
+
+.project-video a {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  border-radius: var(--detail-radius);
+
+  background: #111;
+
+  box-shadow: var(--detail-shadow);
+
+  transition:
+    transform var(--detail-transition),
+    box-shadow var(--detail-transition);
+}
+
+.project-video a:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--detail-shadow-lg);
+}
+
+.project-video img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-video a:hover img {
+  transform: scale(1.025);
+}
+
+.project-video a::after {
+  content: "▶";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  border-radius: 50%;
+
+  font-size: 1.35rem;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    transform var(--detail-transition),
+    background var(--detail-transition);
+}
+
+.project-video a:hover::after {
+  background: var(--detail-primary);
+
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* =========================================================
+   16. SCREENSHOTS
+   ========================================================= */
+
+.project-screenshots {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.project-screenshots a {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  min-height: 150px;
+
+  background: var(--detail-surface-soft);
+
+  border: 1px solid var(--detail-border);
+
+  border-radius: var(--detail-radius);
+
+  box-shadow: var(--detail-shadow-sm);
+
+  animation: detailScaleIn 0.4s ease both;
+
+  transition:
+    transform var(--detail-transition),
+    border-color var(--detail-transition),
+    box-shadow var(--detail-transition);
+}
+
+.project-screenshots a:hover {
+  border-color: rgba(22, 160, 133, 0.4);
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--detail-shadow);
+}
+
+.project-screenshots img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 180px;
+
+  object-fit: cover;
+
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-screenshots a:hover img {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+   17. README
+   ========================================================= */
+
+.project-readme {
+  overflow: hidden;
+
+  padding: 30px;
+
+  color: var(--detail-text);
+
+  background: var(--detail-surface);
+
+  border: 1px solid var(--detail-border);
+  border-radius: var(--detail-radius-lg);
+
+  box-shadow: var(--detail-shadow-sm);
+
+  line-height: 1.75;
+}
+
+/* README typography */
+
+.project-readme h1,
+.project-readme h2,
+.project-readme h3,
+.project-readme h4,
+.project-readme h5,
+.project-readme h6 {
+  margin-top: 1.8em;
+  margin-bottom: 0.7em;
+
+  color: var(--detail-text);
+
+  line-height: 1.25;
+}
+
+.project-readme h1:first-child,
+.project-readme h2:first-child,
+.project-readme h3:first-child {
+  margin-top: 0;
+}
+
+.project-readme p {
+  margin: 0 0 1em;
+}
+
+.project-readme a {
+  color: var(--detail-primary);
+
+  text-decoration: none;
+}
+
+.project-readme a:hover {
+  text-decoration: underline;
+}
+
+.project-readme ul,
+.project-readme ol {
+  padding-left: 1.5em;
+}
+
+.project-readme li {
+  margin-bottom: 0.35em;
+}
+
+.project-readme blockquote {
+  margin: 1.2em 0;
+
+  padding: 12px 18px;
+
+  color: var(--detail-text-secondary);
+
+  background: var(--detail-surface-soft);
+
+  border-left: 4px solid var(--detail-primary);
+
+  border-radius: 0 8px 8px 0;
+}
+
+.project-readme code {
+  padding: 2px 6px;
+
+  color: #334155;
+
+  background: #eef2f7;
+
+  border-radius: 5px;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font-size: 0.88em;
+}
+
+.project-readme pre {
+  overflow-x: auto;
+
+  margin: 1.2em 0;
+
+  padding: 18px;
+
+  color: #e2e8f0;
+
+  background: #0f172a;
+
+  border-radius: 10px;
+
+  line-height: 1.6;
+}
+
+.project-readme pre code {
+  padding: 0;
+
+  color: inherit;
+
+  background: transparent;
+}
+
+.project-readme img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+
+  margin: 18px auto;
+
+  border-radius: 9px;
+}
+
+.project-readme table {
+  width: 100%;
+
+  margin: 20px 0;
+
+  border-collapse: collapse;
+
+  overflow: hidden;
+}
+
+.project-readme th,
+.project-readme td {
+  padding: 10px 12px;
+
+  text-align: left;
+
+  border: 1px solid var(--detail-border);
+}
+
+.project-readme th {
+  background: var(--detail-surface-soft);
+}
+
+.project-readme .readme-badge {
+  display: inline-block;
+
+  width: auto;
+  height: 20px;
+
+  max-width: none;
+
+  margin: 2px 4px 2px 0;
+
+  vertical-align: middle;
+
+  border-radius: 3px;
+}
+.project-readme p:has(.readme-badge) {
+  margin: 0 0 6px;
+}
+
+.project-readme p:has(.readme-badge) .readme-badge {
+  margin-right: 5px;
+}
+/* =========================================================
+   18. ANIMATIONS
+   ========================================================= */
+
+@keyframes detailFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes detailFadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes detailScaleIn {
+  from {
+    opacity: 0;
+
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+@keyframes detailSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   19. STAGGER SCREENSHOTS
+   ========================================================= */
+
+.project-screenshots a:nth-child(1) {
+  animation-delay: 0.04s;
+}
+
+.project-screenshots a:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.project-screenshots a:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+.project-screenshots a:nth-child(4) {
+  animation-delay: 0.16s;
+}
+
+.project-screenshots a:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.project-screenshots a:nth-child(6) {
+  animation-delay: 0.24s;
+}
+
+
+/* =========================================================
+   20. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .detail-page {
+    padding-top: 35px;
+    padding-bottom: 65px;
+  }
+
+  .project-header {
+    flex-direction: column;
+  }
+
+  .project-actions {
+    width: 100%;
+  }
+
+  .project-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   21. MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .detail-page {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .project-header {
+    gap: 18px;
+
+    margin-bottom: 32px;
+  }
+
+  .project-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .project-actions {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+  }
+
+  .project-actions a,
+  .project-actions button {
+    width: 100%;
+  }
+
+  .detail-section {
+    margin-top: 32px;
+  }
+
+  .project-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .project-stat {
+    padding: 15px;
+  }
+
+  .project-stat-value {
+    font-size: 1.15rem;
+  }
+
+  .repository-card-inner {
+    padding: 20px;
+  }
+
+  .repository-actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+
+  .repository-actions a {
+    width: 100%;
+  }
+
+  .project-screenshots {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .project-screenshots a {
+    min-height: 200px;
+  }
+
+  .project-screenshots img {
+    min-height: 200px;
+  }
+
+  .project-readme {
+    padding: 20px;
+
+    border-radius: var(--detail-radius);
+  }
+
+  .project-readme pre {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    border-radius: 8px;
+  }
+}
+
+/* =========================================================
+   22. VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .project-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   23. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

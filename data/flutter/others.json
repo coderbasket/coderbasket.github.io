@@ -1,0 +1,68 @@
+[
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/animations",
+    "title": "Flutter Animations",
+    "description": "A collection of Flutter examples showcasing animation techniques and capabilities.",
+    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [44, 172]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/google_maps",
+    "title": "Google Maps",
+    "description": "A Flutter sample demonstrating integration with the Google Maps for Flutter plugin.",
+    "platforms": ["android", "ios", "web"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [14, 173]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/navigation_and_routing",
+    "title": "Navigation and Routing",
+    "description": "A Flutter sample demonstrating navigation and routing patterns using go_router.",
+    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [16, 174, 176]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/pedometer",
+    "title": "Pedometer",
+    "description": "A Flutter sample demonstrating platform API integration using FFIgen and JNIgen.",
+    "platforms": ["android"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [177, 182, 173]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/testing_app",
+    "title": "Testing App",
+    "description": "A Flutter sample application demonstrating testing techniques for Flutter applications.",
+    "platforms": ["android", "ios", "web"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [80, 177]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/platform_design",
+    "title": "Platform Design",
+    "description": "A Flutter sample demonstrating how to reuse application code while adapting the UI to different platform design conventions.",
+    "platforms": ["android", "ios"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [176, 142, 183, 182]
+  }
+]

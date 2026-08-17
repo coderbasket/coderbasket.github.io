@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <g transform="translate(0, 0)">
+    <!-- Cyan Polygon / Ribbon Left -->
+    <polygon points="256,70 170,195 170,335 256,270" fill="#0284C7" />
+    <polygon points="256,70 310,70 215,208 170,195" fill="#38BDF8" />
+
+    <!-- Purple Polygon / Ribbon Right -->
+    <polygon points="256,442 342,317 342,177 256,242" fill="#6D28D9" />
+    <polygon points="256,442 202,442 297,304 342,317" fill="#8B5CF6" />
+
+    <!-- Central Intersecting Geometric Core -->
+    <polygon points="256,270 215,208 256,180 297,304" fill="#34D399" />
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+[
+  {
+    "project_url": "https://github.com/ollama/ollama",
+    "title": "Ollama",
+    "description": "Get up and running with large language models locally.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://ollama.com/",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://raw.githubusercontent.com/ollama/ollama/main/docs/logo.svg",
+    "categories": [42, 46]
+  },
+  {
+    "project_url": "https://github.com/huggingface/transformers",
+    "title": "Transformers",
+    "description": "State-of-the-art machine learning for PyTorch, TensorFlow, and JAX, including thousands of pretrained models.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://huggingface.co/transformers/",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "categories": [46]
+  },
+  {
+    "project_url": "https://github.com/ggerganov/llama.cpp",
+    "title": "llama.cpp",
+    "description": "LLM inference in C/C++ with minimal setup and support for running large language models locally.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://github.com/ggerganov/llama.cpp/raw/master/media/llama1.png",
+    "categories": [42, 46]
+  },
+  {
+    "project_url": "https://github.com/microsoft/onnxruntime",
+    "title": "ONNX Runtime",
+    "description": "Cross-platform machine-learning model accelerator that supports models from many AI frameworks.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": "https://onnxruntime.ai/",
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://onnxruntime.ai/images/ONNX-Runtime-logo.svg",
+    "categories": [46]
+  },
+  {
+    "project_url": "https://github.com/openai/whisper",
+    "title": "Whisper",
+    "description": "General-purpose speech recognition model trained on a large and diverse dataset of audio.",
+    "platforms": ["windows", "mac", "linux"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "others",
+    "image_url": "https://raw.githubusercontent.com/openai/whisper/main/approach.png",
+    "categories": [46]
+  }
+]

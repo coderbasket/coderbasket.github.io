@@ -1,0 +1,35 @@
+[
+  {
+    "project_url": "https://github.com/csells/flutter_ai_chat",
+    "title": "Flutter AI Chat",
+    "description": "A full-featured Flutter chat application using the Flutter AI Toolkit and Vertex AI for Firebase, with authenticated Cloud Firestore chat storage.",
+    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [15, 47, 56, 102]
+  },
+  {
+    "project_url": "https://github.com/dgewe/Tinder-App-Flutter",
+    "title": "Tinder App Flutter",
+    "description": "A Tinder-inspired Flutter application demonstrating authentication, Firestore, Storage, profiles, matching, and chat functionality.",
+    "platforms": ["android"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [39, 15, 122, 102]
+  },
+  {
+    "project_url": "https://github.com/GregoryConrad/expense-tracker",
+    "title": "Flutter Expense Tracker",
+    "description": "A simple Flutter expense tracker using Firebase Authentication and Cloud Firestore as its backend.",
+    "platforms": ["android", "ios", "web"],
+    "external_url": null,
+    "youtube_url": null,
+    "framework_name": "flutter",
+    "image_url": null,
+    "categories": [3, 134, 102, 122]
+  }
+]
