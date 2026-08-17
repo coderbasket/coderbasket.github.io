@@ -128,7 +128,8 @@ function restoreSelection() {
     savedCategoryId === "all" ||
     (savedCategoryId !== null && CATEGORIES[Number(savedCategoryId)])
   ) {
-    selectedCategoryId = savedCategoryId === "all" ? "all" : Number(savedCategoryId);
+    selectedCategoryId =
+      savedCategoryId === "all" ? "all" : Number(savedCategoryId);
   } else {
     selectedCategoryId = "all";
   }
@@ -233,7 +234,10 @@ async function loadCatalogFile(sectionKey, section, categoryFile) {
     const response = await fetch(url);
 
     if (response.status === 404 || !response.ok) {
-      warn("loadCatalogFile", `Unable to load source: ${sectionKey}/${categoryFile}`);
+      warn(
+        "loadCatalogFile",
+        `Unable to load source: ${sectionKey}/${categoryFile}`,
+      );
       return [];
     }
 
@@ -244,22 +248,26 @@ async function loadCatalogFile(sectionKey, section, categoryFile) {
     try {
       data = JSON.parse(text);
     } catch (parseError) {
-      error("loadCatalogFile", `Invalid JSON in ${sectionKey}/${categoryFile}`, parseError);
+      error(
+        "loadCatalogFile",
+        `Invalid JSON in ${sectionKey}/${categoryFile}`,
+        parseError,
+      );
       return [];
     }
 
     const items = Array.isArray(data)
       ? data
       : Array.isArray(data.Items)
-      ? data.Items
-      : [];
+        ? data.Items
+        : [];
 
     return items.map((item) => {
       const existingCategories = Array.isArray(item.categories)
         ? item.categories
         : Array.isArray(item.Categories)
-        ? item.Categories
-        : [];
+          ? item.Categories
+          : [];
 
       return {
         ...item,
@@ -269,7 +277,11 @@ async function loadCatalogFile(sectionKey, section, categoryFile) {
       };
     });
   } catch (errorValue) {
-    error("loadCatalogFile", `Unable to load catalogue source: ${sectionKey}/${categoryFile}`, errorValue);
+    error(
+      "loadCatalogFile",
+      `Unable to load catalogue source: ${sectionKey}/${categoryFile}`,
+      errorValue,
+    );
     return [];
   }
 }
@@ -283,14 +295,14 @@ function normalizeProjects(projects) {
     const categories = Array.isArray(project.categories)
       ? [...new Set(project.categories)]
       : Array.isArray(project.Categories)
-      ? [...new Set(project.Categories)]
-      : [];
+        ? [...new Set(project.Categories)]
+        : [];
 
     const platforms = Array.isArray(project.platforms)
       ? [...new Set(project.platforms)]
       : Array.isArray(project.Platforms)
-      ? [...new Set(project.Platforms)]
-      : [];
+        ? [...new Set(project.Platforms)]
+        : [];
 
     let imageUrls = [];
     if (project.image_url) {
@@ -313,16 +325,21 @@ function normalizeProjects(projects) {
     return {
       project_url: project.project_url || project.ProjectUrl || "",
       title: project.title || project.Title || "Untitled Project",
-      description: project.description || project.Description || "No description available.",
+      description:
+        project.description ||
+        project.Description ||
+        "No description available.",
       platforms,
       external_url: project.external_url ?? project.ExternalUrl ?? null,
       youtube_url: project.youtube_url ?? project.YoutubeUrl ?? null,
-      framework_name: project.framework_name || project.FrameWorkName || "others",
+      framework_name:
+        project.framework_name || project.FrameWorkName || "others",
       categories,
       image_urls: imageUrls,
       data_section: project.data_section || project.DataSection || "",
       data_category: dataCategory,
-      updated_at: project.updated_at || project.updated || project.UpdatedAt || null,
+      updated_at:
+        project.updated_at || project.updated || project.UpdatedAt || null,
     };
   });
 }
@@ -340,7 +357,9 @@ function notifyCategories() {
     ),
   ]
     .map(Number)
-    .filter((id) => !isNaN(id) && typeof CATEGORIES !== "undefined" && CATEGORIES[id]);
+    .filter(
+      (id) => !isNaN(id) && typeof CATEGORIES !== "undefined" && CATEGORIES[id],
+    );
 
   document.dispatchEvent(
     new CustomEvent("catalogCategoriesLoaded", {
@@ -357,7 +376,13 @@ function renderSections() {
   if (!sectionList) return;
   sectionList.innerHTML = "";
 
-  addFilterLink(sectionList, "All", "all", selectedSection === "all", "section");
+  addFilterLink(
+    sectionList,
+    "All",
+    "all",
+    selectedSection === "all",
+    "section",
+  );
 
   for (const sectionKey of DATA_SECTION_ORDER) {
     const section = DATA_SECTIONS[sectionKey];
@@ -377,7 +402,13 @@ function renderSubCategories() {
   if (!subCategoryList) return;
   subCategoryList.innerHTML = "";
 
-  addFilterLink(subCategoryList, "All Sub-Categories", "all", selectedSubCategory === "all", "subcategory");
+  addFilterLink(
+    subCategoryList,
+    "All Sub-Categories",
+    "all",
+    selectedSubCategory === "all",
+    "subcategory",
+  );
 
   const subCategories = new Set();
   for (const project of allProjects) {
@@ -528,15 +559,21 @@ function applyFilters() {
   filteredProjects = allProjects.filter((project) => {
     // 1. Section Filter
     if (selectedSection !== "all") {
-      const pSection = String(project.data_section || "").trim().toLowerCase();
+      const pSection = String(project.data_section || "")
+        .trim()
+        .toLowerCase();
       const targetSection = String(selectedSection).trim().toLowerCase();
       if (pSection !== targetSection) return false;
     }
 
     // 2. Sub-Category (File Key) Filter
     if (selectedSubCategory !== "all") {
-      const pSubCategory = String(project.data_category || "").trim().toLowerCase();
-      const targetSubCategory = String(selectedSubCategory).trim().toLowerCase();
+      const pSubCategory = String(project.data_category || "")
+        .trim()
+        .toLowerCase();
+      const targetSubCategory = String(selectedSubCategory)
+        .trim()
+        .toLowerCase();
       if (pSubCategory !== targetSubCategory) return false;
     }
 
@@ -637,9 +674,24 @@ function renderProjects() {
 }
 
 function getDetailUrl(project) {
-  const repo = project.project_url || "";
-  if (!repo) return "#";
-  const params = new URLSearchParams({ repo });
+  const repoUrl = project.project_url || project.ExternalUrl || "";
+  if (!repoUrl) return "#";
+
+  // If project_url is already a full GitHub URL, extract owner/repo or encode it properly
+  try {
+    const parsed = new URL(repoUrl);
+    if (parsed.hostname === "github.com") {
+      const cleanRepo = parsed.pathname
+        .replace(/^\//, "")
+        .replace(/\.git$/, "");
+      const params = new URLSearchParams({ repo: cleanRepo });
+      return `/details/?${params.toString()}`;
+    }
+  } catch {
+    // Fallback if it's not a valid URL yet
+  }
+
+  const params = new URLSearchParams({ repo: repoUrl });
   return `/details/?${params.toString()}`;
 }
 
@@ -661,7 +713,10 @@ function createProjectCard(project) {
     .map((name) => `<span class="project-tag">${escapeHtml(name)}</span>`)
     .join("");
 
-  const section = typeof DATA_SECTIONS !== "undefined" ? DATA_SECTIONS[project.data_section] : null;
+  const section =
+    typeof DATA_SECTIONS !== "undefined"
+      ? DATA_SECTIONS[project.data_section]
+      : null;
   const sectionName = section ? section.name : project.data_section;
 
   article.innerHTML = `

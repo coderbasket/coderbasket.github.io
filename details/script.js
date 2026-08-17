@@ -51,22 +51,48 @@
   // START
   // =========================================================
 
+  // =========================================================
+  // START
+  // =========================================================
+
   document.addEventListener("DOMContentLoaded", initialize);
 
   async function initialize() {
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
+    updateYear(); // Use the existing function name
+
+    const repoUrl = getRepositoryFromUrl();
+
+    if (!repoUrl) {
+      showError("No project URL specified in the query parameters.");
+      return;
     }
 
-    restoreSelection();
+    // If the input is already "owner/repo" or a full URL
+    const repository = parseGitHubRepository(repoUrl) || {
+      owner: repoUrl.split("/")[0],
+      repo: repoUrl.split("/")[1],
+    };
 
-    setupNavigation();
-    setupSearch();
-    setupSorting();
+    if (!repository.owner || !repository.repo) {
+      showError("Invalid repository format.");
+      return;
+    }
 
-    renderSections();
+    try {
+      // 1. Fetch Data
+      const repoData = await loadRepository(repository);
 
-    await loadCatalog();
+      // 2. Render Data
+      renderRepository(repoData);
+
+      // 3. Load README (with default branch)
+      await loadReadme(repository, repoData.default_branch || "main");
+
+      // 4. Show Content
+      hideLoading();
+    } catch (err) {
+      showError(err.message);
+    }
   }
 
   // =========================================================

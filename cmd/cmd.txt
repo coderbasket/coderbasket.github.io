@@ -1,0 +1,4 @@
+cd "C:\Users\Robel\Documents\projects\coderbasket"
+
+git checkout environment
+git status
