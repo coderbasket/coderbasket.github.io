@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blazor_App.Shared.Models
+{
+    public class ProjectItemData
+    {
+        public string Title { get; set; } = SiteInfo.FrameWork.ToString();
+        public List<ProjectItem> Items { get; set; }
+    }
+}

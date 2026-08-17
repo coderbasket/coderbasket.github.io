@@ -1,0 +1,35 @@
+﻿@page "/developer-tools"
+<ContentPage>
+    <Content>
+        <div style="display:grid; grid-template-columns:auto 1fr auto">
+            <div style="min-width:3rem;">
+            </div>
+            <div>
+                @if(Items !=null)
+                {
+                    @foreach (var item in Items)
+                    {
+                        <ArticleView toolItem="item"></ArticleView>
+                    }
+                }
+            </div>
+
+            <div style="min-width:3rem;">
+            </div>
+        </div>
+    </Content>
+</ContentPage>
+@code {
+    public List<ToolItem> Items { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        LoadItems();
+    }
+    async void LoadItems()
+    {
+        var toolRoot = await ToolHelper.GetToolItemsAsync();
+        this.Items = toolRoot.Items;
+        StateHasChanged();
+    }
+}

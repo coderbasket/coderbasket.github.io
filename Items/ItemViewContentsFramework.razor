@@ -1,0 +1,44 @@
+﻿@page "/framework/{frameworkParameter}"
+
+<MainContent>
+    <Content>
+        <ItemViewContents PreLoaded="false" AllItems="Items"></ItemViewContents>
+    </Content>
+</MainContent>
+
+@code {
+    string _param;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get{ return _param; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                if (value != _param)
+                {
+                    _param = value;
+                    Render();
+                }
+            }
+        }
+    }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Render();
+    }
+    [Parameter]
+    public List<ProjectItem> Items { get; set; } = new List<ProjectItem>();
+    void Render()
+    {
+        var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+        if(SiteInfo.FrameWork != frameWork)
+        {
+            SiteInfo.FrameWork = frameWork;
+            DataServiceProvider.LoadDataServerAsync();
+        }            
+    }
+
+}

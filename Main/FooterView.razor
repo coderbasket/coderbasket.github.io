@@ -1,0 +1,211 @@
+﻿<style>
+    .nav-stacked li {
+        display: block;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: 'Nunito Sans', sans-serif;
+        color: @SiteInfo.TextColor;
+        font-weight: 300;
+        font-size: 1.6rem;
+        list-style: none;
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        float: none;
+        line-height: 2rem;
+    }
+
+    .nav-pills.nav-stacked:not(.list-style-icons) > li > a:after {
+        font-family: "FontAwesome";
+        content: "\f101";
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        margin-left: 40px;
+        top: 4px;
+        left: 40px;
+        color: @SiteInfo.TextColor;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        display: none;
+    }
+
+    .nav-stacked li a {
+        display: inline-flex;
+        font-weight:bold;
+        color:@SiteInfo.TextColor;
+    }
+
+    nav .nav-stacked {
+        display: block;
+         color:@SiteInfo.TextColor;
+    }
+    
+</style>
+<footer id="footer" class="clearfix" style="background-color:@SiteInfo.BarFooterBackgroundColor; padding:0; border-width:0;">
+
+    <!-- .footer start -->
+    <!-- ================ -->
+
+    <div class="footer" style="background-color:@SiteInfo.BarFooterBackgroundColor;">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <div class="logo-footer">
+                                <div>
+                                    <img width="30" height="30" src="/img/codericon.png"
+                                         href="~/img/codericon.png" />
+                                </div>
+                            </div>
+                            <p >
+                               <span >
+                                  <span style=" opacity:60%;">
+                                        Coder Basket lets developers and designers share code and interfaces to
+                                enable each other to
+                                quickly create great looking mobile apps for Android, iOS, Windows, Linux,
+                                Mac, Website and Web Server. 
+                                  </span> <span> <a href="https://www.snppts.dev/" style="color:@SiteInfo.AccentColor; font-weight:bolder;" title="https://www.snppts.dev/">https://www.snppts.dev/</a></span>
+                               </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <h2 style="color:@SiteInfo.TextColor;" class="title">Learn more</h2>
+                            <div class="separator-2"></div>
+                            <nav>
+                                <ul style="display:block;" class="nav nav-pills nav-stacked">
+                                  
+                                    <li>
+                                        <a class="nav_a" @onclick="(()=>{MainLayout.Current.NavigateToAbout();})">About</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank"
+                                           href="https://twitter.com/coderbasket">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank"
+                                           href="mailto:coderbasketcontact@gmail.com">Contact Email</a>
+                                    </li>
+                                    <li>
+                                        <a @onclick="(()=>{MainLayout.Current.ShowPrivacy();})">Privacy</a>
+                                    </li>
+                                    @{
+                                        #if DEBUG
+                                                                                                                 <li>
+                                                                                                                   <a @onclick="(()=>{MainLayout.Current.ShowTexViewer();})">Developer Json</a>
+                                                                                                                 </li>
+                                        #endif
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <h2 style="color:@SiteInfo.TextColor;" class="title">On this site</h2>
+                            <div class="separator-2"></div>
+                            <nav>
+
+                               
+                                <ul style="display:block;" class="nav nav-pills nav-stacked" >
+                                     <style>
+                                         ul li .tag_b{
+                                             color:@SiteInfo.TextColor;"
+                                        }
+                                      </style>
+                                    <li >
+                                        <a class="tag_b"  href="/">Home</a>
+                                     </li>
+                                    <li><a  target="_blank" href="https://www.snppts.dev/">Xamarin</a></li>
+                                    <li><a   href="/developer-tools">Developer Tools</a></li>
+                                    <li><a href="https://www.buymeacoffee.com/nextsupportlab" target="_blank">Buy me a Coffee</a></li>
+                                    <li style="visibility:collapse">
+                                        <a >
+                                            Submit new
+                                            Project
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-content">
+                            <h2 style="color:@SiteInfo.TextColor;" class="title">Popular categories</h2>
+                            <div class="separator-2"></div>
+                            <div class="tags-cloud">
+                                @foreach (var item in categoriesFinal)
+                                {
+                                    <div  @onclick="(()=>{MainLayout.Current.NavigateToCategory(item);})" style="cursor:pointer;" class="tag">
+                                        <style>
+                                            .tag_a:hover {
+                                                color: black;
+                                            }
+                                        </style>
+                                        <a class="tag_a" style="color:tan;">@item.ToString().ToLower()</a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .footer end -->
+    <!-- .subfooter start -->
+    <!-- ================ -->
+    <div class="subfooter dark-bg" style="background-color:@SiteInfo.BarBackgroundColor;">
+        <div class="container">
+            <div class="subfooter-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">
+                            Copyright &copy; @DateTime.Now.Year Coder Basket by <a class="link-light"
+                                                                     href="https://coderbasket.github.io/">coderbasket.com</a>. All
+                            Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .subfooter end -->
+</footer>
+
+@code {
+    List<Category> categoriesFinal = new List<Category>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        DataServiceProvider.ItemsLoaded += (s, e) =>
+       {
+           RenderItems();
+       };
+        RenderItems();
+    }
+    bool rendering = false;
+    async void RenderItems()
+    {
+        if (DataServiceProvider.ItemHasLoaded == false)
+            return;
+        if (rendering)
+            return;
+        rendering = true;
+        var _snippets = await DataServiceProvider.GetItemsAsync();
+        if(_snippets?.Count > 0)
+        {
+            var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
+            var groupedSorted = categories.GroupBy(n => n).OrderByDescending(g => g.Count());
+            categoriesFinal = groupedSorted.Take(10).Select(x => x.FirstOrDefault()).ToList();
+            StateHasChanged();
+        }
+        rendering = false;
+    }
+    
+}

@@ -1,0 +1,39 @@
+﻿@page "/details"
+@page "/details/{repo}/"
+@page "/details/{frameworkParameter}/{repo}/"
+<MainContent>
+    <Content>
+        <ItemDetailView frameworkParameter="@frameworkParameter" RepositorySlug="@repo"></ItemDetailView>
+    </Content>
+</MainContent>
+
+
+@code {
+    #region Framework
+    string _paramF;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get { return _paramF; }
+        set
+        {
+            if (value.IsValidString())
+            {
+                if (value != _paramF)
+                {
+                    _paramF = value;                   
+                }
+            }
+        }
+    }
+    #endregion
+    string jsonP = null;
+    [Parameter]
+    public string repo { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        StateHasChanged();
+
+    }
+}

@@ -1,0 +1,466 @@
+﻿@page "/submit-form"
+@page "/submit-form/{frameworkParameter}"
+
+<div style="overflow:auto; display:flex; flex-direction:column-reverse;">
+    <div>
+        <div class="banner dark-translucent-bg" style="background-image:url('img/background.jpg'); background-position: 50% 27%;">
+            <style type="text/css">
+                .platform_span:hover {
+                    color: @SiteInfo.AccentColor;
+                }
+
+                .platform_span {
+                    font-weight: bolder;
+                }
+
+                .container .input_info {
+                    height: 30px;
+                    transition: width 0.25s;
+                    margin: 0;
+                }
+
+                .container .input_header {
+                    font-size: 12px;
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                textarea {
+                    color: @SiteInfo.TextColor;
+                }
+            </style>
+            <div class="container">
+                <div class="row">
+                    <div class="input_container">
+
+                        <form autocomplete="off" action="/submit-form" method="post">
+                            <div class="imgcontainer">
+                            </div>
+                            @*<h2 style="color:#EA3D53; font-weight:bolder">Submit Form</h2>*@
+                            <div>
+                                <div class="row_div">
+                                    <div class="column">
+                                        <label style="color:wheat;" for="uname"><b>GITHUB SOURCE REPO</b></label>
+                                    </div>
+
+                                </div>
+                                @*Url*@
+                                <input @bind-value="Repo.ProjectUrl" class="input_info" data-val="true" data-val-required="The ProjectUrl field is required." id="ProjectUrl" name="ProjectUrl" placeholder="https://github.com/owner/name" required="required" type="text">
+
+                                @*Title*@
+                                <label class="input_header" for="psw"><b>TITLE</b></label>
+                                <input @bind-value="Repo.Title" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="Title" required="required" type="text">
+                                @*DESCRIPTION*@
+                                <label class="input_header" for="psw"><b>DESCRIPTION</b></label>
+                                <input @bind-value="Repo.Description" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="Description" required="required" type="text">
+                                @*SUPPORTED PLATFORMS*@
+                                <label class="input_header" for="psw"><b>SUPPORTED PLATFORMS</b></label>
+                                <input @bind-value="Platforms" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="Android, iOS, Windows, Linux, Browser" required="required" type="text">
+                                @*WEBSITE*@
+                                <label class="input_header" for="psw"><b>WEBSITE</b></label>
+                                <input @bind-value="Repo.ExternalUrl" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="www.site.com (Optional)" type="text">
+                                @*YOUTUBE*@
+                                <label class="input_header" for="psw"><b>YOUTUBE</b></label>
+                                <input @bind-value="Repo.YoutubeUrl" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="www.youtube.com (Optional)" type="text">
+                                @*Categories*@
+                                <label class="input_header" for="psw"><b>CATEGORIES</b></label>
+                                <input @bind-value="Categories" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="1, 23, 4, 3, 12" required="required" type="text">
+                                @*Image urls*@
+                                <label class="input_header" for="psw"><b>IMAGE URLS (Separated width comma ,)</b></label>
+                                <textarea @bind="ImageUrls" placeholder="Required" id="w3review" name="w3review" rows="3" style="max-width:420px; color:black; " cols="50"></textarea>
+
+                                @*YOUTUBE*@
+                                <label style="margin-top:-10px; " class="input_header" for="psw"><b>Submitted by</b></label>
+                                <input @bind-value="Repo.SubmittedBy" class="input_info" id="SubmittedBy" name="SubmittedBy" placeholder="Name (Optional)" type="text">
+
+                                <div style="margin-top:8px; background-color:@SiteInfo.BarBackgroundColor; border-radius:8px; padding:8px;">
+                                    <label style="color:red; font-weight:bolder; font-size:smaller;">We only accepts image url from safe sources like Github. Title and description also scan for unnecessary words.</label>
+                                </div>
+
+                            </div>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IC4gn6XHoxFs9e5iQfvt5R7I7zzQZYE9pgSiDoZTsdEGRSb8OCskTQl5Ns61W6eK3BqGVqd6ftHzWZNfmYbh0_ZRqz38xeWKA3Aher5KRslylvmi6AiswjpymgOeuKd0wbQXgAio3mQToDfRPhnOUs">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <section class="main-container" style="background-color:@SiteInfo.BackgroundColor;">
+            <div class="container">
+                <div class="row">
+                    <label style="margin-left:16px; color:@SiteInfo.AccentColor;" class="input_header" for="psw"><b>CATEGORIES</b></label>
+                    <div class="main col-md-12">
+
+                        <div style="display:block;">
+
+                            <div>
+                                @{
+                                    int counter = 1;
+                                    @foreach (var item in Enum.GetValues(typeof(Category)))
+                                    {
+                                        <span style="color:@ColorList.GetRandomColorHex(item.ToString());">@item (@counter), </span>
+                                        counter++;
+                                    }
+                                }
+                            </div>
+
+                        </div>
+                        <div style="display:grid; grid-template-columns: 1fr auto auto auto">
+                            <h1 @onclick="@HideShowPreview" style="cursor:pointer; margin-top:20px; color:@SiteInfo.AccentDarkerColor" class="page-title">Previewer <span style="margin-bottom:10px;">»</span></h1>
+                            <button @onclick="@PreviewNow" style="height:55px; border-radius:10px; background-color:@SiteInfo.AccentDarkerColor;">Preview Now</button>
+                            <button @onclick="@SubmitProjects" style="height:55px; border-radius:10px; margin-left:8px; background-color:forestgreen">Submit For @SiteInfo.FrameWork</button>
+                        </div>
+
+                        <div class="row" style="display:@showHide">
+                            @if (RepoHelper.IsValidRepo(Repo))
+                            {
+                                <CoderBasket.Blazor.Pages.Details.ItemDetailView IsDeleteEnabled="false" ProjectRepo="Repo"></CoderBasket.Blazor.Pages.Details.ItemDetailView>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+@code {
+    #region Framework
+    string _paramF;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get { return _paramF; }
+        set
+        {
+            if (value.IsValidString())
+            {
+                if (value != _paramF)
+                {
+                    _paramF = value;
+                    LoadFrameWorks();
+                }
+            }
+        }
+    }
+    #endregion
+    static List<ProjectItem> readySubmitList = new List<ProjectItem>();
+    public static ProjectItem Repo { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        if (Repo == null)
+        {
+            Repo = new ProjectItem();
+        }
+        UpdateRepo();
+        ScrollToTop();
+        WordsFilter.LoadFilters();
+    }
+    void LoadFrameWorks()
+    {
+        var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+        if (SiteInfo.FrameWork != frameWork)
+        {
+            SiteInfo.FrameWork = frameWork;
+            StateHasChanged();
+        }
+    }
+    async void ScrollToTop()
+    {
+        await Task.Delay(30);
+        await JS.InvokeVoidAsync("OnScrollEvent");
+    }
+    void UpdateRepo()
+    {
+        if (RepoHelper.IsValidRepo(Repo))
+        {
+            ImageUrls = string.Join(", ", Repo.ImageUrls.Distinct().ToList());
+            Categories = Newtonsoft.Json.JsonConvert.SerializeObject(Repo.Categories.Distinct().ToList());
+            Categories = Categories.Replace("[", "").Replace("]", "");
+            Platforms = string.Join(", ", Repo.Platforms.Distinct().ToList());
+        }
+        else
+        {
+            if (Repo.ImageUrls?.Count > 0)
+            {
+                ImageUrls = string.Join(", ", Repo.ImageUrls.Distinct().ToList());
+            }
+            if (Repo.Platforms?.Length > 0)
+            {
+                Platforms = string.Join(", ", Repo.Platforms.Distinct().ToList());
+            }
+            if (Repo.Categories?.Count > 0)
+            {
+                Categories = Newtonsoft.Json.JsonConvert.SerializeObject(Repo.Categories.Distinct().ToList());
+                Categories = Categories.Replace("[", "").Replace("]", "");
+            }
+        }
+        Repo.FrameWorkName = SiteInfo.FrameWork.ToString();
+        StateHasChanged();
+    }
+    async void PreviewNow()
+    {
+        showHide = "block;";
+
+        if (RepoHelper.IsValidRepo(Repo))
+        {
+            var jsonP = await RepoHelper.GetJsonAsync(Repo);
+            bool valid = true;
+            if (jsonP.Contains("Not Found"))
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Invalid repo url... 😌");
+            }
+            if (Repo.ImageUrls != null && Repo.ImageUrls.Count > 0)
+            {
+                var yt = Repo.ImageUrls.Where(p => p.StartsWith("https://www.youtube.com/watch?v=") | p.StartsWith("https://youtu.be/")).FirstOrDefault();
+                if (yt.IsValidString())
+                {
+                    if (Repo.YoutubeUrl.IsValidString() == false)
+                    {
+                        Repo.YoutubeUrl = yt;
+                    }
+                    var ytd = await YTHelper.GetDetailsAsync(yt);
+                    if (ytd != null && ytd.thumbnail_url.IsValidString())
+                    {
+                        var index = Repo.ImageUrls.IndexOf(yt);
+                        Repo.ImageUrls.Remove(yt);
+                        Repo.ImageUrls.Insert(index, ytd.thumbnail_url);
+
+                    }
+                }
+
+            }
+            if (Repo.YoutubeUrl.IsValidString())
+            {
+                if (Repo.YoutubeUrl.StartsWith("https://youtu.be/"))
+                {
+                    var videoId = Repo.YoutubeUrl.Split("https://youtu.be/").LastOrDefault();
+                    var yt = "https://www.youtube.com/watch?v=" + videoId;
+                    yt = yt.Trim();
+                    Repo.YoutubeUrl = yt;
+                }
+            }
+
+            if (valid)
+            {
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(Repo);
+                Repo = Newtonsoft.Json.JsonConvert.DeserializeObject<ProjectItem>(json);
+                UpdateRepo();
+            }
+        }
+        StateHasChanged();
+
+    }
+    public static bool isUpdate = false;
+    async void SubmitProjects()
+    {
+        StateHasChanged();
+        if (RepoHelper.IsValidRepo(Repo))
+        {
+            if (Repo.ProjectUrl.EndsWith("/"))
+            {
+                Repo.ProjectUrl = Repo.ProjectUrl.Remove(Repo.ProjectUrl.Length - 1, 1);
+            }
+            var jsonP = await RepoHelper.GetJsonAsync(Repo);
+            bool valid = true;
+            if (jsonP.Contains("Not Found"))
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Invalid repo url... 😌");
+            }
+            var checkTitle = WordsFilter.FilterIsSafeWords(Repo.Title);
+            if (checkTitle == false)
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Check title for unnecessary words... 😌");
+            }
+            var checkDescription = WordsFilter.FilterIsSafeWords(Repo.Description);
+            if (checkDescription == false)
+            {
+                valid = false;
+                MainLayout.Current.ShowAlert("Check description for unnecessary words... 😌");
+            }
+            var sf = await SafeHelper.GetContainsSafeImageUrlsAsync();
+            if (sf?.Count > 0)
+            {
+                foreach (var url in Repo.ImageUrls)
+                {
+                    var isSafe = sf.Any(s => url.Contains(s));
+                    if (isSafe == false)
+                    {
+                        valid = false;
+                        MainLayout.Current.ShowAlert("Url is not found in safe list...\n" + url);
+                        break;
+                    }
+                }
+            }
+            if (valid)
+            {
+                var items = await DataServiceProvider.GetItemsAsync();
+                if (items == null)
+                    return;
+                var checkItem = items.Where(p => p.ProjectUrl == Repo.ProjectUrl).FirstOrDefault();
+                bool hasChanged = false;
+
+                if (checkItem == null)
+                {
+                    Repo.ImageUrls = Repo.ImageUrls.Distinct().ToList();
+                    Repo.Categories = Repo.Categories.Distinct().ToList();
+                    Repo.Platforms = Repo.Platforms.Distinct().ToArray();
+                    items.Add(Repo);
+                    hasChanged = true;
+                    isUpdate = false;
+                }
+                else
+                {
+                    bool confirmed = await JS.InvokeAsync<bool>("confirm", "This repository already exist, Do you to update this repository?");
+                    if (confirmed)
+                    {
+                        Repo.ApplyPropertiesTo(checkItem);
+                        hasChanged = true;
+                        isUpdate = true;
+                    }
+                }
+                if (hasChanged)
+                {
+                    items = items.GroupBy(p => p.ProjectUrl).Select(g => g.First()).ToList();
+                    ProjectItemData projectItemData = new ProjectItemData();
+                    projectItemData.Items = items;
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
+                    DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json, "Added Update...");
+                    Repo = new ProjectItem();
+                    StateHasChanged();
+                }
+            }
+
+        }
+    }
+
+    string showHide = "block;";
+    void HideShowPreview()
+    {
+        if (showHide == "block;")
+        {
+            showHide = "none;";
+        }
+        else
+        {
+            showHide = "block;";
+        }
+        StateHasChanged();
+    }
+    #region Categories
+    string _categories = "";
+    public string Categories
+    {
+        get { return _categories; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                _categories = value;
+                var list = new List<Category>();
+                if (_categories.Contains(","))
+                {
+                    var urls = _categories.Split(',');
+
+                    foreach (var item in urls)
+                    {
+                        if (item.IsValidString())
+                        {
+                            int num = 0;
+                            if (int.TryParse(item, out num))
+                            {
+                                if (num > 0 && num <= DataServiceProvider.TotalCategories)
+                                {
+                                    list.Add((Category)num);
+                                }
+                            }
+
+                        }
+                    }
+                }
+                else
+                {
+                    int num = 0;
+                    if (int.TryParse(_categories, out num))
+                    {
+                        if (num > 0 && num <= DataServiceProvider.TotalCategories)
+                        {
+                            list.Add((Category)num);
+                        }
+                    }
+                }
+                if (list.Count > 0)
+                {
+                    Repo.Categories = list;
+                }
+            }
+        }
+    }
+    #endregion
+    #region ImageUrls
+    string _imgUrls = "";
+    public string ImageUrls
+    {
+        get { return _imgUrls; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                _imgUrls = value;
+                if (_imgUrls.Contains(","))
+                {
+                    var urls = _imgUrls.Split(',');
+                    var list = new List<string>();
+                    foreach (var item in urls)
+                    {
+                        if (item.IsValidString())
+                        {
+                            list.Add(item);
+                        }
+                    }
+                    Repo.ImageUrls = list;
+                }
+                else
+                {
+                    Repo.ImageUrls = new List<string>() { _imgUrls };
+                }
+            }
+        }
+    }
+    #endregion
+    #region Platforms
+    string _platforms = "";
+    public string Platforms
+    {
+        get { return _platforms; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                _platforms = value;
+                if (_platforms.Contains(","))
+                {
+                    var urls = _platforms.Split(',');
+                    var list = new List<string>();
+                    foreach (var item in urls)
+                    {
+                        if (item.IsValidString())
+                        {
+                            list.Add(item);
+                        }
+                    }
+                    Repo.Platforms = list.ToArray();
+                }
+                else
+                {
+                    Repo.Platforms = new string[] { _platforms };
+                }
+            }
+        }
+    }
+    #endregion
+}

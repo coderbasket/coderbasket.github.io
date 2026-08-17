@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\safe_urls.json" />
+    <None Remove="formatter.json" />
+    <None Remove="Helpers\bad_words.txt" />
+    <None Remove="Host\Avalonia\codes.json" />
+    <None Remove="Host\Blazor\codes.json" />
+    <None Remove="Host\Maui\codes.json" />
+    <None Remove="Host\Others\codes.json" />
+    <None Remove="Host\trash_bin.json" />
+    <None Remove="Host\Uno\codes.json" />
+    <None Remove="Host\WinUI\codes.json" />
+    <None Remove="Servers\sample.txt" />
+    <None Remove="Tools\tools_data.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="formatter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <EmbeddedResource Include="Data\bad_words.txt" />
+    <EmbeddedResource Include="Data\safe_urls.json" />
+    <EmbeddedResource Include="Host\Others\codes.json" />
+    <EmbeddedResource Include="Host\trash_bin.json" />
+    <EmbeddedResource Include="Host\Maui\codes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Host\Avalonia\codes.json" />
+    <EmbeddedResource Include="Host\Blazor\codes.json" />
+    <EmbeddedResource Include="Host\Uno\codes.json" />
+    <EmbeddedResource Include="Host\WinUI\codes.json" />
+    <EmbeddedResource Include="Servers\sample.txt" />
+    <EmbeddedResource Include="Tools\tools_data.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Octokit" Version="0.51.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+</Project>

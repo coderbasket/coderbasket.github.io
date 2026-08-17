@@ -1,0 +1,481 @@
+﻿
+<div>
+    @if (ProjectRepo != null && Owner != null)
+    {
+        <div>
+            <div class="row">
+                <div class="clearfix">
+                    <div style="display:grid; grid-template-columns:1fr auto">
+                        <h3 style="color:@SiteInfo.TextColor;" class="title pull-left">@ProjectRepo.Title</h3>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="description__section">
+                        <div style="display:grid; grid-template-columns:1fr auto">
+                            <div>
+                                <img src="@Owner.GravatarImage()" class="circle pull-left author__gravatar" />
+                                <div class="snppts-meta">
+                                    <span class="createdby">Created by</span>
+                                    <a style="color:@SiteInfo.TextColor;" href="/author/@Owner.GitHubHandle">
+                                        @if (this.ProjectRepo.Repository.OwnerName.IsValidString())
+                                        {
+                                            <span class="author">
+                                                @ProjectRepo.Repository.OwnerName
+                                            </span>
+                                        }
+                                    </a>
+                                </div>
+                            </div>
+                            @if (IsDeleteEnabled)
+                            {
+                                <div style="top:0; position:relative; margin-bottom:auto; margin-top:-7px;margin-right:55px; display:grid; grid-template-columns:auto auto">
+                                    <CoderBasket.Blazor.Controls.ButtonSvg Clicked="EditProductNow" Style="margin-left:-60px;" IconColor="forestgreen" Path="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"></CoderBasket.Blazor.Controls.ButtonSvg>
+                                    <CoderBasket.Blazor.Controls.ButtonSvg IconColor="red" Clicked="@DeleteItem"></CoderBasket.Blazor.Controls.ButtonSvg>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                    <div class="description__section" style="color:@SiteInfo.TextColor">
+                        <h5 style="color:@SiteInfo.TextColor;">Description</h5>
+                        <span>@ProjectRepo.Description</span>
+                    </div>
+                    <div class="description__section">
+                        <h5 style="color:@SiteInfo.TextColor;">Platforms</h5>
+                        <CoderBasket.Blazor.Items.PlatformSupportView ProjectRepo="ProjectRepo"></CoderBasket.Blazor.Items.PlatformSupportView>
+                    </div>
+
+                    @if (ProjectRepo.ExternalUrl != null)
+                    {
+                        <div class="description__section">
+                            <h5 style="color:@SiteInfo.TextColor;">External link</h5>
+                            <a href="@ProjectRepo.ExternalUrl" target="_blank">Read more about this Snippet</a>
+                        </div>
+                    }
+                    <div class="description__section">
+
+                        <div style="display:grid; grid-template-columns: 1fr auto">
+                            <h5 style="color:@SiteInfo.TextColor;"> Check out the code</h5>
+                            @if (this.ProjectRepo.GitHubRepoInfo != null && this.ProjectRepo.GitHubRepoInfo.Stars > 0 && IsDeleteEnabled)
+                            {
+                                <div>
+                                    <i class="fa fa-star"></i>
+                                    <b class="text">@ProjectRepo.GitHubRepoInfo.Stars</b>
+                                </div>
+
+                            }
+                        </div>
+
+                        @if (this.ProjectRepo.GitHubRepoInfo.ProjectName.IsValidString())
+                        {
+                            var repo = this.ProjectRepo.GitHubRepoInfo.ProjectUrl;
+                            @* var vendorName = repo.Split('/')[0];
+                    var repoName = repo.Split('/')[1];
+                    var vendorUrl = "http://github.com/" + vendorName;
+                    var repoUrl = "http://github.com/" + vendorName + '/' + repoName;*@
+
+                            @if (jsonP.IsValidString())
+                            {
+                                bool valid = true;
+                                if (jsonP.Contains("Not Found"))
+                                {
+                                    valid = false;
+                                }
+                                if (valid)
+                                {
+                                    var results = Newtonsoft.Json.JsonConvert.DeserializeObject<GithubRepoInformation>(jsonP);
+                                    if (this.ProjectRepo.Description.IsValidString() == false)
+                                    {
+                                        if (results.description.IsValidString())
+                                        {
+                                            this.ProjectRepo.Description = results.description;
+                                        }
+                                    }
+
+                                    if (results != null)
+                                    {
+                                        var pushed_at = "Unknown";
+                                        DateTime date;
+                                        date = results.pushed_at;
+                                        pushed_at = date.ToString();
+                                        <div class="github-widget" style="color:@SiteInfo.TextColor; background-color:@SiteInfo.BarBackgroundColor;" data-repo="@ProjectRepo.GitHubRepoInfo.ProjectName">
+                                            <div class="github-box repo" style="background-color:@SiteInfo.BarBackgroundColor;">
+                                                <div class="github-box-title" style="background-color:@SiteInfo.BarBackgroundColor;">
+                                                    <h3>
+                                                        <a class="owner" href="@results.owner.html_url" title="@results.owner.html_url" target="_blank">@Owner.FirstName</a>
+                                                        <a class="repo" href="@ProjectRepo.ProjectUrl" title="@ProjectRepo.ProjectUrl" target="_blank">@ProjectRepo.GitHubRepoInfo.ProjectName</a>
+                                                    </h3>
+                                                    <div class="github-stats" style="@SiteInfo.BarBackgroundColor;">
+                                                        <a class="watchers" href="@ProjectRepo.ProjectUrl/watchers" title="See watchers" target="_blank">@results.watchers</a>
+                                                        <a class="forks" href="@ProjectRepo.ProjectUrl/network/members" title="See forkers" target="_blank">@results.forks</a>
+                                                    </div>
+                                                </div>
+                                                <div class="github-box-content" style="background-color:@SiteInfo.BackgroundColor;">
+                                                    <p class="description">
+                                                        <span style="color:@SiteInfo.TextColor">@results.description</span> &mdash; <a href="@ProjectRepo.ProjectUrl#readme" target="_blank">
+                                                            Read
+                                                            More
+                                                        </a>
+                                                    </p>
+                                                    <p class="link"><a href="@results.homepage"> @results.homepage</a></p>
+                                                </div>
+                                                <div class="github-box-download">
+                                                    <div class="updated" style="color:@SiteInfo.TextColor">
+                                                        Latest commit to the <strong style="color:@SiteInfo.AccentColor">@results.default_branch</strong> branch on <strong style="color:@SiteInfo.AccentColor">@pushed_at</strong>
+                                                    </div>
+                                                    @*<a class="download" target="_blank" style="color:@SiteInfo.AccentColor" href="@ProjectRepo.GitHubRepoInfo.DownloadZipUrl" title="Get an archive of this repository">Download as zip</a>*@
+                                                    <a class="download" target="_blank"  href="@ProjectRepo.ProjectUrl" title="Goto Source">Goto Source</a>
+                                                    <style type="text/css">
+                                                        .github-widget {
+                                                            margin-top: 20px;
+                                                        }
+
+                                                        .github-box {
+                                                            font-family: helvetica, arial, sans-serif;
+                                                            font-size: 13px;
+                                                            line-height: 18px;
+                                                            background: @SiteInfo.BarBackgroundColor;
+                                                            border: 1px solid #ddd;
+                                                            color: #666;
+                                                            border-radius: 3px;
+                                                        }
+
+                                                            .github-box .github-box-title {
+                                                                position: relative;
+                                                                border-bottom: 1px solid @SiteInfo.BarBackgroundColor;
+                                                                border-radius: 3px 3px 0 0;
+                                                                background: @SiteInfo.BarBackgroundColor;
+                                                                        background: -moz-linear-gradient(@SiteInfo.BarBackgroundColor, @SiteInfo.BarBackgroundColor);
+                                                                        background: -webkit-linear-gradient(@SiteInfo.BarBackgroundColor, @SiteInfo.BarBackgroundColor);
+                                                            }
+
+                                                                .github-box .github-box-title h3 {
+                                                                    word-wrap: break-word;
+                                                                    font-family: helvetica, arial, sans-serif;
+                                                                    font-weight: normal;
+                                                                    font-size: 16px;
+                                                                    color: @SiteInfo.AccentColor;
+                                                                    margin: 0;
+                                                                    padding: 10px 10px 10px 30px;
+                                                                    background-color: @SiteInfo.AccentColor;
+                                                                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAXCAMAAAAx3e/WAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQjIyNkJERkM0NjYxMUUxOEFDQzk3ODcxRDkzRjhCRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQjIyNkJFMEM0NjYxMUUxOEFDQzk3ODcxRDkzRjhCRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRCMjI2QkREQzQ2NjExRTE4QUNDOTc4NzFEOTNGOEJFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRCMjI2QkRFQzQ2NjExRTE4QUNDOTc4NzFEOTNGOEJFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+dka2KgAAAEVQTFRFxMTEyMjI0tLSvb29vr6+zc3Ny8vLxcXFz8/P6enp3t7ex8fH0dHR1NTUw8PDwMDAzs7OvLy8wcHBu7u7v7+/zMzM////budQFwAAABd0Uk5T/////////////////////////////wDmQOZeAAAAcklEQVR42tSQSQ7DMAwD6chOukWs5eX/Ty2coo0T9wOdEzEgdRBuzNmnDofgja52JDyz5TCqUp0O6kfrb4bzSXkRiTviEZZ6JKLMJ5VQ2v8iGbtbfEwXmjFMG0VwdQo10hQNxYqtLMv9O6xvpZ/QeAkwAKjwHiJLaJc3AAAAAElFTkSuQmCC) 7px center no-repeat;
+                                                                    width: auto;
+                                                                }
+
+                                                            .github-box a {
+                                                                color: @SiteInfo.AccentColor;
+                                                                border: 0;
+                                                                text-decoration: none;
+                                                            }
+
+                                                            .github-box .github-box-title h3 .repo {
+                                                                font-weight: bold;
+                                                            }
+
+                                                            .github-box .github-box-title .github-stats {
+                                                                float: right;
+                                                                position: absolute;
+                                                                top: 8px;
+                                                                right: 10px;
+                                                                font-size: 11px;
+                                                                font-weight: bold;
+                                                                line-height: 21px;
+                                                                height: auto;
+                                                                min-height: 21px;
+                                                            }
+
+                                                                .github-box .github-box-title .github-stats a {
+                                                                    display: inline-block;
+                                                                    height: 21px;
+                                                                    color: @SiteInfo.AccentDarkerColor;
+                                                                    border: 1px solid @SiteInfo.AccentColor;
+                                                                    border-radius: 3px;
+                                                                    padding: 0 5px 0 18px;
+                                                                    background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAqCAMAAACEJ4viAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQjIyNkJEQkM0NjYxMUUxOEFDQzk3ODcxRDkzRjhCRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQjIyNkJEQ0M0NjYxMUUxOEFDQzk3ODcxRDkzRjhCRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRCMjI2QkQ5QzQ2NjExRTE4QUNDOTc4NzFEOTNGOEJFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRCMjI2QkRBQzQ2NjExRTE4QUNDOTc4NzFEOTNGOEJFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+h1kA9gAAAK5QTFRF+fn5sbGx8fHx09PTmpqa2dnZ/f3919fX9PT00NDQ1dXVpKSk+vr6+/v7vb298vLyycnJ8/PztLS0zc3N6enp/v7+q6ur2NjY9/f3srKy/Pz8p6en7u7uoaGhnJyc4eHhtbW1pqam6Ojo9fX17e3toqKirKys1NTUzs7Ox8fHwcHBwMDA5eXlnZ2dpaWl0dHR9vb25ubm4uLi3d3dqqqqwsLCv7+/oKCgmZmZ////8yEsbwAAAMBJREFUeNrE0tcOgjAUBuDSliUoMhTEvfdef9//xUQjgaLX0Ium/ZLT/+SkRPxZpGykvuf5VMJogy5jY9yjDHcWFhqlcRuHc4o6B1QK0BDg+hcZgNDh3NWTwzItH/bRrhvT+g3zSxZkNGCZpoWGIbU0a3Y6zV5VA6keyeDxiw62P0gUqEW0FbDim4nVikFJbU2zZXybUEaxhCqOQqyh5/G0wpWICUwthyqwD4InOMuXJ7/gs7WkoPdVg1vykF8CDACEFanKO3aSYwAAAABJRU5ErkJggg==) no-repeat;
+                                                                }
+
+                                                                .github-box .github-box-title .github-stats .forks {
+                                                                    background-position: -4px -21px;
+                                                                    padding-left: 15px;
+                                                                }
+
+                                                            .github-box .github-box-content {
+                                                                padding: 10px;
+                                                                font-weight: 300;
+                                                            }
+
+                                                                .github-box .github-box-content .link {
+                                                                    font-weight: bold;
+                                                                }
+
+                                                            .github-box .github-box-download {
+                                                                position: relative;
+                                                                border-top: 1px solid @SiteInfo.BarBackgroundColor;
+                                                                background: @SiteInfo.BarBackgroundColor;
+                                                                border-radius: 0 0 3px 3px;
+                                                                padding: 10px;
+                                                                height: auto;
+                                                                min-height: 24px;
+                                                            }
+
+                                                                .github-box .github-box-download .updated {
+                                                                    word-wrap: break-word;
+                                                                    margin: 0;
+                                                                    font-size: 11px;
+                                                                    color: @SiteInfo.TextColor;
+                                                                    line-height: 24px;
+                                                                    font-weight: 300;
+                                                                    width: auto;
+                                                                }
+
+                                                                .github-box .github-box-download .download {
+                                                                    float: right;
+                                                                    position: absolute;
+                                                                    top: 10px;
+                                                                    right: 10px;
+                                                                    height: 24px;
+                                                                    line-height: 24px;
+                                                                    font-size: 12px;
+                                                                    color: @SiteInfo.TextColor;
+                                                                    font-weight: bold;
+                                                                  
+                                                                    padding: 0 10px;
+                                                                    border: 1px solid #ddd;
+                                                                    border-bottom-color: #ddd;
+                                                                    border-radius: 3px;
+                                                                    background: @SiteInfo.BarBackgroundColor;
+                                                                    background: -moz-linear-gradient(@SiteInfo.AccentColor, @SiteInfo.AccentDarkerColor);
+                                                                    background: -webkit-linear-gradient(@SiteInfo.AccentDarkerColor, @SiteInfo.AccentColor);
+                                                                }
+                                                    </style>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    }
+                                }
+                            }
+
+                        }
+
+                    </div>
+                    @if (ProjectRepo.YoutubeUrl.IsValidString())
+                    {
+                        <h5 style="color:@SiteInfo.TextColor;">Watch on Youtube</h5>
+                        <CoderBasket.Blazor.Items.PlayButton Repo="@this.ProjectRepo"></CoderBasket.Blazor.Items.PlayButton>
+                    }
+
+                    @if (ProjectRepo.ImageUrls?.Count() > 0)
+                    {
+                        <div class="description__section">
+                            <h5 style="color:@SiteInfo.TextColor;">Screenshots</h5>
+
+                            <div class="row">
+                                @foreach (var screenshot in ProjectRepo.ImageUrls)
+                                {
+                                    var sc = screenshot.ToLower();
+                                    if (sc.EndsWith(".mp4") || sc.EndsWith(".ogg") || sc.EndsWith(".webm"))
+                                    {
+                                        <div class="col-md-3 snippet__screenshot">
+
+                                            <a href="@screenshot" target="_blank">
+                                                <video width="220" controls autoplay style="max-width:250px;" poster="~/img/dotnet.png">
+                                                    <source src="@screenshot" type="video/mp4">
+                                                    <source src="@screenshot" type="video/ogg" />
+                                                    <source src="@screenshot" type="video/webm" />
+                                                </video>
+                                            </a>
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-3 snippet__screenshot">
+                                            <a href="@screenshot" target="_blank">
+                                                <img src="@screenshot" alt="">
+                                            </a>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+                    @if (ProjectRepo.SubmittedBy.IsValidString())
+                    {
+                        <h5>Submitted By</h5>
+                        <h4 style="color:@SiteInfo.AccentColor;">@ProjectRepo.SubmittedBy</h4>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+@code {
+    #region Framework
+    string _paramF;
+    [Parameter]
+    public string frameworkParameter
+    {
+        get { return _paramF; }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                if (value != _paramF)
+                {
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                        _paramF = value;
+
+
+                    }
+
+                }
+            }
+        }
+    }
+    #endregion
+    string jsonP = null;
+    string _slug = "";
+    [Parameter]
+    public string RepositorySlug
+    {
+        get { return _slug; }
+        set
+        {
+            if (value.IsValidString())
+            {
+                if (_slug != value)
+                {
+                    _slug = value;
+                    RenderToUI();
+                }
+
+            }
+        }
+    }
+    string redererName = "";
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        RenderToUI();
+
+    }
+    bool rendering = false;
+    async void RenderToUI()
+    {
+        if (rendering)
+            return;
+        rendering = true;
+        if (RepositorySlug.IsValidString())
+        {
+            if (frameworkParameter.IsValidString())
+            {
+                var frameWork = RepoHelper.ConvertFramework(frameworkParameter);
+                if (SiteInfo.FrameWork != frameWork)
+                {
+                    SiteInfo.FrameWork = frameWork;
+                }
+                var items = await DataServiceProvider.GetItemsAsync();
+            }
+            this.ProjectRepo = await DataServiceProvider.GetProjectItemAsync(RepositorySlug);
+            if (this.ProjectRepo != null)
+            {
+                this.ProjectRepo = RepoHelper.LoadRepository(this.ProjectRepo);
+                this.Owner = ProjectOwner.GetDefaultAuthor(this.ProjectRepo.GitHubRepoInfo);
+                jsonP = await RepoHelper.GetJsonAsync(this.ProjectRepo);
+                redererName = this.ProjectRepo.ProjectUrl;
+            }
+        }
+        else
+        {
+            if (ProjectRepo != null)
+            {
+                this.ProjectRepo = RepoHelper.LoadRepository(this.ProjectRepo);
+                this.Owner = ProjectOwner.GetDefaultAuthor(this.ProjectRepo.GitHubRepoInfo);
+                jsonP = await RepoHelper.GetJsonAsync(this.ProjectRepo);
+                redererName = this.ProjectRepo.ProjectUrl;
+
+            }
+        }
+        if (IsDeleteEnabled)
+        {
+            if (RepoHelper.IsValidRepo(this.ProjectRepo))
+            {
+                if (ProjectRepo.GitHubRepoInfo != null)
+                    await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+            }
+        }
+        StateHasChanged();
+        rendering = false;
+    }
+    ProjectItem _repo;
+    [Parameter]
+    public ProjectItem ProjectRepo
+    {
+        get { return _repo; }
+        set
+        {
+            _repo = value;
+            RenderToUI();
+        }
+    }
+
+    public ProjectOwner Owner { get; set; }
+    [Parameter]
+    public bool IsDeleteEnabled { get; set; } = true;
+    public static int deleteCounter = 0;
+    const int _counter = 1;
+    async void DeleteItem()
+    {
+        if (deleteCounter >= _counter)
+        {
+            MainLayout.Current.ShowAlert($"You can only delete {_counter} times... 😌");
+            return;
+        }
+        if (this.ProjectRepo == null)
+            return;
+        if (RepoHelper.IsValidRepo(this.ProjectRepo) == false)
+            return;
+        bool confirmed = await JS.InvokeAsync<bool>("confirm", "Delete Project ❌, Do you to delete this project from server?");
+        if (confirmed)
+        {
+            var items = await DataServiceProvider.GetItemsAsync();
+            var item = items.Where(p => p.ProjectUrl == this.ProjectRepo.ProjectUrl).FirstOrDefault();
+            if (item != null)
+            {
+                items.Remove(item);
+                if (items.Count > 0)
+                {
+                    ProjectItemData projectItemData = new ProjectItemData();
+                    projectItemData.Items = items;
+                    var json = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
+                    DataServiceProvider.UpdateToServer(SiteInfo.FrameWork, json, "Delete update...");
+                    deleteCounter++;
+                    await Task.Delay(1000);
+                    Navigation.NavigateTo("/");
+
+
+                }
+            }
+        }
+
+    }
+    void EditProductNow()
+    {
+        if (this.ProjectRepo == null)
+            return;
+        CoderBasket.Blazor.Pages.Submit.SubmitPage.Repo = this.ProjectRepo;
+        Navigation.NavigateTo($"submit-form/{SiteInfo.FrameWork.ToString()}");
+    }
+}

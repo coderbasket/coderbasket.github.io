@@ -1,0 +1,37 @@
+﻿<ContentDialog>
+    <Content>
+        <div class="note_dialog_add_div_main">
+            <div contenteditable="true">
+                @content
+            </div>
+            <div class="note_dialog_add_div_inner">
+                @*<button @onclick="@Cancel" type="button" class="note_dialog_add_div_inner_btn" style="background-color:gray; color:white;">Cancel</button>*@
+                <button @onclick="@Save" type="button" class="note_dialog_add_div_inner_btn" style="background-color:@SiteInfo.AccentColor; color:white;">Close</button>
+            </div>
+        </div>
+    </Content>
+</ContentDialog>
+
+
+
+@code {
+    string content = "";
+    protected async override void OnInitialized()
+    {
+        base.OnInitialized();
+        var projectItemData = await SafeHelper.GetContainsSafeImageUrlsAsync();
+        content = Newtonsoft.Json.JsonConvert.SerializeObject(projectItemData);
+        StateHasChanged();
+
+    }
+
+    void Cancel()
+    {
+        MainLayout.Current.CloseDialog();
+
+    }
+    void Save()
+    {
+        MainLayout.Current.CloseDialog();
+    }
+}

@@ -1,0 +1,38 @@
+﻿<style>
+    #search-button {
+        width: 50px;
+        height: 50px;
+    }
+
+        #search-button svg {
+            width: 25px;
+            height: 25px;
+        }
+</style>
+<button @onclick="@Click" style="color:orangered; border: 2px solid black; border-color: @SiteInfo.AccentDarkerColor; background-color:transparent; border-radius:5px; position:absolute; zoom:70%; justify-content:center; @Style" id="search-button">
+    <svg style="zoom:140%; vertical-align:middle; margin-bottom:14px; margin-left:-10px; left:0; right:25px; margin-right:25px;margin-top:-6px;" id="search-icon" class="search-icon" viewBox="0 0 24 24">
+        <path fill="@IconColor" d="@Path" />
+        
+    </svg>
+</button>
+@code{
+    [Parameter]
+    public EventCallback Clicked { get; set; }
+    async void Click()
+    {
+        await Clicked.InvokeAsync();
+    }
+
+
+    [Parameter]
+    public string Path { get; set; } = "M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z";
+
+
+
+    [Parameter]
+    public string Style { get; set; } = null;
+    [Parameter]
+    public string IconColor { get; set; } = SiteInfo.TextColor;
+    [Parameter]
+    public string BackgroundColor { get; set; } = SiteInfo.BackgroundColor;
+}

@@ -1,0 +1,68 @@
+﻿<div class="col-lg-4 col-md-4 col-sm-6 margin-bottom-20 snppt">
+
+    <a @onclick="NavigateToDetails">
+        @if (ProjectRepo.ImageUrls.Count > 0)
+        {
+            var screenshot = this.ProjectRepo.ImageUrls.FirstOrDefault();
+            var sc = screenshot.ToLower();
+            if (sc.EndsWith(".mp4") || sc.EndsWith(".ogg") || sc.EndsWith(".webm"))
+            {
+                <div class="col-md-3 snippet__screenshot">
+                    <a href="@screenshot" target="_blank">
+                        <video width="260" controls autoplay style="max-width:250px;" poster="~/img/dotnet.png">
+                            <source src="@screenshot" type="video/mp4">
+                            <source src="@screenshot" type="video/ogg" />
+                            <source src="@screenshot" type="video/webm" />
+                        </video>
+                    </a>
+                </div>
+
+            }
+            else
+            {
+                <img  class="snippet__img" src="@screenshot" />
+            }
+        }
+    </a>
+
+    <h4 class="text-center">
+        <a style="color:@SiteInfo.TextColor; opacity:90%" @onclick="NavigateToDetails">@ProjectRepo.Title</a>
+    </h4>
+
+    <p class="tags text-center">
+        @string.Join(", ", this.ProjectRepo.Categories.Distinct());
+    </p>
+
+    <div class="text-center margin-bottom-20 platform-icons">
+        <PlatformSupportView ProjectRepo="ProjectRepo"></PlatformSupportView>
+
+
+        @if (this.ProjectRepo.GitHubRepoInfo != null)
+        {
+            if (this.ProjectRepo.GitHubRepoInfo.Stars > 0)
+            {
+                <i class="fa fa-star"></i>
+                <b class="text">@ProjectRepo.GitHubRepoInfo.Stars</b>
+            }
+        }
+    </div>
+</div>
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        if (this.ProjectRepo != null)
+        {
+            this.ProjectRepo = RepoHelper.LoadRepository(this.ProjectRepo);
+            //await this.ProjectRepo.GitHubRepoInfo.LoadInfoAsync(this.ProjectRepo.ProjectUrl);
+            StateHasChanged();
+        }
+    }
+    [Parameter]
+    public ProjectItem ProjectRepo { get; set; }
+    public void NavigateToDetails()
+    {
+        //Navigation.NavigateTo($"details/{ProjectRepo.Slug}");
+        Navigation.NavigateTo($"details/{SiteInfo.FrameWork}/{ProjectRepo.Slug}");
+    }
+}

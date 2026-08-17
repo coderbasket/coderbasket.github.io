@@ -1,0 +1,61 @@
+﻿
+
+<nav style="background-color:@SiteInfo.BackgroundColor;"
+    <ul class="nav nav-pills nav-stacked nav-small" style="background-color:@SiteInfo.BackgroundColor;">
+        
+        @if(Categories?.Count > 0)
+        {
+            foreach (var item in Categories)
+            {
+                <li @onclick="@(()=>{ NavigateToCategory(item); })">
+                    <style>
+                        .aHover:hover {
+                            color: @SiteInfo.AccentColor;
+                        }
+                    </style>
+                    <a class="aHover" style="font-weight:bold; cursor:pointer; @SiteInfo.TextColor;">
+                        <span style="color:@SiteInfo.TextColor;">@item</span>
+                        <span style="margin-left:8px; font-family:FontAwesome;">&#xf101;</span>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</nav>
+
+
+@code {
+    public List<Category> Categories = new List<Category>();
+
+    protected override void OnInitialized()
+    {
+
+        base.OnInitialized();
+        DataServiceProvider.ItemsLoaded += (s, e) =>
+        {
+            RenderItems();
+        };
+        RenderItems();
+    }
+    async void RenderItems()
+    {
+        if (DataServiceProvider.ItemHasLoaded == false)
+        {
+            return;
+        }
+        var _snippets = await DataServiceProvider.GetItemsAsync();
+        if(_snippets?.Count > 0)
+        {
+            var categories = _snippets.Select(x => x.Categories).SelectMany(i => i);
+            var groupedSorted = categories.GroupBy(n => n).OrderBy(g => g.FirstOrDefault().ToString());
+            var categoriesFinal = groupedSorted.Select(x => x.FirstOrDefault()).ToList();
+            Categories = categoriesFinal;
+            StateHasChanged();
+        }
+    }
+    void NavigateToCategory(Category categoryParam)
+    {
+        MainLayout.Current.NavigateToCategory(categoryParam);
+
+    }
+}

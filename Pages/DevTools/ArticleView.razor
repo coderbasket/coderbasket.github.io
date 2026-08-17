@@ -1,0 +1,30 @@
+﻿<div class="entry-copy" style="height: auto !important;">
+    @if (toolItem != null)
+    {
+        <div class="entry-copy__inner intxt" style="height: auto !important;">
+
+            <h1><a style="color:@SiteInfo.AccentColor;" target="_blank" href="@toolItem.Url">@toolItem.Name</a></h1>
+            <p style="color:@SiteInfo.TextColor; font-weight:600;">@toolItem.Summary</p>
+            <p data-lazy="loaded">
+                <div style="gap:8px; width:100%;">
+                    @foreach (var item in toolItem.Images)
+                    {
+                        <a target="_blank" href="@item">
+                            <img style="max-width:600px; margin-top:4px;" src="@item" alt="fences" srcset="" sizes="">
+                        </a>
+                    }
+                </div>
+            </p>
+            <p style="color:@SiteInfo.TextColor; font-weight:600;">@toolItem.Description</p>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public ToolItem toolItem { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}
