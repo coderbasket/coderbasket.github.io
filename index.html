@@ -15,6 +15,8 @@
     <link rel="icon" href="/img/codericon.png">
 
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "f5bd1cde3c9f413b8a4a490770114d9a"}'></script><!-- End Cloudflare Web Analytics -->
@@ -32,7 +34,7 @@
         <div class="container header-inner">
 
             <a href="/" class="logo">
-                <img src="/img/codericon.png" alt="">
+                <img src="/img/codericon.png" alt="CoderIcon" style="max-width: 50px; height: auto;">
                 <span>Coder Basket</span>
             </a>
 
@@ -81,30 +83,12 @@
 
             <div class="container catalog-layout">
 
-                <!--
-                    Sidebar is rendered by sidebar.js
-                    using data from /js/data.js
-                -->
-                <aside id="categorySidebar">
+                <!-- =====================================================
+                     CATEGORY NAVIGATION (Rendered by sidebar.js)
+                     ===================================================== -->
 
-                    <h2>Categories</h2>
-
-                    <div class="category-group">
-
-                        <h3>Platform</h3>
-
-                        <div id="sectionList"></div>
-
-                    </div>
-
-                    <div class="category-group">
-
-                        <h3>Category</h3>
-
-                        <div id="categoryList"></div>
-
-                    </div>
-
+                <aside id="categorySidebar" class="category-sidebar">
+                    <!-- Rendered dynamically by sidebar.js -->
                 </aside>
 
 

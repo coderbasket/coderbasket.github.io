@@ -83,14 +83,14 @@ function renderHeader() {
         section.categories,
       )) {
         html += `
-                    <button
-                        type="button"
-                        class="nav-category-button"
-                        data-section="${escapeAttribute(sectionKey)}"
-                        data-category="${escapeAttribute(categoryKey)}"
-                    >
-                        ${escapeHtml(categoryName)}
-                    </button>
+                <button
+                    type="button"
+                    class="nav-category-button"
+                    data-section="${escapeAttribute(sectionKey)}"
+                    data-category="${escapeAttribute(categoryKey)}"
+                >
+                    ${escapeHtml(categoryName)}
+                </button>
             `;
       }
     }
@@ -136,7 +136,7 @@ function renderHeader() {
   }
 
   /* ---------------------------------------------------
-        Main navigation
+        Main navigation links
     --------------------------------------------------- */
 
   for (const key of ["libraries", "tools", "projects", "about"]) {
@@ -154,7 +154,7 @@ function renderHeader() {
   }
 
   /* ---------------------------------------------------
-        Insert
+        Insert into DOM
     --------------------------------------------------- */
 
   mainNav.innerHTML = html;
@@ -172,41 +172,18 @@ function renderHeader() {
 ======================================================= */
 
 function setupCategoryNavigation() {
-  console.log("[HeaderNav] Initializing setupCategoryNavigation()...");
-
   const buttons = document.querySelectorAll(".nav-category-button");
 
-  if (buttons.length === 0) {
-    console.warn("[HeaderNav] No '.nav-category-button' elements found.");
-    return;
-  }
-
-  buttons.forEach((button, index) => {
+  buttons.forEach((button) => {
     button.addEventListener("click", async () => {
       const sectionKey = button.dataset.section;
       const categoryKey = button.dataset.category || "all";
 
-      console.log(`[HeaderNav] Clicked dropdown item #${index + 1}:`, {
-        sectionKey,
-        categoryKey,
-      });
-
-      /* -------------------------------------------------
-         Validate section
-      ------------------------------------------------- */
-
       const section = DATA_SECTIONS[sectionKey];
 
       if (!section) {
-        console.warn(
-          `[HeaderNav] Section '${sectionKey}' not in DATA_SECTIONS.`,
-        );
         return;
       }
-
-      /* -------------------------------------------------
-         Validate Sub-Category Key
-      ------------------------------------------------- */
 
       if (
         categoryKey !== "all" &&
@@ -216,15 +193,8 @@ function setupCategoryNavigation() {
             categoryKey,
           ))
       ) {
-        console.warn(
-          `[HeaderNav] Category '${categoryKey}' not found in section '${sectionKey}'.`,
-        );
         return;
       }
-
-      /* -------------------------------------------------
-         Detect whether a new section must be loaded
-      ------------------------------------------------- */
 
       const needsReload =
         typeof selectedSection === "undefined" ||
@@ -233,51 +203,21 @@ function setupCategoryNavigation() {
         allProjects.length === 0 ||
         allProjects[0]?.data_section !== sectionKey;
 
-      /* -------------------------------------------------
-         Assign to synchronized 3-filter state
-      ------------------------------------------------- */
-
       selectedSection = sectionKey;
       selectedSubCategory = categoryKey;
-      selectedCategoryId = "all"; // Reset global numeric topic filter when selecting via sub-category menu
-
-      console.log("[HeaderNav] Synchronized state:", {
-        selectedSection,
-        selectedSubCategory,
-        selectedCategoryId,
-      });
-
-      /* -------------------------------------------------
-         Save selection to LocalStorage
-      ------------------------------------------------- */
+      selectedCategoryId = "all";
 
       if (typeof saveSelection === "function") {
         saveSelection();
       }
 
-      /* -------------------------------------------------
-         Reset pagination
-      ------------------------------------------------- */
-
       if (typeof currentPage !== "undefined") {
         currentPage = 1;
       }
 
-      /* -------------------------------------------------
-         Load section or filter existing projects
-      ------------------------------------------------- */
-
       if (needsReload && typeof loadCatalog === "function") {
-        console.log(
-          `[HeaderNav] Section changed to '${sectionKey}'. Loading catalog...`,
-        );
-
         await loadCatalog();
       } else {
-        console.log(
-          "[HeaderNav] Section unchanged. Updating sidebar & applying filters...",
-        );
-
         if (typeof renderSections === "function") renderSections();
         if (typeof renderSubCategories === "function") renderSubCategories();
         if (typeof renderCategories === "function") renderCategories();
@@ -290,12 +230,13 @@ function setupCategoryNavigation() {
       closeMobileNavigation();
     });
   });
-
-  console.log("[HeaderNav] Listeners successfully attached.");
 }
 
 /* =======================================================
-   Mobile navigation
+   Mobile navigation interactions
+======================================================= */
+/* =======================================================
+   Mobile navigation interactions
 ======================================================= */
 
 function setupMobileNavigation() {
@@ -312,9 +253,46 @@ function setupMobileNavigation() {
 
   menuToggle.dataset.navigationReady = "true";
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
+  /* =====================================================
+     MAIN HAMBURGER
+     ===================================================== */
+
+  menuToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isOpen = mainNav.style.display !== "flex";
+
+    mainNav.style.display = isOpen ? "flex" : "none";
+
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  /* =====================================================
+     MOBILE DROPDOWNS
+     ===================================================== */
+
+  mainNav.addEventListener("click", (e) => {
+    if (window.innerWidth > 860) {
+      return;
+    }
+
+    const sectionButton = e.target.closest(".nav-section-button");
+
+    if (!sectionButton) {
+      return;
+    }
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const dropdown = sectionButton.closest(".nav-dropdown");
+
+    if (!dropdown) {
+      return;
+    }
+
+    dropdown.classList.toggle("active");
   });
 }
 
@@ -327,7 +305,13 @@ function closeMobileNavigation() {
   const menuToggle = document.getElementById("menuToggle");
 
   if (mainNav) {
-    mainNav.classList.remove("open");
+    // Close the main mobile menu
+    mainNav.style.display = "none";
+
+    // Close all expanded dropdowns
+    mainNav.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+      dropdown.classList.remove("active");
+    });
   }
 
   if (menuToggle) {

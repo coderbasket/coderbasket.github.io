@@ -1,6 +1,7 @@
 ﻿/* =========================================================
    CODER BASKET — MODERN DEVELOPER STYLESHEET
-   Refreshed design with dynamic animations & typography
+   Page content, catalog, cards, footer & responsive layout
+   Header/navigation styles are handled by header.css.
    ========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap");
@@ -40,6 +41,7 @@
 
   --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 20px rgba(255, 59, 92, 0.15);
+
   --radius: 8px;
   --radius-lg: 12px;
 
@@ -65,6 +67,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+
   font-family:
     "Inter",
     -apple-system,
@@ -72,15 +75,28 @@ body {
     "Segoe UI",
     Roboto,
     sans-serif;
+
   font-size: 1.5rem;
   line-height: 1.6;
   font-weight: 400;
+
   color: var(--text);
   background: var(--bg-main);
+
   background-image:
-    radial-gradient(at 0% 0%, rgba(255, 59, 92, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(30, 41, 59, 0.3) 0px, transparent 50%);
+    radial-gradient(
+      at 0% 0%,
+      rgba(255, 59, 92, 0.05) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 100% 100%,
+      rgba(30, 41, 59, 0.3) 0px,
+      transparent 50%
+    );
+
   background-attachment: fixed;
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -120,180 +136,30 @@ a:focus {
 .container {
   width: 100%;
   max-width: var(--container-width);
+
   margin-left: auto;
   margin-right: auto;
+
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* =========================================================
-   4. SITE HEADER
-   ========================================================= */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  transition: var(--transition);
-}
-
-.header-inner {
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#loadMore[hidden] {
+  display: none !important;
 }
 
 /* =========================================================
-   5. LOGO
-   ========================================================= */
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--heading);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-.logo:hover,
-.logo:focus {
-  color: var(--white);
-  transform: translateY(-1px);
-}
-
-.logo img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 8px var(--primary-glow));
-}
-
-/* =========================================================
-   6. NAVIGATION
-   ========================================================= */
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.main-nav > a,
-.nav-dropdown > button {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px;
-  border: 0;
-  border-radius: var(--radius);
-  background: transparent;
-  color: var(--text);
-  font-size: 1.4rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.main-nav > a:hover,
-.main-nav > a:focus,
-.nav-dropdown > button:hover,
-.nav-dropdown > button:focus {
-  color: var(--heading);
-  background: var(--light);
-}
-
-/* =========================================================
-   7. DROPDOWN
-   ========================================================= */
-
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown > button::after {
-  content: "›";
-  margin-left: 6px;
-  font-size: 1.4rem;
-  transform: rotate(90deg);
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.nav-dropdown:hover > button::after {
-  transform: rotate(-90deg);
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  min-width: 200px;
-  padding: 8px;
-  display: opacity;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  list-style: none;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 8px 12px;
-  color: var(--text);
-  font-size: 1.35rem;
-  border-radius: 6px;
-  white-space: nowrap;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu a:focus {
-  color: var(--heading);
-  background: var(--primary-glow);
-}
-
-/* =========================================================
-   8. MOBILE MENU TOGGLE
-   ========================================================= */
-
-.menu-toggle {
-  display: none;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  color: var(--heading);
-  font-size: 1.8rem;
-}
-
-/* =========================================================
-   9. HERO SECTION
+   4. HERO SECTION & SEARCH
    ========================================================= */
 
 .hero {
-  /* Minimal top/bottom padding to cut section height dramatically */
   padding: 16px 0 12px;
+
   text-align: center;
+
   position: relative;
   overflow: hidden;
+
   background: radial-gradient(
     circle at center,
     rgba(30, 41, 59, 0.5) 0%,
@@ -303,31 +169,44 @@ a:focus {
 
 .hero p {
   max-width: 620px;
+
   margin: 0 auto 36px;
+
   color: var(--text);
+
   font-size: 1.8rem;
   font-weight: 400;
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+
+  animation:
+    fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)
+    0.1s forwards;
+
   opacity: 0;
 }
 
-/* =========================================================
-   10. SEARCH BAR
-   ========================================================= */
-
 .search-box {
   display: flex;
+
   max-width: 680px;
-  margin: 0 auto;
+
+  margin: 0 auto 20px;
+
   padding: 4px;
+
   background: var(--bg-card);
+
   border: 1px solid var(--border);
   border-radius: 50px;
+
   box-shadow: var(--shadow);
+
   transition: var(--transition);
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+
+  animation:
+    fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)
+    0.2s forwards;
+
   opacity: 0;
-  margin-bottom: 20px;
 }
 
 .search-box:focus-within {
@@ -338,11 +217,16 @@ a:focus {
 .search-box input {
   flex: 1;
   min-width: 0;
+
   height: 40px;
+
   padding: 0 20px;
+
   font-size: 1.4rem;
+
   border: 0;
   outline: none;
+
   background: transparent;
   color: var(--heading);
 }
@@ -352,14 +236,19 @@ a:focus {
 }
 
 .search-box button {
-  padding: 0 20px;
   height: 40px;
+
+  padding: 0 20px;
+
   border: 0;
   border-radius: 40px;
+
   background: var(--primary);
   color: var(--white);
+
   font-size: 1.3rem;
   font-weight: 600;
+
   transition: var(--transition);
 }
 
@@ -370,7 +259,7 @@ a:focus {
 }
 
 /* =========================================================
-   11. CATALOG LAYOUT
+   5. CATALOG LAYOUT
    ========================================================= */
 
 .catalog-section {
@@ -379,636 +268,41 @@ a:focus {
 
 .catalog-layout {
   display: grid;
+
   grid-template-columns: 220px minmax(0, 1fr);
+
   gap: 40px;
 }
 
-/* =========================================================
-   12. SIDEBAR
-   ========================================================= */
-
-.category-sidebar {
-  border-right: 1px solid var(--border);
-  padding-right: 20px;
-}
-
-.category-sidebar h2 {
-  margin: 0 0 20px;
-  color: var(--heading);
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.category-group {
-  margin-bottom: 24px;
-}
-
-.category-group h3 {
-  margin: 0 0 10px;
-  color: var(--primary);
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.category-group a,
-.category-link {
-  display: block;
-  width: 100%;
-  padding: 6px 10px;
-  border: 0;
-  border-radius: var(--radius);
-  background: transparent;
-  color: var(--text);
-  font-size: 1.4rem;
-  text-align: left;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.category-group a:hover,
-.category-link:hover {
-  color: var(--heading);
-  background: var(--light);
-  padding-left: 14px;
-}
-
-.category-link.active {
-  color: var(--primary);
-  background: var(--primary-glow);
-  font-weight: 600;
+.catalog-content {
+  min-width: 0;
 }
 
 /* =========================================================
-   13. CATALOG HEADER
+   6. CATALOG HEADER
    ========================================================= */
 
 .catalog-header {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid var(--border);
-}
 
-.catalog-header h2 {
-  margin: 0;
-  color: var(--heading);
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.catalog-header select {
-  height: 40px;
-  padding: 0 16px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--heading);
-  border-radius: var(--radius);
-  outline: none;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.catalog-header select:focus {
-  border-color: var(--primary);
-}
-
-/* =========================================================
-   14. PROJECT GRID
-   ========================================================= */
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-/* =========================================================
-   15. PROJECT CARDS & DYNAMIC NODES
-   ========================================================= */
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: var(--transition);
-  animation: fadeIn 0.4s ease forwards;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-focus);
-  box-shadow: var(--shadow);
-  background: var(--bg-card-hover);
-}
-
-.project-image {
-  display: block;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: var(--light);
-  position: relative;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
-.project-image-placeholder {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--light), var(--bg-card));
-  color: var(--primary);
-  font-family: "Fira Code", monospace;
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.project-body,
-.project-card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.project-host {
-  margin-bottom: 6px;
-  color: var(--primary);
-  font-family: "Fira Code", monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.project-body h3,
-.project-card-body h3 {
-  margin: 0 0 8px;
-  font-size: 1.7rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.project-body h3 a,
-.project-card-body h3 a {
-  color: var(--heading);
-}
-
-.project-body h3 a:hover,
-.project-card-body h3 a:hover {
-  color: var(--primary);
-}
-
-.project-body p,
-.project-card-body p {
-  margin: 0 0 11px;
-  color: var(--text);
-  font-size: 0.98rem;
-  line-height: 1.4;
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-}
-
-/* =========================================================
-   16. TAGS
-   ========================================================= */
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: auto;
-}
-
-.project-tags span {
-  display: inline-block;
-  padding: 3px 8px;
-  background: var(--light);
-  color: var(--text-muted);
-  border-radius: 4px;
-  font-family: "Fira Code", monospace;
-  font-size: 1.1rem;
-}
-
-/* =========================================================
-   17. LOADING & UTILITIES
-   ========================================================= */
-
-.catalog-loading {
-  padding: 60px 0;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 1.5rem;
-}
-
-.catalog-loading.hidden {
-  display: none;
-}
-
-.load-more {
-  display: block;
-  margin: 40px auto 0;
-  padding: 12px 32px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  color: var(--heading);
-  font-size: 1.4rem;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.load-more:hover {
-  border-color: var(--primary);
-  background: var(--primary);
-  color: var(--white);
-  box-shadow: var(--shadow-glow);
-}
-
-/* =========================================================
-   18. FOOTER
-   ========================================================= */
-
-.site-footer {
-  padding: 60px 0 30px;
-  background: var(--header-dark);
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
-}
-
-.site-footer .container {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 30px;
-}
-
-.site-footer strong {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--heading);
-  font-size: 1.8rem;
-}
-
-.site-footer p {
-  margin: 0;
-  font-size: 1.4rem;
-}
-
-.site-footer nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.site-footer nav a {
-  color: var(--text);
-  font-size: 1.4rem;
-}
-
-.site-footer nav a:hover {
-  color: var(--primary);
-}
-
-.site-footer .copyright {
-  grid-column: 1 / -1;
-  margin-top: 20px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-/* =========================================================
-   19. KEYFRAME ANIMATIONS
-   ========================================================= */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================================================
-   20. RESPONSIVE BREAKPOINTS
-   ========================================================= */
-
-@media (max-width: 991px) {
-  .catalog-layout {
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 767px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 12px;
-    background: var(--header);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .main-nav > a,
-  .nav-dropdown > button {
-    width: 100%;
-    padding: 12px;
-  }
-
-  .dropdown-menu {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    padding-left: 12px;
-  }
-
-  .hero h1 {
-    font-size: 3.4rem;
-  }
-
-  .catalog-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .category-sidebar {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    padding-right: 0;
-    padding-bottom: 24px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .site-footer .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .site-footer nav {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-box {
-    flex-direction: column;
-    border-radius: var(--radius-lg);
-    padding: 8px;
-  }
-
-  .search-box button {
-    width: 100%;
-    border-radius: var(--radius);
-  }
-}
-
-/* =========================================================
-   FRAMEWORKS DROPDOWN
-   ========================================================= */
-
-.framework-dropdown-menu {
-  position: absolute;
-
-  top: calc(100% + 8px);
-  left: 50%;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  width: 430px;
-
-  padding: 10px;
-
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-
-  opacity: 0;
-  visibility: hidden;
-
-  transform: translate(-50%, -5px);
-
-  transition:
-    opacity 0.15s ease,
-    transform 0.15s ease,
-    visibility 0.15s ease;
-
-  z-index: 1000;
-  margin-left: 20px;
-}
-
-.nav-dropdown:hover .framework-dropdown-menu,
-.nav-dropdown:focus-within .framework-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 0);
-}
-
-.framework-dropdown-menu a {
-  display: block;
-
-  padding: 10px 12px;
-
-  border-radius: 4px;
-
-  color: var(--text);
-
-  font-size: 1.3rem;
-  line-height: 1.4;
-
-  text-decoration: none;
-}
-
-.framework-dropdown-menu a:hover {
-  background: var(--light);
-  color: var(--primary);
-}
-@media (max-width: 700px) {
-  .framework-dropdown-menu {
-    position: static;
-
-    display: none;
-
-    width: 100%;
-
-    grid-template-columns: 1fr;
-
-    padding: 5px;
-
-    border: 0;
-    box-shadow: none;
-
-    opacity: 1;
-    visibility: visible;
-
-    transform: none;
-  }
-
-  .nav-dropdown:focus-within .framework-dropdown-menu {
-    display: grid;
-  }
-
-  .framework-dropdown-menu a {
-    padding: 10px 12px;
-  }
-}
-
-/* =======================================================
-   Navigation dropdown
-======================================================= */
-
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown > button {
-  cursor: pointer;
-}
-
-/* =======================================================
-   Catalogue dropdown buttons
-======================================================= */
-
-.dropdown-menu .nav-category-button {
-  display: block;
-  width: 100%;
-
-  margin: 0;
-  border: 0;
-
-  background: transparent;
-  color: inherit;
-
-  font: inherit;
-  text-align: left;
-
-  cursor: pointer;
-}
-
-/* Same behavior as normal dropdown links */
-
-.dropdown-menu .nav-category-button:hover {
-  background: var(--surface-hover);
-}
-
-/* =======================================================
-   Framework dropdown
-======================================================= */
-
-.framework-dropdown-menu a {
-  display: block;
-}
-.dropdown-menu .nav-all-button {
-  position: relative;
-  margin-bottom: 6px;
-}
-
-.dropdown-menu .nav-all-button::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: -4px;
-  height: 1px;
-  background: var(--primary);
-}
-#loadMore[hidden] {
-  display: none !important;
-}
-/* =========================================================
-   COMPACT CATALOG HEADER
-========================================================= */
-
-.catalog-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 16px;
 
   margin-bottom: 20px;
-  padding: 0 0 12px;
+  padding-bottom: 12px;
 
   border-bottom: 1px solid var(--border);
 }
 
 .catalog-title {
   display: flex;
+
   align-items: baseline;
+
   gap: 10px;
+
   min-width: 0;
 }
 
@@ -1029,18 +323,21 @@ a:focus {
   font-size: 1.1rem;
 }
 
-/* ---------------------------------------------------------
-   Sort
---------------------------------------------------------- */
+/* =========================================================
+   7. SORT CONTROL
+   ========================================================= */
 
 .sort-control {
   display: flex;
+
   align-items: center;
+
   gap: 8px;
 
   flex-shrink: 0;
 
   color: var(--text-muted);
+
   font-size: 1.1rem;
 }
 
@@ -1058,6 +355,7 @@ a:focus {
   font-size: 1.2rem;
 
   outline: none;
+
   cursor: pointer;
 
   transition: var(--transition);
@@ -1072,12 +370,584 @@ a:focus {
   box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
-/* ---------------------------------------------------------
-   Mobile
---------------------------------------------------------- */
+/* =========================================================
+   8. CATEGORY SIDEBAR
+   ========================================================= */
+
+.category-sidebar {
+  min-width: 0;
+}
+
+.desktop-category-sidebar {
+  border-right: 1px solid var(--border);
+
+  padding-right: 20px;
+}
+
+.category-sidebar h2 {
+  margin: 0 0 20px;
+
+  color: var(--heading);
+
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+.category-group {
+  margin-bottom: 24px;
+}
+
+.category-group h3 {
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.category-group a,
+.category-link {
+  display: block;
+
+  width: 100%;
+
+  padding: 6px 10px;
+
+  border: 0;
+  border-radius: var(--radius);
+
+  background: transparent;
+  color: var(--text);
+
+  font-size: 1.4rem;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.category-group a:hover,
+.category-link:hover {
+  color: var(--heading);
+
+  background: var(--light);
+
+  padding-left: 14px;
+}
+
+.category-link.active {
+  color: var(--primary);
+
+  background: var(--primary-glow);
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   9. MOBILE CATEGORY FILTER
+   ========================================================= */
+
+.mobile-category-filter {
+  display: none;
+}
+
+.mobile-category-filter label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--text-muted);
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.mobile-category-filter select {
+  display: block;
+
+  width: 100%;
+  height: 44px;
+
+  padding: 0 40px 0 14px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background-color: var(--bg-card);
+  color: var(--heading);
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.mobile-category-filter select:hover,
+.mobile-category-filter select:focus {
+  border-color: var(--primary);
+}
+
+.mobile-category-filter select:focus {
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+/* =========================================================
+   10. PROJECT GRID
+   ========================================================= */
+
+.project-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* =========================================================
+   11. PROJECT CARDS
+   ========================================================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+
+  transition: var(--transition);
+
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--border-focus);
+
+  box-shadow: var(--shadow);
+
+  background: var(--bg-card-hover);
+}
+
+/* =========================================================
+   12. PROJECT IMAGE
+   ========================================================= */
+
+.project-image {
+  display: block;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background: var(--light);
+
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-image-placeholder {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--light),
+      var(--bg-card)
+    );
+
+  color: var(--primary);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   13. PROJECT CONTENT
+   ========================================================= */
+
+.project-body,
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+
+  padding: 20px;
+}
+
+.project-host {
+  margin-bottom: 6px;
+
+  color: var(--primary);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+.project-body h3,
+.project-card-body h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.7rem;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+.project-body h3 a,
+.project-card-body h3 a {
+  color: var(--heading);
+}
+
+.project-body h3 a:hover,
+.project-card-body h3 a:hover {
+  color: var(--primary);
+}
+
+.project-body p,
+.project-card-body p {
+  margin: 0 0 11px;
+
+  color: var(--text);
+
+  font-size: 0.98rem;
+  line-height: 1.4;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   14. PROJECT TAGS
+   ========================================================= */
+
+.project-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: auto;
+}
+
+.project-tags span {
+  display: inline-block;
+
+  padding: 3px 8px;
+
+  background: var(--light);
+  color: var(--text-muted);
+
+  border-radius: 4px;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   15. LOADING & UTILITIES
+   ========================================================= */
+
+.catalog-loading {
+  padding: 60px 0;
+
+  text-align: center;
+
+  color: var(--text-muted);
+
+  font-size: 1.5rem;
+}
+
+.catalog-loading.hidden {
+  display: none;
+}
+
+.load-more {
+  display: block;
+
+  margin: 40px auto 0;
+
+  padding: 12px 32px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: var(--bg-card);
+  color: var(--heading);
+
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.load-more:hover {
+  border-color: var(--primary);
+
+  background: var(--primary);
+  color: var(--white);
+
+  box-shadow: var(--shadow-glow);
+}
+
+/* =========================================================
+   16. FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: 60px 0 30px;
+
+  background: var(--header-dark);
+
+  color: var(--text-muted);
+
+  border-top: 1px solid var(--border);
+}
+
+.site-footer .container {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  gap: 30px;
+}
+
+.site-footer strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--heading);
+
+  font-size: 1.8rem;
+}
+
+.site-footer p {
+  margin: 0;
+
+  font-size: 1.4rem;
+}
+
+.site-footer nav {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+.site-footer nav a {
+  color: var(--text);
+
+  font-size: 1.4rem;
+}
+
+.site-footer nav a:hover {
+  color: var(--primary);
+}
+
+.site-footer .copyright {
+  grid-column: 1 / -1;
+
+  margin-top: 20px;
+  padding-top: 24px;
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+
+  font-size: 1.3rem;
+}
+
+/* =========================================================
+   17. KEYFRAME ANIMATIONS
+   ========================================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   18. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .catalog-layout {
+    grid-template-columns:
+      180px minmax(0, 1fr);
+
+    gap: 24px;
+  }
+
+  .project-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   19. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .catalog-section {
+    padding: 24px 0 50px;
+  }
+
+  .catalog-layout {
+    display: block;
+  }
+
+  /* Hide desktop category navigation */
+  .desktop-category-sidebar {
+    display: none;
+  }
+
+  /* Show mobile category selector */
+  .mobile-category-filter {
+    display: block;
+
+    margin-bottom: 24px;
+  }
+
+  .catalog-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .catalog-header {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+  }
+
+  .catalog-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-body,
+  .project-card-body {
+    padding: 16px;
+  }
+
+  .site-footer .container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .site-footer nav {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   20. RESPONSIVE — SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
-
   .catalog-header {
     gap: 10px;
   }
@@ -1096,7 +966,55 @@ a:focus {
 
   .sort-control select {
     height: 32px;
+
     font-size: 1.1rem;
   }
+}
 
+/* =========================================================
+   21. RESPONSIVE — PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .search-box {
+    flex-direction: column;
+
+    border-radius: var(--radius-lg);
+
+    padding: 8px;
+  }
+
+  .search-box button {
+    width: 100%;
+
+    border-radius: var(--radius);
+  }
+
+  .catalog-section {
+    padding-top: 20px;
+  }
+
+  .mobile-category-filter {
+    margin-bottom: 20px;
+  }
+
+  .mobile-category-filter select {
+    height: 42px;
+
+    font-size: 1.3rem;
+  }
+
+  .project-grid {
+    gap: 14px;
+  }
+
+  .project-body,
+  .project-card-body {
+    padding: 15px;
+  }
 }
