@@ -8,10 +8,10 @@
  * C:\Users\Robel\Documents\projects\coderbasket\data\
  *
  * Catalogue:
- * /data/ai/*.json
- * /data/dotnet/*.json
- * /data/web/*.json
- * /data/others/*.json
+ * /data/ai.json
+ * /data/dotnet.json
+ * /data/flutter.json
+ * /data/frameworks.json
  */
 
 const DATA_BASE_URL = "/data/";
@@ -22,63 +22,38 @@ const DATA_BASE_URL = "/data/";
 
 const DATA_SECTIONS = {
   /* ---------------------------------------------------
-       AI
-    --------------------------------------------------- */
+     AI
+  --------------------------------------------------- */
 
   ai: {
     name: "AI",
-    path: "ai",
-
-    categories: {
-      llm: "LLM",
-      agents: "AI Agents",
-      rag: "RAG",
-      vision: "Computer Vision",
-      speech: "Speech & Audio",
-      "local-ai": "Local AI",
-    },
+    file: "ai.json",
+    path: "/ai/",
   },
 
   /* ---------------------------------------------------
-       .NET
-    --------------------------------------------------- */
+     .NET
+  --------------------------------------------------- */
 
   dotnet: {
     name: ".NET",
-    path: "dotnet",
-
-    categories: {
-      dotnet: ".Net Apps",
-      blazor: "Blazor",
-      winui: "WinUI",
-      maui: ".NET MAUI",
-      avalonia: "Avalonia",
-      uno: "Uno Platform",
-      others: "Others",
-    },
+    file: "dotnet.json",
+    path: "/dotnet/",
   },
+
   /* ---------------------------------------------------
-       Dart 
-    --------------------------------------------------- */
+     Flutter
+  --------------------------------------------------- */
+
   flutter: {
-  name: "Flutter",
-  path: "flutter",
-  categories: {
-    more: "Flutter Templates",
-    material: "Material Design",
-    cupertino: "Cupertino",
-    firebase: "Firebase",
-    others: "Others",
+    name: "Flutter",
+    file: "flutter.json",
+    path: "/flutter/",
   },
-},
-
-  /* ---------------------------------------------------
-       Web
-    --------------------------------------------------- */
-
-  /* ---------------------------------------------------
-       Others
-    --------------------------------------------------- */
+  frameworks: {
+    name: "Frameworks",
+    file: "frameworks.json",
+  },
 };
 
 /* =======================================================
@@ -86,76 +61,60 @@ const DATA_SECTIONS = {
 ======================================================= */
 
 const FRAMEWORKS = {
- 
-
   react: {
     name: "React",
-    path: "/frameworks/react/",
   },
 
   "react-native": {
     name: "React Native",
-    path: "/frameworks/react-native/",
   },
 
   vue: {
     name: "Vue",
-    path: "/frameworks/vue/",
   },
 
   angular: {
     name: "Angular",
-    path: "/frameworks/angular/",
   },
 
   svelte: {
     name: "Svelte",
-    path: "/frameworks/svelte/",
   },
 
   nextjs: {
     name: "Next.js",
-    path: "/frameworks/nextjs/",
   },
 
   nuxt: {
     name: "Nuxt",
-    path: "/frameworks/nuxt/",
   },
 
   electron: {
     name: "Electron",
-    path: "/frameworks/electron/",
   },
 
   tauri: {
     name: "Tauri",
-    path: "/frameworks/tauri/",
   },
 
   "kotlin-multiplatform": {
     name: "Kotlin Multiplatform",
-    path: "/frameworks/kotlin-multiplatform/",
   },
 
   laravel: {
     name: "Laravel",
-    path: "/frameworks/laravel/",
   },
 
   django: {
     name: "Django",
-    path: "/frameworks/django/",
   },
 
   spring: {
     name: "Spring",
-    path: "/frameworks/spring/",
   },
 
   "ruby-on-rails": {
     name: "Ruby on Rails",
-    path: "/frameworks/ruby-on-rails/",
   },
 };
 
@@ -184,7 +143,7 @@ const NAVIGATION = {
    SECTION DISPLAY ORDER
 ======================================================= */
 
-const DATA_SECTION_ORDER = ["ai", "dotnet", "flutter"];
+const DATA_SECTION_ORDER = ["ai", "flutter", "dotnet", ];
 
 /*
  * Application categories.
@@ -485,6 +444,7 @@ const DEFAULT_SECTION = "ai";
 
 const STORAGE_KEYS = {
   section: "coderbasket.selectedSection",
+  subCategory: "coderbasket.selectedSubCategory",
   category: "coderbasket.selectedCategory",
 };
 

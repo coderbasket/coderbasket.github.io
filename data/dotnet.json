@@ -1,0 +1,4625 @@
+[
+  {
+    "project_url": "https://github.com/dan0v/AmplitudeSoundboard",
+    "title": "Amplitude Soundboard",
+    "description": "Play audio files from many formats.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/dan0v/AmplitudeSoundboard/raw/master/Branding/Banner.png",
+    "categories": [
+      19,
+      126,
+      130,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/carina-studio/ULogViewer",
+    "title": "ULogViewer",
+    "description": "ULogViewer is a .NET-based cross-platform universal log viewer written in C# that supports reading and parsing various types of logs.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/4142da459f51133bfb2e6f4f0c97bf4c0c517d4b46eea7820d901ab41471de5a/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f554c6f6746696c7465722f53637265656e73686f74732f53637265656e73686f745f57696e646f77735f5468756d62",
+    "categories": [
+      76,
+      79,
+      120,
+      163,
+      177,
+      180,
+      181,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/arklumpus/TreeViewer",
+    "title": "TreeViewer",
+    "description": "A cross-platform desktop application for viewing and working with trees.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/arklumpus/TreeViewer/raw/main/Icons/Program/Banner.svg",
+    "categories": [
+      76,
+      177,
+      180,
+      181,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/AvaloniaUI/Citrus.Avalonia",
+    "title": "Citrus",
+    "description": "Avalonia experimental theme.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/AvaloniaUI/Citrus.Avalonia/raw/main/assets/picture.jpeg",
+    "categories": [
+      41,
+      43,
+      143,
+      145,
+      148,
+      176,
+      184,
+      185
+    ]
+  },
+  {
+    "project_url": "https://github.com/chkr1011/MQTTnetApp",
+    "title": "MQTTnet App",
+    "description": "MQTTnet App, also known as MQTT Multimeter, is a cross-platform .NET application for MQTT communication testing and analysis.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/chkr1011/MQTTnetApp/blob/main/Images/Screenshots/InflightPage.png?raw=true",
+    "categories": [
+      42,
+      76,
+      80,
+      150,
+      153,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/icsharpcode/AvaloniaILSpy",
+    "title": "AvaloniaILSpy",
+    "description": "A cross-platform version of ILSpy built with Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "linux",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/icsharpcode/AvaloniaILSpy/raw/master/preview.png",
+    "categories": [
+      76,
+      78,
+      79,
+      177,
+      180,
+      181,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/rbmkio/radish",
+    "title": "Radish",
+    "description": "A cross-platform desktop client for Redis.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/rbmkio/radish/raw/master/screenshot.png",
+    "categories": [
+      42,
+      102,
+      106,
+      150,
+      153,
+      177,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/mat1jaczyyy/apollo-studio",
+    "title": "Apollo Studio",
+    "description": "A desktop application for controlling and working with Launchpad devices.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": "https://www.youtube.com/watch?v=a-MwTVH-wX8",
+    "image_url": "https://camo.githubusercontent.com/af833f440b8a962c919f17f351ac0e9479644dcc0b6209e1dab7c4fb0c30e0a0/687474703a2f2f696d672e796f75747562652e636f6d2f76692f612d4d775456482d7758382f6d7164656661756c742e6a7067",
+    "categories": [
+      42,
+      126,
+      132,
+      177,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/wieslawsoltes/Core2D",
+    "title": "Core2D",
+    "description": "A multi-platform application for making data-driven 2D diagrams with a built-in vector graphics editor, layers, data binding, document management, and export to popular formats.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/2297442/131457859-94a2c5c3-f85c-4ac0-a7b0-ec07e86595b7.png",
+    "categories": [
+      12,
+      33,
+      35,
+      107,
+      108,
+      109,
+      110,
+      128,
+      129,
+      176,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/zxyao145/XmlyDownloader",
+    "title": "XmlyDownloader",
+    "description": "A cross-platform application for downloading albums from Ximalaya.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/zxyao145/XmlyDownloader/raw/master/mdfiles/start.png",
+    "categories": [
+      42,
+      126,
+      154,
+      177,
+      180,
+      181,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/MihaMarkic/modern-vice-pdb-monitor",
+    "title": "Modern VICE PDB Monitor",
+    "description": "A cross-platform debugging environment for VICE emulator applications, built with .NET and Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/MihaMarkic/modern-vice-pdb-monitor/raw/main/docs/global-settings.png",
+    "categories": [
+      76,
+      79,
+      80,
+      81,
+      177,
+      180,
+      181,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/nlogozzo/NickvisionTubeConverter",
+    "title": "Nickvision Tube Converter",
+    "description": "An easy-to-use YouTube video downloader.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/17648453/172919510-b99d02c5-601b-41a5-8ba6-889c8a64582c.png",
+    "categories": [
+      42,
+      127,
+      131,
+      154,
+      161,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/nlogozzo/NickvisionMoney",
+    "title": "Nickvision Money",
+    "description": "A personal finance manager.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/17648453/149027263-edb7b0db-999f-47a7-bb0d-07053baf2d7e.png",
+    "categories": [
+      5,
+      6,
+      8,
+      134,
+      140,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/mike-ward/Loon",
+    "title": "Loon",
+    "description": "A cross-platform desktop Twitter client with a minimal gadget-style interface for monitoring current events and developer community announcements.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/9690813ca3813384de607e4cdcf3baea532f3ae81ce82652f90d98e33ba682de/68747470733a2f2f692e696d6775722e636f6d2f6b7169745945612e706e67",
+    "categories": [
+      2,
+      7,
+      10,
+      12,
+      15,
+      17,
+      22,
+      39,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/ptupitsyn/let-it-snow",
+    "title": "Let It Snow!",
+    "description": "A cross-platform falling snow demo built with .NET Core and Avalonia UI.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/ptupitsyn/let-it-snow/raw/master/images/let-it-snow-tree.gif",
+    "categories": [
+      41,
+      43,
+      44,
+      185,
+      188
+    ]
+  },
+  {
+    "project_url": "https://github.com/nlogozzo/NickvisionTagger",
+    "title": "Nickvision Tagger",
+    "description": "An easy-to-use music tag and metadata editor.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/17648453/173400558-ec011b3b-fdeb-4718-99ff-f5028c02e423.png",
+    "categories": [
+      42,
+      126,
+      128,
+      129,
+      139,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/adirh3/Avalonia.ListBoxAnimation.Samples",
+    "title": "Avalonia ListBox Animation Samples",
+    "description": "Simple item selection animation samples using Avalonia 11.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [
+      12,
+      44,
+      45,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/carina-studio/PixelViewer",
+    "title": "PixelViewer",
+    "description": "A cross-platform image viewer written in C# that supports reading and rendering raw Luminance, YUV, RGB, ARGB, and Bayer pixel data.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/4909eb9b0f7c1009bd0ce6b5339a9704b1f85beb90d9ca0a5b1036e6573bcf8c/68747470733a2f2f636172696e6173747564696f2e617a75726577656273697465732e6e65742f506978656c5669657765722f53637265656e73686f74732f4d61696e57696e646f775f57696e646f77735f5468756d62",
+    "categories": [
+      18,
+      128,
+      129,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/reactiveui/Camelotia",
+    "title": "Camelotia",
+    "description": "A cross-platform file manager for cloud storage services and local file systems, built with ReactiveUI and Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#",
+      "ReactiveUI"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "xbox"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/reactiveui/Camelotia/main/images/UiAvalonia.png",
+    "categories": [
+      12,
+      111,
+      113,
+      137,
+      150,
+      155,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/zkSNACKs/WalletWasabi",
+    "title": "Wasabi",
+    "description": "An open-source, non-custodial, privacy-focused Bitcoin wallet for desktop.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/51679301/169354261-c894bac0-27f2-4a29-8470-a7519963a4b5.jpg",
+    "categories": [
+      5,
+      22,
+      24,
+      121,
+      123,
+      124,
+      125,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/SinoAHpx/AHpx.RG",
+    "title": "AHpx.RG",
+    "description": "A README generator that automates common documentation generation tasks.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/34391004/154978742-6b836f99-57f4-4d79-9a0b-7a816f21aa6b.png",
+    "categories": [
+      42,
+      90,
+      134,
+      158,
+      165,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/davidtimovski/sapphire-notes",
+    "title": "Sapphire Notes",
+    "description": "A cross-platform desktop application for managing notes built with Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/davidtimovski/sapphire-notes/raw/dev/preview.webp",
+    "categories": [
+      12,
+      24,
+      134,
+      135,
+      139,
+      177,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/sn4k3/UVtools",
+    "title": "UVtools",
+    "description": "A utility for inspecting, analyzing, and modifying resin 3D-printing files and settings.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/sn4k3/UVtools/master/wiki/UI1.png",
+    "categories": [
+      42,
+      76,
+      128,
+      137,
+      161,
+      164,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/alexandrehtrb/Pororocaewer",
+    "title": "Pororoca",
+    "description": "An HTTP testing tool inspired by Postman with additional features and improvements.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/alexandrehtrb/Pororoca/raw/master/docs/en-GB/imgs/example_screen.jpg",
+    "categories": [
+      42,
+      76,
+      80,
+      82,
+      83,
+      151,
+      153,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/wieslawsoltes/Dock",
+    "title": "Dock",
+    "description": "A docking layout system for Avalonia applications.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/wieslawsoltes/Dock/raw/master/images/Dock.png",
+    "categories": [
+      141,
+      169,
+      172,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/kekekeks/Avalonia.BattleCity",
+    "title": "Avalonia BattleCity",
+    "description": "A port of PekaCity to Avalonia, with the 2D game rendered completely using AvaloniaUI.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/kekekeks/Avalonia.BattleCity/raw/master/demo.gif?raw=true",
+    "categories": [
+      41,
+      43,
+      44,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/egramtel/egram.tel",
+    "title": "Telegram Client",
+    "description": "A full-featured unofficial Telegram client with a different approach to the user interface.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/egramtel/egram.tel/master/screenshot.png",
+    "categories": [
+      7,
+      12,
+      15,
+      17,
+      23,
+      39,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/lacmus-foundation/lacmus-app",
+    "title": "Lacmus Application",
+    "description": "A cross-platform application that searches for lost people in forests using object-detection neural networks, TensorFlow, and ONNX inference.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#",
+      "TensorFlow",
+      "ONNX"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/lacmus-foundation/lacmus-app/raw/master/docs/main_view.png",
+    "categories": [
+      50,
+      63,
+      67,
+      71,
+      121,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/countincognito/Zametek.ProjectPlan",
+    "title": "Zametek ProjectPlan",
+    "description": "A cross-platform project planning application built with .NET.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/media/FchO9iwWYAEiDz-?format=png&name=medium",
+    "categories": [
+      8,
+      12,
+      134,
+      136,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flarive/Neumorphism.Avalonia",
+    "title": "Neumorphism.Avalonia",
+    "description": "An easy-to-use and customizable Neumorphism Design implementation for AvaloniaUI.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/flarive/Neumorphism.Avalonia/raw/main/Screenshots/usecases.png",
+    "categories": [
+      38,
+      45,
+      141,
+      142,
+      143,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/reignstudios/Git-It-GUI",
+    "title": "Git-It-GUI",
+    "description": "A graphical user interface for Git.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/reignstudios/Git-It-GUI/raw/master/ScreenShots/Changes.png?raw=true",
+    "categories": [
+      42,
+      76,
+      79,
+      153,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/VitalElement/AvalonStudio",
+    "title": "AvalonStudio",
+    "description": "An extensible cross-platform IDE written in C# for embedded C/C++, .NET Core, Avalonia, and TypeScript.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#",
+      "C++",
+      "TypeScript"
+    ],
+    "platforms": [
+      "windows",
+      "linux",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/7d8038fa95a42fb113eedae51789b61f27823bab9e2d084c59dc73978e2c9a3f/68747470733a2f2f66696c65732e6769747465722e696d2f566974616c456c656d656e742f4176616c6f6e53747564696f2f336545742f696d6167652e706e67",
+    "categories": [
+      76,
+      77,
+      78,
+      80,
+      89,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/jonthysell/Mzinga",
+    "title": "Mzinga",
+    "description": "An open-source collection of software for playing the board game Hive and developing Hive-playing AI.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/jonthysell/Mzinga/raw/main/.github/banner.png",
+    "categories": [
+      43,
+      47,
+      63,
+      66,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/MonkAlex/MangaReader",
+    "title": "MangaReader",
+    "description": "A cross-platform application for downloading manga from online readers.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/MonkAlex/MangaReader/raw/master/Docs/Avalonia.png",
+    "categories": [
+      18,
+      21,
+      154,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/davidtimovski/team-sketch",
+    "title": "Team Sketch",
+    "description": "A cross-platform desktop application for collaborative drawing built with Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/davidtimovski/team-sketch/raw/dev/preview.webp",
+    "categories": [
+      7,
+      18,
+      129,
+      134,
+      146,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/Artemis-RGB/Artemis",
+    "title": "Artemis",
+    "description": "A highly configurable application for controlling RGB keyboards, mice, headsets, and other supported devices with game integrations.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/dfca522696d4802e9da89821d08a912383da83ed0f9e94750ac7d22f500a5cf6/68747470733a2f2f77696b692e617274656d69732d7267622e636f6d2f73637265656e73686f74732f737572666163652d656469746f722e706e67",
+    "categories": [
+      24,
+      42,
+      44,
+      45,
+      161,
+      163,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/hailstorm75/MarkDoc.Core",
+    "title": "MarkDoc.Core",
+    "description": "A Markdown documentation generator for .NET libraries written in C#.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/16069996/153456188-5f9678cf-efc8-4764-8bc4-6e5b1c034c0d.gif",
+    "categories": [
+      42,
+      90,
+      134,
+      158,
+      165,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/Nethereum/Nethereum.UI.Desktop",
+    "title": "Nethereum UI Desktop Starter Template",
+    "description": "A functional sample of a reactive cross-platform desktop wallet connecting to Ethereum using Nethereum, Avalonia, and ReactiveUI.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#",
+      "ReactiveUI"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Nethereum/Nethereum.UI.Desktop/raw/master/Screenshots/simpleDemo.gif",
+    "categories": [
+      22,
+      24,
+      42,
+      121,
+      123,
+      184,
+      188
+    ]
+  },
+  {
+    "project_url": "https://github.com/dan0v/xdelta3-cross-gui",
+    "title": "xDelta3 Cross GUI",
+    "description": "A cross-platform GUI for creating and applying xDelta3 patches on Windows, Linux, and macOS.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/dan0v/xdelta3-cross-gui/raw/master/Extra%20Resources/Repository%20Cover.png",
+    "categories": [
+      42,
+      76,
+      137,
+      161,
+      164,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/yatli/fvim",
+    "title": "FVim",
+    "description": "A cross-platform Neovim frontend UI built with F# and Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "F#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/yatli/fvim/raw/master/images/screenshot.png",
+    "categories": [
+      76,
+      78,
+      139,
+      177,
+      180,
+      181,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/PowerShell/GraphicalTools",
+    "title": "GraphicalTools",
+    "description": "A collection of PowerShell console GUI experiences and tools.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "PowerShell"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/PowerShell/GraphicalTools/raw/master/docs/Microsoft.PowerShell.ConsoleGuiTools/ocgv.gif",
+    "categories": [
+      42,
+      76,
+      85,
+      86,
+      153,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/PBoleander/Calc",
+    "title": "Calc",
+    "description": "An Avalonia MVVM calculator application created with JetBrains Rider.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/PBoleander/Calc/raw/main/Screenshot.png",
+    "categories": [
+      3,
+      42,
+      169,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/alexdillon/GroupMeClient",
+    "title": "GroupMe Desktop Client Avalonia",
+    "description": "An unofficial, modular, open-source desktop client for the GroupMe chat service with search, threaded replies, plugins, and configurable features.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/alexdillon/GroupMeClient/raw/develop/docs/screenshots/LightThemeMain.png",
+    "categories": [
+      7,
+      15,
+      23,
+      24,
+      39,
+      141,
+      143,
+      144,
+      173,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/waliarubal/Jaya",
+    "title": "Jaya File Manager",
+    "description": "A cross-platform file manager for Windows, macOS, and Linux designed to provide a consistent desktop file-management experience.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/waliarubal/Jaya/raw/dev/docs/MainUI_Light.png",
+    "categories": [
+      12,
+      24,
+      137,
+      161,
+      162,
+      173,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/roslynpad/roslynpad",
+    "title": "RoslynPad",
+    "description": "A cross-platform C# editor based on Roslyn and AvalonEdit.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/roslynpad/roslynpad/raw/main/docs/Completion.png",
+    "categories": [
+      76,
+      78,
+      79,
+      139,
+      158,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/VitalElement/Xune",
+    "title": "Zune Desktop Music Player",
+    "description": "A cross-platform resurrection of the Zune Desktop Music Player using AvaloniaUI.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/4672627/154169654-87766d8a-5860-45e9-9ae9-567108a06c4f.png",
+    "categories": [
+      19,
+      126,
+      130,
+      131,
+      143,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/AvaloniaCommunity/Material.Avalonia",
+    "title": "Material.Avalonia",
+    "description": "A customizable Material Design implementation for the AvaloniaUI framework.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/AvaloniaCommunity/Material.Avalonia/raw/dev/wiki/images/demo-screenshots/1.png",
+    "categories": [
+      45,
+      141,
+      142,
+      148,
+      176,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/AvaloniaUI/Wordle-onia",
+    "title": "Wordle-onia",
+    "description": "A port of the Wordle game to Avalonia.",
+    "section": "dotnet",
+    "section_category": "avalonia",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "android",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/4672627/156905488-b8fa7821-e1e7-4251-8f54-2a8d303e4ee9.png",
+    "categories": [
+      43,
+      176,
+      178,
+      182,
+      183,
+      184,
+      188
+    ]
+  },
+  {
+    "project_url": "https://github.com/Blazored/Typeahead",
+    "title": "Blazored Typeahead",
+    "description": "Typeahead control for Blazor applications.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Blazored/Typeahead/raw/main/screenshot.png",
+    "categories": [
+      41,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/Blazored/TextEditor",
+    "title": "Blazored TextEditor",
+    "description": "Rich text editor for Blazor applications using Quill JS.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Quill"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Blazored/TextEditor/main/HTMLExample.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/torhovland/blazor-realworld-example-app",
+    "title": "Blazor RealWorld Example App",
+    "description": "A Blazor codebase containing real-world examples including CRUD, authentication, and advanced application patterns that follows the RealWorld specification and API.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "ASP.NET Core"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/torhovland/blazor-realworld-example-app/blob/master/logo.png?raw=true",
+    "categories": [
+      41,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/CuriousDrive/BlazingChat",
+    "title": "BlazingChat",
+    "description": "A Blazor WebAssembly sample application demonstrating authentication, logging, virtualization, and other Blazor features.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/CuriousDrive/BlazingChat/raw/main/Source%20Code%20By%20Episodes/Documents/Gifs/Intro2.gif",
+    "categories": [
+      41,
+      7
+    ]
+  },
+  {
+    "project_url": "https://github.com/RikamPalkar/Blazing-Blazor",
+    "title": "Blazing-Blazor",
+    "description": "A Blazor application demonstrating game development with Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/create-a-tic-tac-toe-game-in-blazor/Images/Animation.gif",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/manureini/MComponents",
+    "title": "MComponents",
+    "description": "A Blazor component library providing reusable UI components.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/manureini/MComponents/master/Screenshots/MGrid.PNG",
+    "categories": [
+      41,
+      16,
+      6,
+      8
+    ]
+  },
+  {
+    "project_url": "https://github.com/ant-design-blazor/ant-design-blazor",
+    "title": "Ant Design Blazor",
+    "description": "A rich set of enterprise-class UI components based on Ant Design and Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Ant Design"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/cfaee67ab0dbd2f189c49d3833affc6ee6129e6500e475bf79caa3aa82fa74e7/68747470733a2f2f67772e616c697061796f626a656374732e636f6d2f6d646e2f726d735f3038653337382f616674732f696d672f412a596c3833524a685545376b4141414141414141414141426b4152516e4151",
+    "categories": [
+      41,
+      42,
+      12,
+      5,
+      8,
+      20,
+      16,
+      26,
+      27,
+      23,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/pablofrommars/GGNet",
+    "title": "GG.Net Data Visualization",
+    "description": "A .NET data visualization library for creating interactive and flexible charts for .NET and Blazor applications.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "F#",
+      ".NET",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://pablofrommars.github.io/",
+    "youtube_url": null,
+    "image_url": "https://github.com/pablofrommars/GGNet.Site/raw/master/wwwroot/img/scatterplot.png",
+    "categories": [
+      41,
+      6,
+      5,
+      12,
+      21,
+      31
+    ]
+  },
+  {
+    "project_url": "https://github.com/conficient/BlazorDynamicList",
+    "title": "BlazorDynamicList Sample",
+    "description": "A sample demonstrating how Blazor components can encapsulate code, UI, and behavior into reusable modules and load components dynamically.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/conficient/BlazorDynamicList/raw/master/img/index.png",
+    "categories": [
+      41,
+      42,
+      12,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/JeremyLikness/BlazorServerEFCoreExample",
+    "title": "Blazor Server EF Core Example",
+    "description": "Example of a Blazor Server project that uses Entity Framework Core for data access.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor Server",
+      "ASP.NET Core",
+      "Entity Framework Core"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/JeremyLikness/BlazorServerEFCoreExample/raw/master/appsnap.jpg",
+    "categories": [
+      41,
+      39,
+      35,
+      31
+    ]
+  },
+  {
+    "project_url": "https://github.com/tossnet/Blazor-Color-Picker",
+    "title": "Blazor Color Picker",
+    "description": "A customizable color picker component for Blazor applications with predefined color palettes.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/tossnet/Blazor-Color-Picker/raw/master/BlazorColorPicker.gif",
+    "categories": [
+      41,
+      42,
+      9
+    ]
+  },
+  {
+    "project_url": "https://github.com/SamProf/MatBlazor",
+    "title": "MatBlazor",
+    "description": "A collection of Blazor components implementing common interaction patterns according to the Material Design specification.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Material Design"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://www.matblazor.com/",
+    "youtube_url": null,
+    "image_url": "https://github.com/SamProf/MatBlazor/raw/master/content/demo-blazor-news-client.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/AnkitSharma-007/Google-Authentication-with-server-side-Blazor",
+    "title": "Google Authentication with Server-Side Blazor",
+    "description": "An example demonstrating authentication and authorization using a Google account in a server-side Blazor application.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor Server",
+      "ASP.NET Core",
+      "Google Authentication"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/2c2ed1b265818cc4919dace8e04da873c35c65d84fa9100ed81a0f2ae1761ed6/687474703a2f2f616e6b6974736861726d61626c6f67732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031392f30362f426c617a6f72476f6f676c6561757468457865637574696f6e2e676966",
+    "categories": [
+      41,
+      28,
+      13
+    ]
+  },
+  {
+    "project_url": "https://github.com/jsakamoto/Toolbelt.Blazor.LoadingBar",
+    "title": "Blazor WebAssembly LoadingBar",
+    "description": "A Blazor WebAssembly library that automatically displays a loading bar while pages and resources are loading.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/jsakamoto/Toolbelt.Blazor.LoadingBar/master/.assets/movie-001.gif",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/coderbasket/BlazorWebSamples",
+    "title": "Save Screen Canvas as Image",
+    "description": "A Blazor WebAssembly sample that demonstrates saving a screen canvas as an image.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly",
+      "HTML Canvas"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://github.com/coderbasket/BlazorWebSamples/tree/main/SaveScreenCanvas",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/coderbasket/BlazorWebSamples/main/SaveScreenCanvas/Screens/Screenshot.png",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/aboudoux/WpfGridLayout.Blazor",
+    "title": "WpfGridLayout.Blazor",
+    "description": "A simple way to create a grid layout similar to WPF in Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "WPF"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/aboudoux/WpfGridLayout.Blazor/raw/master/firstGrid.PNG",
+    "categories": [
+      41,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/wsdt/RealtimeChat_WebAssembly",
+    "title": "RealtimeChat WebAssembly",
+    "description": "A real-time chat application built with SignalR, .NET, and Blazor WebAssembly.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Blazor WebAssembly",
+      "SignalR"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/wsdt/RealtimeChat_WebAssembly/raw/master/WSDTChat/Docs/Conversation.PNG",
+    "categories": [
+      41,
+      15,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/dotnet/try",
+    "title": "Try .NET",
+    "description": "An interactive .NET environment that allows users to run and edit code directly in the browser.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Blazor",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/2546640/57144765-c850cc00-6d8f-11e9-982d-50d2b6dc3591.gif",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/jsakamoto/awesome-blazor-browser",
+    "title": "Awesome Blazor Browser",
+    "description": "A Blazor WebAssembly application for browsing Awesome Blazor resources.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/jsakamoto/awesome-blazor-browser/raw/master/.assets/movie-001.gif",
+    "categories": [
+      41,
+      35,
+      39,
+      32
+    ]
+  },
+  {
+    "project_url": "https://github.com/ctrl-alt-d/FlappyBlazorBird",
+    "title": "Flappy Blazor Bird",
+    "description": "A Flappy Bird-style game implemented with Blazor WebAssembly.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/ctrl-alt-d/FlappyBlazorBird/raw/main/screenshots/gameover.png",
+    "categories": [
+      41,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/Append-IT/Blazor.Printing",
+    "title": "Blazor Printing",
+    "description": "A Blazor library for printing and saving files using the browser's native dialog through JavaScript interop.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "JavaScript Interop"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://medium.com/@benjaminvertonghen/printing-pdfs-in-blazor-8dff559101f9",
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/ccf9174e779db5b9dc847eabeed04de375cd5b67f522955ec73c15531252eada/68747470733a2f2f692e696d6775722e636f6d2f61304f367a77452e676966",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/ferrywlto/EICS.Muddle",
+    "title": "Muddle",
+    "description": "A Wordle-inspired word game built with MudBlazor and Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "MudBlazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://ferrywlto.medium.com/create-your-wordle-like-game-with-blazor-and-deploy-to-github-pages-d2129b71727f",
+    "youtube_url": null,
+    "image_url": "https://miro.medium.com/max/778/1*-swoLf2m2ulGgJvxxA1byg.png",
+    "categories": [
+      41,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/MudBlazor/MudBlazor",
+    "title": "MudBlazor",
+    "description": "A Material Design component library for Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Material Design"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://mudblazor.com/",
+    "youtube_url": null,
+    "image_url": "https://repository-images.githubusercontent.com/288428676/b90b375f-6eab-49dc-ba29-0ff815283a10",
+    "categories": [
+      41,
+      45
+    ]
+  },
+  {
+    "project_url": "https://github.com/marinasundstrom/item-catalog",
+    "title": "Item Catalog",
+    "description": "An application for cataloging items with pictures using MudBlazor components.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "MudBlazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": "https://www.youtube.com/watch?v=wXaQB18FvRk",
+    "image_url": "https://github.com/marinasundstrom/item-catalog/raw/main/Screenshots/Item.png",
+    "categories": [
+      41,
+      31,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/mrpmorris/the-periodic-table-of-elements-game",
+    "title": "The Periodic Table of Elements Game",
+    "description": "A small educational game written in Blazor WebAssembly using Fluxor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly",
+      "Fluxor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/38d3c917a50345890ef76921006bc93cbde085410c73014843e28afec44eee8e/687474703a2f2f696d672e796f75747562652e636f6d2f76692f74787561434d4a317777512f302e6a7067",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/Blazored/Modal",
+    "title": "Blazored Modal",
+    "description": "A powerful and customizable modal implementation for Blazor applications.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Blazored/Modal/raw/main/screenshot.png",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/edandersen/blazor-desktop-crossplatform-sample",
+    "title": "Cross Platform Blazor Desktop Example",
+    "description": "A sample demonstrating Blazor Desktop running in a web browser and desktop wrappers using WinForms and WPF.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Blazor Hybrid",
+      "WinForms",
+      "WPF"
+    ],
+    "platforms": [
+      "windows",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/edandersen/blazor-desktop-crossplatform-sample/raw/master/docs/blazor-desktop-xplat-water.gif",
+    "categories": [
+      41,
+      44
+    ]
+  },
+  {
+    "project_url": "https://github.com/dneimke/BlazorGame",
+    "title": "BlazorGame",
+    "description": "A Blazor Server application that allows multiple players to play a game of Snap across the internet.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor Server",
+      "ASP.NET Core"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/dneimke/blazorgame/raw/main/docs/start-new-game.png?raw=true",
+    "categories": [
+      41,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/dsuryd/dotNetify",
+    "title": "DotNetify",
+    "description": "A real-time reactive framework for building cross-platform applications with .NET backends and React, React Native, Vue, Knockout, or Blazor frontends.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Blazor",
+      "SignalR",
+      "WebSocket"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/892ccd5a638c838bd2a5dc1cf780eff212c7f99c6b4d03e58083043a35e61053/687474703a2f2f646f746e65746966792e6e65742f636f6e74656e742f696d616765732f646f746e65746966792d6c6f676f2e706e67",
+    "categories": [
+      41,
+      39,
+      35
+    ]
+  },
+  {
+    "project_url": "https://github.com/BlazorGuy/BlazorGalaga",
+    "title": "BlazorGalaga",
+    "description": "A recreation of the classic Galaga arcade game implemented in C# using Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      ".NET"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/BlazorGuy/BlazorGalaga/raw/master/BlazorGalaga/wwwroot/Assets/screenshot.PNG?raw=true",
+    "categories": [
+      41,
+      42,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/dotnet-presentations/blazor-workshop",
+    "title": "Blazor App Building Workshop",
+    "description": "A workshop for building a complete Blazor application and learning the core features of the Blazor framework.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Blazor",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://github.com/dotnet-presentations/blazor-workshop/",
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/1874516/77244515-c889ce00-6bd2-11ea-9a45-47452c084464.png",
+    "categories": [
+      41,
+      12,
+      21,
+      39,
+      32
+    ]
+  },
+  {
+    "project_url": "https://github.com/radzenhq/radzen-blazor",
+    "title": "Radzen Blazor Components",
+    "description": "A collection of free and open-source native Blazor UI controls.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/radzenhq/radzen-blazor/raw/master/RadzenBlazorDemos/wwwroot/images/radzen-blazor-components.png",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/yugabe/BlazorMiner",
+    "title": "BlazorMiner",
+    "description": "A multiplayer turn-based game inspired by Minesweeper where players collect treasure instead of avoiding mines.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/yugabe/BlazorMiner/raw/master/assets/teaser-1.png",
+    "categories": [
+      41,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/SteveDunn/PacManBlazor",
+    "title": "Pac-Man Blazor",
+    "description": "A Pac-Man game implemented in C# using Blazor WebAssembly.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly",
+      ".NET"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/SteveDunn/PacManBlazor/master/assets/logo.png",
+    "categories": [
+      41,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/dotnetcore/BootstrapBlazor",
+    "title": "Bootstrap Blazor",
+    "description": "A collection of enterprise-class UI components based on Bootstrap and Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Bootstrap"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/ArgoZhang/Images/master/BootstrapBlazor/Toggle.png",
+    "categories": [
+      41,
+      21,
+      39,
+      12,
+      27,
+      8
+    ]
+  },
+  {
+    "project_url": "https://github.com/suicodave/ExpenseTracker",
+    "title": "ExpenseTracker",
+    "description": "An expense tracking application built with Blazor.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/media/FargsvJaUAASFDu?format=png&name=small",
+    "categories": [
+      41,
+      3,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/KristofferStrube/Blazor.FileSystemAccess",
+    "title": "Blazor.FileSystemAccess",
+    "description": "A Blazor wrapper for the browser File System Access API.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Web APIs"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/ext_tw_video_thumb/1578342708829212676/pu/img/bjLvDAV1Zz4vEYsY.jpg",
+    "categories": [
+      41,
+      45
+    ]
+  },
+  {
+    "project_url": "https://github.com/jsakamoto/Toolbelt.Blazor.I18nText",
+    "title": "Blazor Internationalization Text",
+    "description": "A library for localizing text in Blazor web applications.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Internationalization"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/jsakamoto/assets/m/i18n/movie1.gif",
+    "categories": [
+      41,
+      24
+    ]
+  },
+  {
+    "project_url": "https://github.com/servicetitan/Stl.Fusion",
+    "title": "Stl.Fusion",
+    "description": "A .NET library implementing Distributed REActive Memoization (DREAM) for building reactive and real-time applications.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Blazor",
+      "SignalR"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/servicetitan/Stl.Fusion/raw/master/docs/img/Stl-Fusion-Chat-Sample.gif",
+    "categories": [
+      41,
+      15,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/blazorhero/CleanArchitecture",
+    "title": "BlazorHero - Clean Architecture Template",
+    "description": "A Clean Architecture solution template for Blazor WebAssembly applications built with MudBlazor components.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Blazor WebAssembly",
+      "MudBlazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/880ae53e13abc6d0034e39422dbfdf24c3d688cd170da47d181eab16c2d89be5/687474703a2f2f636f6465776974686d756b657382e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032312f30332f426c617a6f724865726f42616e6e65722d312e706e67",
+    "categories": [
+      41,
+      42,
+      12,
+      5,
+      8,
+      20,
+      16,
+      26,
+      27,
+      23,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/joadan/TabBlazor",
+    "title": "TabBlazor",
+    "description": "A Blazor admin template built on Tabler.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Tabler"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/joadan/TabBlazor/raw/master/TabBlazorDashbord.png?raw=true",
+    "categories": [
+      41,
+      31,
+      33,
+      27,
+      29
+    ]
+  },
+  {
+    "project_url": "https://github.com/wsdt/Blazor_EmojiFilePicker",
+    "title": "Blazor Emoji File Picker",
+    "description": "A customizable Bootstrap text input for Blazor with emoji and file support.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor",
+      "Bootstrap"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/wsdt/Blazor_EmojiFilePicker/raw/master/docs/img/InputView.PNG",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/jsuarezruiz/alohakit-blazor-prototype",
+    "title": "AlohaKit Blazor Prototype",
+    "description": "A prototype exploring how controls from .NET MAUI can be brought to Blazor WebAssembly.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/jsuarezruiz/alohakit-blazor-prototype/raw/main/images/alohakit-blazor-prototype.gif",
+    "categories": [
+      41,
+      27
+    ]
+  },
+  {
+    "project_url": "https://github.com/lohithgn/blazor-converters",
+    "title": "Blazor Converters",
+    "description": "A simple converter application built with Blazor and inspired by the Windows 10 Calculator.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/lohithgn/blazor-converters/raw/master/assets/BlazorConverterSplash.png",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/bradwellsb/blazor-contacts",
+    "title": "Blazor Contacts",
+    "description": "A complete contact management solution built with Blazor, including an OData Web API backend and IdentityServer authentication.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor Server",
+      "ASP.NET Core",
+      "OData",
+      "IdentityServer"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": "https://wellsb.com/csharp/aspnet/blazor-httpclientfactory-and-web-api/",
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/media/EMmDfl9WwAAylym?format=png&name=medium",
+    "categories": [
+      41,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/KristofferStrube/Blazor.SVGEditor",
+    "title": "KristofferStrube.Blazor.SVGEditor",
+    "description": "A basic SVG editor implemented as a Blazor WebAssembly application.",
+    "section": "dotnet",
+    "section_category": "blazor",
+    "technologies": [
+      "C#",
+      "Blazor WebAssembly",
+      "SVG"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/KristofferStrube/Blazor.SVGEditor/raw/main/docs/showcase.gif?raw=true",
+    "categories": [
+      41,
+      45,
+      46
+    ]
+  },
+  {
+    "project_url": "https://github.com/Kinnara/ModernWpf",
+    "title": "ModernWPF UI Library",
+    "description": "Modern styles and controls for your WPF applications.",
+    "section": "dotnet",
+    "section_category": "wpf",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WPF"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Kinnara/ModernWpf/raw/master/docs/images/Controls.Light.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/fluent-xaml-theme-editor",
+    "title": "Fluent XAML Theme Editor",
+    "description": "The Fluent XAML Theme Editor is a tool that demonstrates the flexibility of the Fluent Design System and helps generate XAML markup for ResourceDictionary frameworks used in Windows applications.",
+    "section": "dotnet",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Fluent Design"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/fluent-xaml-theme-editor/raw/master/README_Images/XamlThemeEditor_screenshot.png",
+    "categories": [
+      41,
+      42,
+      44
+    ]
+  },
+  {
+    "project_url": "https://github.com/files-community/Files",
+    "title": "Files",
+    "description": "Files is a file manager for Windows with a powerful yet intuitive design. It has features like multiple tabs, panes, columns, shell extensions in the context menu and tags.",
+    "section": "dotnet",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/files-community/Files/raw/main/src/Files.App/Assets/FilesHome.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/jenius-apps/ambie",
+    "title": "Ambie",
+    "description": "Ambie is an app that plays white noise and nature sounds to help you focus, sleep, and unwind.",
+    "section": "dotnet",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/jenius-apps/ambie/raw/main/images/ambie_hero_v3.png",
+    "categories": [
+      41,
+      42,
+      44,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/alihaider11/Social-Blade-Dashboard-C-WPF",
+    "title": "Social-Blade-Dashboard-C-WPF",
+    "description": "Social Blade dashboard application built with C# and WPF.",
+    "section": "dotnet",
+    "section_category": "wpf",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WPF"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": "https://www.youtube.com/c/CCodeAcademy",
+    "image_url": "https://repository-images.githubusercontent.com/297230189/0d2d0b00-fbf0-11ea-946a-5f3604a0487b",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/Sergio0694/ComputeSharp",
+    "title": "ComputeSharp",
+    "description": "ComputeSharp is a .NET library that lets developers run C# code in parallel on the GPU through DirectX 12 and dynamically generated HLSL compute shaders.",
+    "section": "dotnet",
+    "section_category": "libraries",
+    "technologies": [
+      "C#",
+      ".NET",
+      "DirectX 12",
+      "HLSL",
+      "GPU Computing"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/10199417/108635546-3512ea00-7480-11eb-8172-99bc59f4eb6f.png",
+    "categories": [
+      41,
+      42,
+      44
+    ]
+  },
+  {
+    "project_url": "https://github.com/maraf/Money",
+    "title": "Money",
+    "description": "Money is an outcome logging application written as UWP to target Windows desktop and mobile devices.",
+    "section": "dotnet",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://apps.microsoft.com/store/detail/neptuo-money/9N50XHGW891S",
+    "youtube_url": null,
+    "image_url": "https://github.com/maraf/Money/raw/master/assets/Preview-large.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit",
+    "title": "Material Design In XAML Toolkit",
+    "description": "Comprehensive and easy to use Material Design theme and control library for Windows desktop applications.",
+    "section": "dotnet",
+    "section_category": "wpf",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WPF",
+      "XAML",
+      "Material Design"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "http://materialdesigninxaml.net/",
+    "youtube_url": null,
+    "image_url": "https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/raw/master/web/images/screen-home.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/jenius-apps/nightingale-rest-api-client",
+    "title": "Nightingale REST Client",
+    "description": "A Windows REST API client from Jenius Apps.",
+    "section": "dotnet",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/en-us/p/nightingale-rest-api-client/9n2t6f9f5zdn",
+    "youtube_url": null,
+    "image_url": "https://github.com/jenius-apps/nightingale-rest-api-client/raw/master/images/nightingale-hero.png",
+    "categories": [
+      41,
+      42,
+      44
+    ]
+  },
+  {
+    "project_url": "https://github.com/veler/DevToys",
+    "title": "DevToys",
+    "description": "DevToys provides developer utilities for tasks such as formatting JSON, comparing text, testing regular expressions, and working with other common development tools.",
+    "section": "dotnet",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://apps.microsoft.com/store/detail/devtoys/9PGCV4V3BK4W?hl=en-ph&gl=PH",
+    "youtube_url": null,
+    "image_url": "https://github.com/veler/DevToys/raw/main/assets/screenshots/1.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/WinUI-Gallery",
+    "title": "WinUI Gallery",
+    "description": "An interactive application that demonstrates XAML UI components and WinUI APIs.",
+    "section": "dotnet",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI",
+      "XAML",
+      "Fluent Design"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/WinUI-Gallery/raw/main/README_Images/WinUIGalleryLanding.PNG",
+    "categories": [
+      41,
+      42,
+      32,
+      27,
+      33
+    ]
+  },
+  {
+    "project_url": "https://github.com/Rise-Software/Rise-Media-Player",
+    "title": "Rise Media Player",
+    "description": "A customizable media player for Windows supporting local media and streaming services.",
+    "section": "dotnet",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/r/9PCSZTMTT55Z",
+    "youtube_url": null,
+    "image_url": "https://repository-images.githubusercontent.com/395109560/f9cefd14-5a6e-4653-aeb6-f48b71edcc3c",
+    "categories": [
+      41,
+      42,
+      44
+    ]
+  },
+  {
+    "project_url": "https://github.com/i470/BinaryOmen-WPF-UI-Kit",
+    "title": "BinaryOmen WPF UI Kit",
+    "description": "A UI kit providing reusable controls and styles for WPF applications.",
+    "section": "dotnet",
+    "section_category": "wpf",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WPF",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/56b7859b08a0f5e41ad6a280cc03adb0f53a8e43509f1cf551f14876b6967cbc/68747470733a2f2f7374617469632e7769787374617469632e636f6d2f6d656469612f3130366363385f31323963303931633437653334356633383363353739663566363164666130317e6d76322e706e67",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/jukaLang/JukaApp",
+    "title": "Juka App",
+    "description": "Run Juka Programming Language in a GUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/11934545/183232422-23ee6a7e-5a2c-4b36-88fd-fd2041de6585.png",
+    "categories": [
+      41,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/naweed/Maui.Controls.BottomSheet",
+    "title": "MAUI Bottom Sheet Control",
+    "description": "A simple customizable Bottom Sheet control built using .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://blogs.xgenoapps.com/post/2022/07/23/maui-bottom-sheet",
+    "youtube_url": null,
+    "image_url": "https://blogs.xgenoapps.com/image.axd?picture=/BottomSheetUsage.png",
+    "categories": [
+      41,
+      20
+    ]
+  },
+  {
+    "project_url": "https://github.com/KarlSearl/MauiEssentialsDemo",
+    "title": "MauiEssentialsDemo",
+    "description": ".NET MAUI Essentials API Camara access, internet connection, App versioning, secured storage.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI Essentials"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": "https://www.youtube.com/watch?v=spA9fboUInw",
+    "image_url": "http://i3.ytimg.com/vi/spA9fboUInw/hqdefault.jpg",
+    "categories": [
+      41,
+      39,
+      38,
+      20,
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/dotnet/Microsoft.Maui.Graphics.Controls",
+    "title": "Microsoft.Maui.Graphics.Controls: Pixel-Perfect Drawn Controls for .NET MAUI",
+    "description": "Microsoft.Maui.Graphics.Controls is a .NET MAUI experiment that offers cross-platform, pixel-perfect, drawn controls, with three built-in themes: Cupertino, Fluent and Material.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "Microsoft.Maui.Graphics"
+    ],
+    "platforms": [
+      "android",
+      "windows",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/dotnet/Microsoft.Maui.Graphics.Controls/main/images/graphicscontrols-darktheme.gif",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/SyncfusionExamples/Shopping-UI-in-.NET-MAUI-with-SQLite",
+    "title": "Shopping UI in .NET MAUI with SQLite",
+    "description": "This repository contains the project that demonstrates the development of shopping UI .NET MAUI application with SQLite.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "SQLite"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://www.syncfusion.com/blogs/post/create-a-shopping-ui-in-net-maui-with-sqlite-webinar-show-notes.aspx",
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/card_img/1559862911639719937/nqoc8C6-?format=png&name=medium",
+    "categories": [
+      41,
+      26,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/CommunityToolkit/Maui.Markup",
+    "title": "Maui.Markup",
+    "description": "The .NET MAUI Markup Community Toolkit is a collection of Fluent C# Extension Methods that allows developers to continue architecting their apps using MVVM, Bindings, Resource Dictionaries, etc., without the need for XAML.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "MVVM"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/13558917/160910778-1e61f478-f1f6-48b4-8d37-8016eae1bd12.png",
+    "categories": [
+      41,
+      45
+    ]
+  },
+  {
+    "project_url": "https://github.com/jsuarezruiz/MauiAnimation",
+    "title": "MauiAnimation - Animation Library for .NET MAUI",
+    "description": "MauiAnimation is a library designed for .NET MAUI that aims to facilitate the use of animations to developers. Very simple use from C# and XAML code.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "XAML"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/jsuarezruiz/MauiAnimation/main/images/mauianimation-promo.png",
+    "categories": [
+      41,
+      44
+    ]
+  },
+  {
+    "project_url": "https://github.com/IeuanWalker/Maui.Breadcrumb",
+    "title": "Maui.Breadcrumb",
+    "description": "This is a breadcrumb navigation control that is completely automatic and uses the Navigation stack to get the page titles to generate the breadcrumbs.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/IeuanWalker/Maui.Breadcrumb/raw/master/ProdExample.gif",
+    "categories": [
+      41,
+      45
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/dotnet-podcasts",
+    "title": ".NET Podcasts - Sample Application",
+    "description": "The .NET Podcast app is a sample application showcasing .NET 6, ASP.NET Core, Blazor, .NET MAUI, Azure Container Apps, Orleans, and more.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "ASP.NET Core",
+      "Blazor",
+      "Orleans"
+    ],
+    "platforms": [
+      "android",
+      "windows",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/dotnet-podcasts/raw/main/docs/net-podcasts.png",
+    "categories": [
+      41,
+      20
+    ]
+  },
+  {
+    "project_url": "https://github.com/davidortinau/WeatherTwentyOne",
+    "title": "Weather-'21",
+    "description": "A .NET MAUI app demonstrating how IAsyncEnumerable can improve application performance by adding items as soon as they become available.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "IAsyncEnumerable"
+    ],
+    "platforms": [
+      "android",
+      "windows",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/davidortinau/WeatherTwentyOne/main/images/maui-weather-hero-sm.png",
+    "categories": [
+      41,
+      14,
+      32
+    ]
+  },
+  {
+    "project_url": "https://github.com/Redth/ZXing.Net.Maui",
+    "title": "ZXing.Net.MAUI",
+    "description": "The successor to ZXing.Net.Mobile.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "ZXing"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/271950/129272315-b3f5a468-c585-49f2-bbab-68a884618b94.png",
+    "categories": [
+      41,
+      42,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/adospace/reactorui-maui",
+    "title": "MauiReactor",
+    "description": "Component-based UI Library built on top of MAUI Controls inspired by ReactJS and Flutter.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "React"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/ext_tw_video_thumb/1579892695375511554/pu/img/N5i1jlTj13L4w78O.jpg",
+    "categories": [
+      41,
+      46
+    ]
+  },
+  {
+    "project_url": "https://github.com/ReactiveUI/ReactiveUI",
+    "title": "ReactiveUI",
+    "description": "ReactiveUI is a composable, cross-platform model-view-viewmodel framework for .NET platforms.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "MVVM",
+      "Reactive Programming"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/reactiveui/styleguide/master/logo/main.png",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/matt-goldman/outlook",
+    "title": "Outlook Clone",
+    "description": "Clone of the Microsoft Outlook mobile UI in .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://goforgoldman.com/2022/05/19/maui-ui-july.html",
+    "youtube_url": null,
+    "image_url": "https://github.com/matt-goldman/outlook/raw/main/assets/OutlookClone.gif",
+    "categories": [
+      41,
+      34
+    ]
+  },
+  {
+    "project_url": "https://github.com/LeomarisReyes/PetAdoptionUI",
+    "title": "Pet Adoption UI in .NET MAUI",
+    "description": "Pet Adoption UI is a replica made in .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://askxammy.com/replicating-pet-adoption-ui-in-net-maui/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/LeomarisReyes/PetAdoptionUI/main/Images/AskXammy%20-%20AdoptionUI-FullUI.png",
+    "categories": [
+      41,
+      32,
+      12,
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/naweed/MauiPlanets",
+    "title": "Maui Planets",
+    "description": "Planets Mobile App UI built using .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://blogs.xgenoapps.com/post/2022/07/08/maui-planets",
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/103980/178092656-35720dd3-0a09-4a60-9030-02e8ece10b92.png",
+    "categories": [
+      41,
+      40
+    ]
+  },
+  {
+    "project_url": "https://github.com/NeilMalcolm/Wordle.Maui",
+    "title": "Wordle.Maui",
+    "description": "Remaking Wordle in .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/56daf4523c325ad849da1eb5e20e4e7bf34fb8b09b96a8f19a8e8f505b239b99/68747470733a2f2f692e696d6775722e636f6d2f467049394538472e676966",
+    "categories": [
+      41,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/themronion/Maui.GoogleMaps",
+    "title": "Maui.GoogleMaps",
+    "description": "Maps library for .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "Google Maps"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/themronion/Maui.GoogleMaps/raw/master/screenshot01.png",
+    "categories": [
+      41,
+      14
+    ]
+  },
+  {
+    "project_url": "https://github.com/mattjohnsonpint/MauiTimeZonePicker",
+    "title": "MauiTimeZonePicker",
+    "description": "Time Zone Picker control for .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://blog.sentry.io/2022/07/19/making-a-time-zone-picker-control-for-net-maui",
+    "youtube_url": null,
+    "image_url": "https://github.com/mattjohnsonpint/MauiTimeZonePicker/raw/main/images/screenshot-android.png",
+    "categories": [
+      41,
+      30
+    ]
+  },
+  {
+    "project_url": "https://github.com/exendahal/SunmiV2MAUI",
+    "title": "SUNMI V2 Bluetooth Print Service with .NET MAUI",
+    "description": "SUNMI V2 Bluetooth print service with .NET MAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "Bluetooth"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/exendahal/SunmiV2MAUI/raw/master/Preview/preview.gif",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/dotnet/maui-samples",
+    "title": ".NET MAUI Samples",
+    "description": "Sample applications demonstrating .NET MAUI features and controls.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "platforms": [
+      "android",
+      "windows",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://pbs.twimg.com/media/FZveGsZUYAAYAKS?format=jpg&name=medium",
+    "categories": [
+      41,
+      3
+    ]
+  },
+  {
+    "project_url": "https://github.com/mistrypragnesh40/SQLiteDemoMAUI",
+    "title": "SQLiteDemoMAUI",
+    "description": "SQLiteDemoMAUI.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET MAUI",
+      "SQLite"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": "https://www.youtube.com/watch?v=JRNwjsywrWM",
+    "image_url": "http://i3.ytimg.com/vi/JRNwjsywrWM/hqdefault.jpg",
+    "categories": [
+      41,
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/roubachof/MetroLog",
+    "title": "MetroLog",
+    "description": "MetroLog.Net6 is a lightweight .NET logging framework designed primarily for mobile platforms like iOS and Android.",
+    "section": "dotnet",
+    "section_category": "maui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Logging"
+    ],
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-lunch-scheduler",
+    "title": "Lunch Scheduler app",
+    "description": "A Universal Windows Platform sample that demonstrates scheduling lunches with friends and coworkers.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/Windows-appsample-lunch-scheduler/raw/master/Images/LunchSchedulerBanner.PNG",
+    "categories": [
+      30
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-annotated-audio",
+    "title": "Annotated Audio app sample",
+    "description": "A Windows sample demonstrating audio recording, ink annotations, and OneDrive data roaming.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "OneDrive"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Microsoft/Windows-appsample-annotated-audio/raw/master/Screenshots/Playback.PNG",
+    "categories": [
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/SmokSmog/smoksmog-windows",
+    "title": "smoksmog-windows",
+    "description": "SmokSmog client application for Windows.",
+    "section": "windows",
+    "section_category": "desktop",
+    "technologies": [
+      "C#",
+      ".NET"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/SmokSmog/smoksmog-windows/raw/master/Others/Beta.Promo.png",
+    "categories": [
+      8
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-huelightcontroller",
+    "title": "Hue Lights sample",
+    "description": "A Windows sample application for controlling Philips Hue lights.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Philips Hue"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/Windows-appsample-huelightcontroller/raw/master/Screenshots/Connecting.png",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/QuinnDamerell/Baconit",
+    "title": "Baconit",
+    "description": "A Reddit client for Windows with a modern UI, fast performance, and features designed for Windows 10 devices.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/QuinnDamerell/Baconit/raw/develop/Media/GitHubReadme/Desktop1.png",
+    "categories": [
+      15
+    ]
+  },
+  {
+    "project_url": "https://github.com/builtbybel/bloatbox",
+    "title": "Bloatbox",
+    "description": "A lightweight Windows utility for uninstalling unwanted modern Windows applications.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/builtbybel/bloatbox/raw/master/assets/bloatbox.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/yuk7/ArchWSL",
+    "title": "ArchWSL",
+    "description": "Arch Linux on Windows Subsystem for Linux, based on wsldl.",
+    "section": "windows",
+    "section_category": "wsl",
+    "technologies": [
+      "WSL",
+      "Linux"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/wiki/yuk7/wsldl/img/Arch_Alpine_Ubuntu.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/xiaosu-zhu/Aurora.Music",
+    "title": "Aurora Music",
+    "description": "A modern Fluent-style music player for Windows.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/apps/9NBLGGH6JVDT",
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/fe8627ade0524958a479c4f802dec456252595bf14b8f4994be19ae13c52fff0/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30342f30392f356163623132326234313164662e706e67",
+    "categories": [
+      19,
+      37,
+      40,
+      35
+    ]
+  },
+  {
+    "project_url": "https://github.com/hjohnson12/Kanban-Tasker",
+    "title": "Kb Tasker",
+    "description": "A Kanban task management application built with C#, XAML, and the Windows Universal Windows Platform.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/hjohnson12/Kanban-Tasker/raw/master/Images/KT_01.png",
+    "categories": [
+      30
+    ]
+  },
+  {
+    "project_url": "https://github.com/ultramega/elementary-uwp",
+    "title": "Elementary",
+    "description": "A simple periodic table and chemical element reference application for Windows.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://store-images.s-microsoft.com/image/apps.57085.13510798887421945.4f47e6af-76b7-4448-a366-64d462bf20c0.e797be81-30e1-4c7f-a6db-87977c6d9699",
+    "categories": [
+      6,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/TemplateStudio",
+    "title": "Template Studio",
+    "description": "A suite of Visual Studio extensions that accelerates the creation of WinUI 3, WPF, and UWP applications using a wizard-based experience.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI 3",
+      "WPF",
+      "UWP",
+      "Visual Studio"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/TemplateStudio/raw/main/docs/resources/getting-started/Wizard-ProjectTypes-WinUI.png",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/d2phap/ImageGlass-Preview",
+    "title": "ImageGlass Preview",
+    "description": "A modern and versatile image viewer for Windows.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://repository-images.githubusercontent.com/281121079/bf9e0000-cad1-11ea-832d-3b956d493e65",
+    "categories": [
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/kljzndx/Lyric-Editor",
+    "title": "Lyric-Editor",
+    "description": "A Windows application for creating and editing song lyrics.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://apps.microsoft.com/store/detail/simple-lyrics-editor/9MX4FRGQ4RQS",
+    "youtube_url": null,
+    "image_url": "https://store-images.s-microsoft.com/image/apps.5031.13831238340819247.2fc92f66-73dc-497b-8ab2-6081d616f158.01e65c91-146c-47cd-a418-a75f63d55126",
+    "categories": [
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/2fast-team/2fast",
+    "title": "2fast",
+    "description": "A two-factor authenticator for Windows supporting TOTP.",
+    "section": "windows",
+    "section_category": "security",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP",
+      "TOTP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/apps/9p9d81glh89q",
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/483b422bcf7a416ed3dca343766d68f635342b627ddc210266b1c0a9a3760bfa/68747470733a2f2f692e706f7374696d672e63632f467a5851704b34332f32666173742d73637265656e73686f742d312e706e67",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-rssreader",
+    "title": "RssReader sample",
+    "description": "A Windows RSS reader sample application.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "RSS"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/Windows-appsample-rssreader/raw/master/RssReader.png",
+    "categories": [
+      12,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/nahuelwexd/UniTube",
+    "title": "UniTube",
+    "description": "A YouTube client built with .NET technologies.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      ".NET",
+      "C#"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/nahuelwexd/UniTube/raw/master/data/logos/Unitube-vertical.png",
+    "categories": [
+      12,
+      39,
+      19
+    ]
+  },
+  {
+    "project_url": "https://github.com/Xavalon/XamlStyler",
+    "title": "XAML Styler",
+    "description": "A Visual Studio extension that formats XAML source code according to configurable styling rules.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      ".NET",
+      "XAML",
+      "Visual Studio"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/8bc3faa14e1116590c1433f3e45f07a4e5c2db586bf13eddee8c1f6e6d67362a/687474703a2f2f692e696d6775722e636f6d2f6743634e7549532e706e67",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/yazdipour/githubx",
+    "title": "GithubX",
+    "description": "A GitHub client focused on making GitHub repository categorization easier and more enjoyable.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/yazdipour/githubx/raw/dev/assets/Uwp/Screenshots/MainPage.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Appsample-Photosharing",
+    "title": "PhotoSharingApp",
+    "description": "A Universal Windows Platform sample demonstrating a social photo-sharing experience.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/Appsample-Photosharing/raw/master/Images/Category-Overview-Desktop-Mobile.jpg",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/thecodrr/BreadPlayer",
+    "title": "Bread Player",
+    "description": "An open-source music player built with UWP and C#/.NET for Windows.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/f353dd6331b251d6897f5a773b6908714d94aadf105051a01a277883f7562a29/687474703a2f2f692e696d6775722e636f6d2f504e4d534755722e706e67",
+    "categories": [
+      42,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/colinkiama/UWP-Package-Installer",
+    "title": "UWP Package Installer",
+    "description": "A Windows application for installing AppX and AppXBundle packages.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "AppX"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/colinkiama/UWP-Package-Installer/raw/master/screenshot.gif",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-coloringbook",
+    "title": "Coloring Book sample",
+    "description": "A Windows Ink sample demonstrating drawing, the Windows Ink Toolbar, and radial controller features.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Windows Ink"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Microsoft/Windows-appsample-coloringbook/raw/master/screenshot.png",
+    "categories": [
+      40,
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-shopping",
+    "title": "Payment Request API Sample App",
+    "description": "A Windows sample demonstrating the Payment Request API and a multi-page XAML interface using MVVM.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "MVVM",
+      "Payment Request API"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Microsoft/Windows-appsample-shopping/raw/master/Images/frontpage.png",
+    "categories": [
+      21,
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-customers-orders-database",
+    "title": "Customers Orders Database sample",
+    "description": "A WinUI 3 sample application demonstrating Windows UI controls and data-grid functionality.",
+    "section": "windows",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI 3",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Microsoft/Windows-appsample-customers-orders-database/raw/master/images/customer-list.png",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/twsouthwick/KeePassWin",
+    "title": "KeePassWin",
+    "description": "A universal Windows implementation of KeePass supporting Windows 10 devices.",
+    "section": "windows",
+    "section_category": "security",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "KeePass"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/twsouthwick/KeePassWin/raw/develop/assets/screenshots/narrow_details.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-networkhelper",
+    "title": "NetworkHelper sample library",
+    "description": "A UWP networking sample library and demo application for network discovery and communication.",
+    "section": "windows",
+    "section_category": "networking",
+    "technologies": [
+      "C#",
+      "UWP",
+      "Networking APIs"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Microsoft/Windows-appsample-networkhelper/raw/master/Screenshots/QuizGame_CreateGame_Lobby_scaled.png",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/XamlFlair/XamlFlair",
+    "title": "XamlFlair",
+    "description": "A XAML animation library that simplifies the implementation of common animations.",
+    "section": "windows",
+    "section_category": "xaml",
+    "technologies": [
+      "C#",
+      "XAML",
+      "WPF",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/XamlFlair/XamlFlair/raw/master/doc/gifs/Sekuence.gif",
+    "categories": [
+      44,
+      43
+    ]
+  },
+  {
+    "project_url": "https://github.com/IsaacMorris1980/UWP-App-Launcher-Mobile",
+    "title": "UWP-App-Launcher",
+    "description": "A Windows launcher designed to provide an alternative traditional home-screen experience.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/IsaacMorris1980/UWP-App-Launcher-Mobile/raw/oldversion/UWPAppLauncherMonochromeWideBranding.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/JuniperPhoton/MyerList.UWP",
+    "title": "MyerListUWP",
+    "description": "A simple to-do application for Windows 10.",
+    "section": "windows",
+    "section_category": "productivity",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/JuniperPhoton/MyerList.UWP/raw/master/Design/4.0/d01.png",
+    "categories": [
+      30,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/heanuea/WindowsUWP_APP",
+    "title": "WindowsUWP_APP",
+    "description": "A UWP application example demonstrating MVVM architecture and CRUD operations with a database.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "MVVM",
+      "Database"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/heanuea/WindowsUWP_APP/raw/master/Screenshot%20(19).png",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/TransposonY/GestureSign",
+    "title": "GestureSign",
+    "description": "A Windows application for controlling the computer using touchpad and touchscreen gestures.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://store-images.s-microsoft.com/image/apps.37403.13993755530821792.e78c6e9f-4930-4a8e-964e-bccfbbebe05e.959013a0-d221-4601-be56-5f5c037d8c52",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/JuniperPhoton/MyerSplash.UWP",
+    "title": "MyerSplash",
+    "description": "A Windows application featuring beautiful wallpapers and image highlights.",
+    "section": "windows",
+    "section_category": "personalization",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/JuniperPhoton/MyerSplash.UWP/raw/master/design/hero.jpg",
+    "categories": [
+      12,
+      32,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/owncloud/OwncloudUniversal",
+    "title": "OwncloudUniversal",
+    "description": "The ownCloud application for Windows 10 Phone, PC, and Tablet.",
+    "section": "windows",
+    "section_category": "cloud",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "ownCloud"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/owncloud/OwncloudUniversal/raw/master/screenshots/screenshot1.png",
+    "categories": [
+      12,
+      8
+    ]
+  },
+  {
+    "project_url": "https://github.com/dharmendrasingh88/UwpWork",
+    "title": "UwpWork",
+    "description": "A YouTube player application for UWP.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "YouTube"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIRBrF6YtNkBKVxTFkNyoV26jvI8x9r5jh-Q&usqp=CAU",
+    "categories": [
+      39,
+      19
+    ]
+  },
+  {
+    "project_url": "https://github.com/xiaosu-zhu/Aurora-Weather",
+    "title": "Aurora Weather",
+    "description": "A weather application with a modern Windows experience.",
+    "section": "windows",
+    "section_category": "weather",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://apps.microsoft.com/store/detail/aurora-weather/9NBLGGH4QMJ9",
+    "youtube_url": null,
+    "image_url": "https://store-images.s-microsoft.com/image/apps.10613.13510798887390850.dd0bc569-14df-4e98-9996-67112c83c166.0db80443-eaf3-472b-bc6c-60ded50510a2",
+    "categories": [
+      12,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/vanarsdel",
+    "title": "VanArsdel UWP Sample",
+    "description": "A Microsoft UWP sample application demonstrating a Windows application experience.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/VanArsdel/raw/master/VanArsdel_MyLights.png",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/File-New-Project/EarTrumpet",
+    "title": "EarTrumpet",
+    "description": "A Windows volume control application that provides enhanced audio controls and customization.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/File-New-Project/EarTrumpet/raw/master/Graphics/hero.gif",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/UnigramDev/Unigram",
+    "title": "Unigram",
+    "description": "A Telegram client designed specifically for Windows.",
+    "section": "windows",
+    "section_category": "messaging",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/UnigramDev/Unigram/raw/develop/Screenshots/Screen1.PNG",
+    "categories": [
+      12,
+      39,
+      30,
+      15
+    ]
+  },
+  {
+    "project_url": "https://github.com/BrianLima/UWPHook",
+    "title": "UWPHook",
+    "description": "A Windows utility that helps add Windows Store and Xbox Game Pass games to Steam.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/d54b20e93f9568311301f88daefd019e87d32d3a934d6b9268696c396e30cbf2/68747470733a2f2f692e6d6775722e636f6d2f706a47664748652e706e67",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/character-map-uwp/Character-Map-UWP",
+    "title": "Character Map UWP",
+    "description": "A modern UWP replacement for the Windows Character Map and Windows Font Viewer with high-DPI and touch support.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/EdiWang/Character-Map-UWP/master/0_artifacts/cmap.png",
+    "categories": [
+      12,
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/MahApps/MahApps.Metro.IconPacks",
+    "title": "MahApps.Metro.IconPacks",
+    "description": "A collection of icon packs, controls, markup extensions, and converters for Windows desktop applications.",
+    "section": "windows",
+    "section_category": "wpf",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WPF",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/MahApps/MahApps.Metro.IconPacks/raw/develop/resources/iconpacks_browser_new.gif",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/telerik/UI-For-UWP",
+    "title": "Progress Telerik UI for UWP",
+    "description": "An open-source collection of UI controls for Universal Windows Platform applications.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Telerik"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/0f65c5c3e64441a0b1dce5b1df78749a7ee393e502ef15344d2397630d5b3a21/687474703a2f2f64353835746c647075637962772e636c6f756466726f6e742e6e65742f7366696d616765732f64656661756c742d736f757263652f64656661756c742d616c62756d2f6f73732d7577702d75692e706e673f73667672736e3d32",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/ikarago/Notepad",
+    "title": "Notepad",
+    "description": "A Fluent-style Notepad application for Windows.",
+    "section": "windows",
+    "section_category": "productivity",
+    "technologies": [
+      "C#",
+      ".NET",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/ikarago/Notepad/raw/master/screenshots/1.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/tor4kichi/Hohoema",
+    "title": "Hohoema",
+    "description": "A Windows client application for Niconico.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://store-images.s-microsoft.com/image/apps.63201.13510798887564139.ab304f1a-c1eb-4613-b358-5a99bbb8f334.d700ddc2-e4aa-4bfa-895b-99204d0b1654",
+    "categories": [
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/Windows-appsample-photo-lab",
+    "title": "PhotoLab sample",
+    "description": "A Windows sample for viewing and editing images, demonstrating XAML layout, data binding, and UI customization.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/Windows-appsample-photo-lab/raw/master/Screenshots/PhotoLab-collection-page.png",
+    "categories": [
+      37
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/WindowsCompositionSamples",
+    "title": "Windows Input and Composition Samples",
+    "description": "Windows App SDK samples demonstrating input APIs, composition APIs, and Fluent Design building blocks for WinUI 3 applications.",
+    "section": "windows",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI 3",
+      "Windows App SDK",
+      "Composition API"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/9f63fc40a228bf3dc4e2284ac2dfadf9f76bbc6dbcda32fa4a236ead1e9aace4/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f48783262654d4466454137517157507644342f67697068792e676966",
+    "categories": []
+  },
+  {
+    "project_url": "https://github.com/Microsoft/Windows-appsample-trafficapp",
+    "title": "Traffic App sample",
+    "description": "A Windows sample application demonstrating traffic information and a Windows UI experience.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/microsoft/Windows-appsample-trafficapp/raw/master/Images/TrafficApp.png",
+    "categories": [
+      16
+    ]
+  },
+  {
+    "project_url": "https://github.com/aalok05/CodeHub",
+    "title": "CodeHub",
+    "description": "A Universal Windows GitHub client for following repositories and keeping up with the open-source community.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "GitHub"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/apps/9nblggh52tbd",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/aalok05/CodeHub/master/Screenshots/trending.PNG",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.WindowsStateTriggers",
+    "title": "Reuse WST Elements on the Web",
+    "description": "Windows State Triggers is an open source library of reusable Visual State Triggers for Windows 10 apps developed by Morten Nielsen. With WebAssembly and Uno Platform, just for the fun of it, we put it on the Web.",
+    "section": "uno",
+    "section_category": "webassembly",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://uno-website-assets.s3.amazonaws.com/wp-content/uploads/2019/04/25170429/wst-app-img.png",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/uno.todo",
+    "title": "Uno Platform \"Uno To Do\" reference app",
+    "description": "Fly your Launchpad to the moon. ☆.。.:*・°☆",
+    "section": "uno",
+    "section_category": "apps",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": "https://www.youtube.com/watch?v=a-MwTVH-wX8",
+    "image_url": "https://github.com/unoplatform/uno.todo/raw/main/doc/assets/To_Do_App_Banner.png",
+    "categories": [
+      41,
+      2,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.SQLitePCLRaw.Wasm",
+    "title": "Manipulate an In-Browser Database",
+    "description": "This is a demo of the combination of Roslyn, Entity Framework Core, SQLite and the Uno Platform all working together to manipulate an in-browser database.",
+    "section": "uno",
+    "section_category": "database",
+    "technologies": [
+      "C#",
+      "Uno Platform",
+      "WebAssembly",
+      "SQLite",
+      "Entity Framework Core",
+      "Roslyn"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://uno-website-assets.s3.amazonaws.com/wp-content/uploads/2019/04/25165921/sqlite-img.png",
+    "categories": [
+      41,
+      24,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.Playground",
+    "title": "Uno Playground",
+    "description": "This is the code for published apps on stores (Uno Gallery) - Windows, Android & iOS and for the Uno Playground.",
+    "section": "uno",
+    "section_category": "apps",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://uno-website-assets.s3.amazonaws.com/wp-content/uploads/2019/04/25164645/uno-gallery.png",
+    "categories": [
+      41,
+      39,
+      12
+    ]
+  },
+  {
+    "project_url": "https://github.com/Microsoft/calculator",
+    "title": "Uno Calculator",
+    "description": "We ported the open source Windows Calculator to Android, iOS, macOS, Web and even Linux. This demonstrates the level of code reusability achievable with Uno Platform across Web, Desktop and Mobile.",
+    "section": "uno",
+    "section_category": "apps",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno/uno-calculator/",
+    "youtube_url": null,
+    "image_url": "https://uno-website-assets.s3.amazonaws.com/wp-content/uploads/2022/03/23133026/UnoCal-Converters-Mass.gif",
+    "categories": [
+      41,
+      3
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.Xaml-Controls-Gallery",
+    "title": "XAML Controls Gallery & Uno Platform",
+    "description": "Uno Platform on WebAssembly targeting iOS, Android and Windows/macOS/Linux. This is Microsoft's XAML Controls Gallery running on the Web through WebAssembly and Uno Platform.",
+    "section": "uno",
+    "section_category": "controls",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly",
+      "WinUI"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://github.com/unoplatform/Uno.Xaml-Controls-Gallery/raw/uno/README_Images/XamlGalleryLanding.PNG",
+    "categories": [
+      41,
+      39,
+      12,
+      21,
+      27,
+      32
+    ]
+  },
+  {
+    "project_url": "https://github.com/MartinZikmund/messages-multiplatform-uno-sample",
+    "title": "Multiplatform Messages Sample in Uno Platform",
+    "description": "A concept of a Messages app running on Windows, iOS, iPadOS, macOS, Android and WebAssembly using Uno Platform.",
+    "section": "uno",
+    "section_category": "apps",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/MartinZikmund/messages-multiplatform-uno-sample/master/Screenshots/il.png",
+    "categories": [
+      41,
+      15,
+      39
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.Ch9",
+    "title": "Ch9",
+    "description": "Ch9 is a demo app built with Uno Platform.",
+    "section": "uno",
+    "section_category": "apps",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://uno-website-assets.s3.amazonaws.com/wp-content/uploads/2020/07/29163333/Ch9_Marketing_asset.png",
+    "categories": [
+      41,
+      19
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.LottieSample",
+    "title": "High-Quality Animation to any Native App",
+    "description": "A sample showing how Lottie can be used with Uno Platform to add high-quality animations to native applications.",
+    "section": "uno",
+    "section_category": "animation",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "Lottie"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://uno-website-assets.s3.amazonaws.com/wp-content/uploads/2019/04/29112529/lottie-uno-platform.gif",
+    "categories": [
+      41
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.WindowsCommunityToolkit",
+    "title": "Uno Platform port of Windows Community Toolkit",
+    "description": "A port that allows Uno Platform applications to use Windows Community Toolkit functionality across Windows, iOS, macOS, Android, WebAssembly and Linux.",
+    "section": "uno",
+    "section_category": "toolkit",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "Windows Community Toolkit",
+      "WinUI",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://i3.ytimg.com/vi/z1ZkvsT5rs0/maxresdefault.jpg",
+    "categories": [
+      41,
+      30,
+      22,
+      8,
+      5,
+      40,
+      6
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/Uno.SkiaSharp.Extended",
+    "title": "SkiaSharp.Extended for WebAssembly",
+    "description": "A port of SkiaSharp.Extended packages for WebAssembly with Uno Platform. The package uses Uno.SkiaSharp.Wasm for WebAssembly support.",
+    "section": "uno",
+    "section_category": "graphics",
+    "technologies": [
+      "C#",
+      "Uno Platform",
+      "SkiaSharp",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://github.com/unoplatform/Uno.SkiaSharp.Extended/raw/uno/images/20190718-skia-extended.gif",
+    "categories": [
+      41,
+      30,
+      22,
+      8,
+      5,
+      40,
+      6
+    ]
+  },
+  {
+    "project_url": "https://github.com/unoplatform/uado",
+    "title": "UADO",
+    "description": "A showcase demonstrating what is possible with Uno Platform using a single codebase, native mobile applications and WebAssembly applications with C# and XAML.",
+    "section": "uno",
+    "section_category": "showcase",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "ios",
+      "android",
+      "browser"
+    ],
+    "external_url": "https://platform.uno",
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/15191066/65893491-06b9d980-e376-11e9-97fd-fb8f0b0b63ec.png",
+    "categories": [
+      41,
+      30,
+      22,
+      8
+    ]
+  },
+  {
+    "project_url": "https://github.com/MartinZikmund/uno-health-app-concept",
+    "title": "Multiplatform Health",
+    "description": "A concept of a Health app running on Windows, iOS, iPadOS, macOS, Android and WebAssembly using Uno Platform.",
+    "section": "uno",
+    "section_category": "apps",
+    "technologies": [
+      "C#",
+      "XAML",
+      "Uno Platform",
+      "WebAssembly"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "mac",
+      "linux",
+      "browser"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/MartinZikmund/uno-health-app-concept/master/HealthApp/Screenshots/androiddarknarrowmenu.png",
+    "categories": [
+      41,
+      8,
+      12
+    ]
+  }
+]

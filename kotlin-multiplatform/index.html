@@ -5,23 +5,38 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="google-adsense-account" content="ca-pub-9045308343519031">
 
-    <title>Coder Basket - Developer Libraries, Tools & Projects</title>
+    <title>Kotlin Multiplatform Developer Libraries & Projects | Coder Basket</title>
 
     <meta name="description"
-        content="Coder Basket - Discover developer libraries, open source projects, AI tools, templates and code resources.">
+        content="Discover Kotlin Multiplatform libraries, tools, templates, applications, and open source projects on Coder Basket.">
 
     <link rel="icon" href="/img/codericon.png">
 
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/sidebar.css">
+
     <!-- Cloudflare Web Analytics -->
-    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "f5bd1cde3c9f413b8a4a490770114d9a"}'></script><!-- End Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "f5bd1cde3c9f413b8a4a490770114d9a"}'>
+        </script>
+    <!-- End Cloudflare Web Analytics -->
+
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9045308343519031"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+        </script>
+
+    <!--
+        This page represents the Kotlin Multiplatform catalogue.
+        app.js will use this instead of the default section.
+    -->
+    <script>
+        window.CODER_BASKET_SECTION = "kotlin-multiplatform";
+    </script>
 </head>
 
 <body>
@@ -31,10 +46,12 @@
          ===================================================== -->
 
     <header class="site-header">
+
         <div class="container header-inner">
 
             <a href="/" class="logo">
-                <img src="/img/codericon.png" alt="CoderIcon" style="max-width: 50px; height: auto;">
+                <img src="/img/codericon.png" alt="Coder Basket" style="max-width: 50px; height: auto;">
+
                 <span>Coder Basket</span>
             </a>
 
@@ -47,7 +64,9 @@
             </nav>
 
         </div>
+
     </header>
+
 
     <!-- =====================================================
          MAIN
@@ -61,7 +80,7 @@
 
                 <div class="search-box">
 
-                    <input id="searchInput" type="search" placeholder="Search projects, libraries and tools..."
+                    <input id="searchInput" type="search" placeholder="Search Kotlin Multiplatform projects, libraries and tools..."
                         autocomplete="off">
 
                     <button id="searchButton">
@@ -71,7 +90,7 @@
                 </div>
 
                 <p>
-                    Developer libraries, tools, templates and open source projects.
+                    Discover Kotlin Multiplatform libraries, tools, templates, open source projects and developer resources.
                 </p>
 
             </div>
@@ -83,9 +102,10 @@
 
             <div class="container catalog-layout">
 
-                <!-- =====================================================
-                     CATEGORY NAVIGATION (Rendered by sidebar.js)
-                     ===================================================== -->
+                <!-- =================================================
+                     AI CATEGORY NAVIGATION
+                     Rendered by sidebar.js
+                     ================================================= -->
 
                 <aside id="categorySidebar" class="category-sidebar">
                     <!-- Rendered dynamically by sidebar.js -->
@@ -96,15 +116,13 @@
 
                     <div class="catalog-header">
 
-                        <h2>Featured Projects</h2>
+                        <h2>Kotlin Multiplatform Projects & Tools</h2>
 
-                        <div class="sort-select-wrapper">
-                            <select id="sortSelect" aria-label="Sort options">
-                                <option value="featured">Featured</option>
-                                <option value="name">Name</option>
-                                <option value="recent">Recently Updated</option>
-                            </select>
-                        </div>
+                        <select id="sortSelect">
+                            <option value="featured">Featured</option>
+                            <option value="name">Name</option>
+                            <option value="recent">Recently Updated</option>
+                        </select>
 
                     </div>
 
@@ -114,7 +132,7 @@
 
 
                     <div id="loading" class="catalog-loading">
-                        Loading projects...
+                        Loading Kotlin Multiplatform projects...
                     </div>
 
 
@@ -151,6 +169,7 @@
 
             </div>
 
+
             <nav aria-label="Footer navigation">
 
                 <a href="/">
@@ -179,10 +198,16 @@
 
             </nav>
 
+
             <div class="copyright">
 
-                © <span id="footerYear"></span>
-                <span id="footerCopyrightName">Coder Basket</span>.
+                ©
+                <span id="footerYear"></span>
+
+                <span id="footerCopyrightName">
+                    Coder Basket
+                </span>.
+
                 All rights reserved.
 
             </div>
@@ -200,6 +225,7 @@
     <script src="/js/sidebar.js" defer></script>
     <script src="/js/header.js" defer></script>
     <script src="/js/app.js" defer></script>
+
     <script src="/site-config.js"></script>
     <script src="/js/footer.js"></script>
 

@@ -1,0 +1,28 @@
+// Data schema:
+// section = main area (ai, dotnet, flutter, etc.)
+// section_category = category within the section (agents, speech, winui, etc.)
+// technologies = technologies used by the project (languages, frameworks, libraries, runtimes, etc.)
+// platforms = supported operating systems/platforms
+// categories = additional global category IDs
+
+[
+  {
+    "project_url": "https://github.com/microsoft/autogen",
+    "title": "AutoGen",
+    "description": "A framework for developing LLM applications using multiple agents that can converse with each other.",
+
+    "section": "ai",
+    "section_category": "agents",
+
+    "technologies": ["Python"],
+
+    "platforms": ["windows", "mac", "linux"],
+
+    "external_url": "https://microsoft.github.io/autogen/",
+    "youtube_url": null,
+
+    "image_url": "https://microsoft.github.io/autogen/img/autogen.png",
+
+    "categories": [42, 46]
+  }
+]

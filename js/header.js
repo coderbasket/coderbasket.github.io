@@ -56,43 +56,48 @@ function renderHeader() {
       continue;
     }
 
+    const sectionPath = section.path || `/${sectionKey}/`;
+
+    if (!section.categories) {
+      html += `
+            <a href="${escapeAttribute(sectionPath)}">
+                ${escapeHtml(section.name)}
+            </a>
+        `;
+      continue;
+    }
+
     html += `
     <div class="nav-dropdown">
 
-        <button
-            type="button"
+        <a
             class="nav-section-button"
+            href="${escapeAttribute(sectionPath)}"
         >
             ${escapeHtml(section.name)}
-        </button>
+        </a>
 
         <div class="dropdown-menu">
 
-            <button
-                type="button"
-                class="nav-category-button nav-all-button"
-                data-section="${escapeAttribute(sectionKey)}"
-                data-category="all"
+            <a
+                class="nav-category-link nav-all-button"
+                href="${escapeAttribute(sectionPath)}"
             >
                 ${escapeHtml(section.name)} (All)
-            </button>
+            </a>
 `;
 
-    if (section.categories) {
-      for (const [categoryKey, categoryName] of Object.entries(
-        section.categories,
-      )) {
-        html += `
-                <button
-                    type="button"
-                    class="nav-category-button"
-                    data-section="${escapeAttribute(sectionKey)}"
-                    data-category="${escapeAttribute(categoryKey)}"
+    for (const [categoryKey, categoryName] of Object.entries(
+      section.categories,
+    )) {
+      html += `
+                <a
+                    class="nav-category-link"
+                    href="${escapeAttribute(`${sectionPath}${categoryKey}/`)}"
                 >
                     ${escapeHtml(categoryName)}
-                </button>
+                </a>
             `;
-      }
     }
 
     html += `
@@ -120,9 +125,11 @@ function renderHeader() {
             <div class="framework-dropdown-menu">
     `;
 
-    for (const framework of Object.values(FRAMEWORKS)) {
+    for (const [frameworkKey, framework] of Object.entries(FRAMEWORKS)) {
+      const frameworkPath = framework.path || `/${frameworkKey}/`;
+
       html += `
-                <a href="${escapeAttribute(framework.path)}">
+                <a href="${escapeAttribute(frameworkPath)}">
                     ${escapeHtml(framework.name)}
                 </a>
         `;
@@ -305,10 +312,8 @@ function closeMobileNavigation() {
   const menuToggle = document.getElementById("menuToggle");
 
   if (mainNav) {
-    // Close the main mobile menu
-    mainNav.style.display = "none";
+    mainNav.classList.remove("open");
 
-    // Close all expanded dropdowns
     mainNav.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
       dropdown.classList.remove("active");
     });

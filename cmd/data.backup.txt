@@ -1,0 +1,160 @@
+"use strict";
+
+/*
+ * Coder Basket
+ * Catalogue data configuration
+ *
+ * Physical development folder:
+ * C:\Users\Robel\Documents\projects\coderbasket\data\
+ *
+ * Catalogue:
+ * /data/ai/*.json
+ * /data/dotnet/*.json
+ * /data/web/*.json
+ * /data/others/*.json
+ */
+
+const DATA_BASE_URL = "/data/";
+
+/* =======================================================
+   CATALOGUE SECTIONS
+======================================================= */
+
+const DATA_SECTIONS = {
+  /* ---------------------------------------------------
+       AI
+    --------------------------------------------------- */
+
+  ai: {
+    name: "AI",
+    path: "ai",
+
+    categories: {
+      llm: "LLM",
+      agents: "AI Agents",
+      rag: "RAG",
+      vision: "Computer Vision",
+      speech: "Speech & Audio",
+      "local-ai": "Local AI",
+    },
+  },
+
+  /* ---------------------------------------------------
+       .NET
+    --------------------------------------------------- */
+
+  dotnet: {
+    name: ".NET",
+    path: "dotnet",
+
+    categories: {
+      dotnet: ".Net Apps",
+      blazor: "Blazor",
+      winui: "WinUI",
+      maui: ".NET MAUI",
+      avalonia: "Avalonia",
+      uno: "Uno Platform",
+      others: "Others",
+    },
+  },
+  /* ---------------------------------------------------
+       Dart 
+    --------------------------------------------------- */
+  flutter: {
+  name: "Flutter",
+  path: "flutter",
+  categories: {
+    more: "Flutter Templates",
+    material: "Material Design",
+    cupertino: "Cupertino",
+    firebase: "Firebase",
+    others: "Others",
+  },
+},
+
+  /* ---------------------------------------------------
+       Web
+    --------------------------------------------------- */
+
+  /* ---------------------------------------------------
+       Others
+    --------------------------------------------------- */
+};
+
+/* =======================================================
+   FRAMEWORKS
+======================================================= */
+
+const FRAMEWORKS = {
+ 
+
+  react: {
+    name: "React",
+    path: "/frameworks/react/",
+  },
+
+  "react-native": {
+    name: "React Native",
+    path: "/frameworks/react-native/",
+  },
+
+  vue: {
+    name: "Vue",
+    path: "/frameworks/vue/",
+  },
+
+  angular: {
+    name: "Angular",
+    path: "/frameworks/angular/",
+  },
+
+  svelte: {
+    name: "Svelte",
+    path: "/frameworks/svelte/",
+  },
+
+  nextjs: {
+    name: "Next.js",
+    path: "/frameworks/nextjs/",
+  },
+
+  nuxt: {
+    name: "Nuxt",
+    path: "/frameworks/nuxt/",
+  },
+
+  electron: {
+    name: "Electron",
+    path: "/frameworks/electron/",
+  },
+
+  tauri: {
+    name: "Tauri",
+    path: "/frameworks/tauri/",
+  },
+
+  "kotlin-multiplatform": {
+    name: "Kotlin Multiplatform",
+    path: "/frameworks/kotlin-multiplatform/",
+  },
+
+  laravel: {
+    name: "Laravel",
+    path: "/frameworks/laravel/",
+  },
+
+  django: {
+    name: "Django",
+    path: "/frameworks/django/",
+  },
+
+  spring: {
+    name: "Spring",
+    path: "/frameworks/spring/",
+  },
+
+  "ruby-on-rails": {
+    name: "Ruby on Rails",
+    path: "/frameworks/ruby-on-rails/",
+  },
+};

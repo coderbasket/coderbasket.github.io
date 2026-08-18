@@ -107,34 +107,107 @@ async function initialize() {
 //#region Selection State Persistence
 
 function restoreSelection() {
-  log("restoreSelection", "Reading saved selection");
+  log("restoreSelection", "Reading URL selection");
 
-  const savedSection = localStorage.getItem(STORAGE_KEYS.section);
-  const savedSubCategory = localStorage.getItem(STORAGE_KEYS.subCategory);
-  const savedCategoryId = localStorage.getItem(STORAGE_KEYS.category);
+  /*
+   * URL examples:
+   *
+   * /
+   * /index.html
+   *     -> default section
+   *
+   * /ai/
+   * /ai/index.html
+   *     -> section = ai
+   *
+   * /ai/agents/
+   * /ai/agents/index.html
+   *     -> section = ai
+   *        subCategory = agents
+   *
+   * /ai/agents/index.html?category=12
+   *     -> section = ai
+   *        subCategory = agents
+   *        category = 12
+   */
 
-  // 1. Restore Section
-  if (savedSection === "all" || (savedSection && DATA_SECTIONS[savedSection])) {
-    selectedSection = savedSection;
+  let path = window.location.pathname.replace(/^\/+|\/+$/g, "");
+
+  /*
+   * Remove index.html because it is the physical page,
+   * not part of our catalogue hierarchy.
+   */
+  if (path.toLowerCase() === "index.html") {
+    path = "";
+  } else if (path.toLowerCase().endsWith("/index.html")) {
+    path = path.slice(0, -"/index.html".length);
+  }
+
+  const parts = path ? path.split("/").filter(Boolean) : [];
+
+  const urlSection = parts[0] || null;
+  const urlSubCategory = parts[1] || null;
+
+  const params = new URLSearchParams(window.location.search);
+  const urlCategory = params.get("category");
+
+  /*
+   * -------------------------------------------------------
+   * 1. URL SECTION
+   * -------------------------------------------------------
+   */
+
+  const configuredPageSection =
+    typeof window.CODER_BASKET_SECTION === "string"
+      ? window.CODER_BASKET_SECTION
+      : null;
+
+  const candidateSection = urlSection || configuredPageSection;
+
+  if (
+    candidateSection &&
+    (candidateSection === "all" ||
+      DATA_SECTIONS[candidateSection] ||
+      (typeof FRAMEWORKS !== "undefined" && FRAMEWORKS[candidateSection]))
+  ) {
+    selectedSection = candidateSection;
   } else {
     selectedSection = DEFAULT_SECTION;
   }
 
-  // 2. Restore Sub-Category (File Key String)
-  selectedSubCategory = savedSubCategory ? String(savedSubCategory) : "all";
+  /*
+   * -------------------------------------------------------
+   * 2. URL SUB-CATEGORY
+   * -------------------------------------------------------
+   */
 
-  // 3. Restore Category (Numeric ID)
+  if (urlSubCategory) {
+    selectedSubCategory = String(urlSubCategory);
+  } else {
+    selectedSubCategory = "all";
+  }
+
+  /*
+   * -------------------------------------------------------
+   * 3. URL CATEGORY PARAMETER
+   * -------------------------------------------------------
+   */
+
   if (
-    savedCategoryId === "all" ||
-    (savedCategoryId !== null && CATEGORIES[Number(savedCategoryId)])
+    urlCategory === "all" ||
+    (urlCategory !== null && CATEGORIES[Number(urlCategory)])
   ) {
-    selectedCategoryId =
-      savedCategoryId === "all" ? "all" : Number(savedCategoryId);
+    selectedCategoryId = urlCategory === "all" ? "all" : Number(urlCategory);
   } else {
     selectedCategoryId = "all";
   }
 
-  log("restoreSelection", "Final state:", {
+  log("restoreSelection", "URL state:", {
+    originalPath: window.location.pathname,
+    normalizedPath: path,
+    urlSection,
+    urlSubCategory,
+    urlCategory,
     selectedSection,
     selectedSubCategory,
     selectedCategoryId,
@@ -167,39 +240,27 @@ async function loadCatalog() {
   showLoading(true);
 
   try {
-    const projects = [];
-
     const sectionsToLoad =
       selectedSection === "all" ? DATA_SECTION_ORDER : [selectedSection];
 
     log("loadCatalog", "Sections to load:", sectionsToLoad);
 
-    for (const sectionKey of sectionsToLoad) {
-      const section = DATA_SECTIONS[sectionKey];
+    const requests = sectionsToLoad.map((sectionKey) =>
+      loadCatalogSection(sectionKey),
+    );
 
-      if (!section) {
-        warn("loadCatalog", `Unknown catalogue section: ${sectionKey}`);
-        continue;
-      }
+    const results = await Promise.allSettled(requests);
+    const projects = [];
 
-      const categoryFiles = Object.keys(section.categories || {});
-
-      const requests = categoryFiles.map((categoryFile) =>
-        loadCatalogFile(sectionKey, section, categoryFile),
-      );
-
-      const results = await Promise.allSettled(requests);
-
-      for (const result of results) {
-        if (result.status === "fulfilled") {
-          projects.push(...result.value);
-        } else {
-          warn(
-            "loadCatalog",
-            "Unable to load catalogue source:",
-            result.reason,
-          );
-        }
+    for (const result of results) {
+      if (result.status === "fulfilled") {
+        projects.push(...result.value);
+      } else {
+        warn(
+          "loadCatalog",
+          "Unable to load catalogue source:",
+          result.reason,
+        );
       }
     }
 
@@ -226,18 +287,23 @@ async function loadCatalog() {
   }
 }
 
-async function loadCatalogFile(sectionKey, section, categoryFile) {
-  const basePath = section.path ? section.path : sectionKey;
-  const url = `${DATA_BASE_URL}${basePath}/${categoryFile}.json`;
+async function loadCatalogSection(sectionKey) {
+  const sourceSectionKey = getDataSourceSectionKey(sectionKey);
+  const section = DATA_SECTIONS[sourceSectionKey];
+
+  if (!section) {
+    warn("loadCatalogSection", `Unknown catalogue section: ${sectionKey}`);
+    return [];
+  }
+
+  const fileName = section.file || `${sourceSectionKey}.json`;
+  const url = `${DATA_BASE_URL}${fileName}`;
 
   try {
     const response = await fetch(url);
 
     if (response.status === 404 || !response.ok) {
-      warn(
-        "loadCatalogFile",
-        `Unable to load source: ${sectionKey}/${categoryFile}`,
-      );
+      warn("loadCatalogSection", `Unable to load source: ${url}`);
       return [];
     }
 
@@ -248,11 +314,7 @@ async function loadCatalogFile(sectionKey, section, categoryFile) {
     try {
       data = JSON.parse(text);
     } catch (parseError) {
-      error(
-        "loadCatalogFile",
-        `Invalid JSON in ${sectionKey}/${categoryFile}`,
-        parseError,
-      );
+      error("loadCatalogSection", `Invalid JSON in ${url}`, parseError);
       return [];
     }
 
@@ -262,28 +324,37 @@ async function loadCatalogFile(sectionKey, section, categoryFile) {
         ? data.Items
         : [];
 
-    return items.map((item) => {
-      const existingCategories = Array.isArray(item.categories)
-        ? item.categories
-        : Array.isArray(item.Categories)
-          ? item.Categories
-          : [];
-
-      return {
-        ...item,
-        data_section: sectionKey,
-        data_category: categoryFile,
-        categories: [...new Set(existingCategories)],
-      };
-    });
+    var finalItems = items.map((item) => ({
+      ...item,
+      source_section: sourceSectionKey,
+      data_section: item.section || item.data_section || item.DataSection || sectionKey,
+      data_category:
+        item.section_category ||
+        item.data_category ||
+        item.DataCategory ||
+        "all",
+    }));
+    return finalItems;
   } catch (errorValue) {
     error(
-      "loadCatalogFile",
-      `Unable to load catalogue source: ${sectionKey}/${categoryFile}`,
+      "loadCatalogSection",
+      `Unable to load catalogue source: ${url}`,
       errorValue,
     );
     return [];
   }
+}
+
+function getDataSourceSectionKey(sectionKey) {
+  if (DATA_SECTIONS[sectionKey]) {
+    return sectionKey;
+  }
+
+  if (typeof FRAMEWORKS !== "undefined" && FRAMEWORKS[sectionKey]) {
+    return "frameworks";
+  }
+
+  return sectionKey;
 }
 
 //#endregion
@@ -303,6 +374,16 @@ function normalizeProjects(projects) {
       : Array.isArray(project.Platforms)
         ? [...new Set(project.Platforms)]
         : [];
+
+    const technologies = Array.isArray(project.technologies)
+      ? [...new Set(project.technologies)]
+      : Array.isArray(project.Technologies)
+        ? [...new Set(project.Technologies)]
+        : project.technology
+          ? [project.technology]
+          : project.framework_name
+            ? [project.framework_name]
+            : [];
 
     let imageUrls = [];
     if (project.image_url) {
@@ -332,12 +413,19 @@ function normalizeProjects(projects) {
       platforms,
       external_url: project.external_url ?? project.ExternalUrl ?? null,
       youtube_url: project.youtube_url ?? project.YoutubeUrl ?? null,
+      technologies,
       framework_name:
-        project.framework_name || project.FrameWorkName || "others",
+        technologies[0] ||
+        project.framework_name ||
+        project.FrameWorkName ||
+        "others",
       categories,
       image_urls: imageUrls,
-      data_section: project.data_section || project.DataSection || "",
-      data_category: dataCategory,
+      data_section:
+        project.section || project.data_section || project.DataSection || "",
+      data_category:
+        project.section_category || dataCategory || "all",
+      source_section: project.source_section || "",
       updated_at:
         project.updated_at || project.updated || project.UpdatedAt || null,
     };
@@ -596,6 +684,7 @@ function applyFilters() {
       project.framework_name,
       project.data_section,
       project.data_category,
+      ...(project.technologies || []),
       ...(project.platforms || []),
       ...(project.categories || []).map(
         (id) => (typeof CATEGORIES !== "undefined" ? CATEGORIES[id] : "") || "",

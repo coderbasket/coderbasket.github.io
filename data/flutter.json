@@ -1,0 +1,422 @@
+[
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/cupertino_gallery",
+    "title": "Cupertino Gallery",
+    "description": "A Flutter sample gallery demonstrating iOS-style Cupertino widgets and components.",
+    "section": "flutter",
+    "section_category": "cupertino",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "ios",
+      "macos"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      142,
+      143,
+      45,
+      181
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/date_planner",
+    "title": "Date Planner",
+    "description": "An iOS-style date planner application demonstrating Cupertino-oriented Flutter UI patterns.",
+    "section": "flutter",
+    "section_category": "cupertino",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      4,
+      12,
+      142,
+      183
+    ]
+  },
+  {
+    "project_url": "https://github.com/csells/flutter_ai_chat",
+    "title": "Flutter AI Chat",
+    "description": "A full-featured Flutter chat application using the Flutter AI Toolkit and Vertex AI for Firebase, with authenticated Cloud Firestore chat storage.",
+    "section": "flutter",
+    "section_category": "firebase",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web",
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/csells/flutter_ai_chat",
+    "categories": [
+      15,
+      47,
+      56,
+      102
+    ]
+  },
+  {
+    "project_url": "https://github.com/dgewe/Tinder-App-Flutter",
+    "title": "Tinder App Flutter",
+    "description": "A Tinder-inspired Flutter application demonstrating authentication, Firestore, Storage, profiles, matching, and chat functionality.",
+    "section": "flutter",
+    "section_category": "firebase",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/dgewe/Tinder-App-Flutter",
+    "categories": [
+      39,
+      15,
+      122,
+      102
+    ]
+  },
+  {
+    "project_url": "https://github.com/GregoryConrad/expense-tracker",
+    "title": "Flutter Expense Tracker",
+    "description": "A simple Flutter expense tracker using Firebase Authentication and Cloud Firestore as its backend.",
+    "section": "flutter",
+    "section_category": "firebase",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/GregoryConrad/expense-tracker",
+    "categories": [
+      3,
+      134,
+      102,
+      122
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/material_3_demo",
+    "title": "Material 3 Demo",
+    "description": "A Flutter sample application showcasing Material 3 features and components.",
+    "section": "flutter",
+    "section_category": "material",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web",
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "external_url": "https://docs.flutter.dev/ui/design/material",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/flutter/samples/main/material_3_demo/assets/images/material_3_demo.png",
+    "categories": [
+      142,
+      148,
+      45
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/compass_app",
+    "title": "Compass App",
+    "description": "A Flutter sample application demonstrating an app architecture using MVVM.",
+    "section": "flutter",
+    "section_category": "material",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      8,
+      142,
+      170
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/veggieseasons",
+    "title": "Veggie Seasons",
+    "description": "A Flutter demo application demonstrating a complete app experience with seasonal vegetables.",
+    "section": "flutter",
+    "section_category": "material",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      142,
+      12,
+      21
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/animations",
+    "title": "Flutter Animations",
+    "description": "A collection of Flutter examples demonstrating implicit and explicit animations, transitions, and interactive motion effects.",
+    "section": "flutter",
+    "section_category": "more",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      44,
+      141,
+      146,
+      176,
+      178,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/provider_shopper",
+    "title": "Provider Shopper",
+    "description": "A complete Flutter shopping sample demonstrating product listings, shopping cart functionality, state management, navigation, and application structure.",
+    "section": "flutter",
+    "section_category": "more",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      21,
+      26,
+      12,
+      16,
+      23,
+      96,
+      176,
+      178,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/navigation_and_routing",
+    "title": "Navigation and Routing",
+    "description": "Flutter examples demonstrating application navigation, routing, nested navigation, and different navigation patterns.",
+    "section": "flutter",
+    "section_category": "more",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      16,
+      76,
+      96,
+      176,
+      178,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/form_app",
+    "title": "Form App",
+    "description": "A Flutter sample application demonstrating forms, validation, text input, focus handling, and user interaction.",
+    "section": "flutter",
+    "section_category": "more",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      13,
+      24,
+      28,
+      45,
+      168,
+      176,
+      178,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/platform_channels",
+    "title": "Platform Channels",
+    "description": "A Flutter sample demonstrating communication between Dart code and native platform APIs using platform channels.",
+    "section": "flutter",
+    "section_category": "more",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      76,
+      82,
+      171,
+      176,
+      178,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/testing_app",
+    "title": "Flutter Testing App",
+    "description": "A Flutter sample demonstrating unit tests, widget tests, integration testing, and techniques for testing Flutter applications.",
+    "section": "flutter",
+    "section_category": "more",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      76,
+      80,
+      77,
+      176,
+      178,
+      188,
+      184
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/google_maps",
+    "title": "Google Maps",
+    "description": "A Flutter sample demonstrating integration with the Google Maps for Flutter plugin.",
+    "section": "flutter",
+    "section_category": "others",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      14,
+      173
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/pedometer",
+    "title": "Pedometer",
+    "description": "A Flutter sample demonstrating platform API integration using FFIgen and JNIgen.",
+    "section": "flutter",
+    "section_category": "others",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      177,
+      182,
+      173
+    ]
+  },
+  {
+    "project_url": "https://github.com/flutter/samples/tree/main/platform_design",
+    "title": "Platform Design",
+    "description": "A Flutter sample demonstrating how to reuse application code while adapting the UI to different platform design conventions.",
+    "section": "flutter",
+    "section_category": "others",
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
+    "categories": [
+      176,
+      142,
+      183,
+      182
+    ]
+  }
+]

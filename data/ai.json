@@ -1,0 +1,581 @@
+[
+  {
+    "project_url": "https://github.com/Significant-Gravitas/AutoGPT",
+    "title": "AutoGPT",
+    "description": "An open-source platform for building and running AI agents that can perform tasks autonomously.",
+    "section": "ai",
+    "section_category": "agents",
+    "technologies": [
+      "Python"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://agpt.co/",
+    "youtube_url": "https://www.youtube.com/watch?v=lKMPWjamTZ8",
+    "image_url": "https://raw.githubusercontent.com/Significant-Gravitas/AutoGPT/master/docs/content/imgs/autogpt.png",
+    "categories": [
+      42
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/autogen",
+    "title": "AutoGen",
+    "description": "A programming framework for creating multi-agent AI applications that can act autonomously or work alongside humans. AutoGen is currently in maintenance mode.",
+    "section": "ai",
+    "section_category": "agents",
+    "technologies": [
+      "Python",
+      "C#",
+      "TypeScript"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://microsoft.github.io/autogen/",
+    "youtube_url": "https://www.youtube.com/watch?v=LM6JcqLeF0U",
+    "image_url": "https://microsoft.github.io/autogen/0.2/img/ag.svg",
+    "categories": [
+      42,
+      46
+    ]
+  },
+  {
+    "project_url": "https://github.com/langchain-ai/langchain",
+    "title": "LangChain",
+    "description": "A framework and open-source ecosystem for developing applications powered by language models, including agents, workflows, and integrations.",
+    "section": "ai",
+    "section_category": "agents",
+    "technologies": [
+      "Python",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.langchain.com/",
+    "youtube_url": null,
+    "image_url": "https://github.com/langchain-ai/langchain/raw/master/.github/images/logo-dark.svg",
+    "categories": [
+      42,
+      46
+    ]
+  },
+  {
+    "project_url": "https://github.com/crewAIInc/crewAI",
+    "title": "CrewAI",
+    "description": "A framework for orchestrating role-playing autonomous AI agents and multi-agent workflows.",
+    "section": "ai",
+    "section_category": "agents",
+    "technologies": [
+      "Python"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.crewai.com/",
+    "youtube_url": null,
+    "image_url": "https://github.com/crewAIInc/crewAI/raw/main/docs/images/crewai_logo.png",
+    "categories": [
+      42,
+      46
+    ]
+  },
+  {
+    "project_url": "https://github.com/ollama/ollama",
+    "title": "Ollama",
+    "description": "Get up and running with large language models locally.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "llm",
+    "external_url": "https://ollama.com/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/ollama/ollama/main/docs/logo.svg",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "Go",
+      "C++"
+    ]
+  },
+  {
+    "project_url": "https://github.com/huggingface/transformers",
+    "title": "Transformers",
+    "description": "State-of-the-art machine learning for PyTorch, TensorFlow, and JAX, including thousands of pretrained models.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "llm",
+    "external_url": "https://huggingface.co/transformers/",
+    "youtube_url": null,
+    "image_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "JAX"
+    ]
+  },
+  {
+    "project_url": "https://github.com/ggerganov/llama.cpp",
+    "title": "llama.cpp",
+    "description": "LLM inference in C/C++ with minimal setup and support for running large language models locally.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "llm",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/ggerganov/llama.cpp/raw/master/media/llama1.png",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "C",
+      "C++"
+    ]
+  },
+  {
+    "project_url": "https://github.com/microsoft/onnxruntime",
+    "title": "ONNX Runtime",
+    "description": "Cross-platform machine-learning model accelerator that supports models from many AI frameworks.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "llm",
+    "external_url": "https://onnxruntime.ai/",
+    "youtube_url": null,
+    "image_url": "https://onnxruntime.ai/images/ONNX-Runtime-logo.svg",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "C++",
+      "Python"
+    ]
+  },
+  {
+    "project_url": "https://github.com/openai/whisper",
+    "title": "Whisper",
+    "description": "General-purpose speech recognition model trained on a large and diverse dataset of audio.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "speech",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/openai/whisper/main/approach.png",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch"
+    ]
+  },
+  {
+    "project_url": "https://github.com/oobabooga/text-generation-webui",
+    "title": "Text Generation WebUI",
+    "description": "Gradio web UI for running large language models locally with support for many model backends and extensions.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "local-ai",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/oobabooga/text-generation-webui/main/docs/screenshot.png",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "Python",
+      "Gradio"
+    ]
+  },
+  {
+    "project_url": "https://github.com/lm-sys/FastChat",
+    "title": "FastChat",
+    "description": "Open platform for training, serving, and evaluating large language models.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "local-ai",
+    "external_url": "https://chat.lmsys.org/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/lm-sys/FastChat/main/assets/fastchat.png",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch"
+    ]
+  },
+  {
+    "project_url": "https://github.com/Mozilla-Ocho/llamafile",
+    "title": "llamafile",
+    "description": "Distribute and run LLMs as a single executable file.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "local-ai",
+    "external_url": "https://www.llamafile.ai/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Mozilla-Ocho/llamafile/main/llamafile.png",
+    "categories": [
+      42
+    ],
+    "technologies": [
+      "C",
+      "C++"
+    ]
+  },
+  {
+    "project_url": "https://github.com/janhq/jan",
+    "title": "Jan",
+    "description": "Open-source ChatGPT alternative that runs AI models locally on your computer.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "local-ai",
+    "external_url": "https://jan.ai/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/janhq/jan/main/docs/images/jan.png",
+    "categories": [
+      42
+    ],
+    "technologies": [
+      "TypeScript",
+      "JavaScript",
+      "Rust"
+    ]
+  },
+  {
+    "project_url": "https://github.com/run-llama/llama_index",
+    "title": "LlamaIndex",
+    "description": "Data framework for building context-augmented LLM applications, including retrieval-augmented generation.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "rag",
+    "external_url": "https://www.llamaindex.ai/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/img/hero.png",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "Python"
+    ]
+  },
+  {
+    "project_url": "https://github.com/chroma-core/chroma",
+    "title": "Chroma",
+    "description": "Open-source embedding database designed for building AI applications with retrieval and semantic search.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "rag",
+    "external_url": "https://www.trychroma.com/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/docs/images/chroma.png",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "Python",
+      "TypeScript"
+    ]
+  },
+  {
+    "project_url": "https://github.com/qdrant/qdrant",
+    "title": "Qdrant",
+    "description": "High-performance vector similarity search engine and vector database for AI applications.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "rag",
+    "external_url": "https://qdrant.tech/",
+    "youtube_url": null,
+    "image_url": "https://qdrant.tech/images/logo_with_bg.svg",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "Rust",
+      "Python"
+    ]
+  },
+  {
+    "project_url": "https://github.com/pgvector/pgvector",
+    "title": "pgvector",
+    "description": "Open-source vector similarity search extension for PostgreSQL.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "rag",
+    "external_url": "https://github.com/pgvector/pgvector",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/logo.png",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "C",
+      "SQL",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "project_url": "https://github.com/rhasspy/piper",
+    "title": "Piper",
+    "description": "A fast, local neural text-to-speech system optimized for running on a wide range of devices.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "speech",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/rhasspy/piper/master/docs/logo.png",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "Python",
+      "C++"
+    ]
+  },
+  {
+    "project_url": "https://github.com/coqui-ai/TTS",
+    "title": "Coqui TTS",
+    "description": "Deep learning toolkit for text-to-speech, speech synthesis, voice conversion, and related speech technologies.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "speech",
+    "external_url": "https://coqui.ai/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/coqui-ai/TTS/dev/images/coqui-logo.png",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch"
+    ]
+  },
+  {
+    "project_url": "https://github.com/SYSTRAN/faster-whisper",
+    "title": "Faster Whisper",
+    "description": "Reimplementation of OpenAI's Whisper model using CTranslate2 for faster and more memory-efficient inference.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "speech",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/SYSTRAN/faster-whisper/master/assets/faster-whisper.png",
+    "categories": [
+      46
+    ],
+    "technologies": [
+      "Python",
+      "CTranslate2"
+    ]
+  },
+  {
+    "project_url": "https://github.com/ggerganov/whisper.cpp",
+    "title": "whisper.cpp",
+    "description": "Port of OpenAI's Whisper speech recognition model to C/C++ for efficient local inference.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "speech",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/ggerganov/whisper.cpp/master/images/whisper-vs-hardware.png",
+    "categories": [
+      42,
+      46
+    ],
+    "technologies": [
+      "C",
+      "C++"
+    ]
+  },
+  {
+    "project_url": "https://github.com/ultralytics/ultralytics",
+    "title": "Ultralytics",
+    "description": "Computer vision and machine learning framework featuring YOLO models for object detection, segmentation, classification, pose estimation, and tracking.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "vision",
+    "external_url": "https://www.ultralytics.com/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/ultralytics_yolov8_example.png",
+    "categories": [
+      50,
+      63,
+      71,
+      72,
+      184
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch"
+    ]
+  },
+  {
+    "project_url": "https://github.com/opencv/opencv",
+    "title": "OpenCV",
+    "description": "Open-source computer vision and image processing library with support for real-time vision applications.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "vision",
+    "external_url": "https://opencv.org/",
+    "youtube_url": null,
+    "image_url": "https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_black.svg",
+    "categories": [
+      46,
+      50,
+      128,
+      184
+    ],
+    "technologies": [
+      "C++",
+      "Python"
+    ]
+  },
+  {
+    "project_url": "https://github.com/facebookresearch/detectron2",
+    "title": "Detectron2",
+    "description": "Facebook AI Research platform for object detection, segmentation, and other computer vision tasks.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "vision",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/facebookresearch/detectron2/main/demo/detectron2-visualizer.jpg",
+    "categories": [
+      50,
+      63,
+      71,
+      72,
+      184
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch"
+    ]
+  },
+  {
+    "project_url": "https://github.com/CompVis/stable-diffusion",
+    "title": "Stable Diffusion",
+    "description": "Latent text-to-image diffusion model capable of generating high-quality images from text prompts.",
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "section": "ai",
+    "subcategory": "vision",
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/assets/stable-samples/txt2img/merged-grid.jpg",
+    "categories": [
+      53,
+      59,
+      63,
+      67,
+      184
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch"
+    ]
+  }
+]
