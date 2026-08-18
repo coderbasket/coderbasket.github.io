@@ -61,6 +61,10 @@ const DATA_SECTIONS = {
 ======================================================= */
 
 const FRAMEWORKS = {
+  kotlin: {
+    name: "Kotlin",
+  },
+
   react: {
     name: "React",
   },
@@ -143,7 +147,7 @@ const NAVIGATION = {
    SECTION DISPLAY ORDER
 ======================================================= */
 
-const DATA_SECTION_ORDER = ["ai", "flutter", "dotnet", ];
+const DATA_SECTION_ORDER = ["ai", "flutter", "dotnet"];
 
 /*
  * Application categories.
