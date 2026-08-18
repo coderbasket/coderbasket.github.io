@@ -5,20 +5,12 @@
     "description": "An open-source platform for building and running AI agents that can perform tasks autonomously.",
     "section": "ai",
     "section_category": "agents",
-    "technologies": [
-      "Python"
-    ],
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "technologies": ["Python"],
+    "platforms": ["windows", "mac", "linux"],
     "external_url": "https://agpt.co/",
     "youtube_url": "https://www.youtube.com/watch?v=lKMPWjamTZ8",
     "image_url": "https://raw.githubusercontent.com/Significant-Gravitas/AutoGPT/master/docs/content/imgs/autogpt.png",
-    "categories": [
-      42
-    ]
+    "categories": [42]
   },
   {
     "project_url": "https://github.com/microsoft/autogen",
@@ -26,23 +18,12 @@
     "description": "A programming framework for creating multi-agent AI applications that can act autonomously or work alongside humans. AutoGen is currently in maintenance mode.",
     "section": "ai",
     "section_category": "agents",
-    "technologies": [
-      "Python",
-      "C#",
-      "TypeScript"
-    ],
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "technologies": ["Python", "C#", "TypeScript"],
+    "platforms": ["windows", "mac", "linux"],
     "external_url": "https://microsoft.github.io/autogen/",
     "youtube_url": "https://www.youtube.com/watch?v=LM6JcqLeF0U",
     "image_url": "https://microsoft.github.io/autogen/0.2/img/ag.svg",
-    "categories": [
-      42,
-      46
-    ]
+    "categories": [42, 46]
   },
   {
     "project_url": "https://github.com/langchain-ai/langchain",
@@ -50,23 +31,12 @@
     "description": "A framework and open-source ecosystem for developing applications powered by language models, including agents, workflows, and integrations.",
     "section": "ai",
     "section_category": "agents",
-    "technologies": [
-      "Python",
-      "JavaScript",
-      "TypeScript"
-    ],
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "technologies": ["Python", "JavaScript", "TypeScript"],
+    "platforms": ["windows", "mac", "linux"],
     "external_url": "https://www.langchain.com/",
     "youtube_url": null,
     "image_url": "https://github.com/langchain-ai/langchain/raw/master/.github/images/logo-dark.svg",
-    "categories": [
-      42,
-      46
-    ]
+    "categories": [42, 46]
   },
   {
     "project_url": "https://github.com/crewAIInc/crewAI",
@@ -74,508 +44,582 @@
     "description": "A framework for orchestrating role-playing autonomous AI agents and multi-agent workflows.",
     "section": "ai",
     "section_category": "agents",
-    "technologies": [
-      "Python"
-    ],
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "technologies": ["Python"],
+    "platforms": ["windows", "mac", "linux"],
     "external_url": "https://www.crewai.com/",
     "youtube_url": null,
     "image_url": "https://github.com/crewAIInc/crewAI/raw/main/docs/images/crewai_logo.png",
-    "categories": [
-      42,
-      46
-    ]
+    "categories": [42, 46]
   },
   {
     "project_url": "https://github.com/ollama/ollama",
     "title": "Ollama",
     "description": "Get up and running with large language models locally.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "llm",
     "external_url": "https://ollama.com/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/ollama/ollama/main/docs/logo.svg",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "Go",
-      "C++"
-    ]
+    "categories": [42, 46],
+    "technologies": ["Go", "C++"]
   },
   {
     "project_url": "https://github.com/huggingface/transformers",
     "title": "Transformers",
     "description": "State-of-the-art machine learning for PyTorch, TensorFlow, and JAX, including thousands of pretrained models.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "llm",
     "external_url": "https://huggingface.co/transformers/",
     "youtube_url": null,
     "image_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "Python",
-      "PyTorch",
-      "TensorFlow",
-      "JAX"
-    ]
+    "categories": [46],
+    "technologies": ["Python", "PyTorch", "TensorFlow", "JAX"]
   },
   {
     "project_url": "https://github.com/ggerganov/llama.cpp",
     "title": "llama.cpp",
     "description": "LLM inference in C/C++ with minimal setup and support for running large language models locally.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "llm",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://github.com/ggerganov/llama.cpp/raw/master/media/llama1.png",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "C",
-      "C++"
-    ]
+    "categories": [42, 46],
+    "technologies": ["C", "C++"]
   },
   {
     "project_url": "https://github.com/microsoft/onnxruntime",
     "title": "ONNX Runtime",
     "description": "Cross-platform machine-learning model accelerator that supports models from many AI frameworks.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "llm",
     "external_url": "https://onnxruntime.ai/",
     "youtube_url": null,
     "image_url": "https://onnxruntime.ai/images/ONNX-Runtime-logo.svg",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "C++",
-      "Python"
-    ]
+    "categories": [46],
+    "technologies": ["C++", "Python"]
   },
   {
     "project_url": "https://github.com/openai/whisper",
     "title": "Whisper",
     "description": "General-purpose speech recognition model trained on a large and diverse dataset of audio.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/openai/whisper/main/approach.png",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "Python",
-      "PyTorch"
-    ]
+    "categories": [46],
+    "technologies": ["Python", "PyTorch"]
   },
   {
     "project_url": "https://github.com/oobabooga/text-generation-webui",
     "title": "Text Generation WebUI",
     "description": "Gradio web UI for running large language models locally with support for many model backends and extensions.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "local-ai",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/oobabooga/text-generation-webui/main/docs/screenshot.png",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "Python",
-      "Gradio"
-    ]
+    "categories": [42, 46],
+    "technologies": ["Python", "Gradio"]
   },
   {
     "project_url": "https://github.com/lm-sys/FastChat",
     "title": "FastChat",
     "description": "Open platform for training, serving, and evaluating large language models.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "local-ai",
     "external_url": "https://chat.lmsys.org/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/lm-sys/FastChat/main/assets/fastchat.png",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "Python",
-      "PyTorch"
-    ]
+    "categories": [42, 46],
+    "technologies": ["Python", "PyTorch"]
   },
   {
     "project_url": "https://github.com/Mozilla-Ocho/llamafile",
     "title": "llamafile",
     "description": "Distribute and run LLMs as a single executable file.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "local-ai",
     "external_url": "https://www.llamafile.ai/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/Mozilla-Ocho/llamafile/main/llamafile.png",
-    "categories": [
-      42
-    ],
-    "technologies": [
-      "C",
-      "C++"
-    ]
+    "categories": [42],
+    "technologies": ["C", "C++"]
   },
   {
     "project_url": "https://github.com/janhq/jan",
     "title": "Jan",
     "description": "Open-source ChatGPT alternative that runs AI models locally on your computer.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "local-ai",
     "external_url": "https://jan.ai/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/janhq/jan/main/docs/images/jan.png",
-    "categories": [
-      42
-    ],
-    "technologies": [
-      "TypeScript",
-      "JavaScript",
-      "Rust"
-    ]
+    "categories": [42],
+    "technologies": ["TypeScript", "JavaScript", "Rust"]
   },
   {
     "project_url": "https://github.com/run-llama/llama_index",
     "title": "LlamaIndex",
     "description": "Data framework for building context-augmented LLM applications, including retrieval-augmented generation.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "rag",
     "external_url": "https://www.llamaindex.ai/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/img/hero.png",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "Python"
-    ]
+    "categories": [46],
+    "technologies": ["Python"]
   },
   {
     "project_url": "https://github.com/chroma-core/chroma",
     "title": "Chroma",
     "description": "Open-source embedding database designed for building AI applications with retrieval and semantic search.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "rag",
     "external_url": "https://www.trychroma.com/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/docs/images/chroma.png",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "Python",
-      "TypeScript"
-    ]
+    "categories": [42, 46],
+    "technologies": ["Python", "TypeScript"]
   },
   {
     "project_url": "https://github.com/qdrant/qdrant",
     "title": "Qdrant",
     "description": "High-performance vector similarity search engine and vector database for AI applications.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "rag",
     "external_url": "https://qdrant.tech/",
     "youtube_url": null,
     "image_url": "https://qdrant.tech/images/logo_with_bg.svg",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "Rust",
-      "Python"
-    ]
+    "categories": [42, 46],
+    "technologies": ["Rust", "Python"]
   },
   {
     "project_url": "https://github.com/pgvector/pgvector",
     "title": "pgvector",
     "description": "Open-source vector similarity search extension for PostgreSQL.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "rag",
     "external_url": "https://github.com/pgvector/pgvector",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/logo.png",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "C",
-      "SQL",
-      "PostgreSQL"
-    ]
+    "categories": [46],
+    "technologies": ["C", "SQL", "PostgreSQL"]
   },
   {
     "project_url": "https://github.com/rhasspy/piper",
     "title": "Piper",
     "description": "A fast, local neural text-to-speech system optimized for running on a wide range of devices.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/rhasspy/piper/master/docs/logo.png",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "Python",
-      "C++"
-    ]
+    "categories": [42, 46],
+    "technologies": ["Python", "C++"]
   },
   {
     "project_url": "https://github.com/coqui-ai/TTS",
     "title": "Coqui TTS",
     "description": "Deep learning toolkit for text-to-speech, speech synthesis, voice conversion, and related speech technologies.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "speech",
     "external_url": "https://coqui.ai/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/coqui-ai/TTS/dev/images/coqui-logo.png",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "Python",
-      "PyTorch"
-    ]
+    "categories": [46],
+    "technologies": ["Python", "PyTorch"]
   },
   {
     "project_url": "https://github.com/SYSTRAN/faster-whisper",
     "title": "Faster Whisper",
     "description": "Reimplementation of OpenAI's Whisper model using CTranslate2 for faster and more memory-efficient inference.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/SYSTRAN/faster-whisper/master/assets/faster-whisper.png",
-    "categories": [
-      46
-    ],
-    "technologies": [
-      "Python",
-      "CTranslate2"
-    ]
+    "categories": [46],
+    "technologies": ["Python", "CTranslate2"]
   },
   {
     "project_url": "https://github.com/ggerganov/whisper.cpp",
     "title": "whisper.cpp",
     "description": "Port of OpenAI's Whisper speech recognition model to C/C++ for efficient local inference.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/ggerganov/whisper.cpp/master/images/whisper-vs-hardware.png",
-    "categories": [
-      42,
-      46
-    ],
-    "technologies": [
-      "C",
-      "C++"
-    ]
+    "categories": [42, 46],
+    "technologies": ["C", "C++"]
   },
   {
     "project_url": "https://github.com/ultralytics/ultralytics",
     "title": "Ultralytics",
     "description": "Computer vision and machine learning framework featuring YOLO models for object detection, segmentation, classification, pose estimation, and tracking.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "vision",
     "external_url": "https://www.ultralytics.com/",
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/ultralytics_yolov8_example.png",
-    "categories": [
-      50,
-      63,
-      71,
-      72,
-      184
-    ],
-    "technologies": [
-      "Python",
-      "PyTorch"
-    ]
+    "categories": [50, 63, 71, 72, 184],
+    "technologies": ["Python", "PyTorch"]
   },
   {
     "project_url": "https://github.com/opencv/opencv",
     "title": "OpenCV",
     "description": "Open-source computer vision and image processing library with support for real-time vision applications.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "vision",
     "external_url": "https://opencv.org/",
     "youtube_url": null,
     "image_url": "https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_black.svg",
-    "categories": [
-      46,
-      50,
-      128,
-      184
-    ],
-    "technologies": [
-      "C++",
-      "Python"
-    ]
+    "categories": [46, 50, 128, 184],
+    "technologies": ["C++", "Python"]
   },
   {
     "project_url": "https://github.com/facebookresearch/detectron2",
     "title": "Detectron2",
     "description": "Facebook AI Research platform for object detection, segmentation, and other computer vision tasks.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "vision",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/facebookresearch/detectron2/main/demo/detectron2-visualizer.jpg",
-    "categories": [
-      50,
-      63,
-      71,
-      72,
-      184
-    ],
-    "technologies": [
-      "Python",
-      "PyTorch"
-    ]
+    "categories": [50, 63, 71, 72, 184],
+    "technologies": ["Python", "PyTorch"]
   },
   {
     "project_url": "https://github.com/CompVis/stable-diffusion",
     "title": "Stable Diffusion",
     "description": "Latent text-to-image diffusion model capable of generating high-quality images from text prompts.",
-    "platforms": [
-      "windows",
-      "mac",
-      "linux"
-    ],
+    "platforms": ["windows", "mac", "linux"],
     "section": "ai",
     "subcategory": "vision",
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/assets/stable-samples/txt2img/merged-grid.jpg",
-    "categories": [
-      53,
-      59,
-      63,
-      67,
-      184
-    ],
+    "categories": [53, 59, 63, 67, 184],
+    "technologies": ["Python", "PyTorch"]
+  },
+  {
+    "project_url": "https://github.com/rustykuntz/clideck",
+    "title": "CliDeck",
+    "description": "Local dashboard for running and coordinating multiple AI coding agents in one browser workspace, including Claude Code, Codex, Gemini CLI, OpenCode, and custom terminal agents.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "multi-agent-workspaces",
+    "external_url": "https://www.clideck.dev/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["JavaScript", "Node.js", "AI Agents", "CLI"]
+  },
+  {
+    "project_url": "https://github.com/jpdlr/hydra",
+    "title": "Hydra",
+    "description": "Cross-platform desktop application for orchestrating multiple Claude Code and OpenAI Codex agents in parallel with persistent sessions, tiled views, headless tasks, and an MCP manager.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "multi-agent-workspaces",
+    "external_url": "https://github.com/jpdlr/hydra",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
     "technologies": [
-      "Python",
-      "PyTorch"
+      "Electron",
+      "Node.js",
+      "Claude Code",
+      "Codex",
+      "MCP",
+      "AI Agents"
     ]
+  },
+  {
+    "project_url": "https://github.com/mikecubed/Hydra",
+    "title": "Hydra Multi-Agent Orchestrator",
+    "description": "Multi-agent coding orchestrator that routes tasks between Gemini CLI, OpenAI Codex, and Claude Code using shared task queues, intelligent routing, parallel workers, and multi-round deliberation.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "multi-agent-workspaces",
+    "external_url": "https://github.com/mikecubed/Hydra",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": [
+      "Ruby",
+      "Claude Code",
+      "Codex",
+      "Gemini CLI",
+      "AI Agents",
+      "Git"
+    ]
+  },
+  {
+    "project_url": "https://github.com/CompVis/stable-diffusion",
+    "title": "Lemonade",
+    "description": "Desktop multi-agent workspace for running multiple AI coding agents side by side, including Claude Code, Gemini CLI, Codex, Aider, OpenCode, Cline, Cursor, Continue, and custom CLI agents.",
+    "platforms": ["windows", "mac"],
+    "section": "ai",
+    "subcategory": "multi-agent-workspaces",
+    "external_url": "https://getlemonade.dev/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": [
+      "AI Agents",
+      "CLI",
+      "Claude Code",
+      "Codex",
+      "Gemini CLI",
+      "OpenCode",
+      "Aider",
+      "Cline"
+    ]
+  },
+  {
+    "project_url": null,
+    "title": "Pivio",
+    "description": "Desktop control room for running Claude Code, Codex, and OpenCode side by side with parallel agents, project workspaces, Kanban, scheduled prompts, pipelines, browser previews, Git worktrees, and agent monitoring.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "multi-agent-workspaces",
+    "external_url": "https://pivio.app/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": [
+      "AI Agents",
+      "Claude Code",
+      "Codex",
+      "OpenCode",
+      "Git",
+      "Kanban"
+    ]
+  },
+  {
+    "project_url": "https://github.com/sst/opencode",
+    "title": "OpenCode",
+    "description": "Open-source AI coding agent available in the terminal, IDE, and desktop with multi-session support, free models, local models, and connections to dozens of LLM providers.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://opencode.ai/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["TypeScript", "AI Agents", "LLM", "LSP", "MCP"]
+  },
+  {
+    "project_url": "https://github.com/paul-gauthier/aider",
+    "title": "Aider",
+    "description": "Open-source AI pair programming tool that works in the terminal and can edit codebases, work with multiple files, and connect to different language models.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://aider.chat/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["Python", "AI Agents", "LLM", "Git"]
+  },
+  {
+    "project_url": "https://github.com/cline/cline",
+    "title": "Cline",
+    "description": "Open-source AI coding agent that can understand a codebase, edit files, use terminal commands, interact with development tools, and work with different model providers.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://cline.bot/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["TypeScript", "VS Code", "AI Agents", "LLM"]
+  },
+  {
+    "project_url": null,
+    "title": "Codex",
+    "description": "AI coding agent from OpenAI that can work on software engineering tasks, inspect repositories, modify files, run commands, implement features, fix bugs, and complete coding tasks.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://openai.com/codex/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["AI Agents", "OpenAI", "LLM", "Git"]
+  },
+  {
+    "project_url": null,
+    "title": "Claude Code",
+    "description": "AI coding agent from Anthropic that works across a codebase through the terminal and desktop, helping developers implement features, debug code, run commands, review changes, and manage parallel coding sessions.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://www.anthropic.com/claude-code",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["AI Agents", "Claude", "LLM", "Git"]
+  },
+  {
+    "project_url": null,
+    "title": "Cursor",
+    "description": "AI-powered code editor with agentic coding capabilities that can understand a project, generate and modify code, work across files, and assist with software development.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://cursor.com/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["AI Agents", "LLM", "TypeScript", "Code Editor"]
+  },
+  {
+    "project_url": null,
+    "title": "Devin",
+    "description": "AI software engineering agent designed to take on development tasks, work with codebases, use development tools, and assist with end-to-end software engineering workflows.",
+    "platforms": ["web"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://devin.ai/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [],
+    "technologies": ["AI Agents", "LLM", "Software Engineering"]
+  },
+
+  {
+    "project_url": "https://github.com/google-gemini/gemini-cli",
+    "title": "Gemini CLI",
+    "description": "Open-source AI coding agent from Google that runs in the terminal and can understand codebases, edit files, execute commands, use tools, and assist with software development tasks.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://geminicli.com/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 57, 63, 85, 86, 93, 173, 184],
+    "technologies": ["TypeScript", "Gemini", "AI Agents", "LLM", "MCP"]
+  },
+  {
+    "project_url": "https://github.com/aaif-goose/goose",
+    "title": "Goose",
+    "description": "Open-source extensible AI agent that can install, execute, edit, and test software using different language models. Available as a desktop application, CLI, and API.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://goose.ai/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 54, 55, 57, 76, 82, 85, 177, 184],
+    "technologies": ["Rust", "AI Agents", "LLM", "MCP", "ACP"]
+  },
+  {
+    "project_url": "https://github.com/OpenHands/OpenHands",
+    "title": "OpenHands",
+    "description": "Open-source AI-driven software development platform with coding agents that can modify code, run commands, browse the web, use tools, and work on software engineering tasks.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://openhands.dev/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 54, 55, 57, 76, 85, 86, 115, 116, 184],
+    "technologies": ["Python", "TypeScript", "AI Agents", "LLM", "Docker"]
+  },
+  {
+    "project_url": "https://github.com/Kilo-Org/kilocode",
+    "title": "Kilo Code",
+    "description": "Open-source agentic coding platform for VS Code, JetBrains, and the CLI with multiple specialized modes, browser and terminal control, MCP support, and access to hundreds of AI models.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://kilo.ai/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 57, 63, 76, 78, 85, 93, 173, 174, 184],
+    "technologies": [
+      "TypeScript",
+      "AI Agents",
+      "LLM",
+      "MCP",
+      "VS Code",
+      "JetBrains"
+    ]
+  },
+  {
+    "project_url": "https://github.com/RooCodeInc/Roo-Code",
+    "title": "Roo Code",
+    "description": "AI-powered autonomous coding agent for an editor with modes for coding, architecture, questions, debugging, and custom workflows. The original Roo Code repository was archived in May 2026.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://roocode.com/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 57, 63, 78, 79, 169, 173, 174, 184],
+    "technologies": ["TypeScript", "AI Agents", "LLM", "MCP", "VS Code"]
+  },
+  {
+    "project_url": "https://github.com/SWE-agent/SWE-agent",
+    "title": "SWE-agent",
+    "description": "Open-source software engineering agent that uses language models to autonomously investigate and fix issues in real GitHub repositories.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://swe-agent.com/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 57, 63, 76, 79, 82, 85, 184],
+    "technologies": ["Python", "AI Agents", "LLM", "GitHub"]
+  },
+  {
+    "project_url": "https://github.com/SWE-agent/mini-swe-agent",
+    "title": "mini-SWE-agent",
+    "description": "Minimal open-source software engineering agent that can solve GitHub issues and perform coding tasks from the command line with a simple, lightweight architecture.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "coding-agents",
+    "external_url": "https://mini-swe-agent.com/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 57, 76, 79, 85, 86, 184],
+    "technologies": ["Python", "AI Agents", "LLM", "Git"]
+  },
+  {
+    "project_url": "https://github.com/steelburn/openhands",
+    "title": "OpenHands Agent Canvas",
+    "description": "Self-hosted developer control center for running and coordinating coding agents such as OpenHands, Claude Code, Codex, Gemini, and other ACP-compatible agents across local, remote, and cloud backends.",
+    "platforms": ["windows", "mac", "linux"],
+    "section": "ai",
+    "subcategory": "multi-agent-workspaces",
+    "external_url": "https://openhands.dev/",
+    "youtube_url": null,
+    "image_url": null,
+    "categories": [48, 55, 57, 76, 82, 85, 111, 115, 116, 169, 176, 177, 184],
+    "technologies": ["Python", "AI Agents", "ACP", "MCP", "Docker"]
   }
 ]
