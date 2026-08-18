@@ -1067,3 +1067,6 @@ a:focus {
     padding: 15px;
   }
 }
+#searchButton{
+  display: none;
+}
