@@ -9,7 +9,7 @@
     "platforms": ["windows", "mac", "linux"],
     "external_url": "https://agpt.co/",
     "youtube_url": "https://www.youtube.com/watch?v=lKMPWjamTZ8",
-    "image_url": "https://raw.githubusercontent.com/Significant-Gravitas/AutoGPT/master/docs/content/imgs/autogpt.png",
+    "image_url": "https://github.com/Significant-Gravitas/AutoGPT/raw/master/docs/home/.gitbook/assets/Banner_image.png",
     "categories": [42]
   },
   {
@@ -22,7 +22,7 @@
     "platforms": ["windows", "mac", "linux"],
     "external_url": "https://microsoft.github.io/autogen/",
     "youtube_url": "https://www.youtube.com/watch?v=LM6JcqLeF0U",
-    "image_url": "https://microsoft.github.io/autogen/0.2/img/ag.svg",
+    "image_url": "https://media.githubusercontent.com/media/microsoft/autogen/refs/heads/main/python/packages/autogen-studio/docs/ags_screen.png",
     "categories": [42, 46]
   },
   {
@@ -48,7 +48,7 @@
     "platforms": ["windows", "mac", "linux"],
     "external_url": "https://www.crewai.com/",
     "youtube_url": null,
-    "image_url": "https://github.com/crewAIInc/crewAI/raw/main/docs/images/crewai_logo.png",
+    "image_url": "https://github.com/crewAIInc/crewAI/raw/main/docs/images/asset.png",
     "categories": [42, 46]
   },
   {
@@ -73,7 +73,7 @@
     "subcategory": "llm",
     "external_url": "https://huggingface.co/transformers/",
     "youtube_url": null,
-    "image_url": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "image_url": "https://camo.githubusercontent.com/3023f05cd41e50de2318f1fbedd67c1dd3cc830189574ad1a39c439d9ea662ba/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f68756767696e67666163652f646f63756d656e746174696f6e2d696d616765732f7265736f6c76652f6d61696e2f7472616e73666f726d6572732f7472616e73666f726d6572735f61735f615f6d6f64656c5f646566696e6974696f6e2e706e67",
     "categories": [46],
     "technologies": ["Python", "PyTorch", "TensorFlow", "JAX"]
   },
@@ -86,7 +86,7 @@
     "subcategory": "llm",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://github.com/ggerganov/llama.cpp/raw/master/media/llama1.png",
+    "image_url": "https://raw.githubusercontent.com/ggml-org/llama.brand/refs/heads/master/cover/llama-cpp/cover-llama-cpp-dark.svg",
     "categories": [42, 46],
     "technologies": ["C", "C++"]
   },
@@ -99,7 +99,7 @@
     "subcategory": "llm",
     "external_url": "https://onnxruntime.ai/",
     "youtube_url": null,
-    "image_url": "https://onnxruntime.ai/images/ONNX-Runtime-logo.svg",
+    "image_url": "https://github.com/microsoft/onnxruntime/raw/main/docs/images/ONNX_Runtime_logo_dark.png",
     "categories": [46],
     "technologies": ["C++", "Python"]
   },
@@ -125,7 +125,7 @@
     "subcategory": "local-ai",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/oobabooga/text-generation-webui/main/docs/screenshot.png",
+    "image_url": "https://raw.githubusercontent.com/oobabooga/screenshots/refs/heads/main/CHAT-4.8.png",
     "categories": [42, 46],
     "technologies": ["Python", "Gradio"]
   },
@@ -138,7 +138,7 @@
     "subcategory": "local-ai",
     "external_url": "https://chat.lmsys.org/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/lm-sys/FastChat/main/assets/fastchat.png",
+    "image_url": "https://github.com/lm-sys/FastChat/raw/main/assets/screenshot_gui.png",
     "categories": [42, 46],
     "technologies": ["Python", "PyTorch"]
   },
@@ -151,7 +151,7 @@
     "subcategory": "local-ai",
     "external_url": "https://www.llamafile.ai/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/Mozilla-Ocho/llamafile/main/llamafile.png",
+    "image_url": "https://github.com/mozilla-ai/llamafile/raw/main/docs/images/llamafile-640x640.png",
     "categories": [42],
     "technologies": ["C", "C++"]
   },
@@ -164,7 +164,7 @@
     "subcategory": "local-ai",
     "external_url": "https://jan.ai/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/janhq/jan/main/docs/images/jan.png",
+    "image_url": "https://private-user-images.githubusercontent.com/159995642/494364959-f3f87889-c133-433b-b250-236218150d3f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcwNTY1OTAsIm5iZiI6MTc4NzA1NjI5MCwicGF0aCI6Ii8xNTk5OTU2NDIvNDk0MzY0OTU5LWYzZjg3ODg5LWMxMzMtNDMzYi1iMjUwLTIzNjIxODE1MGQzZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwODE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDgxOFQxMjMxMzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMjhiNDZhZDE2MDBmNjI1ZDRiNTVkYzdiNmI2NWU4MmM5YzYxYmM0MTI3NDBiZGM5ODBlYjM2ZjkyZTUyNzNkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.WfMGAy8DT0wUIUXk1LaEWSEv-nKkhrQf3v2-ANFeoas",
     "categories": [42],
     "technologies": ["TypeScript", "JavaScript", "Rust"]
   },
@@ -177,7 +177,7 @@
     "subcategory": "rag",
     "external_url": "https://www.llamaindex.ai/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/img/hero.png",
+    "image_url": "",
     "categories": [46],
     "technologies": ["Python"]
   },
@@ -190,7 +190,7 @@
     "subcategory": "rag",
     "external_url": "https://www.trychroma.com/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/docs/images/chroma.png",
+    "image_url": "https://github.com/chroma-core/chroma/raw/main/docs/assets/chroma-wordmark-white.png#gh-dark-mode-only",
     "categories": [42, 46],
     "technologies": ["Python", "TypeScript"]
   },
@@ -203,7 +203,7 @@
     "subcategory": "rag",
     "external_url": "https://qdrant.tech/",
     "youtube_url": null,
-    "image_url": "https://qdrant.tech/images/logo_with_bg.svg",
+    "image_url": "https://github.com/qdrant/qdrant/raw/master/docs/logo-dark.svg",
     "categories": [42, 46],
     "technologies": ["Rust", "Python"]
   },
@@ -216,12 +216,12 @@
     "subcategory": "rag",
     "external_url": "https://github.com/pgvector/pgvector",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/pgvector/pgvector/master/logo.png",
+    "image_url": "",
     "categories": [46],
     "technologies": ["C", "SQL", "PostgreSQL"]
   },
   {
-    "project_url": "https://github.com/rhasspy/piper",
+    "project_url": "https://github.com/OHF-Voice/piper1-gpl",
     "title": "Piper",
     "description": "A fast, local neural text-to-speech system optimized for running on a wide range of devices.",
     "platforms": ["windows", "mac", "linux"],
@@ -229,7 +229,7 @@
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/rhasspy/piper/master/docs/logo.png",
+    "image_url": "https://github.com/OHF-Voice/piper1-gpl/raw/main/etc/logo.png",
     "categories": [42, 46],
     "technologies": ["Python", "C++"]
   },
@@ -242,7 +242,7 @@
     "subcategory": "speech",
     "external_url": "https://coqui.ai/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/coqui-ai/TTS/dev/images/coqui-logo.png",
+    "image_url": "https://raw.githubusercontent.com/coqui-ai/TTS/main/images/coqui-log-green-TTS.png",
     "categories": [46],
     "technologies": ["Python", "PyTorch"]
   },
@@ -255,7 +255,7 @@
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/SYSTRAN/faster-whisper/master/assets/faster-whisper.png",
+    "image_url": "",
     "categories": [46],
     "technologies": ["Python", "CTranslate2"]
   },
@@ -268,7 +268,7 @@
     "subcategory": "speech",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/ggerganov/whisper.cpp/master/images/whisper-vs-hardware.png",
+    "image_url": "https://user-images.githubusercontent.com/1991296/235238348-05d0f6a4-da44-4900-a1de-d0707e75b763.jpeg",
     "categories": [42, 46],
     "technologies": ["C", "C++"]
   },
@@ -281,7 +281,7 @@
     "subcategory": "vision",
     "external_url": "https://www.ultralytics.com/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/ultralytics_yolov8_example.png",
+    "image_url": "https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png",
     "categories": [50, 63, 71, 72, 184],
     "technologies": ["Python", "PyTorch"]
   },
@@ -307,7 +307,7 @@
     "subcategory": "vision",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/facebookresearch/detectron2/main/demo/detectron2-visualizer.jpg",
+    "image_url": "https://user-images.githubusercontent.com/1381301/66535560-d3422200-eace-11e9-9123-5535d469db19.png",
     "categories": [50, 63, 71, 72, 184],
     "technologies": ["Python", "PyTorch"]
   },
@@ -320,7 +320,7 @@
     "subcategory": "vision",
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/assets/stable-samples/txt2img/merged-grid.jpg",
+    "image_url": "https://github.com/CompVis/stable-diffusion/raw/main/assets/stable-samples/txt2img/merged-0005.png",
     "categories": [53, 59, 63, 67, 184],
     "technologies": ["Python", "PyTorch"]
   },
@@ -333,7 +333,7 @@
     "subcategory": "multi-agent-workspaces",
     "external_url": "https://www.clideck.dev/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/rustykuntz/clideck/raw/main/assets/clideck-themes.jpg",
     "categories": [],
     "technologies": ["JavaScript", "Node.js", "AI Agents", "CLI"]
   },
@@ -377,48 +377,7 @@
       "Git"
     ]
   },
-  {
-    "project_url": "https://github.com/CompVis/stable-diffusion",
-    "title": "Lemonade",
-    "description": "Desktop multi-agent workspace for running multiple AI coding agents side by side, including Claude Code, Gemini CLI, Codex, Aider, OpenCode, Cline, Cursor, Continue, and custom CLI agents.",
-    "platforms": ["windows", "mac"],
-    "section": "ai",
-    "subcategory": "multi-agent-workspaces",
-    "external_url": "https://getlemonade.dev/",
-    "youtube_url": null,
-    "image_url": null,
-    "categories": [],
-    "technologies": [
-      "AI Agents",
-      "CLI",
-      "Claude Code",
-      "Codex",
-      "Gemini CLI",
-      "OpenCode",
-      "Aider",
-      "Cline"
-    ]
-  },
-  {
-    "project_url": null,
-    "title": "Pivio",
-    "description": "Desktop control room for running Claude Code, Codex, and OpenCode side by side with parallel agents, project workspaces, Kanban, scheduled prompts, pipelines, browser previews, Git worktrees, and agent monitoring.",
-    "platforms": ["windows", "mac", "linux"],
-    "section": "ai",
-    "subcategory": "multi-agent-workspaces",
-    "external_url": "https://pivio.app/",
-    "youtube_url": null,
-    "image_url": null,
-    "categories": [],
-    "technologies": [
-      "AI Agents",
-      "Claude Code",
-      "Codex",
-      "OpenCode",
-      "Git",
-      "Kanban"
-    ]
-  },
+
   {
     "project_url": "https://github.com/sst/opencode",
     "title": "OpenCode",
@@ -428,7 +387,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://opencode.ai/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/anomalyco/opencode/raw/dev/packages/web/src/assets/lander/screenshot.png",
     "categories": [],
     "technologies": ["TypeScript", "AI Agents", "LLM", "LSP", "MCP"]
   },
@@ -441,7 +400,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://aider.chat/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://camo.githubusercontent.com/0734e2ed3c9ba095f93080a7763d73a9b5a5af59e6932d0ed8f10760b4e69a22/68747470733a2f2f61696465722e636861742f6173736574732f73637265656e636173742e737667",
     "categories": [],
     "technologies": ["Python", "AI Agents", "LLM", "Git"]
   },
@@ -454,12 +413,12 @@
     "subcategory": "coding-agents",
     "external_url": "https://cline.bot/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/cline/cline/raw/main/assets/icons/icon.png",
     "categories": [],
     "technologies": ["TypeScript", "VS Code", "AI Agents", "LLM"]
   },
   {
-    "project_url": null,
+    "project_url": "https://github.com/openai/codex",
     "title": "Codex",
     "description": "AI coding agent from OpenAI that can work on software engineering tasks, inspect repositories, modify files, run commands, implement features, fix bugs, and complete coding tasks.",
     "platforms": ["windows", "mac", "linux"],
@@ -467,12 +426,12 @@
     "subcategory": "coding-agents",
     "external_url": "https://openai.com/codex/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/openai/codex/raw/main/.github/codex-cli-splash.png",
     "categories": [],
     "technologies": ["AI Agents", "OpenAI", "LLM", "Git"]
   },
   {
-    "project_url": null,
+    "project_url": "https://github.com/anthropics/claude-code",
     "title": "Claude Code",
     "description": "AI coding agent from Anthropic that works across a codebase through the terminal and desktop, helping developers implement features, debug code, run commands, review changes, and manage parallel coding sessions.",
     "platforms": ["windows", "mac", "linux"],
@@ -480,25 +439,13 @@
     "subcategory": "coding-agents",
     "external_url": "https://www.anthropic.com/claude-code",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/anthropics/claude-code/raw/main/demo.gif",
     "categories": [],
     "technologies": ["AI Agents", "Claude", "LLM", "Git"]
   },
+
   {
-    "project_url": null,
-    "title": "Cursor",
-    "description": "AI-powered code editor with agentic coding capabilities that can understand a project, generate and modify code, work across files, and assist with software development.",
-    "platforms": ["windows", "mac", "linux"],
-    "section": "ai",
-    "subcategory": "coding-agents",
-    "external_url": "https://cursor.com/",
-    "youtube_url": null,
-    "image_url": null,
-    "categories": [],
-    "technologies": ["AI Agents", "LLM", "TypeScript", "Code Editor"]
-  },
-  {
-    "project_url": null,
+    "project_url": "https://github.com/AI-App/OpenDevin.OpenDevin",
     "title": "Devin",
     "description": "AI software engineering agent designed to take on development tasks, work with codebases, use development tools, and assist with end-to-end software engineering workflows.",
     "platforms": ["web"],
@@ -506,7 +453,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://devin.ai/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/AI-App/OpenDevin.OpenDevin/raw/main/logo.png",
     "categories": [],
     "technologies": ["AI Agents", "LLM", "Software Engineering"]
   },
@@ -520,7 +467,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://geminicli.com/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://github.com/google-gemini/gemini-cli/raw/main/docs/assets/gemini-screenshot.png",
     "categories": [48, 57, 63, 85, 86, 93, 173, 184],
     "technologies": ["TypeScript", "Gemini", "AI Agents", "LLM", "MCP"]
   },
@@ -533,7 +480,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://goose.ai/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://avatars.githubusercontent.com/u/271095942?s=60&v=4",
     "categories": [48, 54, 55, 57, 76, 82, 85, 177, 184],
     "technologies": ["Rust", "AI Agents", "LLM", "MCP", "ACP"]
   },
@@ -559,7 +506,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://kilo.ai/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://camo.githubusercontent.com/36233bb9c1d44cfa899eded08733c2cafd388ed91bc43e56f850a0372c1c0467/68747470733a2f2f6173736574732e6f70656e68616e64732e6465762f73637265656e73686f742f6175746f6d6174696f6e2d707265766965772e706e67",
     "categories": [48, 57, 63, 76, 78, 85, 93, 173, 174, 184],
     "technologies": [
       "TypeScript",
@@ -579,7 +526,7 @@
     "subcategory": "coding-agents",
     "external_url": "https://roocode.com/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://avatars.githubusercontent.com/u/211522643?s=60&v=4",
     "categories": [48, 57, 63, 78, 79, 169, 173, 174, 184],
     "technologies": ["TypeScript", "AI Agents", "LLM", "MCP", "VS Code"]
   },
@@ -605,21 +552,8 @@
     "subcategory": "coding-agents",
     "external_url": "https://mini-swe-agent.com/",
     "youtube_url": null,
-    "image_url": null,
+    "image_url": "https://private-user-images.githubusercontent.com/13602468/393649968-84599168-11a7-4776-8a49-33dbf0758bb2.svg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcwNTgwNTYsIm5iZiI6MTc4NzA1Nzc1NiwicGF0aCI6Ii8xMzYwMjQ2OC8zOTM2NDk5NjgtODQ1OTkxNjgtMTFhNy00Nzc2LThhNDktMzNkYmYwNzU4YmIyLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODE4VDEyNTU1NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY0MDJlNmJjZDU3M2QyODk0YzEzNjAyMDBkYjFiYmY0YTRiZmM5NmY2ZjYwNjkxYTIzMTg2MTI3NjY4YjUzMWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnN2ZyUyQnhtbCJ9.dYFeMReYnCNf6W_EI0BTEaPYkHiyujr78WyV9V67Org",
     "categories": [48, 57, 76, 79, 85, 86, 184],
     "technologies": ["Python", "AI Agents", "LLM", "Git"]
-  },
-  {
-    "project_url": "https://github.com/steelburn/openhands",
-    "title": "OpenHands Agent Canvas",
-    "description": "Self-hosted developer control center for running and coordinating coding agents such as OpenHands, Claude Code, Codex, Gemini, and other ACP-compatible agents across local, remote, and cloud backends.",
-    "platforms": ["windows", "mac", "linux"],
-    "section": "ai",
-    "subcategory": "multi-agent-workspaces",
-    "external_url": "https://openhands.dev/",
-    "youtube_url": null,
-    "image_url": null,
-    "categories": [48, 55, 57, 76, 82, 85, 111, 115, 116, 169, 176, 177, 184],
-    "technologies": ["Python", "AI Agents", "ACP", "MCP", "Docker"]
   }
 ]
