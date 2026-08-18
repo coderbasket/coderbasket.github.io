@@ -1,48 +1,16 @@
 [
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/cupertino_gallery",
+    "project_url": "https://github.com/flutter/samples",
     "title": "Cupertino Gallery",
-    "description": "A Flutter sample gallery demonstrating iOS-style Cupertino widgets and components.",
+    "description": "A Flutter sample gallery",
     "section": "flutter",
     "section_category": "cupertino",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "ios",
-      "macos"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["ios", "macos"],
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      142,
-      143,
-      45,
-      181
-    ]
-  },
-  {
-    "project_url": "https://github.com/flutter/samples/tree/main/date_planner",
-    "title": "Date Planner",
-    "description": "An iOS-style date planner application demonstrating Cupertino-oriented Flutter UI patterns.",
-    "section": "flutter",
-    "section_category": "cupertino",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "ios"
-    ],
-    "external_url": null,
-    "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      4,
-      12,
-      142,
-      183
-    ]
+    "categories": [142, 143, 45, 181, 188]
   },
   {
     "project_url": "https://github.com/csells/flutter_ai_chat",
@@ -50,26 +18,12 @@
     "description": "A full-featured Flutter chat application using the Flutter AI Toolkit and Vertex AI for Firebase, with authenticated Cloud Firestore chat storage.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web",
-      "windows",
-      "macos",
-      "linux"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/csells/flutter_ai_chat",
-    "categories": [
-      15,
-      47,
-      56,
-      102
-    ]
+    "image_url": "https://github.com/csells/flutter_ai_chat/raw/main/README/screenshot-mobile.png",
+    "categories": [15, 47, 56, 102, 122, 176]
   },
   {
     "project_url": "https://github.com/dgewe/Tinder-App-Flutter",
@@ -77,21 +31,12 @@
     "description": "A Tinder-inspired Flutter application demonstrating authentication, Firestore, Storage, profiles, matching, and chat functionality.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["android"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/dgewe/Tinder-App-Flutter",
-    "categories": [
-      39,
-      15,
-      122,
-      102
-    ]
+    "image_url": "https://github.com/dgewe/Tinder-App-Flutter/raw/main/github_images/chats.jpeg",
+    "categories": [39, 15, 22, 102, 122, 178]
   },
   {
     "project_url": "https://github.com/GregoryConrad/expense-tracker",
@@ -99,324 +44,263 @@
     "description": "A simple Flutter expense tracker using Firebase Authentication and Cloud Firestore as its backend.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["android", "ios", "web"],
     "external_url": null,
     "youtube_url": null,
     "image_url": "https://opengraph.githubassets.com/1/GregoryConrad/expense-tracker",
-    "categories": [
-      3,
-      134,
-      102,
-      122
-    ]
+    "categories": [3, 102, 122, 134, 140, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/material_3_demo",
-    "title": "Material 3 Demo",
-    "description": "A Flutter sample application showcasing Material 3 features and components.",
+    "project_url": "https://github.com/robertodevs/flutter_ecommerce_template",
+    "title": "flutter_ecommerce_template",
+    "description": "This is an eCommerce minimalist template with a clean and beautiful design for Flutter.",
     "section": "flutter",
-    "section_category": "material",
+    "section_category": "flutter-app",
     "technologies": [
-      "Flutter"
+      "Dart",
+      "flutter-app",
+      "flutter-ecommerce-template",
+      "flutter-examples"
     ],
-    "platforms": [
-      "android",
-      "ios",
-      "web",
-      "windows",
-      "macos",
-      "linux"
-    ],
-    "external_url": "https://docs.flutter.dev/ui/design/material",
+    "platforms": ["web"],
+    "external_url": "https://robertojuarez.dev/",
     "youtube_url": null,
-    "image_url": "https://raw.githubusercontent.com/flutter/samples/main/material_3_demo/assets/images/material_3_demo.png",
-    "categories": [
-      142,
-      148,
-      45
-    ]
+    "image_url": "https://github.com/robertodevs/flutter_ecommerce_template/raw/master/assets/promotional/Mockup%20Intro.png",
+    "categories": [21, 175, 188, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/compass_app",
-    "title": "Compass App",
-    "description": "A Flutter sample application demonstrating an app architecture using MVVM.",
+    "project_url": "https://github.com/Widle-Studio/Grocery-App",
+    "title": "Grocery-App",
+    "description": "Flutter Grocery Shopping App (Mobile App, Web App)",
     "section": "flutter",
-    "section_category": "material",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios"
-    ],
+    "section_category": "dart",
+    "technologies": ["Dart", "dart", "ecommerce", "ecommerce-application"],
+    "platforms": ["web"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      8,
-      142,
-      170
-    ]
+    "image_url": "https://github.com/Widle-Studio/Grocery-App/raw/Grocery-App/Grocery%20App/grocery-app.png",
+    "categories": [21, 26, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/veggieseasons",
-    "title": "Veggie Seasons",
-    "description": "A Flutter demo application demonstrating a complete app experience with seasonal vegetables.",
+    "project_url": "https://github.com/nafishahmeddev/fintracker",
+    "title": "fintracker",
+    "description": "FinTracker is a powerful expense tracker app built with Flutter, designed to help you effortlessly manage your finances.",
     "section": "flutter",
-    "section_category": "material",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios"
-    ],
+    "section_category": "general",
+    "technologies": ["Dart"],
+    "platforms": ["web"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      142,
-      12,
-      21
-    ]
+    "image_url": "https://raw.githubusercontent.com/nafishahmeddev/fintracker/master/screenshots/fintracker_screenshot.jpg",
+    "categories": [3, 134, 140, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/animations",
-    "title": "Flutter Animations",
-    "description": "A collection of Flutter examples demonstrating implicit and explicit animations, transitions, and interactive motion effects.",
+    "project_url": "https://github.com/salvadordeveloper/flutter-crypto-app",
+    "title": "flutter-crypto-app",
+    "description": "Flutter Cryptocurrency App with Riverpod & Freezed + Dio for API REST",
     "section": "flutter",
-    "section_category": "more",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "section_category": "app",
+    "technologies": ["Dart", "app", "flutter", "flutter-apps"],
+    "platforms": ["web"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      44,
-      141,
-      146,
-      176,
-      178,
-      188,
-      184
-    ]
+    "image_url": "https://raw.githubusercontent.com/salvadordeveloper/flutter-crypto-app/main/screenshots/cover.png",
+    "categories": [82, 83, 21, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/provider_shopper",
-    "title": "Provider Shopper",
-    "description": "A complete Flutter shopping sample demonstrating product listings, shopping cart functionality, state management, navigation, and application structure.",
+    "project_url": "https://github.com/JErazo7/flutter-crypto-wallet",
+    "title": "flutter-crypto-wallet",
+    "description": "A multiplatform (Android, iOS, Web and macOS) crypto-wallet example created with Flutter and CoinGecko API.",
     "section": "flutter",
-    "section_category": "more",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
-    "external_url": null,
+    "section_category": "blockchain",
+    "technologies": ["Dart", "blockchain", "cryptocurrency", "flutter"],
+    "platforms": ["web"],
+    "external_url": "https://jerazo7.github.io/flutter-crypto-wallet/",
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      21,
-      26,
-      12,
-      16,
-      23,
-      96,
-      176,
-      178,
-      188,
-      184
-    ]
+    "image_url": "https://raw.githubusercontent.com/JErazo7/flutter-crypto-wallet/readme/screenshots/web.png",
+    "categories": [42, 82, 83, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/navigation_and_routing",
-    "title": "Navigation and Routing",
-    "description": "Flutter examples demonstrating application navigation, routing, nested navigation, and different navigation patterns.",
+    "project_url": "https://github.com/martinoyovo/flutter-banking-app",
+    "title": "flutter-banking-app",
+    "description": "No description provided.",
     "section": "flutter",
-    "section_category": "more",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "section_category": "general",
+    "technologies": ["Dart"],
+    "platforms": ["web"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      16,
-      76,
-      96,
-      176,
-      178,
-      188,
-      184
-    ]
+    "image_url": "https://github.com/martinoyovo/flutter-banking-app/raw/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-01-18%20at%2003.22.23.png",
+    "categories": [41, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/form_app",
-    "title": "Form App",
-    "description": "A Flutter sample application demonstrating forms, validation, text input, focus handling, and user interaction.",
+    "project_url": "https://github.com/rrdhoi/SocialMediaApp",
+    "title": "SocialMediaApp",
+    "description": "Social Media App built with Flutter - Clean & Modern UI, Clean Code, Custom Widget",
     "section": "flutter",
-    "section_category": "more",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "section_category": "clean-code",
+    "technologies": ["Dart", "clean-code", "clean-ui", "custom-widgets"],
+    "platforms": ["web"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      13,
-      24,
-      28,
-      45,
-      168,
-      176,
-      178,
-      188,
-      184
-    ]
+    "image_url": "https://user-images.githubusercontent.com/67297759/190064136-5f096750-e957-4817-8372-145b537d7a88.png",
+    "categories": [32, 39, 141, 172, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/platform_channels",
-    "title": "Platform Channels",
-    "description": "A Flutter sample demonstrating communication between Dart code and native platform APIs using platform channels.",
+    "project_url": "https://github.com/mitchkoko/moonbase-template",
+    "title": "moonbase-template",
+    "description": "Complete Flutter Social Media / Reddit type App Template with Authentication, Profiles, and Monetization w/ Subscriptions.",
     "section": "flutter",
-    "section_category": "more",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios"
-    ],
+    "section_category": "dart",
+    "technologies": ["Dart", "dart", "flutter", "revenucat"],
+    "platforms": ["web"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      76,
-      82,
-      171,
-      176,
-      178,
-      188,
-      184
-    ]
+    "image_url": "https://private-user-images.githubusercontent.com/29016489/479763498-89ccdf7d-d28e-4d29-a209-af5b12375b77.png",
+    "categories": [39, 22, 122, 175, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/testing_app",
-    "title": "Flutter Testing App",
-    "description": "A Flutter sample demonstrating unit tests, widget tests, integration testing, and techniques for testing Flutter applications.",
+    "project_url": "https://github.com/CharlyKeleb/SocialMedia-App",
+    "title": "SocialMedia-App",
+    "description": "A fully functional social media app built with flutter with multiple features",
     "section": "flutter",
-    "section_category": "more",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "section_category": "chat",
+    "technologies": ["Dart", "chat", "chat-application", "dart"],
+    "platforms": ["ios"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      76,
-      80,
-      77,
-      176,
-      178,
-      188,
-      184
-    ]
+    "image_url": "https://raw.githubusercontent.com/CharlyKeleb/SocialMedia-App/main/ss/w1.png",
+    "categories": [39, 15, 22, 183]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/google_maps",
-    "title": "Google Maps",
-    "description": "A Flutter sample demonstrating integration with the Google Maps for Flutter plugin.",
+    "project_url": "https://github.com/JideGuru/FlutterSocialAppUIKit",
+    "title": "FlutterSocialAppUIKit",
+    "description": "Flutter representation of a Social App Concept.",
     "section": "flutter",
-    "section_category": "others",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "section_category": "android",
+    "technologies": ["Dart", "android", "flutter", "ios"],
+    "platforms": ["android", "ios"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      14,
-      173
-    ]
+    "image_url": "https://raw.githubusercontent.com/JideGuru/FlutterSocialAppUIKit/master/ss/1.png",
+    "categories": [39, 141, 22, 182, 183]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/pedometer",
-    "title": "Pedometer",
-    "description": "A Flutter sample demonstrating platform API integration using FFIgen and JNIgen.",
+    "project_url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard",
+    "title": "Flutter-Responsive-Admin-Panel-or-Dashboard",
+    "description": "Responsive Admin Panel or Dashboard using Flutter",
     "section": "flutter",
-    "section_category": "others",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android"
-    ],
-    "external_url": null,
+    "section_category": "app",
+    "technologies": ["Dart", "app", "dashboard", "dashboard-templates"],
+    "platforms": ["web"],
+    "external_url": "https://youtu.be/_uOgXpEHNbc",
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      177,
-      182,
-      173
-    ]
+    "image_url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/raw/master/ui.png",
+    "categories": [8, 146, 175, 176]
   },
   {
-    "project_url": "https://github.com/flutter/samples/tree/main/platform_design",
-    "title": "Platform Design",
-    "description": "A Flutter sample demonstrating how to reuse application code while adapting the UI to different platform design conventions.",
+    "project_url": "https://github.com/FlutterFlareLine/FlareLine",
+    "title": "FlareLine",
+    "description": "flutter admin dashboard for web",
     "section": "flutter",
-    "section_category": "others",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios"
-    ],
+    "section_category": "admin",
+    "technologies": ["Dart", "admin", "admin-panel", "ai"],
+    "platforms": ["web"],
+    "external_url": "https://flareline.vercel.app",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/FlutterFlareLine/FlareLine/master/snapshots%2Fscreenshot20240408.png",
+    "categories": [8, 91, 96, 175, 176]
+  },
+  {
+    "project_url": "https://github.com/maxlam79/focus_flutter_ui_kit",
+    "title": "focus_flutter_ui_kit",
+    "description": "The Focus Flutter UI Kit is a comprehensive Pure Flutter 3.x UI Kit that includes the Admin Dashboard, Templates, and other useful UX/UI widgets with a minimalist visual aesthetic, making it generally suitable for corporate/enterprise applications on the web or tablet.",
+    "section": "flutter",
+    "section_category": "admin-panel",
+    "technologies": ["Dart", "admin-panel", "dashboard", "flutter"],
+    "platforms": ["web"],
+    "external_url": "https://focusuidemo.pages.dev",
+    "youtube_url": null,
+    "image_url": "https://github.com/maxlam79/focus_flutter_ui_kit/raw/main/assets/demo-background/github-banner.jpg?raw=true",
+    "categories": [8, 32, 141, 175, 176]
+  },
+  {
+    "project_url": "https://github.com/theakhinabraham/doable-todo-list-app",
+    "title": "doable-todo-list-app",
+    "description": "An offline Flutter todo list app using Dart & SQLite Database with notification reminders & latest UI designs.",
+    "section": "flutter",
+    "section_category": "app",
+    "technologies": ["Dart", "app", "dart", "database"],
+    "platforms": ["web"],
+    "external_url": "https://akhinabraham.com/doable",
+    "youtube_url": null,
+    "image_url": "https://github.com/theakhinabraham/doable-todo-list-app/raw/main/img/add-task-preview.png",
+    "categories": [12, 17, 103, 134, 136, 176]
+  },
+  {
+    "project_url": "https://github.com/Davies-K/Taskez",
+    "title": "Taskez",
+    "description": "A Productivity Mobile Application UI kit built with Flutter",
+    "section": "flutter",
+    "section_category": "android",
+    "technologies": ["Dart", "android", "android-ui-kit", "flutter"],
+    "platforms": ["android", "ios", "macos"],
     "external_url": null,
     "youtube_url": null,
-    "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      176,
-      142,
-      183,
-      182
-    ]
+    "image_url": "https://github.com/Davies-K/Taskez/raw/main/screenshots/sample-1.png",
+    "categories": [134, 141, 175, 182, 183, 180]
+  },
+  {
+    "project_url": "https://github.com/hamaluik/timecop",
+    "title": "timecop",
+    "description": "A time tracking app that respects your privacy and gets the job done without being fancy.",
+    "section": "flutter",
+    "section_category": "hacktoberfest",
+    "technologies": ["Dart", "hacktoberfest"],
+    "platforms": ["web"],
+    "external_url": "https://timecop.app/",
+    "youtube_url": null,
+    "image_url": "https://github.com/hamaluik/timecop/raw/master/screenshots/ios/dark/en/iPhone%20Xs%20Max-Portrait-editor.jpg",
+    "categories": [134, 140, 125, 176]
+  },
+  {
+    "project_url": "https://github.com/ChunhThanhDe/cinema-booking",
+    "title": "cinema-booking",
+    "description": "A Completed Functional Flutter app for booking movie tickets, built with Flutter Clean Template, BLoC, REST API, Firebase Auth, and Unit Tests.",
+    "section": "flutter",
+    "section_category": "chunhthanhde",
+    "technologies": ["Dart", "chunhthanhde", "cinema-app", "cinema-booking"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/ChunhThanhDe/cinema-booking/raw/main/media/images/home_screen.jpeg",
+    "categories": [21, 82, 83, 122, 80, 175, 176]
+  },
+  {
+    "project_url": "https://github.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter",
+    "title": "Neumorphic-Music_Player-Flutter",
+    "description": "A Flutter music streaming application that allows users to play audio files from local storage. The app features a beautiful neumorphic UI design and provides a smooth user experience for browsing and playing music.",
+    "section": "flutter",
+    "section_category": "flutter",
+    "technologies": ["Dart", "flutter", "flutter-app", "flutter-apps"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter/master/demo.png",
+    "categories": [19, 38, 126, 130, 131, 176]
+  },
+  {
+    "project_url": "https://github.com/ErfanRht/MovieLab",
+    "title": "MovieLab",
+    "description": "An open source movie tracker and movie finder.",
+    "section": "flutter",
+    "section_category": "android",
+    "technologies": ["Dart", "android", "dart", "flutter"],
+    "platforms": ["android"],
+    "external_url": "https://ErfanRht.github.io/MovieLab-Intro",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/ErfanRht/MovieLab/master/screenshots/mockups/MovieLab_mockup2.jpg",
+    "categories": [23, 127, 130, 184, 182]
   }
 ]

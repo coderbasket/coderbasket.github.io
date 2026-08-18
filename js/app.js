@@ -363,11 +363,17 @@ function getDataSourceSectionKey(sectionKey) {
 
 function normalizeProjects(projects) {
   return projects.map((project) => {
-    const categories = Array.isArray(project.categories)
-      ? [...new Set(project.categories)]
-      : Array.isArray(project.Categories)
-        ? [...new Set(project.Categories)]
-        : [];
+    const rawCategories =
+      Array.isArray(project.categories)
+        ? project.categories
+        : Array.isArray(project.Categories)
+          ? project.Categories
+          : [];
+
+    const categories =
+      rawCategories.length > 0
+        ? [...new Set(rawCategories)]
+        : [41];
 
     const platforms = Array.isArray(project.platforms)
       ? [...new Set(project.platforms)]
