@@ -1,0 +1,66 @@
+
+/* =========================================================
+   PRIVACY PAGE — HEADER ALIGNMENT
+   Match the main Coder Basket header
+   ========================================================= */
+
+.site-header .container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.site-header .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header .logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.site-header .main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-header .main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.site-header .main-nav a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .site-header .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header .main-nav {
+    gap: 14px;
+  }
+}

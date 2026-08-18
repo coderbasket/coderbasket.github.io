@@ -73,11 +73,8 @@
 
 .detail-layout {
   display: grid;
-
-  grid-template-columns: 210px minmax(0, 1fr);
-
+  grid-template-columns: minmax(0, 1fr) 300px;
   gap: 32px;
-
   align-items: start;
 }
 
@@ -86,6 +83,7 @@
 }
 
 .detail-content .project-detail {
+  width: 100%;
   max-width: none;
   margin: 0;
 }
@@ -1243,5 +1241,15 @@
     animation-iteration-count: 1 !important;
 
     transition-duration: 0.01ms !important;
+  }
+}
+@media (max-width: 1000px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-ad-column {
+    width: 100%;
+    min-height: 100px;
   }
 }

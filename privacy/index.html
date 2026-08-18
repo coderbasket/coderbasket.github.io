@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/css/app.css">
 
     <link rel="stylesheet" href="/css/privacy.css">
+    <link rel="stylesheet" href="/about/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,31 +23,28 @@
          HEADER
     ====================================================== -->
 
-    <header class="site-header">
+<header class="site-header">
+    <div class="container header-inner">
 
-        <div class="container header-inner">
+        <a href="../" class="logo" aria-label="Coder Basket Home">
+            <img src="../img/codericon.png" alt="">
+            <span>Coder Basket</span>
+        </a>
 
-            <a class="logo" href="../" aria-label="Coder Basket Home">
-                Coder Basket
-            </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+            ☰
+        </button>
 
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="../">
-                    Home
-                </a>
+        <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+            <a href="../">Home</a>
+            <a href="../#catalog">Catalogue</a>
+            <a href="../about/">About</a>
+        </nav>
 
-                <a href="../#catalog">
-                    Catalogue
-                </a>
+    </div>
+</header>
 
-                <a href="../about/">
-                    About
-                </a>
-            </nav>
 
-        </div>
-
-    </header>
 
 
     <!-- =====================================================
