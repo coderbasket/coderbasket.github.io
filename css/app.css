@@ -1,6 +1,6 @@
 ﻿/* =========================================================
    CODER BASKET — MODERN DEVELOPER STYLESHEET
-   Page content, catalog, cards, footer & responsive layout
+   Content, catalog, cards, footer & responsive layout.
    Header/navigation styles are handled by header.css.
    ========================================================= */
 
@@ -67,6 +67,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+
   font-family:
     "Inter",
     -apple-system,
@@ -74,22 +75,26 @@ body {
     "Segoe UI",
     Roboto,
     sans-serif;
+
   font-size: 1.5rem;
   line-height: 1.6;
   font-weight: 400;
+
   color: var(--text);
   background: var(--bg-main);
+
   background-image:
     radial-gradient(
       at 0% 0%,
-      rgba(255, 59, 92, 0.05) 0px,
+      rgba(255, 59, 92, 0.05) 0,
       transparent 50%
     ),
     radial-gradient(
       at 100% 100%,
-      rgba(30, 41, 59, 0.3) 0px,
+      rgba(30, 41, 59, 0.3) 0,
       transparent 50%
     );
+
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
@@ -108,7 +113,7 @@ textarea {
 
 button {
   cursor: pointer;
-  border: none;
+  border: 0;
   background: none;
 }
 
@@ -124,16 +129,14 @@ a:focus {
 }
 
 /* =========================================================
-   3. LAYOUT & CONTAINER
+   3. CONTAINER & GENERAL LAYOUT
    ========================================================= */
 
 .container {
   width: 100%;
   max-width: var(--container-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-inline: auto;
+  padding-inline: 20px;
 }
 
 #loadMore[hidden] {
@@ -141,14 +144,17 @@ a:focus {
 }
 
 /* =========================================================
-   4. HERO SECTION & SEARCH
+   4. HERO & SEARCH
    ========================================================= */
 
 .hero {
-  padding: 16px 0 12px;
-  text-align: center;
   position: relative;
   overflow: hidden;
+
+  padding: 16px 0 12px;
+
+  text-align: center;
+
   background: radial-gradient(
     circle at center,
     rgba(30, 41, 59, 0.5) 0%,
@@ -159,25 +165,38 @@ a:focus {
 .hero p {
   max-width: 620px;
   margin: 0 auto 36px;
+
   color: var(--text);
   font-size: 1.8rem;
   font-weight: 400;
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+
   opacity: 0;
+
+  animation:
+    fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s
+    forwards;
 }
 
 .search-box {
   display: flex;
+
   max-width: 680px;
   margin: 0 auto 20px;
   padding: 4px;
+
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 50px;
+
   box-shadow: var(--shadow);
-  transition: var(--transition);
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+
   opacity: 0;
+
+  transition: var(--transition);
+
+  animation:
+    fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s
+    forwards;
 }
 
 .search-box:focus-within {
@@ -188,13 +207,17 @@ a:focus {
 .search-box input {
   flex: 1;
   min-width: 0;
+
   height: 40px;
   padding: 0 20px;
-  font-size: 1.4rem;
+
   border: 0;
-  outline: none;
+  outline: 0;
+
   background: transparent;
   color: var(--heading);
+
+  font-size: 1.4rem;
 }
 
 .search-box input::placeholder {
@@ -204,12 +227,15 @@ a:focus {
 .search-box button {
   height: 40px;
   padding: 0 20px;
-  border: 0;
+
   border-radius: 40px;
+
   background: var(--primary);
   color: var(--white);
+
   font-size: 1.3rem;
   font-weight: 600;
+
   transition: var(--transition);
 }
 
@@ -233,7 +259,9 @@ a:focus {
 
 .catalog-layout {
   display: grid;
+
   grid-template-columns: 220px minmax(0, 1fr);
+
   gap: 40px;
 }
 
@@ -249,25 +277,32 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 16px;
+
   margin-bottom: 20px;
   padding-bottom: 12px;
+
   border-bottom: 1px solid var(--border);
 }
 
 .catalog-title {
   display: flex;
   align-items: baseline;
+
   gap: 10px;
   min-width: 0;
 }
 
 .catalog-header h2 {
   margin: 0;
+
   color: var(--heading);
+
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.2;
+
   letter-spacing: -0.02em;
 }
 
@@ -283,8 +318,11 @@ a:focus {
 .sort-control {
   display: flex;
   align-items: center;
+
   gap: 8px;
+
   flex-shrink: 0;
+
   color: var(--text-muted);
   font-size: 1.1rem;
 }
@@ -292,7 +330,6 @@ a:focus {
 .sort-select-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 0;
 }
 
 .sort-control select,
@@ -300,41 +337,47 @@ a:focus {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
   height: 34px;
   padding: 6px 34px 6px 12px;
-  border: 1px solid var(--border, #334155);
-  border-radius: var(--radius, 6px);
-  background-color: var(--bg-card, #1e293b);
-  color: var(--text, #94a3b8);
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.4;
-  outline: none;
-  cursor: pointer;
-  transition: var(--transition, all 0.25s cubic-bezier(0.4, 0, 0.2, 1));
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  outline: 0;
+
+  background-color: var(--bg-card);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
+
+  color: var(--text);
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  transition: var(--transition);
 }
 
 .sort-control select:hover,
 .sort-control select:focus,
 #sortSelect:hover,
 #sortSelect:focus {
-  border-color: var(--primary, #3b82f6);
-  color: var(--heading, #f8fafc);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  border-color: var(--primary);
+  color: var(--heading);
 }
 
 .sort-control select:focus,
 #sortSelect:focus {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
 #sortSelect option {
-  background-color: var(--bg-card, #1e293b);
-  color: var(--text, #94a3b8);
-  padding: 8px;
+  background-color: var(--bg-card);
+  color: var(--text);
 }
 
 /* =========================================================
@@ -346,15 +389,18 @@ a:focus {
 }
 
 .desktop-category-sidebar {
-  border-right: 1px solid var(--border);
   padding-right: 20px;
+  border-right: 1px solid var(--border);
 }
 
 .category-sidebar h2 {
   margin: 0 0 20px;
+
   color: var(--heading);
+
   font-size: 1.3rem;
   font-weight: 700;
+
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -365,9 +411,12 @@ a:focus {
 
 .category-group h3 {
   margin: 0 0 10px;
+
   color: var(--primary);
+
   font-size: 1.2rem;
   font-weight: 700;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -375,28 +424,35 @@ a:focus {
 .category-group a,
 .category-link {
   display: block;
+
   width: 100%;
   padding: 6px 10px;
+
   border: 0;
   border-radius: var(--radius);
+
   background: transparent;
   color: var(--text);
+
   font-size: 1.4rem;
   text-align: left;
+
   cursor: pointer;
+
   transition: var(--transition);
 }
 
 .category-group a:hover,
 .category-link:hover {
-  color: var(--heading);
-  background: var(--light);
   padding-left: 14px;
+
+  background: var(--light);
+  color: var(--heading);
 }
 
 .category-link.active {
-  color: var(--primary);
   background: var(--primary-glow);
+  color: var(--primary);
   font-weight: 600;
 }
 
@@ -410,27 +466,39 @@ a:focus {
 
 .mobile-category-filter label {
   display: block;
+
   margin-bottom: 7px;
+
   color: var(--text-muted);
+
   font-size: 1.1rem;
   font-weight: 600;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .mobile-category-filter select {
   display: block;
+
   width: 100%;
   height: 44px;
+
   padding: 0 40px 0 14px;
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
+
+  outline: 0;
+
   background-color: var(--bg-card);
   color: var(--heading);
+
   font-size: 1.4rem;
   font-weight: 500;
-  outline: none;
+
   cursor: pointer;
+
   transition: var(--transition);
 }
 
@@ -444,75 +512,161 @@ a:focus {
 }
 
 /* =========================================================
-   10. PROJECT GRID
+   10. PROJECT GRID — MASONRY
    ========================================================= */
 
+/*
+   CSS columns create a masonry-style layout.
+
+   Cards keep their natural height instead of being stretched
+   to match the tallest card in a row.
+*/
+
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  display: block;
+
+  column-count: 3;
+  column-gap: 24px;
 }
 
 /* =========================================================
-   11. PROJECT CARDS
+   11. PROJECT CARD
    ========================================================= */
 
 .project-card {
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0 0 24px;
+
+  min-width: 0;
+
+  align-self: start;
+
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  overflow: hidden;
+
   background: var(--bg-card);
+
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+
   transition: var(--transition);
+
   animation: fadeIn 0.4s ease forwards;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-focus);
-  box-shadow: var(--shadow);
+
   background: var(--bg-card-hover);
+
+  border-color: var(--border-focus);
+
+  box-shadow: var(--shadow);
 }
 
 /* =========================================================
-   12. PROJECT IMAGE
+   12. PROJECT CARD LINK
    ========================================================= */
+
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+
+  flex: 0 0 auto;
+
+  min-width: 0;
+
+  color: inherit;
+}
+
+.project-card-link:hover,
+.project-card-link:focus {
+  color: inherit;
+}
+
+/* =========================================================
+   13. PROJECT IMAGE — NATURAL HEIGHT
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   Do not use aspect-ratio here.
+
+   The image determines the height of its own area.
+   This allows:
+   - landscape images
+   - portrait images
+   - Flutter screenshots
+   - tall screenshots
+   - wide screenshots
+
+   to keep their natural proportions.
+*/
 
 .project-image {
   display: block;
-  aspect-ratio: 16 / 9;
+
+  width: 100%;
+  height: auto;
+
   overflow: hidden;
+
   background: var(--light);
+
   position: relative;
 }
 
 .project-image img {
+  display: block;
+
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
   transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .project-image-placeholder {
   display: flex;
+
   width: 100%;
-  height: 100%;
+  min-height: 220px;
+
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--light), var(--bg-card));
+
+  background: linear-gradient(
+    135deg,
+    var(--light),
+    var(--bg-card)
+  );
+
   color: var(--primary);
+
   font-family: "Fira Code", monospace;
   font-size: 3.2rem;
   font-weight: 700;
 }
 
 /* =========================================================
-   13. PROJECT CONTENT
+   14. PROJECT CARD INFORMATION
    ========================================================= */
 
 .project-body,
@@ -520,27 +674,45 @@ a:focus {
 .compact-card-body {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  padding: 12px 16px;
+
+  flex: 0 0 auto;
+
+  min-width: 0;
+
+  padding: 9px 13px 10px;
 }
 
+/* Host / framework */
+
 .project-host {
-  margin-bottom: 3px;
+  margin: 0 0 2px;
+
   color: var(--primary);
+
   font-family: "Fira Code", monospace;
-  font-size: 1.1rem;
+
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 1.2;
+
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
+/* Title */
+
 .project-body h3,
 .project-card-body h3,
 .compact-card-body h3 {
-  margin: 0 0 4px;
-  font-size: 1.7rem;
+  margin: 0 0 3px;
+
+  color: var(--heading);
+
+  font-size: 1.55rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.25;
+
+  letter-spacing: -0.01em;
 }
 
 .project-body h3 a,
@@ -553,55 +725,77 @@ a:focus {
   color: var(--primary);
 }
 
+/* Description */
+
 .project-body p,
 .project-card-body p,
 .compact-card-body p {
-  margin: 0 0 6px;
-  color: var(--text);
-  font-size: 0.98rem;
-  line-height: 1.4;
   display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+
+  margin: 0 0 4px;
+
   overflow: hidden;
+
+  color: var(--text);
+
+  font-size: 0.96rem;
+  line-height: 1.3;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 /* =========================================================
-   14. PROJECT TAGS & STATS
+   15. PROJECT TAGS
    ========================================================= */
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: auto;
-  margin-bottom: 4px;
+
+  gap: 4px;
+
+  margin: 3px 0 0;
 }
 
 .project-tags span {
   display: inline-block;
-  padding: 3px 8px;
+
+  padding: 2px 6px;
+
   background: var(--light);
   color: var(--text-muted);
+
   border-radius: 4px;
+
   font-family: "Fira Code", monospace;
-  font-size: 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.25;
 }
+
+/* =========================================================
+   16. GITHUB STATS
+   ========================================================= */
 
 .project-stats {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
-  font-size: 0.936rem;
-  line-height: 1.2;
-  color: var(--text-muted, #777);
+
+  gap: 6px;
+
+  margin-top: 5px;
+
+  color: var(--text-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.15;
 }
 
 .project-stats span {
   display: inline-flex;
   align-items: center;
+
   white-space: nowrap;
 }
 
@@ -610,81 +804,157 @@ a:focus {
 }
 
 .project-stats .github-stats-link {
+  display: inline-flex;
+
+  width: 20px;
+  height: 20px;
+
   margin-left: auto;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-muted);
+
+  border-radius: 4px;
+}
+
+.project-stats .github-stats-link:hover {
+  background: var(--light);
+  color: var(--heading);
+}
+
+.github-stats-icon {
+  display: block;
+
+  width: 16px;
+  height: 16px;
+}
+
+/*
+   repo.js provides the single GitHub repository control.
+
+   If createProjectCard() still generates the older
+   .project-github-button, hide it so users don't see
+   two GitHub controls.
+*/
+
+.project-actions,
+.project-github-button {
+  display: none !important;
 }
 
 /* =========================================================
-   15. LOADING & UTILITIES
+   17. LOADING / EMPTY / LOAD MORE
    ========================================================= */
 
 .catalog-loading {
   padding: 60px 0;
-  text-align: center;
+
   color: var(--text-muted);
+
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .catalog-loading.hidden {
   display: none;
 }
 
+.catalog-empty {
+  grid-column: 1 / -1;
+
+  padding: 50px 20px;
+
+  text-align: center;
+}
+
+.catalog-empty h3 {
+  margin: 0 0 8px;
+
+  color: var(--heading);
+}
+
+.catalog-empty p {
+  margin: 0;
+
+  color: var(--text-muted);
+}
+
 .load-more {
   display: block;
+
   margin: 40px auto 0;
   padding: 12px 32px;
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
+
   background: var(--bg-card);
   color: var(--heading);
+
   font-size: 1.4rem;
   font-weight: 600;
+
   transition: var(--transition);
 }
 
 .load-more:hover {
-  border-color: var(--primary);
   background: var(--primary);
+  border-color: var(--primary);
   color: var(--white);
+
   box-shadow: var(--shadow-glow);
 }
 
 /* =========================================================
-   16. FOOTER
+   18. FOOTER
    ========================================================= */
 
 .site-footer {
   padding: 60px 0 30px;
+
   background: var(--header-dark);
+
   color: var(--text-muted);
+
   border-top: 1px solid var(--border);
 }
 
 .site-footer .container {
   display: grid;
+
   grid-template-columns: 1fr auto;
+
   gap: 30px;
 }
 
 .site-footer strong {
   display: block;
+
   margin-bottom: 8px;
+
   color: var(--heading);
+
   font-size: 1.8rem;
 }
 
 .site-footer p {
   margin: 0;
+
   font-size: 1.4rem;
 }
 
 .site-footer nav {
   display: flex;
-  gap: 20px;
   align-items: center;
+
+  gap: 20px;
 }
 
 .site-footer nav a {
   color: var(--text);
+
   font-size: 1.4rem;
 }
 
@@ -694,15 +964,18 @@ a:focus {
 
 .site-footer .copyright {
   grid-column: 1 / -1;
+
   margin-top: 20px;
   padding-top: 24px;
+
   border-top: 1px solid var(--border);
-  text-align: center;
+
   font-size: 1.3rem;
+  text-align: center;
 }
 
 /* =========================================================
-   17. KEYFRAME ANIMATIONS
+   19. ANIMATIONS
    ========================================================= */
 
 @keyframes fadeIn {
@@ -710,6 +983,7 @@ a:focus {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -721,6 +995,7 @@ a:focus {
     opacity: 0;
     transform: translateY(16px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -728,7 +1003,7 @@ a:focus {
 }
 
 /* =========================================================
-   18. RESPONSIVE — TABLET
+   20. TABLET
    ========================================================= */
 
 @media (max-width: 991px) {
@@ -738,12 +1013,17 @@ a:focus {
   }
 
   .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
   }
 }
 
 /* =========================================================
-   19. RESPONSIVE — MOBILE
+   21. MOBILE
    ========================================================= */
 
 @media (max-width: 767px) {
@@ -765,6 +1045,7 @@ a:focus {
 
   .mobile-category-filter {
     display: block;
+
     margin-bottom: 24px;
   }
 
@@ -782,22 +1063,42 @@ a:focus {
     font-size: 1.7rem;
   }
 
+  /*
+     One masonry column on mobile.
+
+     Each card keeps its natural height.
+  */
+
   .project-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    column-count: 1;
+    column-gap: 0;
   }
 
   .project-card {
     width: 100%;
+
+    margin-bottom: 16px;
   }
 
-  .project-body,
   .project-card-body {
-    padding: 16px;
+    padding: 10px 13px;
+  }
+
+  .project-body h3,
+  .project-card-body h3,
+  .compact-card-body h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-body p,
+  .project-card-body p,
+  .compact-card-body p {
+    font-size: 0.95rem;
   }
 
   .site-footer .container {
     grid-template-columns: 1fr;
+
     text-align: center;
   }
 
@@ -807,7 +1108,7 @@ a:focus {
 }
 
 /* =========================================================
-   20. RESPONSIVE — SMALL MOBILE
+   22. SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -834,23 +1135,25 @@ a:focus {
 }
 
 /* =========================================================
-   21. RESPONSIVE — PHONES
+   23. PHONES
    ========================================================= */
 
 @media (max-width: 480px) {
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-inline: 16px;
   }
 
   .search-box {
     flex-direction: column;
-    border-radius: var(--radius-lg);
+
     padding: 8px;
+
+    border-radius: var(--radius-lg);
   }
 
   .search-box button {
     width: 100%;
+
     border-radius: var(--radius);
   }
 
@@ -864,15 +1167,76 @@ a:focus {
 
   .mobile-category-filter select {
     height: 42px;
+
     font-size: 1.3rem;
   }
 
-  .project-grid {
-    gap: 14px;
+  .project-card {
+    margin-bottom: 14px;
   }
 
-  .project-body,
   .project-card-body {
-    padding: 15px;
+    padding: 8px 12px 9px;
   }
+
+  .project-host {
+    font-size: 0.95rem;
+  }
+
+  .project-card-body h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-card-body p {
+    font-size: 0.94rem;
+  }
+
+  .project-tags {
+    gap: 3px;
+  }
+
+  .project-tags span {
+    padding: 2px 5px;
+
+    font-size: 0.88rem;
+  }
+
+  .project-stats {
+    gap: 5px;
+
+    font-size: 0.86rem;
+  }
+}
+
+/* =========================================================
+   24. FLUTTER / TALL SCREENSHOTS
+   ========================================================= */
+
+/*
+   Flutter screenshots are allowed to keep their full
+   natural aspect ratio. No cropping and no forced height.
+*/
+
+.flutter-page .project-image {
+  height: auto;
+
+  min-height: 0;
+  max-height: none;
+
+  aspect-ratio: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.flutter-page .project-image img {
+  width: 100%;
+  height: auto;
+
+  max-height: none;
+
+  object-fit: contain;
 }

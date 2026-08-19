@@ -21,3 +21,139 @@ Blazor, WinUI, Avalonia, Uno Platform, Flutter, AI, and more.
 
 Each project includes useful information such as its description,
 supported platforms, framework, repository, and related links.
+
+
+
+function createProjectCard(project) {
+  const article = document.createElement("article");
+  article.className = "project-card";
+
+  // =========================================================
+  // GITHUB REPOSITORY
+  // =========================================================
+
+  const repo = getGitHubRepo(project.project_url);
+
+  if (repo) {
+    article.dataset.repo = repo;
+  }
+
+  // =========================================================
+  // PROJECT IMAGE
+  // =========================================================
+
+  const image = getProjectImage(project);
+
+  const imageHtml = image
+    ? `<img
+         src="${escapeAttribute(image)}"
+         alt="${escapeAttribute(project.title)}"
+         loading="lazy"
+         decoding="async"
+         onerror="handleImageError(
+           this,
+           '${escapeAttribute(project.data_category)}'
+         )"
+       >`
+    : `<div class="project-image-placeholder">
+         ${escapeHtml(project.title.charAt(0))}
+       </div>`;
+
+  // =========================================================
+  // CATEGORIES
+  // =========================================================
+
+  const categoryNames = (project.categories || [])
+    .map((id) => (typeof CATEGORIES !== "undefined" ? CATEGORIES[id] : null))
+    .filter(Boolean)
+    .slice(0, 3);
+
+  const categoryHtml = categoryNames
+    .map((name) => `<span class="project-tag">${escapeHtml(name)}</span>`)
+    .join("");
+
+  // =========================================================
+  // SECTION
+  // =========================================================
+
+  const section =
+    typeof DATA_SECTIONS !== "undefined"
+      ? DATA_SECTIONS[project.data_section]
+      : null;
+
+  const sectionName = section ? section.name : project.data_section;
+
+  // =========================================================
+  // CARD HTML
+  // =========================================================
+
+  article.innerHTML = `
+    <a
+      class="project-card-link"
+      href="${escapeAttribute(getDetailUrl(project))}"
+    >
+
+      <div class="project-image">
+        ${imageHtml}
+      </div>
+
+      <div class="project-card-body">
+
+        <div class="project-host">
+          ${escapeHtml(sectionName)}
+        </div>
+
+        <h3>
+          ${escapeHtml(project.title)}
+        </h3>
+
+        <p>
+          ${escapeHtml(project.description)}
+        </p>
+
+        ${
+          categoryHtml
+            ? `
+              <div class="project-tags">
+                ${categoryHtml}
+              </div>
+            `
+            : ""
+        }
+
+        ${
+          repo
+            ? `
+              <div
+                class="project-stats"
+                data-stats
+                aria-label="GitHub statistics"
+              >
+               
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+
+    </a>
+  `;
+
+  // =========================================================
+  // LOAD GITHUB STATS IN BACKGROUND
+  // =========================================================
+  //
+  // IMPORTANT:
+  // Do not await this.
+  //
+  // The card is returned immediately and the stats
+  // are filled in when the request finishes.
+  //
+
+  if (repo) {
+    loadGitHubStats(article, repo);
+  }
+
+  return article;
+}
