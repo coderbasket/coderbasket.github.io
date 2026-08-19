@@ -10,4 +10,8 @@ git push origin environment
 
 
 
+Ctrl + Shift + S → opens Screenshot / Web Capture.
+
+
+
 
