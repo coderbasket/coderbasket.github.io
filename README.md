@@ -118,4 +118,4 @@ Developers and contributors are welcome to submit projects and help grow the col
 
 ## 📸 Screenshot
 
-![Coder Basket](https://github.com/coderbasket/coderbasket.github.io/raw/environment/image/Screenshot1.png)
+![Coder Basket](https://github.com/coderbasket/coderbasket.github.io/blob/environment/images/screenshot1.jpeg)
