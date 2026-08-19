@@ -256,11 +256,7 @@ async function loadCatalog() {
       if (result.status === "fulfilled") {
         projects.push(...result.value);
       } else {
-        warn(
-          "loadCatalog",
-          "Unable to load catalogue source:",
-          result.reason,
-        );
+        warn("loadCatalog", "Unable to load catalogue source:", result.reason);
       }
     }
 
@@ -327,7 +323,8 @@ async function loadCatalogSection(sectionKey) {
     var finalItems = items.map((item) => ({
       ...item,
       source_section: sourceSectionKey,
-      data_section: item.section || item.data_section || item.DataSection || sectionKey,
+      data_section:
+        item.section || item.data_section || item.DataSection || sectionKey,
       data_category:
         item.section_category ||
         item.data_category ||
@@ -363,17 +360,14 @@ function getDataSourceSectionKey(sectionKey) {
 
 function normalizeProjects(projects) {
   return projects.map((project) => {
-    const rawCategories =
-      Array.isArray(project.categories)
-        ? project.categories
-        : Array.isArray(project.Categories)
-          ? project.Categories
-          : [];
+    const rawCategories = Array.isArray(project.categories)
+      ? project.categories
+      : Array.isArray(project.Categories)
+        ? project.Categories
+        : [];
 
     const categories =
-      rawCategories.length > 0
-        ? [...new Set(rawCategories)]
-        : [41];
+      rawCategories.length > 0 ? [...new Set(rawCategories)] : [41];
 
     const platforms = Array.isArray(project.platforms)
       ? [...new Set(project.platforms)]
@@ -429,8 +423,7 @@ function normalizeProjects(projects) {
       image_urls: imageUrls,
       data_section:
         project.section || project.data_section || project.DataSection || "",
-      data_category:
-        project.section_category || dataCategory || "all",
+      data_category: project.section_category || dataCategory || "all",
       source_section: project.source_section || "",
       updated_at:
         project.updated_at || project.updated || project.UpdatedAt || null,
@@ -744,6 +737,7 @@ function getDateValue(project) {
 
 function renderProjects() {
   if (!projectGrid) return;
+
   projectGrid.innerHTML = "";
 
   const visibleProjects = filteredProjects.slice(0, currentPage * PAGE_SIZE);
@@ -755,38 +749,100 @@ function renderProjects() {
         <p>Try another search or category.</p>
       </div>
     `;
+
     updateLoadMoreButton();
     return;
   }
 
   const fragment = document.createDocumentFragment();
+
   for (const project of visibleProjects) {
     fragment.appendChild(createProjectCard(project));
   }
 
   projectGrid.appendChild(fragment);
+
   updateLoadMoreButton();
 }
 
 function getDetailUrl(project) {
-  const repoUrl = project.project_url || project.ExternalUrl || "";
-  if (!repoUrl) return "#";
+  const repoUrl = project.project_url || "";
 
-  // If project_url is already a full GitHub URL, extract owner/repo or encode it properly
-  try {
-    const parsed = new URL(repoUrl);
-    if (parsed.hostname === "github.com") {
-      const cleanRepo = parsed.pathname
-        .replace(/^\//, "")
-        .replace(/\.git$/, "");
-      const params = new URLSearchParams({ repo: cleanRepo });
-      return `/details/?${params.toString()}`;
-    }
-  } catch {
-    // Fallback if it's not a valid URL yet
+  if (!repoUrl) {
+    return "#";
   }
 
-  const params = new URLSearchParams({ repo: repoUrl });
+  // -------------------------------------------------------
+  // Store complete project JSON locally
+  // -------------------------------------------------------
+
+  try {
+    const parsed = new URL(repoUrl);
+
+    if (parsed.hostname === "github.com") {
+      const parts = parsed.pathname.split("/").filter(Boolean);
+
+      if (parts.length >= 2) {
+        const owner = parts[0];
+        const repo = parts[1].replace(/\.git$/, "");
+
+        const storageKey = `coderbasket_project_${owner}_${repo}`.toLowerCase();
+
+        const existing = localStorage.getItem(storageKey);
+
+        if (!existing) {
+          // First time: store the catalogue project.
+          localStorage.setItem(storageKey, JSON.stringify(project));
+
+          console.log("[ProjectDetails] Stored new project:", {
+            storageKey,
+          });
+        } else {
+          try {
+            const existingProject = JSON.parse(existing);
+
+            /*
+             * Update the catalogue/base properties.
+             *
+             * Properties already appended by details.js
+             * are preserved because they are merged afterward.
+             */
+            const updatedProject = {
+              ...project,
+              ...existingProject,
+            };
+
+            localStorage.setItem(storageKey, JSON.stringify(updatedProject));
+
+            console.log(
+              "[ProjectDetails] Updated base project, preserved details:",
+              {
+                storageKey,
+              },
+            );
+          } catch (parseError) {
+            console.warn(
+              "[ProjectDetails] Existing data is invalid. Replacing it:",
+              parseError,
+            );
+
+            localStorage.setItem(storageKey, JSON.stringify(project));
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.warn("[ProjectDetails] Failed to store project:", error);
+  }
+
+  // -------------------------------------------------------
+  // Keep the FULL GitHub URL in the URL parameter
+  // -------------------------------------------------------
+
+  const params = new URLSearchParams({
+    repo: repoUrl,
+  });
+
   return `/details/?${params.toString()}`;
 }
 
@@ -794,10 +850,40 @@ function createProjectCard(project) {
   const article = document.createElement("article");
   article.className = "project-card";
 
+  // =========================================================
+  // GITHUB REPOSITORY
+  // =========================================================
+
+  const repo = getGitHubRepo(project.project_url);
+
+  if (repo) {
+    article.dataset.repo = repo;
+  }
+
+  // =========================================================
+  // PROJECT IMAGE
+  // =========================================================
+
   const image = getProjectImage(project);
+
   const imageHtml = image
-    ? `<img src="${escapeAttribute(image)}" alt="${escapeAttribute(project.title)}" loading="lazy" decoding="async" onerror="handleImageError(this, '${escapeAttribute(project.data_category)}')">`
-    : `<div class="project-image-placeholder">${escapeHtml(project.title.charAt(0))}</div>`;
+    ? `<img
+         src="${escapeAttribute(image)}"
+         alt="${escapeAttribute(project.title)}"
+         loading="lazy"
+         decoding="async"
+         onerror="handleImageError(
+           this,
+           '${escapeAttribute(project.data_category)}'
+         )"
+       >`
+    : `<div class="project-image-placeholder">
+         ${escapeHtml(project.title.charAt(0))}
+       </div>`;
+
+  // =========================================================
+  // CATEGORIES
+  // =========================================================
 
   const categoryNames = (project.categories || [])
     .map((id) => (typeof CATEGORIES !== "undefined" ? CATEGORIES[id] : null))
@@ -808,25 +894,111 @@ function createProjectCard(project) {
     .map((name) => `<span class="project-tag">${escapeHtml(name)}</span>`)
     .join("");
 
+  // =========================================================
+  // SECTION
+  // =========================================================
+
   const section =
     typeof DATA_SECTIONS !== "undefined"
       ? DATA_SECTIONS[project.data_section]
       : null;
+
   const sectionName = section ? section.name : project.data_section;
 
+  // =========================================================
+  // CARD HTML
+  // =========================================================
+
   article.innerHTML = `
-    <a class="project-card-link" href="${escapeAttribute(getDetailUrl(project))}">
-      <div class="project-image">${imageHtml}</div>
-      <div class="project-card-body">
-        <div class="project-host">${escapeHtml(sectionName)}</div>
-        <h3>${escapeHtml(project.title)}</h3>
-        <p>${escapeHtml(project.description)}</p>
-        ${categoryHtml ? `<div class="project-tags">${categoryHtml}</div>` : ""}
+    <a
+      class="project-card-link"
+      href="${escapeAttribute(getDetailUrl(project))}"
+    >
+
+      <div class="project-image">
+        ${imageHtml}
       </div>
+
+      <div class="project-card-body">
+
+        <div class="project-host">
+          ${escapeHtml(sectionName)}
+        </div>
+
+        <h3>
+          ${escapeHtml(project.title)}
+        </h3>
+
+        <p>
+          ${escapeHtml(project.description)}
+        </p>
+
+        ${
+          categoryHtml
+            ? `
+              <div class="project-tags">
+                ${categoryHtml}
+              </div>
+            `
+            : ""
+        }
+
+        ${
+          repo
+            ? `
+              <div
+                class="project-stats"
+                data-stats
+                aria-label="GitHub statistics"
+              >
+               
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+
     </a>
   `;
 
+  // =========================================================
+  // LOAD GITHUB STATS IN BACKGROUND
+  // =========================================================
+  //
+  // IMPORTANT:
+  // Do not await this.
+  //
+  // The card is returned immediately and the stats
+  // are filled in when the request finishes.
+  //
+
+  if (repo) {
+    loadGitHubStats(article, repo);
+  }
+
   return article;
+}
+function getGitHubRepo(url) {
+  if (!url) return "";
+
+  try {
+    const parsed = new URL(url);
+
+    if (parsed.hostname !== "github.com") {
+      return "";
+    }
+
+    const parts = parsed.pathname.split("/").filter(Boolean);
+
+    if (parts.length < 2) {
+      return "";
+    }
+
+    return `${parts[0]}/${parts[1]}`;
+  } catch {
+    return "";
+  }
 }
 
 function getProjectImage(project) {

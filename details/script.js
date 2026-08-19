@@ -51,14 +51,10 @@
   // START
   // =========================================================
 
-  // =========================================================
-  // START
-  // =========================================================
-
   document.addEventListener("DOMContentLoaded", initialize);
 
   async function initialize() {
-    updateYear(); // Use the existing function name
+    updateYear();
 
     const repoUrl = getRepositoryFromUrl();
 
@@ -79,24 +75,51 @@
     }
 
     try {
-      // 1. Fetch Data
+      // 1. Fetch Data from GitHub API
       const repoData = await loadRepository(repository);
 
-      // 2. Render Data
+      // 2. Render GitHub API Data
       renderRepository(repoData);
 
-      // 3. Load README (with default branch)
-      await loadReadme(repository, repoData.default_branch || "main");
+      // 3. Extract & Append github_data to local project JSON
+      const githubData = extractGithubData(repoData, repository);
+      findAndSaveGithubData(repository, repoUrl, githubData);
 
-      // 4. Show Content
+      // 4. Load README & Extract Screenshots
+      await loadReadme(repository, repoData.default_branch || "main", repoUrl);
+
+      // 5. Show Content
       hideLoading();
     } catch (err) {
-      showError(err.message);
+      console.warn("[ProjectDetails] GitHub API failure:", err.message);
+
+      // Fallback: Try loading from localStorage
+      const localProject = getStoredProject(repository);
+
+      if (localProject) {
+        // If cached github_data exists, use it to populate GitHub render structure
+        if (localProject.github_data) {
+          renderRepository(localProject.github_data);
+
+          // Render cached screenshots if available
+          if (
+            Array.isArray(localProject.github_data.screenshot_urls) &&
+            localProject.github_data.screenshot_urls.length > 0
+          ) {
+            renderCachedScreenshots(localProject.github_data.screenshot_urls);
+          }
+        } else {
+          renderLocalProject(localProject, repository);
+        }
+        hideLoading();
+      } else {
+        showError(err.message);
+      }
     }
   }
 
   // =========================================================
-  // URL
+  // URL & LOCAL STORAGE HELPERS
   // =========================================================
 
   function getRepositoryFromUrl() {
@@ -112,6 +135,318 @@
       return decodeURIComponent(repo);
     } catch {
       return repo;
+    }
+  }
+
+  function getStorageKey(repository) {
+    if (!repository?.owner || !repository?.repo) {
+      return null;
+    }
+    return `coderbasket_project_${repository.owner}_${repository.repo}`.toLowerCase();
+  }
+
+  function getStoredProject(repository) {
+    if (!repository?.owner || !repository?.repo) {
+      return null;
+    }
+
+    try {
+      // First check the expected storage key.
+      const storageKey = getStorageKey(repository);
+
+      if (storageKey) {
+        const stored = localStorage.getItem(storageKey);
+
+        if (stored) {
+          const parsed = JSON.parse(stored);
+
+          if (Array.isArray(parsed)) {
+            const match = parsed.find((project) =>
+              isMatchingProject(project, repository),
+            );
+
+            if (match) {
+              return match;
+            }
+          } else if (
+            typeof parsed === "object" &&
+            parsed !== null &&
+            isMatchingProject(parsed, repository)
+          ) {
+            return parsed;
+          }
+        }
+      }
+
+      // Then search all localStorage entries.
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+
+        if (!key || key === storageKey) {
+          continue;
+        }
+
+        try {
+          const raw = localStorage.getItem(key);
+
+          if (!raw) {
+            continue;
+          }
+
+          const data = JSON.parse(raw);
+
+          if (Array.isArray(data)) {
+            const match = data.find((project) =>
+              isMatchingProject(project, repository),
+            );
+
+            if (match) {
+              return match;
+            }
+          } else if (
+            typeof data === "object" &&
+            data !== null &&
+            isMatchingProject(data, repository)
+          ) {
+            return data;
+          }
+        } catch {
+          // Ignore unrelated/invalid localStorage entries.
+        }
+      }
+
+      return null;
+    } catch (error) {
+      console.warn("[ProjectDetails] Failed reading stored project:", error);
+
+      return null;
+    }
+  }
+
+  function isMatchingProject(projectObj, repository) {
+    if (!projectObj || !repository) {
+      return false;
+    }
+
+    const projectUrl = projectObj.project_url;
+
+    if (!projectUrl) {
+      return false;
+    }
+
+    const parsed = parseGitHubRepository(projectUrl);
+
+    if (!parsed) {
+      return false;
+    }
+
+    return (
+      parsed.owner.toLowerCase() === repository.owner.toLowerCase() &&
+      parsed.repo.toLowerCase() === repository.repo.toLowerCase()
+    );
+  }
+function extractGithubData(data, repository) {
+  if (!data || !repository) {
+    return {};
+  }
+
+  return {
+    stargazers_count: data.stargazers_count ?? null,
+    forks_count: data.forks_count ?? null,
+    open_issues_count: data.open_issues_count ?? null,
+    language: data.language ?? null,
+
+    name: data.name ?? null,
+    full_name: data.full_name ?? null,
+    description: data.description ?? null,
+
+    html_url:
+      data.html_url ||
+      `https://github.com/${repository.owner}/${repository.repo}`,
+
+    homepage: data.homepage ?? null,
+    default_branch: data.default_branch ?? "main",
+
+    owner: data.owner?.login ?? repository.owner,
+    owner_avatar_url: data.owner?.avatar_url ?? null,
+
+    topics: Array.isArray(data.topics)
+      ? data.topics
+      : [],
+
+    updated_at: data.updated_at ?? null,
+
+    license: data.license?.name ?? null,
+  };
+}
+  function findAndSaveGithubData(repository, repoUrl, githubDataPartial) {
+    if (!repository?.owner || !repository?.repo) {
+      return false;
+    }
+
+    try {
+      const storageKey = getStorageKey(repository);
+
+      // Normalize the URL used for matching.
+      const parsedRepo = parseGitHubRepository(repoUrl);
+
+      const normalizedRepoUrl = parsedRepo
+        ? `https://github.com/${parsedRepo.owner}/${parsedRepo.repo}`
+        : repoUrl;
+
+      // =====================================================
+      // 1. Check the expected storage key first
+      // =====================================================
+
+      if (storageKey) {
+        const stored = localStorage.getItem(storageKey);
+
+        if (stored) {
+          const data = JSON.parse(stored);
+
+          // Existing JSON is an array of projects.
+          if (Array.isArray(data)) {
+            const index = data.findIndex(
+              (item) =>
+                isMatchingProject(item, repository) ||
+                item.project_url === repoUrl ||
+                item.project_url === normalizedRepoUrl,
+            );
+
+            if (index !== -1) {
+              data[index].github_data = {
+                ...(data[index].github_data || {}),
+                ...githubDataPartial,
+              };
+
+              // Preserve the existing project_url.
+              if (!data[index].project_url) {
+                data[index].project_url = normalizedRepoUrl;
+              }
+
+              localStorage.setItem(storageKey, JSON.stringify(data));
+
+              console.log(
+                "[ProjectDetails] Updated existing project:",
+                data[index],
+              );
+
+              return true;
+            }
+          }
+
+          // Existing JSON is a single project.
+          if (typeof data === "object" && data !== null) {
+            if (
+              isMatchingProject(data, repository) ||
+              data.project_url === repoUrl ||
+              data.project_url === normalizedRepoUrl
+            ) {
+              data.github_data = {
+                ...(data.github_data || {}),
+                ...githubDataPartial,
+              };
+
+              // Preserve the existing URL.
+              if (!data.project_url) {
+                data.project_url = normalizedRepoUrl;
+              }
+
+              localStorage.setItem(storageKey, JSON.stringify(data));
+
+              console.log("[ProjectDetails] Updated existing project:", data);
+
+              return true;
+            }
+          }
+        }
+      }
+
+      // =====================================================
+      // 2. Search every localStorage entry
+      // =====================================================
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+
+        if (!key || key === storageKey) {
+          continue;
+        }
+
+        try {
+          const raw = localStorage.getItem(key);
+
+          if (!raw) {
+            continue;
+          }
+
+          const data = JSON.parse(raw);
+
+          // Existing JSON array.
+          if (Array.isArray(data)) {
+            const index = data.findIndex(
+              (item) =>
+                isMatchingProject(item, repository) ||
+                item.project_url === repoUrl ||
+                item.project_url === normalizedRepoUrl,
+            );
+
+            if (index !== -1) {
+              data[index].github_data = {
+                ...(data[index].github_data || {}),
+                ...githubDataPartial,
+              };
+
+              if (!data[index].project_url) {
+                data[index].project_url = normalizedRepoUrl;
+              }
+
+              localStorage.setItem(key, JSON.stringify(data));
+
+              console.log("[ProjectDetails] Updated existing project in:", key);
+
+              return true;
+            }
+          }
+
+          // Existing single JSON object.
+          if (typeof data === "object" && data !== null) {
+            if (
+              isMatchingProject(data, repository) ||
+              data.project_url === repoUrl ||
+              data.project_url === normalizedRepoUrl
+            ) {
+              data.github_data = {
+                ...(data.github_data || {}),
+                ...githubDataPartial,
+              };
+
+              if (!data.project_url) {
+                data.project_url = normalizedRepoUrl;
+              }
+
+              localStorage.setItem(key, JSON.stringify(data));
+
+              console.log("[ProjectDetails] Updated existing project in:", key);
+
+              return true;
+            }
+          }
+        } catch {
+          // Ignore unrelated localStorage entries.
+        }
+      }
+
+      console.warn(
+        "[ProjectDetails] Existing project was not found:",
+        normalizedRepoUrl,
+      );
+
+      return false;
+    } catch (error) {
+      console.warn("[ProjectDetails] Failed updating existing project:", error);
+
+      return false;
     }
   }
 
@@ -147,7 +482,12 @@
   // =========================================================
 
   async function loadRepository(repository) {
-    const url = `${GITHUB_API}/repos/${encodeURIComponent(repository.owner)}/${encodeURIComponent(repository.repo)}`;
+    const url =
+      `${GITHUB_API}/repos/` +
+      `${encodeURIComponent(repository.owner)}/` +
+      `${encodeURIComponent(repository.repo)}`;
+
+    console.log("[GitHub API] Request:", url);
 
     const response = await fetch(url, {
       headers: {
@@ -155,12 +495,52 @@
       },
     });
 
+    // =========================================================
+    // GITHUB RATE LIMIT LOG
+    // =========================================================
+
+    const limit = response.headers.get("X-RateLimit-Limit");
+    const remaining = response.headers.get("X-RateLimit-Remaining");
+    const reset = response.headers.get("X-RateLimit-Reset");
+
+    console.log("[GitHub API] Response:", {
+      status: response.status,
+      limit: limit,
+      remaining: remaining,
+      reset: reset ? new Date(Number(reset) * 1000).toLocaleString() : null,
+    });
+
+    // Warn when getting close to the limit
+    if (remaining !== null) {
+      const remainingNumber = Number(remaining);
+
+      if (remainingNumber <= 10) {
+        console.warn(
+          "[GitHub API] ⚠️ Rate limit getting low:",
+          remainingNumber,
+          "requests remaining",
+        );
+      }
+
+      if (remainingNumber === 0) {
+        console.error("[GitHub API] 🚨 RATE LIMIT REACHED!");
+      }
+    }
+
+    // =========================================================
+    // HANDLE RESPONSE
+    // =========================================================
+
     if (!response.ok) {
       if (response.status === 404) {
         throw new Error("Repository not found.");
       }
 
       if (response.status === 403) {
+        console.error(
+          "[GitHub API] 🚨 403 response. Rate limit may have been reached.",
+        );
+
         throw new Error("GitHub API rate limit reached.");
       }
 
@@ -171,50 +551,261 @@
   }
 
   // =========================================================
-  // RENDER REPOSITORY
+  // RENDER LOCAL PROJECT (CODER BASKET JSON)
+  // =========================================================
+
+  function renderLocalProject(projectData, repository) {
+    title.textContent =
+      projectData.title || repository.repo || "Untitled Project";
+
+    if (author) {
+      author.innerHTML = "";
+
+      const avatar = document.createElement("img");
+      avatar.src = `https://github.com/${encodeURIComponent(repository.owner)}.png`;
+      avatar.alt = "";
+      avatar.loading = "lazy";
+
+      const text = document.createElement("span");
+      text.textContent = `Created by ${repository.owner}`;
+
+      author.appendChild(avatar);
+      author.appendChild(text);
+    }
+
+    description.textContent =
+      projectData.description || "No description provided.";
+
+    if (projectData.section_category) {
+      category.textContent = projectData.section_category;
+    } else if (projectData.section) {
+      category.textContent = projectData.section;
+    } else if (
+      projectData.technologies &&
+      projectData.technologies.length > 0
+    ) {
+      category.textContent = projectData.technologies[0];
+    } else {
+      category.textContent = "Developer Project";
+    }
+
+    renderLocalPlatforms(projectData.platforms);
+    renderLocalStats(projectData.technologies);
+    renderLocalRepositoryCard(projectData, repository);
+
+    if (projectData.external_url) {
+      renderHomepage({ homepage: projectData.external_url });
+    } else {
+      homepageSection.hidden = true;
+    }
+
+    if (projectData.youtube_url) {
+      renderLocalYoutube(projectData.youtube_url);
+    } else {
+      youtubeSection.hidden = true;
+    }
+
+    if (projectData.image_url) {
+      renderLocalImage(projectData.image_url);
+    } else {
+      screenshotsSection.hidden = true;
+    }
+
+    if (readmeSection) {
+      readmeSection.hidden = true;
+    }
+
+    document.title = `${projectData.title || repository.repo} - Coder Basket`;
+  }
+
+  function renderLocalPlatforms(platformsList) {
+    platforms.innerHTML = "";
+
+    if (!Array.isArray(platformsList) || platformsList.length === 0) {
+      document.getElementById("platformsSection").hidden = true;
+      return;
+    }
+
+    document.getElementById("platformsSection").hidden = false;
+
+    for (const platform of platformsList) {
+      const item = document.createElement("span");
+      item.className = "platform-item";
+      item.textContent = platform;
+      platforms.appendChild(item);
+    }
+  }
+
+  function renderLocalStats(technologies) {
+    stats.innerHTML = "";
+
+    const values = [
+      { label: "Stars", value: "—", icon: "★" },
+      { label: "Forks", value: "—", icon: "⑂" },
+      { label: "Issues", value: "—", icon: "●" },
+    ];
+
+    if (Array.isArray(technologies) && technologies.length > 0) {
+      values.push({
+        label: "Language",
+        value: technologies[0],
+        icon: "●",
+      });
+    }
+
+    for (const item of values) {
+      const element = document.createElement("div");
+      element.className = "project-stat";
+      element.innerHTML = `
+        <span class="project-stat-icon">${escapeHtml(item.icon)}</span>
+        <span class="project-stat-value">${escapeHtml(item.value)}</span>
+        <span class="project-stat-label">${escapeHtml(item.label)}</span>
+      `;
+      stats.appendChild(element);
+    }
+  }
+
+  function renderLocalRepositoryCard(projectData, repository) {
+    repositoryCard.innerHTML = "";
+
+    const card = document.createElement("div");
+    card.className = "repository-card-inner";
+
+    const titleElement = document.createElement("h3");
+    titleElement.textContent = `${repository.owner}/${repository.repo}`;
+
+    const descriptionElement = document.createElement("p");
+    descriptionElement.textContent =
+      projectData.description || "No repository description available.";
+
+    const actions = document.createElement("div");
+    actions.className = "repository-actions";
+
+    const repoUrl =
+      projectData.project_url ||
+      `https://github.com/${repository.owner}/${repository.repo}`;
+
+    const source = document.createElement("a");
+    source.href = repoUrl;
+    source.target = "_blank";
+    source.rel = "noopener noreferrer";
+    source.textContent = "Goto Source";
+
+    actions.appendChild(source);
+
+    if (projectData.external_url) {
+      const website = document.createElement("a");
+      website.href = projectData.external_url;
+      website.target = "_blank";
+      website.rel = "noopener noreferrer";
+      website.textContent = "Website";
+      actions.appendChild(website);
+    }
+
+    card.appendChild(titleElement);
+    card.appendChild(descriptionElement);
+    card.appendChild(actions);
+
+    repositoryCard.appendChild(card);
+  }
+
+  function renderLocalYoutube(youtubeUrl) {
+    const videoId = getYouTubeId(youtubeUrl);
+
+    if (!videoId) {
+      youtubeSection.hidden = true;
+      return;
+    }
+
+    youtubeSection.hidden = false;
+    youtube.innerHTML = "";
+
+    const link = document.createElement("a");
+    link.href = youtubeUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    const image = document.createElement("img");
+    image.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    image.alt = "Watch project on YouTube";
+    image.loading = "lazy";
+
+    link.appendChild(image);
+    youtube.appendChild(link);
+  }
+
+  function renderLocalImage(imageUrl) {
+    if (!screenshots) {
+      return;
+    }
+
+    screenshots.innerHTML = "";
+
+    const link = document.createElement("a");
+    link.href = imageUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = "Project image";
+    img.loading = "lazy";
+
+    link.appendChild(img);
+    screenshots.appendChild(link);
+
+    screenshotsSection.hidden = false;
+  }
+
+  function renderCachedScreenshots(urls) {
+    if (!screenshots || !Array.isArray(urls) || urls.length === 0) {
+      return;
+    }
+
+    screenshots.innerHTML = "";
+
+    for (const src of urls) {
+      const link = document.createElement("a");
+      link.href = src;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+
+      const screenshot = document.createElement("img");
+      screenshot.src = src;
+      screenshot.alt = "Project screenshot";
+      screenshot.loading = "lazy";
+
+      link.appendChild(screenshot);
+      screenshots.appendChild(link);
+    }
+
+    screenshotsSection.hidden = false;
+  }
+
+  // =========================================================
+  // RENDER REPOSITORY (GITHUB API DATA)
   // =========================================================
 
   function renderRepository(data) {
-    // -----------------------------------------------------
-    // TITLE
-    // -----------------------------------------------------
-
     title.textContent = data.name || data.full_name || "Untitled Project";
-
-    // -----------------------------------------------------
-    // AUTHOR
-    // -----------------------------------------------------
 
     if (data.owner) {
       author.innerHTML = "";
 
       const avatar = document.createElement("img");
-
       avatar.src = data.owner.avatar_url;
       avatar.alt = "";
       avatar.loading = "lazy";
 
       const text = document.createElement("span");
-
       text.textContent = `Created by ${data.owner.login}`;
 
       author.appendChild(avatar);
       author.appendChild(text);
     }
 
-    // -----------------------------------------------------
-    // DESCRIPTION
-    // -----------------------------------------------------
-
     description.textContent =
       data.description || "No description provided by the repository.";
-
-    // -----------------------------------------------------
-    // CATEGORY
-    //
-    // The category can later come from codes.json.
-    // For now use GitHub topics/language as fallback.
-    // -----------------------------------------------------
 
     if (data.topics && data.topics.length > 0) {
       category.textContent = data.topics[0];
@@ -224,33 +815,10 @@
       category.textContent = "Developer Project";
     }
 
-    // -----------------------------------------------------
-    // PLATFORMS
-    // -----------------------------------------------------
-
     renderPlatforms(data);
-
-    // -----------------------------------------------------
-    // STATISTICS
-    // -----------------------------------------------------
-
     renderStats(data);
-
-    // -----------------------------------------------------
-    // REPOSITORY CARD
-    // -----------------------------------------------------
-
     renderRepositoryCard(data);
-
-    // -----------------------------------------------------
-    // HOMEPAGE
-    // -----------------------------------------------------
-
     renderHomepage(data);
-
-    // -----------------------------------------------------
-    // PAGE TITLE
-    // -----------------------------------------------------
 
     document.title = `${data.name || "Project"} - Coder Basket`;
   }
@@ -263,11 +831,8 @@
     platforms.innerHTML = "";
 
     const detected = [];
-
     const language = (data.language || "").toLowerCase();
-
     const topics = (data.topics || []).map((x) => x.toLowerCase());
-
     const combined = `${language} ${topics.join(" ")}`;
 
     if (combined.includes("android") || combined.includes("android-app")) {
@@ -308,7 +873,6 @@
 
     if (detected.length === 0) {
       document.getElementById("platformsSection").hidden = true;
-
       return;
     }
 
@@ -316,11 +880,8 @@
 
     for (const platform of detected) {
       const item = document.createElement("span");
-
       item.className = "platform-item";
-
       item.textContent = platform;
-
       platforms.appendChild(item);
     }
   }
@@ -360,23 +921,12 @@
 
     for (const item of values) {
       const element = document.createElement("div");
-
       element.className = "project-stat";
-
       element.innerHTML = `
-                <span class="project-stat-icon">
-                    ${escapeHtml(item.icon)}
-                </span>
-
-                <span class="project-stat-value">
-                    ${escapeHtml(item.value)}
-                </span>
-
-                <span class="project-stat-label">
-                    ${escapeHtml(item.label)}
-                </span>
-            `;
-
+        <span class="project-stat-icon">${escapeHtml(item.icon)}</span>
+        <span class="project-stat-value">${escapeHtml(item.value)}</span>
+        <span class="project-stat-label">${escapeHtml(item.label)}</span>
+      `;
       stats.appendChild(element);
     }
   }
@@ -389,65 +939,47 @@
     repositoryCard.innerHTML = "";
 
     const card = document.createElement("div");
-
     card.className = "repository-card-inner";
 
     const titleElement = document.createElement("h3");
-
     titleElement.textContent = data.full_name;
 
     const descriptionElement = document.createElement("p");
-
     descriptionElement.textContent =
       data.description || "No repository description available.";
 
     const information = document.createElement("div");
-
     information.className = "repository-information";
 
     if (data.updated_at) {
       const updated = document.createElement("span");
-
       updated.textContent = `Updated ${formatDate(data.updated_at)}`;
-
       information.appendChild(updated);
     }
 
     if (data.license?.name) {
       const license = document.createElement("span");
-
       license.textContent = data.license.name;
-
       information.appendChild(license);
     }
 
     const actions = document.createElement("div");
-
     actions.className = "repository-actions";
 
     const source = document.createElement("a");
-
     source.href = data.html_url;
-
     source.target = "_blank";
-
     source.rel = "noopener noreferrer";
-
     source.textContent = "Goto Source";
 
     actions.appendChild(source);
 
     if (data.homepage) {
       const website = document.createElement("a");
-
       website.href = data.homepage;
-
       website.target = "_blank";
-
       website.rel = "noopener noreferrer";
-
       website.textContent = "Website";
-
       actions.appendChild(website);
     }
 
@@ -470,17 +1002,12 @@
     }
 
     homepageSection.hidden = false;
-
     homepage.innerHTML = "";
 
     const link = document.createElement("a");
-
     link.href = data.homepage;
-
     link.target = "_blank";
-
     link.rel = "noopener noreferrer";
-
     link.textContent = data.homepage;
 
     homepage.appendChild(link);
@@ -490,7 +1017,7 @@
   // README
   // =========================================================
 
-  async function loadReadme(repository, branch) {
+  async function loadReadme(repository, branch, repoUrl) {
     const url =
       `${GITHUB_API}/repos/` +
       `${encodeURIComponent(repository.owner)}/` +
@@ -525,11 +1052,10 @@
       }
 
       readme.innerHTML = sanitizeReadme(html);
-
       readmeSection.hidden = false;
 
       extractYouTube(html);
-      extractScreenshots(html, repository, branch);
+      extractScreenshots(html, repository, branch, repoUrl);
     } catch (err) {
       if (err.name === "AbortError") {
         console.warn("README request timed out.");
@@ -538,6 +1064,7 @@
       }
     }
   }
+
   // =========================================================
   // README SANITIZATION
   // =========================================================
@@ -592,7 +1119,6 @@
     }
 
     const videoUrl = matches[0];
-
     const videoId = getYouTubeId(videoUrl);
 
     if (!videoId) {
@@ -600,27 +1126,19 @@
     }
 
     youtubeSection.hidden = false;
-
     youtube.innerHTML = "";
 
     const link = document.createElement("a");
-
     link.href = videoUrl;
-
     link.target = "_blank";
-
     link.rel = "noopener noreferrer";
 
     const image = document.createElement("img");
-
     image.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
     image.alt = "Watch project on YouTube";
-
     image.loading = "lazy";
 
     link.appendChild(image);
-
     youtube.appendChild(link);
   }
 
@@ -646,11 +1164,7 @@
   // SCREENSHOTS
   // =========================================================
 
-  // =========================================================
-  // SCREENSHOTS
-  // =========================================================
-
-  function extractScreenshots(html, repository, branch) {
+  function extractScreenshots(html, repository, branch, repoUrl) {
     const template = document.createElement("template");
 
     template.innerHTML = html;
@@ -662,6 +1176,7 @@
     }
 
     screenshots.innerHTML = "";
+    const collectedUrls = [];
 
     for (const image of images) {
       const rawSrc = image.getAttribute("src");
@@ -690,28 +1205,36 @@
         continue;
       }
 
-      const link = document.createElement("a");
+      collectedUrls.push(src);
 
+      const link = document.createElement("a");
       link.href = src;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
 
       const screenshot = document.createElement("img");
-
       screenshot.src = src;
       screenshot.alt = alt || "Project screenshot";
       screenshot.loading = "lazy";
 
       link.appendChild(screenshot);
-
       screenshots.appendChild(link);
     }
 
     screenshotsSection.hidden = screenshots.children.length === 0;
+
+    // Save screenshot URLs to localStorage under github_data.screenshot_urls
+    if (collectedUrls.length > 0 && repoUrl) {
+      findAndSaveGithubData(repository, repoUrl, {
+        screenshot_urls: collectedUrls,
+      });
+    }
   }
+
   // =========================================================
   // HELPERS
   // =========================================================
+
   function resolveReadmeImage(src, repository, branch) {
     try {
       // Already absolute.
@@ -729,6 +1252,7 @@
       return src;
     }
   }
+
   function formatNumber(value) {
     const number = Number(value || 0);
 
@@ -762,17 +1286,13 @@
 
   function hideLoading() {
     loading.hidden = true;
-
     error.hidden = true;
-
     project.hidden = false;
   }
 
   function showError(message) {
     loading.hidden = true;
-
     project.hidden = true;
-
     error.hidden = false;
 
     const paragraph = error.querySelector("p");
