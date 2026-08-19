@@ -116,6 +116,14 @@
         showError(err.message);
       }
     }
+    try {
+      await CoderBasketDB.init();
+      console.log("[Submit] SQLite initialized successfully.");
+
+      // your existing initialization code continues here
+    } catch (error) {
+      console.error("[Submit] SQLite initialization failed:", error);
+    }
   }
 
   // =========================================================
@@ -245,40 +253,38 @@
       parsed.repo.toLowerCase() === repository.repo.toLowerCase()
     );
   }
-function extractGithubData(data, repository) {
-  if (!data || !repository) {
-    return {};
+  function extractGithubData(data, repository) {
+    if (!data || !repository) {
+      return {};
+    }
+
+    return {
+      stargazers_count: data.stargazers_count ?? null,
+      forks_count: data.forks_count ?? null,
+      open_issues_count: data.open_issues_count ?? null,
+      language: data.language ?? null,
+
+      name: data.name ?? null,
+      full_name: data.full_name ?? null,
+      description: data.description ?? null,
+
+      html_url:
+        data.html_url ||
+        `https://github.com/${repository.owner}/${repository.repo}`,
+
+      homepage: data.homepage ?? null,
+      default_branch: data.default_branch ?? "main",
+
+      owner: data.owner?.login ?? repository.owner,
+      owner_avatar_url: data.owner?.avatar_url ?? null,
+
+      topics: Array.isArray(data.topics) ? data.topics : [],
+
+      updated_at: data.updated_at ?? null,
+
+      license: data.license?.name ?? null,
+    };
   }
-
-  return {
-    stargazers_count: data.stargazers_count ?? null,
-    forks_count: data.forks_count ?? null,
-    open_issues_count: data.open_issues_count ?? null,
-    language: data.language ?? null,
-
-    name: data.name ?? null,
-    full_name: data.full_name ?? null,
-    description: data.description ?? null,
-
-    html_url:
-      data.html_url ||
-      `https://github.com/${repository.owner}/${repository.repo}`,
-
-    homepage: data.homepage ?? null,
-    default_branch: data.default_branch ?? "main",
-
-    owner: data.owner?.login ?? repository.owner,
-    owner_avatar_url: data.owner?.avatar_url ?? null,
-
-    topics: Array.isArray(data.topics)
-      ? data.topics
-      : [],
-
-    updated_at: data.updated_at ?? null,
-
-    license: data.license?.name ?? null,
-  };
-}
   function findAndSaveGithubData(repository, repoUrl, githubDataPartial) {
     if (!repository?.owner || !repository?.repo) {
       return false;

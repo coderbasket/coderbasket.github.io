@@ -171,7 +171,34 @@
 
 
             <nav aria-label="Footer navigation">
+                <a href="/submit/" class="submit-link" title="Generate new repo info">
+                    <style>
+                        .submit-link {
+                            font-weight: 1000;
+                            color: inherit;
+                            text-decoration: none;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 7px 12px;
+                            border-radius: 8px;
+                            transition:
+                                background-color 0.2s ease,
+                                color 0.2s ease,
+                                transform 0.2s ease;
+                        }
 
+                        .submit-link:hover {
+                            background: var(--primary-glow);
+                            color: #4f46e5;
+                        }
+
+                        .submit-link:active {
+                            transform: scale(0.96);
+                        }
+                    </style>
+                    SUBMIT
+                </a>
                 <a href="/">
                     Home
                 </a>
@@ -224,6 +251,12 @@
     <script src="/js/data.js" defer></script>
     <script src="/js/sidebar.js" defer></script>
     <script src="/js/header.js" defer></script>
+    <script src="/js/repo.js" defer></script>
+    //sqlite
+    <script src="/js/sql/sql-wasm.js" defer></script>
+    <script src="/js/sql/sql.js" defer></script>
+
+    <script src="/js/apps-script.js" defer></script>
     <script src="/js/app.js" defer></script>
 
     <script src="/site-config.js"></script>

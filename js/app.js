@@ -126,7 +126,13 @@ async function initialize() {
   renderCategories();
 
   await loadCatalog();
-
+  CoderBasketDB.init()
+    .then(() => {
+      console.log("[Submit] SQLite initialized successfully.");
+    })
+    .catch((error) => {
+      console.error("[Submit] SQLite initialization failed:", error);
+    });
   log("initialize", "Application initialization complete");
 }
 
@@ -429,17 +435,19 @@ function getAllCatalogueSources() {
 async function loadCatalogSection(sectionKey) {
   const sourceSectionKey = getDataSourceSectionKey(sectionKey);
 
-  /*
-   * Physical source configuration.
-   */
+  // ---------------------------------------------------------
+  // Physical source configuration
+  // ---------------------------------------------------------
+
   const sourceConfig =
     typeof DATA_SECTIONS !== "undefined"
       ? DATA_SECTIONS[sourceSectionKey]
       : null;
 
-  /*
-   * Virtual framework configuration.
-   */
+  // ---------------------------------------------------------
+  // Virtual framework configuration
+  // ---------------------------------------------------------
+
   const frameworkConfig = isFrameworkSection(sectionKey)
     ? getFrameworkConfig(sectionKey)
     : null;
@@ -453,19 +461,114 @@ async function loadCatalogSection(sectionKey) {
     return [];
   }
 
+  // ---------------------------------------------------------
+  // Framework sections use JSON only
+  // ---------------------------------------------------------
+
+  if (isFrameworkSection(sectionKey)) {
+    return await loadSectionJson(
+      sectionKey,
+      sourceSectionKey,
+      sourceConfig,
+      frameworkConfig,
+    );
+  }
+
+  // ---------------------------------------------------------
+  // 1. LOAD JSON FIRST
+  //
+  // SQLite must NEVER block the initial catalogue.
+  // ---------------------------------------------------------
+
+  const jsonItems = await loadSectionJson(
+    sectionKey,
+    sourceSectionKey,
+    sourceConfig,
+    frameworkConfig,
+  );
+
+  log("loadCatalogSection", "JSON ready. SQLite will continue in background.", {
+    sectionKey,
+    sourceSectionKey,
+    count: jsonItems.length,
+  });
+
+  // ---------------------------------------------------------
+  // 2. SQLITE BACKGROUND LOAD
+  //
+  // IMPORTANT:
+  // No await here.
+  // ---------------------------------------------------------
+
+  if (
+    typeof CoderBasketData !== "undefined" &&
+    typeof CoderBasketData.getSection === "function"
+  ) {
+    CoderBasketData.getSection(sourceSectionKey)
+      .then((databaseItems) => {
+        if (!Array.isArray(databaseItems) || databaseItems.length === 0) {
+          log(
+            "loadCatalogSection",
+            "SQLite background load returned no items.",
+            {
+              sectionKey,
+              sourceSectionKey,
+            },
+          );
+
+          return;
+        }
+
+        log("loadCatalogSection", "SQLite background load completed.", {
+          sectionKey,
+          sourceSectionKey,
+          count: databaseItems.length,
+        });
+
+        mergeBackgroundDatabaseItems(
+          sectionKey,
+          sourceSectionKey,
+          databaseItems,
+        );
+      })
+      .catch((databaseError) => {
+        warn(
+          "loadCatalogSection",
+          "SQLite background loading failed. JSON remains active.",
+          databaseError,
+        );
+      });
+  }
+
+  // ---------------------------------------------------------
+  // 3. RETURN JSON NOW
+  //
+  // The caller does not wait for SQLite.
+  // ---------------------------------------------------------
+
+  return jsonItems;
+}
+
+// ============================================================
+// LOAD SECTION JSON
+// ============================================================
+
+async function loadSectionJson(
+  sectionKey,
+  sourceSectionKey,
+  sourceConfig,
+  frameworkConfig,
+) {
   const fileName =
     sourceConfig?.file || frameworkConfig?.file || `${sourceSectionKey}.json`;
 
   const url = `${DATA_BASE_URL}${fileName}`;
 
-  log("loadCatalogSection", "Loading:", {
+  log("loadCatalogSection", "Loading JSON:", {
     requestedSection: sectionKey,
-
-    sourceSection: sourceSectionKey,
-
+    source: sourceSectionKey,
     fileName,
     url,
-
     framework: isFrameworkSection(sectionKey),
   });
 
@@ -475,7 +578,6 @@ async function loadCatalogSection(sectionKey) {
     if (!response.ok) {
       warn("loadCatalogSection", `Unable to load source: ${url}`, {
         status: response.status,
-
         sectionKey,
         sourceSectionKey,
       });
@@ -507,10 +609,14 @@ async function loadCatalogSection(sectionKey) {
         ? data.Items
         : [];
 
-    /*
-     * Determine the actual section
-     * represented by this source.
-     */
+    // ---------------------------------------------------------
+    // IMPORTANT:
+    // Load ALL JSON items.
+    //
+    // Do NOT use maxItemsPerPage here.
+    // Pagination happens later.
+    // ---------------------------------------------------------
+
     const finalItems = items.map((item) => {
       const itemSection =
         item.section ||
@@ -527,32 +633,15 @@ async function loadCatalogSection(sectionKey) {
       return {
         ...item,
 
-        /*
-         * Physical JSON source.
-         */
         source_section: sourceSectionKey,
 
-        /*
-         * Actual catalogue section.
-         *
-         * For ai.json:
-         *   ai
-         *
-         * For frameworks.json:
-         *   frameworks
-         * unless the item explicitly
-         * provides its own section.
-         */
         data_section: itemSection,
 
-        /*
-         * Sub-category/file key.
-         */
         data_category: itemCategory,
       };
     });
 
-    log("loadCatalogSection", "Loaded:", {
+    log("loadCatalogSection", "Loaded complete JSON catalogue:", {
       sectionKey,
       sourceSectionKey,
       count: finalItems.length,
@@ -568,6 +657,124 @@ async function loadCatalogSection(sectionKey) {
 
     return [];
   }
+}
+
+// ============================================================
+// MERGE SQLITE INTO EXISTING CATALOGUE
+// ============================================================
+
+function mergeBackgroundDatabaseItems(
+  sectionKey,
+  sourceSectionKey,
+  databaseItems,
+) {
+  const normalizedDatabaseProjects = normalizeProjects(databaseItems);
+  const databaseProjects = normalizedDatabaseProjects.map((item) => {
+    const itemSection =
+      item.section || item.data_section || item.DataSection || sourceSectionKey;
+
+    const itemCategory =
+      item.section_category || item.data_category || item.DataCategory || "all";
+
+    return {
+      ...item,
+
+      source_section: sourceSectionKey,
+
+      data_section: itemSection,
+
+      data_category: itemCategory,
+    };
+  });
+
+  // ---------------------------------------------------------
+  // Build map from existing JSON catalogue
+  // ---------------------------------------------------------
+
+  const map = new Map();
+
+  for (const project of allProjects) {
+    if (!project?.project_url) {
+      continue;
+    }
+
+    map.set(project.project_url, project);
+  }
+
+  // ---------------------------------------------------------
+  // Merge database projects
+  //
+  // IMPORTANT:
+  // JSON remains the base.
+  //
+  // Database values only overwrite JSON values when the
+  // database actually contains a useful value.
+  //
+  // This prevents missing image_url from destroying images.
+  // ---------------------------------------------------------
+
+  for (const databaseProject of databaseProjects) {
+    if (!databaseProject?.project_url) {
+      continue;
+    }
+
+    const existingProject = map.get(databaseProject.project_url);
+
+    // -------------------------------------------------------
+    // New project only in SQLite
+    // -------------------------------------------------------
+
+    if (!existingProject) {
+      map.set(databaseProject.project_url, databaseProject);
+
+      continue;
+    }
+
+    // -------------------------------------------------------
+    // Existing JSON project
+    //
+    // JSON remains the fallback.
+    // -------------------------------------------------------
+
+    const mergedProject = {
+      ...existingProject,
+    };
+
+    for (const [key, value] of Object.entries(databaseProject)) {
+      /*
+       * Only replace the JSON value when SQLite actually
+       * has meaningful data.
+       */
+
+      if (value !== undefined && value !== null && value !== "") {
+        mergedProject[key] = value;
+      }
+    }
+
+    map.set(databaseProject.project_url, mergedProject);
+  }
+
+  // ---------------------------------------------------------
+  // Replace catalogue with merged result
+  // ---------------------------------------------------------
+
+  allProjects = Array.from(map.values());
+
+  log("loadCatalogSection", "Background SQLite merged:", {
+    sectionKey,
+    sourceSectionKey,
+    databaseCount: databaseProjects.length,
+    totalCount: allProjects.length,
+  });
+
+  // ---------------------------------------------------------
+  // Reapply filters.
+  //
+  // Pagination should be applied by your existing display/
+  // pagination code after filtering.
+  // ---------------------------------------------------------
+
+  applyFilters();
 }
 
 //#endregion
@@ -1424,6 +1631,18 @@ function renderProjects() {
 
   projectGrid.appendChild(fragment);
 
+  // ---------------------------------------------------------
+  // START OBSERVING PROJECT IMAGES
+  // ---------------------------------------------------------
+
+  const images = projectGrid.querySelectorAll(
+    "img.lazy-project-image[data-src]"
+  );
+
+  images.forEach((img) => {
+    observeProjectImage(img);
+  });
+
   updateLoadMoreButton();
 }
 
@@ -1529,18 +1748,18 @@ function createProjectCard(project) {
 
   const imageHtml = image
     ? `<img
-         src="${escapeAttribute(image)}"
-         alt="${escapeAttribute(project.title)}"
-         loading="lazy"
-         decoding="async"
-         onerror="handleImageError(
-           this,
-           '${escapeAttribute(project.data_category)}'
-         )"
-       >`
+       class="lazy-project-image"
+       data-src="${escapeAttribute(image)}"
+       alt="${escapeAttribute(project.title)}"
+       decoding="async"
+       onerror="handleImageError(
+         this,
+         '${escapeAttribute(project.data_category)}'
+       )"
+     >`
     : `<div class="project-image-placeholder">
-         ${escapeHtml(String(project.title || "?").charAt(0))}
-       </div>`;
+       ${escapeHtml(String(project.title || "?").charAt(0))}
+     </div>`;
 
   // =========================================================
   // CATEGORIES
@@ -1639,7 +1858,44 @@ function createProjectCard(project) {
 
   return article;
 }
+const projectImageObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
 
+      const img = entry.target;
+      const src = img.dataset.src;
+
+      if (!src) {
+        observer.unobserve(img);
+        return;
+      }
+
+      console.log("[LazyImage] Loading:", src);
+
+      img.src = src;
+
+      observer.unobserve(img);
+    });
+  },
+  {
+    root: null,
+    rootMargin: "200px",
+    threshold: 0.01,
+  },
+);
+
+function observeProjectImage(img) {
+  if (!img) {
+    return;
+  }
+
+  console.log("[LazyImage] Observing:", img.dataset.src);
+
+  projectImageObserver.observe(img);
+}
 function getProjectCardSectionName(project) {
   /*
    * If this is a framework project,
