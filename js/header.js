@@ -1,5 +1,9 @@
 "use strict";
 
+/* =======================================================
+   Header initialization
+======================================================= */
+
 document.addEventListener("DOMContentLoaded", () => {
   const mainNav = document.getElementById("mainNav");
 
@@ -34,20 +38,66 @@ function renderHeader() {
   let html = "";
 
   /* ---------------------------------------------------
-        Home
-    --------------------------------------------------- */
+     Home
+  --------------------------------------------------- */
 
-  if (NAVIGATION.home) {
-    html += `
-            <a href="${escapeAttribute(NAVIGATION.home.path)}">
-                ${escapeHtml(NAVIGATION.home.name)}
-            </a>
-        `;
-  }
+  html += renderHomeNavigation();
 
   /* ---------------------------------------------------
-        Catalogue sections
-    --------------------------------------------------- */
+     Catalogue sections
+  --------------------------------------------------- */
+
+  html += renderCatalogueNavigation();
+
+  /* ---------------------------------------------------
+     Frameworks
+  --------------------------------------------------- */
+
+  html += renderFrameworkNavigation();
+
+  /* ---------------------------------------------------
+     Main navigation
+  --------------------------------------------------- */
+
+  html += renderMainNavigation();
+
+  /* ---------------------------------------------------
+     Insert
+  --------------------------------------------------- */
+
+  mainNav.innerHTML = html;
+
+  /* ---------------------------------------------------
+     Setup interactions
+  --------------------------------------------------- */
+
+  setupCategoryNavigation();
+  setupFrameworkNavigation();
+  setupMobileNavigation();
+}
+
+/* =======================================================
+   Home navigation
+======================================================= */
+
+function renderHomeNavigation() {
+  if (!NAVIGATION.home) {
+    return "";
+  }
+
+  return `
+    <a href="${escapeAttribute(NAVIGATION.home.path)}">
+      ${escapeHtml(NAVIGATION.home.name)}
+    </a>
+  `;
+}
+
+/* =======================================================
+   Catalogue navigation
+======================================================= */
+
+function renderCatalogueNavigation() {
+  let html = "";
 
   for (const sectionKey of DATA_SECTION_ORDER) {
     const section = DATA_SECTIONS[sectionKey];
@@ -58,93 +108,133 @@ function renderHeader() {
 
     const sectionPath = section.path || `/${sectionKey}/`;
 
+    /*
+     * Sections without categories are simple links.
+     */
     if (!section.categories) {
       html += `
-            <a href="${escapeAttribute(sectionPath)}">
-                ${escapeHtml(section.name)}
-            </a>
-        `;
+        <a
+          href="${escapeAttribute(sectionPath)}"
+          data-section="${escapeAttribute(sectionKey)}"
+          class="nav-section-link"
+        >
+          ${escapeHtml(section.name)}
+        </a>
+      `;
+
       continue;
     }
 
+    /*
+     * Sections with categories use dropdown.
+     */
     html += `
-    <div class="nav-dropdown">
+      <div class="nav-dropdown">
 
         <a
-            class="nav-section-button"
-            href="${escapeAttribute(sectionPath)}"
+          class="nav-section-button"
+          href="${escapeAttribute(sectionPath)}"
+          data-section="${escapeAttribute(sectionKey)}"
         >
-            ${escapeHtml(section.name)}
+          ${escapeHtml(section.name)}
         </a>
 
         <div class="dropdown-menu">
 
-            <a
-                class="nav-category-link nav-all-button"
-                href="${escapeAttribute(sectionPath)}"
-            >
-                ${escapeHtml(section.name)} (All)
-            </a>
-`;
+          <a
+            class="nav-category-link nav-all-button"
+            href="${escapeAttribute(sectionPath)}"
+            data-section="${escapeAttribute(sectionKey)}"
+            data-category="all"
+          >
+            ${escapeHtml(section.name)} (All)
+          </a>
+    `;
 
     for (const [categoryKey, categoryName] of Object.entries(
       section.categories,
     )) {
       html += `
-                <a
-                    class="nav-category-link"
-                    href="${escapeAttribute(`${sectionPath}${categoryKey}/`)}"
-                >
-                    ${escapeHtml(categoryName)}
-                </a>
-            `;
+        <a
+          class="nav-category-link"
+          href="${escapeAttribute(
+            `${sectionPath}${categoryKey}/`,
+          )}"
+          data-section="${escapeAttribute(sectionKey)}"
+          data-category="${escapeAttribute(categoryKey)}"
+        >
+          ${escapeHtml(categoryName)}
+        </a>
+      `;
     }
 
     html += `
-                </div>
-
-            </div>
-        `;
-  }
-
-  /* ---------------------------------------------------
-        Frameworks
-    --------------------------------------------------- */
-
-  if (typeof FRAMEWORKS !== "undefined" && FRAMEWORKS) {
-    html += `
-        <div class="nav-dropdown">
-
-            <button
-                type="button"
-                class="nav-section-button"
-            >
-                Frameworks
-            </button>
-
-            <div class="framework-dropdown-menu">
-    `;
-
-    for (const [frameworkKey, framework] of Object.entries(FRAMEWORKS)) {
-      const frameworkPath = framework.path || `/${frameworkKey}/`;
-
-      html += `
-                <a href="${escapeAttribute(frameworkPath)}">
-                    ${escapeHtml(framework.name)}
-                </a>
-        `;
-    }
-
-    html += `
-            </div>
-
         </div>
+
+      </div>
     `;
   }
 
-  /* ---------------------------------------------------
-        Main navigation links
-    --------------------------------------------------- */
+  return html;
+}
+
+/* =======================================================
+   Framework navigation
+======================================================= */
+
+function renderFrameworkNavigation() {
+  if (
+    typeof FRAMEWORKS === "undefined" ||
+    !FRAMEWORKS ||
+    Object.keys(FRAMEWORKS).length === 0
+  ) {
+    return "";
+  }
+
+  let html = `
+    <div class="nav-dropdown">
+
+      <button
+        type="button"
+        class="nav-section-button framework-nav-button"
+        aria-expanded="false"
+      >
+        Frameworks
+      </button>
+
+      <div class="framework-dropdown-menu">
+  `;
+
+  for (const [frameworkKey, framework] of Object.entries(FRAMEWORKS)) {
+    const frameworkPath =
+      framework.path || `/${frameworkKey}/`;
+
+    html += `
+      <a
+        href="${escapeAttribute(frameworkPath)}"
+        class="framework-link"
+        data-framework="${escapeAttribute(frameworkKey)}"
+      >
+        ${escapeHtml(framework.name)}
+      </a>
+    `;
+  }
+
+  html += `
+      </div>
+
+    </div>
+  `;
+
+  return html;
+}
+
+/* =======================================================
+   Main navigation
+======================================================= */
+
+function renderMainNavigation() {
+  let html = "";
 
   for (const key of ["libraries", "tools", "projects", "about"]) {
     const item = NAVIGATION[key];
@@ -154,96 +244,78 @@ function renderHeader() {
     }
 
     html += `
-            <a href="${escapeAttribute(item.path)}">
-                ${escapeHtml(item.name)}
-            </a>
-        `;
+      <a href="${escapeAttribute(item.path)}">
+        ${escapeHtml(item.name)}
+      </a>
+    `;
   }
 
-  /* ---------------------------------------------------
-        Insert into DOM
-    --------------------------------------------------- */
-
-  mainNav.innerHTML = html;
-
-  /* ---------------------------------------------------
-        Setup interactions
-    --------------------------------------------------- */
-
-  setupCategoryNavigation();
-  setupMobileNavigation();
+  return html;
 }
 
 /* =======================================================
-   Catalogue navigation
+   Catalogue category navigation
 ======================================================= */
 
 function setupCategoryNavigation() {
-  const buttons = document.querySelectorAll(".nav-category-button");
+  /*
+   * Category links.
+   *
+   * These are mostly normal <a> links now.
+   * We intentionally do not intercept navigation.
+   *
+   * This allows:
+   *
+   * /ai/
+   * /flutter/
+   * /dotnet/
+   * /ai/something/
+   *
+   * to load naturally.
+   */
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      const sectionKey = button.dataset.section;
-      const categoryKey = button.dataset.category || "all";
+  const links = document.querySelectorAll(
+    ".nav-category-link",
+  );
 
-      const section = DATA_SECTIONS[sectionKey];
-
-      if (!section) {
-        return;
-      }
-
-      if (
-        categoryKey !== "all" &&
-        (!section.categories ||
-          !Object.prototype.hasOwnProperty.call(
-            section.categories,
-            categoryKey,
-          ))
-      ) {
-        return;
-      }
-
-      const needsReload =
-        typeof selectedSection === "undefined" ||
-        selectedSection !== sectionKey ||
-        typeof allProjects === "undefined" ||
-        allProjects.length === 0 ||
-        allProjects[0]?.data_section !== sectionKey;
-
-      selectedSection = sectionKey;
-      selectedSubCategory = categoryKey;
-      selectedCategoryId = "all";
-
-      if (typeof saveSelection === "function") {
-        saveSelection();
-      }
-
-      if (typeof currentPage !== "undefined") {
-        currentPage = 1;
-      }
-
-      if (needsReload && typeof loadCatalog === "function") {
-        await loadCatalog();
-      } else {
-        if (typeof renderSections === "function") renderSections();
-        if (typeof renderSubCategories === "function") renderSubCategories();
-        if (typeof renderCategories === "function") renderCategories();
-
-        if (typeof applyFilters === "function") {
-          applyFilters();
-        }
-      }
-
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
       closeMobileNavigation();
     });
   });
 }
 
 /* =======================================================
-   Mobile navigation interactions
+   Framework navigation
 ======================================================= */
+
+function setupFrameworkNavigation() {
+  const frameworkLinks = document.querySelectorAll(
+    ".framework-link",
+  );
+
+  frameworkLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      /*
+       * Do NOT call loadCatalog() here.
+       *
+       * The framework page will load normally.
+       *
+       * app.js reads:
+       *
+       * /react/
+       *
+       * and resolves:
+       *
+       * react -> frameworks.json
+       */
+      closeMobileNavigation();
+    });
+  });
+}
+
 /* =======================================================
-   Mobile navigation interactions
+   Mobile navigation
 ======================================================= */
 
 function setupMobileNavigation() {
@@ -260,44 +332,92 @@ function setupMobileNavigation() {
 
   menuToggle.dataset.navigationReady = "true";
 
-  /* =====================================================
-     MAIN HAMBURGER
-     ===================================================== */
+  /* ---------------------------------------------------
+     Hamburger
+  --------------------------------------------------- */
 
-  menuToggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  menuToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
 
-    const isOpen = mainNav.style.display !== "flex";
+    const isOpen = mainNav.classList.toggle("open");
 
-    mainNav.style.display = isOpen ? "flex" : "none";
+    mainNav.style.display = isOpen ? "flex" : "";
 
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen),
+    );
   });
 
-  /* =====================================================
-     MOBILE DROPDOWNS
-     ===================================================== */
+  /* ---------------------------------------------------
+     Mobile dropdowns
+  --------------------------------------------------- */
 
-  mainNav.addEventListener("click", (e) => {
+  mainNav.addEventListener("click", (event) => {
     if (window.innerWidth > 860) {
       return;
     }
 
-    const sectionButton = e.target.closest(".nav-section-button");
+    const sectionButton = event.target.closest(
+      ".nav-section-button",
+    );
 
     if (!sectionButton) {
       return;
     }
 
-    e.preventDefault();
-    e.stopPropagation();
+    /*
+     * Framework button is a dropdown button.
+     */
+    if (
+      sectionButton.classList.contains(
+        "framework-nav-button",
+      )
+    ) {
+      event.preventDefault();
+      event.stopPropagation();
 
-    const dropdown = sectionButton.closest(".nav-dropdown");
+      const dropdown =
+        sectionButton.closest(".nav-dropdown");
+
+      if (!dropdown) {
+        return;
+      }
+
+      const isActive =
+        dropdown.classList.toggle("active");
+
+      sectionButton.setAttribute(
+        "aria-expanded",
+        String(isActive),
+      );
+
+      return;
+    }
+
+    /*
+     * Normal section button.
+     *
+     * Only prevent navigation on mobile when
+     * it belongs to an actual dropdown.
+     */
+    const dropdown =
+      sectionButton.closest(".nav-dropdown");
 
     if (!dropdown) {
       return;
     }
+
+    const menu =
+      dropdown.querySelector(".dropdown-menu");
+
+    if (!menu) {
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
 
     dropdown.classList.toggle("active");
   });
@@ -314,18 +434,37 @@ function closeMobileNavigation() {
   if (mainNav) {
     mainNav.classList.remove("open");
 
-    mainNav.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
-      dropdown.classList.remove("active");
-    });
+    mainNav.querySelectorAll(".nav-dropdown").forEach(
+      (dropdown) => {
+        dropdown.classList.remove("active");
+      },
+    );
+
+    mainNav
+      .querySelectorAll(".nav-section-button")
+      .forEach((button) => {
+        button.setAttribute(
+          "aria-expanded",
+          "false",
+        );
+      });
+
+    /*
+     * Let CSS control display after closing.
+     */
+    mainNav.style.display = "";
   }
 
   if (menuToggle) {
-    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false",
+    );
   }
 }
 
 /* =======================================================
-   HTML escaping helpers
+   HTML escaping
 ======================================================= */
 
 function escapeHtml(value) {

@@ -16,24 +16,12 @@
 
 const DATA_BASE_URL = "/data/";
 
-/* =======================================================
-   CATALOGUE SECTIONS
-======================================================= */
-
 const DATA_SECTIONS = {
-  /* ---------------------------------------------------
-     AI
-  --------------------------------------------------- */
-
   ai: {
     name: "AI",
     file: "ai.json",
     path: "/ai/",
   },
-
-  /* ---------------------------------------------------
-     .NET
-  --------------------------------------------------- */
 
   dotnet: {
     name: ".NET",
@@ -41,84 +29,113 @@ const DATA_SECTIONS = {
     path: "/dotnet/",
   },
 
-  /* ---------------------------------------------------
-     Flutter
-  --------------------------------------------------- */
-
   flutter: {
     name: "Flutter",
     file: "flutter.json",
     path: "/flutter/",
   },
+
   frameworks: {
     name: "Frameworks",
     file: "frameworks.json",
+    path: "/",
   },
 };
 
-/* =======================================================
-   FRAMEWORKS
-======================================================= */
-
+/*
+ * Virtual framework pages.
+ *
+ * Each framework uses frameworks.json as its data source.
+ */
 const FRAMEWORKS = {
   kotlin: {
     name: "Kotlin",
+    path: "/kotlin/",
+    dataSource: "frameworks",
   },
 
   react: {
     name: "React",
+    path: "/react/",
+    dataSource: "frameworks",
   },
 
   "react-native": {
     name: "React Native",
+    path: "/react-native/",
+    dataSource: "frameworks",
   },
 
   vue: {
     name: "Vue",
+    path: "/vue/",
+    dataSource: "frameworks",
   },
 
   angular: {
     name: "Angular",
+    path: "/angular/",
+    dataSource: "frameworks",
   },
 
   svelte: {
     name: "Svelte",
+    path: "/svelte/",
+    dataSource: "frameworks",
   },
 
   nextjs: {
     name: "Next.js",
+    path: "/nextjs/",
+    dataSource: "frameworks",
   },
 
   nuxt: {
     name: "Nuxt",
+    path: "/nuxt/",
+    dataSource: "frameworks",
   },
 
   electron: {
     name: "Electron",
+    path: "/electron/",
+    dataSource: "frameworks",
   },
 
   tauri: {
     name: "Tauri",
+    path: "/tauri/",
+    dataSource: "frameworks",
   },
 
   "kotlin-multiplatform": {
     name: "Kotlin Multiplatform",
+    path: "/kotlin-multiplatform/",
+    dataSource: "frameworks",
   },
 
   laravel: {
     name: "Laravel",
+    path: "/laravel/",
+    dataSource: "frameworks",
   },
 
   django: {
     name: "Django",
+    path: "/django/",
+    dataSource: "frameworks",
   },
 
   spring: {
     name: "Spring",
+    path: "/spring/",
+    dataSource: "frameworks",
   },
 
   "ruby-on-rails": {
     name: "Ruby on Rails",
+    path: "/ruby-on-rails/",
+    dataSource: "frameworks",
   },
 };
 

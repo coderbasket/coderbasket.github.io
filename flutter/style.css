@@ -1,0 +1,27 @@
+/* Flutter card image test */
+.flutter-page .project-image {
+    height: auto;
+    min-height: 220px;
+    max-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.flutter-page .project-image img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    .flutter-page .project-image {
+        min-height: 180px;
+        max-height: 500px;
+    }
+
+    .flutter-page .project-image img {
+        max-height: 500px;
+    }
+}

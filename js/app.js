@@ -1,3 +1,4 @@
+
 "use strict";
 
 /*
@@ -5,21 +6,46 @@
  * Static catalogue application
  *
  * Architecture:
- *   allProjects
- *        |
- *        +---- 1. section filter (selectedSection)
- *        +---- 2. sub-category filter (selectedSubCategory)
- *        +---- 3. category filter (selectedCategoryId)
- *        +---- 4. search filter (searchText)
- *                 |
- *                 v
- *          filteredProjects
- *                 |
- *                 v
- *            project cards
+ *
+ *   URL
+ *    |
+ *    v
+ * restoreSelection()
+ *    |
+ *    +---- selectedSection
+ *    +---- selectedSubCategory
+ *    +---- selectedCategoryId
+ *    |
+ *    v
+ * loadCatalog()
+ *    |
+ *    +---- normal section
+ *    |       ai.json
+ *    |       dotnet.json
+ *    |       flutter.json
+ *    |
+ *    +---- virtual framework
+ *            frameworks.json
+ *            + Kotlin
+ *            + React
+ *            + Vue
+ *            + ...
+ *    |
+ *    v
+ * normalizeProjects()
+ *    |
+ *    v
+ * applyFilters()
+ *    |
+ *    v
+ * filteredProjects
+ *    |
+ *    v
+ * renderProjects()
  */
 
 //#region Debug
+
 const DEBUG = true;
 
 function log(method, ...args) {
@@ -35,22 +61,29 @@ function warn(method, ...args) {
 function error(method, ...args) {
   console.error(`[${method}]`, ...args);
 }
+
 //#endregion
+
 
 //#region Application State
 
 let allProjects = [];
 let filteredProjects = [];
 
-// Distinct Filter State Variables
-let selectedSection = DEFAULT_SECTION;
+let selectedSection =
+  typeof DEFAULT_SECTION !== "undefined"
+    ? DEFAULT_SECTION
+    : "ai";
+
 let selectedSubCategory = "all";
 let selectedCategoryId = "all";
 
 let currentPage = 1;
+
 const PAGE_SIZE = 24;
 
 //#endregion
+
 
 //#region DOM Cache Variables
 
@@ -71,6 +104,7 @@ let mainNav;
 let yearElement;
 
 //#endregion
+
 
 //#region Initialization
 
@@ -104,38 +138,17 @@ async function initialize() {
 
 //#endregion
 
-//#region Selection State Persistence
+
+//#region Selection State
 
 function restoreSelection() {
   log("restoreSelection", "Reading URL selection");
 
-  /*
-   * URL examples:
-   *
-   * /
-   * /index.html
-   *     -> default section
-   *
-   * /ai/
-   * /ai/index.html
-   *     -> section = ai
-   *
-   * /ai/agents/
-   * /ai/agents/index.html
-   *     -> section = ai
-   *        subCategory = agents
-   *
-   * /ai/agents/index.html?category=12
-   *     -> section = ai
-   *        subCategory = agents
-   *        category = 12
-   */
-
-  let path = window.location.pathname.replace(/^\/+|\/+$/g, "");
+  let path = window.location.pathname
+    .replace(/^\/+|\/+$/g, "");
 
   /*
-   * Remove index.html because it is the physical page,
-   * not part of our catalogue hierarchy.
+   * Remove index.html.
    */
   if (path.toLowerCase() === "index.html") {
     path = "";
@@ -143,76 +156,124 @@ function restoreSelection() {
     path = path.slice(0, -"/index.html".length);
   }
 
-  const parts = path ? path.split("/").filter(Boolean) : [];
+  const parts = path
+    ? path.split("/").filter(Boolean)
+    : [];
 
   const urlSection = parts[0] || null;
   const urlSubCategory = parts[1] || null;
 
-  const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(
+    window.location.search,
+  );
+
   const urlCategory = params.get("category");
 
   /*
    * -------------------------------------------------------
-   * 1. URL SECTION
+   * SECTION
    * -------------------------------------------------------
    */
 
   const configuredPageSection =
     typeof window.CODER_BASKET_SECTION === "string"
-      ? window.CODER_BASKET_SECTION
+      ? window.CODER_BASKET_SECTION.trim()
       : null;
 
-  const candidateSection = urlSection || configuredPageSection;
+  const candidateSection =
+    urlSection || configuredPageSection;
 
   if (
     candidateSection &&
-    (candidateSection === "all" ||
-      DATA_SECTIONS[candidateSection] ||
-      (typeof FRAMEWORKS !== "undefined" && FRAMEWORKS[candidateSection]))
+    isValidSection(candidateSection)
   ) {
     selectedSection = candidateSection;
   } else {
-    selectedSection = DEFAULT_SECTION;
+    selectedSection =
+      typeof DEFAULT_SECTION !== "undefined"
+        ? DEFAULT_SECTION
+        : "ai";
   }
 
   /*
    * -------------------------------------------------------
-   * 2. URL SUB-CATEGORY
+   * SUB-CATEGORY
    * -------------------------------------------------------
    */
 
-  if (urlSubCategory) {
-    selectedSubCategory = String(urlSubCategory);
-  } else {
-    selectedSubCategory = "all";
-  }
+  selectedSubCategory =
+    urlSubCategory
+      ? String(urlSubCategory)
+      : "all";
 
   /*
    * -------------------------------------------------------
-   * 3. URL CATEGORY PARAMETER
+   * CATEGORY
    * -------------------------------------------------------
    */
 
   if (
-    urlCategory === "all" ||
-    (urlCategory !== null && CATEGORIES[Number(urlCategory)])
+    urlCategory === "all"
   ) {
-    selectedCategoryId = urlCategory === "all" ? "all" : Number(urlCategory);
+    selectedCategoryId = "all";
+  } else if (
+    urlCategory !== null &&
+    typeof CATEGORIES !== "undefined" &&
+    CATEGORIES[Number(urlCategory)]
+  ) {
+    selectedCategoryId =
+      Number(urlCategory);
   } else {
     selectedCategoryId = "all";
   }
 
   log("restoreSelection", "URL state:", {
-    originalPath: window.location.pathname,
-    normalizedPath: path,
+    originalPath:
+      window.location.pathname,
+
+    normalizedPath:
+      path,
+
     urlSection,
     urlSubCategory,
     urlCategory,
+
     selectedSection,
     selectedSubCategory,
     selectedCategoryId,
+
+    isFramework:
+      isFrameworkSection(selectedSection),
   });
 }
+
+
+function isValidSection(sectionKey) {
+  if (!sectionKey) {
+    return false;
+  }
+
+  if (sectionKey === "all") {
+    return true;
+  }
+
+  if (
+    typeof DATA_SECTIONS !== "undefined" &&
+    DATA_SECTIONS[sectionKey]
+  ) {
+    return true;
+  }
+
+  if (
+    typeof FRAMEWORKS !== "undefined" &&
+    FRAMEWORKS[sectionKey]
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
 
 function saveSelection() {
   log("saveSelection", {
@@ -221,12 +282,116 @@ function saveSelection() {
     selectedCategoryId,
   });
 
-  localStorage.setItem(STORAGE_KEYS.section, selectedSection);
-  localStorage.setItem(STORAGE_KEYS.subCategory, selectedSubCategory);
-  localStorage.setItem(STORAGE_KEYS.category, String(selectedCategoryId));
+  if (
+    typeof STORAGE_KEYS === "undefined"
+  ) {
+    return;
+  }
+
+  localStorage.setItem(
+    STORAGE_KEYS.section,
+    selectedSection,
+  );
+
+  localStorage.setItem(
+    STORAGE_KEYS.subCategory,
+    selectedSubCategory,
+  );
+
+  localStorage.setItem(
+    STORAGE_KEYS.category,
+    String(selectedCategoryId),
+  );
 }
 
 //#endregion
+
+
+//#region Section / Framework Helpers
+
+function isFrameworkSection(sectionKey) {
+  return (
+    typeof FRAMEWORKS !== "undefined" &&
+    FRAMEWORKS &&
+    Object.prototype.hasOwnProperty.call(
+      FRAMEWORKS,
+      sectionKey,
+    )
+  );
+}
+
+
+function getFrameworkConfig(sectionKey) {
+  if (!isFrameworkSection(sectionKey)) {
+    return null;
+  }
+
+  return FRAMEWORKS[sectionKey];
+}
+
+
+function getDataSourceSectionKey(sectionKey) {
+  /*
+   * Normal catalogue section.
+   *
+   * ai
+   * dotnet
+   * flutter
+   * frameworks
+   */
+  if (
+    typeof DATA_SECTIONS !== "undefined" &&
+    DATA_SECTIONS[sectionKey]
+  ) {
+    return sectionKey;
+  }
+
+  /*
+   * Virtual framework.
+   *
+   * kotlin
+   * react
+   * vue
+   * angular
+   *
+   * all use frameworks.json.
+   */
+  if (isFrameworkSection(sectionKey)) {
+    const framework =
+      getFrameworkConfig(sectionKey);
+
+    return (
+      framework?.dataSource ||
+      "frameworks"
+    );
+  }
+
+  return sectionKey;
+}
+
+
+function getSectionDisplayName(sectionKey) {
+  if (sectionKey === "all") {
+    return "All";
+  }
+
+  if (
+    typeof DATA_SECTIONS !== "undefined" &&
+    DATA_SECTIONS[sectionKey]
+  ) {
+    return DATA_SECTIONS[sectionKey].name;
+  }
+
+  if (isFrameworkSection(sectionKey)) {
+    return FRAMEWORKS[sectionKey].name;
+  }
+
+  return sectionKey;
+}
+
+
+//#endregion
+
 
 //#region Catalogue Loading
 
@@ -240,29 +405,62 @@ async function loadCatalog() {
   showLoading(true);
 
   try {
+    /*
+     * Determine which physical JSON sources
+     * need to be loaded.
+     */
+
     const sectionsToLoad =
-      selectedSection === "all" ? DATA_SECTION_ORDER : [selectedSection];
+      selectedSection === "all"
+        ? getAllCatalogueSources()
+        : [selectedSection];
 
-    log("loadCatalog", "Sections to load:", sectionsToLoad);
-
-    const requests = sectionsToLoad.map((sectionKey) =>
-      loadCatalogSection(sectionKey),
+    log(
+      "loadCatalog",
+      "Sections to load:",
+      sectionsToLoad,
     );
 
-    const results = await Promise.allSettled(requests);
+    const requests =
+      sectionsToLoad.map(
+        (sectionKey) =>
+          loadCatalogSection(sectionKey),
+      );
+
+    const results =
+      await Promise.allSettled(
+        requests,
+      );
+
     const projects = [];
 
     for (const result of results) {
-      if (result.status === "fulfilled") {
-        projects.push(...result.value);
+      if (
+        result.status === "fulfilled"
+      ) {
+        projects.push(
+          ...result.value,
+        );
       } else {
-        warn("loadCatalog", "Unable to load catalogue source:", result.reason);
+        warn(
+          "loadCatalog",
+          "Unable to load catalogue source:",
+          result.reason,
+        );
       }
     }
 
-    allProjects = normalizeProjects(projects);
+    allProjects =
+      normalizeProjects(projects);
+
+    log(
+      "loadCatalog",
+      "Normalized projects:",
+      allProjects.length,
+    );
 
     notifyCategories();
+
     renderSubCategories();
     renderCategories();
 
@@ -272,65 +470,254 @@ async function loadCatalog() {
       selectedSection,
       selectedSubCategory,
       selectedCategoryId,
-      allProjects: allProjects.length,
-      filteredProjects: filteredProjects.length,
+      allProjects:
+        allProjects.length,
+      filteredProjects:
+        filteredProjects.length,
     });
   } catch (errorValue) {
-    error("loadCatalog", "Coder Basket catalogue failed:", errorValue);
-    showError("Unable to load the Coder Basket catalogue. Please try again.");
+    error(
+      "loadCatalog",
+      "Coder Basket catalogue failed:",
+      errorValue,
+    );
+
+    showError(
+      "Unable to load the Coder Basket catalogue. Please try again.",
+    );
   } finally {
     showLoading(false);
   }
 }
 
-async function loadCatalogSection(sectionKey) {
-  const sourceSectionKey = getDataSourceSectionKey(sectionKey);
-  const section = DATA_SECTIONS[sourceSectionKey];
 
-  if (!section) {
-    warn("loadCatalogSection", `Unknown catalogue section: ${sectionKey}`);
+function getAllCatalogueSources() {
+  const sources = [];
+
+  /*
+   * Normal catalogue sections.
+   */
+  if (
+    typeof DATA_SECTION_ORDER !==
+    "undefined"
+  ) {
+    for (
+      const sectionKey of DATA_SECTION_ORDER
+    ) {
+      if (
+        DATA_SECTIONS?.[sectionKey]
+      ) {
+        sources.push(sectionKey);
+      }
+    }
+  }
+
+  /*
+   * Framework catalogue.
+   *
+   * All virtual frameworks share
+   * frameworks.json.
+   *
+   * We only load it once.
+   */
+  if (
+    typeof DATA_SECTIONS !== "undefined" &&
+    DATA_SECTIONS.frameworks &&
+    !sources.includes("frameworks")
+  ) {
+    sources.push("frameworks");
+  }
+
+  return sources;
+}
+
+
+async function loadCatalogSection(sectionKey) {
+  const sourceSectionKey =
+    getDataSourceSectionKey(
+      sectionKey,
+    );
+
+  /*
+   * Physical source configuration.
+   */
+  const sourceConfig =
+    typeof DATA_SECTIONS !==
+    "undefined"
+      ? DATA_SECTIONS[
+          sourceSectionKey
+        ]
+      : null;
+
+  /*
+   * Virtual framework configuration.
+   */
+  const frameworkConfig =
+    isFrameworkSection(sectionKey)
+      ? getFrameworkConfig(
+          sectionKey,
+        )
+      : null;
+
+  if (
+    !sourceConfig &&
+    !frameworkConfig
+  ) {
+    warn(
+      "loadCatalogSection",
+      `Unknown catalogue section: ${sectionKey}`,
+      {
+        sectionKey,
+        sourceSectionKey,
+      },
+    );
+
     return [];
   }
 
-  const fileName = section.file || `${sourceSectionKey}.json`;
-  const url = `${DATA_BASE_URL}${fileName}`;
+  const fileName =
+    sourceConfig?.file ||
+    frameworkConfig?.file ||
+    `${sourceSectionKey}.json`;
+
+  const url =
+    `${DATA_BASE_URL}${fileName}`;
+
+  log(
+    "loadCatalogSection",
+    "Loading:",
+    {
+      requestedSection:
+        sectionKey,
+
+      sourceSection:
+        sourceSectionKey,
+
+      fileName,
+      url,
+
+      framework:
+        isFrameworkSection(
+          sectionKey,
+        ),
+    },
+  );
 
   try {
-    const response = await fetch(url);
+    const response =
+      await fetch(url);
 
-    if (response.status === 404 || !response.ok) {
-      warn("loadCatalogSection", `Unable to load source: ${url}`);
+    if (!response.ok) {
+      warn(
+        "loadCatalogSection",
+        `Unable to load source: ${url}`,
+        {
+          status:
+            response.status,
+
+          sectionKey,
+          sourceSectionKey,
+        },
+      );
+
       return [];
     }
 
-    const text = await response.text();
-    if (!text.trim()) return [];
+    const text =
+      await response.text();
+
+    if (!text.trim()) {
+      warn(
+        "loadCatalogSection",
+        `Empty catalogue source: ${url}`,
+      );
+
+      return [];
+    }
 
     let data;
+
     try {
       data = JSON.parse(text);
     } catch (parseError) {
-      error("loadCatalogSection", `Invalid JSON in ${url}`, parseError);
+      error(
+        "loadCatalogSection",
+        `Invalid JSON in ${url}`,
+        parseError,
+      );
+
       return [];
     }
 
-    const items = Array.isArray(data)
-      ? data
-      : Array.isArray(data.Items)
-        ? data.Items
-        : [];
+    const items =
+      Array.isArray(data)
+        ? data
+        : Array.isArray(
+              data.Items,
+            )
+          ? data.Items
+          : [];
 
-    var finalItems = items.map((item) => ({
-      ...item,
-      source_section: sourceSectionKey,
-      data_section:
-        item.section || item.data_section || item.DataSection || sectionKey,
-      data_category:
-        item.section_category ||
-        item.data_category ||
-        item.DataCategory ||
-        "all",
-    }));
+    /*
+     * Determine the actual section
+     * represented by this source.
+     */
+    const finalItems =
+      items.map((item) => {
+        const itemSection =
+          item.section ||
+          item.data_section ||
+          item.DataSection ||
+          sourceSectionKey;
+
+        const itemCategory =
+          item.section_category ||
+          item.data_category ||
+          item.DataCategory ||
+          "all";
+
+        return {
+          ...item,
+
+          /*
+           * Physical JSON source.
+           */
+          source_section:
+            sourceSectionKey,
+
+          /*
+           * Actual catalogue section.
+           *
+           * For ai.json:
+           *   ai
+           *
+           * For frameworks.json:
+           *   frameworks
+           * unless the item explicitly
+           * provides its own section.
+           */
+          data_section:
+            itemSection,
+
+          /*
+           * Sub-category/file key.
+           */
+          data_category:
+            itemCategory,
+        };
+      });
+
+    log(
+      "loadCatalogSection",
+      "Loaded:",
+      {
+        sectionKey,
+        sourceSectionKey,
+        count:
+          finalItems.length,
+      },
+    );
+
     return finalItems;
   } catch (errorValue) {
     error(
@@ -338,129 +725,513 @@ async function loadCatalogSection(sectionKey) {
       `Unable to load catalogue source: ${url}`,
       errorValue,
     );
+
     return [];
   }
 }
 
-function getDataSourceSectionKey(sectionKey) {
-  if (DATA_SECTIONS[sectionKey]) {
-    return sectionKey;
-  }
-
-  if (typeof FRAMEWORKS !== "undefined" && FRAMEWORKS[sectionKey]) {
-    return "frameworks";
-  }
-
-  return sectionKey;
-}
-
 //#endregion
+
 
 //#region Data Normalization
 
-function normalizeProjects(projects) {
-  return projects.map((project) => {
-    const rawCategories = Array.isArray(project.categories)
-      ? project.categories
-      : Array.isArray(project.Categories)
-        ? project.Categories
-        : [];
+function normalizeProjects(
+  projects,
+) {
+  return projects.map(
+    (project) => {
+      /*
+       * ---------------------------------------------------
+       * CATEGORIES
+       * ---------------------------------------------------
+       */
 
-    const categories =
-      rawCategories.length > 0 ? [...new Set(rawCategories)] : [41];
-
-    const platforms = Array.isArray(project.platforms)
-      ? [...new Set(project.platforms)]
-      : Array.isArray(project.Platforms)
-        ? [...new Set(project.Platforms)]
-        : [];
-
-    const technologies = Array.isArray(project.technologies)
-      ? [...new Set(project.technologies)]
-      : Array.isArray(project.Technologies)
-        ? [...new Set(project.Technologies)]
-        : project.technology
-          ? [project.technology]
-          : project.framework_name
-            ? [project.framework_name]
+      const rawCategories =
+        Array.isArray(
+          project.categories,
+        )
+          ? project.categories
+          : Array.isArray(
+                project.Categories,
+              )
+            ? project.Categories
             : [];
 
-    let imageUrls = [];
-    if (project.image_url) {
-      imageUrls = [project.image_url];
-    } else if (Array.isArray(project.ImageUrls)) {
-      imageUrls = project.ImageUrls.filter(Boolean);
-    } else if (Array.isArray(project.image_urls)) {
-      imageUrls = project.image_urls.filter(Boolean);
-    }
+      const categories =
+        rawCategories.length > 0
+          ? [
+              ...new Set(
+                rawCategories,
+              ),
+            ]
+          : [41];
 
-    const dataCategory = project.data_category || project.DataCategory || "";
+      /*
+       * ---------------------------------------------------
+       * PLATFORMS
+       * ---------------------------------------------------
+       */
 
-    if (imageUrls.length === 0 && typeof getCategoryIcon === "function") {
-      const categoryIcon = getCategoryIcon(dataCategory);
-      if (categoryIcon) {
-        imageUrls = [categoryIcon];
+      const platforms =
+        Array.isArray(
+          project.platforms,
+        )
+          ? [
+              ...new Set(
+                project.platforms,
+              ),
+            ]
+          : Array.isArray(
+                project.Platforms,
+              )
+            ? [
+                ...new Set(
+                  project.Platforms,
+                ),
+              ]
+            : [];
+
+      /*
+       * ---------------------------------------------------
+       * TECHNOLOGIES
+       * ---------------------------------------------------
+       */
+
+      const technologies =
+        Array.isArray(
+          project.technologies,
+        )
+          ? [
+              ...new Set(
+                project.technologies,
+              ),
+            ]
+          : Array.isArray(
+                project.Technologies,
+              )
+            ? [
+                ...new Set(
+                  project.Technologies,
+                ),
+              ]
+            : project.technology
+              ? [project.technology]
+              : project.framework_name
+                ? [project.framework_name]
+                : project.FrameWorkName
+                  ? [project.FrameWorkName]
+                  : [];
+
+      /*
+       * ---------------------------------------------------
+       * FRAMEWORK
+       * ---------------------------------------------------
+       */
+
+      const frameworkName =
+        getProjectFramework(
+          project,
+          technologies,
+        );
+
+      /*
+       * ---------------------------------------------------
+       * IMAGES
+       * ---------------------------------------------------
+       */
+
+      let imageUrls = [];
+
+      if (
+        project.image_url
+      ) {
+        imageUrls = [
+          project.image_url,
+        ];
+      } else if (
+        Array.isArray(
+          project.ImageUrls,
+        )
+      ) {
+        imageUrls =
+          project.ImageUrls.filter(
+            Boolean,
+          );
+      } else if (
+        Array.isArray(
+          project.image_urls,
+        )
+      ) {
+        imageUrls =
+          project.image_urls.filter(
+            Boolean,
+          );
       }
-    }
 
-    return {
-      project_url: project.project_url || project.ProjectUrl || "",
-      title: project.title || project.Title || "Untitled Project",
-      description:
-        project.description ||
-        project.Description ||
-        "No description available.",
-      platforms,
-      external_url: project.external_url ?? project.ExternalUrl ?? null,
-      youtube_url: project.youtube_url ?? project.YoutubeUrl ?? null,
-      technologies,
-      framework_name:
-        technologies[0] ||
-        project.framework_name ||
-        project.FrameWorkName ||
-        "others",
-      categories,
-      image_urls: imageUrls,
-      data_section:
-        project.section || project.data_section || project.DataSection || "",
-      data_category: project.section_category || dataCategory || "all",
-      source_section: project.source_section || "",
-      updated_at:
-        project.updated_at || project.updated || project.UpdatedAt || null,
-    };
-  });
+      /*
+       * ---------------------------------------------------
+       * DATA CATEGORY
+       * ---------------------------------------------------
+       */
+
+      const dataCategory =
+        project.data_category ||
+        project.section_category ||
+        project.DataCategory ||
+        "";
+
+      /*
+       * ---------------------------------------------------
+       * FALLBACK ICON
+       * ---------------------------------------------------
+       */
+
+      if (
+        imageUrls.length === 0 &&
+        typeof getCategoryIcon ===
+          "function"
+      ) {
+        const categoryIcon =
+          getCategoryIcon(
+            dataCategory,
+          );
+
+        if (categoryIcon) {
+          imageUrls = [
+            categoryIcon,
+          ];
+        }
+      }
+
+      /*
+       * ---------------------------------------------------
+       * RETURN NORMALIZED PROJECT
+       * ---------------------------------------------------
+       */
+
+      return {
+        project_url:
+          project.project_url ||
+          project.ProjectUrl ||
+          "",
+
+        title:
+          project.title ||
+          project.Title ||
+          "Untitled Project",
+
+        description:
+          project.description ||
+          project.Description ||
+          "No description available.",
+
+        platforms,
+
+        external_url:
+          project.external_url ??
+          project.ExternalUrl ??
+          null,
+
+        youtube_url:
+          project.youtube_url ??
+          project.YoutubeUrl ??
+          null,
+
+        technologies,
+
+        framework_name:
+          frameworkName,
+
+        categories,
+
+        image_urls:
+          imageUrls,
+
+        /*
+         * IMPORTANT:
+         *
+         * Preserve source metadata.
+         */
+        data_section:
+          project.section ||
+          project.data_section ||
+          project.DataSection ||
+          project.source_section ||
+          "",
+
+        data_category:
+          project.section_category ||
+          project.data_category ||
+          project.DataCategory ||
+          "all",
+
+        source_section:
+          project.source_section ||
+          "",
+
+        /*
+         * Keep the original framework
+         * values so virtual framework
+         * filtering can be reliable.
+         */
+        framework:
+          project.framework ||
+          project.Framework ||
+          project.framework_name ||
+          project.FrameWorkName ||
+          project.frameworkName ||
+          project.FrameworkName ||
+          "",
+
+        updated_at:
+          project.updated_at ||
+          project.updated ||
+          project.UpdatedAt ||
+          null,
+      };
+    },
+  );
+}
+
+
+function getProjectFramework(
+  project,
+  technologies,
+) {
+  /*
+   * Explicit framework fields always
+   * have priority over technologies.
+   */
+
+  return (
+    project.framework_name ||
+    project.FrameWorkName ||
+    project.framework ||
+    project.Framework ||
+    project.frameworkName ||
+    project.FrameworkName ||
+    technologies[0] ||
+    "others"
+  );
 }
 
 //#endregion
+
+
+//#region Framework Matching
+
+function projectMatchesFramework(
+  project,
+  frameworkKey,
+) {
+  const frameworkConfig =
+    getFrameworkConfig(
+      frameworkKey,
+    );
+
+  if (!frameworkConfig) {
+    return false;
+  }
+
+  /*
+   * ---------------------------------------------------
+   * Framework aliases
+   * ---------------------------------------------------
+   */
+
+  const aliases = new Set();
+
+  aliases.add(
+    normalizeValue(
+      frameworkKey,
+    ),
+  );
+
+  aliases.add(
+    normalizeValue(
+      frameworkConfig.name,
+    ),
+  );
+
+  /*
+   * nextjs / Next.js
+   */
+  if (
+    frameworkKey === "nextjs"
+  ) {
+    aliases.add("next");
+    aliases.add("next.js");
+  }
+
+  /*
+   * react-native
+   */
+  if (
+    frameworkKey ===
+    "react-native"
+  ) {
+    aliases.add("react native");
+    aliases.add("reactnative");
+  }
+
+  /*
+   * kotlin-multiplatform
+   */
+  if (
+    frameworkKey ===
+    "kotlin-multiplatform"
+  ) {
+    aliases.add(
+      "kotlin multiplatform",
+    );
+
+    aliases.add(
+      "kotlin-multiplatform",
+    );
+
+    aliases.add(
+      "kmp",
+    );
+  }
+
+  /*
+   * ruby-on-rails
+   */
+  if (
+    frameworkKey ===
+    "ruby-on-rails"
+  ) {
+    aliases.add(
+      "ruby on rails",
+    );
+
+    aliases.add(
+      "rails",
+    );
+  }
+
+  /*
+   * ---------------------------------------------------
+   * Collect project framework values
+   * ---------------------------------------------------
+   */
+
+  const values = [
+    project.framework,
+    project.framework_name,
+    project.frameworkName,
+    project.Framework,
+    project.FrameworkName,
+    project.FrameWorkName,
+    project.technology,
+
+    ...(Array.isArray(
+      project.technologies,
+    )
+      ? project.technologies
+      : []),
+  ]
+    .filter(Boolean)
+    .map(normalizeValue);
+
+  /*
+   * Direct match.
+   */
+  for (const value of values) {
+    if (aliases.has(value)) {
+      return true;
+    }
+  }
+
+  /*
+   * Some catalogue data may contain
+   * multiple framework names in a
+   * string such as:
+   *
+   * "React, TypeScript"
+   */
+  for (const value of values) {
+    for (const alias of aliases) {
+      if (
+        value.includes(alias)
+      ) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
+
+function normalizeValue(
+  value,
+) {
+  return String(
+    value ?? "",
+  )
+    .trim()
+    .toLowerCase()
+    .replace(
+      /[_]+/g,
+      "-",
+    )
+    .replace(
+      /\s+/g,
+      " ",
+    );
+}
+
+//#endregion
+
 
 //#region Event Dispatcher
 
 function notifyCategories() {
   const categoryIds = [
     ...new Set(
-      allProjects.flatMap((project) =>
-        Array.isArray(project.categories) ? project.categories : [],
+      allProjects.flatMap(
+        (project) =>
+          Array.isArray(
+            project.categories,
+          )
+            ? project.categories
+            : [],
       ),
     ),
   ]
     .map(Number)
     .filter(
-      (id) => !isNaN(id) && typeof CATEGORIES !== "undefined" && CATEGORIES[id],
+      (id) =>
+        !isNaN(id) &&
+        typeof CATEGORIES !==
+          "undefined" &&
+        CATEGORIES[id],
     );
 
   document.dispatchEvent(
-    new CustomEvent("catalogCategoriesLoaded", {
-      detail: { categories: categoryIds },
-    }),
+    new CustomEvent(
+      "catalogCategoriesLoaded",
+      {
+        detail: {
+          categories:
+            categoryIds,
+        },
+      },
+    ),
   );
 }
 
 //#endregion
 
+
 //#region Sidebar Renderers
 
 function renderSections() {
-  if (!sectionList) return;
+  if (!sectionList) {
+    return;
+  }
+
   sectionList.innerHTML = "";
 
   addFilterLink(
@@ -471,81 +1242,171 @@ function renderSections() {
     "section",
   );
 
-  for (const sectionKey of DATA_SECTION_ORDER) {
-    const section = DATA_SECTIONS[sectionKey];
-    if (!section) continue;
+  if (
+    typeof DATA_SECTION_ORDER ===
+    "undefined"
+  ) {
+    return;
+  }
+
+  for (
+    const sectionKey of
+    DATA_SECTION_ORDER
+  ) {
+    const section =
+      DATA_SECTIONS?.[
+        sectionKey
+      ];
+
+    if (!section) {
+      continue;
+    }
 
     addFilterLink(
       sectionList,
       section.name,
       sectionKey,
-      selectedSection === sectionKey,
+      selectedSection ===
+        sectionKey,
       "section",
     );
   }
 }
 
+
 function renderSubCategories() {
-  if (!subCategoryList) return;
+  if (!subCategoryList) {
+    return;
+  }
+
   subCategoryList.innerHTML = "";
 
   addFilterLink(
     subCategoryList,
     "All Sub-Categories",
     "all",
-    selectedSubCategory === "all",
+    selectedSubCategory ===
+      "all",
     "subcategory",
   );
 
-  const subCategories = new Set();
-  for (const project of allProjects) {
-    if (project.data_category) {
-      subCategories.add(project.data_category);
+  /*
+   * Use only currently loaded projects.
+   */
+  const subCategories =
+    new Map();
+
+  for (
+    const project of allProjects
+  ) {
+    const key =
+      String(
+        project.data_category ||
+          "",
+      ).trim();
+
+    if (!key || key === "all") {
+      continue;
+    }
+
+    if (!subCategories.has(key)) {
+      subCategories.set(
+        key,
+        key,
+      );
     }
   }
 
-  for (const subCatKey of [...subCategories].sort()) {
+  const sorted =
+    [...subCategories.values()]
+      .sort((a, b) =>
+        a.localeCompare(b),
+      );
+
+  for (
+    const subCatKey of sorted
+  ) {
     addFilterLink(
       subCategoryList,
       subCatKey,
       subCatKey,
-      selectedSubCategory === subCatKey,
+      selectedSubCategory ===
+        subCatKey,
       "subcategory",
     );
   }
 }
 
+
 function renderCategories() {
-  if (!categoryList) return;
+  if (!categoryList) {
+    return;
+  }
+
   categoryList.innerHTML = "";
 
   addFilterLink(
     categoryList,
     "All Categories",
     "all",
-    selectedCategoryId === "all",
+    selectedCategoryId ===
+      "all",
     "category",
   );
 
-  const categoryIds = new Set();
-  for (const project of allProjects) {
-    if (!Array.isArray(project.categories)) continue;
+  const categoryIds =
+    new Set();
 
-    for (const categoryId of project.categories) {
-      const id = Number(categoryId);
-      if (typeof CATEGORIES !== "undefined" && CATEGORIES[id]) {
+  for (
+    const project of allProjects
+  ) {
+    if (
+      !Array.isArray(
+        project.categories,
+      )
+    ) {
+      continue;
+    }
+
+    for (
+      const categoryId of
+      project.categories
+    ) {
+      const id =
+        Number(categoryId);
+
+      if (
+        typeof CATEGORIES !==
+          "undefined" &&
+        CATEGORIES[id]
+      ) {
         categoryIds.add(id);
       }
     }
   }
 
-  const sortedCategories = [...categoryIds].sort((a, b) =>
-    (CATEGORIES[a] || "").localeCompare(CATEGORIES[b] || ""),
-  );
+  const sortedCategories =
+    [...categoryIds].sort(
+      (a, b) =>
+        (
+          CATEGORIES[a] ||
+          ""
+        ).localeCompare(
+          CATEGORIES[b] ||
+          "",
+        ),
+    );
 
-  for (const categoryId of sortedCategories) {
+  for (
+    const categoryId of
+    sortedCategories
+  ) {
     const isSelected =
-      selectedCategoryId !== "all" && Number(selectedCategoryId) === categoryId;
+      selectedCategoryId !==
+        "all" &&
+      Number(
+        selectedCategoryId,
+      ) === categoryId;
 
     addFilterLink(
       categoryList,
@@ -559,190 +1420,495 @@ function renderCategories() {
 
 //#endregion
 
-//#region Filter Links Handler
 
-function addFilterLink(container, text, value, active, type) {
-  const button = document.createElement("button");
+//#region Filter Links
+
+function addFilterLink(
+  container,
+  text,
+  value,
+  active,
+  type,
+) {
+  const button =
+    document.createElement(
+      "button",
+    );
+
   button.type = "button";
-  button.className = "category-link";
-  if (active) button.classList.add("active");
+  button.className =
+    "category-link";
+
+  if (active) {
+    button.classList.add(
+      "active",
+    );
+  }
+
   button.textContent = text;
 
-  button.addEventListener("click", async () => {
-    log("addFilterLink", "CLICK", { type, text, value });
+  button.addEventListener(
+    "click",
+    async () => {
+      log(
+        "addFilterLink",
+        "CLICK",
+        {
+          type,
+          text,
+          value,
+        },
+      );
 
-    /* 1. SECTION FILTER LINK CLICK */
-    if (type === "section") {
-      selectedSection = value;
-      selectedSubCategory = "all";
-      selectedCategoryId = "all";
+      /*
+       * ---------------------------------------------------
+       * SECTION
+       * ---------------------------------------------------
+       */
 
-      saveSelection();
-      currentPage = 1;
+      if (type === "section") {
+        selectedSection =
+          value;
 
-      renderSections();
-      await loadCatalog();
-      return;
-    }
+        selectedSubCategory =
+          "all";
 
-    /* 2. SUB-CATEGORY (FILE KEY) LINK CLICK */
-    if (type === "subcategory") {
-      selectedSubCategory = value === "all" ? "all" : String(value);
-      saveSelection();
-      currentPage = 1;
+        selectedCategoryId =
+          "all";
 
-      renderSubCategories();
-      applyFilters();
-      return;
-    }
+        saveSelection();
 
-    /* 3. GLOBAL CATEGORY NUMERIC ID LINK CLICK */
-    if (type === "category") {
-      selectedCategoryId = value === "all" ? "all" : Number(value);
-      saveSelection();
-      currentPage = 1;
+        currentPage = 1;
 
-      renderCategories();
-      applyFilters();
-      return;
-    }
-  });
+        renderSections();
+        renderSubCategories();
+        renderCategories();
 
-  container.appendChild(button);
+        await loadCatalog();
+
+        return;
+      }
+
+      /*
+       * ---------------------------------------------------
+       * SUB-CATEGORY
+       * ---------------------------------------------------
+       */
+
+      if (
+        type ===
+        "subcategory"
+      ) {
+        selectedSubCategory =
+          value === "all"
+            ? "all"
+            : String(value);
+
+        saveSelection();
+
+        currentPage = 1;
+
+        renderSubCategories();
+
+        applyFilters();
+
+        return;
+      }
+
+      /*
+       * ---------------------------------------------------
+       * GLOBAL CATEGORY
+       * ---------------------------------------------------
+       */
+
+      if (
+        type === "category"
+      ) {
+        selectedCategoryId =
+          value === "all"
+            ? "all"
+            : Number(value);
+
+        saveSelection();
+
+        currentPage = 1;
+
+        renderCategories();
+
+        applyFilters();
+
+        return;
+      }
+    },
+  );
+
+  container.appendChild(
+    button,
+  );
 }
 
 //#endregion
 
-//#region Search Handling
+
+//#region Search
 
 function setupSearch() {
-  if (!searchInput) return;
+  if (!searchInput) {
+    return;
+  }
 
-  searchInput.addEventListener("input", () => applyFilters());
+  searchInput.addEventListener(
+    "input",
+    () => {
+      applyFilters();
+    },
+  );
+
   if (searchButton) {
-    searchButton.addEventListener("click", () => applyFilters());
+    searchButton.addEventListener(
+      "click",
+      () => {
+        applyFilters();
+      },
+    );
   }
 }
 
+
 function getSearchText() {
-  return searchInput ? searchInput.value.trim().toLowerCase() : "";
+  return searchInput
+    ? searchInput.value
+        .trim()
+        .toLowerCase()
+    : "";
 }
 
 //#endregion
 
-//#region Filtering Logic
+
+//#region Filtering
 
 function applyFilters() {
-  const searchText = getSearchText();
+  const searchText =
+    getSearchText();
 
-  log("applyFilters", "START", {
-    selectedSection,
-    selectedSubCategory,
-    selectedCategoryId,
-    searchText,
-    allProjects: allProjects.length,
-  });
+  log(
+    "applyFilters",
+    "START",
+    {
+      selectedSection,
+      selectedSubCategory,
+      selectedCategoryId,
+      searchText,
+      allProjects:
+        allProjects.length,
+    },
+  );
 
-  filteredProjects = allProjects.filter((project) => {
-    // 1. Section Filter
-    if (selectedSection !== "all") {
-      const pSection = String(project.data_section || "")
-        .trim()
-        .toLowerCase();
-      const targetSection = String(selectedSection).trim().toLowerCase();
-      if (pSection !== targetSection) return false;
-    }
+  filteredProjects =
+    allProjects.filter(
+      (project) => {
+        /*
+         * -------------------------------------------------
+         * 1. SECTION / FRAMEWORK
+         * -------------------------------------------------
+         */
 
-    // 2. Sub-Category (File Key) Filter
-    if (selectedSubCategory !== "all") {
-      const pSubCategory = String(project.data_category || "")
-        .trim()
-        .toLowerCase();
-      const targetSubCategory = String(selectedSubCategory)
-        .trim()
-        .toLowerCase();
-      if (pSubCategory !== targetSubCategory) return false;
-    }
+        if (
+          selectedSection !==
+          "all"
+        ) {
+          /*
+           * Virtual framework page.
+           *
+           * /kotlin/
+           * /react/
+           * /vue/
+           *
+           * All come from frameworks.json.
+           */
+          if (
+            isFrameworkSection(
+              selectedSection,
+            )
+          ) {
+            /*
+             * Ensure project came from
+             * the framework data source.
+             */
+            const expectedSource =
+              normalizeValue(
+                getDataSourceSectionKey(
+                  selectedSection,
+                ),
+              );
 
-    // 3. Global Numeric Category Filter
-    if (selectedCategoryId !== "all") {
-      const targetId = Number(selectedCategoryId);
-      const hasCategoryId =
-        Array.isArray(project.categories) &&
-        project.categories.some((id) => Number(id) === targetId);
+            const projectSource =
+              normalizeValue(
+                project.source_section,
+              );
 
-      if (!hasCategoryId) return false;
-    }
+            if (
+              projectSource !==
+              expectedSource
+            ) {
+              return false;
+            }
 
-    // 4. Text Search Filter
-    if (!searchText) return true;
+            /*
+             * Now match the actual
+             * framework.
+             */
+            if (
+              !projectMatchesFramework(
+                project,
+                selectedSection,
+              )
+            ) {
+              return false;
+            }
+          } else {
+            /*
+             * Normal section:
+             *
+             * ai
+             * dotnet
+             * flutter
+             */
+            const projectSection =
+              normalizeValue(
+                project.data_section,
+              );
 
-    const searchableText = [
-      project.title,
-      project.description,
-      project.framework_name,
-      project.data_section,
-      project.data_category,
-      ...(project.technologies || []),
-      ...(project.platforms || []),
-      ...(project.categories || []).map(
-        (id) => (typeof CATEGORIES !== "undefined" ? CATEGORIES[id] : "") || "",
-      ),
-    ]
-      .join(" ")
-      .toLowerCase();
+            const targetSection =
+              normalizeValue(
+                selectedSection,
+              );
 
-    return searchableText.includes(searchText);
-  });
+            if (
+              projectSection !==
+              targetSection
+            ) {
+              return false;
+            }
+          }
+        }
 
-  log("applyFilters", "RESULT", { filteredProjects: filteredProjects.length });
+        /*
+         * -------------------------------------------------
+         * 2. SUB-CATEGORY
+         * -------------------------------------------------
+         */
+
+        if (
+          selectedSubCategory !==
+          "all"
+        ) {
+          const projectSubCategory =
+            normalizeValue(
+              project.data_category,
+            );
+
+          const targetSubCategory =
+            normalizeValue(
+              selectedSubCategory,
+            );
+
+          if (
+            projectSubCategory !==
+            targetSubCategory
+          ) {
+            return false;
+          }
+        }
+
+        /*
+         * -------------------------------------------------
+         * 3. NUMERIC CATEGORY
+         * -------------------------------------------------
+         */
+
+        if (
+          selectedCategoryId !==
+          "all"
+        ) {
+          const targetId =
+            Number(
+              selectedCategoryId,
+            );
+
+          const hasCategory =
+            Array.isArray(
+              project.categories,
+            ) &&
+            project.categories.some(
+              (id) =>
+                Number(id) ===
+                targetId,
+            );
+
+          if (!hasCategory) {
+            return false;
+          }
+        }
+
+        /*
+         * -------------------------------------------------
+         * 4. SEARCH
+         * -------------------------------------------------
+         */
+
+        if (!searchText) {
+          return true;
+        }
+
+        const categoryNames =
+          (
+            project.categories ||
+            []
+          ).map(
+            (id) =>
+              typeof CATEGORIES !==
+                "undefined"
+                ? CATEGORIES[id] ||
+                  ""
+                : "",
+          );
+
+        const searchableText =
+          [
+            project.title,
+            project.description,
+            project.framework_name,
+            project.framework,
+            project.data_section,
+            project.data_category,
+
+            ...(project.technologies ||
+              []),
+
+            ...(project.platforms ||
+              []),
+
+            ...categoryNames,
+          ]
+            .join(" ")
+            .toLowerCase();
+
+        return searchableText.includes(
+          searchText,
+        );
+      },
+    );
+
+  log(
+    "applyFilters",
+    "RESULT",
+    {
+      filteredProjects:
+        filteredProjects.length,
+    },
+  );
 
   sortProjects();
+
   currentPage = 1;
+
   renderProjects();
 }
 
 //#endregion
 
-//#region Sorting Logic
+
+//#region Sorting
 
 function setupSorting() {
-  if (!sortSelect) return;
-  sortSelect.addEventListener("change", () => {
-    sortProjects();
-    currentPage = 1;
-    renderProjects();
-  });
+  if (!sortSelect) {
+    return;
+  }
+
+  sortSelect.addEventListener(
+    "change",
+    () => {
+      sortProjects();
+
+      currentPage = 1;
+
+      renderProjects();
+    },
+  );
 }
 
+
 function sortProjects() {
-  const sort = sortSelect ? sortSelect.value : "featured";
+  const sort =
+    sortSelect
+      ? sortSelect.value
+      : "featured";
 
   if (sort === "name") {
-    filteredProjects.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (sort === "recent") {
-    filteredProjects.sort((a, b) => getDateValue(b) - getDateValue(a));
+    filteredProjects.sort(
+      (a, b) =>
+        String(a.title || "")
+          .localeCompare(
+            String(
+              b.title || "",
+            ),
+          ),
+    );
+  } else if (
+    sort === "recent"
+  ) {
+    filteredProjects.sort(
+      (a, b) =>
+        getDateValue(b) -
+        getDateValue(a),
+    );
   }
 }
 
-function getDateValue(project) {
-  if (!project.updated_at) return 0;
-  const date = new Date(project.updated_at);
-  return !Number.isNaN(date.getTime()) ? date.getTime() : 0;
+
+function getDateValue(
+  project,
+) {
+  if (!project.updated_at) {
+    return 0;
+  }
+
+  const date = new Date(
+    project.updated_at,
+  );
+
+  return !Number.isNaN(
+    date.getTime(),
+  )
+    ? date.getTime()
+    : 0;
 }
 
 //#endregion
 
-//#region Project Rendering & Details
+
+//#region Project Rendering
 
 function renderProjects() {
-  if (!projectGrid) return;
+  if (!projectGrid) {
+    return;
+  }
 
   projectGrid.innerHTML = "";
 
-  const visibleProjects = filteredProjects.slice(0, currentPage * PAGE_SIZE);
+  const visibleProjects =
+    filteredProjects.slice(
+      0,
+      currentPage *
+        PAGE_SIZE,
+    );
 
-  if (visibleProjects.length === 0) {
+  if (
+    visibleProjects.length ===
+    0
+  ) {
     projectGrid.innerHTML = `
       <div class="catalog-empty">
         <h3>No projects found</h3>
@@ -751,168 +1917,282 @@ function renderProjects() {
     `;
 
     updateLoadMoreButton();
+
     return;
   }
 
-  const fragment = document.createDocumentFragment();
+  const fragment =
+    document.createDocumentFragment();
 
-  for (const project of visibleProjects) {
-    fragment.appendChild(createProjectCard(project));
+  for (
+    const project of
+    visibleProjects
+  ) {
+    fragment.appendChild(
+      createProjectCard(
+        project,
+      ),
+    );
   }
 
-  projectGrid.appendChild(fragment);
+  projectGrid.appendChild(
+    fragment,
+  );
 
   updateLoadMoreButton();
 }
 
-function getDetailUrl(project) {
-  const repoUrl = project.project_url || "";
+//#endregion
+
+
+//#region Project Details
+
+function getDetailUrl(
+  project,
+) {
+  const repoUrl =
+    project.project_url || "";
 
   if (!repoUrl) {
     return "#";
   }
 
-  // -------------------------------------------------------
-  // Store complete project JSON locally
-  // -------------------------------------------------------
-
+  /*
+   * Store complete project JSON.
+   */
   try {
-    const parsed = new URL(repoUrl);
+    const parsed =
+      new URL(repoUrl);
 
-    if (parsed.hostname === "github.com") {
-      const parts = parsed.pathname.split("/").filter(Boolean);
+    if (
+      parsed.hostname ===
+      "github.com"
+    ) {
+      const parts =
+        parsed.pathname
+          .split("/")
+          .filter(Boolean);
 
       if (parts.length >= 2) {
-        const owner = parts[0];
-        const repo = parts[1].replace(/\.git$/, "");
+        const owner =
+          parts[0];
 
-        const storageKey = `coderbasket_project_${owner}_${repo}`.toLowerCase();
+        const repo =
+          parts[1].replace(
+            /\.git$/,
+            "",
+          );
 
-        const existing = localStorage.getItem(storageKey);
+        const storageKey =
+          `coderbasket_project_${owner}_${repo}`
+            .toLowerCase();
+
+        const existing =
+          localStorage.getItem(
+            storageKey,
+          );
 
         if (!existing) {
-          // First time: store the catalogue project.
-          localStorage.setItem(storageKey, JSON.stringify(project));
-
-          console.log("[ProjectDetails] Stored new project:", {
+          localStorage.setItem(
             storageKey,
-          });
+            JSON.stringify(
+              project,
+            ),
+          );
+
+          log(
+            "ProjectDetails",
+            "Stored new project:",
+            {
+              storageKey,
+            },
+          );
         } else {
           try {
-            const existingProject = JSON.parse(existing);
+            const existingProject =
+              JSON.parse(
+                existing,
+              );
 
             /*
-             * Update the catalogue/base properties.
-             *
-             * Properties already appended by details.js
-             * are preserved because they are merged afterward.
+             * Existing detail data
+             * wins over base data.
              */
-            const updatedProject = {
-              ...project,
-              ...existingProject,
-            };
-
-            localStorage.setItem(storageKey, JSON.stringify(updatedProject));
-
-            console.log(
-              "[ProjectDetails] Updated base project, preserved details:",
+            const updatedProject =
               {
-                storageKey,
-              },
+                ...project,
+                ...existingProject,
+              };
+
+            localStorage.setItem(
+              storageKey,
+              JSON.stringify(
+                updatedProject,
+              ),
             );
-          } catch (parseError) {
-            console.warn(
-              "[ProjectDetails] Existing data is invalid. Replacing it:",
+          } catch (
+            parseError
+          ) {
+            warn(
+              "ProjectDetails",
+              "Existing data is invalid. Replacing it:",
               parseError,
             );
 
-            localStorage.setItem(storageKey, JSON.stringify(project));
+            localStorage.setItem(
+              storageKey,
+              JSON.stringify(
+                project,
+              ),
+            );
           }
         }
       }
     }
-  } catch (error) {
-    console.warn("[ProjectDetails] Failed to store project:", error);
+  } catch (
+    errorValue
+  ) {
+    warn(
+      "ProjectDetails",
+      "Failed to store project:",
+      errorValue,
+    );
   }
 
-  // -------------------------------------------------------
-  // Keep the FULL GitHub URL in the URL parameter
-  // -------------------------------------------------------
-
-  const params = new URLSearchParams({
-    repo: repoUrl,
-  });
+  /*
+   * Full GitHub URL remains
+   * inside repo parameter.
+   */
+  const params =
+    new URLSearchParams({
+      repo: repoUrl,
+    });
 
   return `/details/?${params.toString()}`;
 }
 
-function createProjectCard(project) {
-  const article = document.createElement("article");
-  article.className = "project-card";
+//#endregion
 
-  // =========================================================
-  // GITHUB REPOSITORY
-  // =========================================================
 
-  const repo = getGitHubRepo(project.project_url);
+//#region Project Card
+
+function createProjectCard(
+  project,
+) {
+  const article =
+    document.createElement(
+      "article",
+    );
+
+  article.className =
+    "project-card";
+
+  /*
+   * -------------------------------------------------------
+   * GITHUB REPOSITORY
+   * -------------------------------------------------------
+   */
+
+  const repo =
+    getGitHubRepo(
+      project.project_url,
+    );
 
   if (repo) {
-    article.dataset.repo = repo;
+    article.dataset.repo =
+      repo;
   }
 
-  // =========================================================
-  // PROJECT IMAGE
-  // =========================================================
+  /*
+   * -------------------------------------------------------
+   * PROJECT IMAGE
+   * -------------------------------------------------------
+   */
 
-  const image = getProjectImage(project);
+  const image =
+    getProjectImage(
+      project,
+    );
 
-  const imageHtml = image
-    ? `<img
-         src="${escapeAttribute(image)}"
-         alt="${escapeAttribute(project.title)}"
-         loading="lazy"
-         decoding="async"
-         onerror="handleImageError(
-           this,
-           '${escapeAttribute(project.data_category)}'
-         )"
-       >`
-    : `<div class="project-image-placeholder">
-         ${escapeHtml(project.title.charAt(0))}
-       </div>`;
+  const imageHtml =
+    image
+      ? `
+        <img
+          src="${escapeAttribute(image)}"
+          alt="${escapeAttribute(project.title)}"
+          loading="lazy"
+          decoding="async"
+          onerror="handleImageError(
+            this,
+            '${escapeAttribute(project.data_category)}'
+          )"
+        >
+      `
+      : `
+        <div class="project-image-placeholder">
+          ${escapeHtml(
+            String(
+              project.title ||
+                "?",
+            ).charAt(0),
+          )}
+        </div>
+      `;
 
-  // =========================================================
-  // CATEGORIES
-  // =========================================================
+  /*
+   * -------------------------------------------------------
+   * CATEGORIES
+   * -------------------------------------------------------
+   */
 
-  const categoryNames = (project.categories || [])
-    .map((id) => (typeof CATEGORIES !== "undefined" ? CATEGORIES[id] : null))
-    .filter(Boolean)
-    .slice(0, 3);
+  const categoryNames =
+    (
+      project.categories ||
+      []
+    )
+      .map(
+        (id) =>
+          typeof CATEGORIES !==
+            "undefined"
+            ? CATEGORIES[id]
+            : null,
+      )
+      .filter(Boolean)
+      .slice(0, 3);
 
-  const categoryHtml = categoryNames
-    .map((name) => `<span class="project-tag">${escapeHtml(name)}</span>`)
-    .join("");
+  const categoryHtml =
+    categoryNames
+      .map(
+        (name) =>
+          `<span class="project-tag">${escapeHtml(name)}</span>`,
+      )
+      .join("");
 
-  // =========================================================
-  // SECTION
-  // =========================================================
+  /*
+   * -------------------------------------------------------
+   * SECTION / FRAMEWORK LABEL
+   * -------------------------------------------------------
+   */
 
-  const section =
-    typeof DATA_SECTIONS !== "undefined"
-      ? DATA_SECTIONS[project.data_section]
-      : null;
+  const sectionName =
+    getProjectCardSectionName(
+      project,
+    );
 
-  const sectionName = section ? section.name : project.data_section;
-
-  // =========================================================
-  // CARD HTML
-  // =========================================================
+  /*
+   * -------------------------------------------------------
+   * CARD HTML
+   * -------------------------------------------------------
+   */
 
   article.innerHTML = `
     <a
       class="project-card-link"
-      href="${escapeAttribute(getDetailUrl(project))}"
+      href="${escapeAttribute(
+        getDetailUrl(
+          project,
+        ),
+      )}"
     >
 
       <div class="project-image">
@@ -922,15 +2202,21 @@ function createProjectCard(project) {
       <div class="project-card-body">
 
         <div class="project-host">
-          ${escapeHtml(sectionName)}
+          ${escapeHtml(
+            sectionName,
+          )}
         </div>
 
         <h3>
-          ${escapeHtml(project.title)}
+          ${escapeHtml(
+            project.title,
+          )}
         </h3>
 
         <p>
-          ${escapeHtml(project.description)}
+          ${escapeHtml(
+            project.description,
+          )}
         </p>
 
         ${
@@ -950,9 +2236,7 @@ function createProjectCard(project) {
                 class="project-stats"
                 data-stats
                 aria-label="GitHub statistics"
-              >
-               
-              </div>
+              ></div>
             `
             : ""
         }
@@ -962,34 +2246,87 @@ function createProjectCard(project) {
     </a>
   `;
 
-  // =========================================================
-  // LOAD GITHUB STATS IN BACKGROUND
-  // =========================================================
-  //
-  // IMPORTANT:
-  // Do not await this.
-  //
-  // The card is returned immediately and the stats
-  // are filled in when the request finishes.
-  //
+  /*
+   * -------------------------------------------------------
+   * GITHUB STATS
+   * -------------------------------------------------------
+   */
 
-  if (repo) {
-    loadGitHubStats(article, repo);
+  if (
+    repo &&
+    typeof loadGitHubStats ===
+      "function"
+  ) {
+    loadGitHubStats(
+      article,
+      repo,
+    );
   }
 
   return article;
 }
+
+
+function getProjectCardSectionName(
+  project,
+) {
+  /*
+   * If this is a framework project,
+   * display its framework.
+   */
+  if (
+    project.framework_name &&
+    project.source_section ===
+      "frameworks"
+  ) {
+    return project.framework_name;
+  }
+
+  /*
+   * Normal section.
+   */
+  if (
+    typeof DATA_SECTIONS !==
+      "undefined"
+  ) {
+    const section =
+      DATA_SECTIONS[
+        project.data_section
+      ];
+
+    if (section) {
+      return section.name;
+    }
+  }
+
+  return (
+    project.data_section ||
+    project.source_section ||
+    ""
+  );
+}
+
+
 function getGitHubRepo(url) {
-  if (!url) return "";
+  if (!url) {
+    return "";
+  }
 
   try {
-    const parsed = new URL(url);
+    const parsed =
+      new URL(url);
 
-    if (parsed.hostname !== "github.com") {
+    if (
+      parsed.hostname !==
+      "github.com"
+    ) {
       return "";
     }
 
-    const parts = parsed.pathname.split("/").filter(Boolean);
+    const parts =
+      parsed.pathname
+        .split("/")
+        .filter(Boolean);
 
     if (parts.length < 2) {
       return "";
@@ -1001,110 +2338,291 @@ function getGitHubRepo(url) {
   }
 }
 
-function getProjectImage(project) {
-  return Array.isArray(project.image_urls) && project.image_urls.length > 0
+
+function getProjectImage(
+  project,
+) {
+  return Array.isArray(
+    project.image_urls,
+  ) &&
+    project.image_urls.length >
+      0
     ? project.image_urls[0]
     : null;
 }
 
 //#endregion
 
-//#region Pagination & Load More
+
+//#region Pagination
 
 function updateLoadMoreButton() {
-  if (!loadMoreButton) return;
-  const visibleCount = currentPage * PAGE_SIZE;
-  const totalCount = filteredProjects.length;
-  loadMoreButton.hidden = !(totalCount > 0 && visibleCount < totalCount);
+  if (!loadMoreButton) {
+    return;
+  }
+
+  const visibleCount =
+    currentPage *
+    PAGE_SIZE;
+
+  const totalCount =
+    filteredProjects.length;
+
+  loadMoreButton.hidden =
+    !(
+      totalCount > 0 &&
+      visibleCount <
+        totalCount
+    );
 }
 
+
 function setupLoadMore() {
-  if (!loadMoreButton) return;
-  loadMoreButton.addEventListener("click", () => {
-    currentPage++;
-    renderProjects();
-  });
+  if (!loadMoreButton) {
+    return;
+  }
+
+  if (
+    loadMoreButton.dataset
+      .ready === "true"
+  ) {
+    return;
+  }
+
+  loadMoreButton.dataset.ready =
+    "true";
+
+  loadMoreButton.addEventListener(
+    "click",
+    () => {
+      currentPage++;
+
+      renderProjects();
+    },
+  );
 }
 
 //#endregion
+
 
 //#region Mobile Navigation
 
 function setupNavigation() {
-  if (!menuToggle || !mainNav) return;
-  menuToggle.addEventListener("click", () => {
-    const open = mainNav.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(open));
-  });
+  if (
+    !menuToggle ||
+    !mainNav
+  ) {
+    return;
+  }
+
+  if (
+    menuToggle.dataset
+      .navigationReady ===
+    "true"
+  ) {
+    return;
+  }
+
+  menuToggle.dataset.navigationReady =
+    "true";
+
+  menuToggle.addEventListener(
+    "click",
+    (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const open =
+        mainNav.classList.toggle(
+          "open",
+        );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(open),
+      );
+    },
+  );
 }
 
 //#endregion
 
+
 //#region UI State
 
-function showLoading(isLoading) {
-  if (loading) loading.hidden = !isLoading;
+function showLoading(
+  isLoading,
+) {
+  if (loading) {
+    loading.hidden =
+      !isLoading;
+  }
 }
 
-function showError(message) {
-  error("showError", message);
-  if (!projectGrid) return;
+
+function showError(
+  message,
+) {
+  error(
+    "showError",
+    message,
+  );
+
+  if (!projectGrid) {
+    return;
+  }
+
   projectGrid.innerHTML = `
     <div class="catalog-error">
       <h3>Catalogue unavailable</h3>
-      <p>${escapeHtml(message)}</p>
-      <button type="button" onclick="location.reload()">Retry</button>
+      <p>${escapeHtml(
+        message,
+      )}</p>
+
+      <button
+        type="button"
+        onclick="location.reload()"
+      >
+        Retry
+      </button>
     </div>
   `;
 }
 
 //#endregion
 
+
 //#region Utilities
 
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+function escapeHtml(
+  value,
+) {
+  return String(
+    value ?? "",
+  )
+    .replaceAll(
+      "&",
+      "&amp;",
+    )
+    .replaceAll(
+      "<",
+      "&lt;",
+    )
+    .replaceAll(
+      ">",
+      "&gt;",
+    )
+    .replaceAll(
+      '"',
+      "&quot;",
+    )
+    .replaceAll(
+      "'",
+      "&#039;",
+    );
 }
 
-function escapeAttribute(value) {
-  return escapeHtml(value);
+
+function escapeAttribute(
+  value,
+) {
+  return escapeHtml(
+    value,
+  );
 }
 
 //#endregion
+
 
 //#region DOM Caching
 
 function cacheDOM() {
-  projectGrid = document.getElementById("projectGrid");
-  loading = document.getElementById("loading");
-  loadMoreButton = document.getElementById("loadMore");
-  searchInput = document.getElementById("searchInput");
-  searchButton = document.getElementById("searchButton");
-  sortSelect = document.getElementById("sortSelect");
-  sectionList = document.getElementById("sectionList");
-  subCategoryList = document.getElementById("subCategoryList");
-  categoryList = document.getElementById("categoryList");
-  menuToggle = document.getElementById("menuToggle");
-  mainNav = document.getElementById("mainNav");
-  yearElement = document.getElementById("year");
+  projectGrid =
+    document.getElementById(
+      "projectGrid",
+    );
+
+  loading =
+    document.getElementById(
+      "loading",
+    );
+
+  loadMoreButton =
+    document.getElementById(
+      "loadMore",
+    );
+
+  searchInput =
+    document.getElementById(
+      "searchInput",
+    );
+
+  searchButton =
+    document.getElementById(
+      "searchButton",
+    );
+
+  sortSelect =
+    document.getElementById(
+      "sortSelect",
+    );
+
+  sectionList =
+    document.getElementById(
+      "sectionList",
+    );
+
+  subCategoryList =
+    document.getElementById(
+      "subCategoryList",
+    );
+
+  categoryList =
+    document.getElementById(
+      "categoryList",
+    );
+
+  menuToggle =
+    document.getElementById(
+      "menuToggle",
+    );
+
+  mainNav =
+    document.getElementById(
+      "mainNav",
+    );
+
+  yearElement =
+    document.getElementById(
+      "year",
+    );
 }
 
 //#endregion
 
+
 //#region Application Entry Point
 
-document.addEventListener("DOMContentLoaded", async () => {
-  if (window.componentsReady) {
-    await window.componentsReady;
-  }
-  cacheDOM();
-  setupLoadMore();
-  await initialize();
-});
+document.addEventListener(
+  "DOMContentLoaded",
+  async () => {
+    /*
+     * Wait for shared components
+     * such as header/footer.
+     */
+    if (
+      window.componentsReady
+    ) {
+      await window.componentsReady;
+    }
+
+    cacheDOM();
+
+    setupLoadMore();
+
+    await initialize();
+  },
+);
 
 //#endregion
+
