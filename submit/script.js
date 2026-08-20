@@ -88,10 +88,25 @@ function closeResultModal() {
   document.getElementById("resultModal").style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderGrids();
-  setupImageUrlEditor();
-});
+function clearRepoInput() {
+  const input = document.getElementById("repoInput");
+
+  input.value = "";
+  input.focus();
+
+  updateClearRepoButton();
+}
+
+function updateClearRepoButton() {
+  const input = document.getElementById("repoInput");
+  const clearButton = document.getElementById("clearRepoBtn");
+
+  if (!input || !clearButton) {
+    return;
+  }
+
+  clearButton.style.display = input.value.trim() !== "" ? "flex" : "none";
+}
 
 function cleanGitHubUrl(inputUrl) {
   try {
@@ -106,6 +121,7 @@ function cleanGitHubUrl(inputUrl) {
 
 async function processRepository() {
   const rawInput = document.getElementById("repoInput").value.trim();
+  const submitterEmail = getSubmitterEmail();
   const loader = document.getElementById("loader");
   const errorMsg = document.getElementById("errorMsg");
   const jsonOutput = document.getElementById("jsonOutput");
@@ -202,7 +218,7 @@ async function processRepository() {
       categories: [
         ...new Set([...categories, ...Array.from(selectedCategories)]),
       ],
-
+      submitter_email: submitterEmail || null,
       /*
        * Additional GitHub repository information
        */
@@ -1197,6 +1213,7 @@ async function submitToAppsScript(data) {
     const requestBody = {
       // Sheet name comes from the detected section
       sheet: data.section,
+      email: submitterEmail,
       data: data,
     };
 
@@ -1261,21 +1278,6 @@ async function submitToAppsScript(data) {
   }
 }
 //#endregion
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("[Submit] DOMContentLoaded");
-
-  // Start SQLite initialization in the background.
-  // The page does NOT wait for this.
-  CoderBasketDB.init()
-    .then(() => {
-      console.log("[Submit] SQLite initialized successfully.");
-    })
-    .catch((error) => {
-      console.error("[Submit] SQLite initialization failed:", error);
-    });
-
-  // Continue the rest of your page initialization immediately.
-});
 
 const SAFE_IMAGE_HOSTS = [
   // GitHub
@@ -1373,3 +1375,96 @@ function isSafeUserImageUrl(url) {
     return false;
   }
 }
+
+//#region
+const SUBMITTER_EMAIL_KEY = "coderBasketSubmitterEmail";
+
+function setupSubmitterEmail() {
+  const emailInput = document.getElementById("submitterEmail");
+
+  if (!emailInput) return;
+
+  // Restore previously entered email
+  const savedEmail = localStorage.getItem(SUBMITTER_EMAIL_KEY);
+
+  if (savedEmail) {
+    emailInput.value = savedEmail;
+  }
+
+  // Save whenever the user changes it
+  emailInput.addEventListener("input", () => {
+    const email = emailInput.value.trim();
+
+    if (email) {
+      localStorage.setItem(SUBMITTER_EMAIL_KEY, email);
+    } else {
+      localStorage.removeItem(SUBMITTER_EMAIL_KEY);
+    }
+
+    updateClearEmailButton();
+  });
+
+  updateClearEmailButton();
+}
+
+function clearEmailInput() {
+  const input = document.getElementById("submitterEmail");
+
+  if (!input) return;
+
+  input.value = "";
+  localStorage.removeItem(SUBMITTER_EMAIL_KEY);
+
+  input.focus();
+
+  updateClearEmailButton();
+}
+
+function updateClearEmailButton() {
+  const input = document.getElementById("submitterEmail");
+  const button = document.getElementById("clearEmailBtn");
+
+  if (!input || !button) return;
+
+  button.style.display = input.value.trim() !== "" ? "flex" : "none";
+}
+function getSubmitterEmail() {
+  const input = document.getElementById("submitterEmail");
+
+  if (!input) {
+    return "";
+  }
+
+  return input.value.trim();
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+//#endregion
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderGrids();
+  setupImageUrlEditor();
+
+  const repoInput = document.getElementById("repoInput");
+
+  if (repoInput) {
+    repoInput.addEventListener("input", updateClearRepoButton);
+    updateClearRepoButton();
+  }
+  setupSubmitterEmail();
+  console.log("[Submit] DOMContentLoaded");
+
+  // Start SQLite initialization in the background.
+  // The page does NOT wait for this.
+  CoderBasketDB.init()
+    .then(() => {
+      console.log("[Submit] SQLite initialized successfully.");
+    })
+    .catch((error) => {
+      console.error("[Submit] SQLite initialization failed:", error);
+    });
+
+  // Continue the rest of your page initialization immediately.
+});

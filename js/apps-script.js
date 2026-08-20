@@ -1,7 +1,7 @@
 
 //#region Appscript
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwM2yNRBQQaVLnxioQSwjRMvhbZ3flROaXNsO6rrvFrU72ogsXHnd_GJ26rYru63hwV/exec";
+  "https://script.google.com/macros/s/AKfycbx2M-nKp2RWBzROJY3ftPQBuYrpUDuXxtetL4V3_25H3qqfcRfrI7ZTXoWolUf6rSdj/exec";
 
 
 async function fetchSectionFromAppsScript(section) {

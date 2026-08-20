@@ -314,29 +314,29 @@ pre {
 
 /* Modal itself is the ONLY vertical scroll container */
 #resultModal {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #resultModal .result-modal-card {
-    position: relative;
+  position: relative;
 
-    width: min(900px, 100%);
-    height: 90vh;
-    max-height: 90vh;
+  width: min(900px, 100%);
+  height: 90vh;
+  max-height: 90vh;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    overflow-y: auto;
-    overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 
-    padding: 0 1.5rem;
+  padding: 0 1.5rem;
 
-    /*
+  /*
        Prevent content from appearing underneath
        the sticky areas.
     */
-    scrollbar-gutter: stable;
+  scrollbar-gutter: stable;
 }
 
 /* =========================================================
@@ -344,37 +344,37 @@ pre {
    ========================================================= */
 
 #resultModal .modal-header {
-    position: sticky;
+  position: sticky;
 
-    top: 0;
-    z-index: 100;
+  top: 0;
+  z-index: 100;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    width: 100%;
+  width: 100%;
 
-    margin: 0;
+  margin: 0;
 
-    /*
+  /*
        IMPORTANT:
        Solid background hides everything scrolling behind it.
     */
-    background: var(--card-bg);
+  background: var(--card-bg);
 
-    padding: 1.5rem 0 1rem;
+  padding: 1.5rem 0 1rem;
 
-    border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 
-    /*
+  /*
        Prevent transparency from showing content behind.
     */
-    isolation: isolate;
+  isolation: isolate;
 }
 
 /* Header content stays above background */
 #resultModal .modal-header > * {
-    position: relative;
-    z-index: 101;
+  position: relative;
+  z-index: 101;
 }
 
 /* =========================================================
@@ -382,18 +382,18 @@ pre {
    ========================================================= */
 
 #resultModal #projectPreview {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
-    margin: 1rem 0;
+  margin: 1rem 0;
 
-    overflow: visible;
+  overflow: visible;
 }
 
 /* =========================================================
@@ -401,29 +401,29 @@ pre {
    ========================================================= */
 
 #resultModal .json-section {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
-    overflow: visible;
+  overflow: visible;
 
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* JSON itself does NOT vertically scroll */
 #resultModal .json-section pre {
-    width: 100%;
-    max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 
-    max-height: none;
+  max-height: none;
 
-    overflow-x: auto;
-    overflow-y: visible;
+  overflow-x: auto;
+  overflow-y: visible;
 }
 
 /* =========================================================
@@ -431,36 +431,36 @@ pre {
    ========================================================= */
 
 #resultModal .modal-actions {
-    position: sticky;
+  position: sticky;
 
-    bottom: 0;
-    z-index: 100;
+  bottom: 0;
+  z-index: 100;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-    /*
+  /*
        Solid background instead of transparent gradient.
        This completely hides content scrolling behind it.
     */
-    background: var(--card-bg);
+  background: var(--card-bg);
 
-    padding: 1rem 0;
+  padding: 1rem 0;
 
-    border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 
-    isolation: isolate;
+  isolation: isolate;
 }
 
 /* Close button stays above the background */
 #resultModal .modal-actions > * {
-    position: relative;
-    z-index: 101;
+  position: relative;
+  z-index: 101;
 }
 
 /* =========================================================
@@ -468,18 +468,18 @@ pre {
    ========================================================= */
 
 #resultModal .result-modal-card > * {
-    max-width: 100%;
-    min-width: 0;
+  max-width: 100%;
+  min-width: 0;
 }
 
 /* Images */
 #resultModal img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* Iframes */
 #resultModal iframe {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* Long text */
@@ -489,8 +489,8 @@ pre {
 #resultModal p,
 #resultModal span,
 #resultModal a {
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =========================================================
@@ -498,82 +498,81 @@ pre {
    ========================================================= */
 
 @media (max-width: 600px) {
+  #resultModal .result-modal-card {
+    width: 100%;
+    height: 94vh;
+    max-height: 94vh;
 
-    #resultModal .result-modal-card {
-        width: 100%;
-        height: 94vh;
-        max-height: 94vh;
+    padding: 0 1rem;
+  }
 
-        padding: 0 1rem;
-    }
+  #resultModal .modal-header {
+    padding: 1rem 0 0.75rem;
+  }
 
-    #resultModal .modal-header {
-        padding: 1rem 0 0.75rem;
-    }
+  #resultModal #projectPreview {
+    margin: 0.75rem 0;
+  }
 
-    #resultModal #projectPreview {
-        margin: 0.75rem 0;
-    }
-
-    #resultModal .modal-actions {
-        padding: 0.75rem 0;
-    }
+  #resultModal .modal-actions {
+    padding: 0.75rem 0;
+  }
 }
 /* =========================================================
    IMAGE URL EDITOR
    ========================================================= */
 
 #resultModal .preview-image-url {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #resultModal .preview-image-url label {
-    display: block;
+  display: block;
 
-    margin-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
 
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.8rem;
-    font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 #resultModal .preview-image-url input {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
-    background: var(--card-bg);
+  background: var(--card-bg);
 
-    border: 1px solid var(--border);
-    border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
 
-    padding: 0.65rem 0.75rem;
+  padding: 0.65rem 0.75rem;
 
-    color: var(--text-color);
+  color: var(--text-color);
 
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 #resultModal .preview-image-url input:focus {
-    outline: none;
-    border-color: var(--accent);
+  outline: none;
+  border-color: var(--accent);
 }
 
 /* Image failed to load */
 #resultModal .preview-image.image-load-error {
-    opacity: 0.35;
+  opacity: 0.35;
 }
 /* =========================================================
    PROJECT PREVIEW - POLISHED DESIGN
    ========================================================= */
 
 #resultModal #projectPreview {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 /* =========================================================
@@ -581,33 +580,33 @@ pre {
    ========================================================= */
 
 #resultModal .preview-content {
-    width: 100%;
-    min-width: 0;
+  width: 100%;
+  min-width: 0;
 }
 
 #resultModal .preview-content h2 {
-    margin: 0 0 0.6rem;
+  margin: 0 0 0.6rem;
 
-    font-size: 1.5rem;
-    line-height: 1.25;
-    font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
 
-    color: var(--text-color);
+  color: var(--text-color);
 
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 #resultModal .preview-content > p {
-    margin: 0 0 1.25rem;
+  margin: 0 0 1.25rem;
 
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.95rem;
-    line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.6;
 
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =========================================================
@@ -615,41 +614,41 @@ pre {
    ========================================================= */
 
 #resultModal .preview-row {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 
-    width: 100%;
-    min-width: 0;
+  width: 100%;
+  min-width: 0;
 
-    gap: 1rem;
+  gap: 1rem;
 
-    padding: 0.75rem 0;
+  padding: 0.75rem 0;
 
-    border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 #resultModal .preview-label {
-    flex: 0 0 125px;
+  flex: 0 0 125px;
 
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.8rem;
-    font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 600;
 
-    padding-top: 0.25rem;
+  padding-top: 0.25rem;
 }
 
 #resultModal .preview-value {
-    flex: 1 1 auto;
-    min-width: 0;
+  flex: 1 1 auto;
+  min-width: 0;
 
-    color: var(--text-color);
+  color: var(--text-color);
 
-    font-size: 0.9rem;
-    font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 500;
 
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =========================================================
@@ -657,45 +656,45 @@ pre {
    ========================================================= */
 
 #resultModal .preview-chips {
-    flex: 1 1 auto;
-    min-width: 0;
+  flex: 1 1 auto;
+  min-width: 0;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    gap: 0.4rem;
+  gap: 0.4rem;
 }
 
 #resultModal .preview-chip {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 
-    max-width: 100%;
+  max-width: 100%;
 
-    padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.6rem;
 
-    background: var(--chip-bg);
+  background: var(--chip-bg);
 
-    border: 1px solid var(--border);
-    border-radius: 999px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
 
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.75rem;
-    line-height: 1.2;
+  font-size: 0.75rem;
+  line-height: 1.2;
 
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 
-    transition:
-        border-color 0.15s ease,
-        color 0.15s ease,
-        background-color 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
 }
 
 #resultModal .preview-chip:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* =========================================================
@@ -703,64 +702,64 @@ pre {
    ========================================================= */
 
 #resultModal .preview-github {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    gap: 0.75rem;
+  gap: 0.75rem;
 
-    width: 100%;
+  width: 100%;
 
-    margin-top: 1rem;
-    padding-top: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
 
-    border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 #resultModal .github-stat {
-    min-width: 0;
+  min-width: 0;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
 
-    column-gap: 0.5rem;
+  column-gap: 0.5rem;
 
-    padding: 0.75rem;
+  padding: 0.75rem;
 
-    background: var(--card-bg);
+  background: var(--card-bg);
 
-    border: 1px solid var(--border);
-    border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
 #resultModal .github-stat strong {
-    grid-row: 1 / 3;
+  grid-row: 1 / 3;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    color: var(--accent);
+  color: var(--accent);
 
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 #resultModal .github-stat span {
-    min-width: 0;
+  min-width: 0;
 
-    color: var(--text-color);
+  color: var(--text-color);
 
-    font-size: 0.95rem;
-    font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 700;
 
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
 #resultModal .github-stat small {
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 /* =========================================================
@@ -768,48 +767,48 @@ pre {
    ========================================================= */
 
 #resultModal .preview-links {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    gap: 0.5rem;
+  gap: 0.5rem;
 
-    width: 100%;
+  width: 100%;
 
-    margin-top: 1rem;
-    padding-top: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
 
-    border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 #resultModal .preview-links a {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 
-    padding: 0.55rem 0.8rem;
+  padding: 0.55rem 0.8rem;
 
-    background: var(--bg-color);
+  background: var(--bg-color);
 
-    border: 1px solid var(--border);
-    border-radius: 7px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
 
-    color: var(--accent);
+  color: var(--accent);
 
-    font-size: 0.8rem;
-    font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 600;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 
-    transition:
-        background-color 0.15s ease,
-        border-color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 #resultModal .preview-links a:hover {
-    background: var(--border);
-    border-color: var(--accent);
+  background: var(--border);
+  border-color: var(--accent);
 }
 
 /* =========================================================
@@ -817,26 +816,26 @@ pre {
    ========================================================= */
 
 #resultModal .preview-meta {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    gap: 0.5rem 1rem;
+  gap: 0.5rem 1rem;
 
-    width: 100%;
+  width: 100%;
 
-    margin-top: 1rem;
-    padding-top: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
 
-    border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 #resultModal .preview-meta span {
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.72rem;
+  font-size: 0.72rem;
 
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =========================================================
@@ -844,42 +843,42 @@ pre {
    ========================================================= */
 
 #resultModal .preview-image-url {
-    margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 #resultModal .preview-image-url label {
-    display: block;
+  display: block;
 
-    margin-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
 
-    color: var(--text-muted);
+  color: var(--text-muted);
 
-    font-size: 0.75rem;
-    font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 #resultModal .preview-image-url input {
-    width: 100%;
-    min-width: 0;
+  width: 100%;
+  min-width: 0;
 
-    padding: 0.65rem 0.75rem;
+  padding: 0.65rem 0.75rem;
 
-    background: var(--bg-color);
+  background: var(--bg-color);
 
-    border: 1px solid var(--border);
-    border-radius: 7px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
 
-    color: var(--text-color);
+  color: var(--text-color);
 
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 #resultModal .preview-image-url input:focus {
-    outline: none;
+  outline: none;
 
-    border-color: var(--accent);
+  border-color: var(--accent);
 
-    box-shadow: 0 0 0 2px rgb(56 189 248 / 0.1);
+  box-shadow: 0 0 0 2px rgb(56 189 248 / 0.1);
 }
 
 /* =========================================================
@@ -887,35 +886,35 @@ pre {
    ========================================================= */
 
 #resultModal .preview-image-container {
-    width: 100%;
-    height: 280px;
+  width: 100%;
+  height: 280px;
 
-    margin-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    background: var(--bg-color);
+  background: var(--bg-color);
 
-    border: 1px solid var(--border);
-    border-radius: 9px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
 }
 
 #resultModal .preview-image {
-    display: block;
+  display: block;
 
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 
-    max-width: 100%;
-    max-height: 280px;
+  max-width: 100%;
+  max-height: 280px;
 
-    object-fit: contain;
+  object-fit: contain;
 
-    border-radius: 7px;
+  border-radius: 7px;
 }
 
 /* =========================================================
@@ -923,15 +922,15 @@ pre {
    ========================================================= */
 
 #resultModal .json-section {
-    border-top: 1px solid var(--border);
-    padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
 }
 
 #resultModal .output-title {
-    color: var(--text-color);
+  color: var(--text-color);
 
-    font-size: 0.85rem;
-    font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -939,71 +938,216 @@ pre {
    ========================================================= */
 
 @media (max-width: 600px) {
+  #resultModal #projectPreview {
+    padding: 0.75rem;
+  }
 
-    #resultModal #projectPreview {
-        padding: 0.75rem;
-    }
+  #resultModal .preview-content h2 {
+    font-size: 1.25rem;
+  }
 
-    #resultModal .preview-content h2 {
-        font-size: 1.25rem;
-    }
+  #resultModal .preview-content > p {
+    font-size: 0.88rem;
+  }
 
-    #resultModal .preview-content > p {
-        font-size: 0.88rem;
-    }
+  #resultModal .preview-row {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
 
-    #resultModal .preview-row {
-        flex-direction: column;
-        gap: 0.35rem;
-    }
+  #resultModal .preview-label {
+    flex: none;
+    padding-top: 0;
+  }
 
-    #resultModal .preview-label {
-        flex: none;
-        padding-top: 0;
-    }
+  #resultModal .preview-github {
+    grid-template-columns: 1fr;
+  }
 
-    #resultModal .preview-github {
-        grid-template-columns: 1fr;
-    }
+  #resultModal .preview-image-container {
+    height: 220px;
+  }
 
-    #resultModal .preview-image-container {
-        height: 220px;
-    }
+  #resultModal .preview-image {
+    max-height: 220px;
+  }
 
-    #resultModal .preview-image {
-        max-height: 220px;
-    }
-
-    #resultModal .preview-meta {
-        flex-direction: column;
-        gap: 0.35rem;
-    }
+  #resultModal .preview-meta {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
 }
 #resultModal .submit-btn {
-    background-color: #166534;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition:
-        background-color 0.2s ease,
-        transform 0.1s ease;
+  background-color: #166534;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 #resultModal .submit-btn:hover {
-    background-color: #15803d;
+  background-color: #15803d;
 }
 
 #resultModal .submit-btn:active {
-    transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 #resultModal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+}
+/* =========================================================
+   REPOSITORY INPUT - MOBILE
+   Desktop: horizontal
+   Mobile: vertical
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .input-group {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
+  }
+
+  .input-group input[type="text"] {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .input-group .primary-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+/* =========================================================
+   REPOSITORY INPUT + CLEAR BUTTON
+   ========================================================= */
+
+.input-wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.input-wrapper input[type="text"] {
+  width: 100%;
+  padding-right: 2.75rem;
+}
+
+.clear-input-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.65rem;
+  transform: translateY(-50%);
+
+  width: 28px;
+  height: 28px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--text-muted);
+
+  font-size: 1.4rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.clear-input-btn:hover {
+  background: var(--border);
+  color: var(--text-color);
+}
+.email-input-group {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(
+        135deg,
+        rgb(15 23 42 / 0.55),
+        rgb(30 41 59 / 0.75)
+    );
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.email-input-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.email-input-group label::before {
+    content: "✉";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: rgb(56 189 248 / 0.12);
+    color: var(--accent);
+    font-size: 0.75rem;
+}
+
+.email-input-group label span {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.email-input-group .input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.email-input-group input {
+    width: 100%;
+    height: 42px;
+    padding: 0.65rem 2.75rem 0.65rem 0.9rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.email-input-group input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+.email-input-group input:hover {
+    border-color: rgb(56 189 248 / 0.45);
+}
+
+.email-input-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgb(15 23 42 / 0.9);
+    box-shadow: 0 0 0 3px rgb(56 189 248 / 0.1);
 }

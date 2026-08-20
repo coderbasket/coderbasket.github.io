@@ -10,13 +10,7 @@
             "type": "msedge",
             "url": "http://localhost:5501",
             "webRoot": "${workspaceFolder}"
-        },
-        {
-            "type": "msedge",
-            "request": "launch",
-            "name": "Launch Edge against localhost",
-            "url": "http://localhost:5501",
-            "webRoot": "${workspaceFolder}"
         }
+        
     ]
 }

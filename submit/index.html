@@ -17,8 +17,41 @@
 
         <div class="card">
             <div class="input-group">
-                <input type="text" id="repoInput" placeholder="https://github.com/owner/repository" value="">
-                <button class="primary-btn" id="generateBtn" onclick="processRepository()">Generate JSON</button>
+
+                <div class="input-wrapper">
+
+                    <input type="text" id="repoInput" placeholder="https://github.com/owner/repository" value="">
+
+                    <button type="button" class="clear-input-btn" id="clearRepoBtn" aria-label="Clear repository URL"
+                        onclick="clearRepoInput()">
+                        ×
+                    </button>
+
+                </div>
+
+                <button class="primary-btn" id="generateBtn" onclick="processRepository()">
+                    Generate JSON
+                </button>
+
+            </div>
+
+            <div class="email-input-group">
+
+                <label for="submitterEmail">
+                    Email <span>(optional)</span>
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input type="email" id="submitterEmail" placeholder="you@example.com" autocomplete="email">
+
+                    <button type="button" class="clear-input-btn" id="clearEmailBtn" aria-label="Clear email"
+                        onclick="clearEmailInput()">
+                        ×
+                    </button>
+
+                </div>
+
             </div>
 
             <!-- Categories Section with Search & Modal Trigger -->
