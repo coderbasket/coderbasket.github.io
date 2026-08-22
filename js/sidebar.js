@@ -2,84 +2,136 @@
 
 /* =======================================================
    Sidebar Component
-   Manages Global Category Filtering (selectedCategoryId)
+   Global Category Filtering
+======================================================= */
+
+/* =======================================================
+   Auto-load Sidebar CSS
+======================================================= */
+
+(() => {
+  const href = "/css/sidebar.css";
+
+  if (!document.querySelector(`link[href="${href}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+  }
+})();
+
+/* =======================================================
+   Read category selection safely
+======================================================= */
+
+function getSelectedCategory() {
+  return typeof window.selectedCategoryId !== "undefined"
+    ? window.selectedCategoryId
+    : "all";
+}
+
+/*
+ * IMPORTANT:
+ *
+ * app.js currently declares:
+ *
+ * let selectedCategoryId = "all";
+ *
+ * A top-level `let` is NOT available as window.selectedCategoryId.
+ *
+ * Therefore sidebar.js must not directly reference it.
+ *
+ * We communicate through events instead.
+ */
+
+/* =======================================================
+   Category Sidebar Event
 ======================================================= */
 
 document.addEventListener("catalogCategoriesLoaded", (event) => {
   const container = document.getElementById("categorySidebar");
 
-  if (!container || typeof CATEGORIES === "undefined") {
+  if (!container) {
     return;
   }
 
-  const { categories } = event.detail || {};
+  const categories = event.detail?.categories || [];
 
-  renderSidebar(container, categories);
+  console.log("[Sidebar] Dynamic sidebar detected.");
+  console.log("[Sidebar] Rendering:", categories);
 
-  // Re-render on window resize if crossing the mobile/desktop breakpoint (768px)
-  let lastIsMobile = window.innerWidth <= 768;
-  window.addEventListener("resize", () => {
-    const isMobile = window.innerWidth <= 768;
-    if (isMobile !== lastIsMobile) {
-      lastIsMobile = isMobile;
-      renderSidebar(container, categories);
-    }
-  });
+  renderCategorySidebar(container, categories);
 });
 
 /* =======================================================
-   Render Sidebar (List for Desktop, Dropdown for Mobile)
+   Main Renderer
 ======================================================= */
 
-function renderSidebar(container, categoryIds) {
+function renderCategorySidebar(container, categories) {
+  if (!container) {
+    return;
+  }
+
+  const normalizedCategories = normalizeCategories(categories);
+
+  console.log("[Sidebar] Normalized categories:", normalizedCategories);
+
   const isMobile = window.innerWidth <= 768;
 
   if (isMobile) {
-    renderSidebarDropdown(container, categoryIds);
+    renderSidebarDropdown(container, normalizedCategories);
   } else {
-    renderSidebarList(container, categoryIds);
+    renderSidebarDesktop(container, normalizedCategories);
   }
 }
 
-/* -------------------------------------------------------
-   Desktop: Vertical List View
-------------------------------------------------------- */
+/* =======================================================
+   Normalize categories
+======================================================= */
 
-/* -------------------------------------------------------
-   Desktop: Compact Category Grid
-------------------------------------------------------- */
-
-function renderSidebarList(container, categoryIds) {
-  const isAllActive =
-    typeof selectedCategoryId === "undefined" || selectedCategoryId === "all";
-
-  const validIds = [
+function normalizeCategories(categories) {
+  return [
     ...new Set(
-      (categoryIds || [])
-        .map(Number)
-        .filter((id) => !isNaN(id) && CATEGORIES[id]),
+      (Array.isArray(categories) ? categories : [])
+        .map((category) => String(category ?? "").trim())
+        .filter(Boolean),
     ),
-  ];
-
-  validIds.sort((a, b) => CATEGORIES[a].localeCompare(CATEGORIES[b]));
-
-  // Show grid only when there are many categories.
-  const MANY_CATEGORIES_THRESHOLD = 12;
-  const useGrid = validIds.length >= MANY_CATEGORIES_THRESHOLD;
-
-  if (useGrid) {
-    renderSidebarGrid(container, validIds, isAllActive);
-  } else {
-    renderSidebarNormalList(container, validIds, isAllActive);
-  }
-
-  setupSidebarListClick(container);
+  ].sort((a, b) => a.localeCompare(b));
 }
 
-function renderSidebarNormalList(container, validIds, isAllActive) {
+/* =======================================================
+   Desktop
+======================================================= */
+
+function renderSidebarDesktop(container, categories) {
+  const selectedCategory = getSelectedCategory();
+
+  const isAllActive =
+    selectedCategory === "all" ||
+    selectedCategory === undefined ||
+    selectedCategory === null ||
+    selectedCategory === "";
+
+  const MANY_CATEGORIES_THRESHOLD = 12;
+
+  if (categories.length >= MANY_CATEGORIES_THRESHOLD) {
+    renderSidebarGrid(container, categories, isAllActive);
+  } else {
+    renderSidebarNormalList(container, categories, isAllActive);
+  }
+}
+
+/* =======================================================
+   Normal Desktop List
+======================================================= */
+
+function renderSidebarNormalList(container, categories, isAllActive) {
   let html = `
     <div class="sidebar-section">
-      <h3 class="sidebar-title">Categories</h3>
+
+      <h3 class="sidebar-title">
+        Categories
+      </h3>
 
       <div class="sidebar-list" id="categoryList">
 
@@ -91,37 +143,45 @@ function renderSidebarNormalList(container, validIds, isAllActive) {
         </button>
   `;
 
-  for (const id of validIds) {
+  const selectedCategory = getSelectedCategory();
+
+  for (const category of categories) {
     const isSelected =
-      typeof selectedCategoryId !== "undefined" &&
-      selectedCategoryId !== "all" &&
-      Number(selectedCategoryId) === id;
+      !isAllActive &&
+      String(selectedCategory).trim().toLowerCase() ===
+        String(category).trim().toLowerCase();
 
     html += `
-        <button
-          type="button"
-          class="category-link ${isSelected ? "active" : ""}"
-          data-category-id="${id}">
-          ${escapeHtml(CATEGORIES[id])}
-        </button>
+      <button
+        type="button"
+        class="category-link ${isSelected ? "active" : ""}"
+        data-category-id="${escapeAttribute(category)}">
+        ${escapeHtml(category)}
+      </button>
     `;
   }
 
   html += `
       </div>
+
     </div>
   `;
 
   container.innerHTML = html;
+
+  setupSidebarListClick(container);
 }
 
-function renderSidebarGrid(container, validIds, isAllActive) {
+/* =======================================================
+   Desktop Grid / Pagination
+======================================================= */
+
+function renderSidebarGrid(container, categories, isAllActive) {
   const PAGE_SIZE = 10;
 
-  // Store the current category page on the container.
   let page = Number(container.dataset.categoryPage || 0);
 
-  const totalPages = Math.ceil(validIds.length / PAGE_SIZE);
+  const totalPages = Math.ceil(categories.length / PAGE_SIZE);
 
   if (page >= totalPages) {
     page = Math.max(0, totalPages - 1);
@@ -132,11 +192,16 @@ function renderSidebarGrid(container, validIds, isAllActive) {
   const start = page * PAGE_SIZE;
   const end = start + PAGE_SIZE;
 
-  const visibleIds = validIds.slice(start, end);
+  const visibleCategories = categories.slice(start, end);
+
+  const selectedCategory = getSelectedCategory();
 
   let html = `
     <div class="sidebar-section">
-      <h3 class="sidebar-title">Categories</h3>
+
+      <h3 class="sidebar-title">
+        Categories
+      </h3>
 
       <div class="sidebar-list" id="categoryList">
 
@@ -148,19 +213,19 @@ function renderSidebarGrid(container, validIds, isAllActive) {
         </button>
   `;
 
-  for (const id of visibleIds) {
+  for (const category of visibleCategories) {
     const isSelected =
-      typeof selectedCategoryId !== "undefined" &&
-      selectedCategoryId !== "all" &&
-      Number(selectedCategoryId) === id;
+      !isAllActive &&
+      String(selectedCategory).trim().toLowerCase() ===
+        String(category).trim().toLowerCase();
 
     html += `
-        <button
-          type="button"
-          class="category-link ${isSelected ? "active" : ""}"
-          data-category-id="${id}">
-          ${escapeHtml(CATEGORIES[id])}
-        </button>
+      <button
+        type="button"
+        class="category-link ${isSelected ? "active" : ""}"
+        data-category-id="${escapeAttribute(category)}">
+        ${escapeHtml(category)}
+      </button>
     `;
   }
 
@@ -207,74 +272,206 @@ function renderSidebarGrid(container, validIds, isAllActive) {
   container.innerHTML = html;
 
   setupSidebarListClick(container);
-  setupCategoryPagination(container, validIds, isAllActive);
+  setupCategoryPagination(container, categories, isAllActive);
 }
-function setupCategoryPagination(container, validIds, isAllActive) {
-  container
-    .querySelectorAll(".category-page-button")
-    .forEach((button) => {
-      button.addEventListener("click", () => {
-        const page = Number(
-          button.getAttribute("data-category-page")
-        );
 
-        container.dataset.categoryPage = page;
+/* =======================================================
+   Pagination
+======================================================= */
 
-        renderSidebarGrid(
-          container,
-          validIds,
-          isAllActive
-        );
-
-        // Keep the sidebar at the top after changing category page.
-        container.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      });
-    });
-}
-function setupSidebarListClick(container) {
-  container.querySelectorAll(".category-grid-button").forEach((button) => {
+function setupCategoryPagination(container, categories, isAllActive) {
+  container.querySelectorAll(".category-page-button").forEach((button) => {
     button.addEventListener("click", () => {
-      const rawValue = button.getAttribute("data-category-id");
+      const page = Number(button.getAttribute("data-category-page"));
 
-      if (rawValue === "all") {
-        selectedCategoryId = "all";
+      container.dataset.categoryPage = page;
+
+      renderSidebarGrid(container, categories, isAllActive);
+    });
+  });
+}
+
+/* =======================================================
+   Category Click
+======================================================= */
+
+function setupSidebarListClick(container) {
+  container.querySelectorAll(".category-link").forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.getAttribute("data-category-id");
+
+      console.log("[Sidebar] Category selected:", value);
+
+      /*
+       * Do NOT use Number(value).
+       *
+       * Categories are now names:
+       *
+       * "API"
+       * "Backend"
+       * "Developer Tools"
+       * "Web Development"
+       */
+
+      if (value === "all") {
+        setCategorySelection("all");
       } else {
-        selectedCategoryId = Number(rawValue);
+        setCategorySelection(value);
       }
 
-      selectedSubCategory = "all";
-
-      if (typeof saveSelection === "function") {
-        saveSelection();
-      }
-
-      if (typeof currentPage !== "undefined") {
-        currentPage = 1;
-      }
-
-      if (typeof renderSubCategories === "function") {
-        renderSubCategories();
-      }
-
-      if (typeof applyFilters === "function") {
-        applyFilters();
-      }
-
-      // Update active state.
-      container.querySelectorAll(".category-grid-button").forEach((btn) => {
-        btn.classList.remove("active");
-      });
+      container
+        .querySelectorAll(".category-link")
+        .forEach((btn) => btn.classList.remove("active"));
 
       button.classList.add("active");
 
-      // Scroll catalogue back to the top.
       scrollCatalogueToTop();
     });
   });
 }
+
+/* =======================================================
+   Category Selection Bridge
+======================================================= */
+
+function setCategorySelection(value) {
+  console.log("[Sidebar] Applying category filter:", value);
+
+  /*
+   * app.js and sidebar.js are loaded on the same page,
+   * so call applyFilters() directly.
+   */
+
+  if (typeof applyFilters === "function") {
+    selectedCategory = value;
+    applyFilters();
+    return;
+  }
+
+  console.error("[Sidebar] applyFilters() is not available.");
+}
+
+/* =======================================================
+   Mobile Dropdown
+======================================================= */
+
+function renderSidebarDropdown(container, categories) {
+  const selectedCategory = getSelectedCategory();
+
+  const isAllActive = selectedCategory === "all";
+
+  let html = `
+    <div class="category-dropdown-wrapper">
+
+      <label for="categorySelect">
+        Category Filter
+      </label>
+
+      <select
+        id="categorySelect"
+        class="category-select">
+
+        <option
+          value="all"
+          ${isAllActive ? "selected" : ""}>
+          All Categories
+        </option>
+  `;
+
+  for (const category of categories) {
+    const isSelected =
+      !isAllActive &&
+      String(selectedCategory).trim().toLowerCase() ===
+        String(category).trim().toLowerCase();
+
+    html += `
+      <option
+        value="${escapeAttribute(category)}"
+        ${isSelected ? "selected" : ""}>
+        ${escapeHtml(category)}
+      </option>
+    `;
+  }
+
+  html += `
+      </select>
+
+    </div>
+  `;
+
+  container.innerHTML = html;
+
+  setupSidebarDropdownChange(container);
+}
+
+/* =======================================================
+   Mobile Selection
+======================================================= */
+
+function setupSidebarDropdownChange(container) {
+  const select = container.querySelector("#categorySelect");
+
+  if (!select) {
+    return;
+  }
+
+  select.addEventListener("change", () => {
+    const value = select.value;
+
+    console.log("[Sidebar] Dropdown category selected:", value);
+
+    setCategorySelection(value);
+  });
+}
+
+/* =======================================================
+   Resize
+======================================================= */
+
+let sidebarLastIsMobile = window.innerWidth <= 768;
+
+window.addEventListener("resize", () => {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile === sidebarLastIsMobile) {
+    return;
+  }
+
+  sidebarLastIsMobile = isMobile;
+
+  const container = document.getElementById("categorySidebar");
+
+  if (!container) {
+    return;
+  }
+
+  /*
+   * Re-render using the last loaded categories.
+   */
+  const categories = container._catalogCategories || [];
+
+  renderCategorySidebar(container, categories);
+});
+
+/* =======================================================
+   Store categories for resize rendering
+======================================================= */
+
+document.addEventListener("catalogCategoriesLoaded", (event) => {
+  const container = document.getElementById("categorySidebar");
+
+  if (!container) {
+    return;
+  }
+
+  container._catalogCategories = normalizeCategories(
+    event.detail?.categories || [],
+  );
+});
+
+/* =======================================================
+   Scroll Catalogue
+======================================================= */
 
 function scrollCatalogueToTop() {
   const projectGrid = document.getElementById("projectGrid");
@@ -292,122 +489,8 @@ function scrollCatalogueToTop() {
   }
 }
 
-function setupSidebarListClick(container) {
-  container.querySelectorAll(".category-link").forEach((button) => {
-    button.addEventListener("click", () => {
-      const rawValue = button.getAttribute("data-category-id");
-
-      if (rawValue === "all") {
-        selectedCategoryId = "all";
-      } else {
-        selectedCategoryId = Number(rawValue);
-      }
-
-      selectedSubCategory = "all";
-
-      if (typeof saveSelection === "function") saveSelection();
-      if (typeof currentPage !== "undefined") currentPage = 1;
-      if (typeof renderSubCategories === "function") renderSubCategories();
-      if (typeof applyFilters === "function") applyFilters();
-
-      // Update active states in list
-      container
-        .querySelectorAll(".category-link")
-        .forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
-}
-
-function setupCategoryMoreButton(container) {
-  const moreButton = container.querySelector("#categoryMoreButton");
-  const moreList = container.querySelector("#categoryMoreList");
-
-  if (!moreButton || !moreList) return;
-
-  moreButton.addEventListener("click", () => {
-    const isHidden = moreList.hidden;
-
-    moreList.hidden = !isHidden;
-
-    if (isHidden) {
-      moreButton.textContent = "Show less";
-    } else {
-      moreButton.textContent = `+${moreList.querySelectorAll(".category-link").length} more`;
-    }
-  });
-}
-/* -------------------------------------------------------
-   Mobile: Dropdown View
-------------------------------------------------------- */
-
-function renderSidebarDropdown(container, categoryIds) {
-  const isAllActive =
-    typeof selectedCategoryId === "undefined" || selectedCategoryId === "all";
-
-  let html = `
-    <div class="category-dropdown-wrapper">
-      <label for="categorySelect">Category Filter</label>
-      <select id="categorySelect" class="category-select">
-        <option value="all" ${isAllActive ? "selected" : ""}>All Categories</option>
-  `;
-
-  const validIds = [
-    ...new Set(
-      (categoryIds || [])
-        .map(Number)
-        .filter((id) => !isNaN(id) && CATEGORIES[id]),
-    ),
-  ];
-
-  validIds.sort((a, b) => CATEGORIES[a].localeCompare(CATEGORIES[b]));
-
-  for (const id of validIds) {
-    const isSelected =
-      typeof selectedCategoryId !== "undefined" &&
-      selectedCategoryId !== "all" &&
-      Number(selectedCategoryId) === id;
-
-    html += `
-      <option value="${id}" ${isSelected ? "selected" : ""}>
-        ${escapeHtml(CATEGORIES[id])}
-      </option>
-    `;
-  }
-
-  html += `
-      </select>
-    </div>
-  `;
-
-  container.innerHTML = html;
-  setupSidebarDropdownChange(container);
-}
-
-function setupSidebarDropdownChange(container) {
-  const selectElement = container.querySelector("#categorySelect");
-  if (!selectElement) return;
-
-  selectElement.addEventListener("change", () => {
-    const rawValue = selectElement.value;
-
-    if (rawValue === "all") {
-      selectedCategoryId = "all";
-    } else {
-      selectedCategoryId = Number(rawValue);
-    }
-
-    selectedSubCategory = "all";
-
-    if (typeof saveSelection === "function") saveSelection();
-    if (typeof currentPage !== "undefined") currentPage = 1;
-    if (typeof renderSubCategories === "function") renderSubCategories();
-    if (typeof applyFilters === "function") applyFilters();
-  });
-}
-
 /* =======================================================
-   HTML Escaping Helper
+   HTML Escaping
 ======================================================= */
 
 function escapeHtml(value) {
@@ -417,4 +500,8 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
 }

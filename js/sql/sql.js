@@ -48,6 +48,69 @@ const CoderBasketDB = (() => {
 
     return value;
   }
+  // ==========================================================
+  // Cache metadata table
+  // ==========================================================
+
+  async function createCacheMetadataTable() {
+    await init();
+
+    db.exec(`
+    CREATE TABLE IF NOT EXISTS "__cache_metadata" (
+
+      section TEXT PRIMARY KEY,
+
+      fetched_at INTEGER NOT NULL
+
+    );
+  `);
+
+    return true;
+  }
+  async function getCacheTimestamp(section) {
+    await createCacheMetadataTable();
+
+    const sectionName = normalizeSection(section);
+
+    const result = db.exec({
+      sql: `
+      SELECT fetched_at
+      FROM "__cache_metadata"
+      WHERE section = ?
+      LIMIT 1
+    `,
+      bind: [sectionName],
+    });
+
+    if (result.length === 0 || result[0].values.length === 0) {
+      return null;
+    }
+
+    return Number(result[0].values[0][0]);
+  }
+  async function setCacheTimestamp(section) {
+    await createCacheMetadataTable();
+
+    const sectionName = normalizeSection(section);
+
+    db.run(
+      `
+      INSERT INTO "__cache_metadata"
+      (
+        section,
+        fetched_at
+      )
+      VALUES (?, ?)
+
+      ON CONFLICT(section)
+      DO UPDATE SET
+        fetched_at = excluded.fetched_at
+    `,
+      [sectionName, Date.now()],
+    );
+
+    return true;
+  }
 
   // ---------------------------------------------------------
   // Escape SQLite identifier
@@ -564,6 +627,10 @@ const CoderBasketDB = (() => {
     importDatabase,
 
     close,
+
+    // Cache
+    getCacheTimestamp,
+    setCacheTimestamp,
   };
 })();
 
@@ -571,40 +638,126 @@ const CoderBasketDB = (() => {
 
 //#region Coder Basket Catalogue Data
 
-//#region Coder Basket Catalogue Data
-
 const CoderBasketData = (() => {
-  /**
-   * Merge projects by project_url.
-   *
-   * Local JSON is loaded first.
-   * SQLite projects overwrite matching local projects.
-   */
-  function mergeProjects(localItems, databaseItems) {
-    const map = new Map();
+  // ==========================================================
+  // CONFIGURATION
+  // ==========================================================
 
-    // -------------------------------------------------------
-    // 1. Local JSON first
-    // -------------------------------------------------------
+  // How long cached section data remains valid.
+  //
+  // 24 hours = 86,400,000 ms
+  //
+  // Change this if required.
+  //
+  const CACHE_TTL = 24 * 60 * 60 * 1000;
 
-    for (const project of localItems || []) {
-      if (!project || typeof project !== "object") {
-        continue;
-      }
+  // Set to true if you want one fetch per browser session
+  // regardless of the TTL.
+  //
+  // false = TTL controls refresh
+  //
+  const SESSION_CACHE = true;
 
-      const url = String(project.project_url || "").trim();
+  const SESSION_KEY = "coderbasket_loaded_sections";
 
-      if (!url) {
-        continue;
-      }
+  // ==========================================================
+  // Section validation
+  //
+  // IMPORTANT:
+  // Section names are NEVER renamed.
+  //
+  // "react-native" remains "react-native"
+  // "react" remains "react"
+  // ==========================================================
 
-      map.set(url, project);
+  function getSectionName(section) {
+    const value = String(section || "").trim();
+
+    if (!value) {
+      throw new Error("Section is required.");
     }
 
-    // -------------------------------------------------------
-    // 2. SQLite second
-    // SQLite becomes the newer/preferred copy
-    // -------------------------------------------------------
+    if (!/^[a-zA-Z0-9_-]+$/.test(value)) {
+      throw new Error(`Invalid section name: ${section}`);
+    }
+
+    return value;
+  }
+
+  // ==========================================================
+  // Session cache
+  // ==========================================================
+
+  function getSessionSections() {
+    try {
+      const value = sessionStorage.getItem(SESSION_KEY);
+
+      if (!value) {
+        return {};
+      }
+
+      const parsed = JSON.parse(value);
+
+      if (parsed && typeof parsed === "object") {
+        return parsed;
+      }
+    } catch (error) {
+      console.warn("[CoderBasketData] Unable to read session cache:", error);
+    }
+
+    return {};
+  }
+
+  function markSessionSection(sectionName) {
+    try {
+      const sections = getSessionSections();
+
+      sections[sectionName] = Date.now();
+
+      sessionStorage.setItem(SESSION_KEY, JSON.stringify(sections));
+    } catch (error) {
+      console.warn("[CoderBasketData] Unable to save session cache:", error);
+    }
+  }
+
+  function isSessionSectionLoaded(sectionName) {
+    if (!SESSION_CACHE) {
+      return false;
+    }
+
+    const sections = getSessionSections();
+
+    return Boolean(sections[sectionName]);
+  }
+
+  // ==========================================================
+  // Check whether SQLite cache is still valid
+  // ==========================================================
+
+  async function isCacheValid(sectionName) {
+    const fetchedAt = await CoderBasketDB.getCacheTimestamp(sectionName);
+
+    if (!fetchedAt) {
+      return false;
+    }
+
+    const age = Date.now() - fetchedAt;
+
+    return age < CACHE_TTL;
+  }
+
+  // ==========================================================
+  // Merge projects
+  //
+  // Remote wins when project_url matches.
+  // ==========================================================
+
+  function mergeProjects(databaseItems, remoteItems) {
+    const map = new Map();
+
+    // --------------------------------------------------------
+    // SQLite
+    // --------------------------------------------------------
 
     for (const project of databaseItems || []) {
       if (!project || typeof project !== "object") {
@@ -620,157 +773,384 @@ const CoderBasketData = (() => {
       map.set(url, project);
     }
 
+    // --------------------------------------------------------
+    // Apps Script
+    //
+    // Remote wins.
+    // --------------------------------------------------------
+
+    for (const project of remoteItems || []) {
+      if (!project || typeof project !== "object") {
+        continue;
+      }
+
+      const url = String(project.project_url || "").trim();
+
+      if (!url) {
+        continue;
+      }
+
+      map.set(url, project);
+    }
+
     return Array.from(map.values());
   }
+  async function getSectionJson(sectionName, options = {}) {
+    const url = `/data/${encodeURIComponent(sectionName)}.json`;
 
-  async function getSection(section) {
-    const sectionName = String(section || "")
-      .trim()
-      .toLowerCase();
+    const response = await fetch(url, {
+      cache: "no-cache",
+    });
 
-    if (!sectionName) {
-      throw new Error("Section is required.");
+    if (!response.ok) {
+      throw new Error(
+        `Failed to load section "${sectionName}": HTTP ${response.status}`,
+      );
     }
 
-    console.log("[CoderBasketData] Loading section:", sectionName);
+    const data = await response.json();
 
-    // =======================================================
-    // 1. LOAD LOCAL JSON FIRST
-    // =======================================================
+    return Array.isArray(data) ? data : [];
+  }
 
-    let localItems = [];
+  async function getSection(section, options = {}) {
+    const sectionName = getSectionName(section);
+    const forceRefresh = options.forceRefresh === true;
 
-    try {
-      console.log("[CoderBasketData] Loading local JSON first:", sectionName);
+    console.log("[CoderBasketData] Loading section:", sectionName, {
+      forceRefresh,
+    });
 
-      const fileName = `${sectionName}.json`;
+    return getSectionJson(section);
+    // ========================================================
+    // 1. INITIALIZE SQLITE
+    // ========================================================
 
-      const url = `/data/${encodeURIComponent(fileName)}`;
+    await CoderBasketDB.init();
 
-      const response = await fetch(url, {
-        cache: "no-store",
-      });
-
-      if (!response.ok) {
-        throw new Error(`Local JSON returned HTTP ${response.status}`);
-      }
-
-      const json = await response.json();
-
-      if (Array.isArray(json)) {
-        localItems = json;
-      } else if (json && Array.isArray(json.Items)) {
-        localItems = json.Items;
-      } else if (json && Array.isArray(json.items)) {
-        localItems = json.items;
-      } else {
-        throw new Error("Local JSON does not contain an array.");
-      }
-
-      console.log("[CoderBasketData] Local JSON loaded:", {
-        section: sectionName,
-        count: localItems.length,
-      });
-    } catch (error) {
-      console.warn("[CoderBasketData] Local JSON failed:", error);
-    }
-
-    // =======================================================
-    // 2. RETURN LOCAL DATA IMMEDIATELY IF SQLITE IS NOT READY
-    // =======================================================
-
-    // We don't wait for SQLite before showing local data.
-    //
-    // The caller gets the local catalogue immediately.
-    //
-    // SQLite synchronization happens below.
-
-    // =======================================================
-    // 3. LOAD SQLITE
-    // =======================================================
+    // ========================================================
+    // 2. READ SQLITE
+    // ========================================================
 
     let databaseItems = [];
 
     try {
-      console.log("[CoderBasketData] Loading SQLite:", sectionName);
-
       databaseItems = await CoderBasketDB.getAll(sectionName);
 
-      console.log("[CoderBasketData] SQLite loaded:", {
+      if (!Array.isArray(databaseItems)) {
+        databaseItems = [];
+      }
+
+      console.log("[CoderBasketData] SQLite cache:", {
         section: sectionName,
         count: databaseItems.length,
       });
     } catch (error) {
-      console.warn("[CoderBasketData] SQLite unavailable:", error);
+      console.warn("[CoderBasketData] SQLite read failed:", {
+        section: sectionName,
+        error,
+      });
 
-      // Local JSON remains usable.
-      return localItems;
+      databaseItems = [];
     }
 
-    // =======================================================
-    // 4. MERGE LOCAL + SQLITE
-    // =======================================================
+    // ========================================================
+    // 3. DETERMINE WHETHER REMOTE FETCH IS REQUIRED
+    // ========================================================
 
-    const merged = mergeProjects(localItems, databaseItems);
+    let shouldFetchRemote = false;
 
-    console.log("[CoderBasketData] Merged catalogue:", {
+    // --------------------------------------------------------
+    // Force refresh
+    // --------------------------------------------------------
+
+    if (forceRefresh) {
+      console.log("[CoderBasketData] Force refresh requested:", sectionName);
+
+      shouldFetchRemote = true;
+    }
+
+    // --------------------------------------------------------
+    // EMPTY DATABASE
+    //
+    // IMPORTANT:
+    // Always try remote when there are no local items.
+    // --------------------------------------------------------
+    else if (databaseItems.length === 0) {
+      console.log(
+        "[CoderBasketData] SQLite is empty. Remote fetch required:",
+        sectionName,
+      );
+
+      shouldFetchRemote = true;
+    }
+
+    // --------------------------------------------------------
+    // DATABASE HAS DATA
+    // --------------------------------------------------------
+    else {
+      // ------------------------------------------------------
+      // Already loaded during this browser session
+      // ------------------------------------------------------
+
+      if (isSessionSectionLoaded(sectionName)) {
+        console.log(
+          "[CoderBasketData] Section already loaded this session:",
+          sectionName,
+        );
+
+        return databaseItems;
+      }
+
+      // ------------------------------------------------------
+      // Check TTL
+      // ------------------------------------------------------
+
+      let valid = false;
+
+      try {
+        valid = await isCacheValid(sectionName);
+      } catch (error) {
+        console.warn("[CoderBasketData] Cache validation failed:", {
+          section: sectionName,
+          error,
+        });
+
+        // If cache validation fails,
+        // try remote rather than trusting unknown state.
+        valid = false;
+      }
+
+      if (valid) {
+        console.log("[CoderBasketData] SQLite cache is valid:", sectionName);
+
+        markSessionSection(sectionName);
+
+        return databaseItems;
+      }
+
+      // ------------------------------------------------------
+      // Cache expired
+      // ------------------------------------------------------
+
+      console.log(
+        "[CoderBasketData] SQLite cache expired. Remote fetch required:",
+        sectionName,
+      );
+
+      shouldFetchRemote = true;
+    }
+
+    // ========================================================
+    // 4. LOCAL SQLITE IS SUFFICIENT
+    // ========================================================
+
+    if (!shouldFetchRemote) {
+      markSessionSection(sectionName);
+
+      return databaseItems;
+    }
+
+    // ========================================================
+    // 5. FETCH REMOTE
+    // ========================================================
+
+    let remoteItems = [];
+
+    try {
+      console.log("[CoderBasketData] Fetching Apps Script:", sectionName);
+
+      remoteItems = await getProjectsFromAppsScript(sectionName);
+
+      if (!Array.isArray(remoteItems)) {
+        console.warn("[CoderBasketData] Apps Script returned invalid data:", {
+          section: sectionName,
+          remoteItems,
+        });
+
+        remoteItems = [];
+      }
+
+      console.log("[CoderBasketData] Apps Script returned:", {
+        section: sectionName,
+        count: remoteItems.length,
+      });
+    } catch (error) {
+      console.warn("[CoderBasketData] Apps Script failed:", {
+        section: sectionName,
+        error,
+      });
+
+      // ======================================================
+      // REMOTE FAILED
+      // ======================================================
+
+      if (databaseItems.length > 0) {
+        // ----------------------------------------------------
+        // We have a local fallback.
+        // ----------------------------------------------------
+
+        console.log(
+          "[CoderBasketData] Using existing SQLite cache:",
+          sectionName,
+        );
+
+        markSessionSection(sectionName);
+
+        return databaseItems;
+      }
+
+      // ------------------------------------------------------
+      // No database + remote failed.
+      //
+      // Google/network is outside our control.
+      // Return empty instead of crashing the application.
+      // ------------------------------------------------------
+
+      console.warn(
+        "[CoderBasketData] No SQLite fallback available. Returning empty section:",
+        sectionName,
+      );
+
+      markSessionSection(sectionName);
+
+      return [];
+    }
+
+    // ========================================================
+    // 6. REMOTE RETURNED ZERO ITEMS
+    // ========================================================
+
+    if (remoteItems.length === 0) {
+      console.warn(
+        "[CoderBasketData] Remote returned zero items:",
+        sectionName,
+      );
+
+      // ------------------------------------------------------
+      // NEVER overwrite existing useful SQLite data with [].
+      // ------------------------------------------------------
+
+      if (databaseItems.length > 0) {
+        console.log(
+          "[CoderBasketData] Keeping existing SQLite data:",
+          sectionName,
+        );
+
+        markSessionSection(sectionName);
+
+        return databaseItems;
+      }
+
+      // ------------------------------------------------------
+      // No DB + no remote data.
+      // ------------------------------------------------------
+
+      markSessionSection(sectionName);
+
+      return [];
+    }
+
+    // ========================================================
+    // 7. MERGE REMOTE WITH EXISTING SQLITE
+    //
+    // This prevents duplicates.
+    // ========================================================
+
+    const merged = mergeProjects(databaseItems, remoteItems);
+
+    console.log("[CoderBasketData] Merged remote + SQLite:", {
       section: sectionName,
-      local: localItems.length,
-      sqlite: databaseItems.length,
+      cached: databaseItems.length,
+      remote: remoteItems.length,
       merged: merged.length,
     });
 
-    // =======================================================
-    // 5. IF SQLITE IS EMPTY, DON'T NEED REMOTE YET
-    // =======================================================
+    // ========================================================
+    // 8. UPDATE SQLITE
+    // ========================================================
 
-    if (databaseItems.length === 0) {
-      console.log("[CoderBasketData] SQLite empty.");
+    try {
+      await CoderBasketDB.saveMany(remoteItems);
 
-      // Local JSON already contains the catalogue.
-      //
-      // We can optionally synchronize Apps Script here.
-      // But don't block the initial catalogue.
+      await CoderBasketDB.setCacheTimestamp(sectionName);
 
-      try {
-        console.log("[CoderBasketData] Fetching Apps Script:", sectionName);
+      console.log("[CoderBasketData] SQLite cache updated:", {
+        section: sectionName,
+        count: remoteItems.length,
+      });
+    } catch (error) {
+      console.warn("[CoderBasketData] Failed to update SQLite:", {
+        section: sectionName,
+        error,
+      });
 
-        const remoteItems = await getProjectsFromAppsScript(sectionName);
-
-        if (Array.isArray(remoteItems) && remoteItems.length > 0) {
-          console.log(
-            "[CoderBasketData] Apps Script returned:",
-            remoteItems.length,
-          );
-
-          // Save remote items to SQLite.
-
-          await CoderBasketDB.saveMany(remoteItems);
-
-          // Merge remote data with local data.
-
-          return mergeProjects(localItems, remoteItems);
-        }
-      } catch (error) {
-        console.warn(
-          "[CoderBasketData] Apps Script synchronization failed:",
-          error,
-        );
-      }
+      // Remote data is still valid.
+      // Continue and return it/merged data.
     }
 
-    // =======================================================
-    // 6. RETURN MERGED DATA
-    // =======================================================
+    // ========================================================
+    // 9. MARK SESSION
+    // ========================================================
+
+    markSessionSection(sectionName);
+
+    // ========================================================
+    // 10. RETURN MERGED RESULT
+    // ========================================================
+
+    console.log("[CoderBasketData] Section ready:", {
+      section: sectionName,
+      cached: databaseItems.length,
+      remote: remoteItems.length,
+      merged: merged.length,
+    });
 
     return merged;
   }
 
+  // ==========================================================
+  // FORCE REFRESH
+  //
+  // Example:
+  //
+  // await CoderBasketData.refreshSection("react");
+  //
+  // ==========================================================
+
+  async function refreshSection(section) {
+    return getSection(section, {
+      forceRefresh: true,
+    });
+  }
+
+  // ==========================================================
+  // CLEAR SESSION CACHE
+  //
+  // Useful for a "Refresh All" button.
+  // ==========================================================
+
+  function clearSessionCache() {
+    try {
+      sessionStorage.removeItem(SESSION_KEY);
+
+      console.log("[CoderBasketData] Session cache cleared.");
+    } catch (error) {
+      console.warn("[CoderBasketData] Unable to clear session cache:", error);
+    }
+  }
+
+  // ==========================================================
+  // PUBLIC API
+  // ==========================================================
+
   return {
     getSection,
+
+    refreshSection,
+
+    clearSessionCache,
   };
 })();
-
-//#endregion
 
 //#endregion

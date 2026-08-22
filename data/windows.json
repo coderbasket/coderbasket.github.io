@@ -1,0 +1,2111 @@
+[
+  {
+    "id": "8b33b6dd-69a7-42c4-8d62-8b9d2a940f1f",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-lunch-scheduler",
+    "title": "Lunch Scheduler app",
+    "description": "A Universal Windows Platform sample that demonstrates scheduling lunches with friends and coworkers.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/Windows-appsample-lunch-scheduler/raw/master/Images/LunchSchedulerBanner.PNG",
+    "categories": [
+      "Timeline"
+    ],
+    "submitted_at": "2026-08-21T03:33:24.968Z",
+    "status": "pending",
+    "github": {
+      "stars": 196,
+      "forks": 75,
+      "watchers": 196,
+      "language": "C#",
+      "open_issues": 5,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-08-26T17:17:54Z",
+      "updated_at": "2026-07-20T15:37:55Z",
+      "pushed_at": "2023-04-28T22:04:55Z"
+    }
+  },
+  {
+    "id": "2db58187-eb07-4545-afe9-572b94fbbe18",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-annotated-audio",
+    "title": "Annotated Audio app sample",
+    "description": "A Windows sample demonstrating audio recording, ink annotations, and OneDrive data roaming.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "OneDrive"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/Microsoft/Windows-appsample-annotated-audio/raw/master/Screenshots/Playback.PNG",
+    "categories": [
+      "Stores"
+    ],
+    "submitted_at": "2026-08-21T03:33:26.254Z",
+    "status": "pending",
+    "github": {
+      "stars": 20,
+      "forks": 13,
+      "watchers": 20,
+      "language": "C#",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2017-05-09T22:42:09Z",
+      "updated_at": "2026-06-11T00:59:01Z",
+      "pushed_at": "2022-09-08T17:25:20Z"
+    }
+  },
+  {
+    "id": "858aa444-e915-4c5b-9b2a-cd7e19e9e0b4",
+    "project_url": "https://github.com/SmokSmog/smoksmog-windows",
+    "title": "smoksmog-windows",
+    "description": "SmokSmog client application for Windows.",
+    "section": "windows",
+    "section_category": "desktop",
+    "technologies": [
+      "C#",
+      ".NET"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/SmokSmog/smoksmog-windows/raw/master/Others/Beta.Promo.png",
+    "categories": [
+      "Dashboard"
+    ],
+    "submitted_at": "2026-08-21T03:33:27.316Z",
+    "status": "pending",
+    "github": {
+      "stars": 11,
+      "forks": 1,
+      "watchers": 11,
+      "language": "C#",
+      "open_issues": 8,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "air-quality",
+        "pollution",
+        "smog",
+        "smoksmog-windows",
+        "windows-10",
+        "windows-8",
+        "windows-phone"
+      ],
+      "created_at": "2016-09-27T20:00:05Z",
+      "updated_at": "2025-05-10T10:51:26Z",
+      "pushed_at": "2017-05-21T21:54:05Z"
+    }
+  },
+  {
+    "id": "cef7ea0b-8e60-4ff7-8176-6d11cd27a74c",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-huelightcontroller",
+    "title": "Hue Lights sample",
+    "description": "A Windows sample application for controlling Philips Hue lights.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Philips Hue"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/Windows-appsample-huelightcontroller/raw/master/Screenshots/Connecting.png",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:33:28.537Z",
+    "status": "pending",
+    "github": {
+      "stars": 74,
+      "forks": 32,
+      "watchers": 74,
+      "language": "C#",
+      "open_issues": 3,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-01-27T19:50:04Z",
+      "updated_at": "2026-06-10T22:18:17Z",
+      "pushed_at": "2022-11-28T19:13:48Z"
+    }
+  },
+  {
+    "id": "0c5029e4-3cff-476f-bc07-2ac0ad8e97a8",
+    "project_url": "https://github.com/QuinnDamerell/Baconit",
+    "title": "Baconit",
+    "description": "A Reddit client for Windows with a modern UI, fast performance, and features designed for Windows 10 devices.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/QuinnDamerell/Baconit/raw/develop/Media/GitHubReadme/Desktop1.png",
+    "categories": [
+      "Messaging"
+    ],
+    "submitted_at": "2026-08-21T03:33:30.037Z",
+    "status": "pending",
+    "github": {
+      "stars": 236,
+      "forks": 78,
+      "watchers": 236,
+      "language": "C#",
+      "open_issues": 38,
+      "license": "GPL-2.0",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2015-07-10T14:59:03Z",
+      "updated_at": "2026-08-18T20:20:01Z",
+      "pushed_at": "2022-08-17T03:51:09Z"
+    }
+  },
+  {
+    "id": "faaf2c69-77ab-4976-866f-a807c273a612",
+    "project_url": "https://github.com/builtbybel/bloatbox",
+    "title": "Bloatbox",
+    "description": "A lightweight Windows utility for uninstalling unwanted modern Windows applications.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/builtbybel/bloatbox/raw/master/assets/bloatbox.png",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:33:31.619Z",
+    "status": "pending",
+    "github": {
+      "stars": 1888,
+      "forks": 111,
+      "watchers": 1888,
+      "language": "PowerShell",
+      "open_issues": 23,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "debloat",
+        "modern",
+        "uninstall",
+        "uwp-apps",
+        "windows-10"
+      ],
+      "created_at": "2020-07-20T17:37:19Z",
+      "updated_at": "2026-08-19T11:21:06Z",
+      "pushed_at": "2024-02-07T12:38:48Z"
+    }
+  },
+  {
+    "id": "cfd8e754-0f54-41bd-a1ef-9a6e4dfa4235",
+    "project_url": "https://github.com/yuk7/ArchWSL",
+    "title": "ArchWSL",
+    "description": "Arch Linux on Windows Subsystem for Linux, based on wsldl.",
+    "section": "windows",
+    "section_category": "wsl",
+    "technologies": [
+      "WSL",
+      "Linux"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/wiki/yuk7/wsldl/img/Arch_Alpine_Ubuntu.png",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:33:32.636Z",
+    "status": "pending",
+    "github": {
+      "stars": 7389,
+      "forks": 202,
+      "watchers": 7389,
+      "language": "Makefile",
+      "open_issues": 64,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "archlinux",
+        "uwp-apps",
+        "windows-10",
+        "windows-subsystem-linux",
+        "windows-terminal",
+        "wsl",
+        "wsldl"
+      ],
+      "created_at": "2017-12-04T12:12:26Z",
+      "updated_at": "2026-08-19T17:56:15Z",
+      "pushed_at": "2026-04-02T12:47:36Z"
+    }
+  },
+  {
+    "id": "236088bf-00fd-4daa-84f6-0505d32976e1",
+    "project_url": "https://github.com/xiaosu-zhu/Aurora.Music",
+    "title": "Aurora Music",
+    "description": "A modern Fluent-style music player for Windows.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/apps/9NBLGGH6JVDT",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/fe8627ade0524958a479c4f802dec456252595bf14b8f4994be19ae13c52fff0/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30342f30392f356163623132326234313164662e706e67",
+    "categories": [
+      "Playback",
+      "Stores",
+      "Carousel",
+      "Articles"
+    ],
+    "submitted_at": "2026-08-21T03:33:33.776Z",
+    "status": "pending",
+    "github": {
+      "stars": 185,
+      "forks": 26,
+      "watchers": 185,
+      "language": "C#",
+      "open_issues": 46,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "music",
+        "uwp",
+        "uwp-applications"
+      ],
+      "created_at": "2017-10-14T14:57:15Z",
+      "updated_at": "2026-07-13T14:56:08Z",
+      "pushed_at": "2022-12-08T06:27:14Z"
+    }
+  },
+  {
+    "id": "a64388ae-dcb8-486d-b182-d1b3f3cc8807",
+    "project_url": "https://github.com/hjohnson12/Kanban-Tasker",
+    "title": "Kb Tasker",
+    "description": "A Kanban task management application built with C#, XAML, and the Windows Universal Windows Platform.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/hjohnson12/Kanban-Tasker/raw/master/Images/KT_01.png",
+    "categories": [
+      "Timeline"
+    ],
+    "submitted_at": "2026-08-21T03:33:35.479Z",
+    "status": "pending",
+    "github": {
+      "stars": 298,
+      "forks": 48,
+      "watchers": 298,
+      "language": "C#",
+      "open_issues": 44,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "universal-windows-platform",
+        "uwp",
+        "uwp-apps",
+        "windows-10",
+        "xaml"
+      ],
+      "created_at": "2019-06-09T22:13:21Z",
+      "updated_at": "2026-07-27T17:33:55Z",
+      "pushed_at": "2026-05-10T07:19:22Z"
+    }
+  },
+  {
+    "id": "180df842-f8e4-4b1f-bea1-6c97f01017c0",
+    "project_url": "https://github.com/ultramega/elementary-uwp",
+    "title": "Elementary",
+    "description": "A simple periodic table and chemical element reference application for Windows.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://store-images.s-microsoft.com/image/apps.57085.13510798887421945.4f47e6af-76b7-4448-a366-64d462bf20c0.e797be81-30e1-4c7f-a6db-87977c6d9699",
+    "categories": [
+      "Charts",
+      "Lists"
+    ],
+    "submitted_at": "2026-08-21T03:33:36.870Z",
+    "status": "pending",
+    "github": {
+      "stars": 6,
+      "forks": 1,
+      "watchers": 6,
+      "language": "C#",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "uwp-applications"
+      ],
+      "created_at": "2016-03-31T22:13:06Z",
+      "updated_at": "2026-08-11T21:33:38Z",
+      "pushed_at": "2020-12-01T19:51:26Z"
+    }
+  },
+  {
+    "id": "90b615f4-5fb7-4203-afa1-181ac151991a",
+    "project_url": "https://github.com/microsoft/TemplateStudio",
+    "title": "Template Studio",
+    "description": "A suite of Visual Studio extensions that accelerates the creation of WinUI 3, WPF, and UWP applications using a wizard-based experience.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI 3",
+      "WPF",
+      "UWP",
+      "Visual Studio"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/TemplateStudio/raw/main/docs/resources/getting-started/Wizard-ProjectTypes-WinUI.png",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:33:38.594Z",
+    "status": "pending",
+    "github": {
+      "stars": 2813,
+      "forks": 467,
+      "watchers": 2813,
+      "language": "Rich Text Format",
+      "open_issues": 196,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "template",
+        "template-engine",
+        "uwp",
+        "uwp-apps",
+        "visual-studio",
+        "windows-10",
+        "xaml"
+      ],
+      "created_at": "2016-12-21T15:31:29Z",
+      "updated_at": "2026-08-19T11:58:44Z",
+      "pushed_at": "2024-10-09T01:33:35Z"
+    }
+  },
+  {
+    "id": "5602af87-71d1-400d-8743-437e4882f330",
+    "project_url": "https://github.com/d2phap/ImageGlass-Preview",
+    "title": "ImageGlass Preview",
+    "description": "A modern and versatile image viewer for Windows.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://repository-images.githubusercontent.com/281121079/bf9e0000-cad1-11ea-832d-3b956d493e65",
+    "categories": [
+      "Stores"
+    ],
+    "submitted_at": "2026-08-21T03:33:39.800Z",
+    "status": "pending",
+    "github": {
+      "stars": 96,
+      "forks": 6,
+      "watchers": 96,
+      "language": "C#",
+      "open_issues": 0,
+      "license": "NOASSERTION",
+      "default_branch": "develop",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "dotnet",
+        "image-viewer",
+        "photo-browser",
+        "uwp",
+        "uwp-apps"
+      ],
+      "created_at": "2020-07-20T13:16:33Z",
+      "updated_at": "2026-05-29T08:54:56Z",
+      "pushed_at": "2021-04-18T09:47:37Z"
+    }
+  },
+  {
+    "id": "4bb0aeea-5c93-479c-bdda-69bb61b43e87",
+    "project_url": "https://github.com/kljzndx/Lyric-Editor",
+    "title": "Lyric-Editor",
+    "description": "A Windows application for creating and editing song lyrics.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://apps.microsoft.com/store/detail/simple-lyrics-editor/9MX4FRGQ4RQS",
+    "youtube_url": "",
+    "image_url": "https://store-images.s-microsoft.com/image/apps.5031.13831238340819247.2fc92f66-73dc-497b-8ab2-6081d616f158.01e65c91-146c-47cd-a418-a75f63d55126",
+    "categories": [
+      "Stores"
+    ],
+    "submitted_at": "2026-08-21T03:33:41.026Z",
+    "status": "pending",
+    "github": {
+      "stars": 24,
+      "forks": 3,
+      "watchers": 24,
+      "language": "C#",
+      "open_issues": 3,
+      "license": "GPL-3.0",
+      "default_branch": "V3",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2017-02-12T08:04:55Z",
+      "updated_at": "2026-08-15T14:29:55Z",
+      "pushed_at": "2019-12-28T05:23:43Z"
+    }
+  },
+  {
+    "id": "7c892430-d26b-48d0-9f64-64dd67c3cf63",
+    "project_url": "https://github.com/2fast-team/2fast",
+    "title": "2fast",
+    "description": "A two-factor authenticator for Windows supporting TOTP.",
+    "section": "windows",
+    "section_category": "security",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP",
+      "TOTP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/apps/9p9d81glh89q",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/483b422bcf7a416ed3dca343766d68f635342b627ddc210266b1c0a9a3760bfa/68747470733a2f2f692e706f7374696d672e63632f467a5851704b34332f32666173742d73637265656e73686f742d312e706e67",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:33:42.463Z",
+    "status": "pending",
+    "github": {
+      "stars": 560,
+      "forks": 59,
+      "watchers": 560,
+      "language": "C#",
+      "open_issues": 34,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android-app",
+        "authentication",
+        "authenticator",
+        "c-sharp",
+        "ios-app",
+        "linux-app",
+        "password",
+        "totp",
+        "uwp-apps",
+        "windows-10"
+      ],
+      "created_at": "2020-04-24T23:48:02Z",
+      "updated_at": "2026-08-20T08:30:13Z",
+      "pushed_at": "2026-08-20T16:09:03Z"
+    }
+  },
+  {
+    "id": "e23eb274-2e72-4944-ad01-35b379534070",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-rssreader",
+    "title": "RssReader sample",
+    "description": "A Windows RSS reader sample application.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "RSS"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/Windows-appsample-rssreader/raw/master/RssReader.png",
+    "categories": [
+      "Lists",
+      "Social Network"
+    ],
+    "submitted_at": "2026-08-21T03:33:43.773Z",
+    "status": "pending",
+    "github": {
+      "stars": 374,
+      "forks": 111,
+      "watchers": 374,
+      "language": "C#",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2015-04-29T00:44:06Z",
+      "updated_at": "2026-07-22T05:11:07Z",
+      "pushed_at": "2023-06-27T13:09:27Z"
+    }
+  },
+  {
+    "id": "e06f7d20-cca3-47a2-8bbd-cee59ca14c65",
+    "project_url": "https://github.com/nahuelwexd/UniTube",
+    "title": "UniTube",
+    "description": "A YouTube client built with .NET technologies.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      ".NET",
+      "C#"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/nahuelwexd/UniTube/raw/master/data/logos/Unitube-vertical.png",
+    "categories": [
+      "Lists",
+      "Social Network",
+      "Playback"
+    ],
+    "submitted_at": "2026-08-21T03:33:44.768Z",
+    "status": "pending",
+    "github": {
+      "stars": 30,
+      "forks": 2,
+      "watchers": 30,
+      "language": "C#",
+      "open_issues": 0,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "dotnet-core",
+        "gtk",
+        "uwp",
+        "video",
+        "youtube"
+      ],
+      "created_at": "2017-09-24T04:49:17Z",
+      "updated_at": "2026-02-15T05:21:43Z",
+      "pushed_at": "2023-01-24T20:44:34Z"
+    }
+  },
+  {
+    "id": "e1c074d2-682d-4223-b7ef-0247384f5b3e",
+    "project_url": "https://github.com/Xavalon/XamlStyler",
+    "title": "XAML Styler",
+    "description": "A Visual Studio extension that formats XAML source code according to configurable styling rules.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      ".NET",
+      "XAML",
+      "Visual Studio"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/8bc3faa14e1116590c1433f3e45f07a4e5c2db586bf13eddee8c1f6e6d67362a/687474703a2f2f692e696d6775722e636f6d2f6743634e7549532e706e67",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:33:46.944Z",
+    "status": "pending",
+    "github": {
+      "stars": 1379,
+      "forks": 159,
+      "watchers": 1379,
+      "language": "C#",
+      "open_issues": 123,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "jetbrains-rider",
+        "uwp",
+        "uwp-applications",
+        "uwp-apps",
+        "visual-studio-extension",
+        "xaml",
+        "xaml-source",
+        "xaml-styler"
+      ],
+      "created_at": "2016-04-27T17:23:10Z",
+      "updated_at": "2026-08-14T13:13:02Z",
+      "pushed_at": "2026-04-14T23:52:00Z"
+    }
+  },
+  {
+    "id": "4d137b92-70d6-4765-8052-9c58971a6727",
+    "project_url": "https://github.com/yazdipour/githubx",
+    "title": "GithubX",
+    "description": "A GitHub client focused on making GitHub repository categorization easier and more enjoyable.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/yazdipour/githubx/raw/dev/assets/Uwp/Screenshots/MainPage.png",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:33:48.050Z",
+    "status": "pending",
+    "github": ""
+  },
+  {
+    "id": "8d390f9a-1211-4e63-b847-a80273fd35bf",
+    "project_url": "https://github.com/Microsoft/Appsample-Photosharing",
+    "title": "PhotoSharingApp",
+    "description": "A Universal Windows Platform sample demonstrating a social photo-sharing experience.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/Appsample-Photosharing/raw/master/Images/Category-Overview-Desktop-Mobile.jpg",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:33:49.076Z",
+    "status": "pending",
+    "github": {
+      "stars": 283,
+      "forks": 113,
+      "watchers": 283,
+      "language": "C#",
+      "open_issues": 17,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-01-15T02:08:09Z",
+      "updated_at": "2026-06-16T19:47:20Z",
+      "pushed_at": "2023-01-10T02:05:42Z"
+    }
+  },
+  {
+    "id": "f115e253-109f-4e32-bca7-d8cb6880effc",
+    "project_url": "https://github.com/thecodrr/BreadPlayer",
+    "title": "Bread Player",
+    "description": "An open-source music player built with UWP and C#/.NET for Windows.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/f353dd6331b251d6897f5a773b6908714d94aadf105051a01a277883f7562a29/687474703a2f2f692e696d6775722e636f6d2f504e4d534755722e706e67",
+    "categories": [
+      "Tools",
+      "Lists"
+    ],
+    "submitted_at": "2026-08-21T03:33:50.125Z",
+    "status": "pending",
+    "github": {
+      "stars": 307,
+      "forks": 85,
+      "watchers": 307,
+      "language": "C#",
+      "open_issues": 25,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "beta",
+        "bread-player",
+        "csharp",
+        "groove",
+        "last-fm",
+        "music",
+        "music-player",
+        "under-dev",
+        "uwp",
+        "windows-10",
+        "windows-phone"
+      ],
+      "created_at": "2016-09-15T14:02:12Z",
+      "updated_at": "2026-08-10T06:51:02Z",
+      "pushed_at": "2023-02-24T16:27:24Z"
+    }
+  },
+  {
+    "id": "756962c5-d051-4471-8eb8-4e6a75bcf7a9",
+    "project_url": "https://github.com/colinkiama/UWP-Package-Installer",
+    "title": "UWP Package Installer",
+    "description": "A Windows application for installing AppX and AppXBundle packages.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "AppX"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/colinkiama/UWP-Package-Installer/raw/master/screenshot.gif",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:33:51.844Z",
+    "status": "pending",
+    "github": {
+      "stars": 110,
+      "forks": 20,
+      "watchers": 110,
+      "language": "C#",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "install",
+        "installer",
+        "utility-application",
+        "uwp",
+        "uwp-applications",
+        "uwp-apps",
+        "uwp-dev",
+        "windows-10",
+        "windows-10-mobile",
+        "windows-uwp",
+        "xaml",
+        "xaml-winrt"
+      ],
+      "created_at": "2017-09-02T15:14:04Z",
+      "updated_at": "2026-07-31T03:13:11Z",
+      "pushed_at": "2022-01-14T11:13:25Z"
+    }
+  },
+  {
+    "id": "845ca809-9528-46dc-972f-4e49921ed0aa",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-coloringbook",
+    "title": "Coloring Book sample",
+    "description": "A Windows Ink sample demonstrating drawing, the Windows Ink Toolbar, and radial controller features.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Windows Ink"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/Microsoft/Windows-appsample-coloringbook/raw/master/screenshot.png",
+    "categories": [
+      "Carousel",
+      "Stores"
+    ],
+    "submitted_at": "2026-08-21T03:33:52.933Z",
+    "status": "pending",
+    "github": {
+      "stars": 173,
+      "forks": 67,
+      "watchers": 173,
+      "language": "C#",
+      "open_issues": 4,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-09-20T20:51:02Z",
+      "updated_at": "2026-08-05T08:41:07Z",
+      "pushed_at": "2022-11-28T19:12:38Z"
+    }
+  },
+  {
+    "id": "31f183d7-384f-4093-af97-1cca07284b8c",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-shopping",
+    "title": "Payment Request API Sample App",
+    "description": "A Windows sample demonstrating the Payment Request API and a multi-page XAML interface using MVVM.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "MVVM",
+      "Payment Request API"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/Microsoft/Windows-appsample-shopping/raw/master/Images/frontpage.png",
+    "categories": [
+      "Products",
+      "Stores"
+    ],
+    "submitted_at": "2026-08-21T03:33:53.979Z",
+    "status": "pending",
+    "github": {
+      "stars": 28,
+      "forks": 27,
+      "watchers": 28,
+      "language": "C#",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2017-06-09T18:18:56Z",
+      "updated_at": "2024-09-16T14:06:56Z",
+      "pushed_at": "2019-02-05T17:28:17Z"
+    }
+  },
+  {
+    "id": "29737d27-3a78-4a25-b38e-d4f44a82ae44",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-customers-orders-database",
+    "title": "Customers Orders Database sample",
+    "description": "A WinUI 3 sample application demonstrating Windows UI controls and data-grid functionality.",
+    "section": "windows",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI 3",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/Microsoft/Windows-appsample-customers-orders-database/raw/master/images/customer-list.png",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:33:55.217Z",
+    "status": "pending",
+    "github": {
+      "stars": 526,
+      "forks": 209,
+      "watchers": 526,
+      "language": "TSQL",
+      "open_issues": 11,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-09-28T20:14:41Z",
+      "updated_at": "2026-08-18T21:03:20Z",
+      "pushed_at": "2023-06-12T20:52:44Z"
+    }
+  },
+  {
+    "id": "976cb25c-29e4-4e9d-8180-838dd0883736",
+    "project_url": "https://github.com/twsouthwick/KeePassWin",
+    "title": "KeePassWin",
+    "description": "A universal Windows implementation of KeePass supporting Windows 10 devices.",
+    "section": "windows",
+    "section_category": "security",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "KeePass"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/twsouthwick/KeePassWin/raw/develop/assets/screenshots/narrow_details.png",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:33:56.340Z",
+    "status": "pending",
+    "github": {
+      "stars": 38,
+      "forks": 5,
+      "watchers": 38,
+      "language": "C#",
+      "open_issues": 24,
+      "license": "GPL-3.0",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-11-08T15:53:51Z",
+      "updated_at": "2024-09-16T14:26:01Z",
+      "pushed_at": "2019-05-21T01:16:52Z"
+    }
+  },
+  {
+    "id": "fd4042e4-2682-4dc5-9f32-8f00f2f65210",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-networkhelper",
+    "title": "NetworkHelper sample library",
+    "description": "A UWP networking sample library and demo application for network discovery and communication.",
+    "section": "windows",
+    "section_category": "networking",
+    "technologies": [
+      "C#",
+      "UWP",
+      "Networking APIs"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/Microsoft/Windows-appsample-networkhelper/raw/master/Screenshots/QuizGame_CreateGame_Lobby_scaled.png",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:33:57.830Z",
+    "status": "pending",
+    "github": {
+      "stars": 151,
+      "forks": 52,
+      "watchers": 151,
+      "language": "C#",
+      "open_issues": 4,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2015-04-29T00:43:12Z",
+      "updated_at": "2026-06-10T21:17:51Z",
+      "pushed_at": "2022-11-28T19:14:26Z"
+    }
+  },
+  {
+    "id": "4992ce7f-4359-42b1-bbf3-bce7b05d5813",
+    "project_url": "https://github.com/XamlFlair/XamlFlair",
+    "title": "XamlFlair",
+    "description": "A XAML animation library that simplifies the implementation of common animations.",
+    "section": "windows",
+    "section_category": "xaml",
+    "technologies": [
+      "C#",
+      "XAML",
+      "WPF",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/XamlFlair/XamlFlair/raw/master/doc/gifs/Sekuence.gif",
+    "categories": [
+      "Animations",
+      "Games"
+    ],
+    "submitted_at": "2026-08-21T03:33:59.519Z",
+    "status": "pending",
+    "github": {
+      "stars": 847,
+      "forks": 74,
+      "watchers": 847,
+      "language": "C#",
+      "open_issues": 7,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "animation",
+        "uno",
+        "uno-platform",
+        "uwp",
+        "uwp-apps",
+        "windows",
+        "windows-10",
+        "wpf",
+        "xaml",
+        "xamlflair"
+      ],
+      "created_at": "2019-03-06T21:11:59Z",
+      "updated_at": "2026-08-20T08:02:24Z",
+      "pushed_at": "2026-03-14T21:04:23Z"
+    }
+  },
+  {
+    "id": "f95ba9e3-5a93-4f26-8639-1d9ed7a44414",
+    "project_url": "https://github.com/IsaacMorris1980/UWP-App-Launcher-Mobile",
+    "title": "UWP-App-Launcher",
+    "description": "A Windows launcher designed to provide an alternative traditional home-screen experience.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/IsaacMorris1980/UWP-App-Launcher-Mobile/raw/oldversion/UWPAppLauncherMonochromeWideBranding.png",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:01.199Z",
+    "status": "pending",
+    "github": {
+      "stars": 75,
+      "forks": 11,
+      "watchers": 75,
+      "language": "C#",
+      "open_issues": 25,
+      "license": "MIT",
+      "default_branch": "Testing",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "applauncher",
+        "csharp",
+        "launcher",
+        "open-source",
+        "opensource",
+        "speed",
+        "swipe",
+        "uwp",
+        "uwp-applications",
+        "uwp-apps",
+        "windows",
+        "windows-10",
+        "windows-10-iot",
+        "windows-10-mobile",
+        "windows-iot",
+        "windows-phone",
+        "windows-uwp",
+        "windows10",
+        "xaml",
+        "xaml-winrt"
+      ],
+      "created_at": "2017-09-02T15:11:06Z",
+      "updated_at": "2026-07-10T00:03:55Z",
+      "pushed_at": "2025-08-15T00:21:57Z"
+    }
+  },
+  {
+    "id": "84df3e25-7a37-43e2-a654-4177ba6fb3e5",
+    "project_url": "https://github.com/JuniperPhoton/MyerList.UWP",
+    "title": "MyerListUWP",
+    "description": "A simple to-do application for Windows 10.",
+    "section": "windows",
+    "section_category": "productivity",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/JuniperPhoton/MyerList.UWP/raw/master/Design/4.0/d01.png",
+    "categories": [
+      "Timeline",
+      "Lists"
+    ],
+    "submitted_at": "2026-08-21T03:34:02.224Z",
+    "status": "pending",
+    "github": {
+      "stars": 18,
+      "forks": 4,
+      "watchers": 18,
+      "language": "C#",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2015-08-01T10:19:59Z",
+      "updated_at": "2023-08-30T05:23:33Z",
+      "pushed_at": "2017-05-30T16:26:19Z"
+    }
+  },
+  {
+    "id": "b0d67133-6c6a-460d-99dc-e507e5ee48d3",
+    "project_url": "https://github.com/heanuea/WindowsUWP_APP",
+    "title": "WindowsUWP_APP",
+    "description": "A UWP application example demonstrating MVVM architecture and CRUD operations with a database.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "MVVM",
+      "Database"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/heanuea/WindowsUWP_APP/raw/master/Screenshot%20(19).png",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:34:05.296Z",
+    "status": "pending",
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "C#",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2017-12-04T17:28:34Z",
+      "updated_at": "2017-12-08T19:23:23Z",
+      "pushed_at": "2018-02-05T18:26:28Z"
+    }
+  },
+  {
+    "id": "d8e5c721-c761-4876-9904-7c4b0db69790",
+    "project_url": "https://github.com/TransposonY/GestureSign",
+    "title": "GestureSign",
+    "description": "A Windows application for controlling the computer using touchpad and touchscreen gestures.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://store-images.s-microsoft.com/image/apps.37403.13993755530821792.e78c6e9f-4930-4a8e-964e-bccfbbebe05e.959013a0-d221-4601-be56-5f5c037d8c52",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:06.737Z",
+    "status": "pending",
+    "github": {
+      "stars": 928,
+      "forks": 103,
+      "watchers": 928,
+      "language": "C#",
+      "open_issues": 106,
+      "license": "GPL-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2015-02-27T15:23:16Z",
+      "updated_at": "2026-08-20T14:26:25Z",
+      "pushed_at": "2022-06-23T00:11:43Z"
+    }
+  },
+  {
+    "id": "f6201c01-1457-4bac-b74b-26d0fba5d0ab",
+    "project_url": "https://github.com/JuniperPhoton/MyerSplash.UWP",
+    "title": "MyerSplash",
+    "description": "A Windows application featuring beautiful wallpapers and image highlights.",
+    "section": "windows",
+    "section_category": "personalization",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/JuniperPhoton/MyerSplash.UWP/raw/master/design/hero.jpg",
+    "categories": [
+      "Lists",
+      "Widgets",
+      "Social Network"
+    ],
+    "submitted_at": "2026-08-21T03:34:07.838Z",
+    "status": "pending",
+    "github": ""
+  },
+  {
+    "id": "91de7fc4-47c5-49bb-bc7c-f5139f31e2d1",
+    "project_url": "https://github.com/owncloud/OwncloudUniversal",
+    "title": "OwncloudUniversal",
+    "description": "The ownCloud application for Windows 10 Phone, PC, and Tablet.",
+    "section": "windows",
+    "section_category": "cloud",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "ownCloud"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/owncloud/OwncloudUniversal/raw/master/screenshots/screenshot1.png",
+    "categories": [
+      "Lists",
+      "Dashboard"
+    ],
+    "submitted_at": "2026-08-21T03:34:08.880Z",
+    "status": "pending",
+    "github": {
+      "stars": 18,
+      "forks": 11,
+      "watchers": 18,
+      "language": "C#",
+      "open_issues": 11,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-08-20T13:26:26Z",
+      "updated_at": "2026-07-10T12:47:13Z",
+      "pushed_at": "2024-05-09T00:06:54Z"
+    }
+  },
+  {
+    "id": "faf7ee19-754f-4c89-9670-ffbb9c092eb9",
+    "project_url": "https://github.com/dharmendrasingh88/UwpWork",
+    "title": "UwpWork",
+    "description": "A YouTube player application for UWP.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "YouTube"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIRBrF6YtNkBKVxTFkNyoV26jvI8x9r5jh-Q&usqp=CAU",
+    "categories": [
+      "Social Network",
+      "Playback"
+    ],
+    "submitted_at": "2026-08-21T03:34:09.942Z",
+    "status": "pending",
+    "github": {
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "language": "C#",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2020-06-09T12:07:45Z",
+      "updated_at": "2022-11-26T20:21:38Z",
+      "pushed_at": "2020-06-09T12:38:16Z"
+    }
+  },
+  {
+    "id": "afd70057-b3b7-4ca4-a366-ee442652434c",
+    "project_url": "https://github.com/xiaosu-zhu/Aurora-Weather",
+    "title": "Aurora Weather",
+    "description": "A weather application with a modern Windows experience.",
+    "section": "windows",
+    "section_category": "weather",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://apps.microsoft.com/store/detail/aurora-weather/9NBLGGH4QMJ9",
+    "youtube_url": "",
+    "image_url": "https://store-images.s-microsoft.com/image/apps.10613.13510798887390850.dd0bc569-14df-4e98-9996-67112c83c166.0db80443-eaf3-472b-bc6c-60ded50510a2",
+    "categories": [
+      "Lists",
+      "Social Network"
+    ],
+    "submitted_at": "2026-08-21T03:34:10.988Z",
+    "status": "pending",
+    "github": {
+      "stars": 24,
+      "forks": 2,
+      "watchers": 24,
+      "language": "C#",
+      "open_issues": 6,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2016-01-28T09:23:44Z",
+      "updated_at": "2026-05-15T00:45:06Z",
+      "pushed_at": "2016-12-08T22:53:09Z"
+    }
+  },
+  {
+    "id": "bc97a789-4d69-426f-9328-b618e1ed937d",
+    "project_url": "https://github.com/Microsoft/vanarsdel",
+    "title": "VanArsdel UWP Sample",
+    "description": "A Microsoft UWP sample application demonstrating a Windows application experience.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/VanArsdel/raw/master/VanArsdel_MyLights.png",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:34:12.081Z",
+    "status": "pending",
+    "github": {
+      "stars": 172,
+      "forks": 50,
+      "watchers": 172,
+      "language": "C#",
+      "open_issues": 2,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "fluent-design",
+        "uwp",
+        "windows",
+        "windows-10",
+        "winui",
+        "xaml"
+      ],
+      "created_at": "2018-08-20T21:48:35Z",
+      "updated_at": "2026-08-16T14:22:12Z",
+      "pushed_at": "2023-06-12T19:02:05Z"
+    }
+  },
+  {
+    "id": "96c1e599-6ad9-44db-beb8-e647cd468970",
+    "project_url": "https://github.com/File-New-Project/EarTrumpet",
+    "title": "EarTrumpet",
+    "description": "A Windows volume control application that provides enhanced audio controls and customization.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "Windows"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/File-New-Project/EarTrumpet/raw/master/Graphics/hero.gif",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:13.402Z",
+    "status": "pending",
+    "github": {
+      "stars": 11300,
+      "forks": 597,
+      "watchers": 11300,
+      "language": "C#",
+      "open_issues": 110,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "audio",
+        "eartrumpet",
+        "microsoft-store",
+        "mixer",
+        "playback-devices",
+        "windows",
+        "wpf"
+      ],
+      "created_at": "2015-07-11T08:43:37Z",
+      "updated_at": "2026-08-20T21:39:19Z",
+      "pushed_at": "2026-08-16T00:18:18Z"
+    }
+  },
+  {
+    "id": "a05a1490-e886-469d-91cc-305d4f346fba",
+    "project_url": "https://github.com/UnigramDev/Unigram",
+    "title": "Unigram",
+    "description": "A Telegram client designed specifically for Windows.",
+    "section": "windows",
+    "section_category": "messaging",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/UnigramDev/Unigram/raw/develop/Screenshots/Screen1.PNG",
+    "categories": [
+      "Lists",
+      "Social Network",
+      "Timeline",
+      "Messaging"
+    ],
+    "submitted_at": "2026-08-21T03:34:14.460Z",
+    "status": "pending",
+    "github": {
+      "stars": 5350,
+      "forks": 672,
+      "watchers": 5350,
+      "language": "C#",
+      "open_issues": 118,
+      "license": "GPL-3.0",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "mtproto",
+        "secret-chats",
+        "telegram",
+        "tgcalls",
+        "unigram",
+        "universal",
+        "uwp",
+        "windows"
+      ],
+      "created_at": "2016-05-23T09:03:33Z",
+      "updated_at": "2026-08-20T17:33:52Z",
+      "pushed_at": "2026-08-20T12:59:01Z"
+    }
+  },
+  {
+    "id": "3631f9e4-1a26-45e7-bb89-560e6b82e365",
+    "project_url": "https://github.com/BrianLima/UWPHook",
+    "title": "UWPHook",
+    "description": "A Windows utility that helps add Windows Store and Xbox Game Pass games to Steam.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      ".NET",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/d54b20e93f9568311301f88daefd019e87d32d3a934d6b9268696c396e30cbf2/68747470733a2f2f692e6d6775722e636f6d2f706a47664748652e706e67",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:16.135Z",
+    "status": "pending",
+    "github": {
+      "stars": 2014,
+      "forks": 134,
+      "watchers": 2014,
+      "language": "C#",
+      "open_issues": 80,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "gamepass",
+        "gaming",
+        "steam",
+        "streaming",
+        "uwp",
+        "uwp-apps",
+        "uwp-games",
+        "valve",
+        "xbox",
+        "xbox-game-pass"
+      ],
+      "created_at": "2016-09-18T11:43:03Z",
+      "updated_at": "2026-08-20T14:00:45Z",
+      "pushed_at": "2024-12-09T00:59:29Z"
+    }
+  },
+  {
+    "id": "249cac9e-643f-4c97-906f-48a3991d0e3d",
+    "project_url": "https://github.com/character-map-uwp/Character-Map-UWP",
+    "title": "Character Map UWP",
+    "description": "A modern UWP replacement for the Windows Character Map and Windows Font Viewer with high-DPI and touch support.",
+    "section": "windows",
+    "section_category": "utilities",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/EdiWang/Character-Map-UWP/master/0_artifacts/cmap.png",
+    "categories": [
+      "Lists",
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:17.197Z",
+    "status": "pending",
+    "github": {
+      "stars": 787,
+      "forks": 65,
+      "watchers": 787,
+      "language": "C#",
+      "open_issues": 12,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "character",
+        "font",
+        "svg-icons",
+        "uwp"
+      ],
+      "created_at": "2016-02-08T03:51:16Z",
+      "updated_at": "2026-08-20T09:06:39Z",
+      "pushed_at": "2026-08-20T15:33:19Z"
+    }
+  },
+  {
+    "id": "530531d0-1104-44b8-8bb0-211b3be2705c",
+    "project_url": "https://github.com/MahApps/MahApps.Metro.IconPacks",
+    "title": "MahApps.Metro.IconPacks",
+    "description": "A collection of icon packs, controls, markup extensions, and converters for Windows desktop applications.",
+    "section": "windows",
+    "section_category": "wpf",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WPF",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/MahApps/MahApps.Metro.IconPacks/raw/develop/resources/iconpacks_browser_new.gif",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:18.313Z",
+    "status": "pending",
+    "github": {
+      "stars": 1955,
+      "forks": 217,
+      "watchers": 1955,
+      "language": "C#",
+      "open_issues": 14,
+      "license": "MIT",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "fontawesome",
+        "hacktoberfest",
+        "icon-pack",
+        "iconpacks",
+        "icons",
+        "mahapps",
+        "material",
+        "material-design",
+        "material-ui",
+        "modern",
+        "octicons",
+        "open-source",
+        "oss",
+        "simpleicons",
+        "typicons",
+        "uwp",
+        "uwp-apps",
+        "weather",
+        "wpf",
+        "xaml"
+      ],
+      "created_at": "2016-07-17T00:10:12Z",
+      "updated_at": "2026-08-19T04:29:59Z",
+      "pushed_at": "2026-04-25T11:46:24Z"
+    }
+  },
+  {
+    "id": "0907d428-6c91-4005-827e-b59e8c896cf6",
+    "project_url": "https://github.com/telerik/UI-For-UWP",
+    "title": "Progress Telerik UI for UWP",
+    "description": "An open-source collection of UI controls for Universal Windows Platform applications.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "Telerik"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/0f65c5c3e64441a0b1dce5b1df78749a7ee393e502ef15344d2397630d5b3a21/687474703a2f2f64353835746c647075637962772e636c6f756466726f6e742e6e65742f7366696d616765732f64656661756c742d736f757263652f64656661756c742d616c62756d2f6f73732d7577702d75692e706e673f73667672736e3d32",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:34:19.371Z",
+    "status": "pending",
+    "github": {
+      "stars": 1143,
+      "forks": 228,
+      "watchers": 1143,
+      "language": "C#",
+      "open_issues": 43,
+      "license": "NOASSERTION",
+      "default_branch": "development",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "csharp",
+        "telerik",
+        "uwp",
+        "uwp-apps",
+        "visual-studio",
+        "windows-10",
+        "xaml"
+      ],
+      "created_at": "2016-12-13T11:47:50Z",
+      "updated_at": "2026-08-14T06:20:14Z",
+      "pushed_at": "2024-11-28T08:54:03Z"
+    }
+  },
+  {
+    "id": "e0ebfd6f-7d58-4a94-bd61-273457a09adc",
+    "project_url": "https://github.com/ikarago/Notepad",
+    "title": "Notepad",
+    "description": "A Fluent-style Notepad application for Windows.",
+    "section": "windows",
+    "section_category": "productivity",
+    "technologies": [
+      "C#",
+      ".NET",
+      "XAML"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/ikarago/Notepad/raw/master/screenshots/1.png",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:20.787Z",
+    "status": "pending",
+    "github": {
+      "stars": 118,
+      "forks": 15,
+      "watchers": 118,
+      "language": "C#",
+      "open_issues": 17,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "fluent-design",
+        "mvvm",
+        "notepad",
+        "uwp",
+        "uwp-apps"
+      ],
+      "created_at": "2018-08-26T19:11:51Z",
+      "updated_at": "2026-02-13T14:18:27Z",
+      "pushed_at": "2020-05-14T11:46:38Z"
+    }
+  },
+  {
+    "id": "bc57a0ab-a5f5-459e-ab65-3dd170519534",
+    "project_url": "https://github.com/tor4kichi/Hohoema",
+    "title": "Hohoema",
+    "description": "A Windows client application for Niconico.",
+    "section": "windows",
+    "section_category": "media",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://store-images.s-microsoft.com/image/apps.63201.13510798887564139.ab304f1a-c1eb-4613-b358-5a99bbb8f334.d700ddc2-e4aa-4bfa-895b-99204d0b1654",
+    "categories": [
+      "Social Network"
+    ],
+    "submitted_at": "2026-08-21T03:34:22.046Z",
+    "status": "pending",
+    "github": {
+      "stars": 77,
+      "forks": 11,
+      "watchers": 77,
+      "language": "C#",
+      "open_issues": 37,
+      "license": "GPL-3.0",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "niconico",
+        "uwp"
+      ],
+      "created_at": "2016-04-10T06:51:12Z",
+      "updated_at": "2026-08-04T06:20:04Z",
+      "pushed_at": "2026-08-04T06:19:39Z"
+    }
+  },
+  {
+    "id": "f83c207e-5eb2-41bf-a27f-3c0fb1338919",
+    "project_url": "https://github.com/microsoft/Windows-appsample-photo-lab",
+    "title": "PhotoLab sample",
+    "description": "A Windows sample for viewing and editing images, demonstrating XAML layout, data binding, and UI customization.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/Windows-appsample-photo-lab/raw/master/Screenshots/PhotoLab-collection-page.png",
+    "categories": [
+      "Stores"
+    ],
+    "submitted_at": "2026-08-21T03:34:23.145Z",
+    "status": "pending",
+    "github": {
+      "stars": 124,
+      "forks": 155,
+      "watchers": 124,
+      "language": "C#",
+      "open_issues": 4,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2017-07-31T18:23:18Z",
+      "updated_at": "2026-07-20T17:05:26Z",
+      "pushed_at": "2022-09-08T17:26:21Z"
+    }
+  },
+  {
+    "id": "c29752fa-e1fe-4f6e-8981-cb7f5c4923f6",
+    "project_url": "https://github.com/microsoft/WindowsCompositionSamples",
+    "title": "Windows Input and Composition Samples",
+    "description": "Windows App SDK samples demonstrating input APIs, composition APIs, and Fluent Design building blocks for WinUI 3 applications.",
+    "section": "windows",
+    "section_category": "winui",
+    "technologies": [
+      "C#",
+      ".NET",
+      "WinUI 3",
+      "Windows App SDK",
+      "Composition API"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://camo.githubusercontent.com/9f63fc40a228bf3dc4e2284ac2dfadf9f76bbc6dbcda32fa4a236ead1e9aace4/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f48783262654d4466454137517157507644342f67697068792e676966",
+    "categories": [],
+    "submitted_at": "2026-08-21T03:34:24.241Z",
+    "status": "pending",
+    "github": {
+      "stars": 1127,
+      "forks": 287,
+      "watchers": 1127,
+      "language": "C#",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "animations",
+        "composition",
+        "csharp",
+        "effects",
+        "fluent",
+        "uwp",
+        "uwp-apps",
+        "windows-10",
+        "windowsui"
+      ],
+      "created_at": "2015-05-06T00:02:58Z",
+      "updated_at": "2026-08-16T15:25:45Z",
+      "pushed_at": "2024-06-10T21:17:09Z"
+    }
+  },
+  {
+    "id": "65d5248d-7057-4075-9ed6-8e10c33fce34",
+    "project_url": "https://github.com/Microsoft/Windows-appsample-trafficapp",
+    "title": "Traffic App sample",
+    "description": "A Windows sample application demonstrating traffic information and a Windows UI experience.",
+    "section": "windows",
+    "section_category": "uwp",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/microsoft/Windows-appsample-trafficapp/raw/master/Images/TrafficApp.png",
+    "categories": [
+      "Navigations"
+    ],
+    "submitted_at": "2026-08-21T03:34:25.505Z",
+    "status": "pending",
+    "github": {
+      "stars": 160,
+      "forks": 67,
+      "watchers": 160,
+      "language": "C#",
+      "open_issues": 3,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2015-04-29T00:43:40Z",
+      "updated_at": "2026-08-03T06:49:16Z",
+      "pushed_at": "2023-06-27T13:09:28Z"
+    }
+  },
+  {
+    "id": "aee0b92d-868f-4071-b02f-c97c7e760e24",
+    "project_url": "https://github.com/aalok05/CodeHub",
+    "title": "CodeHub",
+    "description": "A Universal Windows GitHub client for following repositories and keeping up with the open-source community.",
+    "section": "windows",
+    "section_category": "development",
+    "technologies": [
+      "C#",
+      "XAML",
+      "UWP",
+      "GitHub"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "external_url": "https://www.microsoft.com/store/apps/9nblggh52tbd",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/aalok05/CodeHub/master/Screenshots/trending.PNG",
+    "categories": [
+      "Tools"
+    ],
+    "submitted_at": "2026-08-21T03:34:27.219Z",
+    "status": "pending",
+    "github": {
+      "stars": 181,
+      "forks": 34,
+      "watchers": 181,
+      "language": "C#",
+      "open_issues": 12,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "c-sharp",
+        "codehub",
+        "dot-net",
+        "github",
+        "github-api",
+        "octokit",
+        "syntax-highlighting",
+        "trending-repositories",
+        "universal-windows-platform",
+        "uwp",
+        "uwp-apps",
+        "uwp-dev",
+        "windows",
+        "windows-10",
+        "xaml"
+      ],
+      "created_at": "2016-12-06T07:49:41Z",
+      "updated_at": "2026-06-29T23:38:58Z",
+      "pushed_at": "2019-05-08T08:51:39Z"
+    }
+  }
+]

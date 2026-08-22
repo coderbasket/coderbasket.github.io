@@ -1,0 +1,411 @@
+[
+  {
+    "project_url": "https://github.com/immich-app/immich",
+    "title": "Immich",
+    "description": "A self-hosted photo and video management application with a modern web interface and mobile clients.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://immich.app/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/immich-app/immich",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "Authentication",
+      "Frameworks"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 112173,
+      "forks": 6651,
+      "watchers": 112173,
+      "language": "TypeScript",
+      "open_issues": 711,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "backup-tool",
+        "flutter",
+        "google-photos",
+        "google-photos-alternative",
+        "javascript",
+        "mobile-app",
+        "nestjs",
+        "nodejs",
+        "photo-gallery",
+        "photos",
+        "photos-management",
+        "self-hosted",
+        "svelte",
+        "sveltekit",
+        "typescript",
+        "videos"
+      ],
+      "created_at": "2022-02-03T15:56:27Z",
+      "updated_at": "2026-08-21T00:59:12Z",
+      "pushed_at": "2026-08-21T00:58:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/mantinedev/mantine",
+    "title": "Mantine",
+    "description": "A React component library and development toolkit for building modern web applications.",
+    "section": "react",
+    "section_category": "libraries",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://mantine.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/mantinedev/mantine",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31585,
+      "forks": 2355,
+      "watchers": 31585,
+      "language": "TypeScript",
+      "open_issues": 73,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dark-mode",
+        "dark-theme",
+        "hooks",
+        "react",
+        "typescript",
+        "uikit"
+      ],
+      "created_at": "2021-01-07T14:02:19Z",
+      "updated_at": "2026-08-21T00:58:34Z",
+      "pushed_at": "2026-08-11T07:00:21Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/TanStack/query",
+    "title": "TanStack Query",
+    "description": "A powerful asynchronous state management library commonly used with React applications for fetching, caching, and synchronizing server state.",
+    "section": "react",
+    "section_category": "libraries",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://tanstack.com/query/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/TanStack/query",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 50175,
+      "forks": 4183,
+      "watchers": 50175,
+      "language": "TypeScript",
+      "open_issues": 148,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "async",
+        "cache",
+        "data",
+        "fetch",
+        "graphql",
+        "hooks",
+        "query",
+        "react",
+        "rest",
+        "solid",
+        "stale",
+        "stale-while-revalidate",
+        "svelte",
+        "typescript",
+        "update",
+        "vue"
+      ],
+      "created_at": "2019-09-10T19:23:58Z",
+      "updated_at": "2026-08-21T00:15:08Z",
+      "pushed_at": "2026-08-20T17:08:06Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/pmndrs/react-three-fiber",
+    "title": "React Three Fiber",
+    "description": "A React renderer for Three.js that allows developers to build interactive 3D scenes using React components.",
+    "section": "react",
+    "section_category": "libraries",
+    "technologies": [
+      "React",
+      "Three.js",
+      "TypeScript",
+      "WebGL"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://r3f.docs.pmnd.rs/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/pmndrs/react-three-fiber",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31752,
+      "forks": 1923,
+      "watchers": 31752,
+      "language": "TypeScript",
+      "open_issues": 48,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "3d",
+        "animation",
+        "fiber",
+        "react",
+        "renderer",
+        "threejs"
+      ],
+      "created_at": "2019-02-25T14:31:51Z",
+      "updated_at": "2026-08-20T22:41:01Z",
+      "pushed_at": "2026-08-19T12:38:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/strapi/strapi",
+    "title": "Strapi",
+    "description": "An open-source headless CMS with a React-based administration panel and an API-first architecture.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://strapi.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/strapi/strapi",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "Document Management"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 72982,
+      "forks": 9847,
+      "watchers": 72982,
+      "language": "TypeScript",
+      "open_issues": 551,
+      "license": "NOASSERTION",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "api",
+        "cms",
+        "cms-framework",
+        "content-management",
+        "content-management-system",
+        "customizable",
+        "dashboard",
+        "graphql",
+        "hacktoberfest",
+        "headless-cms",
+        "jamstack",
+        "javascript",
+        "mysql",
+        "no-code",
+        "nodejs",
+        "posgresql",
+        "rest",
+        "strapi",
+        "typescript"
+      ],
+      "created_at": "2015-09-30T15:34:48Z",
+      "updated_at": "2026-08-20T20:59:10Z",
+      "pushed_at": "2026-08-20T15:44:25Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/novuhq/novu",
+    "title": "Novu",
+    "description": "An open-source notification infrastructure platform with a React-based dashboard and workflow management interface.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "MongoDB"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://novu.co/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/novuhq/novu",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 39622,
+      "forks": 4435,
+      "watchers": 39622,
+      "language": "TypeScript",
+      "open_issues": 110,
+      "license": "NOASSERTION",
+      "default_branch": "next",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "agents",
+        "communication",
+        "email",
+        "inbox",
+        "infrastructure",
+        "nodejs",
+        "notification-center",
+        "notifications",
+        "novu",
+        "push-notifications",
+        "react",
+        "reactjs",
+        "sms",
+        "transactional",
+        "typescript"
+      ],
+      "created_at": "2021-08-26T15:22:44Z",
+      "updated_at": "2026-08-20T19:04:39Z",
+      "pushed_at": "2026-08-20T18:59:36Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/triggerdotdev/trigger.dev",
+    "title": "Trigger.dev",
+    "description": "An open-source platform for building and running reliable background jobs and workflows with a React-based web interface.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://trigger.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/triggerdotdev/trigger.dev",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 16079,
+      "forks": 1413,
+      "watchers": 16079,
+      "language": "TypeScript",
+      "open_issues": 421,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ai",
+        "ai-agent-framework",
+        "ai-agents",
+        "automation",
+        "background-jobs",
+        "mcp",
+        "mcp-server",
+        "nextjs",
+        "orchestration",
+        "scheduler",
+        "serverless",
+        "workflow-automation",
+        "workflows"
+      ],
+      "created_at": "2022-11-30T14:59:07Z",
+      "updated_at": "2026-08-20T23:55:02Z",
+      "pushed_at": "2026-08-20T22:23:21Z"
+    }
+  }
+]

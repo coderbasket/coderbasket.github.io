@@ -1,0 +1,99 @@
+[
+  {
+    "project_url": "https://github.com/facebook/react-native",
+    "title": "React Native",
+    "description": "A framework for building native applications for Android and iOS using React and JavaScript.",
+    "section": "react-native",
+    "section_category": "framework",
+    "technologies": [
+      "React Native",
+      "React",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://reactnative.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/react/react-native",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 126370,
+      "forks": 25218,
+      "watchers": 126370,
+      "language": "C++",
+      "open_issues": 1055,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "app-framework",
+        "cross-platform",
+        "ios",
+        "mobile",
+        "mobile-development",
+        "react",
+        "react-native"
+      ],
+      "created_at": "2015-01-09T18:10:16Z",
+      "updated_at": "2026-08-20T22:35:50Z",
+      "pushed_at": "2026-08-20T22:03:07Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/react-navigation/react-navigation",
+    "title": "React Navigation",
+    "description": "Routing and navigation library for React Native applications.",
+    "section": "react-native",
+    "section_category": "navigation",
+    "technologies": [
+      "React Native",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": "https://reactnavigation.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/react-navigation/react-navigation",
+    "categories": [
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 24489,
+      "forks": 5130,
+      "watchers": 24489,
+      "language": "TypeScript",
+      "open_issues": 840,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "navigation",
+        "react",
+        "react-native",
+        "react-navigation"
+      ],
+      "created_at": "2017-01-26T19:51:40Z",
+      "updated_at": "2026-08-20T18:47:35Z",
+      "pushed_at": "2026-08-19T17:54:28Z"
+    }
+  }
+]

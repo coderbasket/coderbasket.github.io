@@ -72,7 +72,7 @@ let selectedSection =
   typeof DEFAULT_SECTION !== "undefined" ? DEFAULT_SECTION : "ai";
 
 let selectedSubCategory = "all";
-let selectedCategoryId = "all";
+let selectedCategory = "all";
 
 let currentPage = 1;
 
@@ -114,7 +114,7 @@ async function initialize() {
   log("initialize", "Restored state:", {
     selectedSection,
     selectedSubCategory,
-    selectedCategoryId,
+    selectedCategory,
   });
 
   setupNavigation();
@@ -197,16 +197,10 @@ function restoreSelection() {
    * -------------------------------------------------------
    */
 
-  if (urlCategory === "all") {
-    selectedCategoryId = "all";
-  } else if (
-    urlCategory !== null &&
-    typeof CATEGORIES !== "undefined" &&
-    CATEGORIES[Number(urlCategory)]
-  ) {
-    selectedCategoryId = Number(urlCategory);
+  if (urlCategory === "all" || !urlCategory) {
+    selectedCategory = "all";
   } else {
-    selectedCategoryId = "all";
+    selectedCategory = String(urlCategory).trim();
   }
 
   log("restoreSelection", "URL state:", {
@@ -220,9 +214,7 @@ function restoreSelection() {
 
     selectedSection,
     selectedSubCategory,
-    selectedCategoryId,
-
-    isFramework: isFrameworkSection(selectedSection),
+    selectedCategory,
   });
 }
 
@@ -250,7 +242,7 @@ function saveSelection() {
   log("saveSelection", {
     selectedSection,
     selectedSubCategory,
-    selectedCategoryId,
+    selectedCategory,
   });
 
   if (typeof STORAGE_KEYS === "undefined") {
@@ -268,51 +260,7 @@ function saveSelection() {
 
 //#region Section / Framework Helpers
 
-function isFrameworkSection(sectionKey) {
-  return (
-    typeof FRAMEWORKS !== "undefined" &&
-    FRAMEWORKS &&
-    Object.prototype.hasOwnProperty.call(FRAMEWORKS, sectionKey)
-  );
-}
-
-function getFrameworkConfig(sectionKey) {
-  if (!isFrameworkSection(sectionKey)) {
-    return null;
-  }
-
-  return FRAMEWORKS[sectionKey];
-}
-
 function getDataSourceSectionKey(sectionKey) {
-  /*
-   * Normal catalogue section.
-   *
-   * ai
-   * dotnet
-   * flutter
-   * frameworks
-   */
-  if (typeof DATA_SECTIONS !== "undefined" && DATA_SECTIONS[sectionKey]) {
-    return sectionKey;
-  }
-
-  /*
-   * Virtual framework.
-   *
-   * kotlin
-   * react
-   * vue
-   * angular
-   *
-   * all use frameworks.json.
-   */
-  if (isFrameworkSection(sectionKey)) {
-    const framework = getFrameworkConfig(sectionKey);
-
-    return framework?.dataSource || "frameworks";
-  }
-
   return sectionKey;
 }
 
@@ -323,10 +271,6 @@ function getSectionDisplayName(sectionKey) {
 
   if (typeof DATA_SECTIONS !== "undefined" && DATA_SECTIONS[sectionKey]) {
     return DATA_SECTIONS[sectionKey].name;
-  }
-
-  if (isFrameworkSection(sectionKey)) {
-    return FRAMEWORKS[sectionKey].name;
   }
 
   return sectionKey;
@@ -340,7 +284,7 @@ async function loadCatalog() {
   log("loadCatalog", "START", {
     selectedSection,
     selectedSubCategory,
-    selectedCategoryId,
+    selectedCategory,
   });
 
   showLoading(true);
@@ -386,7 +330,7 @@ async function loadCatalog() {
     log("loadCatalog", "END", {
       selectedSection,
       selectedSubCategory,
-      selectedCategoryId,
+      selectedCategory,
       allProjects: allProjects.length,
       filteredProjects: filteredProjects.length,
     });
@@ -402,9 +346,6 @@ async function loadCatalog() {
 function getAllCatalogueSources() {
   const sources = [];
 
-  /*
-   * Normal catalogue sections.
-   */
   if (typeof DATA_SECTION_ORDER !== "undefined") {
     for (const sectionKey of DATA_SECTION_ORDER) {
       if (DATA_SECTIONS?.[sectionKey]) {
@@ -413,46 +354,18 @@ function getAllCatalogueSources() {
     }
   }
 
-  /*
-   * Framework catalogue.
-   *
-   * All virtual frameworks share
-   * frameworks.json.
-   *
-   * We only load it once.
-   */
-  if (
-    typeof DATA_SECTIONS !== "undefined" &&
-    DATA_SECTIONS.frameworks &&
-    !sources.includes("frameworks")
-  ) {
-    sources.push("frameworks");
-  }
-
   return sources;
 }
 
-async function loadCatalogSection(sectionKey) {
+async function loadCatalogSection(sectionKey, options = {}) {
   const sourceSectionKey = getDataSourceSectionKey(sectionKey);
-
-  // ---------------------------------------------------------
-  // Physical source configuration
-  // ---------------------------------------------------------
 
   const sourceConfig =
     typeof DATA_SECTIONS !== "undefined"
       ? DATA_SECTIONS[sourceSectionKey]
       : null;
 
-  // ---------------------------------------------------------
-  // Virtual framework configuration
-  // ---------------------------------------------------------
-
-  const frameworkConfig = isFrameworkSection(sectionKey)
-    ? getFrameworkConfig(sectionKey)
-    : null;
-
-  if (!sourceConfig && !frameworkConfig) {
+  if (!sourceConfig) {
     warn("loadCatalogSection", `Unknown catalogue section: ${sectionKey}`, {
       sectionKey,
       sourceSectionKey,
@@ -461,92 +374,113 @@ async function loadCatalogSection(sectionKey) {
     return [];
   }
 
-  // ---------------------------------------------------------
-  // Framework sections use JSON only
-  // ---------------------------------------------------------
-
-  if (isFrameworkSection(sectionKey)) {
-    return await loadSectionJson(
+  if (
+    typeof CoderBasketData === "undefined" ||
+    typeof CoderBasketData.getSection !== "function"
+  ) {
+    warn("loadCatalogSection", "CoderBasketData is unavailable.", {
       sectionKey,
       sourceSectionKey,
-      sourceConfig,
-      frameworkConfig,
-    );
+    });
+
+    return [];
   }
 
-  // ---------------------------------------------------------
-  // 1. LOAD JSON FIRST
-  //
-  // SQLite must NEVER block the initial catalogue.
-  // ---------------------------------------------------------
+  try {
+    log("loadCatalogSection", "Loading section:", {
+      sectionKey,
+      sourceSectionKey,
+      forceRefresh: options.forceRefresh === true,
+    });
 
-  const jsonItems = await loadSectionJson(
-    sectionKey,
-    sourceSectionKey,
-    sourceConfig,
-    frameworkConfig,
-  );
+    const databaseItems = await CoderBasketData.getSection(sourceSectionKey, {
+      forceRefresh: options.forceRefresh === true,
+    });
 
-  log("loadCatalogSection", "JSON ready. SQLite will continue in background.", {
-    sectionKey,
-    sourceSectionKey,
-    count: jsonItems.length,
+    if (!Array.isArray(databaseItems)) {
+      warn("loadCatalogSection", "Invalid section data:", {
+        sectionKey,
+        sourceSectionKey,
+        databaseItems,
+      });
+
+      return [];
+    }
+
+    return databaseItems.map((item) => {
+      const itemSection =
+        item.section ||
+        item.data_section ||
+        item.DataSection ||
+        sourceSectionKey;
+
+      const itemCategory =
+        item.section_category ||
+        item.data_category ||
+        item.DataCategory ||
+        "all";
+
+      return {
+        ...item,
+
+        source_section: sourceSectionKey,
+        data_section: itemSection,
+        data_category: itemCategory,
+      };
+    });
+  } catch (errorValue) {
+    error("loadCatalogSection", "CoderBasketData failed:", {
+      sectionKey,
+      sourceSectionKey,
+      error: errorValue,
+    });
+
+    return [];
+  }
+}
+
+function navigateToCatalog(section, subCategory = "all") {
+  if (!section) {
+    return;
+  }
+
+  const normalizedSection = String(section).trim();
+  const normalizedSubCategory =
+    subCategory && subCategory !== "all" ? String(subCategory).trim() : "all";
+
+  let url = `/${encodeURIComponent(normalizedSection)}/`;
+
+  // "all" means:
+  // keep the current section, but remove the sub-category.
+  if (normalizedSubCategory !== "all") {
+    url += `${encodeURIComponent(normalizedSubCategory)}/`;
+  }
+
+  log("navigateToCatalog", "Navigating:", {
+    section: normalizedSection,
+    subCategory: normalizedSubCategory,
+    url,
   });
 
-  // ---------------------------------------------------------
-  // 2. SQLITE BACKGROUND LOAD
-  //
-  // IMPORTANT:
-  // No await here.
-  // ---------------------------------------------------------
+  window.history.pushState(
+    {
+      section: normalizedSection,
+      subCategory: normalizedSubCategory,
+    },
+    "",
+    url,
+  );
 
-  if (
-    typeof CoderBasketData !== "undefined" &&
-    typeof CoderBasketData.getSection === "function"
-  ) {
-    CoderBasketData.getSection(sourceSectionKey)
-      .then((databaseItems) => {
-        if (!Array.isArray(databaseItems) || databaseItems.length === 0) {
-          log(
-            "loadCatalogSection",
-            "SQLite background load returned no items.",
-            {
-              sectionKey,
-              sourceSectionKey,
-            },
-          );
+  // URL is now the source of truth.
+  restoreSelection();
 
-          return;
-        }
+  currentPage = 1;
 
-        log("loadCatalogSection", "SQLite background load completed.", {
-          sectionKey,
-          sourceSectionKey,
-          count: databaseItems.length,
-        });
+  renderSections();
+  renderSubCategories();
+  renderCategories();
 
-        mergeBackgroundDatabaseItems(
-          sectionKey,
-          sourceSectionKey,
-          databaseItems,
-        );
-      })
-      .catch((databaseError) => {
-        warn(
-          "loadCatalogSection",
-          "SQLite background loading failed. JSON remains active.",
-          databaseError,
-        );
-      });
-  }
-
-  // ---------------------------------------------------------
-  // 3. RETURN JSON NOW
-  //
-  // The caller does not wait for SQLite.
-  // ---------------------------------------------------------
-
-  return jsonItems;
+  return loadCatalog();
 }
 
 // ============================================================
@@ -782,7 +716,12 @@ function mergeBackgroundDatabaseItems(
 //#region Data Normalization
 
 function normalizeProjects(projects) {
+  
   return projects.map((project, index) => {
+    const githubData =
+  project.github && typeof project.github === "object"
+    ? project.github
+    : null;
     console.log(
       "%c[normalizeProjects] PROJECT",
       "color: red; font-weight: bold;",
@@ -810,6 +749,7 @@ function normalizeProjects(projects) {
 
         // Show the complete original object
         rawProject: project,
+        github: githubData,
       },
     );
 
@@ -826,7 +766,7 @@ function normalizeProjects(projects) {
         : [];
 
     const categories =
-      rawCategories.length > 0 ? [...new Set(rawCategories)] : [41];
+      rawCategories.length > 0 ? [...new Set(rawCategories)] : ["others"];
 
     /*
      * ---------------------------------------------------
@@ -862,9 +802,20 @@ function normalizeProjects(projects) {
      * ---------------------------------------------------
      * FRAMEWORK
      * ---------------------------------------------------
+     *
+     * Framework is now read directly from the project.
+     * No dependency on getProjectFramework().
      */
 
-    const frameworkName = getProjectFramework(project, technologies);
+    const frameworkName =
+      project.framework_name ||
+      project.FrameworkName ||
+      project.frameworkName ||
+      project.framework ||
+      project.Framework ||
+      project.FrameWorkName ||
+      technologies[0] ||
+      "";
 
     /*
      * ---------------------------------------------------
@@ -966,6 +917,9 @@ function normalizeProjects(projects) {
 
       image_urls: imageUrls,
 
+      // GitHub metadata
+      github: githubData,
+
       data_section:
         project.section ||
         project.data_section ||
@@ -997,129 +951,9 @@ function normalizeProjects(projects) {
   });
 }
 
-function getProjectFramework(project, technologies) {
-  /*
-   * Explicit framework fields always
-   * have priority over technologies.
-   */
-
-  return (
-    project.framework_name ||
-    project.FrameWorkName ||
-    project.framework ||
-    project.Framework ||
-    project.frameworkName ||
-    project.FrameworkName ||
-    technologies[0] ||
-    "others"
-  );
-}
-
 //#endregion
 
 //#region Framework Matching
-
-function projectMatchesFramework(project, frameworkKey) {
-  const frameworkConfig = getFrameworkConfig(frameworkKey);
-
-  if (!frameworkConfig) {
-    return false;
-  }
-
-  /*
-   * ---------------------------------------------------
-   * Framework aliases
-   * ---------------------------------------------------
-   */
-
-  const aliases = new Set();
-
-  aliases.add(normalizeValue(frameworkKey));
-
-  aliases.add(normalizeValue(frameworkConfig.name));
-
-  /*
-   * nextjs / Next.js
-   */
-  if (frameworkKey === "nextjs") {
-    aliases.add("next");
-    aliases.add("next.js");
-  }
-
-  /*
-   * react-native
-   */
-  if (frameworkKey === "react-native") {
-    aliases.add("react native");
-    aliases.add("reactnative");
-  }
-
-  /*
-   * kotlin-multiplatform
-   */
-  if (frameworkKey === "kotlin-multiplatform") {
-    aliases.add("kotlin multiplatform");
-
-    aliases.add("kotlin-multiplatform");
-
-    aliases.add("kmp");
-  }
-
-  /*
-   * ruby-on-rails
-   */
-  if (frameworkKey === "ruby-on-rails") {
-    aliases.add("ruby on rails");
-
-    aliases.add("rails");
-  }
-
-  /*
-   * ---------------------------------------------------
-   * Collect project framework values
-   * ---------------------------------------------------
-   */
-
-  const values = [
-    project.framework,
-    project.framework_name,
-    project.frameworkName,
-    project.Framework,
-    project.FrameworkName,
-    project.FrameWorkName,
-    project.technology,
-
-    ...(Array.isArray(project.technologies) ? project.technologies : []),
-  ]
-    .filter(Boolean)
-    .map(normalizeValue);
-
-  /*
-   * Direct match.
-   */
-  for (const value of values) {
-    if (aliases.has(value)) {
-      return true;
-    }
-  }
-
-  /*
-   * Some catalogue data may contain
-   * multiple framework names in a
-   * string such as:
-   *
-   * "React, TypeScript"
-   */
-  for (const value of values) {
-    for (const alias of aliases) {
-      if (value.includes(alias)) {
-        return true;
-      }
-    }
-  }
-
-  return false;
-}
 
 function normalizeValue(value) {
   return String(value ?? "")
@@ -1134,22 +968,31 @@ function normalizeValue(value) {
 //#region Event Dispatcher
 
 function notifyCategories() {
-  const categoryIds = [
+  const distinctCategories = [
     ...new Set(
-      allProjects.flatMap((project) =>
-        Array.isArray(project.categories) ? project.categories : [],
-      ),
+      allProjects.flatMap((project) => {
+        if (!Array.isArray(project.categories)) {
+          return [];
+        }
+
+        return project.categories
+          .map((category) => String(category ?? "").trim())
+          .filter(Boolean);
+      }),
     ),
-  ]
-    .map(Number)
-    .filter(
-      (id) => !isNaN(id) && typeof CATEGORIES !== "undefined" && CATEGORIES[id],
-    );
+  ].sort((a, b) => a.localeCompare(b));
+
+  log("notifyCategories", "Firing catalogCategoriesLoaded:", {
+    section: selectedSection,
+    categoryCount: distinctCategories.length,
+    categories: distinctCategories,
+  });
 
   document.dispatchEvent(
     new CustomEvent("catalogCategoriesLoaded", {
       detail: {
-        categories: categoryIds,
+        section: selectedSection,
+        categories: distinctCategories,
       },
     }),
   );
@@ -1251,44 +1094,40 @@ function renderCategories() {
     categoryList,
     "All Categories",
     "all",
-    selectedCategoryId === "all",
+    selectedCategory === "all",
     "category",
   );
 
-  const categoryIds = new Set();
+  const categoryNames = new Set();
 
   for (const project of allProjects) {
     if (!Array.isArray(project.categories)) {
       continue;
     }
 
-    for (const categoryId of project.categories) {
-      const id = Number(categoryId);
+    for (const category of project.categories) {
+      const name = String(category).trim();
 
-      if (typeof CATEGORIES !== "undefined" && CATEGORIES[id]) {
-        categoryIds.add(id);
+      if (name) {
+        categoryNames.add(name);
       }
     }
   }
 
-  const sortedCategories = [...categoryIds].sort((a, b) =>
-    (CATEGORIES[a] || "").localeCompare(CATEGORIES[b] || ""),
+  const sortedCategories = [...categoryNames].sort((a, b) =>
+    a.localeCompare(b),
   );
 
-  for (const categoryId of sortedCategories) {
-    const isSelected =
-      selectedCategoryId !== "all" && Number(selectedCategoryId) === categoryId;
-
+  for (const category of sortedCategories) {
     addFilterLink(
       categoryList,
-      CATEGORIES[categoryId],
-      String(categoryId),
-      isSelected,
+      category,
+      category,
+      selectedCategory === category,
       "category",
     );
   }
 }
-
 //#endregion
 
 //#region Filter Links
@@ -1319,21 +1158,9 @@ function addFilterLink(container, text, value, active, type) {
      */
 
     if (type === "section") {
-      selectedSection = value;
+      selectedCategory = "all";
 
-      selectedSubCategory = "all";
-
-      selectedCategoryId = "all";
-
-      saveSelection();
-
-      currentPage = 1;
-
-      renderSections();
-      renderSubCategories();
-      renderCategories();
-
-      await loadCatalog();
+      await navigateToCatalog(value, "all");
 
       return;
     }
@@ -1345,15 +1172,10 @@ function addFilterLink(container, text, value, active, type) {
      */
 
     if (type === "subcategory") {
-      selectedSubCategory = value === "all" ? "all" : String(value);
-
-      saveSelection();
-
-      currentPage = 1;
-
-      renderSubCategories();
-
-      applyFilters();
+      await navigateToCatalog(
+        selectedSection,
+        value === "all" ? "all" : String(value),
+      );
 
       return;
     }
@@ -1365,7 +1187,7 @@ function addFilterLink(container, text, value, active, type) {
      */
 
     if (type === "category") {
-      selectedCategoryId = value === "all" ? "all" : Number(value);
+      selectedCategory = value === "all" ? "all" : String(value);
 
       saveSelection();
 
@@ -1416,7 +1238,7 @@ function applyFilters() {
   log("applyFilters", "START", {
     selectedSection,
     selectedSubCategory,
-    selectedCategoryId,
+    selectedCategory,
     searchText,
     allProjects: allProjects.length,
   });
@@ -1424,57 +1246,37 @@ function applyFilters() {
   filteredProjects = allProjects.filter((project) => {
     /*
      * -------------------------------------------------
-     * 1. SECTION / FRAMEWORK
+     * 1. SECTION
+     *
+     * Each section is already loaded from its own
+     * catalogue source.
+     *
+     * Example:
+     * ai
+     * dotnet
+     * flutter
+     * kotlin
+     * react
+     * vue
+     * etc.
      * -------------------------------------------------
      */
 
-    if (selectedSection !== "all") {
-      /*
-       * Virtual framework page.
-       *
-       * /kotlin/
-       * /react/
-       * /vue/
-       *
-       * All come from frameworks.json.
-       */
-      if (isFrameworkSection(selectedSection)) {
-        /*
-         * Ensure project came from
-         * the framework data source.
-         */
-        const expectedSource = normalizeValue(
-          getDataSourceSectionKey(selectedSection),
+    // -------------------------------------------------
+    // 3. CATEGORY
+    // -------------------------------------------------
+
+    if (selectedCategory !== "all") {
+      const targetCategory = normalizeValue(selectedCategory);
+
+      const hasCategory =
+        Array.isArray(project.categories) &&
+        project.categories.some(
+          (category) => normalizeValue(category) === targetCategory,
         );
 
-        const projectSource = normalizeValue(project.source_section);
-
-        if (projectSource !== expectedSource) {
-          return false;
-        }
-
-        /*
-         * Now match the actual
-         * framework.
-         */
-        if (!projectMatchesFramework(project, selectedSection)) {
-          return false;
-        }
-      } else {
-        /*
-         * Normal section:
-         *
-         * ai
-         * dotnet
-         * flutter
-         */
-        const projectSection = normalizeValue(project.data_section);
-
-        const targetSection = normalizeValue(selectedSection);
-
-        if (projectSection !== targetSection) {
-          return false;
-        }
+      if (!hasCategory) {
+        return false;
       }
     }
 
@@ -1500,14 +1302,11 @@ function applyFilters() {
      * -------------------------------------------------
      */
 
-    if (selectedCategoryId !== "all") {
-      const targetId = Number(selectedCategoryId);
-
-      const hasCategory =
-        Array.isArray(project.categories) &&
-        project.categories.some((id) => Number(id) === targetId);
-
-      if (!hasCategory) {
+    if (selectedCategory !== "all") {
+      if (
+        !Array.isArray(project.categories) ||
+        !project.categories.includes(selectedCategory)
+      ) {
         return false;
       }
     }
@@ -1535,9 +1334,7 @@ function applyFilters() {
       project.data_category,
 
       ...(project.technologies || []),
-
       ...(project.platforms || []),
-
       ...categoryNames,
     ]
       .join(" ")
@@ -1636,7 +1433,7 @@ function renderProjects() {
   // ---------------------------------------------------------
 
   const images = projectGrid.querySelectorAll(
-    "img.lazy-project-image[data-src]"
+    "img.lazy-project-image[data-src]",
   );
 
   images.forEach((img) => {
@@ -1657,66 +1454,9 @@ function getDetailUrl(project) {
     return "#";
   }
 
-  /*
-   * Store complete project JSON.
-   */
-  try {
-    const parsed = new URL(repoUrl);
-
-    if (parsed.hostname === "github.com") {
-      const parts = parsed.pathname.split("/").filter(Boolean);
-
-      if (parts.length >= 2) {
-        const owner = parts[0];
-
-        const repo = parts[1].replace(/\.git$/, "");
-
-        const storageKey = `coderbasket_project_${owner}_${repo}`.toLowerCase();
-
-        const existing = localStorage.getItem(storageKey);
-
-        if (!existing) {
-          localStorage.setItem(storageKey, JSON.stringify(project));
-
-          log("ProjectDetails", "Stored new project:", {
-            storageKey,
-          });
-        } else {
-          try {
-            const existingProject = JSON.parse(existing);
-
-            /*
-             * Existing detail data
-             * wins over base data.
-             */
-            const updatedProject = {
-              ...project,
-              ...existingProject,
-            };
-
-            localStorage.setItem(storageKey, JSON.stringify(updatedProject));
-          } catch (parseError) {
-            warn(
-              "ProjectDetails",
-              "Existing data is invalid. Replacing it:",
-              parseError,
-            );
-
-            localStorage.setItem(storageKey, JSON.stringify(project));
-          }
-        }
-      }
-    }
-  } catch (errorValue) {
-    warn("ProjectDetails", "Failed to store project:", errorValue);
-  }
-
-  /*
-   * Full GitHub URL remains
-   * inside repo parameter.
-   */
   const params = new URLSearchParams({
     repo: repoUrl,
+    section: project.data_section || project.source_section || "",
   });
 
   return `/details/?${params.toString()}`;
@@ -1853,11 +1593,12 @@ function createProjectCard(project) {
   // =========================================================
 
   if (repo && typeof loadGitHubStats === "function") {
-    loadGitHubStats(article, repo);
+    loadGitHubStats(article, repo, project.github);
   }
 
   return article;
 }
+
 const projectImageObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -1896,18 +1637,8 @@ function observeProjectImage(img) {
 
   projectImageObserver.observe(img);
 }
-function getProjectCardSectionName(project) {
-  /*
-   * If this is a framework project,
-   * display its framework.
-   */
-  if (project.framework_name && project.source_section === "frameworks") {
-    return project.framework_name;
-  }
 
-  /*
-   * Normal section.
-   */
+function getProjectCardSectionName(project) {
   if (typeof DATA_SECTIONS !== "undefined") {
     const section = DATA_SECTIONS[project.data_section];
 
@@ -2092,19 +1823,61 @@ function cacheDOM() {
 //#region Application Entry Point
 
 document.addEventListener("DOMContentLoaded", async () => {
-  /*
-   * Wait for shared components
-   * such as header/footer.
-   */
-  if (window.componentsReady) {
-    await window.componentsReady;
+  log("APP", "DOMContentLoaded");
+
+  try {
+    /*
+     * Wait for shared components, but never allow
+     * a broken component loader to block the app forever.
+     */
+    if (window.componentsReady) {
+      log("APP", "Waiting for componentsReady...");
+
+      await Promise.race([
+        window.componentsReady,
+        new Promise((resolve) =>
+          setTimeout(() => {
+            warn(
+              "APP",
+              "componentsReady timeout. Continuing application startup.",
+            );
+            resolve();
+          }, 5000),
+        ),
+      ]);
+
+      log("APP", "componentsReady finished");
+    }
+
+    cacheDOM();
+
+    log("APP", "DOM cached", {
+      projectGrid: !!projectGrid,
+      loading: !!loading,
+      sectionList: !!sectionList,
+      subCategoryList: !!subCategoryList,
+      categoryList: !!categoryList,
+    });
+
+    setupLoadMore();
+
+    /*
+     * initialize() already calls loadCatalog().
+     *
+     * DO NOT call loadCatalog() again here.
+     */
+    await initialize();
+
+    log("APP", "Application startup complete");
+  } catch (startupError) {
+    console.error("[APP] FATAL STARTUP ERROR:", startupError);
+
+    showLoading(false);
+
+    showError(
+      "The application failed to start. Open the browser console for details.",
+    );
   }
-
-  cacheDOM();
-
-  setupLoadMore();
-
-  await initialize();
 });
 
 //#endregion

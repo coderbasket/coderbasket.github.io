@@ -1,0 +1,3835 @@
+[
+  {
+    "project_url": "https://github.com/spring-projects/spring-boot",
+    "title": "Spring Boot",
+    "description": "A production-grade Spring application framework for building standalone Java services with embedded servers, configuration, metrics, and health checks.",
+    "section": "spring",
+    "section_category": "framework",
+    "technologies": [
+      "Java",
+      "Kotlin",
+      "Spring",
+      "Spring Boot",
+      "Gradle",
+      "Maven"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://spring.io/projects/spring-boot",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/spring-projects/spring-boot",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 81327,
+      "forks": 42092,
+      "watchers": 81327,
+      "language": "Java",
+      "open_issues": 515,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "framework",
+        "java",
+        "spring",
+        "spring-boot"
+      ],
+      "created_at": "2012-10-19T15:02:57Z",
+      "updated_at": "2026-08-21T00:44:50Z",
+      "pushed_at": "2026-08-20T22:32:32Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/spring-projects/spring-petclinic",
+    "title": "Spring PetClinic",
+    "description": "The canonical Spring sample application demonstrating Spring Boot, MVC, data access, validation, testing, and database profiles.",
+    "section": "spring",
+    "section_category": "samples",
+    "technologies": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Spring MVC",
+      "Spring Data JPA",
+      "Thymeleaf",
+      "Maven",
+      "Gradle"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://spring-petclinic.github.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/spring-projects/spring-petclinic",
+    "categories": [
+      "Web Development",
+      "Backend",
+      "Databases",
+      "Frameworks",
+      "Open Source",
+      "Samples"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 9472,
+      "forks": 30400,
+      "watchers": 9472,
+      "language": "CSS",
+      "open_issues": 21,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2013-01-09T09:05:18Z",
+      "updated_at": "2026-08-21T00:36:07Z",
+      "pushed_at": "2026-07-30T11:10:47Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/spring-petclinic/spring-petclinic-microservices",
+    "title": "Spring PetClinic Microservices",
+    "description": "A microservices version of Spring PetClinic using Spring Boot and Spring Cloud patterns for service discovery, routing, and distributed services.",
+    "section": "spring",
+    "section_category": "microservices",
+    "technologies": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Spring Cloud",
+      "Docker",
+      "Maven"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://spring-petclinic.github.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/spring-petclinic/spring-petclinic-microservices",
+    "categories": [
+      "REST API",
+      "Backend",
+      "Containers",
+      "Docker",
+      "DevOps",
+      "Frameworks",
+      "Open Source",
+      "Samples"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 2185,
+      "forks": 2883,
+      "watchers": 2185,
+      "language": "Java",
+      "open_issues": 17,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "chaos-monkey",
+        "docker",
+        "eureka",
+        "grafana",
+        "hystrix",
+        "micrometer",
+        "microservices",
+        "opentelemetry",
+        "prometheus",
+        "resilience4j",
+        "ribbon",
+        "spring-boot-admin",
+        "spring-cloud",
+        "zipkin"
+      ],
+      "created_at": "2016-11-12T14:57:30Z",
+      "updated_at": "2026-08-20T20:57:50Z",
+      "pushed_at": "2026-05-17T18:20:40Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/jhipster/generator-jhipster",
+    "title": "JHipster",
+    "description": "A full-stack application generator for Spring Boot backends with Angular, React, or Vue frontends and production-ready tooling.",
+    "section": "spring",
+    "section_category": "generators",
+    "technologies": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Angular",
+      "React",
+      "Vue",
+      "TypeScript",
+      "Maven",
+      "Gradle"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.jhipster.tech/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/jhipster/generator-jhipster",
+    "categories": [
+      "Code Generators",
+      "Frontend",
+      "Backend",
+      "Full Stack",
+      "Frameworks",
+      "Templates",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 22441,
+      "forks": 4189,
+      "watchers": 22441,
+      "language": "TypeScript",
+      "open_issues": 106,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "cloud",
+        "docker",
+        "generator",
+        "hacktoberfest",
+        "java",
+        "jhipster",
+        "kubernetes",
+        "react",
+        "spring-boot",
+        "webpack",
+        "yeoman-generator"
+      ],
+      "created_at": "2013-10-21T20:07:22Z",
+      "updated_at": "2026-08-21T00:56:51Z",
+      "pushed_at": "2026-08-21T00:56:28Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/in28minutes/spring-boot-examples",
+    "title": "Spring Boot Examples",
+    "description": "A collection of Spring Boot examples covering REST services, JPA, Hibernate, tests, SOAP, React integrations, and web applications.",
+    "section": "spring",
+    "section_category": "examples",
+    "technologies": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Spring Data JPA",
+      "Hibernate",
+      "React",
+      "Maven"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.springboottutorial.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/in28minutes/spring-boot-examples",
+    "categories": [
+      "REST API",
+      "Education",
+      "Learning",
+      "Tutorials",
+      "Frameworks",
+      "Open Source",
+      "Samples"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1408,
+      "forks": 3421,
+      "watchers": 1408,
+      "language": "Java",
+      "open_issues": 96,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2017-11-27T04:31:20Z",
+      "updated_at": "2026-08-19T08:22:32Z",
+      "pushed_at": "2026-08-15T10:36:41Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/micaellobo/e-commerce-store",
+    "title": "E-Commerce Store",
+    "description": "A Spring Boot microservice e-commerce platform with services for users, authentication, inventory, orders, reviews, notifications, and API gateway routing.",
+    "section": "spring",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Spring Cloud",
+      "PostgreSQL",
+      "Docker",
+      "JUnit",
+      "Mockito"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/micaellobo/e-commerce-store",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "REST API",
+      "Backend",
+      "Databases",
+      "Containers",
+      "Docker",
+      "DevOps",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 38,
+      "forks": 16,
+      "watchers": 38,
+      "language": "Java",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "api-gateway",
+        "docker",
+        "eureka-discovery-service",
+        "grafana",
+        "grafana-loki",
+        "grafana-tempo",
+        "integration-testing",
+        "kafka",
+        "microservices",
+        "microservices-architecture",
+        "open-telemetry",
+        "prometheus",
+        "spring-boot",
+        "testcontainers",
+        "unit-testing",
+        "zipkin"
+      ],
+      "created_at": "2023-07-22T00:49:54Z",
+      "updated_at": "2026-07-02T03:27:31Z",
+      "pushed_at": "2024-04-29T14:58:15Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/ibatulanandjp/ecommerce-microservices",
+    "title": "Micro Marketplace",
+    "description": "An e-commerce microservices application built with Spring Boot, Spring Cloud Gateway, Eureka, Keycloak, Kafka, MongoDB, MySQL, and observability tooling.",
+    "section": "spring",
+    "section_category": "microservices",
+    "technologies": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Eureka",
+      "Keycloak",
+      "Kafka",
+      "MongoDB",
+      "MySQL",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ibatulanandjp/ecommerce-microservices",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "REST API",
+      "Backend",
+      "Databases",
+      "Containers",
+      "Docker",
+      "DevOps",
+      "Monitoring",
+      "Authentication",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 91,
+      "forks": 62,
+      "watchers": 91,
+      "language": "Java",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "api-gateway",
+        "distributed-tracing",
+        "docker",
+        "eureka-service-discovery",
+        "grafana",
+        "java",
+        "kafka",
+        "microservices",
+        "mongodb",
+        "mysql",
+        "prometheus",
+        "spring-boot"
+      ],
+      "created_at": "2023-09-11T06:22:01Z",
+      "updated_at": "2026-08-16T03:53:36Z",
+      "pushed_at": "2023-10-17T08:06:06Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/cookiecutter/cookiecutter-django",
+    "title": "Cookiecutter Django",
+    "description": "A production-ready Django project template with secure defaults, account registration, optional APIs, deployment settings, and test coverage.",
+    "section": "django",
+    "section_category": "starters",
+    "technologies": [
+      "Python",
+      "Django",
+      "Cookiecutter",
+      "Bootstrap",
+      "Celery",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://cookiecutter-django.readthedocs.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/cookiecutter/cookiecutter-django",
+    "categories": [
+      "Code Generators",
+      "Authentication",
+      "Frameworks",
+      "Templates",
+      "Open Source",
+      "Starter Projects"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 13595,
+      "forks": 3066,
+      "watchers": 13595,
+      "language": "Python",
+      "open_issues": 103,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "boilerplate",
+        "celery",
+        "cookiecutter",
+        "cookiecutter-django",
+        "django",
+        "django-cookiecutter",
+        "docker",
+        "hacktoberfest",
+        "heroku",
+        "project-template",
+        "python"
+      ],
+      "created_at": "2013-08-14T17:43:31Z",
+      "updated_at": "2026-08-20T21:46:35Z",
+      "pushed_at": "2026-08-20T19:20:47Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/saleor/saleor",
+    "title": "Saleor",
+    "description": "A high-performance, API-first, GraphQL-native headless commerce platform for composable ecommerce backends.",
+    "section": "django",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Python",
+      "Django",
+      "GraphQL",
+      "PostgreSQL",
+      "Celery",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://saleor.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/saleor/saleor",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "GraphQL",
+      "Backend",
+      "Databases",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 23246,
+      "forks": 6105,
+      "watchers": 23246,
+      "language": "Python",
+      "open_issues": 246,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cart",
+        "checkout",
+        "commerce",
+        "composable",
+        "e-commerce",
+        "ecommerce",
+        "graphql",
+        "headless",
+        "headless-commerce",
+        "multichannel",
+        "oms",
+        "order-management",
+        "payments",
+        "pim",
+        "python",
+        "shop",
+        "shopping-cart",
+        "store"
+      ],
+      "created_at": "2013-02-12T16:46:39Z",
+      "updated_at": "2026-08-20T19:55:27Z",
+      "pushed_at": "2026-08-20T14:52:56Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/wagtail/wagtail",
+    "title": "Wagtail",
+    "description": "An open-source Django content management system focused on flexible authoring, custom content models, accessibility, and headless content APIs.",
+    "section": "django",
+    "section_category": "cms",
+    "technologies": [
+      "Python",
+      "Django",
+      "Wagtail",
+      "PostgreSQL",
+      "MySQL",
+      "SQLite"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://wagtail.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/wagtail/wagtail",
+    "categories": [
+      "Articles",
+      "Web Development",
+      "Backend",
+      "Document Management",
+      "Accessibility",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 20444,
+      "forks": 4574,
+      "watchers": 20444,
+      "language": "Python",
+      "open_issues": 1031,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cms",
+        "django",
+        "hacktoberfest",
+        "python",
+        "wagtail"
+      ],
+      "created_at": "2014-02-03T12:41:59Z",
+      "updated_at": "2026-08-21T00:01:17Z",
+      "pushed_at": "2026-08-20T19:28:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/netbox-community/netbox",
+    "title": "NetBox",
+    "description": "A Django-based network source-of-truth and automation platform for DCIM, IPAM, circuits, virtualization, VPNs, plugins, REST, and GraphQL.",
+    "section": "django",
+    "section_category": "networking",
+    "technologies": [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Redis",
+      "GraphQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://netboxlabs.com/oss/netbox/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/netbox-community/netbox",
+    "categories": [
+      "REST API",
+      "GraphQL",
+      "Backend",
+      "Databases",
+      "Networking",
+      "Networking Tools",
+      "Plugins",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 21336,
+      "forks": 3105,
+      "watchers": 21336,
+      "language": "Python",
+      "open_issues": 224,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cabling",
+        "dcim",
+        "django",
+        "infrastructure-management",
+        "ipam",
+        "netbox",
+        "network",
+        "network-automation",
+        "python"
+      ],
+      "created_at": "2016-02-29T14:15:46Z",
+      "updated_at": "2026-08-21T00:44:37Z",
+      "pushed_at": "2026-08-20T21:20:20Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/encode/django-rest-framework",
+    "title": "Django REST Framework",
+    "description": "A flexible toolkit for building browsable REST APIs with Django, including serializers, viewsets, routers, authentication, and permissions.",
+    "section": "django",
+    "section_category": "api",
+    "technologies": [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "REST API"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.django-rest-framework.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/encode/django-rest-framework",
+    "categories": [
+      "Libraries",
+      "API",
+      "REST API",
+      "Backend",
+      "Reference",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 30133,
+      "forks": 7077,
+      "watchers": 30133,
+      "language": "Python",
+      "open_issues": 56,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "api",
+        "django",
+        "python",
+        "rest"
+      ],
+      "created_at": "2011-03-02T17:13:56Z",
+      "updated_at": "2026-08-20T18:37:03Z",
+      "pushed_at": "2026-08-19T14:15:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/django-oscar/django-oscar",
+    "title": "Django Oscar",
+    "description": "A domain-driven Django ecommerce framework designed for customizable online stores, B2C, B2B, and complex commerce workflows.",
+    "section": "django",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Python",
+      "Django",
+      "Django Oscar",
+      "Bootstrap"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://oscarcommerce.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/django-oscar/django-oscar",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "Backend",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 6618,
+      "forks": 2306,
+      "watchers": 6618,
+      "language": "Python",
+      "open_issues": 158,
+      "license": "BSD-3-Clause",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "django",
+        "django-oscar",
+        "ecommerce",
+        "oscar"
+      ],
+      "created_at": "2010-12-08T21:30:32Z",
+      "updated_at": "2026-08-20T15:31:02Z",
+      "pushed_at": "2026-08-20T15:36:03Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Shopify/shopify_django_app",
+    "title": "Shopify Django App Example",
+    "description": "A Django example app for building Shopify integrations with OAuth flow, product and order access, and the Python Shopify API.",
+    "section": "django",
+    "section_category": "integrations",
+    "technologies": [
+      "Python",
+      "Django",
+      "Shopify API",
+      "OAuth"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/Shopify/shopify_django_app",
+    "categories": [
+      "Products",
+      "API",
+      "REST API",
+      "Backend",
+      "Authentication",
+      "Plugins",
+      "Open Source",
+      "Samples"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 505,
+      "forks": 165,
+      "watchers": 505,
+      "language": "Python",
+      "open_issues": 15,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2011-08-30T19:35:19Z",
+      "updated_at": "2026-08-07T19:57:58Z",
+      "pushed_at": "2025-05-13T16:37:08Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/discourse/discourse",
+    "title": "Discourse",
+    "description": "An open-source community discussion platform with a Ruby on Rails backend, Ember frontend, chat, themes, plugins, and REST APIs.",
+    "section": "ruby-on-rails",
+    "section_category": "community",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Ember.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.discourse.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/discourse/discourse",
+    "categories": [
+      "Comments",
+      "Messaging",
+      "REST API",
+      "Web Development",
+      "Backend",
+      "Accessibility",
+      "Plugins",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 47686,
+      "forks": 8994,
+      "watchers": 47686,
+      "language": "Ruby",
+      "open_issues": 249,
+      "license": "GPL-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "discourse",
+        "ember",
+        "forum",
+        "javascript",
+        "postgresql",
+        "rails",
+        "ruby"
+      ],
+      "created_at": "2013-01-12T00:25:55Z",
+      "updated_at": "2026-08-21T00:18:24Z",
+      "pushed_at": "2026-08-21T00:33:02Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/mastodon/mastodon",
+    "title": "Mastodon",
+    "description": "A self-hosted federated social networking server using Ruby on Rails, ActivityPub, PostgreSQL, Redis, Sidekiq, and React.",
+    "section": "ruby-on-rails",
+    "section_category": "social",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "React",
+      "Redux",
+      "PostgreSQL",
+      "Redis",
+      "Sidekiq",
+      "ActivityPub"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://joinmastodon.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/mastodon/mastodon",
+    "categories": [
+      "Messaging",
+      "Photos",
+      "Share",
+      "Social Network",
+      "REST API",
+      "Video",
+      "WebSocket",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 50234,
+      "forks": 7487,
+      "watchers": 50234,
+      "language": "Ruby",
+      "open_issues": 4493,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "activity-stream",
+        "activitypub",
+        "docker",
+        "fediverse",
+        "mastodon",
+        "microblog",
+        "social-network",
+        "social-web",
+        "webfinger"
+      ],
+      "created_at": "2016-02-22T15:01:25Z",
+      "updated_at": "2026-08-20T23:15:46Z",
+      "pushed_at": "2026-08-20T19:58:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/spree/spree",
+    "title": "Spree",
+    "description": "An open-source headless ecommerce platform with a Rails backend, REST API, TypeScript SDK, and Next.js storefront support.",
+    "section": "ruby-on-rails",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "REST API",
+      "TypeScript",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://spreecommerce.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/spree/spree",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "REST API",
+      "Web Development",
+      "Backend",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 15633,
+      "forks": 5293,
+      "watchers": 15633,
+      "language": "Ruby",
+      "open_issues": 134,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "b2b-commerce",
+        "e-commerce",
+        "ecommerce",
+        "ecommerce-api",
+        "ecommerce-framework",
+        "ecommerce-platform",
+        "headless",
+        "headless-commerce",
+        "headless-ecommerce",
+        "marketplace",
+        "multi-tenant",
+        "multi-vendor",
+        "multi-vendor-ecommerce",
+        "open-source",
+        "spree-commerce"
+      ],
+      "created_at": "2008-03-10T14:45:35Z",
+      "updated_at": "2026-08-20T19:43:28Z",
+      "pushed_at": "2026-08-20T18:47:01Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/solidusio/solidus",
+    "title": "Solidus",
+    "description": "A complete Ruby on Rails ecommerce solution with RESTful API, admin backend, core commerce models, and sample data.",
+    "section": "ruby-on-rails",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Solidus",
+      "REST API"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://solidus.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/solidusio/solidus",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "REST API",
+      "Backend",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 5321,
+      "forks": 1401,
+      "watchers": 5321,
+      "language": "Ruby",
+      "open_issues": 117,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ecommerce",
+        "ecommerce-framework",
+        "ecommerce-platform",
+        "hacktoberfest",
+        "rails",
+        "ruby",
+        "solidus",
+        "storefront"
+      ],
+      "created_at": "2015-02-18T20:41:58Z",
+      "updated_at": "2026-08-20T15:45:49Z",
+      "pushed_at": "2026-08-19T20:28:49Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/redmica/redmica",
+    "title": "RedMica",
+    "description": "A Redmine-compatible Ruby on Rails project management distribution with issue tracking, releases, and early access to Redmine features.",
+    "section": "ruby-on-rails",
+    "section_category": "project-management",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Redmine",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.redmica.jp/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/redmica/redmica",
+    "categories": [
+      "Calendars & Time",
+      "Task Management",
+      "Document Management",
+      "Time Tracking",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 119,
+      "forks": 19,
+      "watchers": 119,
+      "language": "Ruby",
+      "open_issues": 1,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "issue-tracking",
+        "project-management",
+        "redmine",
+        "ruby",
+        "ruby-on-rails"
+      ],
+      "created_at": "2019-10-23T02:10:11Z",
+      "updated_at": "2026-08-20T22:55:22Z",
+      "pushed_at": "2026-08-20T22:54:58Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/forem/forem",
+    "title": "Forem",
+    "description": "An open-source Rails community platform powering DEV, with articles, discussion, profiles, feeds, PostgreSQL, and pgvector-backed recommendations.",
+    "section": "ruby-on-rails",
+    "section_category": "community",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Preact",
+      "PostgreSQL",
+      "pgvector",
+      "Kamal"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.forem.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/forem/forem",
+    "categories": [
+      "Activity Feeds",
+      "Comments",
+      "Profiles",
+      "Articles",
+      "Social Network",
+      "Machine Learning",
+      "Recommendation Systems",
+      "Web Development",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 22768,
+      "forks": 4179,
+      "watchers": 22768,
+      "language": "Ruby",
+      "open_issues": 131,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "community",
+        "discussion",
+        "feedback",
+        "hacktoberfest",
+        "open-source",
+        "rails",
+        "ruby"
+      ],
+      "created_at": "2016-11-13T23:02:13Z",
+      "updated_at": "2026-08-20T16:06:43Z",
+      "pushed_at": "2026-08-20T16:03:52Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/gitlabhq/gitlabhq",
+    "title": "GitLab CE Mirror",
+    "description": "A Ruby on Rails application for source code collaboration with repositories, merge requests, issue tracking, wiki, and CI/CD pipelines.",
+    "section": "ruby-on-rails",
+    "section_category": "devops",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Redis",
+      "Git",
+      "CI/CD"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://about.gitlab.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/gitlabhq/gitlabhq",
+    "categories": [
+      "Developer Tools",
+      "Testing",
+      "Backend",
+      "DevOps",
+      "CI/CD",
+      "Task Management",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 24533,
+      "forks": 5984,
+      "watchers": 24533,
+      "language": "Ruby",
+      "open_issues": 37,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "gitlab",
+        "rails",
+        "ruby"
+      ],
+      "created_at": "2011-10-02T16:25:27Z",
+      "updated_at": "2026-08-21T00:18:01Z",
+      "pushed_at": "2026-08-21T00:46:49Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/facebook/react-native",
+    "title": "React Native",
+    "description": "A framework for building native applications for Android and iOS using React and JavaScript.",
+    "section": "react-native",
+    "section_category": "framework",
+    "technologies": [
+      "React Native",
+      "React",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "mac"
+    ],
+    "external_url": "https://reactnative.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/react/react-native",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 126370,
+      "forks": 25218,
+      "watchers": 126370,
+      "language": "C++",
+      "open_issues": 1055,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "app-framework",
+        "cross-platform",
+        "ios",
+        "mobile",
+        "mobile-development",
+        "react",
+        "react-native"
+      ],
+      "created_at": "2015-01-09T18:10:16Z",
+      "updated_at": "2026-08-20T22:35:50Z",
+      "pushed_at": "2026-08-20T22:03:07Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/react-navigation/react-navigation",
+    "title": "React Navigation",
+    "description": "Routing and navigation library for React Native applications.",
+    "section": "react-native",
+    "section_category": "navigation",
+    "technologies": [
+      "React Native",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": "https://reactnavigation.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/react-navigation/react-navigation",
+    "categories": [
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 24489,
+      "forks": 5130,
+      "watchers": 24489,
+      "language": "TypeScript",
+      "open_issues": 840,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "navigation",
+        "react",
+        "react-native",
+        "react-navigation"
+      ],
+      "created_at": "2017-01-26T19:51:40Z",
+      "updated_at": "2026-08-20T18:47:35Z",
+      "pushed_at": "2026-08-19T17:54:28Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/sveltejs/svelte",
+    "title": "Svelte",
+    "description": "A compiler-based UI framework that builds efficient JavaScript applications with minimal runtime overhead.",
+    "section": "svelte",
+    "section_category": "framework",
+    "technologies": [
+      "Svelte",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://svelte.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/sveltejs/svelte",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 87980,
+      "forks": 5204,
+      "watchers": 87980,
+      "language": "JavaScript",
+      "open_issues": 1102,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "compiler",
+        "template",
+        "ui"
+      ],
+      "created_at": "2016-11-20T18:13:05Z",
+      "updated_at": "2026-08-21T00:40:50Z",
+      "pushed_at": "2026-08-20T21:56:23Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/sveltejs/kit",
+    "title": "SvelteKit",
+    "description": "The official application framework for building full-stack web applications with Svelte.",
+    "section": "svelte",
+    "section_category": "fullstack",
+    "technologies": [
+      "Svelte",
+      "SvelteKit",
+      "JavaScript",
+      "TypeScript",
+      "Vite"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://svelte.dev/docs/kit",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/sveltejs/kit",
+    "categories": [
+      "API",
+      "REST API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 20749,
+      "forks": 2308,
+      "watchers": 20749,
+      "language": "JavaScript",
+      "open_issues": 858,
+      "license": "MIT",
+      "default_branch": "version-3",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "svelte"
+      ],
+      "created_at": "2020-10-15T14:00:23Z",
+      "updated_at": "2026-08-21T00:30:06Z",
+      "pushed_at": "2026-08-21T00:31:50Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/nuxt/nuxt",
+    "title": "Nuxt",
+    "description": "A full-stack Vue framework for building performant web applications with server-side rendering and hybrid rendering.",
+    "section": "nuxt",
+    "section_category": "framework",
+    "technologies": [
+      "Nuxt",
+      "Vue",
+      "TypeScript",
+      "Vite",
+      "Nitro"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://nuxt.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/nuxt/nuxt",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 60769,
+      "forks": 5798,
+      "watchers": 60769,
+      "language": "TypeScript",
+      "open_issues": 535,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "csr",
+        "framework",
+        "full-stack",
+        "hacktoberfest",
+        "hybrid",
+        "node",
+        "nuxt",
+        "server-rendering",
+        "ssg",
+        "ssr",
+        "static-site-generator",
+        "universal",
+        "vue"
+      ],
+      "created_at": "2016-10-26T11:18:47Z",
+      "updated_at": "2026-08-20T21:44:45Z",
+      "pushed_at": "2026-08-20T15:20:28Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/nuxt/ui",
+    "title": "Nuxt UI",
+    "description": "A Vue-based UI component library for building modern applications with Nuxt.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://ui.nuxt.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/nuxt/ui",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 6843,
+      "forks": 1112,
+      "watchers": 6843,
+      "language": "TypeScript",
+      "open_issues": 248,
+      "license": "MIT",
+      "default_branch": "v4",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "components",
+        "nuxt",
+        "nuxt-module",
+        "reka-ui",
+        "tailwindcss",
+        "ui",
+        "vue"
+      ],
+      "created_at": "2021-11-15T15:59:30Z",
+      "updated_at": "2026-08-20T10:50:23Z",
+      "pushed_at": "2026-08-20T12:16:48Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/electron/electron",
+    "title": "Electron",
+    "description": "A framework for building cross-platform desktop applications with JavaScript, HTML, and CSS.",
+    "section": "electron",
+    "section_category": "framework",
+    "technologies": [
+      "Electron",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Chromium"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.electronjs.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/electron/electron",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 122603,
+      "forks": 17427,
+      "watchers": 122603,
+      "language": "C++",
+      "open_issues": 819,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "c-plus-plus",
+        "chrome",
+        "css",
+        "electron",
+        "html",
+        "javascript",
+        "nodejs",
+        "v8",
+        "works-with-codespaces"
+      ],
+      "created_at": "2013-04-12T01:47:36Z",
+      "updated_at": "2026-08-21T00:25:27Z",
+      "pushed_at": "2026-08-21T01:03:45Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/microsoft/vscode",
+    "title": "Visual Studio Code",
+    "description": "A source-code editor built with Electron and used for development across Windows, macOS, and Linux.",
+    "section": "electron",
+    "section_category": "application",
+    "technologies": [
+      "Electron",
+      "TypeScript",
+      "JavaScript",
+      "Node.js"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://code.visualstudio.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/microsoft/vscode",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "Testing",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 188996,
+      "forks": 41735,
+      "watchers": 188996,
+      "language": "TypeScript",
+      "open_issues": 20025,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "editor",
+        "electron",
+        "microsoft",
+        "typescript",
+        "visual-studio-code"
+      ],
+      "created_at": "2015-09-03T20:23:38Z",
+      "updated_at": "2026-08-21T00:58:29Z",
+      "pushed_at": "2026-08-21T00:46:27Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/tauri-apps/tauri",
+    "title": "Tauri",
+    "description": "A framework for building small, secure desktop and mobile applications using a web frontend and a Rust backend.",
+    "section": "tauri",
+    "section_category": "framework",
+    "technologies": [
+      "Tauri",
+      "Rust",
+      "JavaScript",
+      "TypeScript",
+      "WebView"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux",
+      "android",
+      "ios"
+    ],
+    "external_url": "https://tauri.app/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/tauri-apps/tauri",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 110409,
+      "forks": 3869,
+      "watchers": 110409,
+      "language": "Rust",
+      "open_issues": 1433,
+      "license": "Apache-2.0",
+      "default_branch": "dev",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "desktop-app",
+        "high-performance",
+        "mobile-app",
+        "native-app",
+        "rust",
+        "web-frontend",
+        "webview"
+      ],
+      "created_at": "2019-07-13T09:09:37Z",
+      "updated_at": "2026-08-21T00:40:18Z",
+      "pushed_at": "2026-08-21T00:22:10Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/tauri-apps/awesome-tauri",
+    "title": "Awesome Tauri",
+    "description": "A curated collection of applications, plugins, tools, and resources built around the Tauri ecosystem.",
+    "section": "tauri",
+    "section_category": "resources",
+    "technologies": [
+      "Tauri",
+      "Rust",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/tauri-apps/awesome-tauri",
+    "categories": [
+      "Activity Feeds",
+      "Developer Tools",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 8028,
+      "forks": 730,
+      "watchers": 8028,
+      "language": null,
+      "open_issues": 27,
+      "license": "MIT",
+      "default_branch": "dev",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "tauri"
+      ],
+      "created_at": "2022-01-22T16:25:58Z",
+      "updated_at": "2026-08-21T00:38:48Z",
+      "pushed_at": "2026-08-20T10:14:57Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/JetBrains/compose-multiplatform",
+    "title": "Compose Multiplatform",
+    "description": "A Kotlin Multiplatform UI framework for sharing application interfaces across Android, iOS, desktop, and web.",
+    "section": "kotlin-multiplatform",
+    "section_category": "ui",
+    "technologies": [
+      "Kotlin",
+      "Kotlin Multiplatform",
+      "Compose Multiplatform"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "mac",
+      "linux",
+      "web"
+    ],
+    "external_url": "https://www.jetbrains.com/lp/compose-multiplatform/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/JetBrains/compose-multiplatform",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 19307,
+      "forks": 1423,
+      "watchers": 19307,
+      "language": "Kotlin",
+      "open_issues": 30,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "awt",
+        "compose",
+        "declarative-ui",
+        "desktop",
+        "gui",
+        "ios",
+        "javascript",
+        "kotlin",
+        "multiplatform",
+        "reactive",
+        "swing",
+        "ui",
+        "wasm",
+        "web",
+        "webassembly"
+      ],
+      "created_at": "2020-09-07T10:40:49Z",
+      "updated_at": "2026-08-20T08:10:02Z",
+      "pushed_at": "2026-08-20T13:25:43Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/ktorio/ktor",
+    "title": "Ktor",
+    "description": "An asynchronous framework for creating connected applications in Kotlin, including servers and multiplatform clients.",
+    "section": "kotlin-multiplatform",
+    "section_category": "networking",
+    "technologies": [
+      "Kotlin",
+      "Kotlin Multiplatform",
+      "Ktor",
+      "Coroutines"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "mac",
+      "linux",
+      "web"
+    ],
+    "external_url": "https://ktor.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ktorio/ktor",
+    "categories": [
+      "API",
+      "REST API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14500,
+      "forks": 1294,
+      "watchers": 14500,
+      "language": "Kotlin",
+      "open_issues": 177,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "async",
+        "asynchronous",
+        "kotlin",
+        "web",
+        "web-framework"
+      ],
+      "created_at": "2015-08-03T16:49:36Z",
+      "updated_at": "2026-08-20T15:44:44Z",
+      "pushed_at": "2026-08-20T17:00:54Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/laravel/laravel",
+    "title": "Laravel",
+    "description": "A PHP web application framework with expressive syntax, routing, authentication, queues, caching, and database tooling.",
+    "section": "laravel",
+    "section_category": "framework",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Composer",
+      "Blade",
+      "Eloquent"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://laravel.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/laravel/laravel",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 84831,
+      "forks": 24896,
+      "watchers": 84831,
+      "language": "Blade",
+      "open_issues": 31,
+      "license": null,
+      "default_branch": "13.x",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "framework",
+        "laravel",
+        "php"
+      ],
+      "created_at": "2011-06-08T03:06:08Z",
+      "updated_at": "2026-08-21T00:21:47Z",
+      "pushed_at": "2026-08-18T13:45:25Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/filamentphp/filament",
+    "title": "Filament",
+    "description": "An open-source UI framework for Laravel used to build admin panels, dashboards, forms, tables, and applications.",
+    "section": "laravel",
+    "section_category": "ui",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Livewire",
+      "Filament"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://filamentphp.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/filamentphp/filament",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31857,
+      "forks": 4190,
+      "watchers": 31857,
+      "language": "PHP",
+      "open_issues": 53,
+      "license": "MIT",
+      "default_branch": "4.x",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "admin",
+        "alpine-js",
+        "builder",
+        "cms",
+        "filament",
+        "forms",
+        "laravel",
+        "laravel-admin-panel",
+        "livewire",
+        "tables",
+        "tailwind-css",
+        "tall-stack"
+      ],
+      "created_at": "2020-03-19T00:19:18Z",
+      "updated_at": "2026-08-20T22:05:29Z",
+      "pushed_at": "2026-08-18T09:50:55Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/angular/angular",
+    "title": "Angular",
+    "description": "A TypeScript-based web application framework for building scalable single-page and enterprise applications.",
+    "section": "angular",
+    "section_category": "framework",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "RxJS"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://angular.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/angular/angular",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 101002,
+      "forks": 27435,
+      "watchers": 101002,
+      "language": "TypeScript",
+      "open_issues": 1162,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "javascript",
+        "pwa",
+        "typescript",
+        "web",
+        "web-framework",
+        "web-performance"
+      ],
+      "created_at": "2014-09-18T16:12:01Z",
+      "updated_at": "2026-08-21T00:44:06Z",
+      "pushed_at": "2026-08-19T20:48:22Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/calcom/cal.com",
+    "title": "Cal.com",
+    "description": "An open-source scheduling platform built as a full-stack Next.js application for bookings, calendars, teams, and integrations.",
+    "section": "nextjs",
+    "section_category": "applications",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://cal.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/calcom/cal.diy",
+    "categories": [
+      "Calendars & Time",
+      "Products",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 47836,
+      "forks": 14888,
+      "watchers": 47836,
+      "language": "TypeScript",
+      "open_issues": 1427,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "next-auth",
+        "nextjs",
+        "open-source",
+        "postgresql",
+        "prisma",
+        "t3-stack",
+        "tailwindcss",
+        "trpc",
+        "turborepo",
+        "typescript",
+        "zod"
+      ],
+      "created_at": "2021-03-22T13:47:42Z",
+      "updated_at": "2026-08-20T23:56:24Z",
+      "pushed_at": "2026-08-08T17:13:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/outline/outline",
+    "title": "Outline",
+    "description": "An open-source knowledge base and documentation platform with a modern React and Next.js web application.",
+    "section": "nextjs",
+    "section_category": "applications",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.getoutline.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/outline/outline",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 40263,
+      "forks": 3500,
+      "watchers": 40263,
+      "language": "TypeScript",
+      "open_issues": 78,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "docker",
+        "javascript",
+        "mobx",
+        "nodejs",
+        "react",
+        "slack",
+        "wiki"
+      ],
+      "created_at": "2016-05-22T21:31:47Z",
+      "updated_at": "2026-08-21T01:09:46Z",
+      "pushed_at": "2026-08-20T12:45:53Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/makeplane/plane",
+    "title": "Plane",
+    "description": "An open-source project management platform with a Next.js and React web application for issues, cycles, modules, roadmaps, and collaboration.",
+    "section": "nextjs",
+    "section_category": "applications",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "Django",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://plane.so/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/makeplane/plane",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps",
+      "Task Management"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 56507,
+      "forks": 5397,
+      "watchers": 56507,
+      "language": "TypeScript",
+      "open_issues": 1067,
+      "license": "AGPL-3.0",
+      "default_branch": "preview",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "boards",
+        "bug-tracker",
+        "django",
+        "docker",
+        "gantt",
+        "issue-tracker",
+        "jira",
+        "jira-alternative",
+        "kanban",
+        "linear",
+        "postgresql",
+        "product-management",
+        "project-management",
+        "project-planning",
+        "python",
+        "react",
+        "redis",
+        "typescipt",
+        "vite",
+        "work-management"
+      ],
+      "created_at": "2022-11-19T12:55:01Z",
+      "updated_at": "2026-08-21T01:09:04Z",
+      "pushed_at": "2026-08-20T12:41:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/immich-app/immich",
+    "title": "Immich",
+    "description": "A self-hosted photo and video management application with a modern web interface and mobile clients.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://immich.app/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/immich-app/immich",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "Authentication",
+      "Frameworks"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 112173,
+      "forks": 6651,
+      "watchers": 112173,
+      "language": "TypeScript",
+      "open_issues": 711,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "backup-tool",
+        "flutter",
+        "google-photos",
+        "google-photos-alternative",
+        "javascript",
+        "mobile-app",
+        "nestjs",
+        "nodejs",
+        "photo-gallery",
+        "photos",
+        "photos-management",
+        "self-hosted",
+        "svelte",
+        "sveltekit",
+        "typescript",
+        "videos"
+      ],
+      "created_at": "2022-02-03T15:56:27Z",
+      "updated_at": "2026-08-21T00:59:12Z",
+      "pushed_at": "2026-08-21T00:58:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/mantinedev/mantine",
+    "title": "Mantine",
+    "description": "A React component library and development toolkit for building modern web applications.",
+    "section": "react",
+    "section_category": "libraries",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://mantine.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/mantinedev/mantine",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31585,
+      "forks": 2355,
+      "watchers": 31585,
+      "language": "TypeScript",
+      "open_issues": 73,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dark-mode",
+        "dark-theme",
+        "hooks",
+        "react",
+        "typescript",
+        "uikit"
+      ],
+      "created_at": "2021-01-07T14:02:19Z",
+      "updated_at": "2026-08-21T00:58:34Z",
+      "pushed_at": "2026-08-11T07:00:21Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/TanStack/query",
+    "title": "TanStack Query",
+    "description": "A powerful asynchronous state management library commonly used with React applications for fetching, caching, and synchronizing server state.",
+    "section": "react",
+    "section_category": "libraries",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://tanstack.com/query/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/TanStack/query",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 50175,
+      "forks": 4183,
+      "watchers": 50175,
+      "language": "TypeScript",
+      "open_issues": 148,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "async",
+        "cache",
+        "data",
+        "fetch",
+        "graphql",
+        "hooks",
+        "query",
+        "react",
+        "rest",
+        "solid",
+        "stale",
+        "stale-while-revalidate",
+        "svelte",
+        "typescript",
+        "update",
+        "vue"
+      ],
+      "created_at": "2019-09-10T19:23:58Z",
+      "updated_at": "2026-08-21T00:15:08Z",
+      "pushed_at": "2026-08-20T17:08:06Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/pmndrs/react-three-fiber",
+    "title": "React Three Fiber",
+    "description": "A React renderer for Three.js that allows developers to build interactive 3D scenes using React components.",
+    "section": "react",
+    "section_category": "libraries",
+    "technologies": [
+      "React",
+      "Three.js",
+      "TypeScript",
+      "WebGL"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://r3f.docs.pmnd.rs/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/pmndrs/react-three-fiber",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31752,
+      "forks": 1923,
+      "watchers": 31752,
+      "language": "TypeScript",
+      "open_issues": 48,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "3d",
+        "animation",
+        "fiber",
+        "react",
+        "renderer",
+        "threejs"
+      ],
+      "created_at": "2019-02-25T14:31:51Z",
+      "updated_at": "2026-08-20T22:41:01Z",
+      "pushed_at": "2026-08-19T12:38:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/strapi/strapi",
+    "title": "Strapi",
+    "description": "An open-source headless CMS with a React-based administration panel and an API-first architecture.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://strapi.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/strapi/strapi",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "Document Management"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 72982,
+      "forks": 9847,
+      "watchers": 72982,
+      "language": "TypeScript",
+      "open_issues": 551,
+      "license": "NOASSERTION",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "api",
+        "cms",
+        "cms-framework",
+        "content-management",
+        "content-management-system",
+        "customizable",
+        "dashboard",
+        "graphql",
+        "hacktoberfest",
+        "headless-cms",
+        "jamstack",
+        "javascript",
+        "mysql",
+        "no-code",
+        "nodejs",
+        "posgresql",
+        "rest",
+        "strapi",
+        "typescript"
+      ],
+      "created_at": "2015-09-30T15:34:48Z",
+      "updated_at": "2026-08-20T20:59:10Z",
+      "pushed_at": "2026-08-20T15:44:25Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/novuhq/novu",
+    "title": "Novu",
+    "description": "An open-source notification infrastructure platform with a React-based dashboard and workflow management interface.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "MongoDB"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://novu.co/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/novuhq/novu",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 39622,
+      "forks": 4435,
+      "watchers": 39622,
+      "language": "TypeScript",
+      "open_issues": 110,
+      "license": "NOASSERTION",
+      "default_branch": "next",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "agents",
+        "communication",
+        "email",
+        "inbox",
+        "infrastructure",
+        "nodejs",
+        "notification-center",
+        "notifications",
+        "novu",
+        "push-notifications",
+        "react",
+        "reactjs",
+        "sms",
+        "transactional",
+        "typescript"
+      ],
+      "created_at": "2021-08-26T15:22:44Z",
+      "updated_at": "2026-08-20T19:04:39Z",
+      "pushed_at": "2026-08-20T18:59:36Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/triggerdotdev/trigger.dev",
+    "title": "Trigger.dev",
+    "description": "An open-source platform for building and running reliable background jobs and workflows with a React-based web interface.",
+    "section": "react",
+    "section_category": "applications",
+    "technologies": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://trigger.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/triggerdotdev/trigger.dev",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 16079,
+      "forks": 1413,
+      "watchers": 16079,
+      "language": "TypeScript",
+      "open_issues": 421,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ai",
+        "ai-agent-framework",
+        "ai-agents",
+        "automation",
+        "background-jobs",
+        "mcp",
+        "mcp-server",
+        "nextjs",
+        "orchestration",
+        "scheduler",
+        "serverless",
+        "workflow-automation",
+        "workflows"
+      ],
+      "created_at": "2022-11-30T14:59:07Z",
+      "updated_at": "2026-08-20T23:55:02Z",
+      "pushed_at": "2026-08-20T22:23:21Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/vercel/nextjs-postgres-nextauth-tailwindcss-template",
+    "title": "Next.js Postgres Auth Starter",
+    "description": "A full-stack Next.js starter demonstrating authentication, PostgreSQL, Tailwind CSS, and modern application patterns.",
+    "section": "nextjs",
+    "section_category": "starters",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vercel/nextjs-postgres-nextauth-tailwindcss-template",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1618,
+      "forks": 580,
+      "watchers": 1618,
+      "language": "TypeScript",
+      "open_issues": 12,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "nextjs",
+        "react",
+        "tailwindcss",
+        "vercel"
+      ],
+      "created_at": "2022-11-12T22:18:35Z",
+      "updated_at": "2026-08-16T21:15:32Z",
+      "pushed_at": "2026-01-15T10:39:06Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/vercel/next.js",
+    "title": "Next.js",
+    "description": "A React framework for building full-stack web applications with server-side rendering, static generation, routing, and server-side functionality.",
+    "section": "nextjs",
+    "section_category": "framework",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://nextjs.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vercel/next.js",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 141881,
+      "forks": 31769,
+      "watchers": 141881,
+      "language": "JavaScript",
+      "open_issues": 4016,
+      "license": "MIT",
+      "default_branch": "canary",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "blog",
+        "browser",
+        "compiler",
+        "components",
+        "hybrid",
+        "nextjs",
+        "node",
+        "react",
+        "server-rendering",
+        "ssg",
+        "static",
+        "static-site-generator",
+        "universal",
+        "vercel"
+      ],
+      "created_at": "2016-10-05T23:32:51Z",
+      "updated_at": "2026-08-21T00:26:48Z",
+      "pushed_at": "2026-08-21T01:06:33Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/withastro/astro",
+    "title": "Astro",
+    "description": "A modern web framework for building fast content-driven websites with support for React, Vue, Svelte, and other UI frameworks.",
+    "section": "nextjs",
+    "section_category": "comparison",
+    "technologies": [
+      "Astro",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://astro.build/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/withastro/astro",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 61898,
+      "forks": 3724,
+      "watchers": 61898,
+      "language": "TypeScript",
+      "open_issues": 113,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "astro",
+        "blog",
+        "browser",
+        "components",
+        "hybrid",
+        "islands",
+        "node",
+        "server",
+        "static",
+        "static-site-generator",
+        "universal"
+      ],
+      "created_at": "2021-03-15T17:19:47Z",
+      "updated_at": "2026-08-20T22:11:41Z",
+      "pushed_at": "2026-08-20T22:53:39Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/primefaces/primevue",
+    "title": "PrimeVue",
+    "description": "A comprehensive Vue UI component library with a large collection of accessible components, themes, and application building blocks.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://primevue.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/primefaces/primevue",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14462,
+      "forks": 1780,
+      "watchers": 14462,
+      "language": "Vue",
+      "open_issues": 872,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "nuxt",
+        "nuxtjs",
+        "vue",
+        "vue-component",
+        "vue-components",
+        "vue-datatable",
+        "vue-datepicker",
+        "vue-grid",
+        "vue-library",
+        "vue-select",
+        "vue-table",
+        "vue-tree",
+        "vue-tree-table",
+        "vue-ui-components",
+        "vue3",
+        "vuejs"
+      ],
+      "created_at": "2018-12-04T07:04:14Z",
+      "updated_at": "2026-08-20T15:22:34Z",
+      "pushed_at": "2026-06-28T23:07:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/element-plus/element-plus",
+    "title": "Element Plus",
+    "description": "A Vue 3 component library providing a large set of UI components for building desktop-style web applications.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://element-plus.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/element-plus/element-plus",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 27684,
+      "forks": 19841,
+      "watchers": 27684,
+      "language": "TypeScript",
+      "open_issues": 1201,
+      "license": "MIT",
+      "default_branch": "dev",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "component-library",
+        "element-plus",
+        "element-ui",
+        "vue",
+        "vue-components",
+        "vuejs"
+      ],
+      "created_at": "2020-07-21T06:51:19Z",
+      "updated_at": "2026-08-20T15:49:00Z",
+      "pushed_at": "2026-08-20T04:01:45Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/slidevjs/slidev",
+    "title": "Slidev",
+    "description": "A web-based presentation tool powered by Vue and Markdown, designed for developers creating technical presentations.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Vite",
+      "TypeScript",
+      "Markdown"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://sli.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/slidevjs/slidev",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 48167,
+      "forks": 2150,
+      "watchers": 48167,
+      "language": "TypeScript",
+      "open_issues": 212,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "markdown",
+        "presentation",
+        "slides",
+        "vite",
+        "vue",
+        "vueuse"
+      ],
+      "created_at": "2021-04-24T01:25:23Z",
+      "updated_at": "2026-08-20T23:15:40Z",
+      "pushed_at": "2026-08-19T06:22:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/elk-zone/elk",
+    "title": "Elk",
+    "description": "A modern web client for Mastodon and the Fediverse built with Nuxt and Vue.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Mastodon",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://elk.zone/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/elk-zone/elk",
+    "categories": [
+      "Comments",
+      "Messaging",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 6031,
+      "forks": 621,
+      "watchers": 6031,
+      "language": "Vue",
+      "open_issues": 653,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "mastodon",
+        "mastodon-client",
+        "nuxt-app"
+      ],
+      "created_at": "2022-11-14T03:33:32Z",
+      "updated_at": "2026-08-20T20:28:27Z",
+      "pushed_at": "2026-08-18T12:01:29Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/ccbikai/Sink",
+    "title": "Sink",
+    "description": "A simple and fast URL shortener with analytics and modern web UI built with Nuxt and Vue.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Cloudflare",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://sink.cool/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ccbikai/Sink",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 7033,
+      "forks": 5120,
+      "watchers": 7033,
+      "language": "Vue",
+      "open_issues": 14,
+      "license": "AGPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "analytics",
+        "bitly-alternative",
+        "cloudflare",
+        "hacktoberfest",
+        "link-shortener",
+        "nuxt",
+        "nuxthub",
+        "shadcn-ui",
+        "tailwindcss",
+        "url-shortener",
+        "web-analytics"
+      ],
+      "created_at": "2024-05-05T13:53:54Z",
+      "updated_at": "2026-08-20T15:57:06Z",
+      "pushed_at": "2026-08-20T11:45:00Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/teableio/teable",
+    "title": "Teable",
+    "description": "An open-source no-code database platform with a spreadsheet-style interface and collaborative data management features.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://teable.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/teableio/teable",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 21679,
+      "forks": 1332,
+      "watchers": 21679,
+      "language": "TypeScript",
+      "open_issues": 123,
+      "license": "NOASSERTION",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ai-agent",
+        "airtable",
+        "airtable-alternative",
+        "app-builder",
+        "database",
+        "internal-tool",
+        "low-code",
+        "no-code",
+        "postgres",
+        "postgresql",
+        "sandbox",
+        "spreadsheet"
+      ],
+      "created_at": "2022-11-01T07:02:49Z",
+      "updated_at": "2026-08-21T00:40:59Z",
+      "pushed_at": "2026-08-20T14:46:49Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/CorentinTh/it-tools",
+    "title": "IT Tools",
+    "description": "A collection of useful developer and IT utilities presented through a modern web interface built with Vue.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "Vite",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://it-tools.tech/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/CorentinTh/it-tools",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 40298,
+      "forks": 5350,
+      "watchers": 40298,
+      "language": "Vue",
+      "open_issues": 815,
+      "license": "GPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "converter",
+        "developer-productivity",
+        "developer-tools",
+        "frontend",
+        "javascript",
+        "productivity",
+        "tool",
+        "tools",
+        "typescript",
+        "vuejs",
+        "website"
+      ],
+      "created_at": "2020-04-05T11:50:24Z",
+      "updated_at": "2026-08-21T01:09:00Z",
+      "pushed_at": "2026-08-16T11:35:00Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Lissy93/dashy",
+    "title": "Dashy",
+    "description": "A self-hosted dashboard for organizing applications, services, bookmarks, and monitoring tools in a customizable interface.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "JavaScript",
+      "Node.js",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://dashy.to/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/Lissy93/dashy",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 26247,
+      "forks": 1926,
+      "watchers": 26247,
+      "language": "Vue",
+      "open_issues": 35,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "awesome",
+        "dashboard",
+        "docker",
+        "homelab",
+        "homepage",
+        "mit",
+        "nodejs",
+        "organization",
+        "productivity",
+        "pwa",
+        "self-hosted",
+        "startpage",
+        "vue"
+      ],
+      "created_at": "2021-02-28T10:35:44Z",
+      "updated_at": "2026-08-20T20:55:24Z",
+      "pushed_at": "2026-08-20T13:34:35Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/antoine92190/birdnet-pi",
+    "title": "BirdNET-Pi",
+    "description": "A self-hosted bird sound identification application with a web interface for monitoring and analyzing bird activity.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Python",
+      "Linux",
+      "Machine Learning"
+    ],
+    "platforms": [
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/antoine92190/birdnet-pi",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps",
+      "Frameworks"
+    ]
+  },
+  {
+    "project_url": "https://github.com/ghostfolio/ghostfolio",
+    "title": "Ghostfolio",
+    "description": "An open-source wealth management application for tracking investments, portfolios, and financial performance.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Angular",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://ghostfol.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ghostfolio/ghostfolio",
+    "categories": [
+      "Calendars & Time",
+      "Products",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 9162,
+      "forks": 1273,
+      "watchers": 9162,
+      "language": "TypeScript",
+      "open_issues": 291,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "etf",
+        "finance",
+        "fintech",
+        "ghostfolio",
+        "hacktoberfest",
+        "investing",
+        "nestjs",
+        "oss",
+        "personal-finance",
+        "portfolio",
+        "prisma",
+        "software",
+        "stock",
+        "tracker",
+        "trading",
+        "typescript",
+        "wealth-management",
+        "web"
+      ],
+      "created_at": "2021-04-13T19:51:25Z",
+      "updated_at": "2026-08-21T00:02:51Z",
+      "pushed_at": "2026-08-20T18:24:29Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/adyanth/openlens",
+    "title": "OpenLens",
+    "description": "An open-source Kubernetes desktop application providing a graphical interface for managing Kubernetes clusters.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Electron",
+      "TypeScript",
+      "Kubernetes"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/adyanth/openlens",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "Testing",
+      "Web Development",
+      "DevOps",
+      "CI/CD"
+    ]
+  },
+  {
+    "project_url": "https://github.com/owncast/owncast",
+    "title": "Owncast",
+    "description": "A self-hosted live video streaming server with a customizable web interface and decentralized social features.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Go",
+      "TypeScript",
+      "WebRTC",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://owncast.online/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/owncast/owncast",
+    "categories": [
+      "Calendars & Time",
+      "Comments",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 11466,
+      "forks": 1209,
+      "watchers": 11466,
+      "language": "Go",
+      "open_issues": 175,
+      "license": "MIT",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "activitypub",
+        "broadcasting",
+        "chat",
+        "decentralized",
+        "federation",
+        "fediverse",
+        "golang",
+        "hacktoberfest",
+        "hls",
+        "live",
+        "livestream",
+        "owncast",
+        "rtmp",
+        "self-hosted",
+        "streaming-video",
+        "video"
+      ],
+      "created_at": "2020-05-24T00:58:13Z",
+      "updated_at": "2026-08-20T21:28:53Z",
+      "pushed_at": "2026-08-20T10:57:03Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/advplyr/audiobookshelf",
+    "title": "Audiobookshelf",
+    "description": "A self-hosted media server for managing and streaming audiobooks and podcasts with a modern web interface.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "JavaScript",
+      "Node.js",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.audiobookshelf.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/advplyr/audiobookshelf",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14047,
+      "forks": 1123,
+      "watchers": 14047,
+      "language": "JavaScript",
+      "open_issues": 1142,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "audiobook-manager",
+        "audiobooks",
+        "audiobookshelf",
+        "podcasts",
+        "self-hosted"
+      ],
+      "created_at": "2021-08-17T22:00:40Z",
+      "updated_at": "2026-08-20T21:53:20Z",
+      "pushed_at": "2026-08-16T22:13:48Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/naive-ui/naive-ui",
+    "title": "Naive UI",
+    "description": "A Vue 3 component library with TypeScript support and a large collection of customizable UI components.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "TypeScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://www.naiveui.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/naive-ui/naive-ui",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ]
+  },
+  {
+    "project_url": "https://github.com/vueuse/vueuse",
+    "title": "VueUse",
+    "description": "A comprehensive collection of Vue Composition API utilities for building modern Vue applications.",
+    "section": "vue",
+    "section_category": "libraries",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://vueuse.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vueuse/vueuse",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 22331,
+      "forks": 2928,
+      "watchers": 22331,
+      "language": "TypeScript",
+      "open_issues": 366,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "composable",
+        "utility-library",
+        "vue",
+        "vue3",
+        "vueuse"
+      ],
+      "created_at": "2019-12-14T06:44:59Z",
+      "updated_at": "2026-08-20T21:57:58Z",
+      "pushed_at": "2026-08-20T02:36:22Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/vuejs/pinia",
+    "title": "Pinia",
+    "description": "The intuitive state management library for Vue applications with TypeScript support and a simple store API.",
+    "section": "vue",
+    "section_category": "libraries",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://pinia.vuejs.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vuejs/pinia",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14701,
+      "forks": 1200,
+      "watchers": 14701,
+      "language": "TypeScript",
+      "open_issues": 25,
+      "license": "MIT",
+      "default_branch": "v4",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "composition-api",
+        "ssr",
+        "store",
+        "vue",
+        "vuex"
+      ],
+      "created_at": "2019-11-18T21:05:01Z",
+      "updated_at": "2026-08-20T10:32:27Z",
+      "pushed_at": "2026-08-12T12:18:07Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/kizitonwose/Calendar",
+    "title": "Calendar",
+    "description": "A highly customizable calendar view and compose library for Android and Kotlin Multiplatform.",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "calendar",
+      "calendar-library"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/15170090/197389318-b3925b65-aed9-4e1f-a778-ba73007cbdf7.png",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 5587,
+      "forks": 581,
+      "watchers": 5587,
+      "language": "Kotlin",
+      "open_issues": 10,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "calendar-library",
+        "calendarview",
+        "compose",
+        "compose-calendar",
+        "compose-calendar-library",
+        "compose-multiplatform",
+        "date",
+        "date-range",
+        "date-range-picker",
+        "datepicker",
+        "heatmap-calendar",
+        "kmp",
+        "kmp-library",
+        "kotlin",
+        "kotlin-multiplatform",
+        "month-calendar",
+        "week-calendar",
+        "year-calendar"
+      ],
+      "created_at": "2019-04-20T14:43:36Z",
+      "updated_at": "2026-08-20T14:53:47Z",
+      "pushed_at": "2026-08-13T09:41:50Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/FossifyOrg/Calendar",
+    "title": "Calendar",
+    "description": "A simple calendar with events, customizable widgets and no ads.",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "calendar",
+      "foss"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "https://www.fossify.org",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/FossifyOrg/Calendar/main/graphics/icon.webp",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 2100,
+      "forks": 203,
+      "watchers": 2100,
+      "language": "Kotlin",
+      "open_issues": 312,
+      "license": "GPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "foss",
+        "kotlin",
+        "open-source"
+      ],
+      "created_at": "2022-05-15T21:47:59Z",
+      "updated_at": "2026-08-20T21:34:54Z",
+      "pushed_at": "2026-08-17T18:55:35Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/SimpleMobileTools/Simple-Calendar",
+    "title": "Simple-Calendar",
+    "description": "A simple calendar with events, tasks, customizable colors, widgets and no ads.",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "android-development",
+      "calendar"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "https://www.simplemobiletools.com",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/SimpleMobileTools/Simple-Calendar/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpeg",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 3649,
+      "forks": 1167,
+      "watchers": 3649,
+      "language": "Kotlin",
+      "open_issues": 306,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "android-development",
+        "calendar",
+        "freedom",
+        "kotlin",
+        "open-source"
+      ],
+      "created_at": "2016-01-26T21:02:54Z",
+      "updated_at": "2026-08-19T13:40:20Z",
+      "pushed_at": "2024-06-26T15:37:04Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Etar-Group/Etar-Calendar",
+    "title": "Etar-Calendar",
+    "description": "Android open source calendar",
+    "section": "java",
+    "section_category": "android",
+    "technologies": [
+      "Java",
+      "android",
+      "calendar",
+      "material-design"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "https://f-droid.org/packages/ws.xsoh.etar/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/master/metadata/en_fdroid.png",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 2583,
+      "forks": 446,
+      "watchers": 2583,
+      "language": "Java",
+      "open_issues": 397,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "material-design"
+      ],
+      "created_at": "2015-09-04T07:33:25Z",
+      "updated_at": "2026-08-20T12:59:38Z",
+      "pushed_at": "2026-08-16T01:38:01Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/prolificinteractive/material-calendarview",
+    "title": "material-calendarview",
+    "description": "A Material design back port of Android's CalendarView",
+    "section": "java",
+    "section_category": "android",
+    "technologies": [
+      "Java",
+      "android",
+      "calendar",
+      "java"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "https://prolificinteractive.github.io/material-calendarview/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/prolificinteractive/material-calendarview/master/images/hero.png",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 5900,
+      "forks": 1299,
+      "watchers": 5900,
+      "language": "Java",
+      "open_issues": 252,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "java",
+        "material"
+      ],
+      "created_at": "2015-02-09T22:31:56Z",
+      "updated_at": "2026-08-19T03:06:39Z",
+      "pushed_at": "2023-05-28T16:37:44Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/CleverPumpkin/CrunchyCalendar",
+    "title": "CrunchyCalendar",
+    "description": "A beautiful material calendar with endless scroll, range selection and a lot more!",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "calendar",
+      "calendar-view"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/CleverPumpkin/CrunchyCalendar/master/images/Cover.png",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 647,
+      "forks": 43,
+      "watchers": 647,
+      "language": "Kotlin",
+      "open_issues": 14,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "calendar-view",
+        "custom-view",
+        "java",
+        "jcenter",
+        "kotlin",
+        "material-calendar",
+        "material-design",
+        "range-selection"
+      ],
+      "created_at": "2018-05-25T11:51:19Z",
+      "updated_at": "2026-07-20T22:45:55Z",
+      "pushed_at": "2024-02-05T13:23:30Z"
+    }
+  }
+]

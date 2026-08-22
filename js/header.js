@@ -1,117 +1,324 @@
 "use strict";
 
 /* =======================================================
-   Header initialization
+   CODER BASKET — DYNAMIC HEADER
 ======================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const mainNav = document.getElementById("mainNav");
+/*
+ * This file is completely self-contained.
+ *
+ * It:
+ *
+ * 1. Loads /css/header.css automatically.
+ * 2. Creates the entire header.
+ * 3. Inserts it at the very top of <body>.
+ * 4. Requires no header markup in index.html.
+ *
+ * Required global data:
+ *
+ *   DATA_SECTIONS
+ *   DATA_SECTION_ORDER
+ *   FRAMEWORKS
+ *   NAVIGATION
+ *
+ * The only HTML requirement is:
+ *
+ *   <script src="/js/header.js" defer></script>
+ */
 
-  if (!mainNav) {
+/* =======================================================
+   INITIALIZATION
+======================================================= */
+
+(function initializeDynamicHeader() {
+
+  /*
+   * Load header CSS immediately.
+   */
+  loadHeaderStylesheet();
+
+  /*
+   * Wait until the document exists.
+   */
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializeHeader,
+      { once: true }
+    );
+  } else {
+    initializeHeader();
+  }
+
+})();
+
+
+/* =======================================================
+   LOAD HEADER CSS
+======================================================= */
+
+function loadHeaderStylesheet() {
+
+  const cssPath = "/css/header.css";
+
+  /*
+   * Avoid loading the stylesheet twice.
+   */
+  if (
+    document.querySelector(
+      `link[rel="stylesheet"][href="${cssPath}"]`
+    )
+  ) {
     return;
   }
 
-  if (
-    typeof DATA_SECTIONS === "undefined" ||
-    typeof DATA_SECTION_ORDER === "undefined" ||
-    typeof FRAMEWORKS === "undefined" ||
-    typeof NAVIGATION === "undefined"
-  ) {
-    console.error("Header data is not available.");
+  const link = document.createElement("link");
+
+  link.rel = "stylesheet";
+  link.href = cssPath;
+
+  document.head.appendChild(link);
+}
+
+
+/* =======================================================
+   INITIALIZE HEADER
+======================================================= */
+
+function initializeHeader() {
+
+  /*
+   * Do not create duplicate headers.
+   */
+  if (document.getElementById("siteHeader")) {
+    return;
+  }
+
+  /*
+   * DATA files may be deferred and may not have
+   * finished executing yet.
+   *
+   * Wait briefly until the required data exists.
+   */
+  if (!headerDataReady()) {
+
+    let attempts = 0;
+
+    const maxAttempts = 100;
+
+    const waitForData = setInterval(() => {
+
+      attempts++;
+
+      if (headerDataReady()) {
+
+        clearInterval(waitForData);
+
+        renderHeader();
+
+        return;
+      }
+
+      if (attempts >= maxAttempts) {
+
+        clearInterval(waitForData);
+
+        console.error(
+          "[Header] Required navigation data was not available."
+        );
+
+      }
+
+    }, 50);
+
     return;
   }
 
   renderHeader();
-});
+}
+
 
 /* =======================================================
-   Render header
+   CHECK HEADER DATA
+======================================================= */
+
+function headerDataReady() {
+
+  return (
+    typeof DATA_SECTIONS !== "undefined" &&
+    typeof DATA_SECTION_ORDER !== "undefined" &&
+    typeof FRAMEWORKS !== "undefined" &&
+    typeof NAVIGATION !== "undefined"
+  );
+}
+
+
+/* =======================================================
+   RENDER COMPLETE HEADER
 ======================================================= */
 
 function renderHeader() {
-  const mainNav = document.getElementById("mainNav");
 
-  if (!mainNav) {
-    return;
-  }
+  /*
+   * Create the header itself.
+   */
+  const header = document.createElement("header");
 
-  let html = "";
+  header.id = "siteHeader";
+  header.className = "site-header";
 
-  /* ---------------------------------------------------
-     Home
-  --------------------------------------------------- */
+  const home = NAVIGATION?.home || {
+    name: "Coder Basket",
+    path: "/"
+  };
 
-  html += renderHomeNavigation();
+  const submit = NAVIGATION?.submit || {
+    name: "Submit",
+    path: "/submit/"
+  };
 
-  /* ---------------------------------------------------
-     Catalogue sections
-  --------------------------------------------------- */
+  header.innerHTML = `
+    <div class="container header-inner">
 
-  html += renderCatalogueNavigation();
+      ${renderLogo(home)}
 
-  /* ---------------------------------------------------
-     Frameworks
-  --------------------------------------------------- */
+      <div class="mobile-header-actions">
 
-  html += renderFrameworkNavigation();
+        ${renderMobileSubmit(submit)}
 
-  /* ---------------------------------------------------
-     Main navigation
-  --------------------------------------------------- */
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
-  html += renderMainNavigation();
+      </div>
 
-  /* ---------------------------------------------------
-     Insert
-  --------------------------------------------------- */
+      <nav
+        id="mainNav"
+        class="main-nav"
+        aria-label="Main navigation"
+      >
 
-  mainNav.innerHTML = html;
+        ${renderCatalogueNavigation()}
 
-  /* ---------------------------------------------------
-     Setup interactions
-  --------------------------------------------------- */
+        ${renderFrameworkNavigation()}
 
+        ${renderMainNavigation()}
+
+      </nav>
+
+    </div>
+  `;
+
+  /*
+   * Insert as the FIRST element inside body.
+   */
+  document.body.prepend(header);
+
+  /*
+   * Setup interactions.
+   */
   setupCategoryNavigation();
   setupFrameworkNavigation();
   setupMobileNavigation();
 }
 
+
 /* =======================================================
-   Home navigation
+   LOGO
 ======================================================= */
 
-function renderHomeNavigation() {
-  if (!NAVIGATION.home) {
-    return "";
-  }
+function renderLogo(home) {
+
+  const homePath =
+    home?.path || "/";
+
+  const homeName = "Coder Basket";
 
   return `
-    <a href="${escapeAttribute(NAVIGATION.home.path)}">
-      ${escapeHtml(NAVIGATION.home.name)}
+    <a
+      href="${escapeAttribute(homePath)}"
+      class="logo"
+      aria-label="${escapeAttribute(homeName)}"
+    >
+
+      <img
+        src="/img/codericon.png"
+        alt="Coder Basket"
+      >
+
+      <span>
+        ${escapeHtml(homeName)}
+      </span>
+
     </a>
   `;
 }
 
+
 /* =======================================================
-   Catalogue navigation
+   MOBILE SUBMIT (+)
+======================================================= */
+
+function renderMobileSubmit(submit) {
+
+  if (!submit) {
+    return "";
+  }
+
+  const path =
+    submit.path || "/submit/";
+
+  const name =
+    submit.name || "Submit";
+
+  return `
+    <a
+      id="mobileSubmitNavigation"
+      class="mobile-submit-button"
+      href="${escapeAttribute(path)}"
+      aria-label="${escapeAttribute(name)}"
+      title="${escapeAttribute(name)}"
+    >
+      +
+    </a>
+  `;
+}
+
+
+/* =======================================================
+   CATALOGUE NAVIGATION
 ======================================================= */
 
 function renderCatalogueNavigation() {
+
   let html = "";
 
   for (const sectionKey of DATA_SECTION_ORDER) {
-    const section = DATA_SECTIONS[sectionKey];
+
+    const section =
+      DATA_SECTIONS[sectionKey];
 
     if (!section) {
       continue;
     }
 
-    const sectionPath = section.path || `/${sectionKey}/`;
+    const sectionPath =
+      section.path || `/${sectionKey}/`;
 
     /*
-     * Sections without categories are simple links.
+     * -----------------------------------------------
+     * Section WITHOUT categories
+     * -----------------------------------------------
      */
+
     if (!section.categories) {
+
       html += `
         <a
           href="${escapeAttribute(sectionPath)}"
@@ -125,16 +332,21 @@ function renderCatalogueNavigation() {
       continue;
     }
 
+
     /*
-     * Sections with categories use dropdown.
+     * -----------------------------------------------
+     * Section WITH categories
+     * -----------------------------------------------
      */
+
     html += `
       <div class="nav-dropdown">
 
         <a
-          class="nav-section-button"
           href="${escapeAttribute(sectionPath)}"
+          class="nav-section-button"
           data-section="${escapeAttribute(sectionKey)}"
+          aria-expanded="false"
         >
           ${escapeHtml(section.name)}
         </a>
@@ -142,8 +354,8 @@ function renderCatalogueNavigation() {
         <div class="dropdown-menu">
 
           <a
-            class="nav-category-link nav-all-button"
             href="${escapeAttribute(sectionPath)}"
+            class="nav-category-link nav-all-button"
             data-section="${escapeAttribute(sectionKey)}"
             data-category="all"
           >
@@ -151,15 +363,18 @@ function renderCatalogueNavigation() {
           </a>
     `;
 
-    for (const [categoryKey, categoryName] of Object.entries(
-      section.categories,
-    )) {
+
+    for (
+      const [categoryKey, categoryName]
+      of Object.entries(section.categories)
+    ) {
+
       html += `
         <a
-          class="nav-category-link"
           href="${escapeAttribute(
-            `${sectionPath}${categoryKey}/`,
+            `${sectionPath}${categoryKey}/`
           )}"
+          class="nav-category-link"
           data-section="${escapeAttribute(sectionKey)}"
           data-category="${escapeAttribute(categoryKey)}"
         >
@@ -167,6 +382,7 @@ function renderCatalogueNavigation() {
         </a>
       `;
     }
+
 
     html += `
         </div>
@@ -178,11 +394,13 @@ function renderCatalogueNavigation() {
   return html;
 }
 
+
 /* =======================================================
-   Framework navigation
+   FRAMEWORK NAVIGATION
 ======================================================= */
 
 function renderFrameworkNavigation() {
+
   if (
     typeof FRAMEWORKS === "undefined" ||
     !FRAMEWORKS ||
@@ -205,9 +423,15 @@ function renderFrameworkNavigation() {
       <div class="framework-dropdown-menu">
   `;
 
-  for (const [frameworkKey, framework] of Object.entries(FRAMEWORKS)) {
+
+  for (
+    const [frameworkKey, framework]
+    of Object.entries(FRAMEWORKS)
+  ) {
+
     const frameworkPath =
-      framework.path || `/${frameworkKey}/`;
+      framework.path ||
+      `/${frameworkKey}/`;
 
     html += `
       <a
@@ -220,6 +444,7 @@ function renderFrameworkNavigation() {
     `;
   }
 
+
   html += `
       </div>
 
@@ -229,22 +454,63 @@ function renderFrameworkNavigation() {
   return html;
 }
 
+
 /* =======================================================
-   Main navigation
+   MAIN NAVIGATION
 ======================================================= */
 
 function renderMainNavigation() {
+
   let html = "";
 
-  for (const key of ["libraries", "tools", "projects", "about"]) {
-    const item = NAVIGATION[key];
+  /*
+   * Tools
+   * About
+   * Submit
+   *
+   * Home is intentionally NOT here because
+   * the logo already links to Home.
+   */
+
+  for (
+    const key of ["tools", "about", "submit"]
+  ) {
+
+    const item =
+      NAVIGATION[key];
 
     if (!item) {
       continue;
     }
 
+
+    /*
+     * Desktop Submit button.
+     */
+    if (key === "submit") {
+
+      html += `
+        <a
+          id="submitNavigation"
+          class="submit-navigation-link"
+          href="${escapeAttribute(item.path)}"
+        >
+          ${escapeHtml(item.name)}
+        </a>
+      `;
+
+      continue;
+    }
+
+
+    /*
+     * Normal navigation item.
+     */
+
     html += `
-      <a href="${escapeAttribute(item.path)}">
+      <a
+        href="${escapeAttribute(item.path)}"
+      >
         ${escapeHtml(item.name)}
       </a>
     `;
@@ -253,221 +519,267 @@ function renderMainNavigation() {
   return html;
 }
 
+
 /* =======================================================
-   Catalogue category navigation
+   CATEGORY NAVIGATION
 ======================================================= */
 
 function setupCategoryNavigation() {
-  /*
-   * Category links.
-   *
-   * These are mostly normal <a> links now.
-   * We intentionally do not intercept navigation.
-   *
-   * This allows:
-   *
-   * /ai/
-   * /flutter/
-   * /dotnet/
-   * /ai/something/
-   *
-   * to load naturally.
-   */
 
-  const links = document.querySelectorAll(
-    ".nav-category-link",
-  );
+  const links =
+    document.querySelectorAll(
+      ".nav-category-link"
+    );
 
   links.forEach((link) => {
+
     link.addEventListener("click", () => {
       closeMobileNavigation();
     });
+
   });
 }
 
+
 /* =======================================================
-   Framework navigation
+   FRAMEWORK NAVIGATION
 ======================================================= */
 
 function setupFrameworkNavigation() {
-  const frameworkLinks = document.querySelectorAll(
-    ".framework-link",
-  );
 
-  frameworkLinks.forEach((link) => {
+  const links =
+    document.querySelectorAll(
+      ".framework-link"
+    );
+
+  links.forEach((link) => {
+
     link.addEventListener("click", () => {
-      /*
-       * Do NOT call loadCatalog() here.
-       *
-       * The framework page will load normally.
-       *
-       * app.js reads:
-       *
-       * /react/
-       *
-       * and resolves:
-       *
-       * react -> frameworks.json
-       */
       closeMobileNavigation();
     });
+
   });
 }
 
+
 /* =======================================================
-   Mobile navigation
+   MOBILE NAVIGATION
 ======================================================= */
 
 function setupMobileNavigation() {
-  const menuToggle = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
+
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const mainNav =
+    document.getElementById("mainNav");
 
   if (!menuToggle || !mainNav) {
     return;
   }
 
-  if (menuToggle.dataset.navigationReady === "true") {
+
+  if (
+    menuToggle.dataset.navigationReady === "true"
+  ) {
     return;
   }
 
   menuToggle.dataset.navigationReady = "true";
 
-  /* ---------------------------------------------------
-     Hamburger
-  --------------------------------------------------- */
-
-  menuToggle.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-
-    const isOpen = mainNav.classList.toggle("open");
-
-    mainNav.style.display = isOpen ? "flex" : "";
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      String(isOpen),
-    );
-  });
 
   /* ---------------------------------------------------
-     Mobile dropdowns
+     HAMBURGER
   --------------------------------------------------- */
 
-  mainNav.addEventListener("click", (event) => {
-    if (window.innerWidth > 860) {
-      return;
-    }
+  menuToggle.addEventListener(
+    "click",
+    (event) => {
 
-    const sectionButton = event.target.closest(
-      ".nav-section-button",
-    );
-
-    if (!sectionButton) {
-      return;
-    }
-
-    /*
-     * Framework button is a dropdown button.
-     */
-    if (
-      sectionButton.classList.contains(
-        "framework-nav-button",
-      )
-    ) {
       event.preventDefault();
       event.stopPropagation();
 
+      const isOpen =
+        mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation"
+          : "Open navigation"
+      );
+    }
+  );
+
+
+  /* ---------------------------------------------------
+     MOBILE DROPDOWNS
+  --------------------------------------------------- */
+
+  mainNav.addEventListener(
+    "click",
+    (event) => {
+
+      if (window.innerWidth > 860) {
+        return;
+      }
+
+      const sectionButton =
+        event.target.closest(
+          ".nav-section-button"
+        );
+
+      if (!sectionButton) {
+        return;
+      }
+
+
       const dropdown =
-        sectionButton.closest(".nav-dropdown");
+        sectionButton.closest(
+          ".nav-dropdown"
+        );
 
       if (!dropdown) {
         return;
       }
 
-      const isActive =
-        dropdown.classList.toggle("active");
 
-      sectionButton.setAttribute(
-        "aria-expanded",
-        String(isActive),
+      /*
+       * Framework dropdown.
+       */
+
+      if (
+        sectionButton.classList.contains(
+          "framework-nav-button"
+        )
+      ) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        toggleDropdown(
+          dropdown,
+          sectionButton
+        );
+
+        return;
+      }
+
+
+      /*
+       * Normal catalogue dropdown.
+       */
+
+      const menu =
+        dropdown.querySelector(
+          ".dropdown-menu"
+        );
+
+      if (!menu) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      toggleDropdown(
+        dropdown,
+        sectionButton
       );
-
-      return;
     }
-
-    /*
-     * Normal section button.
-     *
-     * Only prevent navigation on mobile when
-     * it belongs to an actual dropdown.
-     */
-    const dropdown =
-      sectionButton.closest(".nav-dropdown");
-
-    if (!dropdown) {
-      return;
-    }
-
-    const menu =
-      dropdown.querySelector(".dropdown-menu");
-
-    if (!menu) {
-      return;
-    }
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    dropdown.classList.toggle("active");
-  });
+  );
 }
 
+
 /* =======================================================
-   Close mobile navigation
+   TOGGLE DROPDOWN
+======================================================= */
+
+function toggleDropdown(
+  dropdown,
+  button
+) {
+
+  const isActive =
+    dropdown.classList.toggle("active");
+
+  button.setAttribute(
+    "aria-expanded",
+    String(isActive)
+  );
+}
+
+
+/* =======================================================
+   CLOSE MOBILE NAVIGATION
 ======================================================= */
 
 function closeMobileNavigation() {
-  const mainNav = document.getElementById("mainNav");
-  const menuToggle = document.getElementById("menuToggle");
+
+  const mainNav =
+    document.getElementById("mainNav");
+
+  const menuToggle =
+    document.getElementById("menuToggle");
 
   if (mainNav) {
+
     mainNav.classList.remove("open");
 
-    mainNav.querySelectorAll(".nav-dropdown").forEach(
-      (dropdown) => {
-        dropdown.classList.remove("active");
-      },
-    );
+    mainNav
+      .querySelectorAll(".nav-dropdown")
+      .forEach((dropdown) => {
+
+        dropdown.classList.remove(
+          "active"
+        );
+      });
+
 
     mainNav
       .querySelectorAll(".nav-section-button")
       .forEach((button) => {
+
         button.setAttribute(
           "aria-expanded",
-          "false",
+          "false"
         );
       });
 
     /*
-     * Let CSS control display after closing.
+     * Do not manually set display.
+     * CSS controls it.
      */
     mainNav.style.display = "";
   }
 
+
   if (menuToggle) {
+
     menuToggle.setAttribute(
       "aria-expanded",
-      "false",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation"
     );
   }
 }
 
+
 /* =======================================================
-   HTML escaping
+   HTML ESCAPING
 ======================================================= */
 
 function escapeHtml(value) {
+
   return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -476,6 +788,8 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+
 function escapeAttribute(value) {
+
   return escapeHtml(value);
 }

@@ -1,0 +1,397 @@
+[
+  {
+    "project_url": "https://github.com/cookiecutter/cookiecutter-django",
+    "title": "Cookiecutter Django",
+    "description": "A production-ready Django project template with secure defaults, account registration, optional APIs, deployment settings, and test coverage.",
+    "section": "django",
+    "section_category": "starters",
+    "technologies": [
+      "Python",
+      "Django",
+      "Cookiecutter",
+      "Bootstrap",
+      "Celery",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://cookiecutter-django.readthedocs.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/cookiecutter/cookiecutter-django",
+    "categories": [
+      "Code Generators",
+      "Authentication",
+      "Frameworks",
+      "Templates",
+      "Open Source",
+      "Starter Projects"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 13595,
+      "forks": 3066,
+      "watchers": 13595,
+      "language": "Python",
+      "open_issues": 103,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "boilerplate",
+        "celery",
+        "cookiecutter",
+        "cookiecutter-django",
+        "django",
+        "django-cookiecutter",
+        "docker",
+        "hacktoberfest",
+        "heroku",
+        "project-template",
+        "python"
+      ],
+      "created_at": "2013-08-14T17:43:31Z",
+      "updated_at": "2026-08-20T21:46:35Z",
+      "pushed_at": "2026-08-20T19:20:47Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/saleor/saleor",
+    "title": "Saleor",
+    "description": "A high-performance, API-first, GraphQL-native headless commerce platform for composable ecommerce backends.",
+    "section": "django",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Python",
+      "Django",
+      "GraphQL",
+      "PostgreSQL",
+      "Celery",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://saleor.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/saleor/saleor",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "GraphQL",
+      "Backend",
+      "Databases",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 23246,
+      "forks": 6105,
+      "watchers": 23246,
+      "language": "Python",
+      "open_issues": 246,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cart",
+        "checkout",
+        "commerce",
+        "composable",
+        "e-commerce",
+        "ecommerce",
+        "graphql",
+        "headless",
+        "headless-commerce",
+        "multichannel",
+        "oms",
+        "order-management",
+        "payments",
+        "pim",
+        "python",
+        "shop",
+        "shopping-cart",
+        "store"
+      ],
+      "created_at": "2013-02-12T16:46:39Z",
+      "updated_at": "2026-08-20T19:55:27Z",
+      "pushed_at": "2026-08-20T14:52:56Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/wagtail/wagtail",
+    "title": "Wagtail",
+    "description": "An open-source Django content management system focused on flexible authoring, custom content models, accessibility, and headless content APIs.",
+    "section": "django",
+    "section_category": "cms",
+    "technologies": [
+      "Python",
+      "Django",
+      "Wagtail",
+      "PostgreSQL",
+      "MySQL",
+      "SQLite"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://wagtail.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/wagtail/wagtail",
+    "categories": [
+      "Articles",
+      "Web Development",
+      "Backend",
+      "Document Management",
+      "Accessibility",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 20444,
+      "forks": 4574,
+      "watchers": 20444,
+      "language": "Python",
+      "open_issues": 1031,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cms",
+        "django",
+        "hacktoberfest",
+        "python",
+        "wagtail"
+      ],
+      "created_at": "2014-02-03T12:41:59Z",
+      "updated_at": "2026-08-21T00:01:17Z",
+      "pushed_at": "2026-08-20T19:28:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/netbox-community/netbox",
+    "title": "NetBox",
+    "description": "A Django-based network source-of-truth and automation platform for DCIM, IPAM, circuits, virtualization, VPNs, plugins, REST, and GraphQL.",
+    "section": "django",
+    "section_category": "networking",
+    "technologies": [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Redis",
+      "GraphQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://netboxlabs.com/oss/netbox/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/netbox-community/netbox",
+    "categories": [
+      "REST API",
+      "GraphQL",
+      "Backend",
+      "Databases",
+      "Networking",
+      "Networking Tools",
+      "Plugins",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 21336,
+      "forks": 3105,
+      "watchers": 21336,
+      "language": "Python",
+      "open_issues": 224,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cabling",
+        "dcim",
+        "django",
+        "infrastructure-management",
+        "ipam",
+        "netbox",
+        "network",
+        "network-automation",
+        "python"
+      ],
+      "created_at": "2016-02-29T14:15:46Z",
+      "updated_at": "2026-08-21T00:44:37Z",
+      "pushed_at": "2026-08-20T21:20:20Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/encode/django-rest-framework",
+    "title": "Django REST Framework",
+    "description": "A flexible toolkit for building browsable REST APIs with Django, including serializers, viewsets, routers, authentication, and permissions.",
+    "section": "django",
+    "section_category": "api",
+    "technologies": [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "REST API"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.django-rest-framework.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/encode/django-rest-framework",
+    "categories": [
+      "Libraries",
+      "API",
+      "REST API",
+      "Backend",
+      "Reference",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 30133,
+      "forks": 7077,
+      "watchers": 30133,
+      "language": "Python",
+      "open_issues": 56,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "api",
+        "django",
+        "python",
+        "rest"
+      ],
+      "created_at": "2011-03-02T17:13:56Z",
+      "updated_at": "2026-08-20T18:37:03Z",
+      "pushed_at": "2026-08-19T14:15:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/django-oscar/django-oscar",
+    "title": "Django Oscar",
+    "description": "A domain-driven Django ecommerce framework designed for customizable online stores, B2C, B2B, and complex commerce workflows.",
+    "section": "django",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Python",
+      "Django",
+      "Django Oscar",
+      "Bootstrap"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://oscarcommerce.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/django-oscar/django-oscar",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "Backend",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 6618,
+      "forks": 2306,
+      "watchers": 6618,
+      "language": "Python",
+      "open_issues": 158,
+      "license": "BSD-3-Clause",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "django",
+        "django-oscar",
+        "ecommerce",
+        "oscar"
+      ],
+      "created_at": "2010-12-08T21:30:32Z",
+      "updated_at": "2026-08-20T15:31:02Z",
+      "pushed_at": "2026-08-20T15:36:03Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Shopify/shopify_django_app",
+    "title": "Shopify Django App Example",
+    "description": "A Django example app for building Shopify integrations with OAuth flow, product and order access, and the Python Shopify API.",
+    "section": "django",
+    "section_category": "integrations",
+    "technologies": [
+      "Python",
+      "Django",
+      "Shopify API",
+      "OAuth"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/Shopify/shopify_django_app",
+    "categories": [
+      "Products",
+      "API",
+      "REST API",
+      "Backend",
+      "Authentication",
+      "Plugins",
+      "Open Source",
+      "Samples"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 505,
+      "forks": 165,
+      "watchers": 505,
+      "language": "Python",
+      "open_issues": 15,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2011-08-30T19:35:19Z",
+      "updated_at": "2026-08-07T19:57:58Z",
+      "pushed_at": "2025-05-13T16:37:08Z"
+    }
+  }
+]

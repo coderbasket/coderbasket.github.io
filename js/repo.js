@@ -3,13 +3,16 @@
 // =========================================================
 // GitHub Stats
 // =========================================================
-// - NEVER requests GitHub API
-// - ONLY reads github_data saved by detail.js
-// - GitHub button always appears for valid GitHub repos
-// - No loading message
+//
+// GitHub information comes directly from project.github.
+//
+// No GitHub API request.
+// No localStorage lookup.
+// No detail.js dependency.
+//
 // =========================================================
 
-function loadGitHubStats(card, repo) {
+function loadGitHubStats(card, repo, githubData = null) {
   const statsElement = card?.querySelector("[data-stats]");
 
   if (!statsElement || !repo) {
@@ -23,41 +26,11 @@ function loadGitHubStats(card, repo) {
     return;
   }
 
-  const [owner, repository] = normalizedRepo.split("/");
-
-  const storageKey = `coderbasket_project_${owner}_${repository}`.toLowerCase();
-
-  let githubData = null;
-
-  // -------------------------------------------------------
-  // Read ONLY cached data from detail.js
-  // -------------------------------------------------------
-
-  try {
-    const stored = localStorage.getItem(storageKey);
-
-    if (stored) {
-      const project = JSON.parse(stored);
-
-      if (
-        project &&
-        typeof project === "object" &&
-        project.github_data &&
-        typeof project.github_data === "object"
-      ) {
-        githubData = project.github_data;
-      }
-    }
-  } catch (error) {
-    console.warn("[GitHubStats] Failed reading cached detail.js data:", error);
-  }
-
-  // -------------------------------------------------------
-  // Always render the GitHub button.
-  // Cached stats are optional.
-  // -------------------------------------------------------
-
-  renderGitHubStats(statsElement, githubData, normalizedRepo);
+  renderGitHubStats(
+    statsElement,
+    githubData,
+    normalizedRepo
+  );
 }
 
 // =========================================================
@@ -108,20 +81,23 @@ function renderGitHubStats(statsElement, stats, repo) {
     return;
   }
 
-  const githubUrl = `https://github.com/${normalizedRepo}`;
+  const githubUrl =
+    `https://github.com/${normalizedRepo}`;
 
   const stars =
-    stats && stats.stargazers_count != null
-      ? `<span>★ ${formatNumber(stats.stargazers_count)}</span>`
+    stats && stats.stars != null
+      ? `<span>★ ${formatNumber(stats.stars)}</span>`
       : "";
 
   const forks =
-    stats && stats.forks_count != null
-      ? `<span>⑂ ${formatNumber(stats.forks_count)}</span>`
+    stats && stats.forks != null
+      ? `<span>⑂ ${formatNumber(stats.forks)}</span>`
       : "";
 
   const language =
-    stats && stats.language ? `<span>${escapeHtml(stats.language)}</span>` : "";
+    stats && stats.language
+      ? `<span>${escapeHtml(stats.language)}</span>`
+      : "";
 
   statsElement.innerHTML = `
     ${stars}

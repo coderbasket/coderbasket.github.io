@@ -1,0 +1,95 @@
+[
+  {
+    "project_url": "https://github.com/sveltejs/svelte",
+    "title": "Svelte",
+    "description": "A compiler-based UI framework that builds efficient JavaScript applications with minimal runtime overhead.",
+    "section": "svelte",
+    "section_category": "framework",
+    "technologies": [
+      "Svelte",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://svelte.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/sveltejs/svelte",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 87980,
+      "forks": 5204,
+      "watchers": 87980,
+      "language": "JavaScript",
+      "open_issues": 1102,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "compiler",
+        "template",
+        "ui"
+      ],
+      "created_at": "2016-11-20T18:13:05Z",
+      "updated_at": "2026-08-21T00:40:50Z",
+      "pushed_at": "2026-08-20T21:56:23Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/sveltejs/kit",
+    "title": "SvelteKit",
+    "description": "The official application framework for building full-stack web applications with Svelte.",
+    "section": "svelte",
+    "section_category": "fullstack",
+    "technologies": [
+      "Svelte",
+      "SvelteKit",
+      "JavaScript",
+      "TypeScript",
+      "Vite"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://svelte.dev/docs/kit",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/sveltejs/kit",
+    "categories": [
+      "API",
+      "REST API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 20749,
+      "forks": 2308,
+      "watchers": 20749,
+      "language": "JavaScript",
+      "open_issues": 858,
+      "license": "MIT",
+      "default_branch": "version-3",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "svelte"
+      ],
+      "created_at": "2020-10-15T14:00:23Z",
+      "updated_at": "2026-08-21T00:30:06Z",
+      "pushed_at": "2026-08-21T00:31:50Z"
+    }
+  }
+]

@@ -13,5 +13,31 @@ git push origin environment
 Ctrl + Shift + S → opens Screenshot / Web Capture.
 
 
+cd C:\Users\Robel\Documents\projects\coderbasket\appscript
+node sync-local-json.js
+
+cd C:\Users\Robel\Documents\projects\coderbasket\appscript
+node split-by-section.js
+
+cd C:\Users\Robel\Documents\projects\coderbasket\appscript
+node push-dotnet.js
+
+cd C:\Users\Robel\Documents\projects\coderbasket\appscript
+node sync-section.js
+
+cd C:\Users\Robel\Documents\projects\coderbasket\appscript
+node remove-json-duplicates.js
 
 
+cd C:\Users\Robel\Documents\projects\coderbasket\appscript
+node categories.js
+
+
+Collapse all regions
+
+Windows:
+
+Ctrl + K, Ctrl + 0
+
+
+https://script.google.com/macros/s/AKfycbwOORioynh7wTcaT2bcsveXuslpzLvfntRjuxojp_h94vk3B5p1gQrDf3MARBcDiRg/exec?tablenames=true

@@ -1,0 +1,115 @@
+[
+  {
+    "project_url": "https://github.com/JetBrains/compose-multiplatform",
+    "title": "Compose Multiplatform",
+    "description": "A Kotlin Multiplatform UI framework for sharing application interfaces across Android, iOS, desktop, and web.",
+    "section": "kotlin-multiplatform",
+    "section_category": "ui",
+    "technologies": [
+      "Kotlin",
+      "Kotlin Multiplatform",
+      "Compose Multiplatform"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "mac",
+      "linux",
+      "web"
+    ],
+    "external_url": "https://www.jetbrains.com/lp/compose-multiplatform/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/JetBrains/compose-multiplatform",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 19307,
+      "forks": 1423,
+      "watchers": 19307,
+      "language": "Kotlin",
+      "open_issues": 30,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "awt",
+        "compose",
+        "declarative-ui",
+        "desktop",
+        "gui",
+        "ios",
+        "javascript",
+        "kotlin",
+        "multiplatform",
+        "reactive",
+        "swing",
+        "ui",
+        "wasm",
+        "web",
+        "webassembly"
+      ],
+      "created_at": "2020-09-07T10:40:49Z",
+      "updated_at": "2026-08-20T08:10:02Z",
+      "pushed_at": "2026-08-20T13:25:43Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/ktorio/ktor",
+    "title": "Ktor",
+    "description": "An asynchronous framework for creating connected applications in Kotlin, including servers and multiplatform clients.",
+    "section": "kotlin-multiplatform",
+    "section_category": "networking",
+    "technologies": [
+      "Kotlin",
+      "Kotlin Multiplatform",
+      "Ktor",
+      "Coroutines"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "mac",
+      "linux",
+      "web"
+    ],
+    "external_url": "https://ktor.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ktorio/ktor",
+    "categories": [
+      "API",
+      "REST API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14500,
+      "forks": 1294,
+      "watchers": 14500,
+      "language": "Kotlin",
+      "open_issues": 177,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "async",
+        "asynchronous",
+        "kotlin",
+        "web",
+        "web-framework"
+      ],
+      "created_at": "2015-08-03T16:49:36Z",
+      "updated_at": "2026-08-20T15:44:44Z",
+      "pushed_at": "2026-08-20T17:00:54Z"
+    }
+  }
+]

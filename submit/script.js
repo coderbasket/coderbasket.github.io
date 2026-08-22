@@ -16,30 +16,37 @@ function renderGrids() {
 function renderGridContainer(containerId, filterText) {
   const container = document.getElementById(containerId);
   if (!container) return;
+
   container.innerHTML = "";
 
   const query = (filterText || "").toLowerCase();
 
   for (const [id, name] of Object.entries(CATEGORIES)) {
-    // Allow filtering by either the category name or its number ID
     const displayText = `${id}. ${name}`;
-    if (query && !displayText.toLowerCase().includes(query)) continue;
+
+    if (query && !displayText.toLowerCase().includes(query)) {
+      continue;
+    }
 
     const chip = document.createElement("div");
     chip.className = "category-chip";
-    if (selectedCategories.has(Number(id))) {
+
+    // Selected categories are now stored as TEXT.
+    if (selectedCategories.has(name)) {
       chip.classList.add("selected");
     }
+
     chip.textContent = displayText;
     chip.dataset.id = id;
+    chip.dataset.category = name;
 
     chip.addEventListener("click", () => {
-      const numId = Number(id);
-      if (selectedCategories.has(numId)) {
-        selectedCategories.delete(numId);
+      if (selectedCategories.has(name)) {
+        selectedCategories.delete(name);
       } else {
-        selectedCategories.add(numId);
+        selectedCategories.add(name);
       }
+
       updateSelectedCount();
       renderGrids();
     });
@@ -411,8 +418,84 @@ function copyJson() {
   });
 }
 
-//Preview
 // Preview
+function getAvailableSections() {
+  const sections = new Set();
+
+  // Main data sections
+  if (typeof DATA_SECTIONS !== "undefined") {
+    Object.keys(DATA_SECTIONS).forEach((section) => {
+      sections.add(section);
+    });
+  }
+
+  // Framework sections
+  if (typeof FRAMEWORKS !== "undefined") {
+    Object.keys(FRAMEWORKS).forEach((section) => {
+      sections.add(section);
+    });
+  }
+
+  return [...sections];
+}
+
+function renderSectionSelector(selectedSection) {
+  const container = document.getElementById("previewSections");
+
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const sections = getAvailableSections();
+
+  sections.forEach((section) => {
+    const chip = document.createElement("button");
+
+    chip.type = "button";
+    chip.className = "preview-chip section-chip";
+
+    const isSelected = section === selectedSection;
+
+    if (isSelected) {
+      chip.classList.add("selected");
+    }
+
+    chip.textContent = section;
+
+    chip.addEventListener("click", () => {
+      selectPreviewSection(section);
+    });
+
+    container.appendChild(chip);
+  });
+}
+
+function selectPreviewSection(section) {
+  if (!section) return;
+
+  const jsonOutput = document.getElementById("jsonOutput");
+
+  if (!jsonOutput || !jsonOutput.textContent) {
+    return;
+  }
+
+  try {
+    const data = JSON.parse(jsonOutput.textContent);
+
+    // Change the actual section in the generated JSON
+    data.section = section;
+
+    // Update JSON
+    jsonOutput.textContent = JSON.stringify(data, null, 2);
+
+    // Re-render the section chips
+    renderSectionSelector(section);
+
+    console.log("[Section] Manually selected:", section);
+  } catch (error) {
+    console.error("Could not update section:", error);
+  }
+}
 function renderProjectPreview(data) {
   // ---------------------------------------------------------
   // Basic information
@@ -451,7 +534,7 @@ function renderProjectPreview(data) {
   // Section
   // ---------------------------------------------------------
 
-  document.getElementById("previewSection").textContent = data.section || "—";
+  renderSectionSelector(data.section || "");
 
   // ---------------------------------------------------------
   // Section Category
@@ -978,11 +1061,12 @@ function detectCategories(repoData, readmeText = "") {
   // SORT + LIMIT
   // =========================================================
 
-  return [...scores.entries()]
-    .filter(([id, score]) => score >= 3)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 8)
-    .map(([id]) => id);
+ return [...scores.entries()]
+  .filter(([id, score]) => score >= 3)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 8)
+  .map(([id]) => CATEGORIES[id])
+  .filter(Boolean);
 }
 
 const SECTION_DETECTION_RULES = {
@@ -1211,9 +1295,8 @@ async function submitToAppsScript(data) {
 
   try {
     const requestBody = {
-      // Sheet name comes from the detected section
       sheet: data.section,
-      email: submitterEmail,
+      email: data.submitter_email || "",
       data: data,
     };
 
@@ -1221,11 +1304,9 @@ async function submitToAppsScript(data) {
 
     const response = await fetch(APPS_SCRIPT_URL, {
       method: "POST",
-
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
       },
-
       body: JSON.stringify(requestBody),
     });
 
@@ -1257,9 +1338,10 @@ async function submitToAppsScript(data) {
           "Apps Script rejected the submission.",
       );
     }
-    // Initialize SQLite before saving locally.
+
     await CoderBasketDB.init();
     await CoderBasketDB.save(data);
+
     alert(
       `Project submitted successfully!\n\n` +
         `Section: ${data.section}\n` +
@@ -1268,7 +1350,6 @@ async function submitToAppsScript(data) {
     );
   } catch (error) {
     console.error("Submission failed:", error);
-
     alert(`Submission failed:\n\n${error.message}`);
   } finally {
     if (submitButton) {

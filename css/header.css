@@ -5,6 +5,7 @@
 .site-header {
   position: relative;
   z-index: 1000;
+    margin-top: 10px;
 }
 
 .header-inner {
@@ -17,7 +18,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-
+  text-align: center;
   color: var(--heading);
   font-size: 1.8rem;
   font-weight: 700;
@@ -35,7 +36,6 @@
   object-fit: contain;
 }
 
-
 /* =========================================================
    DESKTOP MAIN NAV
    ========================================================= */
@@ -50,8 +50,12 @@
 .nav-section-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
-  padding: 10px 16px;
+  height: 36px;
+  box-sizing: border-box;
+
+  padding: 0 16px;
 
   background: transparent;
   border: 0;
@@ -61,6 +65,7 @@
   font-size: 1.4rem;
   font-weight: 500;
 
+  line-height: 1;
   text-decoration: none;
   cursor: pointer;
 
@@ -73,15 +78,15 @@
   background: var(--light);
 }
 
-
 /* =========================================================
    DROPDOWN — DESKTOP
    ========================================================= */
 
 .nav-dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
-
 .dropdown-menu,
 .framework-dropdown-menu {
   position: absolute;
@@ -108,7 +113,6 @@
     visibility 0.2s ease;
 }
 
-
 /* Category dropdown */
 
 .dropdown-menu {
@@ -118,7 +122,6 @@
   min-width: 220px;
   padding: 8px;
 }
-
 
 /* Framework dropdown */
 
@@ -130,7 +133,6 @@
   width: 430px;
   padding: 8px;
 }
-
 
 /* Desktop hover only */
 
@@ -144,7 +146,6 @@
     transform: translateY(0);
   }
 }
-
 
 /* =========================================================
    DROPDOWN ITEMS
@@ -185,7 +186,6 @@
   margin-bottom: 6px;
 }
 
-
 /* =========================================================
    HAMBURGER
    ========================================================= */
@@ -206,20 +206,20 @@
   cursor: pointer;
 }
 
-
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 860px) {
-
   /* Hamburger */
 
   #menuToggle {
     display: block;
   }
 
-
+  .submit-navigation-link {
+    display: none;
+  }
   /* Main mobile navigation */
 
   #mainNav {
@@ -248,13 +248,11 @@
     z-index: 1000;
   }
 
-
   /* Hamburger opens menu */
 
   #mainNav.open {
     display: flex;
   }
-
 
   /* Every top-level item is vertical */
 
@@ -277,7 +275,6 @@
     border-radius: var(--radius);
   }
 
-
   /* No desktop hover background on mobile */
 
   #mainNav > a:hover,
@@ -286,13 +283,11 @@
     color: var(--text);
   }
 
-
   /* Each dropdown takes full width */
 
   .nav-dropdown {
     width: 100%;
   }
-
 
   /* =======================================================
      MOBILE DROPDOWN CLOSED
@@ -325,7 +320,6 @@
     transform: none;
   }
 
-
   /* =======================================================
      MOBILE DROPDOWN OPEN
      ======================================================= */
@@ -341,7 +335,6 @@
 
     flex-direction: column;
   }
-
 
   /* =======================================================
      MOBILE DROPDOWN ITEMS
@@ -360,7 +353,6 @@
     text-align: left;
   }
 
-
   /* No hover behavior on mobile */
 
   .nav-category-button:hover,
@@ -368,7 +360,6 @@
     background: transparent;
     color: var(--text);
   }
-
 
   /* Optional visual indicator */
 
@@ -383,4 +374,129 @@
   .nav-dropdown.active > .nav-section-button::after {
     transform: rotate(90deg);
   }
+}
+
+/* =======================================================
+   Submit navigation
+======================================================= */
+
+.submit-navigation-link {
+  background: #176b3a !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+
+  padding: 0.25rem 0.7rem !important;
+
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;
+
+  line-height: 1;
+}
+@media (max-width: 860px) {
+  #submitNavigation {
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADER ACTIONS
+   ========================================================= */
+
+.mobile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Submit + button */
+
+.mobile-submit-button {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #176b3a;
+  color: #ffffff !important;
+
+  border-radius: var(--radius);
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  line-height: 1;
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mobile-submit-button:hover {
+  background: #12572f;
+}
+
+.mobile-submit-button:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 860px) {
+  .mobile-submit-button {
+    display: inline-flex;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+}
+/* =======================================================
+   Submit navigation
+======================================================= */
+
+.submit-navigation-link {
+  background: #176b3a !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+
+  padding: 0.25rem 0.7rem !important;
+
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;
+
+  line-height: 1;
 }

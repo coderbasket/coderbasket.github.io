@@ -1,0 +1,110 @@
+[
+  {
+    "project_url": "https://github.com/laravel/laravel",
+    "title": "Laravel",
+    "description": "A PHP web application framework with expressive syntax, routing, authentication, queues, caching, and database tooling.",
+    "section": "laravel",
+    "section_category": "framework",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Composer",
+      "Blade",
+      "Eloquent"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://laravel.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/laravel/laravel",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 84831,
+      "forks": 24896,
+      "watchers": 84831,
+      "language": "Blade",
+      "open_issues": 31,
+      "license": null,
+      "default_branch": "13.x",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "framework",
+        "laravel",
+        "php"
+      ],
+      "created_at": "2011-06-08T03:06:08Z",
+      "updated_at": "2026-08-21T00:21:47Z",
+      "pushed_at": "2026-08-18T13:45:25Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/filamentphp/filament",
+    "title": "Filament",
+    "description": "An open-source UI framework for Laravel used to build admin panels, dashboards, forms, tables, and applications.",
+    "section": "laravel",
+    "section_category": "ui",
+    "technologies": [
+      "Laravel",
+      "PHP",
+      "Livewire",
+      "Filament"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://filamentphp.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/filamentphp/filament",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31857,
+      "forks": 4190,
+      "watchers": 31857,
+      "language": "PHP",
+      "open_issues": 53,
+      "license": "MIT",
+      "default_branch": "4.x",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "admin",
+        "alpine-js",
+        "builder",
+        "cms",
+        "filament",
+        "forms",
+        "laravel",
+        "laravel-admin-panel",
+        "livewire",
+        "tables",
+        "tailwind-css",
+        "tall-stack"
+      ],
+      "created_at": "2020-03-19T00:19:18Z",
+      "updated_at": "2026-08-20T22:05:29Z",
+      "pushed_at": "2026-08-18T09:50:55Z"
+    }
+  }
+]

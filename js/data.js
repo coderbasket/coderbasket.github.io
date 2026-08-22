@@ -1,44 +1,95 @@
 "use strict";
-
-/*
- * Coder Basket
- * Catalogue data configuration
- *
- * Physical development folder:
- * C:\Users\Robel\Documents\projects\coderbasket\data\
- *
- * Catalogue:
- * /data/ai.json
- * /data/dotnet.json
- * /data/flutter.json
- * /data/frameworks.json
- */
-
 const DATA_BASE_URL = "/data/";
 
 const DATA_SECTIONS = {
   ai: {
     name: "AI",
-    file: "ai.json",
     path: "/ai/",
   },
 
   dotnet: {
     name: ".NET",
-    file: "dotnet.json",
     path: "/dotnet/",
   },
 
   flutter: {
     name: "Flutter",
-    file: "flutter.json",
     path: "/flutter/",
   },
 
-  frameworks: {
-    name: "Frameworks",
-    file: "frameworks.json",
-    path: "/",
+  kotlin: {
+    name: "Kotlin",
+    path: "/kotlin/",
+  },
+
+  react: {
+    name: "React",
+    path: "/react/",
+  },
+
+  "react-native": {
+    name: "React Native",
+    path: "/react-native/",
+  },
+
+  vue: {
+    name: "Vue",
+    path: "/vue/",
+  },
+
+  angular: {
+    name: "Angular",
+    path: "/angular/",
+  },
+
+  svelte: {
+    name: "Svelte",
+    path: "/svelte/",
+  },
+
+  nextjs: {
+    name: "Next.js",
+    path: "/nextjs/",
+  },
+
+  nuxt: {
+    name: "Nuxt",
+    path: "/nuxt/",
+  },
+
+  electron: {
+    name: "Electron",
+    path: "/electron/",
+  },
+
+  tauri: {
+    name: "Tauri",
+    path: "/tauri/",
+  },
+
+  "kotlin-multiplatform": {
+    name: "Kotlin Multiplatform",
+    path: "/kotlin-multiplatform/",
+  },
+
+  laravel: {
+    name: "Laravel",
+    path: "/laravel/",
+  },
+
+  django: {
+    name: "Django",
+    path: "/django/",
+  },
+
+  spring: {
+    name: "Spring",
+    path: "/spring/",
+  },
+
+  "ruby-on-rails": {
+    name: "Ruby on Rails",
+    path: "/ruby-on-rails/",
   },
 };
 
@@ -157,6 +208,10 @@ const NAVIGATION = {
   about: {
     name: "About",
     path: "/about/",
+  },
+  submit: {
+    name: "SUBMIT",
+    path: "/submit/",
   },
 };
 

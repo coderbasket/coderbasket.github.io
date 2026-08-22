@@ -1,0 +1,355 @@
+[
+  {
+    "project_url": "https://github.com/calcom/cal.com",
+    "title": "Cal.com",
+    "description": "An open-source scheduling platform built as a full-stack Next.js application for bookings, calendars, teams, and integrations.",
+    "section": "nextjs",
+    "section_category": "applications",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://cal.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/calcom/cal.diy",
+    "categories": [
+      "Calendars & Time",
+      "Products",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 47836,
+      "forks": 14888,
+      "watchers": 47836,
+      "language": "TypeScript",
+      "open_issues": 1427,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "next-auth",
+        "nextjs",
+        "open-source",
+        "postgresql",
+        "prisma",
+        "t3-stack",
+        "tailwindcss",
+        "trpc",
+        "turborepo",
+        "typescript",
+        "zod"
+      ],
+      "created_at": "2021-03-22T13:47:42Z",
+      "updated_at": "2026-08-20T23:56:24Z",
+      "pushed_at": "2026-08-08T17:13:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/outline/outline",
+    "title": "Outline",
+    "description": "An open-source knowledge base and documentation platform with a modern React and Next.js web application.",
+    "section": "nextjs",
+    "section_category": "applications",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.getoutline.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/outline/outline",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 40263,
+      "forks": 3500,
+      "watchers": 40263,
+      "language": "TypeScript",
+      "open_issues": 78,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "docker",
+        "javascript",
+        "mobx",
+        "nodejs",
+        "react",
+        "slack",
+        "wiki"
+      ],
+      "created_at": "2016-05-22T21:31:47Z",
+      "updated_at": "2026-08-21T01:09:46Z",
+      "pushed_at": "2026-08-20T12:45:53Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/makeplane/plane",
+    "title": "Plane",
+    "description": "An open-source project management platform with a Next.js and React web application for issues, cycles, modules, roadmaps, and collaboration.",
+    "section": "nextjs",
+    "section_category": "applications",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "Django",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://plane.so/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/makeplane/plane",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps",
+      "Task Management"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 56507,
+      "forks": 5397,
+      "watchers": 56507,
+      "language": "TypeScript",
+      "open_issues": 1067,
+      "license": "AGPL-3.0",
+      "default_branch": "preview",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "boards",
+        "bug-tracker",
+        "django",
+        "docker",
+        "gantt",
+        "issue-tracker",
+        "jira",
+        "jira-alternative",
+        "kanban",
+        "linear",
+        "postgresql",
+        "product-management",
+        "project-management",
+        "project-planning",
+        "python",
+        "react",
+        "redis",
+        "typescipt",
+        "vite",
+        "work-management"
+      ],
+      "created_at": "2022-11-19T12:55:01Z",
+      "updated_at": "2026-08-21T01:09:04Z",
+      "pushed_at": "2026-08-20T12:41:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/vercel/nextjs-postgres-nextauth-tailwindcss-template",
+    "title": "Next.js Postgres Auth Starter",
+    "description": "A full-stack Next.js starter demonstrating authentication, PostgreSQL, Tailwind CSS, and modern application patterns.",
+    "section": "nextjs",
+    "section_category": "starters",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vercel/nextjs-postgres-nextauth-tailwindcss-template",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1618,
+      "forks": 580,
+      "watchers": 1618,
+      "language": "TypeScript",
+      "open_issues": 12,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "nextjs",
+        "react",
+        "tailwindcss",
+        "vercel"
+      ],
+      "created_at": "2022-11-12T22:18:35Z",
+      "updated_at": "2026-08-16T21:15:32Z",
+      "pushed_at": "2026-01-15T10:39:06Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/vercel/next.js",
+    "title": "Next.js",
+    "description": "A React framework for building full-stack web applications with server-side rendering, static generation, routing, and server-side functionality.",
+    "section": "nextjs",
+    "section_category": "framework",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://nextjs.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vercel/next.js",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 141881,
+      "forks": 31769,
+      "watchers": 141881,
+      "language": "JavaScript",
+      "open_issues": 4016,
+      "license": "MIT",
+      "default_branch": "canary",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "blog",
+        "browser",
+        "compiler",
+        "components",
+        "hybrid",
+        "nextjs",
+        "node",
+        "react",
+        "server-rendering",
+        "ssg",
+        "static",
+        "static-site-generator",
+        "universal",
+        "vercel"
+      ],
+      "created_at": "2016-10-05T23:32:51Z",
+      "updated_at": "2026-08-21T00:26:48Z",
+      "pushed_at": "2026-08-21T01:06:33Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/withastro/astro",
+    "title": "Astro",
+    "description": "A modern web framework for building fast content-driven websites with support for React, Vue, Svelte, and other UI frameworks.",
+    "section": "nextjs",
+    "section_category": "comparison",
+    "technologies": [
+      "Astro",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vue",
+      "Svelte"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://astro.build/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/withastro/astro",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 61898,
+      "forks": 3724,
+      "watchers": 61898,
+      "language": "TypeScript",
+      "open_issues": 113,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "astro",
+        "blog",
+        "browser",
+        "components",
+        "hybrid",
+        "islands",
+        "node",
+        "server",
+        "static",
+        "static-site-generator",
+        "universal"
+      ],
+      "created_at": "2021-03-15T17:19:47Z",
+      "updated_at": "2026-08-20T22:11:41Z",
+      "pushed_at": "2026-08-20T22:53:39Z"
+    }
+  }
+]

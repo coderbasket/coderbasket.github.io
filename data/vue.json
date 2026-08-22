@@ -1,0 +1,842 @@
+[
+  {
+    "project_url": "https://github.com/nuxt/ui",
+    "title": "Nuxt UI",
+    "description": "A Vue-based UI component library for building modern applications with Nuxt.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://ui.nuxt.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/nuxt/ui",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 6843,
+      "forks": 1112,
+      "watchers": 6843,
+      "language": "TypeScript",
+      "open_issues": 248,
+      "license": "MIT",
+      "default_branch": "v4",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "components",
+        "nuxt",
+        "nuxt-module",
+        "reka-ui",
+        "tailwindcss",
+        "ui",
+        "vue"
+      ],
+      "created_at": "2021-11-15T15:59:30Z",
+      "updated_at": "2026-08-20T10:50:23Z",
+      "pushed_at": "2026-08-20T12:16:48Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/primefaces/primevue",
+    "title": "PrimeVue",
+    "description": "A comprehensive Vue UI component library with a large collection of accessible components, themes, and application building blocks.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://primevue.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/primefaces/primevue",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14462,
+      "forks": 1780,
+      "watchers": 14462,
+      "language": "Vue",
+      "open_issues": 872,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [
+        "nuxt",
+        "nuxtjs",
+        "vue",
+        "vue-component",
+        "vue-components",
+        "vue-datatable",
+        "vue-datepicker",
+        "vue-grid",
+        "vue-library",
+        "vue-select",
+        "vue-table",
+        "vue-tree",
+        "vue-tree-table",
+        "vue-ui-components",
+        "vue3",
+        "vuejs"
+      ],
+      "created_at": "2018-12-04T07:04:14Z",
+      "updated_at": "2026-08-20T15:22:34Z",
+      "pushed_at": "2026-06-28T23:07:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/element-plus/element-plus",
+    "title": "Element Plus",
+    "description": "A Vue 3 component library providing a large set of UI components for building desktop-style web applications.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://element-plus.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/element-plus/element-plus",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 27684,
+      "forks": 19841,
+      "watchers": 27684,
+      "language": "TypeScript",
+      "open_issues": 1201,
+      "license": "MIT",
+      "default_branch": "dev",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "component-library",
+        "element-plus",
+        "element-ui",
+        "vue",
+        "vue-components",
+        "vuejs"
+      ],
+      "created_at": "2020-07-21T06:51:19Z",
+      "updated_at": "2026-08-20T15:49:00Z",
+      "pushed_at": "2026-08-20T04:01:45Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/slidevjs/slidev",
+    "title": "Slidev",
+    "description": "A web-based presentation tool powered by Vue and Markdown, designed for developers creating technical presentations.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Vite",
+      "TypeScript",
+      "Markdown"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://sli.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/slidevjs/slidev",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 48167,
+      "forks": 2150,
+      "watchers": 48167,
+      "language": "TypeScript",
+      "open_issues": 212,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "markdown",
+        "presentation",
+        "slides",
+        "vite",
+        "vue",
+        "vueuse"
+      ],
+      "created_at": "2021-04-24T01:25:23Z",
+      "updated_at": "2026-08-20T23:15:40Z",
+      "pushed_at": "2026-08-19T06:22:42Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/elk-zone/elk",
+    "title": "Elk",
+    "description": "A modern web client for Mastodon and the Fediverse built with Nuxt and Vue.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Mastodon",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://elk.zone/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/elk-zone/elk",
+    "categories": [
+      "Comments",
+      "Messaging",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 6031,
+      "forks": 621,
+      "watchers": 6031,
+      "language": "Vue",
+      "open_issues": 653,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "mastodon",
+        "mastodon-client",
+        "nuxt-app"
+      ],
+      "created_at": "2022-11-14T03:33:32Z",
+      "updated_at": "2026-08-20T20:28:27Z",
+      "pushed_at": "2026-08-18T12:01:29Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/ccbikai/Sink",
+    "title": "Sink",
+    "description": "A simple and fast URL shortener with analytics and modern web UI built with Nuxt and Vue.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Cloudflare",
+      "Tailwind CSS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://sink.cool/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ccbikai/Sink",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 7033,
+      "forks": 5120,
+      "watchers": 7033,
+      "language": "Vue",
+      "open_issues": 14,
+      "license": "AGPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "analytics",
+        "bitly-alternative",
+        "cloudflare",
+        "hacktoberfest",
+        "link-shortener",
+        "nuxt",
+        "nuxthub",
+        "shadcn-ui",
+        "tailwindcss",
+        "url-shortener",
+        "web-analytics"
+      ],
+      "created_at": "2024-05-05T13:53:54Z",
+      "updated_at": "2026-08-20T15:57:06Z",
+      "pushed_at": "2026-08-20T11:45:00Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/teableio/teable",
+    "title": "Teable",
+    "description": "An open-source no-code database platform with a spreadsheet-style interface and collaborative data management features.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://teable.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/teableio/teable",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 21679,
+      "forks": 1332,
+      "watchers": 21679,
+      "language": "TypeScript",
+      "open_issues": 123,
+      "license": "NOASSERTION",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ai-agent",
+        "airtable",
+        "airtable-alternative",
+        "app-builder",
+        "database",
+        "internal-tool",
+        "low-code",
+        "no-code",
+        "postgres",
+        "postgresql",
+        "sandbox",
+        "spreadsheet"
+      ],
+      "created_at": "2022-11-01T07:02:49Z",
+      "updated_at": "2026-08-21T00:40:59Z",
+      "pushed_at": "2026-08-20T14:46:49Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/CorentinTh/it-tools",
+    "title": "IT Tools",
+    "description": "A collection of useful developer and IT utilities presented through a modern web interface built with Vue.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "Vite",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://it-tools.tech/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/CorentinTh/it-tools",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 40298,
+      "forks": 5350,
+      "watchers": 40298,
+      "language": "Vue",
+      "open_issues": 815,
+      "license": "GPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "converter",
+        "developer-productivity",
+        "developer-tools",
+        "frontend",
+        "javascript",
+        "productivity",
+        "tool",
+        "tools",
+        "typescript",
+        "vuejs",
+        "website"
+      ],
+      "created_at": "2020-04-05T11:50:24Z",
+      "updated_at": "2026-08-21T01:09:00Z",
+      "pushed_at": "2026-08-16T11:35:00Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Lissy93/dashy",
+    "title": "Dashy",
+    "description": "A self-hosted dashboard for organizing applications, services, bookmarks, and monitoring tools in a customizable interface.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "JavaScript",
+      "Node.js",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://dashy.to/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/Lissy93/dashy",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 26247,
+      "forks": 1926,
+      "watchers": 26247,
+      "language": "Vue",
+      "open_issues": 35,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "awesome",
+        "dashboard",
+        "docker",
+        "homelab",
+        "homepage",
+        "mit",
+        "nodejs",
+        "organization",
+        "productivity",
+        "pwa",
+        "self-hosted",
+        "startpage",
+        "vue"
+      ],
+      "created_at": "2021-02-28T10:35:44Z",
+      "updated_at": "2026-08-20T20:55:24Z",
+      "pushed_at": "2026-08-20T13:34:35Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/antoine92190/birdnet-pi",
+    "title": "BirdNET-Pi",
+    "description": "A self-hosted bird sound identification application with a web interface for monitoring and analyzing bird activity.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Python",
+      "Linux",
+      "Machine Learning"
+    ],
+    "platforms": [
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/antoine92190/birdnet-pi",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps",
+      "Frameworks"
+    ]
+  },
+  {
+    "project_url": "https://github.com/ghostfolio/ghostfolio",
+    "title": "Ghostfolio",
+    "description": "An open-source wealth management application for tracking investments, portfolios, and financial performance.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Angular",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://ghostfol.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/ghostfolio/ghostfolio",
+    "categories": [
+      "Calendars & Time",
+      "Products",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 9162,
+      "forks": 1273,
+      "watchers": 9162,
+      "language": "TypeScript",
+      "open_issues": 291,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "etf",
+        "finance",
+        "fintech",
+        "ghostfolio",
+        "hacktoberfest",
+        "investing",
+        "nestjs",
+        "oss",
+        "personal-finance",
+        "portfolio",
+        "prisma",
+        "software",
+        "stock",
+        "tracker",
+        "trading",
+        "typescript",
+        "wealth-management",
+        "web"
+      ],
+      "created_at": "2021-04-13T19:51:25Z",
+      "updated_at": "2026-08-21T00:02:51Z",
+      "pushed_at": "2026-08-20T18:24:29Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/adyanth/openlens",
+    "title": "OpenLens",
+    "description": "An open-source Kubernetes desktop application providing a graphical interface for managing Kubernetes clusters.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Electron",
+      "TypeScript",
+      "Kubernetes"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/adyanth/openlens",
+    "categories": [
+      "Calendars & Time",
+      "Developer Tools",
+      "Testing",
+      "Web Development",
+      "DevOps",
+      "CI/CD"
+    ]
+  },
+  {
+    "project_url": "https://github.com/owncast/owncast",
+    "title": "Owncast",
+    "description": "A self-hosted live video streaming server with a customizable web interface and decentralized social features.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "Go",
+      "TypeScript",
+      "WebRTC",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://owncast.online/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/owncast/owncast",
+    "categories": [
+      "Calendars & Time",
+      "Comments",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 11466,
+      "forks": 1209,
+      "watchers": 11466,
+      "language": "Go",
+      "open_issues": 175,
+      "license": "MIT",
+      "default_branch": "develop",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "activitypub",
+        "broadcasting",
+        "chat",
+        "decentralized",
+        "federation",
+        "fediverse",
+        "golang",
+        "hacktoberfest",
+        "hls",
+        "live",
+        "livestream",
+        "owncast",
+        "rtmp",
+        "self-hosted",
+        "streaming-video",
+        "video"
+      ],
+      "created_at": "2020-05-24T00:58:13Z",
+      "updated_at": "2026-08-20T21:28:53Z",
+      "pushed_at": "2026-08-20T10:57:03Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/advplyr/audiobookshelf",
+    "title": "Audiobookshelf",
+    "description": "A self-hosted media server for managing and streaming audiobooks and podcasts with a modern web interface.",
+    "section": "vue",
+    "section_category": "applications",
+    "technologies": [
+      "Vue",
+      "JavaScript",
+      "Node.js",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.audiobookshelf.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/advplyr/audiobookshelf",
+    "categories": [
+      "Calendars & Time",
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "DevOps"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14047,
+      "forks": 1123,
+      "watchers": 14047,
+      "language": "JavaScript",
+      "open_issues": 1142,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "audiobook-manager",
+        "audiobooks",
+        "audiobookshelf",
+        "podcasts",
+        "self-hosted"
+      ],
+      "created_at": "2021-08-17T22:00:40Z",
+      "updated_at": "2026-08-20T21:53:20Z",
+      "pushed_at": "2026-08-16T22:13:48Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/naive-ui/naive-ui",
+    "title": "Naive UI",
+    "description": "A Vue 3 component library with TypeScript support and a large collection of customizable UI components.",
+    "section": "vue",
+    "section_category": "ui",
+    "technologies": [
+      "Vue",
+      "TypeScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://www.naiveui.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/naive-ui/naive-ui",
+    "categories": [
+      "Articles",
+      "Developer Tools",
+      "API",
+      "Web Development"
+    ]
+  },
+  {
+    "project_url": "https://github.com/vueuse/vueuse",
+    "title": "VueUse",
+    "description": "A comprehensive collection of Vue Composition API utilities for building modern Vue applications.",
+    "section": "vue",
+    "section_category": "libraries",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://vueuse.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vueuse/vueuse",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 22331,
+      "forks": 2928,
+      "watchers": 22331,
+      "language": "TypeScript",
+      "open_issues": 366,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "composable",
+        "utility-library",
+        "vue",
+        "vue3",
+        "vueuse"
+      ],
+      "created_at": "2019-12-14T06:44:59Z",
+      "updated_at": "2026-08-20T21:57:58Z",
+      "pushed_at": "2026-08-20T02:36:22Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/vuejs/pinia",
+    "title": "Pinia",
+    "description": "The intuitive state management library for Vue applications with TypeScript support and a simple store API.",
+    "section": "vue",
+    "section_category": "libraries",
+    "technologies": [
+      "Vue",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://pinia.vuejs.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/vuejs/pinia",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "REST API",
+      "Web Development"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 14701,
+      "forks": 1200,
+      "watchers": 14701,
+      "language": "TypeScript",
+      "open_issues": 25,
+      "license": "MIT",
+      "default_branch": "v4",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "composition-api",
+        "ssr",
+        "store",
+        "vue",
+        "vuex"
+      ],
+      "created_at": "2019-11-18T21:05:01Z",
+      "updated_at": "2026-08-20T10:32:27Z",
+      "pushed_at": "2026-08-12T12:18:07Z"
+    }
+  }
+]

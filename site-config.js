@@ -3,8 +3,7 @@
 const SITE_CONFIG = {
   name: "Coder Basket",
 
-  tagline:
-    "Useful software, libraries, tools, and projects.",
+  tagline: "Useful software, libraries, tools, and projects.",
 
   description:
     "A curated catalogue of useful software, libraries, tools, and projects.",
@@ -44,8 +43,7 @@ const SITE_CONFIG = {
   data: {
     usesLocalStorage: true,
 
-    localStoragePurpose:
-      "Remember catalogue section and category selections.",
+    localStoragePurpose: "Remember catalogue section and category selections.",
   },
 
   copyright: {

@@ -5,12 +5,42 @@
     "description": "A Flutter sample gallery",
     "section": "flutter",
     "section_category": "cupertino",
-    "technologies": ["Flutter"],
-    "platforms": ["ios", "macos"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "ios",
+      "macos"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [142, 143, 45, 181, 188]
+    "categories": [
+      "Design Systems",
+      "Themes",
+      "Controls",
+      "Linux",
+      "Samples"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 19240,
+      "forks": 7869,
+      "watchers": 19240,
+      "language": "Dart",
+      "open_issues": 17,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2018-06-08T21:28:03Z",
+      "updated_at": "2026-08-20T18:13:31Z",
+      "pushed_at": "2026-08-20T06:44:02Z"
+    },
+    "id": "eae1b724-9233-4af4-a0ac-bdd3fd17df6a",
+    "submitted_at": "2026-08-21T02:30:47.458Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/csells/flutter_ai_chat",
@@ -18,12 +48,47 @@
     "description": "A full-featured Flutter chat application using the Flutter AI Toolkit and Vertex AI for Firebase, with authenticated Cloud Firestore chat storage.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": ["Flutter"],
-    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web",
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://github.com/csells/flutter_ai_chat/raw/main/README/screenshot-mobile.png",
-    "categories": [15, 47, 56, 102, 122, 176]
+    "categories": [
+      "Messaging",
+      "LLM",
+      "AI Chat",
+      "Databases",
+      "Authentication",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 49,
+      "forks": 13,
+      "watchers": 49,
+      "language": "Dart",
+      "open_issues": 2,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2024-12-02T04:54:29Z",
+      "updated_at": "2026-07-01T05:28:16Z",
+      "pushed_at": "2025-11-29T21:45:22Z"
+    },
+    "id": "25364727-54c9-4a58-a00d-ef49fc235085",
+    "submitted_at": "2026-08-21T02:30:49.708Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/dgewe/Tinder-App-Flutter",
@@ -31,12 +96,56 @@
     "description": "A Tinder-inspired Flutter application demonstrating authentication, Firestore, Storage, profiles, matching, and chat functionality.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": ["Flutter"],
-    "platforms": ["android"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://github.com/dgewe/Tinder-App-Flutter/raw/main/github_images/chats.jpeg",
-    "categories": [39, 15, 22, 102, 122, 178]
+    "categories": [
+      "Social Network",
+      "Messaging",
+      "Profiles",
+      "Databases",
+      "Authentication",
+      "Mobile"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 183,
+      "forks": 89,
+      "watchers": 183,
+      "language": "Dart",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "android-app",
+        "chat-application",
+        "cross-platform",
+        "dart",
+        "dating-app",
+        "firebase",
+        "firebase-firestore",
+        "flutter",
+        "flutter-examples",
+        "mobile-development",
+        "tinder",
+        "tinder-clone"
+      ],
+      "created_at": "2021-03-03T22:37:56Z",
+      "updated_at": "2026-08-09T12:32:54Z",
+      "pushed_at": "2021-06-22T21:58:41Z"
+    },
+    "id": "f9c8260b-4554-49de-bc36-70f4ef28d8e8",
+    "submitted_at": "2026-08-21T02:30:51.475Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/GregoryConrad/expense-tracker",
@@ -44,12 +153,53 @@
     "description": "A simple Flutter expense tracker using Firebase Authentication and Cloud Firestore as its backend.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": ["Flutter"],
-    "platforms": ["android", "ios", "web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://opengraph.githubassets.com/1/GregoryConrad/expense-tracker",
-    "categories": [3, 102, 122, 134, 140, 176]
+    "categories": [
+      "Calculators",
+      "Databases",
+      "Authentication",
+      "Productivity",
+      "Time Tracking",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 8,
+      "forks": 3,
+      "watchers": 8,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "firebase",
+        "firebase-auth",
+        "firebase-firestore",
+        "firebase-hosting",
+        "flutter",
+        "flutter-web",
+        "flutter-web-example"
+      ],
+      "created_at": "2021-03-21T22:36:14Z",
+      "updated_at": "2025-02-28T17:54:31Z",
+      "pushed_at": "2021-04-06T21:03:30Z"
+    },
+    "id": "b7fa99ab-06be-42a1-82ee-8a8fb9c1fcee",
+    "submitted_at": "2026-08-21T02:30:52.749Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/robertodevs/flutter_ecommerce_template",
@@ -63,11 +213,43 @@
       "flutter-ecommerce-template",
       "flutter-examples"
     ],
-    "platforms": ["web"],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://robertojuarez.dev/",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://github.com/robertodevs/flutter_ecommerce_template/raw/master/assets/promotional/Mockup%20Intro.png",
-    "categories": [21, 175, 188, 176]
+    "categories": [
+      "Products",
+      "Templates",
+      "Samples",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1587,
+      "forks": 716,
+      "watchers": 1587,
+      "language": "Dart",
+      "open_issues": 13,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "flutter-app",
+        "flutter-ecommerce-template",
+        "flutter-examples",
+        "flutter-ui",
+        "ui-components"
+      ],
+      "created_at": "2020-03-12T13:31:33Z",
+      "updated_at": "2026-08-18T02:32:56Z",
+      "pushed_at": "2024-08-14T13:59:13Z"
+    },
+    "id": "afbe80b2-ea02-4e5a-b5a0-ccb9b1533795",
+    "submitted_at": "2026-08-21T02:30:54.313Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/Widle-Studio/Grocery-App",
@@ -75,12 +257,61 @@
     "description": "Flutter Grocery Shopping App (Mobile App, Web App)",
     "section": "flutter",
     "section_category": "dart",
-    "technologies": ["Dart", "dart", "ecommerce", "ecommerce-application"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "dart",
+      "ecommerce",
+      "ecommerce-application"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://github.com/Widle-Studio/Grocery-App/raw/Grocery-App/Grocery%20App/grocery-app.png",
-    "categories": [21, 26, 176]
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1138,
+      "forks": 513,
+      "watchers": 1138,
+      "language": "Dart",
+      "open_issues": 2,
+      "license": "MIT",
+      "default_branch": "Grocery-App",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "ecommerce",
+        "ecommerce-application",
+        "ecommerce-shopping-solution",
+        "ecommerce-store",
+        "flutter",
+        "flutter-app",
+        "flutter-apps",
+        "flutter-demo",
+        "flutter-material",
+        "flutter-material-app",
+        "flutter-showcase",
+        "flutter-ui",
+        "flutter-web",
+        "flutter-widget",
+        "go",
+        "grocery",
+        "material-design"
+      ],
+      "created_at": "2019-01-01T12:10:11Z",
+      "updated_at": "2026-08-18T11:52:12Z",
+      "pushed_at": "2023-04-07T07:14:42Z"
+    },
+    "id": "35447eea-381d-454c-8800-b37a4abd66be",
+    "submitted_at": "2026-08-21T02:30:55.562Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/nafishahmeddev/fintracker",
@@ -88,12 +319,40 @@
     "description": "FinTracker is a powerful expense tracker app built with Flutter, designed to help you effortlessly manage your finances.",
     "section": "flutter",
     "section_category": "general",
-    "technologies": ["Dart"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/nafishahmeddev/fintracker/master/screenshots/fintracker_screenshot.jpg",
-    "categories": [3, 134, 140, 176]
+    "categories": [
+      "Calculators",
+      "Productivity",
+      "Time Tracking",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 102,
+      "forks": 52,
+      "watchers": 102,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": true,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2023-05-11T03:55:52Z",
+      "updated_at": "2026-08-14T23:34:49Z",
+      "pushed_at": "2025-07-07T13:30:22Z"
+    },
+    "id": "871cc352-dfd7-478f-9f26-c134005dbb34",
+    "submitted_at": "2026-08-21T02:30:57.626Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/salvadordeveloper/flutter-crypto-app",
@@ -101,12 +360,52 @@
     "description": "Flutter Cryptocurrency App with Riverpod & Freezed + Dio for API REST",
     "section": "flutter",
     "section_category": "app",
-    "technologies": ["Dart", "app", "flutter", "flutter-apps"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "app",
+      "flutter",
+      "flutter-apps"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/salvadordeveloper/flutter-crypto-app/main/screenshots/cover.png",
-    "categories": [82, 83, 21, 176]
+    "categories": [
+      "API",
+      "REST API",
+      "Products",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 439,
+      "forks": 101,
+      "watchers": 439,
+      "language": "Dart",
+      "open_issues": 7,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "app",
+        "flutter",
+        "flutter-apps",
+        "flutter-demo",
+        "flutter-ui",
+        "freezed",
+        "githubactions",
+        "riverpod"
+      ],
+      "created_at": "2021-05-27T19:32:26Z",
+      "updated_at": "2026-08-04T14:14:27Z",
+      "pushed_at": "2022-10-01T15:36:29Z"
+    },
+    "id": "ebce7b9a-c69b-418c-8026-4c58e6550dec",
+    "submitted_at": "2026-08-21T02:30:59.725Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/JErazo7/flutter-crypto-wallet",
@@ -114,12 +413,48 @@
     "description": "A multiplatform (Android, iOS, Web and macOS) crypto-wallet example created with Flutter and CoinGecko API.",
     "section": "flutter",
     "section_category": "blockchain",
-    "technologies": ["Dart", "blockchain", "cryptocurrency", "flutter"],
-    "platforms": ["web"],
+    "technologies": [
+      "Dart",
+      "blockchain",
+      "cryptocurrency",
+      "flutter"
+    ],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://jerazo7.github.io/flutter-crypto-wallet/",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/JErazo7/flutter-crypto-wallet/readme/screenshots/web.png",
-    "categories": [42, 82, 83, 176]
+    "categories": [
+      "Tools",
+      "API",
+      "REST API",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 159,
+      "forks": 59,
+      "watchers": 159,
+      "language": "Dart",
+      "open_issues": 6,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "blockchain",
+        "cryptocurrency",
+        "flutter",
+        "wallet"
+      ],
+      "created_at": "2021-05-04T21:14:01Z",
+      "updated_at": "2026-08-16T04:59:48Z",
+      "pushed_at": "2022-08-12T01:55:22Z"
+    },
+    "id": "64990327-304d-4528-a547-8f32550c3b12",
+    "submitted_at": "2026-08-21T02:31:00.987Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/martinoyovo/flutter-banking-app",
@@ -127,12 +462,38 @@
     "description": "No description provided.",
     "section": "flutter",
     "section_category": "general",
-    "technologies": ["Dart"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://github.com/martinoyovo/flutter-banking-app/raw/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-01-18%20at%2003.22.23.png",
-    "categories": [41, 176]
+    "categories": [
+      "Others",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 204,
+      "forks": 65,
+      "watchers": 204,
+      "language": "Dart",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2021-09-13T17:07:26Z",
+      "updated_at": "2026-07-05T10:31:44Z",
+      "pushed_at": "2023-07-13T12:15:58Z"
+    },
+    "id": "95ea8f03-9931-4dc5-b7a1-8cee1df404ea",
+    "submitted_at": "2026-08-21T02:31:02.213Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/rrdhoi/SocialMediaApp",
@@ -140,12 +501,54 @@
     "description": "Social Media App built with Flutter - Clean & Modern UI, Clean Code, Custom Widget",
     "section": "flutter",
     "section_category": "clean-code",
-    "technologies": ["Dart", "clean-code", "clean-ui", "custom-widgets"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "clean-code",
+      "clean-ui",
+      "custom-widgets"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://user-images.githubusercontent.com/67297759/190064136-5f096750-e957-4817-8372-145b537d7a88.png",
-    "categories": [32, 39, 141, 172, 176]
+    "categories": [
+      "Widgets",
+      "Social Network",
+      "UI Libraries",
+      "Components",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 161,
+      "forks": 50,
+      "watchers": 161,
+      "language": "Dart",
+      "open_issues": 2,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "clean-code",
+        "clean-ui",
+        "custom-widgets",
+        "flutter",
+        "flutter-cubit",
+        "modern-ui",
+        "mvvm-architecture",
+        "simple-codes",
+        "social-media-app"
+      ],
+      "created_at": "2022-09-08T20:17:26Z",
+      "updated_at": "2026-08-06T01:08:03Z",
+      "pushed_at": "2024-04-11T07:46:45Z"
+    },
+    "id": "00a47d10-7c95-4983-840b-6d8f17c4af1e",
+    "submitted_at": "2026-08-21T02:31:03.557Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/mitchkoko/moonbase-template",
@@ -153,12 +556,51 @@
     "description": "Complete Flutter Social Media / Reddit type App Template with Authentication, Profiles, and Monetization w/ Subscriptions.",
     "section": "flutter",
     "section_category": "dart",
-    "technologies": ["Dart", "dart", "flutter", "revenucat"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "dart",
+      "flutter",
+      "revenucat"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://private-user-images.githubusercontent.com/29016489/479763498-89ccdf7d-d28e-4d29-a209-af5b12375b77.png",
-    "categories": [39, 22, 122, 175, 176]
+    "categories": [
+      "Social Network",
+      "Profiles",
+      "Authentication",
+      "Templates",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 133,
+      "forks": 51,
+      "watchers": 133,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "flutter",
+        "revenucat",
+        "social-media",
+        "supabase",
+        "template"
+      ],
+      "created_at": "2025-08-19T20:58:25Z",
+      "updated_at": "2026-08-11T22:57:11Z",
+      "pushed_at": "2025-09-23T05:34:08Z"
+    },
+    "id": "f27d2a8c-654c-47ce-aa01-9146f3ca7efa",
+    "submitted_at": "2026-08-21T02:31:05.644Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/CharlyKeleb/SocialMedia-App",
@@ -166,12 +608,63 @@
     "description": "A fully functional social media app built with flutter with multiple features",
     "section": "flutter",
     "section_category": "chat",
-    "technologies": ["Dart", "chat", "chat-application", "dart"],
-    "platforms": ["ios"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "chat",
+      "chat-application",
+      "dart"
+    ],
+    "platforms": [
+      "ios"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/CharlyKeleb/SocialMedia-App/main/ss/w1.png",
-    "categories": [39, 15, 22, 183]
+    "categories": [
+      "Social Network",
+      "Messaging",
+      "Profiles",
+      "iOS"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1220,
+      "forks": 382,
+      "watchers": 1220,
+      "language": "Dart",
+      "open_issues": 24,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "chat",
+        "chat-application",
+        "dart",
+        "dart-frameworks",
+        "firebase",
+        "flutter",
+        "flutter-app",
+        "flutter-apps",
+        "flutter-examples",
+        "flutter-ui",
+        "instagram",
+        "ios",
+        "social",
+        "social-media",
+        "social-network",
+        "social-networks",
+        "socialmedia",
+        "ui",
+        "uikit"
+      ],
+      "created_at": "2020-11-30T10:53:20Z",
+      "updated_at": "2026-08-19T03:35:57Z",
+      "pushed_at": "2025-03-30T00:44:45Z"
+    },
+    "id": "76698bc9-24a7-45a6-8483-80245a35401d",
+    "submitted_at": "2026-08-21T02:31:06.993Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/JideGuru/FlutterSocialAppUIKit",
@@ -179,12 +672,53 @@
     "description": "Flutter representation of a Social App Concept.",
     "section": "flutter",
     "section_category": "android",
-    "technologies": ["Dart", "android", "flutter", "ios"],
-    "platforms": ["android", "ios"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "android",
+      "flutter",
+      "ios"
+    ],
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/JideGuru/FlutterSocialAppUIKit/master/ss/1.png",
-    "categories": [39, 141, 22, 182, 183]
+    "categories": [
+      "Social Network",
+      "UI Libraries",
+      "Profiles",
+      "Android",
+      "iOS"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1984,
+      "forks": 509,
+      "watchers": 1984,
+      "language": "Dart",
+      "open_issues": 6,
+      "license": "WTFPL",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "flutter",
+        "ios",
+        "mobile",
+        "social-media",
+        "ui",
+        "uikit"
+      ],
+      "created_at": "2019-07-14T16:20:04Z",
+      "updated_at": "2026-08-20T15:22:38Z",
+      "pushed_at": "2024-03-22T21:59:49Z"
+    },
+    "id": "da884271-295e-44e8-8f15-8bba5c8317af",
+    "submitted_at": "2026-08-21T02:31:09.119Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard",
@@ -192,12 +726,49 @@
     "description": "Responsive Admin Panel or Dashboard using Flutter",
     "section": "flutter",
     "section_category": "app",
-    "technologies": ["Dart", "app", "dashboard", "dashboard-templates"],
-    "platforms": ["web"],
+    "technologies": [
+      "Dart",
+      "app",
+      "dashboard",
+      "dashboard-templates"
+    ],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://youtu.be/_uOgXpEHNbc",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/raw/master/ui.png",
-    "categories": [8, 146, 175, 176]
+    "categories": [
+      "Dashboard",
+      "Responsive Design",
+      "Templates",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 7108,
+      "forks": 2004,
+      "watchers": 7108,
+      "language": "Dart",
+      "open_issues": 34,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "app",
+        "dashboard",
+        "dashboard-templates",
+        "flutter",
+        "web"
+      ],
+      "created_at": "2021-05-03T05:37:39Z",
+      "updated_at": "2026-08-18T23:06:08Z",
+      "pushed_at": "2026-07-28T16:33:48Z"
+    },
+    "id": "2eff4573-4556-49f8-91dc-3d6a2116ddca",
+    "submitted_at": "2026-08-21T02:31:10.355Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/FlutterFlareLine/FlareLine",
@@ -205,12 +776,56 @@
     "description": "flutter admin dashboard for web",
     "section": "flutter",
     "section_category": "admin",
-    "technologies": ["Dart", "admin", "admin-panel", "ai"],
-    "platforms": ["web"],
+    "technologies": [
+      "Dart",
+      "admin",
+      "admin-panel",
+      "ai"
+    ],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://flareline.vercel.app",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/FlutterFlareLine/FlareLine/master/snapshots%2Fscreenshot20240408.png",
-    "categories": [8, 91, 96, 175, 176]
+    "categories": [
+      "Dashboard",
+      "Web Development",
+      "Frontend",
+      "Templates",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 158,
+      "forks": 46,
+      "watchers": 158,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "admin",
+        "admin-panel",
+        "ai",
+        "chatgpt",
+        "dart",
+        "dashboard",
+        "flutter",
+        "flutter-ai",
+        "flutter-dashboard",
+        "flutter-template",
+        "web"
+      ],
+      "created_at": "2024-03-28T07:27:45Z",
+      "updated_at": "2026-08-19T21:07:54Z",
+      "pushed_at": "2024-11-13T15:30:03Z"
+    },
+    "id": "c393757b-5608-4c57-a6d0-93269c8e2b2e",
+    "submitted_at": "2026-08-21T02:31:11.780Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/maxlam79/focus_flutter_ui_kit",
@@ -218,12 +833,49 @@
     "description": "The Focus Flutter UI Kit is a comprehensive Pure Flutter 3.x UI Kit that includes the Admin Dashboard, Templates, and other useful UX/UI widgets with a minimalist visual aesthetic, making it generally suitable for corporate/enterprise applications on the web or tablet.",
     "section": "flutter",
     "section_category": "admin-panel",
-    "technologies": ["Dart", "admin-panel", "dashboard", "flutter"],
-    "platforms": ["web"],
+    "technologies": [
+      "Dart",
+      "admin-panel",
+      "dashboard",
+      "flutter"
+    ],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://focusuidemo.pages.dev",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://github.com/maxlam79/focus_flutter_ui_kit/raw/main/assets/demo-background/github-banner.jpg?raw=true",
-    "categories": [8, 32, 141, 175, 176]
+    "categories": [
+      "Dashboard",
+      "Widgets",
+      "UI Libraries",
+      "Templates",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 52,
+      "forks": 12,
+      "watchers": 52,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "admin-panel",
+        "dashboard",
+        "flutter",
+        "ui-kit"
+      ],
+      "created_at": "2025-04-16T06:41:36Z",
+      "updated_at": "2026-07-24T02:57:28Z",
+      "pushed_at": "2026-06-11T09:20:40Z"
+    },
+    "id": "962b92aa-b74d-41b7-afee-e7725970affb",
+    "submitted_at": "2026-08-21T02:31:13.128Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/theakhinabraham/doable-todo-list-app",
@@ -231,12 +883,65 @@
     "description": "An offline Flutter todo list app using Dart & SQLite Database with notification reminders & latest UI designs.",
     "section": "flutter",
     "section_category": "app",
-    "technologies": ["Dart", "app", "dart", "database"],
-    "platforms": ["web"],
+    "technologies": [
+      "Dart",
+      "app",
+      "dart",
+      "database"
+    ],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://akhinabraham.com/doable",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://github.com/theakhinabraham/doable-todo-list-app/raw/main/img/add-task-preview.png",
-    "categories": [12, 17, 103, 134, 136, 176]
+    "categories": [
+      "Lists",
+      "Notifications",
+      "SQLite",
+      "Productivity",
+      "Task Management",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 102,
+      "forks": 84,
+      "watchers": 102,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "app",
+        "dart",
+        "database",
+        "db",
+        "flutter",
+        "list",
+        "local",
+        "mini-project",
+        "mobile",
+        "mobile-app",
+        "object-box",
+        "production",
+        "project",
+        "sqflite",
+        "sqlite",
+        "todo",
+        "todo-list-app",
+        "todo-list-project",
+        "todolistapp"
+      ],
+      "created_at": "2024-02-07T05:41:17Z",
+      "updated_at": "2026-08-13T08:06:00Z",
+      "pushed_at": "2026-05-27T17:53:48Z"
+    },
+    "id": "dca8b23a-9418-4788-a92e-630c03da8c01",
+    "submitted_at": "2026-08-21T02:31:14.379Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/Davies-K/Taskez",
@@ -244,12 +949,62 @@
     "description": "A Productivity Mobile Application UI kit built with Flutter",
     "section": "flutter",
     "section_category": "android",
-    "technologies": ["Dart", "android", "android-ui-kit", "flutter"],
-    "platforms": ["android", "ios", "macos"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "android",
+      "android-ui-kit",
+      "flutter"
+    ],
+    "platforms": [
+      "android",
+      "ios",
+      "macos"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://github.com/Davies-K/Taskez/raw/main/screenshots/sample-1.png",
-    "categories": [134, 141, 175, 182, 183, 180]
+    "categories": [
+      "Productivity",
+      "UI Libraries",
+      "Templates",
+      "Android",
+      "iOS",
+      "macOS"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 970,
+      "forks": 193,
+      "watchers": 970,
+      "language": "Dart",
+      "open_issues": 1,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "android-ui-kit",
+        "flutter",
+        "flutter-example",
+        "flutter-ui",
+        "flutter-ui-kit",
+        "ios",
+        "ios-ui-kit",
+        "macos",
+        "productivity",
+        "productivity-ui",
+        "provider-architecture",
+        "slack",
+        "task-manager"
+      ],
+      "created_at": "2021-07-22T23:54:23Z",
+      "updated_at": "2026-08-13T13:10:07Z",
+      "pushed_at": "2023-11-04T17:54:53Z"
+    },
+    "id": "0bb7fb0b-b390-4326-883d-76db82c920d7",
+    "submitted_at": "2026-08-21T02:31:15.660Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/hamaluik/timecop",
@@ -257,12 +1012,43 @@
     "description": "A time tracking app that respects your privacy and gets the job done without being fancy.",
     "section": "flutter",
     "section_category": "hacktoberfest",
-    "technologies": ["Dart", "hacktoberfest"],
-    "platforms": ["web"],
+    "technologies": [
+      "Dart",
+      "hacktoberfest"
+    ],
+    "platforms": [
+      "web"
+    ],
     "external_url": "https://timecop.app/",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://github.com/hamaluik/timecop/raw/master/screenshots/ios/dark/en/iPhone%20Xs%20Max-Portrait-editor.jpg",
-    "categories": [134, 140, 125, 176]
+    "categories": [
+      "Productivity",
+      "Time Tracking",
+      "Privacy",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 880,
+      "forks": 172,
+      "watchers": 880,
+      "language": "Dart",
+      "open_issues": 46,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "hacktoberfest"
+      ],
+      "created_at": "2020-02-26T05:22:12Z",
+      "updated_at": "2026-08-17T18:50:29Z",
+      "pushed_at": "2026-08-17T18:49:51Z"
+    },
+    "id": "3bd85b6c-cacb-4472-88a5-8395de84cf8d",
+    "submitted_at": "2026-08-21T02:31:17.413Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/ChunhThanhDe/cinema-booking",
@@ -270,12 +1056,64 @@
     "description": "A Completed Functional Flutter app for booking movie tickets, built with Flutter Clean Template, BLoC, REST API, Firebase Auth, and Unit Tests.",
     "section": "flutter",
     "section_category": "chunhthanhde",
-    "technologies": ["Dart", "chunhthanhde", "cinema-app", "cinema-booking"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "chunhthanhde",
+      "cinema-app",
+      "cinema-booking"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://github.com/ChunhThanhDe/cinema-booking/raw/main/media/images/home_screen.jpeg",
-    "categories": [21, 82, 83, 122, 80, 175, 176]
+    "categories": [
+      "Products",
+      "API",
+      "REST API",
+      "Authentication",
+      "Testing",
+      "Templates",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 87,
+      "forks": 30,
+      "watchers": 87,
+      "language": "Dart",
+      "open_issues": 10,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "chunhthanhde",
+        "cinema-app",
+        "cinema-booking",
+        "firebase-auth",
+        "flutter",
+        "flutter-app",
+        "flutter-application",
+        "flutter-bloc",
+        "flutter-clean-architecture",
+        "flutter-demo",
+        "flutter-examples",
+        "flutter-movie",
+        "flutter-ui",
+        "googlemap",
+        "movie-app-flutter",
+        "real-world-project",
+        "sqflite"
+      ],
+      "created_at": "2024-12-01T06:22:28Z",
+      "updated_at": "2026-08-14T16:18:10Z",
+      "pushed_at": "2026-06-22T08:13:59Z"
+    },
+    "id": "6f9ffe41-9ce0-4149-b125-b2d5fa035b38",
+    "submitted_at": "2026-08-21T02:31:18.700Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter",
@@ -283,12 +1121,57 @@
     "description": "A Flutter music streaming application that allows users to play audio files from local storage. The app features a beautiful neumorphic UI design and provides a smooth user experience for browsing and playing music.",
     "section": "flutter",
     "section_category": "flutter",
-    "technologies": ["Dart", "flutter", "flutter-app", "flutter-apps"],
-    "platforms": ["web"],
-    "external_url": null,
-    "youtube_url": null,
+    "technologies": [
+      "Dart",
+      "flutter",
+      "flutter-app",
+      "flutter-apps"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter/master/demo.png",
-    "categories": [19, 38, 126, 130, 131, 176]
+    "categories": [
+      "Playback",
+      "Neomorphism",
+      "Audio",
+      "Media Player",
+      "Streaming",
+      "Cross Platform"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 89,
+      "forks": 30,
+      "watchers": 89,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "flutter",
+        "flutter-app",
+        "flutter-apps",
+        "flutter-example",
+        "flutter-examples",
+        "flutter-music",
+        "flutter-music-app",
+        "flutter-music-player",
+        "flutter-template",
+        "flutter-ui",
+        "flutter-widget"
+      ],
+      "created_at": "2023-08-06T07:41:47Z",
+      "updated_at": "2026-08-02T14:13:09Z",
+      "pushed_at": "2023-12-15T20:53:19Z"
+    },
+    "id": "de718ef6-ee65-4add-9f98-61e004e9d0ca",
+    "submitted_at": "2026-08-21T02:31:20.873Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/ErfanRht/MovieLab",
@@ -296,11 +1179,246 @@
     "description": "An open source movie tracker and movie finder.",
     "section": "flutter",
     "section_category": "android",
-    "technologies": ["Dart", "android", "dart", "flutter"],
-    "platforms": ["android"],
+    "technologies": [
+      "Dart",
+      "android",
+      "dart",
+      "flutter"
+    ],
+    "platforms": [
+      "android"
+    ],
     "external_url": "https://ErfanRht.github.io/MovieLab-Intro",
-    "youtube_url": null,
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/ErfanRht/MovieLab/master/screenshots/mockups/MovieLab_mockup2.jpg",
-    "categories": [23, 127, 130, 184, 182]
+    "categories": [
+      "Search",
+      "Video",
+      "Media Player",
+      "Open Source",
+      "Android"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 455,
+      "forks": 100,
+      "watchers": 455,
+      "language": "Dart",
+      "open_issues": 4,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "dart",
+        "flutter",
+        "flutter-app",
+        "flutter-apps",
+        "getx",
+        "hive",
+        "imdb",
+        "imdb-api",
+        "movie-database",
+        "movie-tracker",
+        "movie-tracking",
+        "movies"
+      ],
+      "created_at": "2022-02-05T08:09:36Z",
+      "updated_at": "2026-08-19T10:41:01Z",
+      "pushed_at": "2022-09-27T06:29:47Z"
+    },
+    "id": "1cbb4ea7-4378-4c12-bd9b-63ca06cffde7",
+    "submitted_at": "2026-08-21T02:31:22.661Z",
+    "status": "pending"
+  },
+  {
+    "id": "7358093f-81ac-4979-92e9-2bdddb88aed0",
+    "project_url": "https://github.com/ABausG/home_widget",
+    "title": "home_widget",
+    "description": "Flutter Package for Easier Creation of Home Screen Widgets",
+    "section": "flutter",
+    "section_category": "general",
+    "technologies": [
+      "Dart"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://github.com/ABausG/home_widget/raw/main/.github/assets/demo_ios.png?raw=true",
+    "categories": [
+      "Docker",
+      "Containers",
+      "API",
+      "Documentation",
+      "Libraries & SDKs"
+    ],
+    "submitted_at": "2026-08-20T13:28:43.245Z",
+    "status": "pending",
+    "github": {
+      "stars": 969,
+      "forks": 287,
+      "watchers": 969,
+      "language": "Dart",
+      "open_issues": 29,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2020-09-28T16:57:48Z",
+      "updated_at": "2026-08-09T16:29:46Z",
+      "pushed_at": "2026-07-29T12:11:40Z"
+    }
+  },
+  {
+    "id": "431e83ff-d709-4da8-beb0-97bd448e336a",
+    "project_url": "https://github.com/yunweneric/flutter-open-ui",
+    "title": "flutter-open-ui",
+    "description": " Flutter open-source project that's all about pushing the boundaries of User Interfaces! 🌟✨ If you're a Flutter enthusiast or just someone who appreciates stunning UI/UX, this project is tailor-made for you! 🚀🎨",
+    "section": "flutter",
+    "section_category": "dart",
+    "technologies": [
+      "C++",
+      "dart",
+      "designers",
+      "flutter"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/yunweneric/flutter-open-ui/main/showcase/thumbnail.png",
+    "categories": [
+      "Docker",
+      "Containers",
+      "Tutorials",
+      "Open Source"
+    ],
+    "submitted_at": "2026-08-20T13:31:25.381Z",
+    "status": "pending",
+    "github": {
+      "stars": 524,
+      "forks": 133,
+      "watchers": 524,
+      "language": "C++",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "designers",
+        "flutter",
+        "flutter-apps",
+        "flutter-ui",
+        "user-experience",
+        "user-interface"
+      ],
+      "created_at": "2022-03-31T18:44:30Z",
+      "updated_at": "2026-07-14T10:05:31Z",
+      "pushed_at": "2025-03-20T20:34:33Z"
+    }
+  },
+  {
+    "id": "8ca91429-9cff-4231-92be-ab911ac23e0b",
+    "project_url": "https://github.com/nank1ro/flutter-shadcn-ui",
+    "title": "flutter-shadcn-ui",
+    "description": "shadcn-ui ported in Flutter. Awesome UI components for Flutter, fully customizable.",
+    "section": "flutter",
+    "section_category": "flutter",
+    "technologies": [
+      "Dart",
+      "flutter",
+      "shadcn",
+      "shadcn-ui"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://flutter-shadcn-ui.mariuti.com",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/nank1ro/flutter-shadcn-ui",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Containers",
+      "Command Line",
+      "API",
+      "Documentation",
+      "Libraries & SDKs",
+      "Open Source"
+    ],
+    "submitted_at": "2026-08-20T13:33:18.919Z",
+    "status": "pending",
+    "github": {
+      "stars": 2782,
+      "forks": 191,
+      "watchers": 2782,
+      "language": "Dart",
+      "open_issues": 36,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "flutter",
+        "shadcn",
+        "shadcn-ui",
+        "shadcnui",
+        "ui"
+      ],
+      "created_at": "2024-01-05T14:54:24Z",
+      "updated_at": "2026-08-20T12:10:04Z",
+      "pushed_at": "2026-08-16T03:24:13Z"
+    }
+  },
+  {
+    "id": "a90e1c12-9822-4a76-8378-3336ce238ff0",
+    "project_url": "https://github.com/hamen/material-3-skill",
+    "title": "material-3-skill",
+    "description": "Material Design 3 skill for Claude Code — 30+ components, design tokens, theming, responsive layout, and MD3 compliance audit",
+    "section": "flutter",
+    "section_category": "general",
+    "technologies": [
+      "Shell"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/hamen/material-3-skill/master/assets/m3-hero.png",
+    "categories": [
+      "AI Agents",
+      "AI Coding",
+      "Docker",
+      "CLI",
+      "JavaScript",
+      "Containers",
+      "Command Line",
+      "Web Development"
+    ],
+    "submitted_at": "2026-08-20T13:43:57.236Z",
+    "status": "pending",
+    "github": {
+      "stars": 1267,
+      "forks": 65,
+      "watchers": 1267,
+      "language": "Shell",
+      "open_issues": 2,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-04-09T14:19:09Z",
+      "updated_at": "2026-08-20T12:16:27Z",
+      "pushed_at": "2026-07-15T22:10:50Z"
+    }
   }
 ]

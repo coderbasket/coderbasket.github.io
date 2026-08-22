@@ -1,0 +1,211 @@
+[
+  {
+    "project_url": "https://github.com/kizitonwose/Calendar",
+    "title": "Calendar",
+    "description": "A highly customizable calendar view and compose library for Android and Kotlin Multiplatform.",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "calendar",
+      "calendar-library"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://user-images.githubusercontent.com/15170090/197389318-b3925b65-aed9-4e1f-a778-ba73007cbdf7.png",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 5587,
+      "forks": 581,
+      "watchers": 5587,
+      "language": "Kotlin",
+      "open_issues": 10,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "calendar-library",
+        "calendarview",
+        "compose",
+        "compose-calendar",
+        "compose-calendar-library",
+        "compose-multiplatform",
+        "date",
+        "date-range",
+        "date-range-picker",
+        "datepicker",
+        "heatmap-calendar",
+        "kmp",
+        "kmp-library",
+        "kotlin",
+        "kotlin-multiplatform",
+        "month-calendar",
+        "week-calendar",
+        "year-calendar"
+      ],
+      "created_at": "2019-04-20T14:43:36Z",
+      "updated_at": "2026-08-20T14:53:47Z",
+      "pushed_at": "2026-08-13T09:41:50Z"
+    },
+    "id": "614cc618-3314-4dd0-bb25-d227331d2b22",
+    "submitted_at": "2026-08-21T02:31:42.443Z",
+    "status": "pending"
+  },
+  {
+    "project_url": "https://github.com/FossifyOrg/Calendar",
+    "title": "Calendar",
+    "description": "A simple calendar with events, customizable widgets and no ads.",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "calendar",
+      "foss"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "https://www.fossify.org",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/FossifyOrg/Calendar/main/graphics/icon.webp",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 2100,
+      "forks": 203,
+      "watchers": 2100,
+      "language": "Kotlin",
+      "open_issues": 312,
+      "license": "GPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "foss",
+        "kotlin",
+        "open-source"
+      ],
+      "created_at": "2022-05-15T21:47:59Z",
+      "updated_at": "2026-08-20T21:34:54Z",
+      "pushed_at": "2026-08-17T18:55:35Z"
+    },
+    "id": "bb0e98b9-beef-4944-8efe-492e7b40d793",
+    "submitted_at": "2026-08-21T02:31:43.480Z",
+    "status": "pending"
+  },
+  {
+    "project_url": "https://github.com/SimpleMobileTools/Simple-Calendar",
+    "title": "Simple-Calendar",
+    "description": "A simple calendar with events, tasks, customizable colors, widgets and no ads.",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "android-development",
+      "calendar"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "https://www.simplemobiletools.com",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/SimpleMobileTools/Simple-Calendar/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpeg",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 3649,
+      "forks": 1167,
+      "watchers": 3649,
+      "language": "Kotlin",
+      "open_issues": 306,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "android-development",
+        "calendar",
+        "freedom",
+        "kotlin",
+        "open-source"
+      ],
+      "created_at": "2016-01-26T21:02:54Z",
+      "updated_at": "2026-08-19T13:40:20Z",
+      "pushed_at": "2024-06-26T15:37:04Z"
+    },
+    "id": "850ed394-e6fc-46be-b321-7b954fda900c",
+    "submitted_at": "2026-08-21T02:31:44.553Z",
+    "status": "pending"
+  },
+  {
+    "project_url": "https://github.com/CleverPumpkin/CrunchyCalendar",
+    "title": "CrunchyCalendar",
+    "description": "A beautiful material calendar with endless scroll, range selection and a lot more!",
+    "section": "kotlin",
+    "section_category": "android",
+    "technologies": [
+      "Kotlin",
+      "android",
+      "calendar",
+      "calendar-view"
+    ],
+    "platforms": [
+      "android"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/CleverPumpkin/CrunchyCalendar/master/images/Cover.png",
+    "categories": [
+      "Calendars & Time"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 647,
+      "forks": 43,
+      "watchers": 647,
+      "language": "Kotlin",
+      "open_issues": 14,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "calendar-view",
+        "custom-view",
+        "java",
+        "jcenter",
+        "kotlin",
+        "material-calendar",
+        "material-design",
+        "range-selection"
+      ],
+      "created_at": "2018-05-25T11:51:19Z",
+      "updated_at": "2026-07-20T22:45:55Z",
+      "pushed_at": "2024-02-05T13:23:30Z"
+    },
+    "id": "e54797f2-34fb-45dc-ac9f-aa483af9fd27",
+    "submitted_at": "2026-08-21T02:31:45.644Z",
+    "status": "pending"
+  }
+]

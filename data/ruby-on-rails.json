@@ -1,0 +1,408 @@
+[
+  {
+    "project_url": "https://github.com/discourse/discourse",
+    "title": "Discourse",
+    "description": "An open-source community discussion platform with a Ruby on Rails backend, Ember frontend, chat, themes, plugins, and REST APIs.",
+    "section": "ruby-on-rails",
+    "section_category": "community",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Ember.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.discourse.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/discourse/discourse",
+    "categories": [
+      "Comments",
+      "Messaging",
+      "REST API",
+      "Web Development",
+      "Backend",
+      "Accessibility",
+      "Plugins",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 47686,
+      "forks": 8994,
+      "watchers": 47686,
+      "language": "Ruby",
+      "open_issues": 249,
+      "license": "GPL-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "discourse",
+        "ember",
+        "forum",
+        "javascript",
+        "postgresql",
+        "rails",
+        "ruby"
+      ],
+      "created_at": "2013-01-12T00:25:55Z",
+      "updated_at": "2026-08-21T00:18:24Z",
+      "pushed_at": "2026-08-21T00:33:02Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/mastodon/mastodon",
+    "title": "Mastodon",
+    "description": "A self-hosted federated social networking server using Ruby on Rails, ActivityPub, PostgreSQL, Redis, Sidekiq, and React.",
+    "section": "ruby-on-rails",
+    "section_category": "social",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "React",
+      "Redux",
+      "PostgreSQL",
+      "Redis",
+      "Sidekiq",
+      "ActivityPub"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://joinmastodon.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/mastodon/mastodon",
+    "categories": [
+      "Messaging",
+      "Photos",
+      "Share",
+      "Social Network",
+      "REST API",
+      "Video",
+      "WebSocket",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 50234,
+      "forks": 7487,
+      "watchers": 50234,
+      "language": "Ruby",
+      "open_issues": 4493,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "activity-stream",
+        "activitypub",
+        "docker",
+        "fediverse",
+        "mastodon",
+        "microblog",
+        "social-network",
+        "social-web",
+        "webfinger"
+      ],
+      "created_at": "2016-02-22T15:01:25Z",
+      "updated_at": "2026-08-20T23:15:46Z",
+      "pushed_at": "2026-08-20T19:58:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/spree/spree",
+    "title": "Spree",
+    "description": "An open-source headless ecommerce platform with a Rails backend, REST API, TypeScript SDK, and Next.js storefront support.",
+    "section": "ruby-on-rails",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "REST API",
+      "TypeScript",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://spreecommerce.org/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/spree/spree",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "REST API",
+      "Web Development",
+      "Backend",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 15633,
+      "forks": 5293,
+      "watchers": 15633,
+      "language": "Ruby",
+      "open_issues": 134,
+      "license": "BSD-3-Clause",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "b2b-commerce",
+        "e-commerce",
+        "ecommerce",
+        "ecommerce-api",
+        "ecommerce-framework",
+        "ecommerce-platform",
+        "headless",
+        "headless-commerce",
+        "headless-ecommerce",
+        "marketplace",
+        "multi-tenant",
+        "multi-vendor",
+        "multi-vendor-ecommerce",
+        "open-source",
+        "spree-commerce"
+      ],
+      "created_at": "2008-03-10T14:45:35Z",
+      "updated_at": "2026-08-20T19:43:28Z",
+      "pushed_at": "2026-08-20T18:47:01Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/solidusio/solidus",
+    "title": "Solidus",
+    "description": "A complete Ruby on Rails ecommerce solution with RESTful API, admin backend, core commerce models, and sample data.",
+    "section": "ruby-on-rails",
+    "section_category": "ecommerce",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Solidus",
+      "REST API"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://solidus.io/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/solidusio/solidus",
+    "categories": [
+      "Products",
+      "Shopping Cart",
+      "Stores",
+      "REST API",
+      "Backend",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 5321,
+      "forks": 1401,
+      "watchers": 5321,
+      "language": "Ruby",
+      "open_issues": 117,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ecommerce",
+        "ecommerce-framework",
+        "ecommerce-platform",
+        "hacktoberfest",
+        "rails",
+        "ruby",
+        "solidus",
+        "storefront"
+      ],
+      "created_at": "2015-02-18T20:41:58Z",
+      "updated_at": "2026-08-20T15:45:49Z",
+      "pushed_at": "2026-08-19T20:28:49Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/redmica/redmica",
+    "title": "RedMica",
+    "description": "A Redmine-compatible Ruby on Rails project management distribution with issue tracking, releases, and early access to Redmine features.",
+    "section": "ruby-on-rails",
+    "section_category": "project-management",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Redmine",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.redmica.jp/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/redmica/redmica",
+    "categories": [
+      "Calendars & Time",
+      "Task Management",
+      "Document Management",
+      "Time Tracking",
+      "Frameworks",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 119,
+      "forks": 19,
+      "watchers": 119,
+      "language": "Ruby",
+      "open_issues": 1,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "issue-tracking",
+        "project-management",
+        "redmine",
+        "ruby",
+        "ruby-on-rails"
+      ],
+      "created_at": "2019-10-23T02:10:11Z",
+      "updated_at": "2026-08-20T22:55:22Z",
+      "pushed_at": "2026-08-20T22:54:58Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/forem/forem",
+    "title": "Forem",
+    "description": "An open-source Rails community platform powering DEV, with articles, discussion, profiles, feeds, PostgreSQL, and pgvector-backed recommendations.",
+    "section": "ruby-on-rails",
+    "section_category": "community",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "Preact",
+      "PostgreSQL",
+      "pgvector",
+      "Kamal"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://www.forem.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/forem/forem",
+    "categories": [
+      "Activity Feeds",
+      "Comments",
+      "Profiles",
+      "Articles",
+      "Social Network",
+      "Machine Learning",
+      "Recommendation Systems",
+      "Web Development",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 22768,
+      "forks": 4179,
+      "watchers": 22768,
+      "language": "Ruby",
+      "open_issues": 131,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "community",
+        "discussion",
+        "feedback",
+        "hacktoberfest",
+        "open-source",
+        "rails",
+        "ruby"
+      ],
+      "created_at": "2016-11-13T23:02:13Z",
+      "updated_at": "2026-08-20T16:06:43Z",
+      "pushed_at": "2026-08-20T16:03:52Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/gitlabhq/gitlabhq",
+    "title": "GitLab CE Mirror",
+    "description": "A Ruby on Rails application for source code collaboration with repositories, merge requests, issue tracking, wiki, and CI/CD pipelines.",
+    "section": "ruby-on-rails",
+    "section_category": "devops",
+    "technologies": [
+      "Ruby",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Redis",
+      "Git",
+      "CI/CD"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://about.gitlab.com/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/gitlabhq/gitlabhq",
+    "categories": [
+      "Developer Tools",
+      "Testing",
+      "Backend",
+      "DevOps",
+      "CI/CD",
+      "Task Management",
+      "Open Source"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 24533,
+      "forks": 5984,
+      "watchers": 24533,
+      "language": "Ruby",
+      "open_issues": 37,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "gitlab",
+        "rails",
+        "ruby"
+      ],
+      "created_at": "2011-10-02T16:25:27Z",
+      "updated_at": "2026-08-21T00:18:01Z",
+      "pushed_at": "2026-08-21T00:46:49Z"
+    }
+  }
+]

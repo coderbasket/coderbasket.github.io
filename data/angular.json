@@ -1,0 +1,244 @@
+[
+  {
+    "project_url": "https://github.com/angular/angular",
+    "title": "Angular",
+    "description": "A TypeScript-based web application framework for building scalable single-page and enterprise applications.",
+    "section": "angular",
+    "section_category": "framework",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "RxJS"
+    ],
+    "platforms": [
+      "web",
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://angular.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/angular/angular",
+    "categories": [
+      "Developer Tools",
+      "API",
+      "Web Development",
+      "Backend"
+    ],
+    "github": {
+      "stars": 101002,
+      "forks": 27435,
+      "watchers": 101002,
+      "language": "TypeScript",
+      "open_issues": 1162,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "javascript",
+        "pwa",
+        "typescript",
+        "web",
+        "web-framework",
+        "web-performance"
+      ],
+      "created_at": "2014-09-18T16:12:01Z",
+      "updated_at": "2026-08-21T00:44:06Z",
+      "pushed_at": "2026-08-19T20:48:22Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/angular/angular-cli",
+    "title": "Angular CLI",
+    "description": "The official command-line interface for creating, developing, testing, building, and maintaining Angular applications.",
+    "section": "angular",
+    "section_category": "framework",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "JavaScript"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://angular.dev/tools/cli",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/angular/angular-cli",
+    "categories": [
+      "Developer Tools",
+      "CLI",
+      "Command Line",
+      "Web Development"
+    ],
+    "github": {
+      "stars": 27000,
+      "forks": 11900,
+      "watchers": 967,
+      "language": "TypeScript",
+      "open_issues": 278,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "angular-cli",
+        "cli",
+        "typescript"
+      ],
+      "created_at": "2016-03-17T20:46:03Z",
+      "updated_at": null,
+      "pushed_at": null
+    }
+  },
+  {
+    "project_url": "https://github.com/angular/components",
+    "title": "Angular Components",
+    "description": "Angular Material and Component Dev Kit providing production-ready UI components, utilities, accessibility features, and interaction patterns for Angular applications.",
+    "section": "angular",
+    "section_category": "framework",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Angular Material",
+      "CDK"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://material.angular.dev/",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/angular/components",
+    "categories": [
+      "UI Components",
+      "Design Systems",
+      "Developer Tools",
+      "Web Development",
+      "Accessibility"
+    ],
+    "github": {
+      "stars": 0,
+      "forks": 6800,
+      "watchers": 0,
+      "language": "TypeScript",
+      "open_issues": 1200,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "angular-material",
+        "material-design",
+        "cdk",
+        "components"
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "pushed_at": null
+    }
+  },
+  {
+    "project_url": "https://github.com/angular/angularfire",
+    "title": "AngularFire",
+    "description": "Angular integration for Firebase providing Angular-friendly APIs for authentication, Firestore, storage, analytics, messaging, and other Firebase services.",
+    "section": "angular",
+    "section_category": "framework",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Firebase",
+      "RxJS"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://firebase.google.com/docs/web/setup",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/angular/angularfire",
+    "categories": [
+      "Backend",
+      "Cloud",
+      "Cloud Storage",
+      "Databases",
+      "Authentication",
+      "API",
+      "Web Development"
+    ],
+    "github": {
+      "stars": 7800,
+      "forks": 2200,
+      "watchers": 262,
+      "language": "TypeScript",
+      "open_issues": null,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "firebase",
+        "firestore",
+        "cloud-functions",
+        "rxjs",
+        "realtime-database"
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "pushed_at": null
+    }
+  },
+  {
+    "project_url": "https://github.com/angular/angular-eslint",
+    "title": "Angular ESLint",
+    "description": "ESLint tooling for Angular projects, including Angular-specific lint rules, template linting, schematics, builders, and utilities.",
+    "section": "angular",
+    "section_category": "framework",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "ESLint",
+      "Node.js"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "external_url": "https://github.com/angular-eslint/angular-eslint",
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/angular-eslint/angular-eslint",
+    "categories": [
+      "Developer Tools",
+      "Code Quality",
+      "CLI",
+      "Web Development"
+    ],
+    "github": {
+      "stars": 1800,
+      "forks": 273,
+      "watchers": 23,
+      "language": "TypeScript",
+      "open_issues": 26,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "angular",
+        "eslint",
+        "typescript",
+        "linting"
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "pushed_at": null
+    }
+  }
+]
