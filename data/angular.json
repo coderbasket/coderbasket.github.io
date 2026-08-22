@@ -240,5 +240,61 @@
       "updated_at": null,
       "pushed_at": null
     }
+  },
+  {
+  "project_url": "https://github.com/orizens/echoes-player",
+  "title": "echoes-player",
+  "description": "Echoes Player: the missing Media Player experience for Youtube - Built with Angular (9), ngrx (9), Angular CLI, Boostrap (SASS), Youtube api",
+  "section": "angular",
+  "section_category": "angular",
+  "technologies": [
+    "TypeScript",
+    "angular",
+    "angular-cli",
+    "angular-example"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "external_url": "https://echoesplayer.netlify.app",
+  "youtube_url": null,
+  "image_url": "https://user-images.githubusercontent.com/878660/53698116-72b76d80-3da6-11e9-82be-f185c1951cf9.png",
+  "categories": [
+    "Docker",
+    "Developer Tools",
+    "CLI",
+    "JavaScript",
+    "TypeScript",
+    "Cloud Computing",
+    "Containers",
+    "Testing"
+  ],
+  "submitter_email": null,
+  "github": {
+    "stars": 840,
+    "forks": 335,
+    "watchers": 840,
+    "language": "TypeScript",
+    "open_issues": 8,
+    "license": "MIT",
+    "default_branch": "master",
+    "archived": false,
+    "is_fork": false,
+    "topics": [
+      "angular",
+      "angular-cli",
+      "angular-example",
+      "angular-example-app",
+      "bootstrap",
+      "ngrx",
+      "ngrx-example",
+      "redux",
+      "sass",
+      "typescript"
+    ],
+    "created_at": "2017-04-17T06:55:56Z",
+    "updated_at": "2026-06-19T19:30:01Z",
+    "pushed_at": "2024-06-04T21:27:58Z"
   }
+}
 ]
