@@ -407,5 +407,60 @@
       "updated_at": "2026-08-20T23:55:02Z",
       "pushed_at": "2026-08-20T22:23:21Z"
     }
+  },
+  {
+  "project_url": "https://github.com/enaqx/awesome-react",
+  "title": "awesome-react",
+  "description": "A collection of awesome things regarding React ecosystem",
+  "section": "react",
+  "section_category": "awesome",
+  "technologies": [
+    "awesome",
+    "awesome-list",
+    "javascript"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "external_url": null,
+  "youtube_url": null,
+  "image_url": "https://opengraph.githubassets.com/1/enaqx/awesome-react",
+  "categories": [
+    "SQLite",
+    "Docker",
+    "CLI",
+    "JavaScript",
+    "TypeScript",
+    "GraphQL",
+    "Containers",
+    "Frameworks"
+  ],
+  "submitter_email": null,
+  "github": {
+    "stars": 74366,
+    "forks": 7626,
+    "watchers": 74366,
+    "language": null,
+    "open_issues": 82,
+    "license": null,
+    "default_branch": "master",
+    "archived": false,
+    "is_fork": false,
+    "topics": [
+      "awesome",
+      "awesome-list",
+      "javascript",
+      "react",
+      "react-apps",
+      "react-native",
+      "react-tutorial",
+      "samples",
+      "tutorial",
+      "typescript"
+    ],
+    "created_at": "2014-08-06T05:31:44Z",
+    "updated_at": "2026-08-22T10:15:27Z",
+    "pushed_at": "2026-08-20T07:58:12Z"
   }
+}
 ]

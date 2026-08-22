@@ -27,12 +27,16 @@
 
 <body>
 
-   
+
     <!-- =====================================================
          MAIN
          ===================================================== -->
 
     <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
         <section class="hero">
 
@@ -58,13 +62,39 @@
         </section>
 
 
+        <!-- =====================================================
+             FEATURED NEW SUBMISSIONS
+             Loaded dynamically by featured.js
+        ====================================================== -->
+
+        <section id="featuredProjects" class="featured-projects" hidden>
+
+            <div class="container">
+
+                <div class="featured-layout">
+
+                    <!-- Match category sidebar width -->
+                    <div class="featured-sidebar-space"></div>
+
+                    <!-- Align with catalog-content -->
+                    <div class="featured-content">
+                        <!-- featured.js renders here -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATALOG
+        ====================================================== -->
+
         <section class="catalog-section">
 
             <div class="container catalog-layout">
-
-                <!-- =====================================================
-                     CATEGORY NAVIGATION (Rendered by sidebar.js)
-                     ===================================================== -->
 
                 <aside id="categorySidebar" class="category-sidebar">
                     <!-- Rendered dynamically by sidebar.js -->
@@ -75,14 +105,23 @@
 
                     <div class="catalog-header">
 
-                        <h2>Featured Projects</h2>
+                        <h2>Projects & Tools</h2>
 
                         <div class="sort-select-wrapper">
+
                             <select id="sortSelect" aria-label="Sort options">
-                                <option value="featured">Featured</option>
-                                <option value="name">Name</option>
-                                <option value="recent">Recently Updated</option>
+
+
+                                <option value="name">
+                                    Name
+                                </option>
+
+                                <option value="recent">
+                                    Recently Updated
+                                </option>
+
                             </select>
+
                         </div>
 
                     </div>
@@ -128,6 +167,7 @@
     <script src="/js/app.js" defer></script>
     <script src="/site-config.js"></script>
     <script src="/js/footer.js"></script>
+    <!-- <script src="/js/featured.js" defer></script> -->
 
 </body>
 

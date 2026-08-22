@@ -136,7 +136,7 @@ a:focus {
   width: 100%;
   max-width: var(--container-width);
   margin-inline: auto;
-  padding-inline: 20px;
+  padding-inline: 0px;
 }
 
 #loadMore[hidden] {
@@ -151,7 +151,7 @@ a:focus {
   position: relative;
   overflow: hidden;
 
-  padding: 16px 0 12px;
+  padding: 16px 0 0px;
 
   text-align: center;
 
@@ -164,7 +164,7 @@ a:focus {
 
 .hero p {
   max-width: 620px;
-  margin: 0 auto 36px;
+  margin: 0 auto 8px;
 
   color: var(--text);
   font-size: 1.8rem;
@@ -254,7 +254,7 @@ a:focus {
    ========================================================= */
 
 .catalog-section {
-  padding: 50px 0 80px;
+  padding: 10px 0 10px;
 }
 
 .catalog-layout {
@@ -262,7 +262,7 @@ a:focus {
 
   grid-template-columns: 220px minmax(0, 1fr);
 
-  gap: 40px;
+  gap: 4px;
 }
 
 .catalog-content {
@@ -278,7 +278,7 @@ a:focus {
   align-items: center;
   justify-content: space-between;
 
-  gap: 16px;
+  gap: 8px;
 
   margin-bottom: 20px;
   padding-bottom: 12px;
@@ -1032,7 +1032,7 @@ a:focus {
   }
 
   .catalog-section {
-    padding: 24px 0 50px;
+    padding: 10px 0 10px;
   }
 
   .catalog-layout {

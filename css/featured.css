@@ -1,0 +1,448 @@
+/* =========================================================
+   FEATURED PROJECTS
+   ========================================================= */
+
+.featured-projects-section {
+  width: 100%;
+  margin: 0 0 0px;
+  padding: 0;
+}
+
+.featured-projects-section .container {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FEATURED HEADER
+   ========================================================= */
+
+.featured-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin: 0 0 12px;
+}
+
+.featured-label {
+  display: none;
+
+  margin-bottom: 2px;
+
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.featured-header h2 {
+  margin: 0;
+
+  color: var(--heading);
+
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.featured-view-all {
+  flex-shrink: 0;
+
+  color: var(--primary);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.featured-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   FEATURED HORIZONTAL SCROLLER
+   ========================================================= */
+
+.featured-project-grid {
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  flex-wrap: nowrap !important;
+
+  align-items: stretch;
+
+  width: 100%;
+
+  gap: 10px;
+
+  margin: 0;
+  padding: 0 2px 8px;
+
+  box-sizing: border-box;
+
+  overflow-x: auto !important;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   FEATURED CARD
+   ========================================================= */
+
+.featured-project-card {
+  display: flex;
+
+  flex: 0 0 155px !important;
+
+  flex-direction: column;
+
+  width: 155px !important;
+  min-width: 155px !important;
+  max-width: 155px !important;
+
+  min-height: 0;
+
+  box-sizing: border-box;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  scroll-snap-align: start;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.featured-project-card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CARD TOP / IMAGE
+   ========================================================= */
+
+.featured-card-top {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  background: var(--light);
+
+  overflow: hidden;
+}
+
+.featured-project-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.featured-project-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
+  color: var(--primary);
+
+  font-family: monospace;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   NEW BADGE
+   ========================================================= */
+
+.featured-card-badge {
+  position: absolute;
+
+  top: 5px;
+  left: 5px;
+
+  padding: 3px 5px;
+
+  background: #176b3a;
+
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.featured-card-body {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 9px;
+}
+
+.featured-card-body h3 {
+  margin: 0 0 5px;
+
+  font-size: 0.88rem;
+
+  line-height: 1.25;
+}
+
+.featured-card-body h3 a {
+  color: var(--heading);
+
+  text-decoration: none;
+}
+
+.featured-card-body h3 a:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.featured-description {
+  display: -webkit-box;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 0.7rem;
+
+  line-height: 1.35;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.featured-category {
+  display: inline-block;
+
+  width: fit-content;
+
+  max-width: 100%;
+
+  margin-top: 7px;
+
+  padding: 3px 5px;
+
+  background: var(--light);
+
+  border-radius: 4px;
+
+  color: var(--text);
+
+  font-size: 0.6rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
+
+.featured-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding: 6px 9px;
+
+  border-top: 1px solid var(--border);
+}
+
+.featured-github-link {
+  color: var(--primary);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.featured-github-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   HORIZONTAL SCROLLBAR
+   ========================================================= */
+
+.featured-project-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.featured-project-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.featured-project-grid::-webkit-scrollbar-thumb {
+  background: var(--border);
+
+  border-radius: 10px;
+}
+
+.featured-project-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .featured-project-card {
+    flex: 0 0 150px !important;
+
+    width: 150px !important;
+    min-width: 150px !important;
+    max-width: 150px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .featured-projects-section {
+    margin: 0 0 20px;
+  }
+
+  .featured-header {
+    margin-bottom: 10px;
+  }
+
+  .featured-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .featured-label {
+    font-size: 0.7rem;
+  }
+
+  .featured-view-all {
+    font-size: 0.78rem;
+  }
+
+  .featured-project-grid {
+    gap: 8px;
+
+    padding-bottom: 7px;
+  }
+
+  .featured-project-card {
+    flex: 0 0 135px !important;
+
+    width: 135px !important;
+    min-width: 135px !important;
+    max-width: 135px !important;
+  }
+
+  .featured-card-top {
+    height: 60px;
+  }
+
+  .featured-card-body {
+    padding: 8px;
+  }
+
+  .featured-card-body h3 {
+    font-size: 0.8rem;
+  }
+
+  .featured-description {
+    font-size: 0.66rem;
+  }
+
+  .featured-card-footer {
+    padding: 5px 8px;
+  }
+
+  .featured-github-link {
+    font-size: 0.64rem;
+  }
+
+}
