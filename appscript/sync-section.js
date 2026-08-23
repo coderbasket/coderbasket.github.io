@@ -70,7 +70,7 @@ const path = require("path");
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbywPDM_egWmshTchU72gBmC8e38MSgD0A0PhAgBz6x8qnezZq6ABrSTeB8VCbk0ayXv/exec";
-const TABLE_NAME = "windows";
+const TABLE_NAME = "submitted";
 const PROJECT_ROOT = path.resolve(__dirname, "..");
 
 const DATA_DIR = path.join(PROJECT_ROOT, "data");
@@ -391,7 +391,7 @@ function getProjectId(project) {
     return "";
   }
 
-  const id = String(project.id || "").trim();
+  const id = String(project.project_url || "").trim();
 
   if (id) {
     return id;
