@@ -5,23 +5,12 @@
     "description": "A Flutter sample gallery",
     "section": "flutter",
     "section_category": "cupertino",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "ios",
-      "macos"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["ios", "macos"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://opengraph.githubassets.com/1/flutter/samples",
-    "categories": [
-      "Design Systems",
-      "Themes",
-      "Controls",
-      "Linux",
-      "Samples"
-    ],
+    "categories": ["Design Systems", "Themes", "Controls", "Linux", "Samples"],
     "submitter_email": null,
     "github": {
       "stars": 19240,
@@ -48,17 +37,8 @@
     "description": "A full-featured Flutter chat application using the Flutter AI Toolkit and Vertex AI for Firebase, with authenticated Cloud Firestore chat storage.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web",
-      "windows",
-      "macos",
-      "linux"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["android", "ios", "web", "windows", "macos", "linux"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/csells/flutter_ai_chat/raw/main/README/screenshot-mobile.png",
@@ -96,12 +76,8 @@
     "description": "A Tinder-inspired Flutter application demonstrating authentication, Firestore, Storage, profiles, matching, and chat functionality.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["android"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/dgewe/Tinder-App-Flutter/raw/main/github_images/chats.jpeg",
@@ -153,14 +129,8 @@
     "description": "A simple Flutter expense tracker using Firebase Authentication and Cloud Firestore as its backend.",
     "section": "flutter",
     "section_category": "firebase",
-    "technologies": [
-      "Flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "technologies": ["Flutter"],
+    "platforms": ["android", "ios", "web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://opengraph.githubassets.com/1/GregoryConrad/expense-tracker",
@@ -213,18 +183,11 @@
       "flutter-ecommerce-template",
       "flutter-examples"
     ],
-    "platforms": [
-      "web"
-    ],
+    "platforms": ["web"],
     "external_url": "https://robertojuarez.dev/",
     "youtube_url": "",
     "image_url": "https://github.com/robertodevs/flutter_ecommerce_template/raw/master/assets/promotional/Mockup%20Intro.png",
-    "categories": [
-      "Products",
-      "Templates",
-      "Samples",
-      "Cross Platform"
-    ],
+    "categories": ["Products", "Templates", "Samples", "Cross Platform"],
     "submitter_email": null,
     "github": {
       "stars": 1587,
@@ -257,23 +220,12 @@
     "description": "Flutter Grocery Shopping App (Mobile App, Web App)",
     "section": "flutter",
     "section_category": "dart",
-    "technologies": [
-      "Dart",
-      "dart",
-      "ecommerce",
-      "ecommerce-application"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "dart", "ecommerce", "ecommerce-application"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/Widle-Studio/Grocery-App/raw/Grocery-App/Grocery%20App/grocery-app.png",
-    "categories": [
-      "Products",
-      "Shopping Cart",
-      "Cross Platform"
-    ],
+    "categories": ["Products", "Shopping Cart", "Cross Platform"],
     "submitter_email": null,
     "github": {
       "stars": 1138,
@@ -319,12 +271,8 @@
     "description": "FinTracker is a powerful expense tracker app built with Flutter, designed to help you effortlessly manage your finances.",
     "section": "flutter",
     "section_category": "general",
-    "technologies": [
-      "Dart"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/nafishahmeddev/fintracker/master/screenshots/fintracker_screenshot.jpg",
@@ -360,24 +308,12 @@
     "description": "Flutter Cryptocurrency App with Riverpod & Freezed + Dio for API REST",
     "section": "flutter",
     "section_category": "app",
-    "technologies": [
-      "Dart",
-      "app",
-      "flutter",
-      "flutter-apps"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "app", "flutter", "flutter-apps"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/salvadordeveloper/flutter-crypto-app/main/screenshots/cover.png",
-    "categories": [
-      "API",
-      "REST API",
-      "Products",
-      "Cross Platform"
-    ],
+    "categories": ["API", "REST API", "Products", "Cross Platform"],
     "submitter_email": null,
     "github": {
       "stars": 439,
@@ -413,24 +349,12 @@
     "description": "A multiplatform (Android, iOS, Web and macOS) crypto-wallet example created with Flutter and CoinGecko API.",
     "section": "flutter",
     "section_category": "blockchain",
-    "technologies": [
-      "Dart",
-      "blockchain",
-      "cryptocurrency",
-      "flutter"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "blockchain", "cryptocurrency", "flutter"],
+    "platforms": ["web"],
     "external_url": "https://jerazo7.github.io/flutter-crypto-wallet/",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/JErazo7/flutter-crypto-wallet/readme/screenshots/web.png",
-    "categories": [
-      "Tools",
-      "API",
-      "REST API",
-      "Cross Platform"
-    ],
+    "categories": ["Tools", "API", "REST API", "Cross Platform"],
     "submitter_email": null,
     "github": {
       "stars": 159,
@@ -442,12 +366,7 @@
       "default_branch": "master",
       "archived": false,
       "is_fork": false,
-      "topics": [
-        "blockchain",
-        "cryptocurrency",
-        "flutter",
-        "wallet"
-      ],
+      "topics": ["blockchain", "cryptocurrency", "flutter", "wallet"],
       "created_at": "2021-05-04T21:14:01Z",
       "updated_at": "2026-08-16T04:59:48Z",
       "pushed_at": "2022-08-12T01:55:22Z"
@@ -462,19 +381,12 @@
     "description": "No description provided.",
     "section": "flutter",
     "section_category": "general",
-    "technologies": [
-      "Dart"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/martinoyovo/flutter-banking-app/raw/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-01-18%20at%2003.22.23.png",
-    "categories": [
-      "Others",
-      "Cross Platform"
-    ],
+    "categories": ["Others", "Cross Platform"],
     "submitter_email": null,
     "github": {
       "stars": 204,
@@ -501,15 +413,8 @@
     "description": "Social Media App built with Flutter - Clean & Modern UI, Clean Code, Custom Widget",
     "section": "flutter",
     "section_category": "clean-code",
-    "technologies": [
-      "Dart",
-      "clean-code",
-      "clean-ui",
-      "custom-widgets"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "clean-code", "clean-ui", "custom-widgets"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://user-images.githubusercontent.com/67297759/190064136-5f096750-e957-4817-8372-145b537d7a88.png",
@@ -556,15 +461,8 @@
     "description": "Complete Flutter Social Media / Reddit type App Template with Authentication, Profiles, and Monetization w/ Subscriptions.",
     "section": "flutter",
     "section_category": "dart",
-    "technologies": [
-      "Dart",
-      "dart",
-      "flutter",
-      "revenucat"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "dart", "flutter", "revenucat"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://private-user-images.githubusercontent.com/29016489/479763498-89ccdf7d-d28e-4d29-a209-af5b12375b77.png",
@@ -608,24 +506,12 @@
     "description": "A fully functional social media app built with flutter with multiple features",
     "section": "flutter",
     "section_category": "chat",
-    "technologies": [
-      "Dart",
-      "chat",
-      "chat-application",
-      "dart"
-    ],
-    "platforms": [
-      "ios"
-    ],
+    "technologies": ["Dart", "chat", "chat-application", "dart"],
+    "platforms": ["ios"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/CharlyKeleb/SocialMedia-App/main/ss/w1.png",
-    "categories": [
-      "Social Network",
-      "Messaging",
-      "Profiles",
-      "iOS"
-    ],
+    "categories": ["Social Network", "Messaging", "Profiles", "iOS"],
     "submitter_email": null,
     "github": {
       "stars": 1220,
@@ -672,16 +558,8 @@
     "description": "Flutter representation of a Social App Concept.",
     "section": "flutter",
     "section_category": "android",
-    "technologies": [
-      "Dart",
-      "android",
-      "flutter",
-      "ios"
-    ],
-    "platforms": [
-      "android",
-      "ios"
-    ],
+    "technologies": ["Dart", "android", "flutter", "ios"],
+    "platforms": ["android", "ios"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/JideGuru/FlutterSocialAppUIKit/master/ss/1.png",
@@ -726,15 +604,8 @@
     "description": "Responsive Admin Panel or Dashboard using Flutter",
     "section": "flutter",
     "section_category": "app",
-    "technologies": [
-      "Dart",
-      "app",
-      "dashboard",
-      "dashboard-templates"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "app", "dashboard", "dashboard-templates"],
+    "platforms": ["web"],
     "external_url": "https://youtu.be/_uOgXpEHNbc",
     "youtube_url": "",
     "image_url": "https://github.com/abuanwar072/Flutter-Responsive-Admin-Panel-or-Dashboard/raw/master/ui.png",
@@ -755,13 +626,7 @@
       "default_branch": "master",
       "archived": false,
       "is_fork": false,
-      "topics": [
-        "app",
-        "dashboard",
-        "dashboard-templates",
-        "flutter",
-        "web"
-      ],
+      "topics": ["app", "dashboard", "dashboard-templates", "flutter", "web"],
       "created_at": "2021-05-03T05:37:39Z",
       "updated_at": "2026-08-18T23:06:08Z",
       "pushed_at": "2026-07-28T16:33:48Z"
@@ -776,15 +641,8 @@
     "description": "flutter admin dashboard for web",
     "section": "flutter",
     "section_category": "admin",
-    "technologies": [
-      "Dart",
-      "admin",
-      "admin-panel",
-      "ai"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "admin", "admin-panel", "ai"],
+    "platforms": ["web"],
     "external_url": "https://flareline.vercel.app",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/FlutterFlareLine/FlareLine/master/snapshots%2Fscreenshot20240408.png",
@@ -833,15 +691,8 @@
     "description": "The Focus Flutter UI Kit is a comprehensive Pure Flutter 3.x UI Kit that includes the Admin Dashboard, Templates, and other useful UX/UI widgets with a minimalist visual aesthetic, making it generally suitable for corporate/enterprise applications on the web or tablet.",
     "section": "flutter",
     "section_category": "admin-panel",
-    "technologies": [
-      "Dart",
-      "admin-panel",
-      "dashboard",
-      "flutter"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "admin-panel", "dashboard", "flutter"],
+    "platforms": ["web"],
     "external_url": "https://focusuidemo.pages.dev",
     "youtube_url": "",
     "image_url": "https://github.com/maxlam79/focus_flutter_ui_kit/raw/main/assets/demo-background/github-banner.jpg?raw=true",
@@ -863,12 +714,7 @@
       "default_branch": "main",
       "archived": false,
       "is_fork": false,
-      "topics": [
-        "admin-panel",
-        "dashboard",
-        "flutter",
-        "ui-kit"
-      ],
+      "topics": ["admin-panel", "dashboard", "flutter", "ui-kit"],
       "created_at": "2025-04-16T06:41:36Z",
       "updated_at": "2026-07-24T02:57:28Z",
       "pushed_at": "2026-06-11T09:20:40Z"
@@ -883,15 +729,8 @@
     "description": "An offline Flutter todo list app using Dart & SQLite Database with notification reminders & latest UI designs.",
     "section": "flutter",
     "section_category": "app",
-    "technologies": [
-      "Dart",
-      "app",
-      "dart",
-      "database"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "app", "dart", "database"],
+    "platforms": ["web"],
     "external_url": "https://akhinabraham.com/doable",
     "youtube_url": "",
     "image_url": "https://github.com/theakhinabraham/doable-todo-list-app/raw/main/img/add-task-preview.png",
@@ -949,17 +788,8 @@
     "description": "A Productivity Mobile Application UI kit built with Flutter",
     "section": "flutter",
     "section_category": "android",
-    "technologies": [
-      "Dart",
-      "android",
-      "android-ui-kit",
-      "flutter"
-    ],
-    "platforms": [
-      "android",
-      "ios",
-      "macos"
-    ],
+    "technologies": ["Dart", "android", "android-ui-kit", "flutter"],
+    "platforms": ["android", "ios", "macos"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/Davies-K/Taskez/raw/main/screenshots/sample-1.png",
@@ -1012,13 +842,8 @@
     "description": "A time tracking app that respects your privacy and gets the job done without being fancy.",
     "section": "flutter",
     "section_category": "hacktoberfest",
-    "technologies": [
-      "Dart",
-      "hacktoberfest"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "hacktoberfest"],
+    "platforms": ["web"],
     "external_url": "https://timecop.app/",
     "youtube_url": "",
     "image_url": "https://github.com/hamaluik/timecop/raw/master/screenshots/ios/dark/en/iPhone%20Xs%20Max-Portrait-editor.jpg",
@@ -1039,9 +864,7 @@
       "default_branch": "master",
       "archived": false,
       "is_fork": false,
-      "topics": [
-        "hacktoberfest"
-      ],
+      "topics": ["hacktoberfest"],
       "created_at": "2020-02-26T05:22:12Z",
       "updated_at": "2026-08-17T18:50:29Z",
       "pushed_at": "2026-08-17T18:49:51Z"
@@ -1056,15 +879,8 @@
     "description": "A Completed Functional Flutter app for booking movie tickets, built with Flutter Clean Template, BLoC, REST API, Firebase Auth, and Unit Tests.",
     "section": "flutter",
     "section_category": "chunhthanhde",
-    "technologies": [
-      "Dart",
-      "chunhthanhde",
-      "cinema-app",
-      "cinema-booking"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "chunhthanhde", "cinema-app", "cinema-booking"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/ChunhThanhDe/cinema-booking/raw/main/media/images/home_screen.jpeg",
@@ -1121,15 +937,8 @@
     "description": "A Flutter music streaming application that allows users to play audio files from local storage. The app features a beautiful neumorphic UI design and provides a smooth user experience for browsing and playing music.",
     "section": "flutter",
     "section_category": "flutter",
-    "technologies": [
-      "Dart",
-      "flutter",
-      "flutter-app",
-      "flutter-apps"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "flutter", "flutter-app", "flutter-apps"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/Hamad-Anwar/Neumorphic-Music_Player-Flutter/master/demo.png",
@@ -1179,25 +988,12 @@
     "description": "An open source movie tracker and movie finder.",
     "section": "flutter",
     "section_category": "android",
-    "technologies": [
-      "Dart",
-      "android",
-      "dart",
-      "flutter"
-    ],
-    "platforms": [
-      "android"
-    ],
+    "technologies": ["Dart", "android", "dart", "flutter"],
+    "platforms": ["android"],
     "external_url": "https://ErfanRht.github.io/MovieLab-Intro",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/ErfanRht/MovieLab/master/screenshots/mockups/MovieLab_mockup2.jpg",
-    "categories": [
-      "Search",
-      "Video",
-      "Media Player",
-      "Open Source",
-      "Android"
-    ],
+    "categories": ["Search", "Video", "Media Player", "Open Source", "Android"],
     "submitter_email": null,
     "github": {
       "stars": 455,
@@ -1239,12 +1035,8 @@
     "description": "Flutter Package for Easier Creation of Home Screen Widgets",
     "section": "flutter",
     "section_category": "general",
-    "technologies": [
-      "Dart"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://github.com/ABausG/home_widget/raw/main/.github/assets/demo_ios.png?raw=true",
@@ -1280,24 +1072,12 @@
     "description": " Flutter open-source project that's all about pushing the boundaries of User Interfaces! 🌟✨ If you're a Flutter enthusiast or just someone who appreciates stunning UI/UX, this project is tailor-made for you! 🚀🎨",
     "section": "flutter",
     "section_category": "dart",
-    "technologies": [
-      "C++",
-      "dart",
-      "designers",
-      "flutter"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["C++", "dart", "designers", "flutter"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/yunweneric/flutter-open-ui/main/showcase/thumbnail.png",
-    "categories": [
-      "Docker",
-      "Containers",
-      "Tutorials",
-      "Open Source"
-    ],
+    "categories": ["Docker", "Containers", "Tutorials", "Open Source"],
     "submitted_at": "2026-08-20T13:31:25.381Z",
     "status": "pending",
     "github": {
@@ -1331,15 +1111,8 @@
     "description": "shadcn-ui ported in Flutter. Awesome UI components for Flutter, fully customizable.",
     "section": "flutter",
     "section_category": "flutter",
-    "technologies": [
-      "Dart",
-      "flutter",
-      "shadcn",
-      "shadcn-ui"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Dart", "flutter", "shadcn", "shadcn-ui"],
+    "platforms": ["web"],
     "external_url": "https://flutter-shadcn-ui.mariuti.com",
     "youtube_url": "",
     "image_url": "https://opengraph.githubassets.com/1/nank1ro/flutter-shadcn-ui",
@@ -1365,13 +1138,7 @@
       "default_branch": "main",
       "archived": false,
       "is_fork": false,
-      "topics": [
-        "flutter",
-        "shadcn",
-        "shadcn-ui",
-        "shadcnui",
-        "ui"
-      ],
+      "topics": ["flutter", "shadcn", "shadcn-ui", "shadcnui", "ui"],
       "created_at": "2024-01-05T14:54:24Z",
       "updated_at": "2026-08-20T12:10:04Z",
       "pushed_at": "2026-08-16T03:24:13Z"
@@ -1384,12 +1151,8 @@
     "description": "Material Design 3 skill for Claude Code — 30+ components, design tokens, theming, responsive layout, and MD3 compliance audit",
     "section": "flutter",
     "section_category": "general",
-    "technologies": [
-      "Shell"
-    ],
-    "platforms": [
-      "web"
-    ],
+    "technologies": ["Shell"],
+    "platforms": ["web"],
     "external_url": "",
     "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/hamen/material-3-skill/master/assets/m3-hero.png",
@@ -1419,6 +1182,1167 @@
       "created_at": "2026-04-09T14:19:09Z",
       "updated_at": "2026-08-20T12:16:27Z",
       "pushed_at": "2026-07-15T22:10:50Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/berkakkaya/calendar_app",
+    "title": "calendar_app",
+    "description": "Calendar App - Mobile application",
+    "section": "flutter",
+    "section_category": "calendar",
+    "technologies": ["Dart", "calendar", "calendar-app", "event"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://private-user-images.githubusercontent.com/31767631/247226906-5c9ab735-3ed8-4b2d-9751-723190261977.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc0NjgxMzIsIm5iZiI6MTc4NzQ2NzgzMiwicGF0aCI6Ii8zMTc2NzYzMS8yNDcyMjY5MDYtNWM5YWI3MzUtM2VkOC00YjJkLTk3NTEtNzIzMTkwMjYxOTc3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODIzVDA2NTAzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWExYjQzMDAzNGY5YmU4MzEyYTMxOWM2OGQ4NjMyMWU3YjZhMzk0MDAyNTJiZGJmMTgxMjBhZjU0MzI2ZmRlYjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.i2AjhCCfg-WDKQv4607dvNNYPXQTbpnDIwvHHec34Ps",
+    "categories": [
+      "Docker",
+      "Debugging",
+      "CLI",
+      "Containers",
+      "Command Line",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 12,
+      "forks": 2,
+      "watchers": 12,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "GPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "calendar",
+        "calendar-app",
+        "event",
+        "event-management",
+        "event-management-system",
+        "events",
+        "flutter",
+        "flutter-app"
+      ],
+      "created_at": "2023-05-07T06:56:58Z",
+      "updated_at": "2026-06-06T08:54:48Z",
+      "pushed_at": "2023-10-31T12:50:04Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/nomispal/timely",
+    "title": "timely",
+    "description": "Your tasks organized by location",
+    "section": "flutter",
+    "section_category": "calendar",
+    "technologies": ["Dart", "calendar", "calendar-app", "calendarapp"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://private-user-images.githubusercontent.com/158512459/462022237-d8afe229-02bd-442a-a4f4-6722c8d47329.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc0NjgyMTcsIm5iZiI6MTc4NzQ2NzkxNywicGF0aCI6Ii8xNTg1MTI0NTkvNDYyMDIyMjM3LWQ4YWZlMjI5LTAyYmQtNDQyYS1hNGY0LTY3MjJjOGQ0NzMyOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwODIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDgyM1QwNjUxNTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mOWRhY2YxYmE5YTViMjAwYzJhYjkzZDU5YjYxYWY2M2FkMTg3YjE3NTZhNmQ1ODlmNzRiNWQyMTJkNGYzMzg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.xXhLB_iVtiJo4ka4rp6hdaCQRjuBzdp6GytJXcMq_AU",
+    "categories": ["Docker", "CLI", "Containers", "Command Line"],
+    "submitter_email": null,
+    "github": {
+      "stars": 3,
+      "forks": 0,
+      "watchers": 3,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "calendar",
+        "calendar-app",
+        "calendarapp",
+        "cross-platform",
+        "destop-application",
+        "firebase",
+        "firebase-database",
+        "firebase-realtime-database",
+        "flutter",
+        "flutter-apps",
+        "flutterdesktop",
+        "mobile-app",
+        "mobile-development"
+      ],
+      "created_at": "2025-04-09T17:09:43Z",
+      "updated_at": "2026-04-16T03:46:39Z",
+      "pushed_at": "2025-07-04T16:52:26Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Mashiro0619/Sked",
+    "title": "Sked",
+    "description": "日程、课程表管理应用 | timetable and schedule management app",
+    "section": "flutter",
+    "section_category": "Calendar",
+    "technologies": ["Dart", "android", "calendar", "calendar-app"],
+    "platforms": ["android", "windows"],
+    "external_url": "https://play.google.com/store/apps/details?id=com.mashiro.sked",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Mashiro0619/Sked/main/docs/screenshots/zh/student-week.jpg",
+    "categories": [
+      "Docker",
+      "Containers",
+      "Code Editor",
+      "Development Environment",
+      "HTML",
+      "API",
+      "Documentation",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 8,
+      "forks": 0,
+      "watchers": 8,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "calendar",
+        "calendar-app",
+        "course-schedule",
+        "dart",
+        "flutter",
+        "schedule",
+        "timetable",
+        "windows"
+      ],
+      "created_at": "2026-04-03T13:02:13Z",
+      "updated_at": "2026-08-16T15:44:08Z",
+      "pushed_at": "2026-08-16T16:42:16Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/arianaggm/aesthetic-cal",
+    "title": "aesthetic-cal",
+    "description": "Cross-platform Flutter calendar app with customizable monthly themes, weekly/monthly views, mock events, and planned Google Calendar sync.",
+    "section": "flutter",
+    "section_category": "calendar-app",
+    "technologies": ["Dart", "calendar-app", "dart", "flutter"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://private-user-images.githubusercontent.com/144489620/609058468-3869d6ab-4b6b-43ca-b6c9-5520fa5b62d7.png",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Cloud Computing",
+      "Containers",
+      "Code Editor",
+      "Development Environment",
+      "Command Line",
+      "API",
+      "Calendars & Time",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "calendar-app",
+        "dart",
+        "flutter",
+        "google-calendar-api",
+        "mobile-app",
+        "productivity-app",
+        "provider",
+        "state-management",
+        "ui-design",
+        "web-app"
+      ],
+      "created_at": "2026-05-04T19:17:43Z",
+      "updated_at": "2026-06-17T07:58:23Z",
+      "pushed_at": "2026-06-17T07:57:00Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/diascii/daycast",
+    "title": "daycast",
+    "description": "A weather-aware calendar and planner app built with Flutter. Combines 7-day forecasts, daily notes, and smart weather indicators.",
+    "section": "flutter",
+    "section_category": "calendar-app",
+    "technologies": ["Dart", "calendar-app", "dart", "flutter"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/diascii/daycast",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Containers",
+      "Frameworks",
+      "Command Line",
+      "API",
+      "Open Source",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": ["calendar-app", "dart", "flutter", "weather-api"],
+      "created_at": "2026-06-04T22:58:01Z",
+      "updated_at": "2026-06-04T23:18:22Z",
+      "pushed_at": "2026-06-04T23:18:19Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Nugikku/Lilypad-Personal-Digital-Assistant",
+    "title": "Lilypad-Personal-Digital-Assistant",
+    "description": "🪷 Aplikasi asisten digital pribadi berbasis Flutter. Kelola kalender, keuangan, catatan, cuaca & chat dengan AI dalam satu app. | A Flutter-based personal digital assistant app with calendar, finance, notes, weather & AI chat.",
+    "section": "flutter",
+    "section_category": "Calendar",
+    "technologies": ["Dart", "andorid-app", "android", "api"],
+    "platforms": ["android"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/Nugikku/Lilypad-Personal-Digital-Assistant",
+    "categories": [
+      "PostgreSQL",
+      "Docker",
+      "AI Assistants",
+      "CLI",
+      "REST API",
+      "Cloud Computing",
+      "Containers",
+      "Frameworks",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "andorid-app",
+        "android",
+        "api",
+        "api-endpoints",
+        "api-rest",
+        "calendar-app",
+        "dart",
+        "digital-assistant",
+        "finance-management",
+        "html",
+        "mobile-app",
+        "notes-app",
+        "wether-app"
+      ],
+      "created_at": "2026-07-22T12:23:59Z",
+      "updated_at": "2026-07-27T05:26:33Z",
+      "pushed_at": "2026-07-27T05:26:28Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Jones2807/Fleuron-Planer-Shopping-ToDo-App",
+    "title": "Fleuron-Planer-Shopping-ToDo-App",
+    "description": "A free, cross-platform family calendar, to-do & shopping-list app built on your own CalDAV server. No cloud lock-in, no subscription. Supports multiple independent workspaces (family, club, team) and optional Grocy integration. Built entirely through LLM-assisted development.",
+    "section": "ai",
+    "section_category": "Calendar",
+    "technologies": [
+      "Dart",
+      "caldav-calendar",
+      "calendar-app",
+      "shopping-list",
+      "Calendar"
+    ],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Jones2807/Fleuron-Planer-Shopping-ToDo-App/master/docs/screenshots/month-view.png",
+    "categories": [
+      "SQLite",
+      "Docker",
+      "LLM",
+      "Cloud Computing",
+      "Containers",
+      "Testing",
+      "Cloud",
+      "Documentation",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "caldav-calendar",
+        "calendar-app",
+        "shopping-list",
+        "todo-list"
+      ],
+      "created_at": "2026-07-23T17:55:18Z",
+      "updated_at": "2026-08-08T18:45:25Z",
+      "pushed_at": "2026-08-08T18:45:21Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/wasim-younes/LIFO",
+    "title": "LIFO",
+    "description": "A professional, 100% offline-first Life Organizer and Calendar app built with Flutter. Featuring a responsive Google Calendar-style UI, specialized tracking for workouts, shopping, and meetings, and local data persistence using Drift and Riverpod.",
+    "section": "flutter",
+    "section_category": "Calendar",
+    "technologies": ["Dart", "calendar-app", "dart", "drift-database"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://opengraph.githubassets.com/1/wasim-younes/LIFO",
+    "categories": [
+      "SQLite",
+      "Docker",
+      "Cloud Computing",
+      "Containers",
+      "Cloud",
+      "Documentation",
+      "Libraries & SDKs",
+      "Calendar"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "calendar-app",
+        "dart",
+        "drift-database",
+        "flutter",
+        "material-3",
+        "offline-first",
+        "organizer",
+        "productivity",
+        "responsive-ui",
+        "riverpod",
+        "solid-principles",
+        "sqlite",
+        "state-management"
+      ],
+      "created_at": "2026-01-19T17:56:25Z",
+      "updated_at": "2026-02-05T07:33:39Z",
+      "pushed_at": "2026-02-05T07:31:06Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/flutterkit/zerker-samples",
+    "title": "zerker-samples",
+    "description": "A collection of Zerker examples and demos.",
+    "section": "flutter",
+    "section_category": "flutter",
+    "technologies": ["Dart", "flutter", "flutter-game", "game"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/739b38e50cf8a3acaf34c8959e325b3e1cccc4b1713215b1688fafa80592eaf4/68747470733a2f2f666c75747465726b69742e6769746875622e696f2f7a65726b6572646f63732f696d616765732f6578616d706c652f62617369635f64656d6f2e676966",
+    "categories": [
+      "Docker",
+      "Containers",
+      "Testing",
+      "HTML",
+      "Tutorials",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 27,
+      "forks": 5,
+      "watchers": 27,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": ["flutter", "flutter-game", "game", "zerker"],
+      "created_at": "2019-09-10T10:57:48Z",
+      "updated_at": "2025-09-15T13:36:30Z",
+      "pushed_at": "2019-10-09T03:04:41Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/SatyamX64/Space-Empires",
+    "title": "Space-Empires",
+    "description": "Space Themed Turn-Based Strategy Game developed in Flutter",
+    "section": "flutter",
+    "section_category": "dart",
+    "technologies": ["Dart", "dart", "flutter", "flutter-game"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/62766656/120899922-b23d2600-c64f-11eb-9b6b-7a052cda5894.jpg",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Containers",
+      "Command Line",
+      "Documentation",
+      "Libraries & SDKs",
+      "Open Source",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 107,
+      "forks": 32,
+      "watchers": 107,
+      "language": "Dart",
+      "open_issues": 1,
+      "license": "GPL-3.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "flutter",
+        "flutter-game",
+        "game",
+        "lottie",
+        "rive",
+        "space-game"
+      ],
+      "created_at": "2021-05-14T16:46:02Z",
+      "updated_at": "2026-07-27T02:03:55Z",
+      "pushed_at": "2022-04-13T15:55:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/moha-b/Flappy-Bird",
+    "title": "Flappy-Bird",
+    "description": "We created 🐥 Flappy Bird, a straightforward game based on flutter animation, from scratch using only Dart & Flutter and no third-party games components.",
+    "section": "flutter",
+    "section_category": "animation",
+    "technologies": ["Dart", "animation", "audio-player", "dart"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/73842931/203234278-72dc4c28-0542-475e-8b0a-a64993b7f79b.png",
+    "categories": [
+      "Docker",
+      "Containers",
+      "API",
+      "Documentation",
+      "Libraries & SDKs",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 87,
+      "forks": 30,
+      "watchers": 87,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "animation",
+        "audio-player",
+        "dart",
+        "flappy-bird",
+        "flutter",
+        "flutter-app",
+        "flutter-game",
+        "game",
+        "hive",
+        "launcher"
+      ],
+      "created_at": "2022-08-14T10:39:52Z",
+      "updated_at": "2026-07-19T04:22:34Z",
+      "pushed_at": "2024-04-17T00:23:47Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Raj2503/Pacman-Flutter",
+    "title": "Pacman-Flutter",
+    "description": "Vintage Pacman Game developed in Flutter",
+    "section": "flutter",
+    "section_category": "android-app",
+    "technologies": ["Dart", "android-app", "dart", "flutter"],
+    "platforms": ["android"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://camo.githubusercontent.com/5f8ad1ffa901d4428199fa394f946ca446667b7ce9ed6c044da2b44f2fd7371e/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f523549774239566861774b70384676346d672f67697068792e676966",
+    "categories": ["Docker", "Containers", "Game"],
+    "submitter_email": null,
+    "github": {
+      "stars": 67,
+      "forks": 25,
+      "watchers": 67,
+      "language": "Dart",
+      "open_issues": 4,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android-app",
+        "dart",
+        "flutter",
+        "flutter-app",
+        "flutter-audio-player",
+        "flutter-dependencies",
+        "flutter-game",
+        "flutter-game-dev",
+        "flutter-games",
+        "flutter-ui",
+        "game",
+        "game-development",
+        "ghosts",
+        "pac-man",
+        "pac-man-game",
+        "pacman",
+        "pacman-arcade-game",
+        "pacman-game",
+        "pacman-projects",
+        "sound-effects"
+      ],
+      "created_at": "2021-03-06T11:41:10Z",
+      "updated_at": "2026-08-06T20:28:23Z",
+      "pushed_at": "2022-06-02T10:00:41Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/ufrshubham/flame_simple_platformer",
+    "title": "flame_simple_platformer",
+    "description": "A 2D platformer made using Flame engine",
+    "section": "flutter",
+    "section_category": "2d-game",
+    "technologies": ["Dart", "2d-game", "dart", "flame-engine"],
+    "platforms": ["web"],
+    "external_url": "https://ufrshubham.itch.io/square-boy",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/ufrshubham/flame_simple_platformer/main/branding/Demo.gif",
+    "categories": ["Docker", "CLI", "Containers", "Command Line", "Game"],
+    "submitter_email": null,
+    "github": {
+      "stars": 66,
+      "forks": 18,
+      "watchers": 66,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "2d-game",
+        "dart",
+        "flame-engine",
+        "flutter",
+        "flutter-game",
+        "game-development",
+        "mobile-games",
+        "platformer"
+      ],
+      "created_at": "2022-01-08T09:54:32Z",
+      "updated_at": "2026-06-12T19:02:22Z",
+      "pushed_at": "2025-11-21T15:32:54Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Flutter-Journey/Fruit-Cutting-Game",
+    "title": "Fruit-Cutting-Game",
+    "description": "A fun and interactive Fruit Cutting Game built using Flutter. 🎮 ",
+    "section": "flutter",
+    "section_category": "chunhthanhde",
+    "technologies": ["Dart", "chunhthanhde", "flame", "flame-example"],
+    "platforms": ["web"],
+    "external_url": "https://flutter-journey.github.io/Fruit-Cutting-Game/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Flutter-Journey/Fruit-Cutting-Game/refs/heads/main/media/gif/Fruit-Cutting-Game.gif",
+    "categories": [
+      "Docker",
+      "CI/CD",
+      "Containers",
+      "Frameworks",
+      "API",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 49,
+      "forks": 21,
+      "watchers": 49,
+      "language": "Dart",
+      "open_issues": 7,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "chunhthanhde",
+        "flame",
+        "flame-example",
+        "flames-game",
+        "flutter-challenge",
+        "flutter-examples",
+        "flutter-flame",
+        "flutter-game",
+        "flutter-games",
+        "flutter-journey",
+        "fruit-ninja",
+        "fruits-game",
+        "game",
+        "github-actions"
+      ],
+      "created_at": "2024-10-17T09:50:19Z",
+      "updated_at": "2026-08-10T09:06:09Z",
+      "pushed_at": "2026-03-26T03:06:10Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/DaQinShgy/flutter_game",
+    "title": "flutter_game",
+    "description": "基于Flutter flame 游戏引擎开发的俄罗斯方块、超级马里奥游戏。Tetris, SuperMario game based on the Flutter flame game engine.",
+    "section": "flutter",
+    "section_category": "flame",
+    "technologies": ["Dart", "flame", "flame-engine", "flutter"],
+    "platforms": ["web"],
+    "external_url": "https://daqinshgy.github.io/flutter_game/",
+    "youtube_url": null,
+    "image_url": "https://github.com/DaQinShgy/flutter_game/raw/main/images/tetris_web.png",
+    "categories": [
+      "Docker",
+      "Containers",
+      "Web Development",
+      "Documentation",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 35,
+      "forks": 11,
+      "watchers": 35,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "flame",
+        "flame-engine",
+        "flutter",
+        "flutter-game",
+        "mario",
+        "mario-game",
+        "supermario",
+        "supermariobros",
+        "tetris",
+        "tetris-game"
+      ],
+      "created_at": "2023-09-08T07:08:13Z",
+      "updated_at": "2026-05-28T03:57:03Z",
+      "pushed_at": "2024-06-24T08:05:58Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/AadrianLeo/Tictactoe-Multiplayer-Game",
+    "title": "Tictactoe-Multiplayer-Game",
+    "description": "This is an Online multiplayer Tictacktoe game where two player can play simultaneously. Whoever gets 6 points of score first wins the game. one player have to create a room and others have to join the room my inputing rooms ID number given by the player1(Who has created the room). The Project in coded in flutter language and javacsript and nodejs is used for backend/server. and mongoDB is used for Database to store the player's details.",
+    "section": "flutter",
+    "section_category": "android",
+    "technologies": ["Dart", "android", "dart", "flutter"],
+    "platforms": ["android", "web"],
+    "external_url": "https://tictactoe-online-game.netlify.app",
+    "youtube_url": null,
+    "image_url": "https://user-images.githubusercontent.com/81036521/177798657-de5dfd5f-d04d-437f-bc6e-1293e90b4b16.png",
+    "categories": [
+      "NoSQL",
+      "Docker",
+      "Debugging",
+      "JavaScript",
+      "Containers",
+      "Web Development",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 31,
+      "forks": 12,
+      "watchers": 31,
+      "language": "Dart",
+      "open_issues": 9,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "dart",
+        "flutter",
+        "flutter-app",
+        "flutter-application",
+        "flutter-game",
+        "flutter-project",
+        "javascript",
+        "nodejs",
+        "tactactoe-multiplayer",
+        "tictactoe"
+      ],
+      "created_at": "2022-06-07T08:28:11Z",
+      "updated_at": "2026-06-06T18:07:06Z",
+      "pushed_at": "2023-04-23T11:17:03Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/jeffsieu/type",
+    "title": "type",
+    "description": "totally not a monkeytype clone but in Flutter",
+    "section": "flutter",
+    "section_category": "flutter",
+    "technologies": ["Dart", "flutter", "flutter-apps", "flutter-game"],
+    "platforms": ["web"],
+    "external_url": "https://type.jeffsieu.com",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/jeffsieu/type/master/assets/banner.png",
+    "categories": ["Docker", "Containers", "Testing", "Game"],
+    "submitter_email": null,
+    "github": {
+      "stars": 23,
+      "forks": 11,
+      "watchers": 23,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "flutter",
+        "flutter-apps",
+        "flutter-game",
+        "flutter-ui",
+        "flutter-web",
+        "monkeytype",
+        "typing-game"
+      ],
+      "created_at": "2022-01-29T19:06:38Z",
+      "updated_at": "2026-01-08T22:17:51Z",
+      "pushed_at": "2024-07-03T18:00:57Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/recepbasturk/clock_game",
+    "title": "clock_game",
+    "description": "Clock Game is a children's game created with Flutter.",
+    "section": "flutter",
+    "section_category": "bloc",
+    "technologies": ["Dart", "bloc", "children-games", "dart"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/recepbasturk/clock_game/main/screenshots/screenshot_01.png",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Cloud Computing",
+      "Containers",
+      "Command Line",
+      "Cloud",
+      "Documentation",
+      "Tutorials",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 20,
+      "forks": 7,
+      "watchers": 20,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "bloc",
+        "children-games",
+        "dart",
+        "flutter",
+        "flutter-game",
+        "game",
+        "kids-game",
+        "kids-learn",
+        "kids-learning-app"
+      ],
+      "created_at": "2021-12-09T16:08:52Z",
+      "updated_at": "2026-01-23T15:26:53Z",
+      "pushed_at": "2025-03-09T22:17:16Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Apoorv-cloud/Flutter_Ludo",
+    "title": "Flutter_Ludo",
+    "description": "Basic Ludo Game with Flutter which will run on both iOS and Android without any UI glitches.",
+    "section": "flutter",
+    "section_category": "dart",
+    "technologies": ["Makefile", "dart", "dice", "flutter-apps"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://github.com/Apoorv-cloud/Flutter_Ludo/raw/master/images/ludo.jpg",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Cloud Computing",
+      "Containers",
+      "Command Line",
+      "Cloud",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 58,
+      "forks": 48,
+      "watchers": 58,
+      "language": "Makefile",
+      "open_issues": 6,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "dice",
+        "flutter-apps",
+        "fluttergame",
+        "game",
+        "game-development",
+        "ludo",
+        "ludo-game",
+        "ui"
+      ],
+      "created_at": "2020-12-29T17:40:23Z",
+      "updated_at": "2026-08-18T20:04:58Z",
+      "pushed_at": "2022-10-15T18:03:40Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/QEDteam/scuba-sweep",
+    "title": "scuba-sweep",
+    "description": "Welcome to Scuba Sweep, a captivating underwater adventure game built with Flutter",
+    "section": "flutter",
+    "section_category": "dart",
+    "technologies": ["Dart", "dart", "firebase", "flame"],
+    "platforms": ["web"],
+    "external_url": null,
+    "youtube_url": null,
+    "image_url": "https://private-user-images.githubusercontent.com/30495155/310602336-02084009-e844-42b5-915e-59fe1a08277e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc0NzU0NjgsIm5iZiI6MTc4NzQ3NTE2OCwicGF0aCI6Ii8zMDQ5NTE1NS8zMTA2MDIzMzYtMDIwODQwMDktZTg0NC00MmI1LTkxNWUtNTlmZTFhMDgyNzdlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODIzVDA4NTI0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWMyNWYzZjk2ZTk2NTQ4MDBkMjY5MThhMmFiN2ZmZDVmYzBiZGI5ZTZhZThlOTc3NDFiOWRjNzMwYjI1MGM2YmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.CFsrBjBZyi_szhYFvb5QgzzjigbiYpX-P9AXMf0U10M",
+    "categories": [
+      "Docker",
+      "Debugging",
+      "CLI",
+      "Containers",
+      "Command Line",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 26,
+      "forks": 13,
+      "watchers": 26,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "dart",
+        "firebase",
+        "flame",
+        "flutter",
+        "flutterfirebase",
+        "fluttergame"
+      ],
+      "created_at": "2024-03-06T08:09:41Z",
+      "updated_at": "2026-04-09T18:15:59Z",
+      "pushed_at": "2024-04-20T06:26:09Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/m-r-davari/nostalgia_nitro",
+    "title": "nostalgia_nitro",
+    "description": "A nostalgia racing game developed by MohammadReza Davari using Flutter, that rekindle your childhood memories.",
+    "section": "flutter",
+    "section_category": "2d-game",
+    "technologies": ["Dart", "2d-game", "flame-engine", "flutter"],
+    "platforms": ["web"],
+    "external_url": "https://m-r-davari.github.io/nostalgia_nitro/",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/m-r-davari/nostalgia_nitro/main/samples/gp1.gif",
+    "categories": ["Docker", "Containers", "Game"],
+    "submitter_email": null,
+    "github": {
+      "stars": 10,
+      "forks": 1,
+      "watchers": 10,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "2d-game",
+        "flame-engine",
+        "flutter",
+        "flutter-examples",
+        "flutterapps",
+        "flutterdev",
+        "flutterdeveloper",
+        "flutterdevelopment",
+        "fluttergame",
+        "fluttergames",
+        "game",
+        "game-development",
+        "games",
+        "nostalgia",
+        "nostalgia-nitro",
+        "nostalgia-project",
+        "nostalgic",
+        "racing-car",
+        "racing-game",
+        "racing-games"
+      ],
+      "created_at": "2024-02-05T15:43:12Z",
+      "updated_at": "2026-06-12T10:05:26Z",
+      "pushed_at": "2024-02-23T16:14:51Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/banghuazhao/classic_2048",
+    "title": "classic_2048",
+    "description": "Classic 2048 is a mobile puzzle game developed with Flutter. Slide tiles on a grid to combine numbers and reach 2048. Enjoy multiple grid sizes, stunning backgrounds, and smooth gameplay. Available on the Google Play Store.",
+    "section": "flutter",
+    "section_category": "2048",
+    "technologies": ["Dart", "2048", "2048-game", "android"],
+    "platforms": ["android"],
+    "external_url": "https://play.google.com/store/apps/details?id=com.appsbay.classic_2048",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/banghuazhao/classic_2048/main/images/game_mode.webp",
+    "categories": ["Docker", "Containers", "Game"],
+    "submitter_email": null,
+    "github": {
+      "stars": 9,
+      "forks": 1,
+      "watchers": 9,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "2048",
+        "2048-game",
+        "android",
+        "dart",
+        "flutter",
+        "flutter-apps",
+        "flutter-examples",
+        "flutter-game",
+        "fluttergame",
+        "game",
+        "game-development",
+        "mobile-game"
+      ],
+      "created_at": "2024-08-28T21:14:17Z",
+      "updated_at": "2026-07-19T04:17:13Z",
+      "pushed_at": "2026-07-19T04:17:08Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/urGirlkiri/grimoji",
+    "title": "grimoji",
+    "description": "A cross platform  game for mixing and collecting emojis.",
+    "section": "flutter",
+    "section_category": "2048",
+    "technologies": ["Dart", "2048", "2048-game", "casual-game"],
+    "platforms": ["web"],
+    "external_url": "https://play.grimoji.io",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/urGirlkiri/grimoji/main/assets/screenshots/mockup.png",
+    "categories": [
+      "Docker",
+      "Containers",
+      "Web Development",
+      "Documentation",
+      "Tutorials",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 4,
+      "forks": 0,
+      "watchers": 4,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": "NOASSERTION",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "2048",
+        "2048-game",
+        "casual-game",
+        "cross-platform",
+        "emoji",
+        "emoji-game",
+        "flutter",
+        "flutter-desktop",
+        "flutter-game",
+        "flutter-web",
+        "fluttergame",
+        "fluttergames",
+        "hackclub",
+        "macondo",
+        "match-3",
+        "match3-game"
+      ],
+      "created_at": "2026-05-06T13:34:11Z",
+      "updated_at": "2026-08-16T12:34:00Z",
+      "pushed_at": "2026-08-18T11:10:35Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/Spid3r0/Wordle-Clone-FlutterWordGame",
+    "title": "Wordle-Clone-FlutterWordGame",
+    "description": "To Access Original Game",
+    "section": "flutter",
+    "section_category": "android",
+    "technologies": ["Dart", "android", "dart", "flutter"],
+    "platforms": ["android"],
+    "external_url": "https://www.nytimes.com/games/wordle/index.html",
+    "youtube_url": null,
+    "image_url": "https://raw.githubusercontent.com/Spid3r0/Wordle-Clone-FlutterWordGame/master/pictures/img1.png",
+    "categories": [
+      "Docker",
+      "Containers",
+      "Testing",
+      "HTML",
+      "API",
+      "Documentation",
+      "Tutorials",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "language": "Dart",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "android",
+        "dart",
+        "flutter",
+        "fluttergame",
+        "word",
+        "wordgame",
+        "worlde"
+      ],
+      "created_at": "2023-02-08T14:10:24Z",
+      "updated_at": "2024-08-16T07:33:46Z",
+      "pushed_at": "2023-02-08T15:05:07Z"
+    }
+  },
+  {
+    "project_url": "https://github.com/fluttergems/awesome-open-source-flutter-apps",
+    "title": "awesome-open-source-flutter-apps",
+    "description": "A curated list of awesome open source Flutter apps",
+    "section": "flutter",
+    "section_category": "flutter",
+    "technologies": ["Dart", "flutter", "flutter-app", "flutter-apps"],
+    "platforms": ["web"],
+    "external_url": "https://fluttergems.dev",
+    "youtube_url": null,
+    "image_url": "https://private-user-images.githubusercontent.com/1382619/408834101-103a0be6-9429-4c7c-94fb-3b5e69a6f80a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc0NzYzOTEsIm5iZiI6MTc4NzQ3NjA5MSwicGF0aCI6Ii8xMzgyNjE5LzQwODgzNDEwMS0xMDNhMGJlNi05NDI5LTRjN2MtOTRmYi0zYjVlNjlhNmY4MGEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjNUMDkwODExWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9M2YzMWE0MWU5YjE3ZDUzNGVhODdjZGM1NWQ4NTU0YmY2NTlkYzhhMmEzMTk4YWE0YTQ4YzhiZmRlZGZjN2I1YyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.B648w5tN98VmSS6R05_smNFShnbRretLo97HqPnfMTw",
+    "categories": [
+      "AI Agents",
+      "AI Image Generation",
+      "SQLite",
+      "Docker",
+      "Kubernetes",
+      "LLM",
+      "Machine Learning",
+      "AI Assistants",
+      "Game"
+    ],
+    "submitter_email": null,
+    "github": {
+      "stars": 3112,
+      "forks": 461,
+      "watchers": 3112,
+      "language": "Dart",
+      "open_issues": 16,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "flutter",
+        "flutter-app",
+        "flutter-apps",
+        "flutter-desktop",
+        "flutter-examples",
+        "flutter-project",
+        "flutter-projects",
+        "flutter-ui",
+        "flutter-web",
+        "gssoc",
+        "hacktoberfest"
+      ],
+      "created_at": "2024-04-27T03:58:31Z",
+      "updated_at": "2026-08-23T03:21:25Z",
+      "pushed_at": "2026-05-17T20:31:55Z"
     }
   }
 ]

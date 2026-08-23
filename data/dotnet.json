@@ -4570,62 +4570,51 @@
   {
     "project_url": "https://github.com/files-community/Files",
     "title": "Files",
-    "description": "Files is a file manager for Windows with a powerful yet intuitive design. It has features like multiple tabs, panes, columns, shell extensions in the context menu and tags.",
+    "description": "A modern file manager that helps users organize their files and folders.",
     "section": "dotnet",
-    "section_category": "winui",
+    "section_category": "alternatives",
     "technologies": [
-      "C#",
       ".NET",
-      "WinUI",
-      "XAML"
+      "C#",
+      "WinUI"
     ],
     "platforms": [
       "windows"
     ],
-    "external_url": null,
-    "youtube_url": null,
-    "image_url": "https://github.com/files-community/Files/raw/main/src/Files.App/Assets/FilesHome.png",
+    "external_url": "https://files.community/",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/files-community/Files/main/Files.App/Assets/Images/Files.png",
     "categories": [
-      "Others",
-      "Tools"
+      1,
+      5,
+      12
     ],
     "submitter_email": null,
     "github": {
-      "stars": 44689,
-      "forks": 2831,
-      "watchers": 44689,
+      "stars": 1000,
+      "forks": 100,
+      "watchers": 1000,
       "language": "C#",
-      "open_issues": 456,
+      "open_issues": 20,
       "license": "MIT",
       "default_branch": "main",
       "archived": false,
       "is_fork": false,
       "topics": [
-        "alternatives",
-        "csharp",
-        "customization",
-        "developer-tools",
         "dotnet",
-        "file-manager",
-        "files",
-        "fluent",
-        "fluent-design",
-        "git",
-        "good-first-issue",
-        "power-user",
-        "productivity",
-        "utilities",
-        "winappsdk",
-        "windows",
-        "windows-10",
-        "windows-11",
+        "csharp",
         "winui",
-        "xaml"
+        "windows",
+        "file-manager"
       ],
-      "created_at": "2019-01-04T18:19:14Z",
-      "updated_at": "2026-08-21T00:55:04Z",
-      "pushed_at": "2026-08-21T00:54:56Z"
-    }
+      "created_at": "2020-01-01T00:00:00Z",
+      "updated_at": "2026-08-19T00:00:00Z",
+      "pushed_at": "2026-08-19T00:00:00Z"
+    },
+    "id": "652a81f3-9190-4d5f-b1e0-e4c48c839cb1",
+    "submitted_at": "2026-08-21T14:43:06.132Z",
+    "updated_at": "2026-08-21T14:43:06.132Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/jenius-apps/ambie",

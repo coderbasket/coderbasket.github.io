@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fd5219e7-db59-4f9d-8322-0514acdce5bd",
+    "project_url": "https://github.com/sylearn/AIUsage",
+    "title": "AIUsage",
+    "description": "One dashboard to manage all your AI subscriptions — track quotas, costs, accounts, Claude Code proxy, and Codex proxy in one place.",
+    "section": "swift",
+    "section_category": "general",
+    "technologies": [
+      "Swift"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/sylearn/AIUsage/main/docs/images/app-icon.png",
+    "categories": [
+      "Docker",
+      "CLI",
+      "Cloud Computing",
+      "Containers",
+      "Command Line",
+      "API",
+      "Cloud",
+      "Documentation"
+    ],
+    "submitted_at": "2026-08-23T01:26:12.817Z",
+    "updated_at": "2026-08-23T01:26:12.817Z",
+    "status": "pending",
+    "github": {
+      "stars": 609,
+      "forks": 43,
+      "watchers": 609,
+      "language": "Swift",
+      "open_issues": 4,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-04-11T04:49:02Z",
+      "updated_at": "2026-08-22T20:45:06Z",
+      "pushed_at": "2026-08-22T04:49:18Z"
+    }
+  }
+]

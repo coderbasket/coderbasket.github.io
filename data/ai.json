@@ -414,31 +414,35 @@
   },
   {
     "project_url": "https://github.com/openai/whisper",
-    "title": "Whisper",
-    "description": "General-purpose speech recognition model trained on a large and diverse dataset of audio.",
+    "title": "whisper",
+    "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
     "platforms": [
-      "windows",
-      "mac",
-      "linux"
+      "web"
     ],
     "section": "ai",
     "subcategory": "speech",
-    "external_url": null,
-    "youtube_url": null,
+    "external_url": "",
+    "youtube_url": "",
     "image_url": "https://raw.githubusercontent.com/openai/whisper/main/approach.png",
     "categories": [
-      "Libraries"
+      "Docker",
+      "Deep Learning",
+      "CLI",
+      "Containers",
+      "Code Editor",
+      "Development Environment",
+      "Testing",
+      "Command Line"
     ],
     "technologies": [
-      "Python",
-      "PyTorch"
+      "Python"
     ],
     "section_category": "general",
     "submitter_email": null,
     "github": {
-      "stars": 107681,
-      "forks": 13065,
-      "watchers": 107681,
+      "stars": 107731,
+      "forks": 13073,
+      "watchers": 107731,
       "language": "Python",
       "open_issues": 135,
       "license": "MIT",
@@ -447,9 +451,13 @@
       "is_fork": false,
       "topics": [],
       "created_at": "2022-09-16T20:02:54Z",
-      "updated_at": "2026-08-20T23:43:07Z",
+      "updated_at": "2026-08-21T15:43:47Z",
       "pushed_at": "2026-07-28T20:18:29Z"
-    }
+    },
+    "id": "6576faba-a6d2-40c3-b05d-a98a555b018c",
+    "submitted_at": "2026-08-21T15:27:47.845Z",
+    "updated_at": "2026-08-21T15:46:57.921Z",
+    "status": "pending"
   },
   {
     "project_url": "https://github.com/oobabooga/text-generation-webui",
@@ -2600,6 +2608,218 @@
       "created_at": "2024-03-11T02:57:34Z",
       "updated_at": "2026-08-20T20:41:40Z",
       "pushed_at": "2026-08-20T02:36:40Z"
+    }
+  },
+  {
+    "id": "540f75eb-26bc-4ef6-bbb7-6973447813c0",
+    "project_url": "https://github.com/raiyanyahya/how-to-train-your-gpt",
+    "title": "how-to-train-your-gpt",
+    "description": "Build a modern LLM from scratch. Every line commented. Explained like we are five.",
+    "section": "ai",
+    "section_category": "attention-mechanism",
+    "technologies": [
+      "Jupyter Notebook",
+      "attention-mechanism",
+      "deep-learning",
+      "educational"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/raiyanyahya/how-to-train-your-gpt",
+    "categories": [
+      "Docker",
+      "LLM",
+      "Machine Learning",
+      "Deep Learning",
+      "Debugging",
+      "CLI",
+      "Cloud Computing",
+      "Containers"
+    ],
+    "submitted_at": "2026-08-22T20:53:10.881Z",
+    "updated_at": "2026-08-22T20:53:10.881Z",
+    "status": "pending",
+    "github": {
+      "stars": 2734,
+      "forks": 357,
+      "watchers": 2734,
+      "language": "Jupyter Notebook",
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "attention-mechanism",
+        "deep-learning",
+        "educational",
+        "from-scratch",
+        "gpt",
+        "language-model",
+        "llama",
+        "llm",
+        "machine-learning",
+        "natural-language-processing",
+        "python",
+        "pytorch",
+        "tokenisation",
+        "transformers",
+        "tutorial"
+      ],
+      "created_at": "2026-05-03T21:41:33Z",
+      "updated_at": "2026-08-22T20:51:22Z",
+      "pushed_at": "2026-07-15T17:23:52Z"
+    }
+  },
+  {
+    "id": "143d67fa-ea5e-42dc-b049-b71334c1fb49",
+    "project_url": "https://github.com/block/buzz",
+    "title": "buzz",
+    "description": "A hive mind communication platform",
+    "section": "ai",
+    "section_category": "general",
+    "technologies": [
+      "Rust"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/block/buzz/main/docs/assets/screenshots/channel-thread.png",
+    "categories": [
+      "AI Agents",
+      "PostgreSQL",
+      "Docker",
+      "LLM",
+      "Developer Tools",
+      "CLI",
+      "Containers",
+      "Testing"
+    ],
+    "submitted_at": "2026-08-22T21:12:49.124Z",
+    "updated_at": "2026-08-22T21:12:49.124Z",
+    "status": "pending",
+    "github": {
+      "stars": 29732,
+      "forks": 3778,
+      "watchers": 29732,
+      "language": "Rust",
+      "open_issues": 3014,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-03-06T21:00:56Z",
+      "updated_at": "2026-08-22T20:57:11Z",
+      "pushed_at": "2026-08-22T20:32:58Z"
+    }
+  },
+  {
+    "id": "05ad655e-eb9b-4603-99b8-9a791c9b6038",
+    "project_url": "https://github.com/h4ckf0r0day/obscura",
+    "title": "obscura",
+    "description": "The headless browser for AI agents and web scraping",
+    "section": "ai",
+    "section_category": "antidetect",
+    "technologies": [
+      "Rust",
+      "antidetect",
+      "antidetect-browser",
+      "browser"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://obscura.sh",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/h4ckf0r0day/obscura/main/assets/icon.png",
+    "categories": [
+      "AI Agents",
+      "Docker",
+      "CLI",
+      "JavaScript",
+      "Cloud Computing",
+      "Containers",
+      "Testing",
+      "Command Line"
+    ],
+    "submitted_at": "2026-08-23T01:24:49.409Z",
+    "updated_at": "2026-08-23T01:24:49.409Z",
+    "status": "pending",
+    "github": {
+      "stars": 22106,
+      "forks": 1624,
+      "watchers": 22106,
+      "language": "Rust",
+      "open_issues": 62,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "antidetect",
+        "antidetect-browser",
+        "browser",
+        "browser-automation",
+        "cdp",
+        "headless",
+        "playwright",
+        "puppeteer",
+        "rust"
+      ],
+      "created_at": "2026-04-13T10:31:41Z",
+      "updated_at": "2026-08-23T01:22:00Z",
+      "pushed_at": "2026-08-21T10:51:44Z"
+    }
+  },
+  {
+    "id": "0333d755-3bd9-4cac-ab84-36b2e53d2af0",
+    "project_url": "https://github.com/cosmicstack-labs/lazy-frames",
+    "title": "lazy-frames",
+    "description": "Lazy Frames — agentic video generation. Feed the skill URL to your AI agent; it captures, authors, renders. Fully local, byte-stable, no cloud. npm install lazy-frames",
+    "section": "ai",
+    "section_category": "general",
+    "technologies": [
+      "TypeScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "lazy-frames.cosmicstack.ai",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/cosmicstack-labs/lazy-frames/main/docs/assets/lazy-frames-banner.png",
+    "categories": [
+      "AI Agents",
+      "AI Video Generation",
+      "Docker",
+      "CLI",
+      "TypeScript",
+      "Cloud Computing",
+      "Containers",
+      "Command Line"
+    ],
+    "submitted_at": "2026-08-23T01:31:12.144Z",
+    "updated_at": "2026-08-23T01:31:12.144Z",
+    "status": "pending",
+    "github": {
+      "stars": 101,
+      "forks": 13,
+      "watchers": 101,
+      "language": "TypeScript",
+      "open_issues": 0,
+      "license": null,
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-08-15T13:27:06Z",
+      "updated_at": "2026-08-23T01:30:41Z",
+      "pushed_at": "2026-08-19T06:24:30Z"
     }
   }
 ]

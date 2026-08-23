@@ -188,6 +188,12 @@ const FRAMEWORKS = {
     path: "/ruby-on-rails/",
     dataSource: "frameworks",
   },
+  
+  swift: {
+    name: "Swift",
+    path: "/swift/",
+    dataSource: "frameworks",
+  },
 };
 
 /* =======================================================
@@ -506,6 +512,7 @@ const CATEGORIES = {
   187: "Reference Implementation",
   188: "Samples",
   189: "Starter Projects",
+  189: "Calendar",
 };
 
 /*
