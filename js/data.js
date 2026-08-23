@@ -189,11 +189,11 @@ const FRAMEWORKS = {
     dataSource: "frameworks",
   },
   
-  swift: {
-    name: "Swift",
-    path: "/swift/",
-    dataSource: "frameworks",
-  },
+  // swift: {
+  //   name: "Swift",
+  //   path: "/swift/",
+  //   dataSource: "frameworks",
+  // },
 };
 
 /* =======================================================
