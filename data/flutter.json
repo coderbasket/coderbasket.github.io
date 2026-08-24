@@ -2344,5 +2344,82 @@
       "updated_at": "2026-08-23T03:21:25Z",
       "pushed_at": "2026-05-17T20:31:55Z"
     }
+  },
+  {
+  "project_url": "https://github.com/cr1pto/simple_bible",
+  "title": "simple_bible",
+  "description": "A Bible app with the goal of being incredibly easy to use.",
+  "section": "flutter",
+  "section_category": "bible",
+  "technologies": [
+    "Dart",
+    "bible",
+    "flutter",
+    "state-management"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "external_url": null,
+  "youtube_url": null,
+  "image_url": "https://raw.githubusercontent.com/cr1pto/simple_bible/main/screen_samples/simple_bible.jpeg?raw=true",
+  "categories": [
+    "Bible"
+    ],
+  "submitter_email": null,
+  "github": {
+    "stars": 3,
+    "forks": 0,
+    "watchers": 3,
+    "language": "Dart",
+    "open_issues": 15,
+    "license": null,
+    "default_branch": "main",
+    "archived": false,
+    "is_fork": false,
+    "topics": [
+      "bible",
+      "flutter",
+      "state-management"
+    ],
+    "created_at": "2022-09-22T06:03:18Z",
+    "updated_at": "2026-03-18T03:17:56Z",
+    "pushed_at": "2023-05-01T02:07:49Z"
   }
+},
+{
+  "project_url": "https://github.com/eijiotieno-official/bible_app",
+  "title": "bible_app",
+  "description": "No description provided.",
+  "section": "flutter",
+  "section_category": "general",
+  "technologies": [
+    "Dart"
+  ],
+  "platforms": [
+    "web"
+  ],
+  "external_url": null,
+  "youtube_url": "https://www.youtube.com/watch?v=gCB4sbgZwoM",
+  "image_url": "https://raw.githubusercontent.com/eijiotieno-official/bible_app/main/screenshot/Screenshot_1739728571.png",
+  "categories": [
+    "Bible"
+  ],
+  "submitter_email": null,
+  "github": {
+    "stars": 5,
+    "forks": 0,
+    "watchers": 5,
+    "language": "Dart",
+    "open_issues": 1,
+    "license": null,
+    "default_branch": "main",
+    "archived": false,
+    "is_fork": false,
+    "topics": [],
+    "created_at": "2024-08-24T10:46:26Z",
+    "updated_at": "2026-08-02T03:48:41Z",
+    "pushed_at": "2025-04-11T05:45:50Z"
+  }
+}
 ]

@@ -264,7 +264,7 @@
     min-height: 46px;
 
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
 
     padding: 12px 14px;
 
@@ -287,8 +287,10 @@
 
   .nav-dropdown {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
-
   /* =======================================================
      MOBILE DROPDOWN CLOSED
      ======================================================= */
@@ -325,7 +327,7 @@
      ======================================================= */
 
   .nav-dropdown.active > .dropdown-menu {
-    display: flex;
+    display: block;
 
     flex-direction: column;
   }
@@ -333,7 +335,7 @@
   .nav-dropdown.active > .framework-dropdown-menu {
     display: flex;
 
-    flex-direction: column;
+    flex-direction: block;
   }
 
   /* =======================================================

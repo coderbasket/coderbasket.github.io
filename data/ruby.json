@@ -1,0 +1,42 @@
+[
+    {
+  "project_url": "https://github.com/eijiotieno-official/finance-app",
+  "title": "finance-app",
+  "description": "The personal finance app for everyone",
+  "section": "ruby",
+  "section_category": "general",
+  "technologies": [],
+  "platforms": [
+    "web"
+  ],
+  "external_url": "https://maybefinance.com",
+  "youtube_url": null,
+  "image_url": "https://private-user-images.githubusercontent.com/35243/438235619-13fc5ef4-ce0f-4073-a163-9dbc3eb4c8e5.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc1NjM3NTgsIm5iZiI6MTc4NzU2MzQ1OCwicGF0aCI6Ii8zNTI0My80MzgyMzU2MTktMTNmYzVlZjQtY2UwZi00MDczLWExNjMtOWRiYzNlYjRjOGU1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODI0VDA5MjQxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk1YmJkYjgyOGZmZGExNmVlODZkZTRhODkwMTk1YjVmNTUxMjRjYjFhZGYxODBiODE5M2IzMzI1ZmU2OWFkZDcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.T-ynAEVoMrepAlDP2YaJw3yPV9DXgWc03p67uAxYhQI",
+  "categories": [
+    "PostgreSQL",
+    "Docker",
+    "Debugging",
+    "CLI",
+    "Containers",
+    "Command Line",
+    "API",
+    "Finance"
+  ],
+  "submitter_email": null,
+  "github": {
+    "stars": 0,
+    "forks": 0,
+    "watchers": 0,
+    "language": null,
+    "open_issues": 0,
+    "license": "AGPL-3.0",
+    "default_branch": "main",
+    "archived": false,
+    "is_fork": true,
+    "topics": [],
+    "created_at": "2025-07-19T09:44:11Z",
+    "updated_at": "2025-07-19T09:44:11Z",
+    "pushed_at": "2025-07-18T21:56:27Z"
+  }
+}
+]
