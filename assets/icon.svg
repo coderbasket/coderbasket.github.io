@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Drop Shadows -->
+    <filter id="shadow-lg" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.35" />
+    </filter>
+    <filter id="shadow-md" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+    <filter id="glow-react" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00d8ff" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Gradients -->
+    <!-- Basket Red Gradient -->
+    <linearGradient id="basketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d4d" />
+      <stop offset="40%" stop-color="#e62e2e" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+    <linearGradient id="basketRimGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6666" />
+      <stop offset="100%" stop-color="#cc1f1f" />
+    </linearGradient>
+
+    <!-- Logo Gradients -->
+    <linearGradient id="jsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7df1e" />
+      <stop offset="100%" stop-color="#d4b800" />
+    </linearGradient>
+    <linearGradient id="flutterGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#47c5fb" />
+      <stop offset="100%" stop-color="#0553b1" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="tsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3178c6" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </linearGradient>
+    <linearGradient id="cSharpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#581c87" />
+    </linearGradient>
+    <linearGradient id="dotnetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#4c1d95" />
+    </linearGradient>
+    <linearGradient id="reactDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="reactPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#2e1065" />
+    </linearGradient>
+  </defs>
+
+  <!-- ================= TOP BACKGROUND LOGOS ================= -->
+  <g id="back-logos">
+    <!-- JS Badge (Top-Left Back) -->
+    <g transform="translate(45, 95) rotate(-12)" filter="url(#shadow-md)">
+      <rect x="0" y="0" width="80" height="80" rx="16" fill="url(#jsGrad)" />
+      <text x="24" y="62" font-family="Arial, sans-serif" font-weight="900" font-size="46" fill="#1e293b">JS</text>
+    </g>
+
+    <!-- Flutter Logo (Top Left) -->
+    <g transform="translate(120, 35) rotate(-8)" filter="url(#shadow-md)">
+      <path d="M 0 35 L 35 0 L 70 0 L 17 52 Z" fill="#47c5fb" />
+      <path d="M 35 35 L 70 35 L 35 70 L 17 52 Z" fill="#0553b1" />
+      <path d="M 35 70 L 52 52 L 70 70 L 52 88 Z" fill="#02569b" />
+    </g>
+
+    <!-- AI Brain Circle Badge (Top Center) -->
+    <g transform="translate(212, 38)" filter="url(#shadow-md)">
+      <circle cx="44" cy="44" r="44" fill="url(#aiGrad)" />
+      <!-- Brain / AI Network Graphic -->
+      <path d="M 28 30 C 24 30 20 36 22 42 C 18 46 20 54 26 56 C 26 62 34 66 40 62 C 44 66 52 62 52 56 C 58 54 60 46 56 42 C 58 36 54 30 50 30 C 46 26 42 28 39 30 C 35 28 30 26 28 30 Z" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
+      <circle cx="30" cy="38" r="3" fill="#ffffff" />
+      <circle cx="48" cy="38" r="3" fill="#ffffff" />
+      <circle cx="26" cy="48" r="3" fill="#ffffff" />
+      <circle cx="52" cy="48" r="3" fill="#ffffff" />
+      <circle cx="39" cy="54" r="3.5" fill="#ffffff" />
+      <text x="23" y="47" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#ffffff">AI</text>
+    </g>
+
+    <!-- TypeScript Badge (Top Right) -->
+    <g transform="translate(318, 52) rotate(14)" filter="url(#shadow-md)">
+      <rect x="0" y="0" width="85" height="85" rx="18" fill="url(#tsGrad)" />
+      <text x="14" y="62" font-family="Arial, sans-serif" font-weight="bold" font-size="44" fill="#ffffff">TS</text>
+    </g>
+
+    <!-- "C" Purple Flame Badge (Mid-Left) -->
+    <g transform="translate(85, 120)" filter="url(#shadow-md)">
+      <path d="M 50 0 C 80 0 100 25 100 55 C 100 85 75 100 45 100 C 15 100 0 75 0 50 C 0 20 25 0 50 0 Z" fill="url(#cGrad)" />
+      <path d="M 68 35 C 60 26 42 26 34 36 C 24 48 25 68 36 76 C 46 83 62 81 68 73" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+    </g>
+
+    <!-- Center React Dark Badge -->
+    <g transform="translate(196, 142)" filter="url(#shadow-lg)">
+      <circle cx="60" cy="60" r="58" fill="url(#reactDarkGrad)" />
+      <circle cx="60" cy="60" r="58" fill="none" stroke="#334155" stroke-width="2" />
+      <!-- React Atom Cyan -->
+      <g filter="url(#glow-react)">
+        <ellipse cx="60" cy="60" rx="42" ry="16" fill="none" stroke="#00d8ff" stroke-width="4.5" />
+        <ellipse cx="60" cy="60" rx="42" ry="16" fill="none" stroke="#00d8ff" stroke-width="4.5" transform="rotate(60 60 60)" />
+        <ellipse cx="60" cy="60" rx="42" ry="16" fill="none" stroke="#00d8ff" stroke-width="4.5" transform="rotate(120 60 60)" />
+        <circle cx="60" cy="60" r="9" fill="#00d8ff" />
+      </g>
+    </g>
+
+    <!-- C# Purple Hex/Badge (Mid-Right) -->
+    <g transform="translate(298, 125) rotate(8)" filter="url(#shadow-md)">
+      <path d="M 20 0 L 90 0 C 105 0 115 12 115 25 L 115 85 C 115 100 100 115 85 115 L 25 115 C 10 115 0 100 0 85 L 0 20 C 0 8 10 0 20 0 Z" fill="url(#cSharpGrad)" />
+      <text x="18" y="76" font-family="Arial, sans-serif" font-weight="bold" font-size="52" fill="#ffffff">C#</text>
+    </g>
+  </g>
+
+  <!-- ================= LOGOS INSIDE BASKET (VISIBLE THROUGH HOLES) ================= -->
+  <g id="inside-basket-content">
+    <!-- Python Badge (Middle Left Hole) -->
+    <g transform="translate(262, 275)">
+      <circle cx="32" cy="32" r="28" fill="#1e293b" />
+      <!-- Python Snake Shapes -->
+      <path d="M 32 12 C 22 12 18 16 18 22 L 18 28 L 32 28 L 32 30 L 14 30 C 8 30 6 36 6 42 C 6 48 12 52 18 52 L 22 52 L 22 46 C 22 40 28 36 34 36 L 44 36 C 50 36 52 32 52 26 C 52 20 46 12 32 12 Z" fill="#3875a8" />
+      <path d="M 32 52 C 42 52 46 48 46 42 L 46 36 L 32 36 L 32 34 L 50 34 C 56 34 58 28 58 22 C 58 16 52 12 46 12 L 42 12 L 42 18 C 42 24 36 28 30 28 L 20 28 C 14 28 12 32 12 38 C 12 44 18 52 32 52 Z" fill="#ffc331" />
+      <circle cx="25" cy="18" r="2.5" fill="#ffffff" />
+      <circle cx="39" cy="46" r="2.5" fill="#ffffff" />
+    </g>
+
+    <!-- Cloud Icon (Middle Right Hole) -->
+    <g transform="translate(350, 275)">
+      <rect x="0" y="0" width="60" height="42" rx="12" fill="#0284c7" />
+      <path d="M 18 30 A 8 8 0 0 1 22 16 A 12 12 0 0 1 42 18 A 9 9 0 0 1 46 30 Z" fill="#ffffff" />
+    </g>
+
+    <!-- Extra React Purple Badge (Left Inside Hole) -->
+    <g transform="translate(108, 275)">
+      <circle cx="28" cy="28" r="24" fill="url(#reactPurpleGrad)" />
+      <ellipse cx="28" cy="28" rx="18" ry="7" fill="none" stroke="#a855f7" stroke-width="2" />
+      <ellipse cx="28" cy="28" rx="18" ry="7" fill="none" stroke="#a855f7" stroke-width="2" transform="rotate(60 28 28)" />
+      <ellipse cx="28" cy="28" rx="18" ry="7" fill="none" stroke="#a855f7" stroke-width="2" transform="rotate(120 28 28)" />
+      <circle cx="28" cy="28" r="3.5" fill="#a855f7" />
+    </g>
+  </g>
+
+  <!-- ================= RED SHOPPING BASKET ================= -->
+  <g id="shopping-basket" filter="url(#shadow-lg)">
+    <!-- Basket Outer Body Base -->
+    <path d="M 76 250 L 98 420 C 102 440 118 452 138 452 L 374 452 C 394 452 410 440 414 420 L 436 250 Z" fill="url(#basketGrad)" />
+
+    <!-- Basket Grid Cutout Holes (Shows contents inside) -->
+    <!-- Row 1 Holes -->
+    <rect x="108" y="272" width="56" height="42" rx="8" fill="#120404" opacity="0.65" />
+    <rect x="180" y="272" width="68" height="42" rx="8" fill="#120404" opacity="0.65" />
+    <rect x="264" y="272" width="68" height="42" rx="8" fill="#120404" opacity="0.65" />
+    <rect x="348" y="272" width="56" height="42" rx="8" fill="#120404" opacity="0.65" />
+
+    <!-- Row 2 Holes -->
+    <rect x="116" y="332" width="56" height="42" rx="8" fill="#120404" opacity="0.65" />
+    <rect x="188" y="332" width="64" height="42" rx="8" fill="#120404" opacity="0.65" />
+    <rect x="260" y="332" width="64" height="42" rx="8" fill="#120404" opacity="0.65" />
+    <rect x="336" y="332" width="56" height="42" rx="8" fill="#120404" opacity="0.65" />
+
+    <!-- Basket Front Grid Ribs Overlay (Red Grid Frames) -->
+    <!-- Horizontal Rib -->
+    <rect x="88" y="318" width="336" height="12" fill="#d92626" />
+    <rect x="96" y="378" width="320" height="12" fill="#b91c1c" />
+
+    <!-- Vertical Ribs -->
+    <rect x="168" y="250" width="12" height="195" fill="#dc2626" />
+    <rect x="250" y="250" width="12" height="195" fill="#dc2626" />
+    <rect x="332" y="250" width="12" height="195" fill="#dc2626" />
+
+    <!-- Basket Top Heavy Rim -->
+    <rect x="64" y="232" width="384" height="26" rx="12" fill="url(#basketRimGrad)" />
+    <rect x="64" y="232" width="384" height="8" rx="4" fill="#ff8888" opacity="0.6" />
+
+    <!-- Handles Base Joint Highlights -->
+    <path d="M 64 245 C 64 240 448 240 448 245 L 440 258 L 72 258 Z" fill="#991b1b" opacity="0.4" />
+  </g>
+
+  <!-- ================= FOREGROUND OVERLAY BADGES ================= -->
+  <!-- Bottom-Left Overlay: .NET Circle Badge -->
+  <g transform="translate(56, 330)" filter="url(#shadow-lg)">
+    <circle cx="64" cy="64" r="62" fill="url(#dotnetGrad)" />
+    <circle cx="64" cy="64" r="62" fill="none" stroke="#a78bfa" stroke-width="3" opacity="0.5" />
+    <text x="22" y="78" font-family="Arial, sans-serif" font-weight="900" font-size="38" fill="#ffffff">.NET</text>
+  </g>
+
+  <!-- Bottom-Right Overlay: Dark Purple React Circle Badge -->
+  <g transform="translate(360, 348)" filter="url(#shadow-lg)">
+    <circle cx="48" cy="48" r="46" fill="url(#reactPurpleGrad)" />
+    <circle cx="48" cy="48" r="46" fill="none" stroke="#c084fc" stroke-width="2" opacity="0.6" />
+    <!-- React Atom Icon -->
+    <ellipse cx="48" cy="48" rx="30" ry="11" fill="none" stroke="#c084fc" stroke-width="3" />
+    <ellipse cx="48" cy="48" rx="30" ry="11" fill="none" stroke="#c084fc" stroke-width="3" transform="rotate(60 48 48)" />
+    <ellipse cx="48" cy="48" rx="30" ry="11" fill="none" stroke="#c084fc" stroke-width="3" transform="rotate(120 48 48)" />
+    <circle cx="48" cy="48" r="6" fill="#ffffff" />
+  </g>
+</svg>

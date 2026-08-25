@@ -248,7 +248,7 @@ function renderLogo(home) {
     >
 
       <img
-        src="/img/codericon.png"
+        src="/assets/icon.svg"
         alt="Coder Basket"
       >
 
