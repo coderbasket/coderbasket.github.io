@@ -1,0 +1,47 @@
+[
+  {
+    "id": "f4948aca-0c6f-426e-9a65-b478925d33a7",
+    "project_url": "https://github.com/CodebuffAI/freebuff",
+    "title": "freebuff",
+    "description": "The free coding agent",
+    "section": "typescript",
+    "section_category": "general",
+    "technologies": [
+      "TypeScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://freebuff.com",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/CodebuffAI/freebuff",
+    "categories": [
+      "AI Agents",
+      "Docker",
+      "CLI",
+      "TypeScript",
+      "Cloud Computing",
+      "Containers",
+      "Frameworks",
+      "Testing"
+    ],
+    "submitted_at": "2026-08-26T12:47:17.655Z",
+    "updated_at": "2026-08-26T12:47:17.655Z",
+    "status": "pending",
+    "github": {
+      "stars": 10842,
+      "forks": 1179,
+      "watchers": 10842,
+      "language": "TypeScript",
+      "open_issues": 331,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2024-07-09T21:21:56Z",
+      "updated_at": "2026-08-26T12:44:20Z",
+      "pushed_at": "2026-08-26T08:30:56Z"
+    }
+  }
+]

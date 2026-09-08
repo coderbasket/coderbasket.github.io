@@ -91,6 +91,10 @@ const DATA_SECTIONS = {
     name: "Ruby on Rails",
     path: "/ruby-on-rails/",
   },
+  "vite": {
+    name: "Vite",
+    path: "/vite/",
+  },
 };
 
 /*
@@ -186,6 +190,11 @@ const FRAMEWORKS = {
   "ruby-on-rails": {
     name: "Ruby on Rails",
     path: "/ruby-on-rails/",
+    dataSource: "frameworks",
+  },
+  "vite": {
+    name: "Vite",
+    path: "/vite/",
     dataSource: "frameworks",
   },
   

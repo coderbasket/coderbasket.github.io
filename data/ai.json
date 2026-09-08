@@ -2821,5 +2821,475 @@
       "updated_at": "2026-08-23T01:30:41Z",
       "pushed_at": "2026-08-19T06:24:30Z"
     }
+  },
+  {
+    "id": "26b7f23a-b57a-48c9-97be-c296d7163a03",
+    "project_url": "https://github.com/letta-ai/letta",
+    "title": "letta",
+    "description": "Platform for stateful agents: AI with advanced memory that can learn and self-improve over time.",
+    "section": "ai",
+    "section_category": "ai",
+    "technologies": [
+      "ai",
+      "ai-agents",
+      "llm"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://docs.letta.com/",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/letta-ai/letta",
+    "categories": [
+      "AI Agents",
+      "Docker",
+      "LLM",
+      "CLI",
+      "TypeScript",
+      "Cloud Computing",
+      "Containers",
+      "Command Line"
+    ],
+    "submitted_at": "2026-08-24T18:10:07.861Z",
+    "updated_at": "2026-08-24T18:10:07.861Z",
+    "status": "pending",
+    "github": {
+      "stars": 24404,
+      "forks": 2592,
+      "watchers": 24404,
+      "language": null,
+      "open_issues": 39,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llm",
+        "llm-agent"
+      ],
+      "created_at": "2023-10-11T07:38:37Z",
+      "updated_at": "2026-08-24T16:18:11Z",
+      "pushed_at": "2026-08-23T19:05:43Z"
+    }
+  },
+  {
+    "id": "a38bc71e-c2ed-460a-9dba-33bac74ace8b",
+    "project_url": "https://github.com/dreamhunter2333/cloudflare_temp_email",
+    "title": "cloudflare_temp_email",
+    "description": "CloudFlare free temp domain email 免费收发 临时域名邮箱 支持附件 IMAP SMTP TelegramBot",
+    "section": "ai",
+    "section_category": "cloudflare-email",
+    "technologies": [
+      "TypeScript",
+      "cloudflare-email",
+      "cloudflare-pages",
+      "cloudflare-workers"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://mail.awsl.uk",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/dreamhunter2333/cloudflare_temp_email",
+    "categories": [
+      "AI Agents",
+      "SQLite",
+      "Docker",
+      "CLI",
+      "TypeScript",
+      "Containers",
+      "Command Line",
+      "Web Development"
+    ],
+    "submitted_at": "2026-08-24T18:14:30.277Z",
+    "updated_at": "2026-08-24T18:14:30.277Z",
+    "status": "pending",
+    "github": {
+      "stars": 11467,
+      "forks": 7712,
+      "watchers": 11467,
+      "language": "TypeScript",
+      "open_issues": 23,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "cloudflare-email",
+        "cloudflare-pages",
+        "cloudflare-workers",
+        "email",
+        "free"
+      ],
+      "created_at": "2023-08-15T16:35:52Z",
+      "updated_at": "2026-08-24T18:13:21Z",
+      "pushed_at": "2026-08-23T16:36:52Z"
+    }
+  },
+  {
+    "id": "cb7c8bb0-a14d-4590-81c3-6694e5c8814e",
+    "project_url": "https://github.com/zai-org/GLM-5",
+    "title": "GLM-5",
+    "description": "GLM-5: From Vibe Coding to Agentic Engineering",
+    "section": "ai",
+    "section_category": "agentic-ai",
+    "technologies": [
+      "agentic-ai",
+      "coding",
+      "llm"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://z.ai/blog/glm-5.2",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/zai-org/GLM-5/main/resources/logo.svg",
+    "categories": [
+      "AI Agents",
+      "AI Coding",
+      "Docker",
+      "LLM",
+      "CLI",
+      "Containers",
+      "Frameworks",
+      "Command Line"
+    ],
+    "submitted_at": "2026-08-24T23:17:30.624Z",
+    "updated_at": "2026-08-24T23:17:30.624Z",
+    "status": "pending",
+    "github": {
+      "stars": 7036,
+      "forks": 910,
+      "watchers": 7036,
+      "language": null,
+      "open_issues": 43,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "agentic-ai",
+        "coding",
+        "llm",
+        "long-horizon"
+      ],
+      "created_at": "2026-02-09T08:17:02Z",
+      "updated_at": "2026-08-24T20:27:54Z",
+      "pushed_at": "2026-08-11T06:36:36Z"
+    }
+  },
+  {
+    "id": "eecd61a3-8391-49d9-9fc9-79aa4ac9e968",
+    "project_url": "https://github.com/huytieu/COG-second-brain",
+    "title": "COG-second-brain",
+    "description": "Self-evolving second brain with 33 AI skills, 10 agents, and people CRM. Closed-loop harness: a V-model verification lifecycle where the worker never grades its own homework. Plus paired anti-slop design skills for marketing and product UI. Works with Claude Code, Cursor, Kiro, Gemini CLI, Codex.",
+    "section": "ai",
+    "section_category": "agent-loop",
+    "technologies": [
+      "HTML",
+      "agent-loop",
+      "agent-plugins",
+      "agent-skills"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/huytieu/COG-second-brain",
+    "categories": [
+      "AI Agents",
+      "Docker",
+      "CLI",
+      "Containers",
+      "Frameworks",
+      "Code Editor",
+      "Development Environment",
+      "Testing"
+    ],
+    "submitted_at": "2026-08-25T19:36:59.102Z",
+    "updated_at": "2026-08-25T19:36:59.102Z",
+    "status": "pending",
+    "github": {
+      "stars": 990,
+      "forks": 125,
+      "watchers": 990,
+      "language": "HTML",
+      "open_issues": 8,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "agent-loop",
+        "agent-plugins",
+        "agent-skills",
+        "agentic",
+        "ai-agents",
+        "claude-code",
+        "closed-loop",
+        "cursor",
+        "garry-tan",
+        "gbrain",
+        "gstack",
+        "knowledge-management",
+        "loop-engineering",
+        "obsidian",
+        "people-crm",
+        "productivity",
+        "second-brain",
+        "self-evolving",
+        "verification-harness",
+        "worker-agents"
+      ],
+      "created_at": "2025-10-15T03:50:52Z",
+      "updated_at": "2026-08-25T18:36:11Z",
+      "pushed_at": "2026-08-25T15:32:13Z"
+    }
+  },
+  {
+    "id": "959a3d00-1c30-4973-8b4c-91181c46126a",
+    "project_url": "https://github.com/axtonliu/axton-obsidian-visual-skills",
+    "title": "axton-obsidian-visual-skills",
+    "description": "Visual Skills Pack for Obsidian: generate Canvas, Excalidraw, and Mermaid diagrams from text with Claude Code",
+    "section": "ai",
+    "section_category": "general",
+    "technologies": [],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/axtonliu/axton-obsidian-visual-skills/main/assets/excalidraw-demo.png",
+    "categories": [
+      "AI Agents",
+      "Docker",
+      "CI/CD",
+      "Machine Learning",
+      "CLI",
+      "Containers",
+      "Frameworks",
+      "Command Line"
+    ],
+    "submitted_at": "2026-08-25T19:46:16.573Z",
+    "updated_at": "2026-08-25T19:46:16.573Z",
+    "status": "pending",
+    "github": {
+      "stars": 3520,
+      "forks": 319,
+      "watchers": 3520,
+      "language": null,
+      "open_issues": 1,
+      "license": "MIT",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-01-10T18:01:37Z",
+      "updated_at": "2026-08-25T19:39:19Z",
+      "pushed_at": "2026-06-26T15:32:40Z"
+    }
+  },
+  {
+    "id": "c6afea75-1a4a-4a0d-9d87-921beea06819",
+    "project_url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "title": "awesome-selfhosted",
+    "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+    "section": "ai",
+    "section_category": "awesome",
+    "technologies": [
+      "awesome",
+      "awesome-list",
+      "cloud"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://awesome-selfhosted.net/",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/awesome-selfhosted/awesome-selfhosted/master/_static/awesome.png",
+    "categories": [
+      "AI Agents",
+      "RAG",
+      "SQLite",
+      "PostgreSQL",
+      "MySQL",
+      "NoSQL",
+      "Docker",
+      "Kubernetes"
+    ],
+    "submitted_at": "2026-08-26T10:58:04.067Z",
+    "updated_at": "2026-08-26T10:58:04.067Z",
+    "status": "pending",
+    "github": {
+      "stars": 315205,
+      "forks": 14812,
+      "watchers": 315205,
+      "language": null,
+      "open_issues": 0,
+      "license": "NOASSERTION",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "cloud",
+        "free-software",
+        "hosting",
+        "privacy",
+        "self-hosted",
+        "selfhosted"
+      ],
+      "created_at": "2015-06-01T02:33:17Z",
+      "updated_at": "2026-08-26T10:57:29Z",
+      "pushed_at": "2026-08-22T18:55:56Z"
+    }
+  },
+  {
+    "id": "c7c9b39b-f232-41d6-a955-7aef13efec68",
+    "project_url": "https://github.com/hyperfield/ai-file-sorter",
+    "title": "ai-file-sorter",
+    "description": "Cross-platform desktop application for content-aware file organization and renaming. Supports local and remote LLMs, preview-based workflows, and fully user-controlled changes.",
+    "section": "ai",
+    "section_category": "ai",
+    "technologies": [
+      "C++",
+      "ai",
+      "file-management",
+      "file-manager"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://filesorter.app",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/hyperfield/ai-file-sorter/main/app/resources/images/icon_256x256.png",
+    "categories": [
+      "SQLite",
+      "Docker",
+      "LLM",
+      "CLI",
+      "Cloud Computing",
+      "Containers",
+      "Code Editor",
+      "Development Environment"
+    ],
+    "submitted_at": "2026-08-26T22:38:46.065Z",
+    "updated_at": "2026-08-26T22:38:46.065Z",
+    "status": "pending",
+    "github": {
+      "stars": 1564,
+      "forks": 161,
+      "watchers": 1564,
+      "language": "C++",
+      "open_issues": 16,
+      "license": "AGPL-3.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "ai",
+        "file-management",
+        "file-manager",
+        "llm",
+        "organizer"
+      ],
+      "created_at": "2025-01-30T09:52:51Z",
+      "updated_at": "2026-08-26T19:20:41Z",
+      "pushed_at": "2026-08-16T14:41:15Z"
+    }
+  },
+  {
+    "id": "bcea6ddc-7cec-4a00-a7ab-ab25eec8777f",
+    "project_url": "https://github.com/paperclipai/paperclip",
+    "title": "paperclip",
+    "description": "The open-source app everyone uses to manage agents at work",
+    "section": "ai",
+    "section_category": "general",
+    "technologies": [
+      "TypeScript"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://paperclip.ing",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/paperclipai/paperclip/master/doc/assets/banner.jpg",
+    "categories": [
+      "AI Agents",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "CLI",
+      "TypeScript",
+      "Cloud Computing",
+      "Containers"
+    ],
+    "submitted_at": "2026-08-26T23:22:06.665Z",
+    "updated_at": "2026-08-26T23:22:06.665Z",
+    "status": "pending",
+    "github": {
+      "stars": 79436,
+      "forks": 14573,
+      "watchers": 79436,
+      "language": "TypeScript",
+      "open_issues": 5378,
+      "license": "MIT",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-03-02T15:01:51Z",
+      "updated_at": "2026-08-26T23:20:42Z",
+      "pushed_at": "2026-08-26T23:19:04Z"
+    }
+  },
+  {
+    "id": "28be833f-5a4d-4fb1-b214-80939266cf44",
+    "project_url": "https://github.com/k2-fsa/OmniVoice",
+    "title": "OmniVoice",
+    "description": "High-Quality Voice Cloning TTS for 600+ Languages",
+    "section": "ai",
+    "section_category": "general",
+    "technologies": [
+      "Python"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "",
+    "youtube_url": "",
+    "image_url": "https://opengraph.githubassets.com/1/k2-fsa/OmniVoice",
+    "categories": [
+      "Docker",
+      "LLM",
+      "Deep Learning",
+      "CLI",
+      "Containers",
+      "Testing",
+      "Command Line",
+      "HTML"
+    ],
+    "submitted_at": "2026-09-06T12:08:04.346Z",
+    "updated_at": "2026-09-06T12:08:04.346Z",
+    "status": "pending",
+    "github": {
+      "stars": 9999,
+      "forks": 1617,
+      "watchers": 9999,
+      "language": "Python",
+      "open_issues": 58,
+      "license": "Apache-2.0",
+      "default_branch": "master",
+      "archived": false,
+      "is_fork": false,
+      "topics": [],
+      "created_at": "2026-03-31T12:00:45Z",
+      "updated_at": "2026-09-06T12:07:02Z",
+      "pushed_at": "2026-08-31T22:28:49Z"
+    }
   }
 ]

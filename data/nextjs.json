@@ -395,5 +395,74 @@
       "updated_at": "2026-08-22T21:06:47Z",
       "pushed_at": "2026-08-03T17:29:28Z"
     }
+  },
+  {
+    "id": "33762307-4201-4f27-8330-2c3de82a3707",
+    "project_url": "https://github.com/nexu-io/open-design",
+    "title": "open-design",
+    "description": "🎨 Best DeepSeek Harness Design Plugin. The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / DeepSeek Harness / OpenCode & 20+ CLIs via BYOK.",
+    "section": "nextjs",
+    "section_category": "agent-skills",
+    "technologies": [
+      "TypeScript",
+      "agent-skills",
+      "ai-design",
+      "byok"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "external_url": "https://open-design.ai",
+    "youtube_url": "",
+    "image_url": "https://raw.githubusercontent.com/nexu-io/open-design/main/docs/screenshots/product-tour/home.png",
+    "categories": [
+      "AI Agents",
+      "SQLite",
+      "NoSQL",
+      "Docker",
+      "LLM",
+      "Developer Tools",
+      "CLI",
+      "TypeScript"
+    ],
+    "submitted_at": "2026-08-26T12:54:53.153Z",
+    "updated_at": "2026-08-26T12:54:53.153Z",
+    "status": "pending",
+    "github": {
+      "stars": 91654,
+      "forks": 10551,
+      "watchers": 91654,
+      "language": "TypeScript",
+      "open_issues": 866,
+      "license": "Apache-2.0",
+      "default_branch": "main",
+      "archived": false,
+      "is_fork": false,
+      "topics": [
+        "agent-skills",
+        "ai-design",
+        "byok",
+        "claude-code-for-design",
+        "claude-design",
+        "codex-design",
+        "coding-agents",
+        "cursor-design",
+        "deepseek",
+        "deepseek-harness",
+        "design-systems",
+        "desktop-app",
+        "dsh",
+        "dsh-plugin",
+        "figma-alternative",
+        "hermes-agent",
+        "local-first",
+        "prototyping",
+        "ui-generator",
+        "vibe-coding"
+      ],
+      "created_at": "2026-04-28T04:25:20Z",
+      "updated_at": "2026-08-26T12:40:20Z",
+      "pushed_at": "2026-08-26T12:54:18Z"
+    }
   }
 ]

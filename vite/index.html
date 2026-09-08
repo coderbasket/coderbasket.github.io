@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-adsense-account" content="ca-pub-9045308343519031">
+
+    <title>Vite Developer Libraries & Projects | Coder Basket</title>
+
+    <meta name="description"
+        content="Discover Vite libraries, tools, templates, applications, and open source projects on Coder Basket.">
+
+    <link rel="icon" href="/assets/icon.svg">
+
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+    <!-- Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "f5bd1cde3c9f413b8a4a490770114d9a"}'>
+        </script>
+    <!-- End Cloudflare Web Analytics -->
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9045308343519031"
+        crossorigin="anonymous">
+        </script>
+
+    <!--
+        This page represents the React Native catalogue.
+        app.js will use this instead of the default section.
+    -->
+    <script>
+        window.CODER_BASKET_SECTION = "react-native";
+    </script>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="search-box">
+
+                    <input id="searchInput" type="search"
+                        placeholder="Search Vite Native projects, libraries and tools..." autocomplete="off">
+
+                    <button id="searchButton">
+                        Search
+                    </button>
+
+                </div>
+
+                <p>
+                    Discover React libraries, tools, templates, open source projects and developer resources.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="catalog-section">
+
+            <div class="container catalog-layout">
+
+                <!-- =================================================
+                     AI CATEGORY NAVIGATION
+                     Rendered by sidebar.js
+                     ================================================= -->
+
+                <aside id="categorySidebar" class="category-sidebar">
+                    <!-- Rendered dynamically by sidebar.js -->
+                </aside>
+
+
+                <section class="catalog-content">
+
+                    <div class="catalog-header">
+
+                        <h2>React Projects & Tools</h2>
+
+                        <select id="sortSelect">
+
+                            <option value="name">Name</option>
+                            <option value="recent">Recently Updated</option>
+                        </select>
+
+                    </div>
+
+
+                    <div id="projectGrid" class="project-grid">
+                    </div>
+
+
+                    <div id="loading" class="catalog-loading">
+                        Loading React Native projects...
+                    </div>
+
+
+                    <button id="loadMore" class="load-more" hidden>
+                        Load More
+                    </button>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="/js/data.js" defer></script>
+    <script src="/js/sidebar.js" defer></script>
+    <script src="/js/header.js" defer></script>
+    <script src="/js/repo.js" defer></script>
+    <script src="/js/sql/sql-wasm.js" defer></script>
+    <script src="/js/sql/sql.js" defer></script>
+
+    <script src="/js/apps-script.js" defer></script>
+    <script src="/js/app.js" defer></script>
+
+    <script src="/site-config.js"></script>
+    <script src="/js/footer.js"></script>
+
+</body>
+
+</html>
